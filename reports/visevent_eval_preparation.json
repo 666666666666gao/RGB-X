@@ -1,0 +1,18 @@
+{
+  "status": "READY",
+  "dataset": "VisEvent",
+  "expected_sequences": 320,
+  "expected_frame_pairs": 157421,
+  "annotation_version": "existing_dataset_GT_author_archive_verified_person1",
+  "annotation_root": "/home/gaob/rgbx-eval-data/VisEvent_paired_local_annotations",
+  "repository_annos_zip_equivalence": false,
+  "comparison": "same_frozen_data_and_annotations_for_baseline_and_method",
+  "published_metric_comparability": "not_verified_against_annos_zip_306_row_person1_version",
+  "sequence_list_sha256": "3aad2fe4d8827017e3bdada1df69a1067d5f2694b352082ffb79b6d28961bdb6",
+  "person1_archive_audit_sha256": "e2ae24c0ea2588e1d5eb3e552cd627905056f699fb69048e2f58e2a359707ba1",
+  "role": "frozen_dataset_preparation_not_tracking_benchmark",
+  "manifest_sha256": "718323bd77c3cc10cf86e4af0fb44a379602bdf47ba40553015dc85d86f3eed8",
+  "annotations_for_all_sequences_from_existing_dataset": true,
+  "model_executed": false,
+  "formal_benchmarks_complete": 0
+}

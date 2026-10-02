@@ -1,0 +1,146 @@
+{
+  "audit_skill": "experiment-audit",
+  "role": "source_review_not_tracking_benchmark_acceptance",
+  "generated_at": "2026-10-03T01:50:48.505763+08:00",
+  "source_verdict": "SOURCE_REVIEW_PASS",
+  "experiment_acceptance": "WARN_EXECUTION_NOT_RUN",
+  "scope": "Reviewed all three existing test-set entry/coverage/scorer source pipelines; explicitly frozen VisEvent data version. No formal inference or scoring acceptance.",
+  "active_formal_benchmarks_complete": 0,
+  "active_expected_benchmarks": 3,
+  "seed": 2026,
+  "agent_id": "/root/rgbx_eval_entry_audit",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "max",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "trace_path": ".aris/traces/experiment-audit/2026-10-03_run02/",
+  "reviews": [
+    {
+      "request": "request.prompt.txt",
+      "response": "response_initial.md",
+      "status": "INITIAL_FAIL",
+      "execution": "NOT_RUN",
+      "findings": [
+        "TraX4 API incompatibility",
+        "Missing formal endpoint binding"
+      ],
+      "call_number": 1,
+      "request_sha256": "49d85a87b4c137d56d1f37adb87bc28e3563948ebcd752ba451043252698eb21",
+      "response_sha256": "cd7c596d36f9813b53c92355d88ce1a28aaab14f1cd880ff20ad4bc5cbe3bb49",
+      "agent_id": "/root/rgbx_eval_entry_audit",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional"
+    },
+    {
+      "request": "followups.jsonl",
+      "response": "response_postfix.md",
+      "status": "SOURCE_REVIEW_PASS",
+      "execution": "NOT_RUN",
+      "scope": "revised checkpoint and OPE/RGBD entries only",
+      "call_number": 2,
+      "request_sha256": "55d4da2291a59b5c163f2f8558cfcedd2e00b65fdab33b9b9580d8dae18b632d",
+      "response_sha256": "acbe25970b70ff688130cca39a8f3266671fc54ae5057cf3b0b2603ce008e132",
+      "agent_id": "/root/rgbx_eval_entry_audit",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional"
+    },
+    {
+      "request": "followup_pipeline.prompt.txt",
+      "response": "response_pipeline.md",
+      "status": "INITIAL_PIPELINE_FAIL",
+      "execution": "NOT_RUN",
+      "findings": [
+        "NumPy1.24 removed np.int used by VOT0.7.1",
+        "VOT workspace identity not rechecked across stages"
+      ],
+      "call_number": 3,
+      "request_sha256": "24b39618514c79feea572ba36164101a1428b0f37847907d1842fd79c1a3e872",
+      "response_sha256": "f61dbccbf5dec0b074dff7b912b666c8ce90f97762fcb5b853b926e7762b3f57",
+      "agent_id": "/root/rgbx_eval_entry_audit",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional"
+    },
+    {
+      "request": "followup_pipeline_postfix.prompt.txt",
+      "response": "response_pipeline_postfix.md",
+      "status": "SOURCE_REVIEW_PASS",
+      "execution": "NOT_RUN",
+      "scope": "LasHeR/DepthTrack pipeline and frozen VisEvent data provenance only",
+      "call_number": 4,
+      "request_sha256": "2bfb9ccb24d85986f49a9446e20ffd4a132148b41f9b97230b4f8d5ca5b37df9",
+      "response_sha256": "6727e0de82f7f47de68452a4b38ec2e2fdd2830086559a83d01d72ae8519a679",
+      "agent_id": "/root/rgbx_eval_entry_audit",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional"
+    },
+    {
+      "call_number": 5,
+      "request": "followup_visevent_source.prompt.txt",
+      "response": "response_visevent_source.md",
+      "request_sha256": "2e046e2259995ea3191048a13dc35d23a8d3dab2effb4cf7343cbba310ad5825",
+      "response_sha256": "cbfa5af69cc4a6e726abe86253a126cb3dc6e8f5bebd0a1ca7ccfd62beb9cf02",
+      "status": "SOURCE_REVIEW_PASS",
+      "execution": "NOT_RUN",
+      "scope": "17 VisEvent attributes, unchanged official scorer and complete frozen320 curve/coverage wiring",
+      "agent_id": "/root/rgbx_eval_entry_audit",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional"
+    }
+  ],
+  "source_inputs_postfix_snapshot": {
+    "scripts/audit_terminal_xtrack.py": "c2e830e358675fcbf4dd2bce0dee0f2d6c0251b62caa4534b609406870638890",
+    "scripts/xtrack_eval_parameters.py": "d5e88591361eeac2c490c9be835c84661e29c8c1b6a611923c5789fff9ddf365",
+    "scripts/evaluate_xtrack_ope.py": "65d03558d996f6c4aec362b1ac5db620b0bbfc034d2d1ee84ddc0f7029cc7e22",
+    "scripts/evaluate_xtrack_vot.py": "e6b08565b5b6bdf17a1a8ec057c1abf77d159edef2fef654a3bdc78fecda62df",
+    "scripts/audit_ope_coverage.py": "4e14e1c354a256d60c66a165a51ddc0ad09bcfe1527cdd4e2a426435e10a8b58",
+    "scripts/prepare_vot_workspace.py": "30aa8cc3af1e5ceccd82d5553ccf5f168efd0ee90361049d44f82b46b006d70d",
+    "scripts/run_vot_sequences.py": "2d9580629c0de19c077951230d941eb8be2508e75a976f0c2ea1cc5eb41daffd",
+    "scripts/audit_and_score_vot.py": "ecd86d689dbb7ebc9a9600b61b68645a3e31410128ac2bedc6db0ad70eae5bab",
+    "scripts/audit_vot_dataset.py": "8d8237219eed8bd72259e625d28b08c9964723c908ff6325c7938a345663e235",
+    "scripts/score_lasher.py": "7c641f8d4db1dcacd2776f7881794378cc0bed06563bb00efe84616e9dd0b52f",
+    "scripts/score_lasher_matlab.m": "c3a7d56fc5862819c8e4894a6bba0c8366fc844fba9358bff3cd509dd99cb01b",
+    "scripts/prepare_lasher_attributes.py": "4828bafa8e7f202f891af504a9f6507c6c10d3c96e6fe6b34fb1d84c6db598ec",
+    "scripts/audit_visevent_person1_archive.py": "0414c01f5dcb3f971224330a50444aecfd35929283b4bc1be7013281182f472d",
+    "scripts/prepare_visevent_eval_manifest.py": "bc76a5ec9299408d0ed235d2f2d47e53ffee4f88c0098f1c4e4031254fada92a"
+  },
+  "fixed_actual_findings": [
+    "TraX4 object/channel protocol",
+    "Formal epoch65 terminal audit binding",
+    "NumPy1.23.5 in separate eval environment",
+    "Config and terminal audit compared with original VOT workspace identity"
+  ],
+  "data_evidence": {
+    "DepthTrack": "50 raw GT files length and SHA verified:76373 total rows",
+    "VisEvent": "frozen320/157421 GT, visibility, inverse absence, frame ID order verified",
+    "VisEvent_version": "not_equivalent_to_repository_annos_zip_306_row_person1_version"
+  },
+  "checks": {
+    "A": "PASS_WITH_VERSION_COMPARABILITY_WARN",
+    "B": "PASS_SOURCE_ONLY",
+    "C": "WARN_NO_FORMAL_RESULTS",
+    "D": "PASS_SOURCE_EXECUTION_NOT_RUN",
+    "E": "WARN_0_OF_3_ONE_SEED",
+    "F": "real_gt"
+  },
+  "unsupported_claims": [
+    "formal_benchmark_completion",
+    "matched_baseline_improvement",
+    "published_metric_equivalence",
+    "multiseed_robustness"
+  ],
+  "source_inputs_vis_source_snapshot": {
+    "scripts/prepare_visevent_attributes.py": "570f2bd21c2c62ad66f3aa37c9fcef2848abb6f77dd6b3c34af5065a7816d5e1",
+    "scripts/score_visevent.py": "648be69ba88fe373a8038e87acdca8fa7d4d3edf131548f4a2367aef0ad1d022",
+    "scripts/score_visevent_matlab.m": "512eb0e7fd2f4b161a5eb6e28a0916bb3883d233c2cbe6d608fe50977745bd9c"
+  }
+}

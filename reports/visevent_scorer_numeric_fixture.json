@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "role": "synthetic_numeric_unit_fixture_not_benchmark",
+  "dataset_scorer": "VisEvent",
+  "gt_rows": 4,
+  "absent_frames": 1,
+  "model_executed": false,
+  "gpu_used": false,
+  "assertions": [
+    "unchanged_author_scorer_called",
+    "first_prediction_replaced_with_dataset_initial_box",
+    "absent_prediction_removed",
+    "original_four_frame_denominator_preserved",
+    "strict_IoU_threshold",
+    "inclusive_center_distance",
+    "GT_width_height_normalization",
+    "MAT7_binary_output_read_by_scipy"
+  ],
+  "SR_AUC": 0.47619047619047616,
+  "PR_at_20": 0.75,
+  "NPR_AUC": 0.5,
+  "scorer_source_sha256": {
+    "calc_seq_err_robust.m": "c851d74d713ace7ee71c12d25fafea9d1b1f9b83ef59b007ccad604054bf10eb",
+    "eval_tracker.m": "3064b18861d7e2cd9793d520dde1e732f362a5daba1eeca470f16aaeb42998ca",
+    "calc_rect_int.m": "7ab693f66c74e066b53e538604f5af60f0d3da33b3f5711d8c96287b56afce62"
+  }
+}

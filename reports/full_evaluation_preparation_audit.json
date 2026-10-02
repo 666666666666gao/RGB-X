@@ -1,0 +1,74 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "FAIL",
+  "overall_verdict": "fail",
+  "integrity_status": "warn",
+  "reason_code": "full_benchmark_evaluation_not_completed_and_inputs_not_ready",
+  "scope": "Original XTrack evaluation sources plus pinned DeT/FE108/VisEvent/COESOT sources; before full evaluation implementation.",
+  "summary": "Real smoke and training evidence is traceable; zero of seven formal benchmarks completed. Actual data/protocol/checkpoint blockers remain.",
+  "agent_id": "/root/rgbx_full_eval_audit",
+  "verdict_id": "/root/rgbx_full_eval_audit",
+  "executor_model": "codex current session",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "max",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-02T16:27:03.709094+00:00",
+  "audited_input_hashes": {
+    "configs/xtrack_b_adamw_3gpu.yaml": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "reports/preflight_xtrack.json": "704d5542cd2d98806521be9858cdc0abc26a738dd9603e8d141a4e33107697a9",
+    "reports/preflight_xtrack_ddp.json": "5b336588224dae62c5cc3494fe6f666070da40a4c96668c4524753b8c502987d",
+    "reports/ddp_smoke_checkpoint_audit.json": "684fb5e194ac7b306159abe30b3f790c24f0e25295268c2a2a5d25bf15b7ece6",
+    "reports/first_validation_20261002.json": "1583e89d4dadb9632871b80668b801ce4e5c8e56cb97224cacd34f08a4cb66e8",
+    "reports/split_disjointness_20261002.json": "8da8d9f945ac0e5e635117cdfac8c64542560f7d8187be8682dcc12390ac4edd",
+    "reports/visevent_official_annotations_audit.json": "5e839cdce58331bf034ec8b0e69d77f0f725e45cedd2a65701f604f3d31b3d65",
+    "initial_review_document_at_commit_37b5151": "59d349a048fbb1a00e63f793cc77bc738a748114b4cdd5f30335a4a9e2d5b620"
+  },
+  "trace_path": ".aris/traces/experiment-audit/2026-10-02_run01/",
+  "response_sha256": "10b002af2a13fb2b3bdbe238d5d73bb13a1ec91087e9fc83ab07d6d1146244b6",
+  "checks": {
+    "gt_provenance": {
+      "status": "warn"
+    },
+    "score_normalization": {
+      "status": "pass"
+    },
+    "result_existence": {
+      "status": "pass",
+      "scope": "explicitly claimed smoke/ROI results"
+    },
+    "dead_code": {
+      "status": "warn"
+    },
+    "scope": {
+      "status": "fail",
+      "formal_benchmarks_complete": 0,
+      "required": 7
+    },
+    "eval_type": "real_gt"
+  },
+  "actions": [
+    "Resolve VisEvent person1 frame mapping",
+    "Resolve COESOT 527-versus-528 official list mismatch",
+    "Obtain missing FE108/COESOT test images",
+    "Verify RGBT234/VOT downloads and coverage",
+    "Audit formal epoch65 endpoint",
+    "Run pinned complete protocols and re-audit actual outputs"
+  ],
+  "claims": [
+    {
+      "id": "smoke_and_roi_validation",
+      "impact": "supported_with_scope_qualifier"
+    },
+    {
+      "id": "full_seven_benchmark_results",
+      "impact": "unsupported_not_yet_executed"
+    },
+    {
+      "id": "performance_improvement_or_multiseed_robustness",
+      "impact": "unsupported"
+    }
+  ]
+}

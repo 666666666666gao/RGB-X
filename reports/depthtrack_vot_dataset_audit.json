@@ -1,0 +1,1162 @@
+{
+  "status": "READY",
+  "role": "dataset_and_protocol_parser_audit_not_tracking_benchmark",
+  "dataset": "DepthTrack",
+  "root": "/data/wangwj/dataset/DepthTrack/Dep_test",
+  "vot_toolkit": "0.7.1",
+  "expected_sequences": 50,
+  "expected_frame_pairs": 76373,
+  "dataset_list_sha256": "94514c0e6084ce214f306b152fdba197db36e137fcc9e86cafb7c64170c96784",
+  "sequences": [
+    {
+      "name": "adapter01_indoor",
+      "frame_count": 2775,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/adapter01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "b3705e68ae1d0f51fc4b7bd3e98216e155d57ee5f55b3f4a8af0fd2d88f06c77",
+      "sequence_config_sha256": "dbe3a70f73a27b45e66e91e4c8a686ff736f861d0803540aeff47680f74eecad",
+      "special_groundtruth_frames": 101,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/adapter01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/adapter01_indoor/color/00002775.jpg",
+          "frames": 2775,
+          "filenames_sha256": "c6a12e264686e79c75bb904b85f1b8017e965afa0e4f293cf18ba791fa34d9bd"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/adapter01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/adapter01_indoor/depth/00002775.png",
+          "frames": 2775,
+          "filenames_sha256": "b84cbe18833f97654641d0d1967a03135caf4b0e1846bc1dfd8f97dc9a048191"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "backpack_indoor",
+      "frame_count": 2111,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/backpack_indoor/groundtruth.txt",
+      "groundtruth_sha256": "13908a0ca1838807ee84a9d52bd6e2c3f97b68b044ed46abefa3ae66f1ee060b",
+      "sequence_config_sha256": "64c642382ee48c5b7f9cd1e428ca4a3816daef80d21523d52c49a89ad3b369c1",
+      "special_groundtruth_frames": 59,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/backpack_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/backpack_indoor/color/00002111.jpg",
+          "frames": 2111,
+          "filenames_sha256": "dd674b42a9f0d8f26e90e744df439849ebd7eb629dcf548ef232a8b8df18f2de"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/backpack_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/backpack_indoor/depth/00002111.png",
+          "frames": 2111,
+          "filenames_sha256": "60605b2f5ecb9ea6626c642c8c6d151c4575ca0259b2c605782cb06a21b6b38b"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "bag01_indoor",
+      "frame_count": 2463,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/bag01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "99a0ac03d7cb6bed38c99652888ec59851d1259d879f840250ecdf7f5cc02f63",
+      "sequence_config_sha256": "f1ee1d0ca1839b9965298252e8eacfc2de8f48c48a2de8b2e190d1dc6fa81c8b",
+      "special_groundtruth_frames": 120,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/bag01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/bag01_indoor/color/00002463.jpg",
+          "frames": 2463,
+          "filenames_sha256": "8904e3c2819d9a21e44096f1dacd705d3f010faae9e8e75081e01b02c6950c07"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/bag01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/bag01_indoor/depth/00002463.png",
+          "frames": 2463,
+          "filenames_sha256": "f4f12b4302be42fec17a7afca36917524278a6d90a27b2e00161b5f45535a183"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "bag02_indoor",
+      "frame_count": 2904,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/bag02_indoor/groundtruth.txt",
+      "groundtruth_sha256": "d1a3cee10d3c21e74e9c2d02c775e065194e26a20f4dd2bd9113744901d78576",
+      "sequence_config_sha256": "a1d9f20b4b3f073242ffdb54dba233d611b410dd9e4205084a96c6648bf8d1d0",
+      "special_groundtruth_frames": 146,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/bag02_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/bag02_indoor/color/00002904.jpg",
+          "frames": 2904,
+          "filenames_sha256": "5c4a59fddcae119066fee122dff216e88061629956d54bff5e3b72523bad98d7"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/bag02_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/bag02_indoor/depth/00002904.png",
+          "frames": 2904,
+          "filenames_sha256": "1675c3af7d8159306567f6892f7dd562e46b02a38169eaf94839ad7764f1d7d6"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "ball01_wild",
+      "frame_count": 531,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/ball01_wild/groundtruth.txt",
+      "groundtruth_sha256": "1b8e60858f5944eac9858572b3ce3f90aa69a198da93804b0ecf749d4ead94b2",
+      "sequence_config_sha256": "1ea8537e75ae002d3044a865b1b2bfd47b04b1f5e7a282befc85fa012b3d5e7a",
+      "special_groundtruth_frames": 133,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball01_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball01_wild/color/00000531.jpg",
+          "frames": 531,
+          "filenames_sha256": "0265812b43f92c14b5f82358b603087b1866562e6b708769e396e03b53508c4a"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball01_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball01_wild/depth/00000531.png",
+          "frames": 531,
+          "filenames_sha256": "3c1139ff7cb9a8790d9b0d3414f5bf022addb2db9ea5d7bceb6a8bb4ea14d908"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "ball06_indoor",
+      "frame_count": 781,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/ball06_indoor/groundtruth.txt",
+      "groundtruth_sha256": "aea5b4afd5a4f95de4f7adc3210dae4024dadd74419601743dc7364548563d81",
+      "sequence_config_sha256": "b07aa3b072f2257e2bb14179b69aad571b0f5ad3b685b4b9d8358d1f22e95198",
+      "special_groundtruth_frames": 63,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball06_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball06_indoor/color/00000781.jpg",
+          "frames": 781,
+          "filenames_sha256": "200eb855893a5063a164a87b24b8a53f656d8258965e60416a9d562fe52398b4"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball06_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball06_indoor/depth/00000781.png",
+          "frames": 781,
+          "filenames_sha256": "972cb89e8ca20a41778d9ae1382285a059179f43e2bcef9ce9c2a334d5de2bb2"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "ball10_wild",
+      "frame_count": 2089,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/ball10_wild/groundtruth.txt",
+      "groundtruth_sha256": "5418577123925d523ede0210d12686b94f76f86c578630d7f336fcf1cc271417",
+      "sequence_config_sha256": "8cb0673e8a47ac31cd8fefc640d183b254007403d28fd8014db167fa8f1ea05b",
+      "special_groundtruth_frames": 73,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball10_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball10_wild/color/00002089.jpg",
+          "frames": 2089,
+          "filenames_sha256": "824cba32e81295270d5c1b4e38dfa1eb25c0c32b1b7a769fbc3bfe5463fe0005"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball10_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball10_wild/depth/00002089.png",
+          "frames": 2089,
+          "filenames_sha256": "3a3da18f0db6bac5595cc0bb0ef2ebf363adbf0f4d45b42e49438e7b82d58613"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "ball11_wild",
+      "frame_count": 1576,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/ball11_wild/groundtruth.txt",
+      "groundtruth_sha256": "c58a97c8df77a2daafb5cdb675a92f51ade9fe248e950ddab94175c9bee7596d",
+      "sequence_config_sha256": "d86ee184fcc60330da3afff475ba09cb3f30e3674c0a881b700dc96e1f6a8213",
+      "special_groundtruth_frames": 41,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball11_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball11_wild/color/00001576.jpg",
+          "frames": 1576,
+          "filenames_sha256": "e692f845fa883b66a055163e7ff16af7e9f6543d22ee0c1ff3ef44b10cac39fa"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball11_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball11_wild/depth/00001576.png",
+          "frames": 1576,
+          "filenames_sha256": "55f95400f963343aba52d58764a1af66c94512602ecb5a503fdc6b80c68326e9"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "ball15_wild",
+      "frame_count": 179,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/ball15_wild/groundtruth.txt",
+      "groundtruth_sha256": "321fac5e52e4a36d3363f3744053fe5f52456eaafd2ddba7e18f8610dba9eb85",
+      "sequence_config_sha256": "bfbd4417bbcd6901a12368bf889ebc2468dad8c8ffd4146fedf4e509217a4e0e",
+      "special_groundtruth_frames": 14,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball15_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball15_wild/color/00000179.jpg",
+          "frames": 179,
+          "filenames_sha256": "aa13db53ec33c7f1a0de5d9f364d9f33897893e788d31893d0e26277c9efdfe3"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball15_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball15_wild/depth/00000179.png",
+          "frames": 179,
+          "filenames_sha256": "e19d2792c6c0dc7a46c5f91bf7a7b89819df0cee871b69a21e93ae91ab63fbc1"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "ball18_indoor",
+      "frame_count": 3699,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/ball18_indoor/groundtruth.txt",
+      "groundtruth_sha256": "bd4cc954f9ea619a75188169025e564a74a2a31cabbc62fe07bdb4ad09da6994",
+      "sequence_config_sha256": "2faff0554472a16fb4196ca929f91c34808bd3ecf3c7c72e585779a2009910cf",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball18_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball18_indoor/color/00003699.jpg",
+          "frames": 3699,
+          "filenames_sha256": "b0fb7d1163b4042bc57fcf858cea70bf47be7a418b26f1ba14687c40243688e4"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball18_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball18_indoor/depth/00003699.png",
+          "frames": 3699,
+          "filenames_sha256": "6aeabc0e05a04f848c4324a8f9c97f8ff9496283c59895dda2efa83e51ae3ebb"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "ball20_indoor",
+      "frame_count": 1691,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/ball20_indoor/groundtruth.txt",
+      "groundtruth_sha256": "bfb8e3936ff107b5027157ac27b4c2757102fee14ae846d6c227d04b0e6350de",
+      "sequence_config_sha256": "364fafc7144b122a87e2fef636f13ad380dbb3e4a431cb05d2792b4b0fef259e",
+      "special_groundtruth_frames": 183,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball20_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball20_indoor/color/00001691.jpg",
+          "frames": 1691,
+          "filenames_sha256": "22b69606c2344d62005468eab85a3a791b12588c43be92ff23cf3930c41fe439"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ball20_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ball20_indoor/depth/00001691.png",
+          "frames": 1691,
+          "filenames_sha256": "371a72ff1f217110255f7c402720fe76d243410373fe4db97fdddeae597923a8"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "bandlight_indoor",
+      "frame_count": 1190,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/bandlight_indoor/groundtruth.txt",
+      "groundtruth_sha256": "0b98d939c389885fdc7fb9fabdaea02fabbaa08e9ee386f76d1e8b48967bf3ba",
+      "sequence_config_sha256": "052f4a34ec48d347dbf424161e59e6b38c0ad55a94329a0941ad6cf9f058304b",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/bandlight_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/bandlight_indoor/color/00001190.jpg",
+          "frames": 1190,
+          "filenames_sha256": "4d13f506217c6d73868a97274311e658377af52ebc5260f281feff8ae1f37404"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/bandlight_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/bandlight_indoor/depth/00001190.png",
+          "frames": 1190,
+          "filenames_sha256": "c3742b1380a670ff369a29209843b41acdaacd878c64d13e412f89f097a4128a"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "beautifullight02_indoor",
+      "frame_count": 975,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/beautifullight02_indoor/groundtruth.txt",
+      "groundtruth_sha256": "2404927d2f859bae4b4e053857ae6723e36fe968a6ae2d5de98759ffb1267387",
+      "sequence_config_sha256": "fbca19c197e98bda2ff3dc0eb1b2a6fc8a52e51a8b0517be7735e09d82ae5302",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/beautifullight02_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/beautifullight02_indoor/color/00000975.jpg",
+          "frames": 975,
+          "filenames_sha256": "cd880c5d1f96dfa73c318a6686b1521891b65d064f488ee5502a0df18ac4a86e"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/beautifullight02_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/beautifullight02_indoor/depth/00000975.png",
+          "frames": 975,
+          "filenames_sha256": "37eb37fb7911c80cb699a54af325b14b21464327c9dae20763ff2c5408006644"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "book03_indoor",
+      "frame_count": 716,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/book03_indoor/groundtruth.txt",
+      "groundtruth_sha256": "260fd0bcd193521e6cf2d9d53ee875774a3f1661e81b20499fdf8c86c9240aae",
+      "sequence_config_sha256": "9ca5f787e212cfa2b3115f850a53253dbf8a2cd7aaecdf3722f58d5d9507fc37",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/book03_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/book03_indoor/color/00000716.jpg",
+          "frames": 716,
+          "filenames_sha256": "5c0ffa46097a289df0a7ddf0d230c95746b2f90f0bab7cee328344fb45f02f52"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/book03_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/book03_indoor/depth/00000716.png",
+          "frames": 716,
+          "filenames_sha256": "c16a73203cf5778d8153d460fe182678eefa6cc89411f9ff3beb5867111fb144"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "bottle04_indoor",
+      "frame_count": 2286,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/bottle04_indoor/groundtruth.txt",
+      "groundtruth_sha256": "42fded7062071f94c37eb3ad9af8073616da346cd0dc260de11d50a866a67741",
+      "sequence_config_sha256": "f8c3e3bfae93508f11be97af51bd0788d8fdda39230e1f637a976ebcef443c78",
+      "special_groundtruth_frames": 125,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/bottle04_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/bottle04_indoor/color/00002286.jpg",
+          "frames": 2286,
+          "filenames_sha256": "d6c8a2a30ad69133536cd7557c06645ad95d012512eb6696508b52a73d46ee96"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/bottle04_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/bottle04_indoor/depth/00002286.png",
+          "frames": 2286,
+          "filenames_sha256": "462e82f71787523cda23032cecad095c8888e1e91a787bfb501a254174a328e5"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "card_indoor",
+      "frame_count": 2416,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/card_indoor/groundtruth.txt",
+      "groundtruth_sha256": "50a78cef130a45c6b5baa8fd86b052ba4fc70621bf07d923c60443962d24167a",
+      "sequence_config_sha256": "9d6dbb1b47a5a0686a0cdafdc59bea676eb04df7b36cc6048dc529ca868cc03f",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/card_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/card_indoor/color/00002416.jpg",
+          "frames": 2416,
+          "filenames_sha256": "fc60a880d350dd036570d3cb2e5c2e3634c7c1c6ffa792ee8b0af1814e494538"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/card_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/card_indoor/depth/00002416.png",
+          "frames": 2416,
+          "filenames_sha256": "e9fc1196bdb3594cbfc06ae7ecaf661a6e9a505f3a77feb24b3c3731042b12ad"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "cat01_indoor",
+      "frame_count": 3035,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/cat01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "8bd587210028a7e88760a5d089b997c936284a986b66829061fa794ca888c0f2",
+      "sequence_config_sha256": "f4780863af615d52b5ec49330d058feae26ad9399f1e6f8b623e4fdecb79fabe",
+      "special_groundtruth_frames": 83,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cat01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cat01_indoor/color/00003035.jpg",
+          "frames": 3035,
+          "filenames_sha256": "28ca67f718d91b4822239b3805515272d34024d4a5d9d8a1c4d71c06e2d029fb"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cat01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cat01_indoor/depth/00003035.png",
+          "frames": 3035,
+          "filenames_sha256": "3c60129c157288a98c9b97538bc1105fd3d38c4c56e0a13614606b25b814ef99"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "colacan03_indoor",
+      "frame_count": 2076,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/colacan03_indoor/groundtruth.txt",
+      "groundtruth_sha256": "35d00e462ed6093d4b3c48b3d49171f5b84e1a5e8f1a6773c3ef4a9a2f836ab6",
+      "sequence_config_sha256": "960685b7457bc4d7dc3a526b4758d7d358de46b8f4a9467cc3db71fec7a740c2",
+      "special_groundtruth_frames": 408,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/colacan03_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/colacan03_indoor/color/00002076.jpg",
+          "frames": 2076,
+          "filenames_sha256": "6e66996fb161640b1535506b1d831340d47f96fbc97bdf782e9418511a78cb55"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/colacan03_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/colacan03_indoor/depth/00002076.png",
+          "frames": 2076,
+          "filenames_sha256": "49a377af7f611de906e90f879ff93c8dfd9b4d55c8433aed549ec34a8b4489f6"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "cube02_indoor",
+      "frame_count": 3816,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/cube02_indoor/groundtruth.txt",
+      "groundtruth_sha256": "992c7adb9dfa99a8755e00cf1918fac82f0c83bbf06893e711159134a47754ce",
+      "sequence_config_sha256": "bce81d8365c157526d35055f9374cad5523979c1a8aac787652bbaf23ac902c2",
+      "special_groundtruth_frames": 191,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cube02_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cube02_indoor/color/00003816.jpg",
+          "frames": 3816,
+          "filenames_sha256": "4cb5b459d7c90b24de1713d5853d296d121715031f1e8c1f47a3f428c3623644"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cube02_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cube02_indoor/depth/00003816.png",
+          "frames": 3816,
+          "filenames_sha256": "f4434dce1d1259b04ee98f1392160f2485b2dd93b5505c011021bdde686ddc4c"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "cube03_indoor",
+      "frame_count": 610,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/cube03_indoor/groundtruth.txt",
+      "groundtruth_sha256": "a190476f89a5962c1844a4830f6f98bc80ee52b36e172997f9dc2c5d200e727a",
+      "sequence_config_sha256": "c32965c71944abb9bf3bbd16bc7a2d3d750ac069a04eb9dc88eb0a05e34e5628",
+      "special_groundtruth_frames": 16,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cube03_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cube03_indoor/color/00000610.jpg",
+          "frames": 610,
+          "filenames_sha256": "7bac11b89e92c4f51c9847fb91e29c5d0fe01b1782f54a17a051a71f2c2c5708"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cube03_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cube03_indoor/depth/00000610.png",
+          "frames": 610,
+          "filenames_sha256": "5a4e1aced36ff69378fe2b21a248c3f881acfc400917690bb32222c1cb17ede4"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "cube05_indoor",
+      "frame_count": 2975,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/cube05_indoor/groundtruth.txt",
+      "groundtruth_sha256": "18bb105f82830d5c3f33ea508e2bb34d72f989e781db599c109b14f9e3242ff5",
+      "sequence_config_sha256": "7c8ffe0a8ff1f2c20d7ad767622c6af72340ca710e6a3fa358072844ac737844",
+      "special_groundtruth_frames": 119,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cube05_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cube05_indoor/color/00002975.jpg",
+          "frames": 2975,
+          "filenames_sha256": "2ee0c2d5b7fa8f4c6d75058224ff05e6e8c9e678b4dbb9248d15915dafdd02b7"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cube05_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cube05_indoor/depth/00002975.png",
+          "frames": 2975,
+          "filenames_sha256": "a9218c04ca12351a7e8b3821e0ba7948e8e593755aa25dab67ad7c4cc5eefe1b"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "cup01_indoor",
+      "frame_count": 1361,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/cup01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "ca9a2cbe0a1bfeeb3603a7e70b2a238523552f7e2af748a6d806f9ed61af61c4",
+      "sequence_config_sha256": "f23bf5afab364d10433bf23c50aa48efbd02e8c41215d26f3e3f236b9dcefd8c",
+      "special_groundtruth_frames": 26,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cup01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cup01_indoor/color/00001361.jpg",
+          "frames": 1361,
+          "filenames_sha256": "d76093060b5ed7436039b3e24b14720c58bf875c425587cad769b353f5d2785e"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cup01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cup01_indoor/depth/00001361.png",
+          "frames": 1361,
+          "filenames_sha256": "5501609bd0288bec81421fd77275f1da095b23d48660c15f52302b29618a51c8"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "cup02_indoor",
+      "frame_count": 1758,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/cup02_indoor/groundtruth.txt",
+      "groundtruth_sha256": "5995334b33a0fabc02cebcbe8211742c2338f3e2e11b7ad939fefdbb71e0a8cf",
+      "sequence_config_sha256": "f3c6fea38385b6c61826d0a23f52c66428d94423047580b768403469854c5bd5",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cup02_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cup02_indoor/color/00001758.jpg",
+          "frames": 1758,
+          "filenames_sha256": "a1821b0bbeb53a7b8d6d84b1e337c8a093e3af129e626f496a8be5832fc2a1b0"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cup02_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cup02_indoor/depth/00001758.png",
+          "frames": 1758,
+          "filenames_sha256": "accc8706e77ae37e76643b2dfc9a58c6cccfa04131191b39a5fe3841589d8e4a"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "cup04_indoor",
+      "frame_count": 2235,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/cup04_indoor/groundtruth.txt",
+      "groundtruth_sha256": "2d8ce6bf9d0de0695ecfe35bad5822066e64f8e0a706c333583c14881fbbfd20",
+      "sequence_config_sha256": "2bb478baca679acfcc51a8ba3c1da6ee6a8a2c02884bf4e270fba2823e385b5e",
+      "special_groundtruth_frames": 71,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cup04_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cup04_indoor/color/00002235.jpg",
+          "frames": 2235,
+          "filenames_sha256": "f3384960959489b8db0f0491fb229be3412d032b9e32b23ee1035441467d367f"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cup04_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cup04_indoor/depth/00002235.png",
+          "frames": 2235,
+          "filenames_sha256": "f91e7ae261709d63d641bc5d40425f8be68a87bbf9980caa80f4e52b6bef12dc"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "cup12_indoor",
+      "frame_count": 1006,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/cup12_indoor/groundtruth.txt",
+      "groundtruth_sha256": "07ad57c3b66cce2e24c1940682280d61a33ae646253aad5d8dcd0023600bbab9",
+      "sequence_config_sha256": "e8238d4943125699a42467628e74e0d2ce52ddefa89ceedbabfdb9f28e157bd7",
+      "special_groundtruth_frames": 53,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cup12_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cup12_indoor/color/00001006.jpg",
+          "frames": 1006,
+          "filenames_sha256": "b3ae3485926309a7e2f085f6dcd436eaea2eb7a6035b21afddddbcba8539f405"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/cup12_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/cup12_indoor/depth/00001006.png",
+          "frames": 1006,
+          "filenames_sha256": "9902554e55f0e693339fad4d51d46adb60d795a28f69e3edce657a3e917af233"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "developmentboard_indoor",
+      "frame_count": 1527,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/developmentboard_indoor/groundtruth.txt",
+      "groundtruth_sha256": "c057ae1ee017de752982e48281642dee9658ff757b8e932c2db936b4d8201bdc",
+      "sequence_config_sha256": "b622661a77e9f7d0afa4a19f2a7e20c4b9996c3ddde6365af2ab0616054c2741",
+      "special_groundtruth_frames": 138,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/developmentboard_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/developmentboard_indoor/color/00001527.jpg",
+          "frames": 1527,
+          "filenames_sha256": "ce238e31405b08a8318c27bef793b3df9ff6eb2f38755c254015121c53cf12d1"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/developmentboard_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/developmentboard_indoor/depth/00001527.png",
+          "frames": 1527,
+          "filenames_sha256": "7983788e1c7fce65b8fce8a19b244631c10c81ca1e55796d7f2f0fbdd71fee4a"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "duck03_wild",
+      "frame_count": 492,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/duck03_wild/groundtruth.txt",
+      "groundtruth_sha256": "a96eb9f2f991f76cdcb0b185ebf69e08a201ef2e69ecbe25faf27c1ec2b6592c",
+      "sequence_config_sha256": "dbb407fab1ba80079256f98f8b67ea4f4bac6af89772e4eafac839b5a39fc02a",
+      "special_groundtruth_frames": 4,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/duck03_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/duck03_wild/color/00000492.jpg",
+          "frames": 492,
+          "filenames_sha256": "fdc2d56e514d33271d4cd9a43473e61895fb89551c32d05eeef4773679db858f"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/duck03_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/duck03_wild/depth/00000492.png",
+          "frames": 492,
+          "filenames_sha256": "561d70abd46bdd26f18d13465f2f6acde7f8cbe945d23740f18c598b08896dcc"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "dumbbells01_indoor",
+      "frame_count": 1056,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/dumbbells01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "6ea04234d44e8fbac7b88f1b7b249dc6201eed4294f56ac24de71e130bf4d795",
+      "sequence_config_sha256": "10423265af7ab2414ab71d4a3a279c0abf05038fe1721559809ac91b42519229",
+      "special_groundtruth_frames": 35,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/dumbbells01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/dumbbells01_indoor/color/00001056.jpg",
+          "frames": 1056,
+          "filenames_sha256": "4b45fcd4f8bec1f9e213bb3bd6c51bcf82da88ed380a67a549218127ddc4c736"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/dumbbells01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/dumbbells01_indoor/depth/00001056.png",
+          "frames": 1056,
+          "filenames_sha256": "fd0600347ad2324a7659bd70a46204ade754e62a5a70f24d1fbbed61eff74bc2"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "earphone01_indoor",
+      "frame_count": 1090,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/earphone01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "0ef17b436a895a91841e67af6848947c21ae4b854072e4ef28aefae5170e0f7f",
+      "sequence_config_sha256": "7faa44d4bc34a7468f871df7065096de7e34213f1550e3131d8df960ce3e7519",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/earphone01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/earphone01_indoor/color/00001090.jpg",
+          "frames": 1090,
+          "filenames_sha256": "862a9c757df0a9c8a795da44f749aeeb1c8daa8cac5b18a9645619c290d9f5cd"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/earphone01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/earphone01_indoor/depth/00001090.png",
+          "frames": 1090,
+          "filenames_sha256": "81d329bcd57c3ba355a115fae9bfc020d5ec0a0fff77839f3a7c4a222645a172"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "file01_indoor",
+      "frame_count": 1628,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/file01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "417c9a594ad799a78839ea78f499cc91a11eb5aa1ca95ebad94483e0c624b61f",
+      "sequence_config_sha256": "5e8e3c57b6161842fbee948f248705dc44afff158bf58b3f824c635f06eaca94",
+      "special_groundtruth_frames": 7,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/file01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/file01_indoor/color/00001628.jpg",
+          "frames": 1628,
+          "filenames_sha256": "3361a6683eabc7ee64c6f10466a656ebc273f230d626d7ff29e15f6161bf7932"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/file01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/file01_indoor/depth/00001628.png",
+          "frames": 1628,
+          "filenames_sha256": "e5fd03976a46b0ba0da97d913f96a7bf880b43af8c53459a1489f2c43035a25b"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "flag_indoor",
+      "frame_count": 1371,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/flag_indoor/groundtruth.txt",
+      "groundtruth_sha256": "ac825104516035023cb2d536984a9f4ca821c4fa86713874dfacfebdd2087ddf",
+      "sequence_config_sha256": "71850af80377f8e1821f88867bd6aee09d23c86f503002fb869efe8448d4db3b",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/flag_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/flag_indoor/color/00001371.jpg",
+          "frames": 1371,
+          "filenames_sha256": "de52d4a74dbd0c45bdbd6d3dced779d2f6d40a022dbe46e099cf77209e7a1bc3"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/flag_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/flag_indoor/depth/00001371.png",
+          "frames": 1371,
+          "filenames_sha256": "e55c19a0962f2bd9307127f8fd64cfa0c83964711185f4339abe46ebbfad176a"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "glass01_indoor",
+      "frame_count": 2233,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/glass01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "32a574b358255b0d872b5ac30a6ae2064eb8f5150c40eeb7fa3e9ac40a90726c",
+      "sequence_config_sha256": "0f30112d3d3c7e94ebb4aad436b1db5c1e7bc3eb7ad24728c80c337953faaea6",
+      "special_groundtruth_frames": 8,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/glass01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/glass01_indoor/color/00002233.jpg",
+          "frames": 2233,
+          "filenames_sha256": "0fe7d74a9dda8665021cbca7ea38a92eb5ceb8f6e3ec09065e8245f2b956c8f5"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/glass01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/glass01_indoor/depth/00002233.png",
+          "frames": 2233,
+          "filenames_sha256": "6326c51077817f4c9e4898721047101ae029f02197f0e81d7e84be986a6d09d8"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "hand01_indoor",
+      "frame_count": 1223,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/hand01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "8a052fc0d355e315a63a3caf9fe4ac9df8c02b0772b22b4f55f5d92a5d23b52f",
+      "sequence_config_sha256": "c6c2b62c7aaffa925ef081898d161f0f65270e4209ccc6b1a378117f8202555f",
+      "special_groundtruth_frames": 54,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/hand01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/hand01_indoor/color/00001223.jpg",
+          "frames": 1223,
+          "filenames_sha256": "655627bbf82f659c3b2b94c35ff75e0ff776e347bd6752709412be81bdeaec7a"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/hand01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/hand01_indoor/depth/00001223.png",
+          "frames": 1223,
+          "filenames_sha256": "5eb1ff056aa4fc47ebdeb10bc9ca1acf1f139b69567ad6f25de8844f892b02da"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "human02_indoor",
+      "frame_count": 1740,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/human02_indoor/groundtruth.txt",
+      "groundtruth_sha256": "d79a9a9f828d8dcf859a08058246fc280df3b9de92805fdb6ee913e67ff2fe10",
+      "sequence_config_sha256": "1d040a2c41cd750b8dc9486039d62a17e3dc678a191c66a487117dce0ff65ca4",
+      "special_groundtruth_frames": 8,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/human02_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/human02_indoor/color/00001740.jpg",
+          "frames": 1740,
+          "filenames_sha256": "a445f0c2cdb51d77e6f52fc046398e3fad6dd22e6f2e54580e96dc4f2bbbe262"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/human02_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/human02_indoor/depth/00001740.png",
+          "frames": 1740,
+          "filenames_sha256": "45c6dc447d65f5eee4b1be90d7bc06e701d429539bc282598640d20523b6a2f6"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "lock02_indoor",
+      "frame_count": 521,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/lock02_indoor/groundtruth.txt",
+      "groundtruth_sha256": "936ce8b73ac20d46ca1aa5bfbcd73d75df7448251a45cac99f78e7f725c7f696",
+      "sequence_config_sha256": "75d8ae680932f6e8a0354fa45c8cce50ec45622a2eff9d9ca7113958c47ebfc1",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/lock02_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/lock02_indoor/color/00000521.jpg",
+          "frames": 521,
+          "filenames_sha256": "4ea1dc2d0cc52f3f7ae75d44eee9acb939395749fc7c732fa5542c720227a54d"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/lock02_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/lock02_indoor/depth/00000521.png",
+          "frames": 521,
+          "filenames_sha256": "9b19cd455af5043696bf0d5ff3bae16c4429d3de742d54d9e56d226b736d99fa"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "mobilephone03_indoor",
+      "frame_count": 677,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/mobilephone03_indoor/groundtruth.txt",
+      "groundtruth_sha256": "6fac400ef80430776e28c43ef3d000be3372ec61b6ce08f0f2859bad93fed40b",
+      "sequence_config_sha256": "503b1066bf6fa7c7306d64ca0b54fe8e16683695ce2f85b59c65ba1989e9da63",
+      "special_groundtruth_frames": 14,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/mobilephone03_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/mobilephone03_indoor/color/00000677.jpg",
+          "frames": 677,
+          "filenames_sha256": "1403db63bdf76d8bcdd0490d5fa6ac83f5e0e267d3a6ed251fb521f6adbdf7ff"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/mobilephone03_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/mobilephone03_indoor/depth/00000677.png",
+          "frames": 677,
+          "filenames_sha256": "ecdabedf288b42331ffb636b3e908188b62e9e21ff498467c79ccc7e72eb235f"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "notebook01_indoor",
+      "frame_count": 2000,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/notebook01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "2bbad0d41dd631e6d97dd6b9641988b625446be381bf10e7c969f447f01af13e",
+      "sequence_config_sha256": "62ffc83411f10fb185938f2d4c99cc0cfe84960f370416be4ac818b3f60d2285",
+      "special_groundtruth_frames": 109,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/notebook01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/notebook01_indoor/color/00002000.jpg",
+          "frames": 2000,
+          "filenames_sha256": "d379f074ca26be9108f3474f8e68af0cbb933e27ff9f5dbe79ad8f4c1662f980"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/notebook01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/notebook01_indoor/depth/00002000.png",
+          "frames": 2000,
+          "filenames_sha256": "f9890493eec1027786dddd264abafe40ecc691d13d77981daee061218f409af1"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "pigeon01_wild",
+      "frame_count": 668,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon01_wild/groundtruth.txt",
+      "groundtruth_sha256": "877038230299d0517fb1632b54c8bd60d1971a66bbe3a1ed008a9a1dbb77d81e",
+      "sequence_config_sha256": "8b5aa6fb6cc7a4b5e7cc0a0d9ace6b9acb77da18ccaf70665e28b0bdbf7122c4",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon01_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon01_wild/color/00000668.jpg",
+          "frames": 668,
+          "filenames_sha256": "f1f12c8cc565d07f084173e27f2a9998cfcfb27d0b57f91e7b7196e06b646e72"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon01_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon01_wild/depth/00000668.png",
+          "frames": 668,
+          "filenames_sha256": "526c4b51f3ea516741d36cae733c57fbbed90ff9039ac406d42f97ce5fbb5108"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "pigeon02_wild",
+      "frame_count": 303,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon02_wild/groundtruth.txt",
+      "groundtruth_sha256": "f2a0ddb2ecbc841e9638867f4b6324d480f09c7d39a07cb81902826b9a6549b7",
+      "sequence_config_sha256": "cdbd22ec00cd5f52113c868f95898b5924a41c34cc35ef022eb62c87622c58e3",
+      "special_groundtruth_frames": 1,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon02_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon02_wild/color/00000303.jpg",
+          "frames": 303,
+          "filenames_sha256": "bc690b64c07adbbec120d80214e31754ac7580b87df5aef15e2f9f839c93d5a5"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon02_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon02_wild/depth/00000303.png",
+          "frames": 303,
+          "filenames_sha256": "fc241910e11f87a6485c588a5eb26b0ee87b887b6c0cbe89220bbb8fffec970d"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "pigeon04_wild",
+      "frame_count": 143,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon04_wild/groundtruth.txt",
+      "groundtruth_sha256": "783f70b354b4de6099a28e410c79380fede52075a4d64f6d4dc8c8447a07ade2",
+      "sequence_config_sha256": "0aedd4f19e3ecfe0c4147588046900d438e326f112bd6cc862c4cd55eacd2f3b",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon04_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon04_wild/color/00000143.jpg",
+          "frames": 143,
+          "filenames_sha256": "d13699f4775b744ab796da837de74e9fc3d9f9d9940172f946812f85b836f08f"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon04_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/pigeon04_wild/depth/00000143.png",
+          "frames": 143,
+          "filenames_sha256": "79087132a879826b52bba592d2c22f5a018954656e3899d3c64b42c08b1e7d2a"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "pot_indoor",
+      "frame_count": 1056,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/pot_indoor/groundtruth.txt",
+      "groundtruth_sha256": "aa1b9527ec7b34a1584af952c765560f61291476430fd49d001696fbf0b2ee19",
+      "sequence_config_sha256": "fe3e9c131d52dddaad319299f559d755ae31afb7a1f5ac5611429f8f4a8a8b0e",
+      "special_groundtruth_frames": 239,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/pot_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/pot_indoor/color/00001056.jpg",
+          "frames": 1056,
+          "filenames_sha256": "44119a84b5b198374a99696f85803623b8291c86d8f4523de8421ee6513e5289"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/pot_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/pot_indoor/depth/00001056.png",
+          "frames": 1056,
+          "filenames_sha256": "f19b2253c52bd6420952c5a18323a2db75d7a5caab1b183c2bab0fcdf1570170"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "roller_indoor",
+      "frame_count": 850,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/roller_indoor/groundtruth.txt",
+      "groundtruth_sha256": "1439ad5f546185d60672de28bc6ed5007b9e0ef1c44a797efeccb39040805213",
+      "sequence_config_sha256": "ae53e4227f001a7db7c4cde27adb2a76cc92c3990eae94a2ed06c340af91d6be",
+      "special_groundtruth_frames": 200,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/roller_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/roller_indoor/color/00000850.jpg",
+          "frames": 850,
+          "filenames_sha256": "bd9623517bab376722feaa050a12b6f3952b74a30b00393612ad57d83c2ec054"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/roller_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/roller_indoor/depth/00000850.png",
+          "frames": 850,
+          "filenames_sha256": "a6e59a63eaae2430fc2b35732b9023bd6df6a0bc9dc4df6d75a721e4455588b0"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "shoes02_indoor",
+      "frame_count": 1317,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/shoes02_indoor/groundtruth.txt",
+      "groundtruth_sha256": "fedc0371012ddd18896cda1f1e0e4d6b36cd8a1dbdbbfe55f1f631bd56fc3dca",
+      "sequence_config_sha256": "efb7b908f7f52101326a963eda334d3aacc3be5e42675389585fbc6f44506f6d",
+      "special_groundtruth_frames": 20,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/shoes02_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/shoes02_indoor/color/00001317.jpg",
+          "frames": 1317,
+          "filenames_sha256": "78617c435229cab89dfad6eeef0c6da61c8ed4e42fd47173c1da79459aab0b4e"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/shoes02_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/shoes02_indoor/depth/00001317.png",
+          "frames": 1317,
+          "filenames_sha256": "79ce438a0eda32c97f8c64b215c8edef082209e25d2ade5cadc6c7e9a89937ea"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "squirrel_wild",
+      "frame_count": 1010,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/squirrel_wild/groundtruth.txt",
+      "groundtruth_sha256": "7804bac21c4e6147f2ab848a0fc9823cfdc5da28bd525c84de3c1c081b23501e",
+      "sequence_config_sha256": "8df11af765837ed65d6765a119139db7ab3ad739b0883c728c72553db0c10747",
+      "special_groundtruth_frames": 67,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/squirrel_wild/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/squirrel_wild/color/00001010.jpg",
+          "frames": 1010,
+          "filenames_sha256": "94b2955f0fa8bdc9d63469ee306cbf28c96bb1a4ff634ee5647b809e40083c0a"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/squirrel_wild/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/squirrel_wild/depth/00001010.png",
+          "frames": 1010,
+          "filenames_sha256": "dc0041d3d042d3b98fa2d5d1f4f66194ce1abdc668762253e3452fe08eff274e"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "stick_indoor",
+      "frame_count": 903,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/stick_indoor/groundtruth.txt",
+      "groundtruth_sha256": "6ff2ed1f2f1be62e849196a7e1ce249c5ded92954712bd31662a979af0445e85",
+      "sequence_config_sha256": "cf1aa1dd775595eeb6b5c01add0a17cc5c56595f2f254629bcb4b8a953120dc0",
+      "special_groundtruth_frames": 5,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/stick_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/stick_indoor/color/00000903.jpg",
+          "frames": 903,
+          "filenames_sha256": "7b633c42165b3c1bc3b0b8129832d298c88d02f4db77768d44d417238bffb3d2"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/stick_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/stick_indoor/depth/00000903.png",
+          "frames": 903,
+          "filenames_sha256": "6d4ede546c002ee98d00595e1599cddf1e42f0e262cf71fb562069ae340964f3"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "toiletpaper01_indoor",
+      "frame_count": 1600,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/toiletpaper01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "03b6d1624240d9be4a68e1f0515b004e86d9806ea24a83f1cdb83087f51a2208",
+      "sequence_config_sha256": "6e46cbbc4a73f2f22c7cc9e6ed7b0f572f41272143a89ea477f8255cc7ff7eff",
+      "special_groundtruth_frames": 44,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/toiletpaper01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/toiletpaper01_indoor/color/00001600.jpg",
+          "frames": 1600,
+          "filenames_sha256": "dbe7d4d5280788ddb6559d0f2dbee10285f9a28db56f924d4a2a2b553fc57374"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/toiletpaper01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/toiletpaper01_indoor/depth/00001600.png",
+          "frames": 1600,
+          "filenames_sha256": "9d188271fbc570b14032d5ddf584e1484c5accc311435b4c95a94037f11489a1"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "toy02_indoor",
+      "frame_count": 1140,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/toy02_indoor/groundtruth.txt",
+      "groundtruth_sha256": "8614ea8fe98aea1e3a952fd956de6c4602c9597c2936af08ad1089fe3ecf09ec",
+      "sequence_config_sha256": "23f173bf3e9fb732b7440828dc52021e17bb99adc1ced5baf69379eda5624cd8",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/toy02_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/toy02_indoor/color/00001140.jpg",
+          "frames": 1140,
+          "filenames_sha256": "b037d12216f68c5f96c0f06ebf86a3f6bb6199856232b4b767e6a3ac884e6345"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/toy02_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/toy02_indoor/depth/00001140.png",
+          "frames": 1140,
+          "filenames_sha256": "dced27b0b0bf6e942c3f7611c208493b4ebb889e49c2cc8e7c6004760f1f5227"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "toy09_indoor",
+      "frame_count": 1344,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/toy09_indoor/groundtruth.txt",
+      "groundtruth_sha256": "ef1196b22d2d320f37723bca62438e61ef17a437c986b12e1643219792da5eee",
+      "sequence_config_sha256": "f4b55c72f7462c0406d2c52392c8ba85ec65b956cbe1897c600cd6d78497c5ab",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/toy09_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/toy09_indoor/color/00001344.jpg",
+          "frames": 1344,
+          "filenames_sha256": "3945363f89b0fa3947bc76d358577c0cf9da76128e5a6dd101a45fc9c6ef41ec"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/toy09_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/toy09_indoor/depth/00001344.png",
+          "frames": 1344,
+          "filenames_sha256": "6f13ef86b0ececb9a0a19f4ba1519824bea2c61536c0c4fb477577269b1d2657"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "ukulele01_indoor",
+      "frame_count": 1613,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/ukulele01_indoor/groundtruth.txt",
+      "groundtruth_sha256": "1da49e42cf7a21c559bd20e37b6ee3f3d38ecaf6db886f801b1c643f010ccb67",
+      "sequence_config_sha256": "ac67fc1ef1d505e13aef0d1952e3422855e9220a758baba1f86d6112f61cfcb0",
+      "special_groundtruth_frames": 5,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ukulele01_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ukulele01_indoor/color/00001613.jpg",
+          "frames": 1613,
+          "filenames_sha256": "201e049edf5915d9e1bc52350fe7d91b467fe6f60cb94b953e53b3ec5cb39798"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/ukulele01_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/ukulele01_indoor/depth/00001613.png",
+          "frames": 1613,
+          "filenames_sha256": "f432daf0e6d4975af7b0c238f0d36a0687d67054e2983c002c97c5e483145b77"
+        }
+      },
+      "anchors": null
+    },
+    {
+      "name": "yogurt_indoor",
+      "frame_count": 1614,
+      "groundtruth": "/data/wangwj/dataset/DepthTrack/Dep_test/yogurt_indoor/groundtruth.txt",
+      "groundtruth_sha256": "971d8ed4c63edfa4d74f9aa59c3b395a8147a4304fb822ec8cf87b1c5a092601",
+      "sequence_config_sha256": "08a3b4766073f9d0f8473c91ec3018eca88769da8db1e9b1ce22e22229b47e62",
+      "special_groundtruth_frames": 0,
+      "channels": {
+        "color": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/yogurt_indoor/color/00000001.jpg",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/yogurt_indoor/color/00001614.jpg",
+          "frames": 1614,
+          "filenames_sha256": "f056a77f1071e0e48ca4cbb4961a022b1d89d5a36772364c29949c908a620005"
+        },
+        "depth": {
+          "first": "/data/wangwj/dataset/DepthTrack/Dep_test/yogurt_indoor/depth/00000001.png",
+          "last": "/data/wangwj/dataset/DepthTrack/Dep_test/yogurt_indoor/depth/00001614.png",
+          "frames": 1614,
+          "filenames_sha256": "bb741b46f8907c4e89a72a16ac3dc97fd56414e8a673407368132a0f6d906eb6"
+        }
+      },
+      "anchors": null
+    }
+  ]
+}

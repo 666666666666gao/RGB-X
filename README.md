@@ -7,7 +7,7 @@ Conda 环境：`/data/gb/conda/envs/rgbx-risk`。
 主研发基线为官方 XTrack-B；第二结构为 SUTrack-B224，B384 放在方法有效后。
 训练数据复用服务器已有 LasHeR、DepthTrack、VisEvent，不复制原始图像。
 
-截至 2026-10-02 22:48（北京时间），单卡预检、三卡 DDP 预检和划分核查通过；一份联合权重的 XTrack-B 作者 AdamW 基线已完成六轮和首次验证，进入第 7/65 轮。每卡 batch 8、全局 batch 24，种子 2026。尚无正式测试集指标。
+截至2026-10-03 01:52（北京时间），单卡与三卡DDP预检通过；三卡XTrack-B联合AdamW基线完成11轮和两次训练期验证，进入第12/65轮。每卡batch8、全局24、seed2026。尚无正式测试集指标。
 
 部署、数据、参数范围、实测结果、问题和后续计划统一维护在唯一的 [研究与实验交接文档](docs/RGB-X_研究与实验完整交接_2026-10-02.md)。README 只提供入口；JSON、日志和补丁保留作原始证据。方法模块、PCGrad/CAGrad/AdaTask 等对照和 SUTrack 训练尚未实施。文献指标是作者报告，不是本项目复现结果。
 
@@ -32,4 +32,4 @@ tail -n 6 outputs/xtrack_b_adamw_3gpu_s2026_20261002/logs/xtrack-rgbx_b_adamw_3g
 
 克隆本项目后，在全新目录执行 `bash scripts/fetch_sources.sh` 获取固定提交的作者源码；完整部署步骤见主交接文档第 15 节。作者源码使用其原有许可证，项目保留来源和修改补丁。仓库不包含数据、权重、Conda 环境或训练输出。
 
-RGBT234、VOT-RGBD2022 因磁盘不足暂缓；五个核心测试集仍属于最终计划，FE108、COESOT 随后补充。
+按最新安排，先完成现有LasHeR、DepthTrack、VisEvent的完整训练、全量评测和配对改进；其余四个测试集暂缓。所有指标及回退统一登记到唯一交接文档，当前尚未证明全面超过baseline。

@@ -1,0 +1,20 @@
+{
+  "url": "https://huggingface.co/datasets/taryya/VOT-RGBD202/resolve/main/VOT-RGBD2022.zip",
+  "expected_bytes": 20525895229,
+  "expected_sha256": "013df6f54bacbf68bf1f6bd66e1fd6ddeecbfb3b11068856ed7be737a44a8226",
+  "archive": "/home/gaob/rgbx-eval-data/VOT-RGBD2022.zip",
+  "extracted_path": "/home/gaob/rgbx-eval-data/VOT-RGBD2022",
+  "resume_from_bytes": 1238090056,
+  "proxy_port": 17900,
+  "low_speed_timeout_seconds": 180,
+  "started_at": "2026-10-02T17:01:47.832865+00:00",
+  "state": "FAILED_DOWNLOAD",
+  "observed_at": "2026-10-02T17:28:11.134416+00:00",
+  "completed_bytes": 2144059720,
+  "range_start": 2144059720,
+  "range_end": 2177614151,
+  "curl_exit_code": 56,
+  "curl_summary": "206 6999413 136453",
+  "curl_stderr": "curl: (56) OpenSSL SSL_read: OpenSSL/3.5.5: error:0A000126:SSL routines::unexpected eof while reading, errno 0\n",
+  "failed_range": "/home/gaob/rgbx-eval-data/VOT-RGBD2022.zip.part.range_2144059720"
+}

@@ -1,0 +1,153 @@
+{
+  "status": "PREPARING_NOT_EVALUATED",
+  "requested_scope": "five_core_plus_two_extensions_deferred_until_existing_paired_results",
+  "server": "2028",
+  "gpus": [
+    0,
+    1,
+    2
+  ],
+  "train_run": "xtrack_b_adamw_3gpu_s2026_20261002",
+  "checkpoint_epoch": 65,
+  "checkpoint_sha256": null,
+  "one_joint_rgb_t_d_e_checkpoint": true,
+  "test_data_root": "/home/gaob/rgbx-eval-data",
+  "evaluation_environment": "/home/gaob/conda/envs/rgbx-eval",
+  "vot_toolkit": "0.7.1",
+  "vot_trax": "4.0.2",
+  "terminal_audit_required": true,
+  "formal_benchmarks_complete": 0,
+  "expected_benchmarks": 7,
+  "report_components": [
+    "all_required_headline_metrics",
+    "per_sequence_scores",
+    "full_curves",
+    "official_attributes",
+    "exact_sequence_and_frame_coverage",
+    "failures",
+    "checkpoint_config_source_and_scorer_hashes",
+    "synchronized_timing_and_fps",
+    "training_wallclock_and_gpu_memory"
+  ],
+  "datasets": [
+    {
+      "name": "LasHeR",
+      "expected_sequences": 245,
+      "expected_frame_pairs": 220703,
+      "metrics": [
+        "SR/AUC",
+        "PR@20",
+        "NPR_with_explicit_aggregation"
+      ],
+      "data_status": "READY_245_220703_19_OFFICIAL_ATTRIBUTES",
+      "score_status": "NOT_EVALUATED",
+      "active_phase": true,
+      "scorer_status": "SOURCE_PREPARED_NUMERIC_FIXTURE_PASS_NOT_BENCHMARK_RUN"
+    },
+    {
+      "name": "RGBT234",
+      "expected_sequences": 234,
+      "metrics": [
+        "MSR",
+        "MPR"
+      ],
+      "data_status": "DEFERRED_AFTER_EXPLICIT_RANGE_DOWNLOAD_SSL_EOF_FAILURE",
+      "score_status": "NOT_EVALUATED",
+      "active_phase": false
+    },
+    {
+      "name": "DepthTrack",
+      "expected_sequences": 50,
+      "expected_frame_pairs": 76373,
+      "metrics": [
+        "F-score",
+        "Recall",
+        "Precision",
+        "PR_curve",
+        "F_curve"
+      ],
+      "protocol": "vot2021/rgbd_unsupervised_repetitions_1_explicit_DepthTrack_dataset",
+      "data_status": "VOT_DATASET_AUDIT_READY_50_76373",
+      "score_status": "NOT_EVALUATED",
+      "active_phase": true,
+      "scorer_status": "OFFICIAL_PIPELINE_SOURCE_PREPARED_NOT_GPU_RUN"
+    },
+    {
+      "name": "VOT-RGBD2022",
+      "expected_sequences": 127,
+      "metrics": [
+        "EAO",
+        "Accuracy",
+        "Robustness",
+        "EAO_curve"
+      ],
+      "protocol": "vot2022/rgbd_multistart_EAO_115_755",
+      "data_status": "DEFERRED_AFTER_EXPLICIT_RANGE_DOWNLOAD_SSL_EOF_FAILURE",
+      "score_status": "NOT_EVALUATED",
+      "active_phase": false
+    },
+    {
+      "name": "VisEvent",
+      "expected_sequences": 320,
+      "current_local_frame_pairs": 157421,
+      "metrics": [
+        "SR/AUC",
+        "PR@20",
+        "NPR_with_explicit_aggregation"
+      ],
+      "data_status": "FROZEN_EXISTING_VERSION_READY_320_157421_17_OFFICIAL_ATTRIBUTES",
+      "score_status": "NOT_EVALUATED",
+      "active_phase": true,
+      "official_repository_annos_zip_gt_rows": 157395,
+      "expected_frame_pairs": 157421,
+      "annotation_version": "existing_dataset_GT_author_archive_verified_person1",
+      "repository_annos_zip_equivalence": false,
+      "published_metric_comparability": "NOT_VERIFIED",
+      "scorer_status": "OFFICIAL_SCORER_SOURCE_PREPARED_NUMERIC_FIXTURE_PASS_NOT_BENCHMARK_RUN"
+    },
+    {
+      "name": "FE108",
+      "expected_sequences": 32,
+      "author_metadata_frames": 59688,
+      "metrics": [
+        "SR/AUC",
+        "PR@20",
+        "NP@0.20",
+        "OP50",
+        "OP75"
+      ],
+      "data_status": "DEFERRED_BY_USER_KEEP_EXISTING_DATASETS_PRIORITY",
+      "score_status": "NOT_EVALUATED",
+      "active_phase": false
+    },
+    {
+      "name": "COESOT",
+      "readme_expected_sequences": 528,
+      "pinned_official_list_sequences": 527,
+      "official_annotation_directories": 528,
+      "metrics": [
+        "SR/AUC",
+        "PR@20",
+        "NPR_with_explicit_aggregation",
+        "BOC"
+      ],
+      "data_status": "DEFERRED_BY_USER_KEEP_EXISTING_DATASETS_PRIORITY",
+      "score_status": "NOT_EVALUATED",
+      "active_phase": false
+    }
+  ],
+  "active_scope": "existing_three_datasets_first",
+  "active_datasets": [
+    "LasHeR",
+    "DepthTrack",
+    "VisEvent"
+  ],
+  "active_expected_benchmarks": 3,
+  "active_formal_benchmarks_complete": 0,
+  "numpy": "1.23.5",
+  "matlab_scorer_environment": "/home/gaob/conda/envs/rgbx-matlab-scorer",
+  "scorer_runtime": "Octave10.3.0",
+  "latest_user_priority": "existing_train_and_test_sets_first_then_improve_all_primary_metrics_over_matched_baseline",
+  "acceptance": "Report every registered headline, curve, attribute and cost on identical frozen data/scorer; record all regressions; no all-metric gain claim before actual matched results.",
+  "actual_matched_baseline_metrics": null
+}

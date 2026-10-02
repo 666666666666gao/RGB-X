@@ -1,0 +1,110 @@
+[
+  {
+    "sequence": "dvSave-2021_02_06_08_33_09_cat",
+    "local_rows": 712,
+    "official_rows": 712,
+    "first_local": [
+      42.8527,
+      94.3074,
+      226.7784,
+      158.8755
+    ],
+    "first_official": [
+      42.8527,
+      94.3074,
+      226.7784,
+      158.8755
+    ],
+    "max_coordinate_difference_over_first_official_rows": 0.00010000000000331966
+  },
+  {
+    "sequence": "dvSave-2021_02_06_08_52_19_rotateball",
+    "local_rows": 935,
+    "official_rows": 935,
+    "first_local": [
+      220.5023,
+      129.0104,
+      27.3798,
+      32.6578
+    ],
+    "first_official": [
+      220.5023,
+      129.0104,
+      27.3798,
+      32.6578
+    ],
+    "max_coordinate_difference_over_first_official_rows": 0.00010000000000331966
+  },
+  {
+    "sequence": "dvSave-2021_02_06_08_57_35_machineBrad",
+    "local_rows": 461,
+    "official_rows": 461,
+    "first_local": [
+      112.6325,
+      121.7531,
+      27.3798,
+      24.7408
+    ],
+    "first_official": [
+      112.6325,
+      121.7531,
+      27.3798,
+      24.7408
+    ],
+    "max_coordinate_difference_over_first_official_rows": 0.00010000000000331966
+  },
+  {
+    "sequence": "dvSave-2021_02_06_08_58_43_cat",
+    "local_rows": 877,
+    "official_rows": 877,
+    "first_local": [
+      118.9002,
+      115.1555,
+      118.0959,
+      55.4193
+    ],
+    "first_official": [
+      118.9002,
+      115.1555,
+      118.0959,
+      55.4193
+    ],
+    "max_coordinate_difference_over_first_official_rows": 0.00010000000000331966
+  },
+  {
+    "sequence": "dvSave-2021_02_06_09_17_11_person",
+    "local_rows": 243,
+    "official_rows": 243,
+    "first_local": [
+      49.2961,
+      121.7531,
+      48.4919,
+      50.801
+    ],
+    "first_official": [
+      49.2961,
+      121.7531,
+      48.4919,
+      50.801
+    ],
+    "max_coordinate_difference_over_first_official_rows": 0.00010000000000331966
+  },
+  {
+    "sequence": "dvSave-2021_02_06_09_23_50_person1",
+    "local_rows": 332,
+    "official_rows": 306,
+    "first_local": [
+      0.11239,
+      189.397,
+      36.0625,
+      70.603
+    ],
+    "first_official": [
+      27.1123,
+      152.3568,
+      38.2718,
+      95.1112
+    ],
+    "max_coordinate_difference_over_first_official_rows": 195.3568
+  }
+]

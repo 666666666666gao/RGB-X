@@ -1,0 +1,13 @@
+{
+  "url": "https://huggingface.co/datasets/taryya/VOT-RGBD202/resolve/main/VOT-RGBD2022.zip",
+  "expected_bytes": 20525895229,
+  "expected_sha256": "013df6f54bacbf68bf1f6bd66e1fd6ddeecbfb3b11068856ed7be737a44a8226",
+  "archive": "/home/gaob/rgbx-eval-data/VOT-RGBD2022.zip",
+  "extracted_path": "/home/gaob/rgbx-eval-data/VOT-RGBD2022",
+  "started_at": "2026-10-02T15:48:48.816039+00:00",
+  "state": "FAILED_DOWNLOAD",
+  "observed_at": "2026-10-02T16:01:08.771371+00:00",
+  "curl_exit_code": 92,
+  "curl_summary": "200 626514804 846723",
+  "curl_stderr": "curl: (92) HTTP/2 stream 1 was not closed cleanly: CANCEL (err 8)\n"
+}

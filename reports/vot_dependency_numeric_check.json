@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "role": "dependency_compatibility_check_not_tracking_benchmark",
+  "numpy": "1.23.5",
+  "vot_toolkit": "0.7.1",
+  "vot_trax": "4.0.2",
+  "check": "actual_determine_thresholds_300_confidences_resolution_100_np_int_branch",
+  "thresholds_count": 100,
+  "gpu_used": false
+}
