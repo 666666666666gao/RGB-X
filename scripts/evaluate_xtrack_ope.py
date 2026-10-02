@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 import random
 import time
 from pathlib import Path
@@ -43,6 +44,7 @@ assigned = manifest['sequences'][args.shard::args.shards]
 assert not any((output / (row['name'] + suffix)).exists()
                for row in assigned for suffix in ('.txt', '.json', '_confidence.txt', '_time.txt'))
 for row in assigned:
+    torch.cuda.reset_peak_memory_stats()
     gt_path = Path(row['groundtruth'])
     assert hashlib.sha256(gt_path.read_bytes()).hexdigest() == row['groundtruth_sha256']
     gt = np.loadtxt(gt_path, delimiter=',', ndmin=2)
@@ -81,6 +83,9 @@ for row in assigned:
                             predictions_sha256=hashlib.sha256(predictions_path.read_bytes()).hexdigest(),
                             elapsed_seconds=sum(times), timing='synchronized_image_read_preprocessing_and_tracking',
                             closed_loop_search=True, initial_confidence_is_protocol_marker=True,
+                            physical_gpu=os.environ['CUDA_VISIBLE_DEVICES'], gpu=torch.cuda.get_device_name(0),
+                            peak_allocated_bytes=torch.cuda.max_memory_allocated(),
+                            peak_reserved_bytes=torch.cuda.max_memory_reserved(),
                             status='COMPLETE')
     (output / (row['name'] + '.json')).write_text(json.dumps(sequence_receipt, indent=2) + '\n')
     print(json.dumps(sequence_receipt), flush=True)

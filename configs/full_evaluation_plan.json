@@ -27,7 +27,8 @@
     "failures",
     "checkpoint_config_source_and_scorer_hashes",
     "synchronized_timing_and_fps",
-    "training_wallclock_and_gpu_memory"
+    "training_wallclock_and_gpu_memory",
+    "PyTorch_inference_peak_allocated_and_reserved_memory_with_scope"
   ],
   "datasets": [
     {
@@ -67,10 +68,16 @@
         "F_curve"
       ],
       "protocol": "vot2021/rgbd_unsupervised_repetitions_1_explicit_DepthTrack_dataset",
-      "data_status": "VOT_DATASET_AUDIT_READY_50_76373",
+      "data_status": "READY_50_76373_14_CHALLENGES_PLUS_UNASSIGNED_TAGS",
       "score_status": "NOT_EVALUATED",
       "active_phase": true,
-      "scorer_status": "OFFICIAL_PIPELINE_SOURCE_PREPARED_NOT_GPU_RUN"
+      "scorer_status": "OFFICIAL_PIPELINE_SOURCE_PREPARED_NOT_GPU_RUN",
+      "additional_diagnostics": [
+        "named_per_sequence_PR_F_curves",
+        "whole_sequence_tag_groups",
+        "pooled_tagged_frame_groups"
+      ],
+      "diagnostic_protocol": "additional_diagnostics_not_official_overall_headline"
     },
     {
       "name": "VOT-RGBD2022",
@@ -149,5 +156,8 @@
   "scorer_runtime": "Octave10.3.0",
   "latest_user_priority": "existing_train_and_test_sets_first_then_improve_all_primary_metrics_over_matched_baseline",
   "acceptance": "Report every registered headline, curve, attribute and cost on identical frozen data/scorer; record all regressions; no all-metric gain claim before actual matched results.",
-  "actual_matched_baseline_metrics": null
+  "actual_matched_baseline_metrics": null,
+  "existing_three_controller": "scripts/evaluate_existing_three.py",
+  "controller_status": "SOURCE_PREPARED_NOT_STARTED",
+  "result_root": "/home/gaob/rgbx-eval-results"
 }

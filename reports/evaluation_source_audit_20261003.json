@@ -4,7 +4,7 @@
   "generated_at": "2026-10-03T01:50:48.505763+08:00",
   "source_verdict": "SOURCE_REVIEW_PASS",
   "experiment_acceptance": "WARN_EXECUTION_NOT_RUN",
-  "scope": "Reviewed all three existing test-set entry/coverage/scorer source pipelines; explicitly frozen VisEvent data version. No formal inference or scoring acceptance.",
+  "scope": "Existing three-set source pipelines plus DepthTrack tag diagnostics and controller; all actual inference/scoring remains NOT_RUN.",
   "active_formal_benchmarks_complete": 0,
   "active_expected_benchmarks": 3,
   "seed": 2026,
@@ -95,6 +95,39 @@
       "reasoning_effort": "max",
       "review_independence": "same-family",
       "acceptance_status": "provisional"
+    },
+    {
+      "call_number": 6,
+      "request": "followup_depth_attributes_controller.prompt.txt",
+      "response": "response_depth_attributes_controller.md",
+      "request_sha256": "b99e6717eefbd1c9b35b5f5e5ffead8a51be811c028cfcdaca11522d3e58ed34",
+      "response_sha256": "e96f251b4c8c5de4e4ebd9b93a5fbf2d0798e8b760a67e9475cb477ea00d305e",
+      "status": "LOCAL_SOURCE_REVIEW_PASS",
+      "execution": "NOT_RUN",
+      "remote_deployment_review": "NOT_VERIFIED_OLD_SOURCE_OBSERVED",
+      "scope": "DepthTrack tags, explicit diagnostic aggregation, native curve sequence axes, inference memory properties and three-dataset controller",
+      "initial_finding": "VOT unsupervised initialization saves only time, so peak properties must be read from subsequent frames",
+      "source_fix": "read cumulative peak properties only at i>0; retain complete native time and initialization checks",
+      "agent_id": "/root/rgbx_eval_entry_audit",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional"
+    },
+    {
+      "call_number": 7,
+      "request": "followup_depth_attributes_cpu_fixture.prompt.txt",
+      "response": "response_depth_attributes_cpu_fixture.md",
+      "request_sha256": "20cecbfa9b8338396ab9bf0c8891e4b5fe4fe05bb249847b1772d34d7a567a40",
+      "response_sha256": "f12f0b45b24ff9d1e15204cac1fb0888f88a9276bca24f78f19fce25480acb4f",
+      "status": "READ_ONLY_FIXTURE_SOURCE_CONSISTENCY_PASS",
+      "execution": "REVIEWER_NOT_RUN_ROOT_SYNTHETIC_CPU_FIXTURE_ONLY",
+      "scope": "VOT F-curve metadata fixture provenance; no benchmark acceptance",
+      "agent_id": "/root/rgbx_eval_entry_audit",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "max",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional"
     }
   ],
   "source_inputs_postfix_snapshot": {
@@ -117,12 +150,14 @@
     "TraX4 object/channel protocol",
     "Formal epoch65 terminal audit binding",
     "NumPy1.23.5 in separate eval environment",
-    "Config and terminal audit compared with original VOT workspace identity"
+    "Config and terminal audit compared with original VOT workspace identity",
+    "Native VOT initialization lacks custom peak properties; inspect cumulative properties from later frames"
   ],
   "data_evidence": {
     "DepthTrack": "50 raw GT files length and SHA verified:76373 total rows",
     "VisEvent": "frozen320/157421 GT, visibility, inverse absence, frame ID order verified",
-    "VisEvent_version": "not_equivalent_to_repository_annos_zip_306_row_person1_version"
+    "VisEvent_version": "not_equivalent_to_repository_annos_zip_306_row_person1_version",
+    "DepthTrack_attributes": "750 raw tags SHA/length/binary values verified; 14 challenge labels plus unassigned; 50 sequences/76373 frames"
   },
   "checks": {
     "A": "PASS_WITH_VERSION_COMPARABILITY_WARN",
@@ -142,5 +177,27 @@
     "scripts/prepare_visevent_attributes.py": "570f2bd21c2c62ad66f3aa37c9fcef2848abb6f77dd6b3c34af5065a7816d5e1",
     "scripts/score_visevent.py": "648be69ba88fe373a8038e87acdca8fa7d4d3edf131548f4a2367aef0ad1d022",
     "scripts/score_visevent_matlab.m": "512eb0e7fd2f4b161a5eb6e28a0916bb3883d233c2cbe6d608fe50977745bd9c"
+  },
+  "updated_at": "2026-10-03T02:41:00.507336+08:00",
+  "source_inputs_depth_controller_snapshot": {
+    "scripts/audit_depthtrack_attributes.py": "a8bac990faa7f594ffacc4e0c12478c9952016f033a70c8a1acd08f3556b4fce",
+    "scripts/score_depthtrack_attributes.py": "077388099efd8d15d23cd96b68f428f09749f82a2365e9acf1bcaed626e85950",
+    "scripts/evaluate_existing_three.py": "b998f9c87523bc3f70a7cef3955178f18925920e448b2285553b601c701b4c38",
+    "scripts/evaluate_xtrack_ope.py": "4b91e56c4b63fa6050cabec6effefc29f4801d2b84cf8b2044c04763adfe11cb",
+    "scripts/audit_ope_coverage.py": "5a36137d86d167bc575ff29ba4aafd886cb111c929ff07c19ec9a853cb8c059e",
+    "scripts/evaluate_xtrack_vot.py": "78101ee8a23b27fbc09a237d9f35e1a63474183d4727ce97128d5c5ec8c145a4",
+    "scripts/audit_and_score_vot.py": "ceb5000bb630f85b9497dcab92262a5c4e53dc18bc4717fee85b64dcc065ec1b",
+    "scripts/score_lasher.py": "84c96ed501b0ff9ab17b2a2dcc117c5f84bf8ff23a423fa4a96641fe4e56dae8",
+    "scripts/score_visevent.py": "4e4e467a74b11f1fc04c153edcfc54ec951196504690d26d2a9d371c2e298698",
+    "reports/depthtrack_test_attributes.json": "5349dec5970392c26fc54e644db06673b684409509fdc5fb05d78cc3eb03dda1"
+  },
+  "additional_diagnostic_boundaries": [
+    "whole_sequence_and_pooled_tagged_frame_groups_are_distinct",
+    "per_diagnostic_best_threshold_is_not_official_overall_operating_point",
+    "full_occlusion_1568_tag_frames_only_15_visible_GT_frames",
+    "PyTorch_allocator_peaks_from_sequence_start_include_resident_model_not_entire_weight_loading_or_whole_card_memory"
+  ],
+  "source_inputs_fcurve_cpu_fixture_snapshot": {
+    "reports/vot_fcurve_metadata_cpu_fixture.json": "d2851249c4be0744d90da369636e45140c4602c26036083b6dcb0495d58c5846"
   }
 }

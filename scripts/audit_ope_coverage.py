@@ -49,7 +49,9 @@ for row in manifest['sequences']:
     gt = np.loadtxt(row['groundtruth'], delimiter=',', ndmin=2)
     assert np.allclose(boxes[0], gt[0], atol=1e-12, rtol=0)
     rows.append(dict(sequence=row['name'], frames=n, seconds=float(times.sum()),
-                     fps=n / float(times.sum()), predictions_sha256=receipt['predictions_sha256']))
+                     fps=n / float(times.sum()), predictions_sha256=receipt['predictions_sha256'],
+                     physical_gpu=receipt['physical_gpu'],gpu=receipt['gpu'],
+                     peak_allocated_bytes=receipt['peak_allocated_bytes'],peak_reserved_bytes=receipt['peak_reserved_bytes']))
 report = dict(status='PASS', role='full_trajectory_coverage_not_metric_scoring',
               dataset=manifest['dataset'], sequences=len(rows),
               frames=sum(row['frames'] for row in rows), expected_sequences=manifest['expected_sequences'],
@@ -60,5 +62,8 @@ report = dict(status='PASS', role='full_trajectory_coverage_not_metric_scoring',
               timing='synchronized_image_read_preprocessing_and_tracking', per_sequence=rows)
 assert report['frames'] == report['expected_frames']
 report['fps'] = report['frames'] / report['elapsed_seconds']
+report['gpu_memory'] = dict(peak_allocated_bytes=max(row['peak_allocated_bytes'] for row in rows),
+                          peak_reserved_bytes=max(row['peak_reserved_bytes'] for row in rows),
+                          scope='maximum_of_per_sequence_PyTorch_peaks_including_resident_model')
 Path(args.report).write_text(json.dumps(report, indent=2) + '\n')
 print(json.dumps({key: value for key, value in report.items() if key != 'per_sequence'}))

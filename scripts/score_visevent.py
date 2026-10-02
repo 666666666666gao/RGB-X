@@ -127,7 +127,8 @@ report = dict(status='PINNED_TOOLKIT_SCORING_COMPLETE',dataset='VisEvent',identi
               repository_annos_zip_equivalence=manifest['repository_annos_zip_equivalence'],
               published_metric_comparability=manifest['published_metric_comparability'],attributes_sha256=hashlib.sha256(Path(args.attributes).read_bytes()).hexdigest(),
               manifest_sha256=manifest_sha,coverage_sha256=hashlib.sha256(Path(args.coverage).read_bytes()).hexdigest(),
-              timing=coverage['timing'],elapsed_seconds=coverage['elapsed_seconds'],fps=coverage['fps'])
+              timing=coverage['timing'],elapsed_seconds=coverage['elapsed_seconds'],fps=coverage['fps'],
+              gpu_memory=coverage['gpu_memory'])
 (root/'metrics.json').write_text(json.dumps(report,indent=2)+'\n')
 with (root/'per_sequence.csv').open('w',newline='') as destination:
     writer = csv.DictWriter(destination,fieldnames=['sequence','frames','SR_AUC','PR_at_20','NPR_AUC','NP_at_020'])

@@ -39,6 +39,7 @@ with Server(['rectangle'], ['path'], image_channels=['color', 'depth']) as handl
         image = get_rgbd_frame(request.image['color'].path(), request.image['depth'].path(),
                                dtype='rgbcolormap', depth_clip=True)
         if request.type == TraxStatus.INITIALIZE:
+            torch.cuda.reset_peak_memory_stats()
             assert len(request.objects) == 1
             region, _ = request.objects[0]
             assert region.type == 'rectangle'
@@ -53,4 +54,6 @@ with Server(['rectangle'], ['path'], image_channels=['color', 'depth']) as handl
             assert box[2] > 0 and box[3] > 0
             properties = {'confidence': float(confidence)}
         torch.cuda.synchronize()
+        properties.update(gpu_peak_allocated_bytes=torch.cuda.max_memory_allocated(),
+                          gpu_peak_reserved_bytes=torch.cuda.max_memory_reserved())
         handle.status([(Rectangle.create(*box), properties)])

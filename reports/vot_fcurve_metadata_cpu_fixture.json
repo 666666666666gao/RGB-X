@@ -1,0 +1,44 @@
+{
+  "status": "CONFIRMED_OFFICIAL_F_CURVE_METADATA_MISMATCH",
+  "role": "three_point_synthetic_CPU_source_fixture_not_tracking_benchmark",
+  "observed_at": "2026-10-03T02:34:36.143222+08:00",
+  "scorer": "vot-toolkit==0.7.1",
+  "source": "/home/gaob/conda/envs/rgbx-eval/lib/python3.8/site-packages/vot/analysis/longterm.py",
+  "source_sha256": "9f42aeb6b1179b9369ec61d0ce98930f801b818ca3d1249f84be47faf192cedc",
+  "input_curve": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.5,
+      0.5
+    ],
+    [
+      1.0,
+      0.0
+    ]
+  ],
+  "expected_thresholds": [
+    "+inf",
+    0.5,
+    "-inf"
+  ],
+  "returned_F_curve": [
+    0.0,
+    0.5,
+    0.0
+  ],
+  "returned_metadata": [
+    0.5,
+    0.5
+  ],
+  "fixture_headline": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "model_or_GPU_executed": false,
+  "installed_scorer_modified": false,
+  "conclusion": "FScoreCurve.compute returns the second PR point instead of the threshold vector. F values and headline remain unchanged in this fixture; preserve raw official output and use the official PR analysis threshold vector for owned curve exports."
+}

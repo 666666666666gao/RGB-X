@@ -62,16 +62,20 @@ for row in data['sequences']:
         trajectory = Trajectory.read(results, name)
         assert len(trajectory) == n
         assert trajectory.region(0).type == RegionType.SPECIAL and trajectory.region(0).code == 1
-        for property_name in ['confidence','time']:
+        for property_name in ['confidence','time','gpu_peak_allocated_bytes','gpu_peak_reserved_bytes']:
             assert results.exists(name+'_'+property_name+'.value')
             with results.read(name+'_'+property_name+'.value') as source:
                 assert len(source.read().splitlines()) == n
         seconds = 0.0
+        allocated = reserved = 0
         for i in range(n):
             values = trajectory.properties(i)
             assert math.isfinite(values['time']) and values['time'] > 0
             seconds += values['time']
             if i:
+                assert values['gpu_peak_allocated_bytes'] > 0 and values['gpu_peak_reserved_bytes'] > 0
+                allocated = max(allocated,values['gpu_peak_allocated_bytes'])
+                reserved = max(reserved,values['gpu_peak_reserved_bytes'])
                 region = trajectory.region(i)
                 assert region.type == RegionType.RECTANGLE
                 assert all(math.isfinite(v) for v in [region.x,region.y,region.width,region.height])
@@ -83,13 +87,17 @@ for row in data['sequences']:
                 contents = source.read()
             hashes[filename] = hashlib.sha256(contents.encode() if isinstance(contents,str) else contents).hexdigest()
         coverage.append(dict(sequence=sequence.name, trajectory=name, frames=n,
-                             rpc_tracking_seconds=seconds, hashes=hashes))
+                             rpc_tracking_seconds=seconds, hashes=hashes,
+                             peak_allocated_bytes=allocated,peak_reserved_bytes=reserved))
 coverage_report = dict(status='PASS', role='full_trajectory_coverage_not_metric_scoring',
                        identity=identity, sequences=len(data['sequences']),
                        trajectories=len(coverage), frames=sum(row['frames'] for row in coverage),
                        missing_sequences=0, missing_trajectories=0, per_trajectory=coverage)
 coverage_report['rpc_tracking_seconds'] = sum(row['rpc_tracking_seconds'] for row in coverage)
 coverage_report['fps'] = coverage_report['frames']/coverage_report['rpc_tracking_seconds']
+coverage_report['gpu_memory'] = dict(peak_allocated_bytes=max(row['peak_allocated_bytes'] for row in coverage),
+                                    peak_reserved_bytes=max(row['peak_reserved_bytes'] for row in coverage),
+                                    scope='maximum_of_PyTorch_peaks_saved_in_native_trajectory_properties')
 (root/'coverage.json').write_text(json.dumps(coverage_report,indent=2)+'\n')
 assert not (root/'official_metrics.json').exists()
 with ThreadPoolExecutor(1) as executor, AnalysisProcessor(executor, LRUCache(1000)):
@@ -112,6 +120,7 @@ for analysis, grid in analyses.items():
 assert set(headline) == ({'Precision','Recall','F_score'} if identity['dataset']=='DepthTrack' else {'EAO','Accuracy','Robustness'})
 assert all(math.isfinite(value) for value in headline.values())
 report = dict(status='OFFICIAL_ANALYSES_COMPLETE', identity=identity, headline_metrics=headline,
+              sequence_order=[sequence.name for sequence in workspace.dataset],
               official_analyses=raw, coverage_sha256=hashlib.sha256((root/'coverage.json').read_bytes()).hexdigest(),
               scorer='vot-toolkit==0.7.1', fresh_in_memory_analysis_cache=True,
               metric_units='fractions_0_to_1', evaluation_type='real_gt')
