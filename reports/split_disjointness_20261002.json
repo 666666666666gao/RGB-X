@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "scope": "Sequence-name disjointness of the configured train/val splits and three available test pools.",
+  "datasets": [
+    {
+      "dataset": "LasHeR",
+      "train_sequences": 882,
+      "val_sequences": 97,
+      "test_sequences": 245,
+      "overlaps": {
+        "train_val": [],
+        "train_test": [],
+        "val_test": []
+      },
+      "train_spec": "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data_specs/lasher_train.txt",
+      "train_spec_sha256": "27d39054b194f1b2e855c0bc1a1e23651f5e2b1cfef1e34d88074d71565df846",
+      "test_root": "/data/wangwj/dataset/LasHeR/testingset"
+    },
+    {
+      "dataset": "DepthTrack",
+      "train_sequences": 146,
+      "val_sequences": 6,
+      "test_sequences": 50,
+      "overlaps": {
+        "train_val": [],
+        "train_test": [],
+        "val_test": []
+      },
+      "train_spec": "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data_specs/depthtrack_train.txt",
+      "train_spec_sha256": "0603ebfa695413a517621bb9365e84f5ad4f537558e953e1e9b79d95a16c38c8",
+      "test_root": "/data/wangwj/dataset/DepthTrack/Dep_test"
+    },
+    {
+      "dataset": "VisEvent",
+      "train_sequences": 500,
+      "val_sequences": 0,
+      "test_sequences": 320,
+      "overlaps": {
+        "train_val": [],
+        "train_test": [],
+        "val_test": []
+      },
+      "train_spec": "/data/gb/rgbx-risk/data/visevent/train/trainlist.txt",
+      "train_spec_sha256": "1ae62de14cdaff562dbe047c8a5cef465b42a5ab0ff28cbd53bba40d8f6b0416",
+      "test_root": "/data/wangwj/dataset/VisEvent/test_subset"
+    }
+  ],
+  "note": "This verifies split names, not identical-content detection across differently named sequences."
+}
