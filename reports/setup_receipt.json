@@ -1,0 +1,15 @@
+{
+  "completed_at_utc": "2026-10-02T07:46:09.056119+00:00",
+  "project": "/data/gb/rgbx-risk",
+  "conda_environment": "/data/gb/conda/envs/rgbx-risk",
+  "xtrack_commit": "8a606f00c5e98b5393254f6ee1891447b662407f",
+  "sutrack_commit": "d65052d1ba3fcf55010e1fb3665ee6616c139a2c",
+  "preflight_status": "PASS",
+  "formal_training_launched": false,
+  "remaining_data_disk_bytes": 6361309184,
+  "local_changes_sha256": "50130c56e867db7c9b9cd93a597b0093b045b921e72bd6ffba0c754eb39fc27a",
+  "deferred_evaluation": [
+    "RGBT234",
+    "VOT-RGBD2022"
+  ]
+}

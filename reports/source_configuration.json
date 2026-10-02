@@ -1,0 +1,31 @@
+{
+  "author_repository": "https://github.com/supertyd/XTrack",
+  "author_commit": "8a606f00c5e98b5393254f6ee1891447b662407f",
+  "local_configuration": "rgbx_b_adamw",
+  "recipe_changes": [
+    "MODEL.PRETRAIN_FILE (local path only)"
+  ],
+  "data_links": {
+    "lasher/trainingset": "/data/wangwj/dataset/LasHeR/trainingset",
+    "lasher/testingset": "/data/wangwj/dataset/LasHeR/testingset",
+    "depthtrack/test": "/data/wangwj/dataset/DepthTrack/Dep_test",
+    "visevent/train": "/data/wangwj/dataset/VisEvent/train_subset",
+    "visevent/test": "/data/wangwj/dataset/VisEvent/test_subset"
+  },
+  "depthtrack_train_overlay": "/data/gb/rgbx-risk/data/depthtrack/train",
+  "data_adapter_change": "LasHeR sorted visible/infrared JPG paths; existing filenames vary by sequence.",
+  "checkpoint": "/data/qianmj/BASE/pretrained/OSTrack_ep0300.pth.tar",
+  "optimizer": "AdamW",
+  "sampling": "Author stochastic sampling with probability 1/3 per task",
+  "formal_training_launched": false,
+  "note": "The controlled fixed-task-batch optimizer comparisons are pending; this is the author recipe.",
+  "lowdisk_configuration": "rgbx_b_adamw_lowdisk",
+  "lowdisk_changes": {
+    "SAVE_EPOCH_INTERVAL": 65,
+    "SAVE_LAST_N_EPOCH": 1,
+    "TEST.EPOCH": 65
+  },
+  "lowdisk_limit": "Only final checkpoint is saved; no intermediate checkpoint for resume or model selection.",
+  "upstream_entry_fix": "Use existing XTrackProcessing for validation; BATProcessing is absent.",
+  "checkpoint_matches_author_lfs": true
+}

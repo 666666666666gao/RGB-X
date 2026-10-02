@@ -1,0 +1,2 @@
+* text eol=lf
+reports/*.patch -text whitespace=-blank-at-eol
