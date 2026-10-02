@@ -31,6 +31,8 @@ about the proposed optimizer's gains.
 
 - Actual launcher termination with exit code zero.
 - A loadable epoch-65 checkpoint from this run, with finite model tensors.
+- The 242 state tensors loaded from the OSTrack initializer remain equal to
+  that reference, consistent with the retained frozen backbone/head and fixed BN.
 - 65 finite epoch training-loss entries and the expected optimizer-step count
   (2,500 updates per epoch; 162,500 total, checked on parameters used every step).
 - 13 finite validation-loss entries, matching the configured validation interval
