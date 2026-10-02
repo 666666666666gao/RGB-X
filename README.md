@@ -7,8 +7,9 @@ Conda 环境：`/data/gb/conda/envs/rgbx-risk`。
 主研发基线为官方 XTrack-B；第二结构为 SUTrack-B224，B384 放在方法有效后。
 训练数据复用服务器已有 LasHeR、DepthTrack、VisEvent，不复制原始图像。
 
-当前工作只建立项目、环境、路径和训练前检查。方法设计、优化器对照与正式实验的完成状态见 `docs/EXPERIMENT_PLAN.md` 和 `reports/SETUP_STATUS.md`。
-文献指标是作者报告，不是本项目复现结果。
+截至 2026-10-02 20:58（北京时间），单卡真实数据预检、三卡 DDP 预检与划分核查已通过；一份联合权重的 XTrack-B 作者 AdamW 基线正在训练，已完成前三轮，进入第 4/65 轮。每卡 batch 8、全局 batch 24，种子 2026。尚无正式测试集指标。
+
+完整实验记录、已发现的问题、实测指标和后续方案见 [研究与实验交接文档](docs/RGB-X_研究与实验完整交接_2026-10-02.md)。方法模块、PCGrad/CAGrad/AdaTask 等对照和 SUTrack 训练尚未实施。文献指标是作者报告，不是本项目复现结果。
 
 激活环境：
 
@@ -20,6 +21,15 @@ cd /data/gb/rgbx-risk
 
 官方代码来源：[XTrack](https://github.com/supertyd/XTrack)、[SUTrack](https://github.com/chenxin-dlut/SUTrack)。
 
-`scripts/train_xtrack_adamw.sh` 使用 65 轮作者配方的低磁盘保存版本，只保存最后一轮。
-它没有中间恢复点，也不通过测试集选权重；正式对照须统一保存与选模规则。
-此入口只训练，不自动评测。当前尚未启动正式训练。
+当前运行使用 `scripts/train_xtrack_3gpu.sh` 和配置 `rgbx_b_adamw_3gpu`，run ID 为 `xtrack_b_adamw_3gpu_s2026_20261002`。`scripts/run_xtrack_job.py` 在 tmux 会话 `rgbx_adamw_20261002` 内每 240 秒记录状态；SSH 断开不会终止它。
+
+65 轮训练只保存最终 checkpoint，没有中间恢复点。不要在正在训练的项目上重跑初始化或启动命令。只读查看：
+
+```bash
+cat reports/xtrack_b_adamw_3gpu_s2026_20261002.json
+tail -n 6 outputs/xtrack_b_adamw_3gpu_s2026_20261002/logs/xtrack-rgbx_b_adamw_3gpu.log
+```
+
+克隆本项目后，在全新目录执行 `bash scripts/fetch_sources.sh` 获取固定提交的作者源码；环境与数据设置见 [部署说明](docs/REPRODUCE.md)。作者源码使用其原有许可证，项目保留来源和修改补丁。仓库不包含数据、权重、Conda 环境或训练输出。
+
+RGBT234、VOT-RGBD2022 因磁盘不足暂缓；五个核心测试集仍属于最终计划，FE108、COESOT 随后补充。

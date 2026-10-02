@@ -1,0 +1,57 @@
+{
+  "observed_at": "2026-10-02T20:58:29.014989+08:00",
+  "run_receipt": {
+    "run_id": "xtrack_b_adamw_3gpu_s2026_20261002",
+    "server": "2028",
+    "project": "/data/gb/rgbx-risk",
+    "monitor_pid": 268474,
+    "launcher_pid": 268542,
+    "start_time": "2026-10-02T18:58:49.209866+08:00",
+    "command": [
+      "bash",
+      "/data/gb/rgbx-risk/scripts/train_xtrack_3gpu.sh",
+      "rgbx_b_adamw_3gpu",
+      "/data/gb/rgbx-risk/outputs/xtrack_b_adamw_3gpu_s2026_20261002"
+    ],
+    "config": "rgbx_b_adamw_3gpu",
+    "seed": 2026,
+    "world_size": 3,
+    "batch_per_rank": 8,
+    "global_batch": 24,
+    "epochs": 65,
+    "samples_per_epoch": 60000,
+    "train_steps_per_epoch": 2500,
+    "output": "/data/gb/rgbx-risk/outputs/xtrack_b_adamw_3gpu_s2026_20261002",
+    "stdout_log": "/data/gb/rgbx-risk/logs/xtrack_b_adamw_3gpu_s2026_20261002.log",
+    "poll_seconds": 240,
+    "author_commit": "8a606f00c5e98b5393254f6ee1891447b662407f",
+    "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "source_patch_sha256": "0b1b09de55558b357f57cd7afcd1f1e0cbddef92f4102afd6a552f33dda981cf",
+    "initializer_sha256": "8e01d6251569ac84dbb53fdd062cd938551be2d889582f789aa3070196f42f41",
+    "observed_at": "2026-10-02T20:54:56.205151+08:00",
+    "elapsed_seconds": 6967.014020442963,
+    "exit_code": null,
+    "state": "running",
+    "gpu_snapshot": "0, 6322 MiB, 87 %\n1, 6322 MiB, 28 %\n2, 6346 MiB, 45 %",
+    "gpu_query_exit_code": 0,
+    "gpu_processes": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b, 268595, /data/gb/conda/envs/rgbx-risk/bin/python, 6304 MiB\nGPU-f5c818cb-d7b0-bcd0-5544-2d172079bc40, 268596, /data/gb/conda/envs/rgbx-risk/bin/python, 6304 MiB\nGPU-e087b67f-9495-4385-6bde-335c5760d96e, 268597, /data/gb/conda/envs/rgbx-risk/bin/python, 6304 MiB",
+    "latest_metric": "[train: 4, 320 / 2500] FPS: 8.9 (8.9)  ,  DataTime: 0.013 (0.004)  ,  ForwardTime: 0.883  ,  TotalTime: 0.900  ,  Loss/total: 1.16779  ,  Loss/giou: 0.22673  ,  Loss/l1: 0.02089  ,  Loss/location: 0.36425  ,  balance: 0.07306  ,  classification: 17.25590  ,  IoU: 0.79097",
+    "nonfinite_metric": false
+  },
+  "completed_epoch_rows": [
+    "[train: 1, 2500 / 2500] FPS: 9.0 (9.4)  ,  DataTime: 0.008 (0.005)  ,  ForwardTime: 0.877  ,  TotalTime: 0.889  ,  Loss/total: 1.32404  ,  Loss/giou: 0.25928  ,  Loss/l1: 0.02554  ,  Loss/location: 0.42570  ,  balance: 0.07911  ,  classification: 17.29853  ,  IoU: 0.76549",
+    "[train: 1, 2500 / 2500] FPS: 9.0 (9.4)  ,  DataTime: 0.007 (0.005)  ,  ForwardTime: 0.877  ,  TotalTime: 0.889  ,  Loss/total: 1.32853  ,  Loss/giou: 0.25979  ,  Loss/l1: 0.02581  ,  Loss/location: 0.42767  ,  balance: 0.07922  ,  classification: 17.29988  ,  IoU: 0.76580",
+    "[train: 1, 2500 / 2500] FPS: 9.0 (9.3)  ,  DataTime: 0.007 (0.004)  ,  ForwardTime: 0.878  ,  TotalTime: 0.889  ,  Loss/total: 1.32473  ,  Loss/giou: 0.25894  ,  Loss/l1: 0.02548  ,  Loss/location: 0.42710  ,  balance: 0.07932  ,  classification: 17.29971  ,  IoU: 0.76600",
+    "[train: 2, 2500 / 2500] FPS: 9.0 (9.4)  ,  DataTime: 0.008 (0.005)  ,  ForwardTime: 0.872  ,  TotalTime: 0.885  ,  Loss/total: 1.24770  ,  Loss/giou: 0.24187  ,  Loss/l1: 0.02321  ,  Loss/location: 0.39924  ,  balance: 0.07590  ,  classification: 17.27421  ,  IoU: 0.77923",
+    "[train: 2, 2500 / 2500] FPS: 9.0 (9.4)  ,  DataTime: 0.008 (0.005)  ,  ForwardTime: 0.872  ,  TotalTime: 0.885  ,  Loss/total: 1.25827  ,  Loss/giou: 0.24480  ,  Loss/l1: 0.02377  ,  Loss/location: 0.40088  ,  balance: 0.07619  ,  classification: 17.27339  ,  IoU: 0.77750",
+    "[train: 2, 2500 / 2500] FPS: 9.0 (9.4)  ,  DataTime: 0.008 (0.004)  ,  ForwardTime: 0.874  ,  TotalTime: 0.885  ,  Loss/total: 1.26670  ,  Loss/giou: 0.24552  ,  Loss/l1: 0.02395  ,  Loss/location: 0.40731  ,  balance: 0.07584  ,  classification: 17.27335  ,  IoU: 0.77701",
+    "[train: 3, 2500 / 2500] FPS: 9.0 (9.2)  ,  DataTime: 0.008 (0.004)  ,  ForwardTime: 0.879  ,  TotalTime: 0.891  ,  Loss/total: 1.21141  ,  Loss/giou: 0.23464  ,  Loss/l1: 0.02211  ,  Loss/location: 0.38551  ,  balance: 0.07346  ,  classification: 17.25842  ,  IoU: 0.78507",
+    "[train: 3, 2500 / 2500] FPS: 9.0 (9.2)  ,  DataTime: 0.008 (0.004)  ,  ForwardTime: 0.879  ,  TotalTime: 0.891  ,  Loss/total: 1.21201  ,  Loss/giou: 0.23530  ,  Loss/l1: 0.02226  ,  Loss/location: 0.38406  ,  balance: 0.07348  ,  classification: 17.25874  ,  IoU: 0.78456",
+    "[train: 3, 2500 / 2500] FPS: 9.0 (9.1)  ,  DataTime: 0.009 (0.005)  ,  ForwardTime: 0.877  ,  TotalTime: 0.891  ,  Loss/total: 1.20937  ,  Loss/giou: 0.23375  ,  Loss/l1: 0.02204  ,  Loss/location: 0.38523  ,  balance: 0.07383  ,  classification: 17.25966  ,  IoU: 0.78570"
+  ],
+  "latest_rows": [
+    "[train: 4, 560 / 2500] FPS: 8.9 (9.1)  ,  DataTime: 0.009 (0.004)  ,  ForwardTime: 0.884  ,  TotalTime: 0.897  ,  Loss/total: 1.21107  ,  Loss/giou: 0.23666  ,  Loss/l1: 0.02281  ,  Loss/location: 0.37826  ,  balance: 0.07291  ,  classification: 17.25439  ,  IoU: 0.78371",
+    "[train: 4, 560 / 2500] FPS: 8.9 (9.1)  ,  DataTime: 0.011 (0.004)  ,  ForwardTime: 0.882  ,  TotalTime: 0.897  ,  Loss/total: 1.17666  ,  Loss/giou: 0.22841  ,  Loss/l1: 0.02114  ,  Loss/location: 0.36853  ,  balance: 0.07303  ,  classification: 17.25595  ,  IoU: 0.78962",
+    "[train: 4, 560 / 2500] FPS: 8.9 (9.0)  ,  DataTime: 0.011 (0.005)  ,  ForwardTime: 0.881  ,  TotalTime: 0.897  ,  Loss/total: 1.22429  ,  Loss/giou: 0.23962  ,  Loss/l1: 0.02338  ,  Loss/location: 0.38290  ,  balance: 0.07273  ,  classification: 17.25543  ,  IoU: 0.78197"
+  ]
+}
