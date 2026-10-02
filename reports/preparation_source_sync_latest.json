@@ -1,76 +1,33 @@
 {
   "status": "PASS",
   "role": "source_and_preparation_artifact_sync_not_experiment_acceptance",
-  "verified_at": "2026-10-03T02:41:54.555941+08:00",
+  "verified_at": "2026-10-03T03:10:10.327812+08:00",
   "server": "2028",
-  "project_publication_commit": "938aa4ae28003e1352f9b51987d02906fb88d304",
-  "identical_owned_files": 16,
+  "project_publication_commit": "a317036cceed3c67a381d31a1a7e1c54604d3a12",
+  "identical_owned_files": 5,
   "controller_execution": "NOT_STARTED",
   "benchmark_execution": "NOT_RUN",
+  "reviewed_evaluation_source_files_unchanged_since_CPU_import_check": 9,
   "files": {
     "README.md": {
       "bytes": 2428,
-      "sha256": "5b2d60b6d834dc9bfc1c18e31bbdb02ee22591a0a8a5e427c65845ded60ba7b7"
+      "sha256": "a59e97d82f630cf231966d0ee6eac9b9c5299787de5f78661ed874301a54370b"
     },
     "configs/full_evaluation_plan.json": {
-      "bytes": 5270,
-      "sha256": "be3b07f63ca8ad2ba905d91e2f489697379d81d5d8ac3606fc2ec08d3bd1afa8"
+      "bytes": 5420,
+      "sha256": "8dbac4283f4456949479718bf4f93ea88b7f64ee7c63ff86d7a47ffbc9b9f898"
     },
     "docs/RGB-X_研究与实验完整交接_2026-10-02.md": {
-      "bytes": 67637,
-      "sha256": "bf9bac51a92f9e18fdfdf20ccd7119f1ad2245519152d03bdfb941cfb557b6ba"
+      "bytes": 68613,
+      "sha256": "f096d08f8512176dc2ef141a0414d4e3bcef52246dd2a17fc9b13f0b383bb4f3"
     },
-    "reports/depthtrack_test_attributes.json": {
-      "bytes": 241255,
-      "sha256": "5349dec5970392c26fc54e644db06673b684409509fdc5fb05d78cc3eb03dda1"
-    },
-    "reports/evaluation_source_audit_20261003.json": {
-      "bytes": 10843,
-      "sha256": "a17a02b647d297c8a08a1b04cb2b923bbeeca8037f914f0a611a78c4f9a9928e"
+    "reports/evaluation_cli_import_check_20261003.json": {
+      "bytes": 7461,
+      "sha256": "86ec91a5ce065043d3adddfba50d4ef5a0c9f7bc7e18ca0911d2a88fda782222"
     },
     "reports/train_epoch_history_20261002.json": {
-      "bytes": 30600,
-      "sha256": "8476ca86c26feda964103866513f1ff2b4bbbff18876a1072fa197c7012e467b"
-    },
-    "reports/vot_fcurve_metadata_cpu_fixture.json": {
-      "bytes": 1092,
-      "sha256": "d2851249c4be0744d90da369636e45140c4602c26036083b6dcb0495d58c5846"
-    },
-    "scripts/audit_and_score_vot.py": {
-      "bytes": 7962,
-      "sha256": "ceb5000bb630f85b9497dcab92262a5c4e53dc18bc4717fee85b64dcc065ec1b"
-    },
-    "scripts/audit_depthtrack_attributes.py": {
-      "bytes": 2703,
-      "sha256": "a8bac990faa7f594ffacc4e0c12478c9952016f033a70c8a1acd08f3556b4fce"
-    },
-    "scripts/audit_ope_coverage.py": {
-      "bytes": 4359,
-      "sha256": "5a36137d86d167bc575ff29ba4aafd886cb111c929ff07c19ec9a853cb8c059e"
-    },
-    "scripts/evaluate_existing_three.py": {
-      "bytes": 5603,
-      "sha256": "b998f9c87523bc3f70a7cef3955178f18925920e448b2285553b601c701b4c38"
-    },
-    "scripts/evaluate_xtrack_ope.py": {
-      "bytes": 4655,
-      "sha256": "4b91e56c4b63fa6050cabec6effefc29f4801d2b84cf8b2044c04763adfe11cb"
-    },
-    "scripts/evaluate_xtrack_vot.py": {
-      "bytes": 2515,
-      "sha256": "78101ee8a23b27fbc09a237d9f35e1a63474183d4727ce97128d5c5ec8c145a4"
-    },
-    "scripts/score_depthtrack_attributes.py": {
-      "bytes": 8139,
-      "sha256": "077388099efd8d15d23cd96b68f428f09749f82a2365e9acf1bcaed626e85950"
-    },
-    "scripts/score_lasher.py": {
-      "bytes": 8205,
-      "sha256": "84c96ed501b0ff9ab17b2a2dcc117c5f84bf8ff23a423fa4a96641fe4e56dae8"
-    },
-    "scripts/score_visevent.py": {
-      "bytes": 8833,
-      "sha256": "4e4e467a74b11f1fc04c153edcfc54ec951196504690d26d2a9d371c2e298698"
+      "bytes": 32582,
+      "sha256": "61e6ecde8c7c37706bf2faf688cadd3a082fd371e73cc8dfb312f4a476519841"
     }
   }
 }
