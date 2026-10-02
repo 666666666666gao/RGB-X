@@ -33,6 +33,8 @@ about the proposed optimizer's gains.
 - A loadable epoch-65 checkpoint from this run, with finite model tensors.
 - 65 finite epoch training-loss entries and the expected optimizer-step count
   (2,500 updates per epoch; 162,500 total, checked on parameters used every step).
+- 13 finite validation-loss entries, matching the configured validation interval
+  of five epochs across the 65-epoch run.
 - The final run receipt and final epoch logs agree with the saved checkpoint.
 
 The persistent monitor checks exit status, checkpoint epoch, finite weights,
