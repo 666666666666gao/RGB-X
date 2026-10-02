@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-02T21:20:28.139273+08:00",
+  "status": "PASS",
+  "repository": "https://github.com/666666666666gao/RGB-X",
+  "branch": "main",
+  "project_publication_commit": "ec40469ae180e80d65fb5934006d33021d72efab",
+  "github_commit_verified": "ec40469ae180e80d65fb5934006d33021d72efab",
+  "document_bytes": 33405,
+  "document_sha256": "cc64709c02a0f837aaec31b0ddf6528b21aa10ecc9e1c1273d1969c1ed7764f5",
+  "copies": [
+    {
+      "location": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "cc64709c02a0f837aaec31b0ddf6528b21aa10ecc9e1c1273d1969c1ed7764f5"
+    },
+    {
+      "location": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "cc64709c02a0f837aaec31b0ddf6528b21aa10ecc9e1c1273d1969c1ed7764f5"
+    },
+    {
+      "location": "2028:/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "cc64709c02a0f837aaec31b0ddf6528b21aa10ecc9e1c1273d1969c1ed7764f5"
+    },
+    {
+      "location": "https://github.com/666666666666gao/RGB-X/blob/ec40469ae180e80d65fb5934006d33021d72efab/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "cc64709c02a0f837aaec31b0ddf6528b21aa10ecc9e1c1273d1969c1ed7764f5"
+    }
+  ],
+  "training_snapshot_observed_at": "2026-10-02T20:58:29.014989+08:00",
+  "training_status": "running; three epochs completed; no benchmark scores yet",
+  "github_verification": "Remote main commit equals local publication commit; SHA256 verified from document bytes in that Git commit. GitHub API content request timed out.",
+  "note": "This verifies publication and identical document bytes, not full training completion. The receipt itself is committed after this publication commit."
+}
