@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-10-02T22:23:22.851843+08:00",
+  "status": "PASS",
+  "repository": "https://github.com/666666666666gao/RGB-X",
+  "branch": "main",
+  "project_publication_commit": "3fbbc9463ad38ebb88a1a3bf12491eb76b7bf07a",
+  "github_commit_verified": "3fbbc9463ad38ebb88a1a3bf12491eb76b7bf07a",
+  "document_bytes": 42620,
+  "document_sha256": "9f3bead8fe8dd28d714ef169eae06a8267c05a8481dcaba9c8bbc763718ffadf",
+  "copies": [
+    {
+      "location": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "9f3bead8fe8dd28d714ef169eae06a8267c05a8481dcaba9c8bbc763718ffadf"
+    },
+    {
+      "location": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "9f3bead8fe8dd28d714ef169eae06a8267c05a8481dcaba9c8bbc763718ffadf"
+    },
+    {
+      "location": "2028:/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "9f3bead8fe8dd28d714ef169eae06a8267c05a8481dcaba9c8bbc763718ffadf"
+    },
+    {
+      "location": "https://github.com/666666666666gao/RGB-X/blob/3fbbc9463ad38ebb88a1a3bf12491eb76b7bf07a/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "9f3bead8fe8dd28d714ef169eae06a8267c05a8481dcaba9c8bbc763718ffadf"
+    }
+  ],
+  "training_snapshot_observed_at": "2026-10-02T22:13:12.618501+08:00",
+  "training_status": "running; five training epochs and first complete validation passed; entered epoch six; no benchmark scores yet",
+  "document_policy": "One primary handoff in project docs and Desktop/document; raw JSON/log/patch evidence retained. Nine previous auxiliary Markdown guides were merged and removed from the current tree, with history archived outside the project.",
+  "github_verification": "Remote main commit equals local publication commit; SHA256 verified from document bytes in that Git commit.",
+  "note": "This verifies publication and identical document bytes, not full training completion. The receipt itself is committed after this publication commit."
+}
