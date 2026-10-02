@@ -1,0 +1,118 @@
+{
+  "observed_at": "2026-10-03T02:49:28.431552+08:00",
+  "role": "CPU_only_argparse_and_import_checks_not_model_or_benchmark_execution",
+  "status": "PASS",
+  "visible_GPUs": "",
+  "model_constructed": false,
+  "CUDA_witness_executed": false,
+  "rows": [
+    {
+      "script": "audit_depthtrack_attributes.py",
+      "sha256": "a8bac990faa7f594ffacc4e0c12478c9952016f033a70c8a1acd08f3556b4fce",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/audit_depthtrack_attributes.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: audit_depthtrack_attributes.py [-h] --dataset-audit DATASET_AUDIT\n                                      --report REPORT\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --dataset-audit DATASET_AUDIT\n  --report REPORT\n",
+      "stderr": ""
+    },
+    {
+      "script": "score_depthtrack_attributes.py",
+      "sha256": "077388099efd8d15d23cd96b68f428f09749f82a2365e9acf1bcaed626e85950",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/score_depthtrack_attributes.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: score_depthtrack_attributes.py [-h] --workspace WORKSPACE --attributes\n                                      ATTRIBUTES\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --attributes ATTRIBUTES\n",
+      "stderr": ""
+    },
+    {
+      "script": "evaluate_existing_three.py",
+      "sha256": "b998f9c87523bc3f70a7cef3955178f18925920e448b2285553b601c701b4c38",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_existing_three.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: evaluate_existing_three.py [-h] --terminal-audit TERMINAL_AUDIT\n                                  --output-root OUTPUT_ROOT\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --terminal-audit TERMINAL_AUDIT\n  --output-root OUTPUT_ROOT\n",
+      "stderr": ""
+    },
+    {
+      "script": "evaluate_xtrack_ope.py",
+      "sha256": "4b91e56c4b63fa6050cabec6effefc29f4801d2b84cf8b2044c04763adfe11cb",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: evaluate_xtrack_ope.py [-h] --config CONFIG --checkpoint CHECKPOINT\n                              --expected-sha256 EXPECTED_SHA256\n                              --terminal-audit TERMINAL_AUDIT --manifest\n                              MANIFEST --output OUTPUT --shard SHARD\n                              [--shards SHARDS] [--seed SEED]\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --config CONFIG\n  --checkpoint CHECKPOINT\n  --expected-sha256 EXPECTED_SHA256\n  --terminal-audit TERMINAL_AUDIT\n  --manifest MANIFEST\n  --output OUTPUT\n  --shard SHARD\n  --shards SHARDS\n  --seed SEED\n",
+      "stderr": ""
+    },
+    {
+      "script": "audit_ope_coverage.py",
+      "sha256": "5a36137d86d167bc575ff29ba4aafd886cb111c929ff07c19ec9a853cb8c059e",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/audit_ope_coverage.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: audit_ope_coverage.py [-h] --manifest MANIFEST --output OUTPUT --config\n                             CONFIG --expected-sha256 EXPECTED_SHA256\n                             --checkpoint CHECKPOINT --terminal-audit\n                             TERMINAL_AUDIT --report REPORT\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --manifest MANIFEST\n  --output OUTPUT\n  --config CONFIG\n  --expected-sha256 EXPECTED_SHA256\n  --checkpoint CHECKPOINT\n  --terminal-audit TERMINAL_AUDIT\n  --report REPORT\n",
+      "stderr": ""
+    },
+    {
+      "script": "evaluate_xtrack_vot.py",
+      "sha256": "78101ee8a23b27fbc09a237d9f35e1a63474183d4727ce97128d5c5ec8c145a4",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_vot.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: evaluate_xtrack_vot.py [-h] --config CONFIG --checkpoint CHECKPOINT\n                              --expected-sha256 EXPECTED_SHA256\n                              --terminal-audit TERMINAL_AUDIT [--seed SEED]\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --config CONFIG\n  --checkpoint CHECKPOINT\n  --expected-sha256 EXPECTED_SHA256\n  --terminal-audit TERMINAL_AUDIT\n  --seed SEED\n",
+      "stderr": ""
+    },
+    {
+      "script": "audit_and_score_vot.py",
+      "sha256": "ceb5000bb630f85b9497dcab92262a5c4e53dc18bc4717fee85b64dcc065ec1b",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/audit_and_score_vot.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: audit_and_score_vot.py [-h] --workspace WORKSPACE\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n",
+      "stderr": ""
+    },
+    {
+      "script": "score_lasher.py",
+      "sha256": "84c96ed501b0ff9ab17b2a2dcc117c5f84bf8ff23a423fa4a96641fe4e56dae8",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/score_lasher.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: score_lasher.py [-h] --manifest MANIFEST --attributes ATTRIBUTES\n                       --predictions PREDICTIONS --coverage COVERAGE --config\n                       CONFIG --checkpoint CHECKPOINT --expected-sha256\n                       EXPECTED_SHA256 --terminal-audit TERMINAL_AUDIT\n                       --toolkit TOOLKIT --output OUTPUT\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --manifest MANIFEST\n  --attributes ATTRIBUTES\n  --predictions PREDICTIONS\n  --coverage COVERAGE\n  --config CONFIG\n  --checkpoint CHECKPOINT\n  --expected-sha256 EXPECTED_SHA256\n  --terminal-audit TERMINAL_AUDIT\n  --toolkit TOOLKIT\n  --output OUTPUT\n",
+      "stderr": ""
+    },
+    {
+      "script": "score_visevent.py",
+      "sha256": "4e4e467a74b11f1fc04c153edcfc54ec951196504690d26d2a9d371c2e298698",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/score_visevent.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: score_visevent.py [-h] --manifest MANIFEST --attributes ATTRIBUTES\n                         --predictions PREDICTIONS --coverage COVERAGE\n                         --config CONFIG --checkpoint CHECKPOINT\n                         --expected-sha256 EXPECTED_SHA256 --terminal-audit\n                         TERMINAL_AUDIT --toolkit TOOLKIT --output OUTPUT\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --manifest MANIFEST\n  --attributes ATTRIBUTES\n  --predictions PREDICTIONS\n  --coverage COVERAGE\n  --config CONFIG\n  --checkpoint CHECKPOINT\n  --expected-sha256 EXPECTED_SHA256\n  --terminal-audit TERMINAL_AUDIT\n  --toolkit TOOLKIT\n  --output OUTPUT\n",
+      "stderr": ""
+    }
+  ]
+}

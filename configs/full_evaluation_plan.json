@@ -159,5 +159,7 @@
   "actual_matched_baseline_metrics": null,
   "existing_three_controller": "scripts/evaluate_existing_three.py",
   "controller_status": "SOURCE_PREPARED_NOT_STARTED",
-  "result_root": "/home/gaob/rgbx-eval-results"
+  "result_root": "/home/gaob/rgbx-eval-results",
+  "deployed_CPU_CLI_import_check": "reports/evaluation_cli_import_check_20261003.json",
+  "deployed_CPU_CLI_import_status": "PASS_CPU_ONLY_NO_MODEL"
 }
