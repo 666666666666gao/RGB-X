@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "run_id": "xtrack_b_adamw_3gpu_s2026_20261002",
+  "epoch_completed": 1,
+  "world_size": 3,
+  "train_steps": 2500,
+  "global_examples": 60000,
+  "entered_epoch": 2,
+  "source_log": "/data/gb/rgbx-risk/outputs/xtrack_b_adamw_3gpu_s2026_20261002/logs/xtrack-rgbx_b_adamw_3gpu.log",
+  "final_epoch_rows": [
+    {
+      "TotalTime": 0.889,
+      "Loss/total": 1.32404,
+      "Loss/giou": 0.25928,
+      "Loss/l1": 0.02554,
+      "Loss/location": 0.4257,
+      "balance": 0.07911,
+      "classification": 17.29853,
+      "IoU": 0.76549
+    },
+    {
+      "TotalTime": 0.889,
+      "Loss/total": 1.32853,
+      "Loss/giou": 0.25979,
+      "Loss/l1": 0.02581,
+      "Loss/location": 0.42767,
+      "balance": 0.07922,
+      "classification": 17.29988,
+      "IoU": 0.7658
+    },
+    {
+      "TotalTime": 0.889,
+      "Loss/total": 1.32473,
+      "Loss/giou": 0.25894,
+      "Loss/l1": 0.02548,
+      "Loss/location": 0.4271,
+      "balance": 0.07932,
+      "classification": 17.29971,
+      "IoU": 0.766
+    }
+  ],
+  "estimated_epoch_seconds_from_rounded_log": 2222.5,
+  "note": "Logs do not label ranks. Three final rows correspond to the three-rank author trainer. Full 65-epoch completion remains unproven."
+}
