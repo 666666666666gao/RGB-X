@@ -5,11 +5,20 @@
   "xtrack_commit": "8a606f00c5e98b5393254f6ee1891447b662407f",
   "sutrack_commit": "d65052d1ba3fcf55010e1fb3665ee6616c139a2c",
   "preflight_status": "PASS",
-  "formal_training_launched": false,
+  "formal_training_launched": true,
   "remaining_data_disk_bytes": 6361309184,
-  "local_changes_sha256": "50130c56e867db7c9b9cd93a597b0093b045b921e72bd6ffba0c754eb39fc27a",
+  "local_changes_sha256": "0b1b09de55558b357f57cd7afcd1f1e0cbddef92f4102afd6a552f33dda981cf",
   "deferred_evaluation": [
     "RGBT234",
     "VOT-RGBD2022"
-  ]
+  ],
+  "formal_run_id": "xtrack_b_adamw_3gpu_s2026_20261002",
+  "formal_started_at": "2026-10-02T18:58:49.209866+08:00",
+  "live_receipt": "/data/gb/rgbx-risk/reports/xtrack_b_adamw_3gpu_s2026_20261002.json",
+  "three_gpu_changes": {
+    "BATCH_SIZE_per_rank": 8,
+    "world_size": 3,
+    "global_batch": 24
+  },
+  "failure_handling_change": "Existing trainer fail_safe=False: exceptions propagate and exit nonzero."
 }

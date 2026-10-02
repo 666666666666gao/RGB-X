@@ -71,3 +71,13 @@ index d325b61..47e6ca7 100644
          return (rgb_frame_path, ir_frame_path)  # jpg jpg
  
      def _get_frame(self, seq_path, frame_id):
+diff --git a/lib/train/train_script.py b/lib/train/train_script.py
+index fc15146..d9a155f 100644
+--- a/lib/train/train_script.py
++++ b/lib/train/train_script.py
+@@ -87,4 +87,4 @@ def run(settings):
+         trainer = LTRTrainer(actor, [loader_train, loader_val], optimizer, settings, lr_scheduler, use_amp=use_amp)
+     
+     # train process
+-    trainer.train(cfg.TRAIN.EPOCH, load_latest=True, fail_safe=True)
++    trainer.train(cfg.TRAIN.EPOCH, load_latest=True, fail_safe=False)

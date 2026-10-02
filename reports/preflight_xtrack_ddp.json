@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "formal_training": false,
+  "world_size": 3,
+  "global_batch_size": 24,
+  "total_training_examples": 48,
+  "task_counts": {
+    "visevent": 14,
+    "lasher": 21,
+    "depthtrack": 13
+  },
+  "synchronized_trainable_parameters": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "optimizer_steps": 2,
+      "tasks": {
+        "visevent": 6,
+        "lasher": 7,
+        "depthtrack": 3
+      },
+      "losses": [
+        1.593780279159546,
+        1.7735992670059204
+      ],
+      "changed_tensors": 488,
+      "trainable_sha256": "ba307e74d58923e36311060c3413bd541e22eef8dfc3b8d3da908e67accb9f04",
+      "peak_cuda_memory_bytes": 5972102656,
+      "frozen_parameters_unchanged": true
+    },
+    {
+      "rank": 1,
+      "optimizer_steps": 2,
+      "tasks": {
+        "lasher": 10,
+        "depthtrack": 4,
+        "visevent": 2
+      },
+      "losses": [
+        0.894982635974884,
+        1.7110549211502075
+      ],
+      "changed_tensors": 488,
+      "trainable_sha256": "ba307e74d58923e36311060c3413bd541e22eef8dfc3b8d3da908e67accb9f04",
+      "peak_cuda_memory_bytes": 5972102656,
+      "frozen_parameters_unchanged": true
+    },
+    {
+      "rank": 2,
+      "optimizer_steps": 2,
+      "tasks": {
+        "depthtrack": 6,
+        "visevent": 6,
+        "lasher": 4
+      },
+      "losses": [
+        0.6874062418937683,
+        1.4107255935668945
+      ],
+      "changed_tensors": 488,
+      "trainable_sha256": "ba307e74d58923e36311060c3413bd541e22eef8dfc3b8d3da908e67accb9f04",
+      "peak_cuda_memory_bytes": 5972102656,
+      "frozen_parameters_unchanged": true
+    }
+  ]
+}

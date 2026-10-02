@@ -1,0 +1,16 @@
+{
+  "base": "python3.8.20 + torch CUDA11.7",
+  "system_pkgs": ["git", "tmux"],
+  "pip_phases": [
+    ["torch==1.13.1"],
+    ["torchvision==0.14.1", "numpy==1.24.4", "pandas==1.5.3", "scipy==1.10.1", "opencv-python==4.10.0.84", "Pillow==9.5.0", "PyYAML==6.0.2", "easydict==1.13", "Cython==0.29.37", "pycocotools==2.0.7", "jpeg4py==0.1.4", "timm==0.5.4", "tensorboard==2.13.0", "lmdb==1.4.1", "visdom==0.2.4", "tqdm==4.67.1", "matplotlib==3.7.5"]
+  ],
+  "env": {"CUDA_VISIBLE_DEVICES": "0,1,2", "OMP_NUM_THREADS": "4", "MKL_NUM_THREADS": "4", "OPENBLAS_NUM_THREADS": "4"},
+  "run_commands": [],
+  "weight_dirs": {"ostrack": {"path": "/data/gb/rgbx-risk/pretrained/OSTrack_ep0300.pth.tar", "source": "author XTrack initializer", "gated": false}},
+  "smoke": {
+    "import_names": ["torch", "torchvision", "cv2", "yaml", "timm"],
+    "gpu_tests": [{"cmd": "CUDA_VISIBLE_DEVICES=0,1,2 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/gpu_witness.py", "expect": "^CUDA_WITNESS"}],
+    "cli_checks": ["nvidia-smi"]
+  }
+}

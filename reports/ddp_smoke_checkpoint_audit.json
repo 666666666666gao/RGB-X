@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checkpoint": "/data/gb/rgbx-risk/outputs/ddp_smoke_20261002/checkpoints/train/xtrack/rgbx_b_adamw_3gpu_smoke/XTrack_ep0001.pth.tar",
+  "bytes": 440620557,
+  "epoch": 1,
+  "optimizer_steps": [
+    2
+  ],
+  "train_epoch_loss": [
+    1.6836897730827332
+  ],
+  "val_epoch_loss": [
+    1.9290511012077332
+  ],
+  "parameters_finite": true
+}

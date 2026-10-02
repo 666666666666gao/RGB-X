@@ -1,0 +1,90 @@
+DATA:
+  MAX_SAMPLE_INTERVAL: 200
+  MEAN:
+  - 0.485
+  - 0.456
+  - 0.406
+  SEARCH:
+    CENTER_JITTER: 3
+    FACTOR: 4.0
+    NUMBER: 1
+    SCALE_JITTER: 0.25
+    SIZE: 256
+  STD:
+  - 0.229
+  - 0.224
+  - 0.225
+  TEMPLATE:
+    CENTER_JITTER: 0
+    FACTOR: 2.0
+    SCALE_JITTER: 0
+    SIZE: 128
+  TRAIN:
+    DATASETS_NAME:
+    - LasHeR_train
+    - DepthTrack_train
+    - VisEvent
+    DATASETS_RATIO:
+    - 1
+    - 1
+    - 1
+    SAMPLE_PER_EPOCH: 48
+  VAL:
+    DATASETS_NAME:
+    - LasHeR_val
+    - DepthTrack_val
+    DATASETS_RATIO:
+    - 1
+    - 1
+    SAMPLE_PER_EPOCH: 48
+MODEL:
+  BACKBONE:
+    CE_KEEP_RATIO:
+    - 1
+    - 1
+    - 1
+    CE_LOC:
+    - 3
+    - 6
+    - 9
+    CE_TEMPLATE_RANGE: CTR_POINT
+    STRIDE: 16
+    TYPE: vit_base_patch16_224_ce_adapter
+  EXTRA_MERGER: false
+  HEAD:
+    NUM_CHANNELS: 256
+    TYPE: CENTER
+  PRETRAIN_FILE: /data/gb/rgbx-risk/pretrained/OSTrack_ep0300.pth.tar
+  RETURN_INTER: false
+TEST:
+  EPOCH: 1
+  SEARCH_FACTOR: 4.0
+  SEARCH_SIZE: 256
+  TEMPLATE_FACTOR: 2.0
+  TEMPLATE_SIZE: 128
+TRAIN:
+  AMP: false
+  BACKBONE_MULTIPLIER: 0.1
+  BATCH_SIZE: 8
+  CE_START_EPOCH: 4
+  CE_WARM_EPOCH: 16
+  DROP_PATH_RATE: 0.1
+  EPOCH: 1
+  FIX_BN: true
+  GIOU_WEIGHT: 2.0
+  GRAD_CLIP_NORM: 0.1
+  L1_WEIGHT: 5.0
+  LR: 0.0001
+  LR_DROP_EPOCH: 48
+  NUM_WORKER: 5
+  OPTIMIZER: ADAMW
+  PRINT_INTERVAL: 1
+  PROMPT:
+    TYPE: bat
+  SAVE_EPOCH_INTERVAL: 1
+  SAVE_LAST_N_EPOCH: 1
+  SCHEDULER:
+    DECAY_RATE: 0.1
+    TYPE: step
+  VAL_EPOCH_INTERVAL: 1
+  WEIGHT_DECAY: 0.0001
