@@ -1,32 +1,32 @@
 {
-  "verified_at": "2026-10-03T01:56:10.083967+08:00",
+  "verified_at": "2026-10-03T02:42:01.440896+08:00",
   "status": "PASS",
   "repository": "https://github.com/666666666666gao/RGB-X",
   "branch": "main",
-  "project_publication_commit": "de436cdcab20d75c3f5c42a3897529fd9d3fb73b",
-  "github_commit_verified": "de436cdcab20d75c3f5c42a3897529fd9d3fb73b",
-  "document_bytes": 61835,
-  "document_sha256": "0e2dc9bb0ffe0a322cbb2b9befc91bf6eaa559bcb5057b3bd58fbd1eb9c67747",
+  "project_publication_commit": "938aa4ae28003e1352f9b51987d02906fb88d304",
+  "github_commit_verified": "938aa4ae28003e1352f9b51987d02906fb88d304",
+  "document_bytes": 67637,
+  "document_sha256": "bf9bac51a92f9e18fdfdf20ccd7119f1ad2245519152d03bdfb941cfb557b6ba",
   "copies": [
     {
       "location": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
-      "sha256": "0e2dc9bb0ffe0a322cbb2b9befc91bf6eaa559bcb5057b3bd58fbd1eb9c67747"
+      "sha256": "bf9bac51a92f9e18fdfdf20ccd7119f1ad2245519152d03bdfb941cfb557b6ba"
     },
     {
       "location": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
-      "sha256": "0e2dc9bb0ffe0a322cbb2b9befc91bf6eaa559bcb5057b3bd58fbd1eb9c67747"
+      "sha256": "bf9bac51a92f9e18fdfdf20ccd7119f1ad2245519152d03bdfb941cfb557b6ba"
     },
     {
       "location": "2028:/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-      "sha256": "0e2dc9bb0ffe0a322cbb2b9befc91bf6eaa559bcb5057b3bd58fbd1eb9c67747"
+      "sha256": "bf9bac51a92f9e18fdfdf20ccd7119f1ad2245519152d03bdfb941cfb557b6ba"
     },
     {
-      "location": "https://github.com/666666666666gao/RGB-X/blob/de436cdcab20d75c3f5c42a3897529fd9d3fb73b/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-      "sha256": "0e2dc9bb0ffe0a322cbb2b9befc91bf6eaa559bcb5057b3bd58fbd1eb9c67747"
+      "location": "https://github.com/666666666666gao/RGB-X/blob/938aa4ae28003e1352f9b51987d02906fb88d304/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+      "sha256": "bf9bac51a92f9e18fdfdf20ccd7119f1ad2245519152d03bdfb941cfb557b6ba"
     }
   ],
-  "training_snapshot_observed_at": "2026-10-03T01:52:19.475133+08:00",
-  "training_status": "running; eleven training epochs and two complete validations passed; entered epoch twelve; active three-dataset formal evaluation not run",
+  "training_snapshot_observed_at": "2026-10-03T02:34:34.847505+08:00",
+  "training_status": "running; twelve training epochs and two complete validations passed; entered epoch thirteen; active three-dataset formal evaluation not run",
   "document_policy": "One primary handoff in project docs and Desktop/document; raw JSON/log/patch evidence retained. Nine previous auxiliary Markdown guides were merged and removed from the current tree, with history archived outside the project.",
   "github_verification": "Remote main commit equals local publication commit; SHA256 verified from document bytes in that Git commit.",
   "note": "This verifies publication and identical document bytes, not full training completion. The receipt itself is committed after this publication commit."
