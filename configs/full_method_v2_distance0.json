@@ -1,0 +1,38 @@
+{
+  "run_id": "xtrack_full_method_v2_distance0_s2026",
+  "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+  "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+  "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+  "seed": 2026,
+  "epochs": 15,
+  "samples_per_epoch": 60000,
+  "batch_per_rank": 8,
+  "world_size": 3,
+  "lr": 1e-05,
+  "lr_drop_epoch": 10,
+  "lr_drop_factor": 0.1,
+  "weight_decay": 0.0001,
+  "grad_clip_norm": 0.1,
+  "risk_relative_tolerance": 0.002,
+  "max_relative_correction": 0.5,
+  "trajectory_length": 3,
+  "trajectory_period": 50,
+  "correction_strengths": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "trajectory_risk_weight": 1.0,
+  "candidate_distance_weight": 0.0,
+  "num_workers": 3,
+  "amp": false,
+  "checkpoint_every_epoch": true,
+  "modules_enabled": [
+    "localization_risk",
+    "task_adaptive_selective_correction",
+    "closed_loop_acceptance"
+  ],
+  "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+  "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+  "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+}

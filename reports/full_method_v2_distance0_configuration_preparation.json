@@ -1,0 +1,55 @@
+{
+  "status": "CONFIGURATION_PREPARED_ONLY_NOT_RUN",
+  "prepared_at": "2026-10-04T00:35:05.878706+08:00",
+  "reference_protocol": "configs/full_method_v1.json",
+  "reference_protocol_sha256": "452d8ea219af641f7a7b237eb654df9c1dfb88c551ea98ee43b600927ac6dded",
+  "candidate_protocol": "configs/full_method_v2_distance0.json",
+  "candidate_protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+  "semantic_differences": {
+    "run_id": {
+      "v1": "xtrack_full_method_v1_s2026",
+      "candidate": "xtrack_full_method_v2_distance0_s2026"
+    },
+    "output": {
+      "v1": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026",
+      "candidate": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026"
+    },
+    "candidate_distance_weight": {
+      "v1": 0.05,
+      "candidate": 0.0
+    }
+  },
+  "sole_algorithm_change": "candidate_distance_weight:0.05 -> 0.0",
+  "bookkeeping_differences": [
+    "run_id",
+    "output"
+  ],
+  "unchanged_controls": [
+    "author release initialization",
+    "seed2026",
+    "three training datasets and splits",
+    "mixed8T/8D/8E",
+    "trainable parameter scope",
+    "task optimizer statistics",
+    "loss normalization",
+    "learning rates and decay",
+    "15epochs/37500updates",
+    "risk tolerance",
+    "correction amplitude cap",
+    "trajectory checks and candidate strengths"
+  ],
+  "v1_protocol_unchanged": true,
+  "training_started": false,
+  "new_weights_generated": false,
+  "formal_tracking_scores": "NOT_RUN",
+  "efficacy": "UNKNOWN",
+  "launch_ready": false,
+  "remaining_before_launch": [
+    "finish fixed v1 training, endpoint audit and complete three-dataset comparison",
+    "prepare separate controller/audit/evaluation/retention paths; existing controller hardcodes v1",
+    "review and verify the candidate with its actual protocol before a new formal run"
+  ],
+  "reference_result_is_not_a_matched_ordinary_finetuning_control": true,
+  "mechanism_boundary": "Only the distance penalty changes. Trajectory-only independent intervention and sample-level risks remain future experiments.",
+  "success_measure": "Reduced unrepaired localization harms while preserving learning progress and complete tracking metrics; correction frequency alone is insufficient."
+}

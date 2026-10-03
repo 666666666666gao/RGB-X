@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T23:53:51.183571+08:00",
+  "updated_at": "2026-10-04T00:35:05.878706+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -107,13 +107,21 @@
   "tracking_scores": "NOT_RUN",
   "objective_met": false,
   "next_iteration_candidate": {
-    "status": "PLANNED_NOT_RUN",
+    "status": "CONFIG_PREPARED_NOT_RUN",
     "candidate_distance_weight": 0,
     "evidence": "reports/full_method_v1_cost_decomposition.json",
     "decision": "Finish the fixed v1 run, endpoint audit and complete comparison, then test distance weight zero as the sole algorithm change.",
     "comparison": "Fresh start from the same author release, repaired source, mixed 8T/8D/8E batches, seed, trainable parameters and 15-epoch budget; retain correction amplitude cap.",
     "efficacy": "UNKNOWN_NO_NEW_TRAINING_OR_BENCHMARK",
-    "success_measure": "Fewer unrepaired localization harms while retaining learning progress; selection frequency alone is not success."
+    "success_measure": "Fewer unrepaired localization harms while retaining learning progress; selection frequency alone is not success.",
+    "protocol": "configs/full_method_v2_distance0.json",
+    "preparation_evidence": "reports/full_method_v2_distance0_configuration_preparation.json",
+    "launch_ready": false,
+    "remaining_before_launch": [
+      "finish fixed v1 training, endpoint audit and complete three-dataset comparison",
+      "prepare separate controller/audit/evaluation/retention paths; existing controller hardcodes v1",
+      "review and verify the candidate with its actual protocol before a new formal run"
+    ]
   },
   "actual_training_examples_at_snapshot": 305040,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
