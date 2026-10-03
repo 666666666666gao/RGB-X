@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T03:16:24.570722+08:00",
-  "source_commit": "6e3a938b8949ae3d840daf526bc9c294472d91b1",
-  "document_sha256": "8cc45c0a67ec3fb6a24778a42d2d50f1c450bceeb57abe47e0074f84701d6f16",
-  "document_bytes": 130797,
+  "verified_at": "2026-10-04T04:53:16.772251+08:00",
+  "source_commit": "f20f4437ae1b4bdddc3ec349fb54abc6449b19d5",
+  "document_sha256": "47daa56a5e06176ea80cbe4ea1c06af05a8adf370be4a6fe50be873992cc376c",
+  "document_bytes": 133441,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,49 +14,49 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "completed_epoch_updates_checked": 17500,
-  "observed_training_global_step": 17630,
-  "generated_checkpoint_files_retired": 18,
-  "generated_checkpoint_file_bytes_retired": 8550931216,
+  "completed_epoch_updates_checked": 20000,
+  "observed_training_global_step": 20110,
+  "generated_checkpoint_files_retired": 20,
+  "generated_checkpoint_file_bytes_retired": 9505086774,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-04T03:16:24.570722+08:00",
+    "verified_at": "2026-10-04T04:53:16.772251+08:00",
     "all_published_files_match": true,
     "published_file_sha256": {
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8cc45c0a67ec3fb6a24778a42d2d50f1c450bceeb57abe47e0074f84701d6f16",
-      "configs/current_goal.json": "c2670f66b50cfbbfb89a9380c385f75979dacbe6954aebd14810fab50dca7432",
-      "configs/checkpoint_retention_policy.json": "5674ded55132851a99406ae756d5c8f3ca92f350fd333c683a2dd11beb61bb58",
-      "reports/full_method_v1_seventh_epoch_record_check.json": "6fe7d18983ded66fb38bf9eec5f3f5de58333bb509940a6a6ab4a61d1ac4a731",
-      "reports/full_method_v1_seventh_epoch_retention_snapshot.json": "cea481c6cdb3c6f2b4a70de3f09db2076005450fbce8ac028f1a454dbfcf8d6a"
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "47daa56a5e06176ea80cbe4ea1c06af05a8adf370be4a6fe50be873992cc376c",
+      "configs/current_goal.json": "2958b80294caf72cc44f1583da93bb46cf85c35b3d6a5937ac698423c2e36835",
+      "configs/checkpoint_retention_policy.json": "6b5b1d3da1406424986188437feb02cb564dd16fb2572f3855006fed7e1be0de",
+      "reports/full_method_v1_eighth_epoch_record_check.json": "f922c8e9583484795cc4670df39efbf206b540f32e703d96d82527836ccc81db",
+      "reports/full_method_v1_eighth_epoch_retention_snapshot.json": "399bde992a8d84180fbeafd0bbd4cf0cb6c17833cbefa801326b3973fd7dc43a"
     },
     "live_training_sources_unchanged": true,
     "process_states": {
       "1603676": "State:\tS (sleeping)",
       "1603680": "State:\tS (sleeping)",
-      "1603687": "State:\tR (running)",
-      "1603688": "State:\tR (running)",
-      "1603689": "State:\tR (running)",
+      "1603687": "State:\tS (sleeping)",
+      "1603688": "State:\tS (sleeping)",
+      "1603689": "State:\tS (sleeping)",
       "1629089": "State:\tS (sleeping)"
     },
     "gpu_guard_status": "DISABLED_BY_USER",
     "guard_process_missing": true,
     "training": {
-      "epoch": 8,
-      "step": 250,
-      "global_step": 17750,
-      "completed_epochs": 7,
-      "training_examples": 426000,
+      "epoch": 9,
+      "step": 190,
+      "global_step": 20190,
+      "completed_epochs": 8,
+      "training_examples": 484560,
       "formal_tracking_scores": "NOT_RUN"
     },
     "weight_file_count": 1,
-    "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0007.pth.tar"
+    "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0008.pth.tar"
   },
-  "subject": "SEVENTH_EPOCH_NEW_RECORDS_AND_SINGLE_RECOVERY_NOT_BENCHMARK",
+  "subject": "EIGHTH_EPOCH_NEW_RECORDS_AND_SINGLE_RECOVERY_NOT_BENCHMARK",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-04T03:11:48.802222+08:00",
-  "scope": "Only new15001..17500 epoch7 rows checked, completed17500-prefix proof assembled from prior15000 milestone evidence plus the new2500 rows. Zero trajectory-only harm in49 actual no-local-risk checks this epoch; epoch6 positive cases preserved. Oneep7 necessary recovery/18 nominal generated weights retired. No model reload/new forward/independent trajectory control/benchmark. User GPU controls withdrawn.",
+  "training_snapshot_observed_at": "2026-10-04T04:50:23.486860+08:00",
+  "scope": "Only new17501..20000 epoch8 rows checked; completed20000 prefix assembled from prior17500 proof plus new2500 rows. Zero trajectory-only harm in47 actual no-local-risk checks this epoch; epoch6 positive cases preserved. Oneep8 necessary recovery and20 nominal generated files retired. No model reload/new forward/independent trajectory control/benchmark. User GPU controls withdrawn.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
-  "latest_runtime_updates_at_publication": 17750
+  "latest_runtime_updates_at_publication": 20190
 }
