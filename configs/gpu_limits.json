@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T23:22:06.414126+08:00",
+  "updated_at": "2026-10-03T23:45:42.085067+08:00",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -8,7 +8,7 @@
   ],
   "temperature_target_celsius": 75,
   "power_limit_watts": 250,
-  "status": "OWNED_JOB_SUSPENDED_HARDWARE_LIMITS_NOT_APPLIED",
+  "status": "BEST_EFFORT_SOFTWARE_CONTROL_HARDWARE_CAP_NOT_APPLIED",
   "limits_verified": false,
   "current_configured_power_limit_watts": [
     350,
@@ -199,6 +199,27 @@
       "temperature_c": 57,
       "power_w": 111.98,
       "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T23:45:35.614405+08:00",
+      "gpu": 0,
+      "temperature_c": 76,
+      "power_w": 237.04,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T23:45:35.614405+08:00",
+      "gpu": 1,
+      "temperature_c": 75,
+      "power_w": 245.32,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T23:45:35.614405+08:00",
+      "gpu": 2,
+      "temperature_c": 71,
+      "power_w": 247.97,
+      "configured_limit_w": 350.0
     }
   ],
   "observed_max_temperature_celsius": 80,
@@ -230,21 +251,26 @@
     "temperature_target_celsius": 75,
     "power_limit_watts": 250,
     "policy": "configs/gpu_limits.json",
-    "status": "OWNED_JOB_SUSPENDED_HARDWARE_LIMITS_NOT_APPLIED",
+    "status": "BEST_EFFORT_SOFTWARE_CONTROL_HARDWARE_CAP_NOT_APPLIED",
     "limits_verified": false,
     "observed_temperature_goal_violation": true,
     "observed_power_goal_violation": true,
     "hardware_condition_changes_must_be_recorded_for_cost_comparisons": true,
     "last_power_limit_readback_at": "2026-10-03T23:14:26+08:00",
-    "guard_pid": 1907806,
+    "guard_pid": 1935932,
     "guard_source": "scripts/guard_active_full_method_gpu.py",
     "guard_receipt": "reports/full_method_v1_gpu_guard.json",
-    "resume_condition": "All three configured power limits<=250W and all temperatures<=70C.",
-    "pause_condition": "Any configured power limit>250W or any temperature>=75C.",
-    "runtime_pause_is_not_goal_pause": true
+    "resume_condition": "All actual temperatures<=70C and all actual power draws<=225W; configured250W is not a prerequisite.",
+    "pause_condition": "Any actual temperature>=74C or actual power draw>=245W.",
+    "runtime_pause_is_not_goal_pause": true,
+    "sensor_poll_seconds": 10,
+    "hard_power_cap_is_best_effort_pending_admin": true,
+    "sample_peak_guarantee": false
   },
-  "guard_snapshot_evidence": "reports/full_method_v1_gpu_pause_snapshot.json",
-  "guard_resume_branch": "NOT_YET_EXECUTED",
+  "guard_snapshot_evidence": "reports/full_method_v1_best_effort_guard_resume_snapshot.json",
+  "guard_resume_branch": "ACTUALLY_EXECUTED_ORIGINAL_PIDS_PROGRESS",
   "actual_training_pause_at": "2026-10-03T23:18:37.741017+08:00",
-  "note": "SIGSTOP preserves existing process/model/optimizer state; no train-source or RNG update while stopped. No hardware cap has been set. Pause duration and changed hardware conditions belong in cost reporting."
+  "note": "Actual readings drive pause/resume. Hardware250W still requires admin but does not block all training. At23:45:35 sampled76C despite74C trigger; no absolute temperature or power peak guarantee. Initial long pause appears in unchanged raw step_seconds and must remain in reported cost.",
+  "actual_first_resume_at": "2026-10-03T23:42:03.525974+08:00",
+  "strict_hardware_cap_gate": "SUPERSEDED_TOO_STRICT_FOR_USER_BEST_EFFORT_REQUEST"
 }

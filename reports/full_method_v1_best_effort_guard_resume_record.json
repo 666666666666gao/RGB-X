@@ -1,0 +1,64 @@
+{
+  "status": "ORIGINAL_TRAINING_RESUMED_UNDER_BEST_EFFORT_SOFTWARE_GUARD",
+  "observed_at": "2026-10-03T23:45:42.085067+08:00",
+  "training": {
+    "status": "RUNNING_NOT_EVALUATED",
+    "observed_at": "2026-10-03T15:44:52.639303+00:00",
+    "epoch": 6,
+    "step": 80,
+    "global_step": 12580,
+    "training_examples": 301920,
+    "completed_epochs": 5,
+    "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0005.pth.tar",
+    "formal_tracking_scores": "NOT_RUN"
+  },
+  "new_partial_epoch6_records": {
+    "global_step_start": 12501,
+    "global_step_end": 12580,
+    "updates": 80,
+    "sha256": "9dee55f516d70320d4bd2508ab64bd0f27fbf796550f22543a214eca0b6ff956",
+    "localization_all_finite": true,
+    "global_task_counts_always": [
+      8,
+      8,
+      8
+    ],
+    "maximum_logged_step_seconds": 1408.0314089300227,
+    "scope": "New partial epoch6 only; no repeated epochs1-5/model reload/benchmark. Logged wall time includes the actual initial pause."
+  },
+  "guard_version": "v2_best_effort_actual_readings",
+  "guard_pid": 1935932,
+  "first_actual_resume_at": "2026-10-03T23:42:03.525974+08:00",
+  "pause_events": 11,
+  "resume_events": 10,
+  "hardware_power_limit_applied": false,
+  "superseded_rule": "Configured250W was previously required before any resume, although the user requested best effort.",
+  "current_rule": "Pause anytemperature>=74C or actualpower>=245W; resume alltemperature<=70C and actualpower<=225W. Sample every10s; hardware350W does not block progress.",
+  "sampled_violation": {
+    "observed_at": "2026-10-03T23:45:35.614405+08:00",
+    "readings": [
+      {
+        "gpu": 0,
+        "temperature_c": 76,
+        "power_w": 237.04,
+        "power_limit_w": 350.0
+      },
+      {
+        "gpu": 1,
+        "temperature_c": 75,
+        "power_w": 245.32,
+        "power_limit_w": 350.0
+      },
+      {
+        "gpu": 2,
+        "temperature_c": 71,
+        "power_w": 247.97,
+        "power_limit_w": 350.0
+      }
+    ],
+    "maximum_temperature_c": 76
+  },
+  "scope": "Original same-attempt five processes continued via SIGCONT. Hardware cap remains unverified/unapplied; sample-based software control is best effort, not an absolute peak guarantee.",
+  "snapshot_evidence": "reports/full_method_v1_best_effort_guard_resume_snapshot.json",
+  "formal_tracking_scores": "NOT_RUN"
+}

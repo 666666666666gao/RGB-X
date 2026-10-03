@@ -1,6 +1,5 @@
-"""Suspend this already-running job until its requested GPU limits are met."""
+"""Pause/resume this owned job using actual temperature and power readings."""
 import datetime
-import hashlib
 import json
 import os
 from pathlib import Path
@@ -32,12 +31,17 @@ def identity(pid):
 
 
 identities = {pid: identity(pid) for pid in PIDS}
+previous = json.loads(RECEIPT.read_text())
+assert previous['status'] == 'PAUSED_FOR_GPU_LIMITS'
+assert all('T (stopped)' in Path('/proc', str(pid), 'status').read_text() for pid in PIDS)
 state = {'started_at': now(), 'guard_pid': os.getpid(), 'training_pids': PIDS,
-         'poll_seconds': 30, 'pause_temperature_c': 75, 'resume_temperature_c': 70,
-         'required_power_limit_w': 250, 'events': [], 'paused_seconds': 0.0,
+         'version': 'v2_best_effort_actual_readings', 'previous_guard_pid': previous['guard_pid'],
+         'poll_seconds': 10, 'pause_temperature_c': 74, 'resume_temperature_c': 70,
+         'pause_power_w': 245, 'resume_power_w': 225, 'requested_hardware_power_limit_w': 250,
+         'events': previous['events'], 'paused_seconds': previous['paused_seconds'],
          'scope': 'Only five existing owned training/controller processes; no trainer, optimizer, checkpoint or hardware setting mutation.'}
-paused = False
-pause_started = None
+paused = True
+pause_started = datetime.datetime.fromisoformat(previous['events'][-1]['at']).timestamp()
 while True:
     if not all(Path('/proc', str(pid)).exists() for pid in PIDS):
         state['status'] = 'TRAINING_PROCESS_ENDED_INSPECT_CONTROLLER_STAGE'
@@ -51,25 +55,26 @@ while True:
     readings = [{'gpu': i, 'temperature_c': int(row[1]), 'power_w': float(row[2]), 'power_limit_w': float(row[3])} for i, row in enumerate(rows)]
     caps_met = all(row['power_limit_w'] <= 250 for row in readings)
     maximum = max(row['temperature_c'] for row in readings)
-    if not paused and (not caps_met or maximum >= 75):
+    maximum_power = max(row['power_w'] for row in readings)
+    if not paused and (maximum >= 74 or maximum_power >= 245):
         for pid in PIDS:
             os.kill(pid, signal.SIGSTOP)
         paused = True
-        pause_started = time.monotonic()
+        pause_started = time.time()
         event = {'at': now(), 'action': 'SIGSTOP_OWNED_TRAINING', 'readings': readings,
                  'training_snapshot': json.loads((ROOT / 'run.json').read_text())}
         state['events'].append(event)
         print(json.dumps({'at': event['at'], 'action': event['action'], 'readings': readings}), flush=True)
-    elif paused and caps_met and maximum <= 70:
+    elif paused and maximum <= 70 and maximum_power <= 225:
         for pid in reversed(PIDS):
             os.kill(pid, signal.SIGCONT)
-        state['paused_seconds'] += time.monotonic() - pause_started
+        state['paused_seconds'] += time.time() - pause_started
         paused = False
         state['events'].append({'at': now(), 'action': 'SIGCONT_OWNED_TRAINING', 'readings': readings})
         print(json.dumps(state['events'][-1]), flush=True)
     state.update(status='PAUSED_FOR_GPU_LIMITS' if paused else 'RUNNING_GUARDED', observed_at=now(), readings=readings,
-                 power_limits_verified=caps_met, current_pause_seconds=time.monotonic() - pause_started if paused else 0)
+                 power_limits_verified=caps_met, current_pause_seconds=time.time() - pause_started if paused else 0)
     temporary = RECEIPT.with_suffix('.tmp')
     temporary.write_text(json.dumps(state, indent=2) + '\n')
     temporary.replace(RECEIPT)
-    time.sleep(30)
+    time.sleep(10)
