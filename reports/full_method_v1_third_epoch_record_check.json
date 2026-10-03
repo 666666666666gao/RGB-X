@@ -1,0 +1,48 @@
+{
+  "status": "THIRD_EPOCH_NEW_RECORDS_AND_ONE_RECOVERY_VERIFIED_NOT_BENCHMARK",
+  "observed_at": "2026-10-03T20:04:39.773341+08:00",
+  "completed_epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 114,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 161,
+      "mean_step_seconds": 2.415328442759649
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 2,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 2.389823864249629
+    },
+    {
+      "epoch": 3,
+      "updates": 2500,
+      "risk_events": 97,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 144,
+      "mean_step_seconds": 2.39314502257884
+    }
+  ],
+  "earlier_5000_evidence": "reports/full_method_v1_second_epoch_observer.json",
+  "new_records_checked": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/updates.jsonl",
+    "first_global_step": 5001,
+    "last_global_step": 7500,
+    "records": 2500,
+    "bytes": 4948006,
+    "sha256": "c8eea45c3b6daa2441d0acaf2fe0bfec4ffb64d90dee905b016197fe68c1e0c9"
+  },
+  "third_epoch_localization_all_finite": true,
+  "third_epoch_global_task_counts_always": [
+    8,
+    8,
+    8
+  ],
+  "scope": "Validate only new third-epoch rows5001..7500, rehash current named recovery, verify current six PIDs and unchanged training sources. Prior5000 rows and CPU model audit are not rerun.",
+  "snapshot_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
+  "formal_tracking_scores": "NOT_RUN"
+}
