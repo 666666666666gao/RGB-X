@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T02:21:47.648705+08:00",
+  "updated_at": "2026-10-04T03:11:48.802222+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -103,7 +103,7 @@
     1603688,
     1603689
   ],
-  "actual_completed_updates_at_snapshot": 15110,
+  "actual_completed_updates_at_snapshot": 17630,
   "tracking_scores": "NOT_RUN",
   "objective_met": false,
   "next_iteration_candidate": {
@@ -123,9 +123,9 @@
       "review and verify the candidate with its actual protocol before a new formal run"
     ]
   },
-  "actual_training_examples_at_snapshot": 362640,
+  "actual_training_examples_at_snapshot": 423120,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 6,
+  "actual_completed_epochs_at_snapshot": 7,
   "first_epoch_risk_events": 114,
   "first_epoch_nonzero_corrections": 3,
   "first_epoch_trajectory_checks": 161,
@@ -179,13 +179,21 @@
       "accepted_nonzero_corrections": 3,
       "trajectory_checks": 137,
       "mean_step_seconds": 3.076616281334963
+    },
+    {
+      "epoch": 7,
+      "updates": 2500,
+      "risk_events": 85,
+      "accepted_nonzero_corrections": 5,
+      "trajectory_checks": 134,
+      "mean_step_seconds": 2.394738950299658
     }
   ],
-  "completed_epoch_statistics_scope": "Completed15000-update prefix. Epoch6 reuses80 verified rows by exact raw SHA and checks2420 new rows; current15110 is not the completed-epoch denominator.",
-  "completed_epoch_statistics_source": "reports/full_method_v1_sixth_epoch_record_check.json",
+  "completed_epoch_statistics_scope": "Completed17500-update prefix; new15001..17500 records checked once. Current17630 is not the completed-epoch mechanism-statistics denominator.",
+  "completed_epoch_statistics_source": "reports/full_method_v1_seventh_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-04T01:30:15.078855+08:00",
+  "runtime_snapshot_observed_at": "2026-10-04T03:11:48.802222+08:00",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "ordered_next_steps": [
     {
@@ -296,13 +304,13 @@
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
   "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
-  "actual_epoch_at_snapshot": 7,
-  "actual_epoch_step_at_snapshot": 110,
+  "actual_epoch_at_snapshot": 8,
+  "actual_epoch_step_at_snapshot": 130,
   "completed_epoch_totals": {
-    "updates": 15000,
-    "risk_events": 582,
-    "accepted_nonzero_corrections": 13,
-    "trajectory_checks": 871
+    "updates": 17500,
+    "risk_events": 667,
+    "accepted_nonzero_corrections": 18,
+    "trajectory_checks": 1005
   },
   "sixth_epoch_retention_evidence": "reports/full_method_v1_sixth_epoch_retention_snapshot.json",
   "trajectory_only_deterioration_observed": {
@@ -319,5 +327,13 @@
     "target_centers_outside_search": false,
     "causal_attribution": "UNKNOWN_NO_FROZEN_SEARCH_MODEL_COUNTERFACTUAL"
   },
-  "trajectory_only_detail_analysis": "reports/full_method_v1_trajectory_only_detail_analysis.json"
+  "trajectory_only_detail_analysis": "reports/full_method_v1_trajectory_only_detail_analysis.json",
+  "seventh_epoch_retention_evidence": "reports/full_method_v1_seventh_epoch_retention_snapshot.json",
+  "latest_trajectory_only_check": {
+    "evidence": "reports/full_method_v1_seventh_epoch_record_check.json",
+    "epoch": 7,
+    "event_count": 0,
+    "no_localization_risk_periodic_checks": 49,
+    "scope": "This epoch only, actual stored paired three-frame visible training clips; no new independent trajectory experiment or benchmark. Existing epoch6 three positive cases remain valid."
+  }
 }
