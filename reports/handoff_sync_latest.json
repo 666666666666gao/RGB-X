@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T23:58:53.529511+08:00",
-  "source_commit": "c0a0b883b470606c5332207220ecef172cfb976e",
-  "document_sha256": "8c3228cf496e0590e3c5f861064a466365a9ec59b6482ab45bdb1926e5b6dd44",
-  "document_bytes": 119495,
+  "verified_at": "2026-10-04T00:37:24.804336+08:00",
+  "source_commit": "4909d22767cc8cb78a166fe63d5822c84748ef24",
+  "document_sha256": "98245b25dcd94cb8f9bbe60147f150c738b6eaf2b7ff444e1de2930262124c7f",
+  "document_bytes": 120914,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -15,12 +15,12 @@
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
   "completed_epoch_updates_checked": 12500,
-  "observed_training_global_step": 12830,
+  "observed_training_global_step": 13790,
   "generated_checkpoint_files_retired": 14,
   "generated_checkpoint_file_bytes_retired": 6642620740,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-03T23:58:53.529511+08:00",
+    "verified_at": "2026-10-04T00:37:24.804336+08:00",
     "all_published_files_match": true,
     "live_training_sources_unchanged": true,
     "process_states": {
@@ -37,18 +37,18 @@
     "guard_process_missing": true,
     "training": {
       "epoch": 6,
-      "step": 330,
-      "global_step": 12830,
+      "step": 1290,
+      "global_step": 13790,
       "completed_epochs": 5,
-      "training_examples": 307920,
+      "training_examples": 330960,
       "formal_tracking_scores": "NOT_RUN"
     }
   },
-  "subject": "USER_CANCELLED_TEMPERATURE_POWER_CONTROL_ORIGINAL_TRAINING_PROGRESS",
+  "subject": "DISTANCE0_CONFIGURATION_ONLY_V1_SOURCE_UNCHANGED",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-03T23:53:51.183571+08:00",
-  "scope": "User explicitly cancelled temperature/power control. Owned guard gone and original six training/retention processes non-stopped; original attempt updates actually progressed beyond12710. No training restart/source/protocol change/benchmark. Historical pause cost preserved.",
+  "training_snapshot_observed_at": "2026-10-04T00:37:24.804336+08:00",
+  "scope": "Only future distance0 configuration prepared. Semantic changes limited to distance coefficient plus independent run/output labels; no candidate training, weights or benchmark. Original v1 eight source hashes unchanged and six processes live/non-stopped; user temperature/power cancellation remains effective.",
   "hardware_limits_applied": false,
   "training_runtime_state": "DISABLED_BY_USER"
 }
