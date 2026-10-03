@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T13:46:34.811426+00:00",
-  "source_commit": "8351cf01d542b8110e88f061d481307b076cf644",
-  "document_sha256": "bb5ffabae8e81f1bb0e0617fb9ba34b83b0fa8355a8e6808201bea91346515ad",
-  "document_bytes": 109046,
+  "verified_at": "2026-10-03T23:25:49.814760+08:00",
+  "source_commit": "1393381b619d93b43fca152908c57bc8ac882cb2",
+  "document_sha256": "290216ad16530e14e25c273f61615dc0f8c2685d6c9e292c832f48aefa19a2d8",
+  "document_bytes": 115446,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,27 +14,53 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "completed_epoch_updates_checked": 10000,
-  "observed_training_global_step": 10100,
-  "generated_checkpoint_files_retired": 12,
-  "generated_checkpoint_file_bytes_retired": 5688465886,
+  "completed_epoch_updates_checked": 12500,
+  "observed_training_global_step": 12530,
+  "generated_checkpoint_files_retired": 14,
+  "generated_checkpoint_file_bytes_retired": 6642620740,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-03T13:46:34.811426+00:00",
+    "verified_at": "2026-10-03T23:25:49.814760+08:00",
     "all_published_files_match": true,
     "live_training_sources_unchanged": true,
-    "processes_alive": {
-      "1603676": true,
-      "1603680": true,
-      "1603687": true,
-      "1603688": true,
-      "1603689": true,
-      "1629089": true
-    }
+    "process_states": {
+      "1603676": "State:\tT (stopped)",
+      "1603680": "State:\tT (stopped)",
+      "1603687": "State:\tT (stopped)",
+      "1603688": "State:\tT (stopped)",
+      "1603689": "State:\tT (stopped)",
+      "1629089": "State:\tS (sleeping)",
+      "1907806": "State:\tS (sleeping)"
+    },
+    "gpu_guard_status": "PAUSED_FOR_GPU_LIMITS",
+    "gpu_guard_observed_at": "2026-10-03T23:25:39.297164+08:00",
+    "power_limits_verified": false,
+    "gpu_readings": [
+      {
+        "gpu": 0,
+        "temperature_c": 60,
+        "power_w": 112.64,
+        "power_limit_w": 350.0
+      },
+      {
+        "gpu": 1,
+        "temperature_c": 66,
+        "power_w": 149.86,
+        "power_limit_w": 350.0
+      },
+      {
+        "gpu": 2,
+        "temperature_c": 58,
+        "power_w": 112.33,
+        "power_limit_w": 350.0
+      }
+    ]
   },
-  "subject": "FOURTH_EPOCH_NEW_RECORD_CHECKS_AND_RETENTION",
+  "subject": "FIFTH_EPOCH_AND_ACTUAL_GPU_LIMIT_PAUSE",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-03T21:41:38.588143+08:00",
-  "scope": "New fourth-epoch records and checkpoint retention verified; training mechanism statistics cover completed10000 updates, not current10100. No model reload or benchmark."
+  "training_snapshot_observed_at": "2026-10-03T23:22:06.414126+08:00",
+  "scope": "New fifth-epoch records and single recovery verified. Owned job actually SIGSTOP for requested temperature/power; no hardware cap write succeeded, no model restart, no benchmark. Cost records must include pause and later changed hardware settings.",
+  "hardware_limits_applied": false,
+  "training_runtime_state": "PAUSED_FOR_GPU_LIMITS"
 }
