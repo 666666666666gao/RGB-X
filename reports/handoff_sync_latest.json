@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T23:25:49.814760+08:00",
-  "source_commit": "1393381b619d93b43fca152908c57bc8ac882cb2",
-  "document_sha256": "290216ad16530e14e25c273f61615dc0f8c2685d6c9e292c832f48aefa19a2d8",
-  "document_bytes": 115446,
+  "verified_at": "2026-10-03T23:51:18.057417+08:00",
+  "source_commit": "4808b0ffd98ea5fcf0227dc3e0412cb71f7938f6",
+  "document_sha256": "8b47903f643b807ecab7869d9ac2250b60f67dc30a6f6d79d9e2d2df8cc57c8f",
+  "document_bytes": 118149,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -15,12 +15,12 @@
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
   "completed_epoch_updates_checked": 12500,
-  "observed_training_global_step": 12530,
+  "observed_training_global_step": 12580,
   "generated_checkpoint_files_retired": 14,
   "generated_checkpoint_file_bytes_retired": 6642620740,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-03T23:25:49.814760+08:00",
+    "verified_at": "2026-10-03T23:51:18.057417+08:00",
     "all_published_files_match": true,
     "live_training_sources_unchanged": true,
     "process_states": {
@@ -30,37 +30,37 @@
       "1603688": "State:\tT (stopped)",
       "1603689": "State:\tT (stopped)",
       "1629089": "State:\tS (sleeping)",
-      "1907806": "State:\tS (sleeping)"
+      "1935932": "State:\tS (sleeping)"
     },
     "gpu_guard_status": "PAUSED_FOR_GPU_LIMITS",
-    "gpu_guard_observed_at": "2026-10-03T23:25:39.297164+08:00",
+    "gpu_guard_observed_at": "2026-10-03T23:51:09.265475+08:00",
     "power_limits_verified": false,
     "gpu_readings": [
       {
         "gpu": 0,
-        "temperature_c": 60,
-        "power_w": 112.64,
+        "temperature_c": 76,
+        "power_w": 224.4,
         "power_limit_w": 350.0
       },
       {
         "gpu": 1,
-        "temperature_c": 66,
-        "power_w": 149.86,
+        "temperature_c": 75,
+        "power_w": 232.44,
         "power_limit_w": 350.0
       },
       {
         "gpu": 2,
-        "temperature_c": 58,
-        "power_w": 112.33,
+        "temperature_c": 73,
+        "power_w": 238.72,
         "power_limit_w": 350.0
       }
     ]
   },
-  "subject": "FIFTH_EPOCH_AND_ACTUAL_GPU_LIMIT_PAUSE",
+  "subject": "BEST_EFFORT_GPU_CONTROL_AND_ACTUAL_RESUME",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-03T23:22:06.414126+08:00",
-  "scope": "New fifth-epoch records and single recovery verified. Owned job actually SIGSTOP for requested temperature/power; no hardware cap write succeeded, no model restart, no benchmark. Cost records must include pause and later changed hardware settings.",
+  "training_snapshot_observed_at": "2026-10-03T23:45:42.085067+08:00",
+  "scope": "Same original training actually resumed; new partial epoch6 records checked finite/8each. Actual thermal/power samples drive pause/resume, configured250W no longer blocks all progress. Hardware cap not applied, no model restart or benchmark. Actual pauses remain in cost.",
   "hardware_limits_applied": false,
   "training_runtime_state": "PAUSED_FOR_GPU_LIMITS"
 }
