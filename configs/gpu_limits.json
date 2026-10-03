@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T23:45:42.085067+08:00",
+  "updated_at": "2026-10-03T23:53:51.183571+08:00",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -8,7 +8,7 @@
   ],
   "temperature_target_celsius": 75,
   "power_limit_watts": 250,
-  "status": "BEST_EFFORT_SOFTWARE_CONTROL_HARDWARE_CAP_NOT_APPLIED",
+  "status": "DISABLED_BY_EXPLICIT_USER_REQUEST",
   "limits_verified": false,
   "current_configured_power_limit_watts": [
     350,
@@ -29,7 +29,7 @@
   "actual_exit_code": 1,
   "actual_error": "sudo: interactive authentication is required",
   "target_temperature_command_not_executed": "sudo nvidia-smi -i 0,1,2 -gtt 75",
-  "required_next_action": "Operator executes the two administrator commands or enables narrowly scoped noninteractive execution; then verify driver settings and actual temperature/power.",
+  "required_next_action": "Continue the original training and complete tracking evaluation; no temperature/power administration requested.",
   "temperature_is_best_effort_target_not_absolute_guarantee": true,
   "monitoring_observations": [
     {
@@ -241,36 +241,29 @@
     "settings_applied": false
   },
   "owned_job_guard": {
-    "source": "User explicitly requested temperature preferably at most75C and power at most250W.",
+    "status": "WITHDRAWN_BY_EXPLICIT_USER_REQUEST",
+    "enabled": false,
+    "user_instruction": "不管功率和温度了",
+    "observed_at": "2026-10-03T23:53:51.183571+08:00",
     "server": "2028",
     "gpu_indices": [
       0,
       1,
       2
     ],
-    "temperature_target_celsius": 75,
-    "power_limit_watts": 250,
-    "policy": "configs/gpu_limits.json",
-    "status": "BEST_EFFORT_SOFTWARE_CONTROL_HARDWARE_CAP_NOT_APPLIED",
-    "limits_verified": false,
-    "observed_temperature_goal_violation": true,
-    "observed_power_goal_violation": true,
-    "hardware_condition_changes_must_be_recorded_for_cost_comparisons": true,
-    "last_power_limit_readback_at": "2026-10-03T23:14:26+08:00",
-    "guard_pid": 1935932,
-    "guard_source": "scripts/guard_active_full_method_gpu.py",
-    "guard_receipt": "reports/full_method_v1_gpu_guard.json",
-    "resume_condition": "All actual temperatures<=70C and all actual power draws<=225W; configured250W is not a prerequisite.",
-    "pause_condition": "Any actual temperature>=74C or actual power draw>=245W.",
-    "runtime_pause_is_not_goal_pause": true,
-    "sensor_poll_seconds": 10,
-    "hard_power_cap_is_best_effort_pending_admin": true,
-    "sample_peak_guarantee": false
+    "guard_pid_retired": 1935932,
+    "guard_enabled": false,
+    "admin_input_required": false,
+    "supersedes": "Both configured250W gate and actual temperature/power pause-resume control.",
+    "historical_policy": "configs/gpu_limits.json"
   },
-  "guard_snapshot_evidence": "reports/full_method_v1_best_effort_guard_resume_snapshot.json",
+  "guard_snapshot_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
   "guard_resume_branch": "ACTUALLY_EXECUTED_ORIGINAL_PIDS_PROGRESS",
   "actual_training_pause_at": "2026-10-03T23:18:37.741017+08:00",
-  "note": "Actual readings drive pause/resume. Hardware250W still requires admin but does not block all training. At23:45:35 sampled76C despite74C trigger; no absolute temperature or power peak guarantee. Initial long pause appears in unchanged raw step_seconds and must remain in reported cost.",
+  "note": "75C/250W values and permission refusals are historical, inactive. User explicitly cancelled both monitoring constraints. Guard1935932 retired and original training PIDs SIGCONT; no hardware settings were applied.",
   "actual_first_resume_at": "2026-10-03T23:42:03.525974+08:00",
-  "strict_hardware_cap_gate": "SUPERSEDED_TOO_STRICT_FOR_USER_BEST_EFFORT_REQUEST"
+  "strict_hardware_cap_gate": "SUPERSEDED_TOO_STRICT_FOR_USER_BEST_EFFORT_REQUEST",
+  "enabled": false,
+  "user_instruction": "不管功率和温度了",
+  "admin_input_required": false
 }

@@ -1,0 +1,34 @@
+{
+  "status": "GPU_GUARD_DISABLED_BY_EXPLICIT_USER_REQUEST_ORIGINAL_TRAINING_CONTINUED",
+  "observed_at": "2026-10-03T23:53:51.183571+08:00",
+  "user_instruction": "不管功率和温度了",
+  "guard_pid_retired": 1935932,
+  "guard_process_exists": false,
+  "training_process_states": {
+    "1603676": "State:\tS (sleeping)",
+    "1603680": "State:\tS (sleeping)",
+    "1603687": "State:\tS (sleeping)",
+    "1603688": "State:\tS (sleeping)",
+    "1603689": "State:\tS (sleeping)"
+  },
+  "same_training_pids": [
+    1603676,
+    1603680,
+    1603687,
+    1603688,
+    1603689
+  ],
+  "same_attempt_id": "20261003T065518472838Z",
+  "training_snapshot_before_continuation": {
+    "epoch": 6,
+    "step": 210,
+    "global_step": 12710,
+    "training_examples": 305040,
+    "completed_epochs": 5,
+    "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0005.pth.tar"
+  },
+  "final_guard_archive": "/data/gb/rgbx-risk/reports/full_method_v1_gpu_guard_v2_final.json",
+  "training_restarted": false,
+  "hardware_settings_written": false,
+  "scope": "Explicit user cancelled temperature/power management; only owned guard SIGTERM and same owned training PIDs SIGCONT. No model, optimizer, data, protocol or weight deletion change."
+}
