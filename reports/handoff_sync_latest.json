@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T00:37:24.804336+08:00",
-  "source_commit": "4909d22767cc8cb78a166fe63d5822c84748ef24",
-  "document_sha256": "98245b25dcd94cb8f9bbe60147f150c738b6eaf2b7ff444e1de2930262124c7f",
-  "document_bytes": 120914,
+  "verified_at": "2026-10-04T01:39:39.279463+08:00",
+  "source_commit": "d606f828d5818a1b1c51c7f8e5a2f4cc25157a11",
+  "document_sha256": "b40196ddb7b1aa580bdb4d433f510df4264e247d565319d210a4ec8a19ff1fdd",
+  "document_bytes": 125037,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,14 +14,21 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "completed_epoch_updates_checked": 12500,
-  "observed_training_global_step": 13790,
-  "generated_checkpoint_files_retired": 14,
-  "generated_checkpoint_file_bytes_retired": 6642620740,
+  "completed_epoch_updates_checked": 15000,
+  "observed_training_global_step": 15110,
+  "generated_checkpoint_files_retired": 16,
+  "generated_checkpoint_file_bytes_retired": 7596775850,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-04T00:37:24.804336+08:00",
+    "verified_at": "2026-10-04T01:39:39.279463+08:00",
     "all_published_files_match": true,
+    "published_file_sha256": {
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "b40196ddb7b1aa580bdb4d433f510df4264e247d565319d210a4ec8a19ff1fdd",
+      "configs/current_goal.json": "6ac2750acc17e3b4a0c69212e4648d6fe87d8f17844e4dc7b055e135184f69ac",
+      "configs/checkpoint_retention_policy.json": "301d178610a3eab05de1c9e902f82312f9ac0cc9bbc86c33ae043f1a04c496fc",
+      "reports/full_method_v1_sixth_epoch_record_check.json": "173f571bab2b8cb9d28d9a4a1023c69e077f431aba8315ffa5bdf88a8cd8ee54",
+      "reports/full_method_v1_sixth_epoch_retention_snapshot.json": "05b24c49256a73cb199cf643e4002085efe7bd209c3732e8b4c8994ef2c09111"
+    },
     "live_training_sources_unchanged": true,
     "process_states": {
       "1603676": "State:\tS (sleeping)",
@@ -32,23 +39,24 @@
       "1629089": "State:\tS (sleeping)"
     },
     "gpu_guard_status": "DISABLED_BY_USER",
-    "gpu_guard_observed_at": "2026-10-03T23:53:51.183571+08:00",
-    "power_limits_verified": false,
     "guard_process_missing": true,
     "training": {
-      "epoch": 6,
-      "step": 1290,
-      "global_step": 13790,
-      "completed_epochs": 5,
-      "training_examples": 330960,
+      "epoch": 7,
+      "step": 340,
+      "global_step": 15340,
+      "completed_epochs": 6,
+      "training_examples": 368160,
       "formal_tracking_scores": "NOT_RUN"
-    }
+    },
+    "weight_file_count": 1,
+    "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0006.pth.tar"
   },
-  "subject": "DISTANCE0_CONFIGURATION_ONLY_V1_SOURCE_UNCHANGED",
+  "subject": "SIXTH_EPOCH_AND_THREE_OBSERVED_TRAJECTORY_ONLY_HARM_CASES_NOT_BENCHMARK",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-04T00:37:24.804336+08:00",
-  "scope": "Only future distance0 configuration prepared. Semantic changes limited to distance coefficient plus independent run/output labels; no candidate training, weights or benchmark. Original v1 eight source hashes unchanged and six processes live/non-stopped; user temperature/power cancellation remains effective.",
+  "training_snapshot_observed_at": "2026-10-04T01:30:15.078855+08:00",
+  "scope": "Sixth epoch:2420 new localization rows plus80 existing verified rows reused by exact raw SHA; three trajectory-only damage cases from stored paired training-pool objectives. One necessary epoch6 recovery,16 generated weights retired. No model reload, independent trajectory intervention, new iteration or benchmark.",
   "hardware_limits_applied": false,
-  "training_runtime_state": "DISABLED_BY_USER"
+  "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
+  "latest_runtime_updates_at_publication": 15340
 }
