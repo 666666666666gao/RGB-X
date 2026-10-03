@@ -55,7 +55,7 @@
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
   "training_snapshot_observed_at": "2026-10-04T03:11:48.802222+08:00",
-  "scope": "Only new15001..17500 epoch7 rows checked, existing previous17500prefix proof assembled from prior milestones. Zero trajectory-only harm in49 actual no-local-risk checks this epoch; epoch6 positive cases preserved. Oneep7 necessary recovery/18 nominal generated weights retired. No model reload/new forward/independent trajectory control/benchmark. User GPU controls withdrawn.",
+  "scope": "Only new15001..17500 epoch7 rows checked, completed17500-prefix proof assembled from prior15000 milestone evidence plus the new2500 rows. Zero trajectory-only harm in49 actual no-local-risk checks this epoch; epoch6 positive cases preserved. Oneep7 necessary recovery/18 nominal generated weights retired. No model reload/new forward/independent trajectory control/benchmark. User GPU controls withdrawn.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
   "latest_runtime_updates_at_publication": 17750
