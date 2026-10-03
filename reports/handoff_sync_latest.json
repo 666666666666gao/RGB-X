@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T12:11:06.709035+00:00",
-  "source_commit": "9ec68a609e388a05ced2b05ac6750e1ec8160b8b",
-  "document_sha256": "b752f9a7d8072045f294d177ca72d91e6f99e7629f8b5c23b1727ad54a2f6629",
-  "document_bytes": 100943,
+  "verified_at": "2026-10-03T13:07:33.929357+00:00",
+  "source_commit": "83c9613da6959a6ee0ab7e6dd58194a759b9d89d",
+  "document_sha256": "f38c5e32ffe3d0c88f5c88cd273453939a3bd1d281bb6607eec67294613abc84",
+  "document_bytes": 106103,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -20,8 +20,21 @@
   "generated_checkpoint_file_bytes_retired": 4734311160,
   "retention_worker_pid": 1629089,
   "source_sync": {
+    "verified_at": "2026-10-03T13:07:33.929357+00:00",
     "all_published_files_match": true,
     "live_training_sources_unchanged": true,
-    "retention_pid_alive": true
-  }
+    "processes_alive": {
+      "1603676": true,
+      "1603680": true,
+      "1603687": true,
+      "1603688": true,
+      "1603689": true,
+      "1629089": true
+    }
+  },
+  "subject": "USER_REQUESTED_EXECUTION_GOAL_UPDATE",
+  "execution_goal_version": "2026-10-03-user-review-v2",
+  "new_iteration_started": false,
+  "training_snapshot_observed_at": "2026-10-03T20:04:39.773341+08:00",
+  "scope": "Goal and the single handoff synchronized. Prior structured training/retirement counts retain their original snapshot time. No benchmark or model audit rerun."
 }
