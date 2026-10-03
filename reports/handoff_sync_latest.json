@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T08:52:04.043299+00:00",
-  "source_commit": "c86678a3b9dba598402173d72ce34c7a2f29e4df",
-  "document_sha256": "0a247241ff1a134da464364dcb3251fae7c7b42ff742a6ac1dd6e31f97c78f64",
-  "document_bytes": 95433,
+  "verified_at": "2026-10-03T10:27:36.468703+00:00",
+  "source_commit": "31da8eff757b519315eacb071491d44cc8f10931",
+  "document_sha256": "e436fcfae929034b9ec70df68fa59ab01e0e141583a187fa718065aec03f6314",
+  "document_bytes": 98547,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,10 +14,10 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "completed_epoch1_audit": "PASS",
-  "observed_training_global_step": 2720,
-  "generated_checkpoint_files_retired": 6,
-  "generated_checkpoint_file_bytes_retired": 2826002092,
+  "completed_first_two_epoch_updates": 5000,
+  "observed_training_global_step": 5160,
+  "generated_checkpoint_files_retired": 8,
+  "generated_checkpoint_file_bytes_retired": 3780156562,
   "retention_worker_pid": 1629089,
   "source_sync": {
     "all_published_files_match": true,
