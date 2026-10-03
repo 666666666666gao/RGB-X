@@ -32,6 +32,8 @@ def main():
     parser.add_argument('--reference', required=True)
     parser.add_argument('--method', required=True)
     parser.add_argument('--output', required=True)
+    parser.add_argument('--training-run', required=True)
+    parser.add_argument('--training-updates', required=True)
     args = parser.parse_args()
     left, right = Path(args.reference), Path(args.method)
     for root in [left, right]:
@@ -61,6 +63,7 @@ def main():
                                  per_sequence=per_sequence(a['per_sequence'], b['per_sequence'], all_keys),
                                  reference_fps=a['fps'], method_fps=b['fps'],
                                  reference_gpu_memory=a['gpu_memory'], method_gpu_memory=b['gpu_memory'],
+                                 timing_scope=dict(reference=a['timing'], method=b['timing']),
                                  reference_curves=str(paths[0]), method_curves=str(paths[1]))
         sources.extend(paths)
     native_paths = [root / 'DepthTrack/official_metrics.json' for root in [left, right]]
@@ -85,21 +88,47 @@ def main():
     groups = {}
     for kind in ['sequence_groups', 'frame_groups']:
         assert set(da[kind]) == set(db[kind])
-        groups[kind] = {label: deltas(da[kind][label], db[kind][label], depth_keys) for label in da[kind]}
+        groups[kind] = {label: dict(metrics=deltas(da[kind][label], db[kind][label], depth_keys),
+                                   reference_context={key: value for key, value in da[kind][label].items() if key not in depth_keys and not key.endswith('curve')},
+                                   method_context={key: value for key, value in db[kind][label].items() if key not in depth_keys and not key.endswith('curve')})
+                        for label in da[kind]}
     datasets['DepthTrack'] = dict(all_headline_metrics=depth_scores, **groups,
                                 per_sequence=per_sequence(da['per_sequence'], db['per_sequence'], depth_keys),
                                 reference_fps=coverage[0]['fps'], method_fps=coverage[1]['fps'],
                                 reference_gpu_memory=coverage[0]['gpu_memory'], method_gpu_memory=coverage[1]['gpu_memory'],
+                                timing_scope='Native tracker RPC tracking seconds; differs from OPE synchronized image-read/preprocessing/track scope.',
+                                per_sequence_threshold_indices=[dict(sequence=x['sequence'], reference_best_threshold_index=x['best_threshold_index'],
+                                                                     method_best_threshold_index=y['best_threshold_index'])
+                                                                for x, y in zip(da['per_sequence'], db['per_sequence'])],
                                 reference_native_curves=str(native_paths[0]), method_native_curves=str(native_paths[1]),
                                 threshold_note='Native confidence thresholds are endpoint-specific; curves remain with their own thresholds, not subtracted by array index.')
     sources.extend(native_paths + diagnostics_paths)
     assert len(headlines) == 7
+    training_path, updates_path = Path(args.training_run), Path(args.training_updates)
+    training = load(training_path)
+    assert training['status'] == 'TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT' and training['global_step'] == 37500
+    telemetry = [json.loads(line) for line in updates_path.read_text().splitlines()]
+    boundaries = [row for row in telemetry if row.get('record_type') == 'RESUME_BOUNDARY']
+    attempts = [row for row in telemetry if row.get('record_type') != 'RESUME_BOUNDARY']
+    committed = {row['global_step']: row for row in attempts}
+    assert set(committed) == set(range(1, 37501))
+    training_cost = dict(training_receipt=str(training_path), update_telemetry=str(updates_path),
+                         committed_updates=37500, committed_training_examples=900000,
+                         attempted_updates=len(attempts), attempted_training_examples=24 * len(attempts),
+                         attempted_update_seconds=sum(row['step_seconds'] for row in attempts),
+                         attempted_pair_check_forward_examples=sum(row['pair_check_forward_examples'] for row in attempts),
+                         attempted_trajectory_model_forward_examples=sum(row['trajectory_model_forward_examples'] for row in attempts),
+                         max_rank0_allocated_bytes=max(row['peak_allocated_bytes'] for row in attempts),
+                         last_attempt_reported_wallclock_seconds=training['wallclock_seconds'],
+                         resume_boundaries=boundaries, world_size=3,
+                         author_original_training_cost='NOT_MEASURED',
+                         cost_note='Update seconds exclude model initialization and checkpoint saving. Receipt wallclock is the last attempt; prior attempts and all retained update costs are reported separately. Peak allocation is rank0 only, not all-rank maximum.')
     improved = all(value['improved'] for value in headlines.values())
     report = dict(status='ALL_REQUIRED_HEADLINES_IMPROVED' if improved else 'IMPROVEMENT_GOAL_UNMET_REQUIRES_DIAGNOSIS',
                   observed_at=datetime.now(timezone.utc).isoformat(), metric_units='fractions_0_to_1',
                   required_headlines=headlines, required_count=7, improved_count=sum(value['improved'] for value in headlines.values()),
                   regressions_or_ties=[key for key, value in headlines.items() if not value['improved']],
-                  datasets=datasets, reference_root=str(left), method_root=str(right),
+                  datasets=datasets, training_cost=training_cost, reference_root=str(left), method_root=str(right),
                   sources=[dict(path=str(path), sha256=hashlib.sha256(path.read_bytes()).hexdigest()) for path in sources],
                   comparison_setting='Published joint XTrack-B vs released-weight plus full-method fine-tuning; unequal total training budget.',
                   annotation_caveat='VisEvent existing author-archive332-frame version; same-protocol paired comparison, published-number equivalence unresolved.',

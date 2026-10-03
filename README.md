@@ -2,14 +2,10 @@
 
 2028项目：`/data/gb/rgbx-risk`；Conda：`/data/gb/conda/envs/rgbx-risk`。
 
-一份联合权重支持RGB-T、RGB-D、RGB-Event，复用现有LasHeR、DepthTrack、VisEvent。
+完整三个训练模块已于2026-10-03 14:55在2028三卡0/1/2启动。RGB-T、RGB-D、RGB-Event共同训练一份权重，使用已有LasHeR、DepthTrack、VisEvent。协议：`configs/full_method_v1.json`，run：`xtrack_full_method_v1_s2026`，15轮公开联合权重上的微调，额外训练预算单独报告。
 
-用户最新目标：直接训练完整三个模块，以完整三集指标超过baseline为目标，未达到则诊断并继续优化。原AdamW复现已按用户要求中断：完成29轮与第30轮1650步，没有可评测终轮权重。原始日志及中断报告保留。
+原AdamW复现按用户要求中断，29轮及第30轮1650步，无可评测终轮权重。完整方法源码审阅和两次真实三卡预检通过，训练仍在进行，正式跟踪评测0/3，尚未证明超过baseline。
 
-当前完整方法源码已实现，独立审阅与三卡真实预检尚待通过，新GPU训练尚未启动，正式跟踪结果仍0/3。使用作者公开XTrack-B联合权重初始化与同版本评测参考，额外微调预算会单独报告；不宣称与作者原训练同预算。
+完成训练后自动对公开参考和完整方法做现有三集完整评测，七个主指标逐项比较，补齐属性、曲线、逐序列、失败和成本。未全面超过则继续诊断改进。其他四测试集暂缓。
 
-协议：`configs/full_method_v1.json`；当前目标：`configs/current_goal.json`。2028仅使用三卡0/1/2。其他四个测试集暂缓。
-
-唯一交接文档：[研究与实验完整交接](docs/RGB-X_研究与实验完整交接_2026-10-02.md)。项目、桌面与服务器维护同一份字节一致文档，JSON、日志和补丁记录原始证据。
-
-官方来源：[XTrack](https://github.com/supertyd/XTrack)、[公开权重](https://huggingface.co/taryya/XTrack/tree/main)、[SUTrack](https://github.com/chenxin-dlut/SUTrack)。仓库不上传数据、模型权重或Conda环境。
+唯一交接文档：[研究与实验完整交接](docs/RGB-X_研究与实验完整交接_2026-10-02.md)，项目、桌面、2028及GitHub维护字节一致副本。当前目标：`configs/current_goal.json`。不上传数据、权重或Conda环境。

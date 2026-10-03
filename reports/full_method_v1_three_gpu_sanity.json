@@ -1,0 +1,63 @@
+{
+  "status": "ACTUAL_THREE_GPU_TWO_STEP_SANITY_PASS",
+  "observed_at": "2026-10-03T06:53:02.436906+00:00",
+  "documented_executor": "/root/rgbx_full_method_doc_execution_v2",
+  "independent_context": true,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "native_session": 48651,
+  "actual_ssh_exit_code": 0,
+  "cuda_witness_exit_code": 0,
+  "global_updates": 2,
+  "training_examples": 48,
+  "check_examples": 18,
+  "rank_pids": [
+    1599220,
+    1599221,
+    1599222
+  ],
+  "strict_reload": true,
+  "frozen_tensor_count": 244,
+  "replicas_identical": true,
+  "optimizer_state_finite": true,
+  "optimizer_statistics_once_per_update": true,
+  "predicted_box_driven_crops": true,
+  "correction_risk_events": 0,
+  "trajectory_checks": 2,
+  "rank0_step_seconds": [
+    3.782688898034394,
+    3.2667330410331488
+  ],
+  "rank0_peak_allocated_bytes": 5698355200,
+  "limitation": "No localization constraint was activated at formal0.002 threshold in these2steps; GPU correction branch not proven by this run.",
+  "stdout_status": {
+    "state": "exited",
+    "started_utc": "2026-10-03T06:36:09.3353847Z",
+    "local_driver_pid": 2720,
+    "ssh_pid": 23952,
+    "executable": "ssh.exe",
+    "arguments": "-o BatchMode=yes -o ClearAllForwardings=yes -o ConnectTimeout=20 2028 \"CUDA_VISIBLE_DEVICES=0,1,2 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/third_party/XTrack:/data/gb/rgbx-risk/third_party/XTrack/lib/train /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29529 /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v1.json --sanity-steps 2\"",
+    "remote_command": "CUDA_VISIBLE_DEVICES=0,1,2 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/third_party/XTrack:/data/gb/rgbx-risk/third_party/XTrack/lib/train /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29529 /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v1.json --sanity-steps 2",
+    "prerequisite_witness_actual_exit_code": 0,
+    "exit_code": 0,
+    "finished_utc": "2026-10-03T06:36:36.7228694Z",
+    "elapsed_seconds": 27.3894039,
+    "native_process_handle_disposed_after_actual_exit": true
+  },
+  "witness_status": {
+    "state": "exited",
+    "started_utc": "2026-10-03T06:35:11.0215357Z",
+    "local_driver_pid": 25712,
+    "ssh_pid": 14368,
+    "executable": "ssh.exe",
+    "arguments": "-o BatchMode=yes -o ClearAllForwardings=yes -o ConnectTimeout=20 2028 \"CUDA_VISIBLE_DEVICES=0,1,2 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/gpu_witness.py\"",
+    "remote_command": "CUDA_VISIBLE_DEVICES=0,1,2 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/gpu_witness.py",
+    "exit_code": 0,
+    "finished_utc": "2026-10-03T06:35:18.8245922Z",
+    "elapsed_seconds": 7.8042202,
+    "native_process_handle_disposed_after_actual_exit": true
+  },
+  "warnings": "Pinned pandas squeeze deprecation only; no numerical error.",
+  "formal_tracking_scores": "NOT_RUN",
+  "evidence": "reports/full_method_v1_three_gpu_sanity_run.json + updates.jsonl"
+}

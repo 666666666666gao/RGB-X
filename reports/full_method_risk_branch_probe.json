@@ -1,0 +1,202 @@
+{
+  "validation": "same-family/provisional agent-follows-doc",
+  "verdict": "PASS_REAL_RISK_BRANCH_SANITY_ONLY",
+  "actual_native_exit_code": 0,
+  "native_session_id": 87296,
+  "attempts": 1,
+  "documented_command_executed_verbatim": true,
+  "started_at": "2026-10-03T14:53:28.3385569+08:00",
+  "ended_at": "2026-10-03T14:54:03.1784784+08:00",
+  "status": "SANITY_COMPLETE_NOT_FORMAL_RESULT",
+  "run_id": "xtrack_full_method_risk_branch_probe_s2026",
+  "attempt_id": "20261003T065344359186Z",
+  "protocol_sha256": "185805d096e3dfc6dc272fbfad368679246381632a4837505ead7163f72ca137",
+  "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+  "protocol_risk_relative_tolerance": 0.0,
+  "configured_epochs": 15,
+  "actual_sanity_steps": 2,
+  "training_examples": 48,
+  "check_examples": 18,
+  "world_size": 3,
+  "training_wallclock_seconds": 14.581688783015124,
+  "steps": [
+    {
+      "step": 1,
+      "active_risk_constraints": 4,
+      "correction_norm": 0.00022207165602594614,
+      "candidate_shared_norm": 0.008642835542559624,
+      "candidate_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "candidate_costs": [
+        0.0009584577637724578,
+        0.0009899717988446355,
+        0.0010316820116713643
+      ],
+      "selected_alpha": 0.0,
+      "selected_alpha_is_recorded_minimum_cost": true,
+      "trajectory_checked": true,
+      "training_clips": [
+        {
+          "dataset": "lasher",
+          "sequence_id": 315,
+          "frame_ids": [
+            1122,
+            1123,
+            1124
+          ]
+        },
+        {
+          "dataset": "depthtrack",
+          "sequence_id": 142,
+          "frame_ids": [
+            156,
+            157,
+            158
+          ]
+        },
+        {
+          "dataset": "visevent",
+          "sequence_id": 367,
+          "frame_ids": [
+            215,
+            216,
+            217
+          ]
+        }
+      ],
+      "baseline_trajectory": [
+        0.29844439029693604,
+        0.15024761855602264,
+        0.7582767605781555
+      ],
+      "accepted_trajectory": [
+        0.2988523840904236,
+        0.15025410056114197,
+        0.7575848698616028
+      ],
+      "trajectory_details_gt_initialization_only": true,
+      "trajectory_search_uses_previous_prediction": true,
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "peak_allocated_bytes": 5624291840,
+      "peak_allocated_gib": 5.238029956817627,
+      "pair_check_forward_examples": 45,
+      "trajectory_model_forward_examples": 24,
+      "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs"
+    },
+    {
+      "step": 2,
+      "active_risk_constraints": 1,
+      "correction_norm": 9.401175702805631E-06,
+      "candidate_shared_norm": 0.006151246372610331,
+      "candidate_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "candidate_costs": [
+        0.0002938557299785316,
+        0.0003109430836047977,
+        0.00032939991797320545
+      ],
+      "selected_alpha": 0.0,
+      "selected_alpha_is_recorded_minimum_cost": true,
+      "trajectory_checked": true,
+      "training_clips": [
+        {
+          "dataset": "lasher",
+          "sequence_id": 108,
+          "frame_ids": [
+            797,
+            798,
+            799
+          ]
+        },
+        {
+          "dataset": "depthtrack",
+          "sequence_id": 49,
+          "frame_ids": [
+            262,
+            263,
+            264
+          ]
+        },
+        {
+          "dataset": "visevent",
+          "sequence_id": 466,
+          "frame_ids": [
+            234,
+            235,
+            236
+          ]
+        }
+      ],
+      "baseline_trajectory": [
+        0.30819904804229736,
+        0.09223073720932007,
+        1.710875153541565
+      ],
+      "accepted_trajectory": [
+        0.308402955532074,
+        0.09224703907966614,
+        1.710455060005188
+      ],
+      "trajectory_details_gt_initialization_only": true,
+      "trajectory_search_uses_previous_prediction": true,
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "peak_allocated_bytes": 5769665024,
+      "peak_allocated_gib": 5.373419284820557,
+      "pair_check_forward_examples": 45,
+      "trajectory_model_forward_examples": 24,
+      "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs"
+    }
+  ],
+  "sanity_checkpoint_check": {
+    "strict_reload": true,
+    "frozen_tensors_unchanged": true,
+    "frozen_tensor_count": 244,
+    "optimizer_state_finite": true,
+    "replicas_identical": true,
+    "rng_rank_count": 3
+  },
+  "replica_parameter_sha256": "637fba0966dde3d56d99e85dc9f1b53ff802c2ad0875d7a72ee92585f3d56464",
+  "formal_tracking_scores": "NOT_RUN",
+  "source_config_doc_edits": 0,
+  "installs": 0,
+  "retries": 0,
+  "formal_training_launched": false,
+  "discrepancies": [],
+  "limitations": [
+    "Both steps computed a nonzero correction and evaluated strengths 0, 0.5, 1, but selected alpha 0; this witnesses risk construction and candidate comparison, not acceptance of a nonzero correction.",
+    "Only two real-data training steps were run; configured 15 epochs were not executed.",
+    "No formal tracking accuracy or efficacy result.",
+    "Same-family/provisional independent doc execution."
+  ],
+  "evidence_files": [
+    "launch.json",
+    "terminal.json",
+    "native-session.json",
+    "native-session-terminal.json",
+    "stdout.log",
+    "stderr.log",
+    "collection.json",
+    "collection.stdout.log",
+    "collection.stderr.log",
+    "run.json",
+    "updates.jsonl"
+  ]
+}

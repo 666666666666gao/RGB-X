@@ -87,6 +87,8 @@ comparison_path = PROJECT / 'reports/full_method_v1_complete_comparison.json'
 run_stage('complete-comparison', [PYTHON, str(PROJECT / 'scripts/compare_complete_results.py'),
                                  '--reference', '/home/gaob/rgbx-eval-results/xtrack_author_release_s2026',
                                  '--method', '/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026',
+                                 '--training-run', str(Path(protocol['output']) / 'run.json'),
+                                 '--training-updates', str(Path(protocol['output']) / 'updates.jsonl'),
                                  '--output', str(comparison_path)], cpu=True)
 comparison = json.loads(comparison_path.read_text())
 receipt.update(status=comparison['status'], comparison=str(comparison_path),
