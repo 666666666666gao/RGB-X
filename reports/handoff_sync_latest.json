@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T07:51:44.726976+00:00",
-  "source_commit": "143909e361693c2cc27a82927427fdbd84b45fae",
-  "document_sha256": "9d3222d0dd47c2b288e23f0eeb576fbdc6a5e26ef1e01fc54d27d0fbaeae0fb2",
-  "document_bytes": 89724,
+  "verified_at": "2026-10-03T08:52:04.043299+00:00",
+  "source_commit": "c86678a3b9dba598402173d72ce34c7a2f29e4df",
+  "document_sha256": "0a247241ff1a134da464364dcb3251fae7c7b42ff742a6ac1dd6e31f97c78f64",
+  "document_bytes": 95433,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,12 +14,14 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "training_observed_at": "2026-10-03T07:48:01.030853+00:00",
-  "complete_updates_at_snapshot": 1310,
-  "risk_events_at_snapshot": 66,
-  "actual_nonzero_corrections_at_snapshot": 2,
-  "actual_accepted_steps": [
-    1069,
-    1308
-  ]
+  "completed_epoch1_audit": "PASS",
+  "observed_training_global_step": 2720,
+  "generated_checkpoint_files_retired": 6,
+  "generated_checkpoint_file_bytes_retired": 2826002092,
+  "retention_worker_pid": 1629089,
+  "source_sync": {
+    "all_published_files_match": true,
+    "live_training_sources_unchanged": true,
+    "retention_pid_alive": true
+  }
 }
