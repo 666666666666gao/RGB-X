@@ -1,33 +1,48 @@
 {
-  "verified_at": "2026-10-03T13:06:47.975197+08:00",
   "status": "PASS",
-  "repository": "https://github.com/666666666666gao/RGB-X",
-  "branch": "main",
-  "project_publication_commit": "7400963f91338b21a34f15ba8e228f068a88d292",
-  "github_commit_verified": "7400963f91338b21a34f15ba8e228f068a88d292",
-  "document_bytes": 75065,
-  "document_sha256": "62e6a80e0af0c0a749cd8effaf84f111d9d4ca9dec3708ae1c9e875ff9f0870c",
-  "copies": [
-    {
-      "location": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
-      "sha256": "62e6a80e0af0c0a749cd8effaf84f111d9d4ca9dec3708ae1c9e875ff9f0870c"
-    },
-    {
-      "location": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
-      "sha256": "62e6a80e0af0c0a749cd8effaf84f111d9d4ca9dec3708ae1c9e875ff9f0870c"
-    },
-    {
-      "location": "2028:/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-      "sha256": "62e6a80e0af0c0a749cd8effaf84f111d9d4ca9dec3708ae1c9e875ff9f0870c"
-    },
-    {
-      "location": "https://github.com/666666666666gao/RGB-X/blob/7400963f91338b21a34f15ba8e228f068a88d292/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-      "sha256": "62e6a80e0af0c0a749cd8effaf84f111d9d4ca9dec3708ae1c9e875ff9f0870c"
-    }
+  "verified_at": "2026-10-03T06:36:04.079572+00:00",
+  "source_commit": "42f4e555b55c55c580ffdd34fe5497bf2521c973",
+  "document_sha256": "3a0cbaec87d15a85712f9880d137fd35376ac3fb268011165be88568e5220b1a",
+  "document_bytes": 81601,
+  "four_copies_identical": true,
+  "locations": [
+    "local_project",
+    "Desktop_document",
+    "2028_project",
+    "GitHub_commit_blob"
   ],
-  "training_snapshot_observed_at": "2026-10-03T13:02:53.578940+08:00",
-  "training_status": "running; twenty-nine training epochs and five complete validations passed; entered epoch thirty; active three-dataset formal evaluation not run",
-  "document_policy": "One primary handoff in project docs and Desktop/document; raw JSON/log/patch evidence retained. Nine previous auxiliary Markdown guides were merged and removed from the current tree, with history archived outside the project.",
-  "github_verification": "Remote main commit equals local publication commit; SHA256 verified from document bytes in that Git commit.",
-  "note": "This verifies publication and identical document bytes, not full training completion. The receipt itself is committed after this publication commit."
+  "objective": "Complete joint three-module training and all7 headline improvements; old baseline cancelled.",
+  "original_training_status": "USER_CANCELLED_INCOMPLETE_NOT_BENCHMARKED",
+  "full_method_status": "SOURCE_IMPLEMENTED_AND_REVIEWED_REAL_SANITY_PENDING",
+  "benchmark_status": "NOT_RUN",
+  "synced_source_files": [
+    "README.md",
+    "configs/current_goal.json",
+    "configs/full_method_v1.json",
+    "\"docs/RGB-X_\\347\\240\\224\\347\\251\\266\\344\\270\\216\\345\\256\\236\\351\\252\\214\\345\\256\\214\\346\\225\\264\\344\\272\\244\\346\\216\\245_2026-10-02.md\"",
+    "reports/XTrack_routing_corrections.patch",
+    "reports/author_baseline_user_cancellation_20261003.json",
+    "reports/author_release_checkpoint_download.json",
+    "reports/author_release_download_remote_failed.json",
+    "reports/author_release_endpoint_audit.json",
+    "reports/full_method_code_review.json",
+    "reports/routing_contract_corrected_20261003.json",
+    "reports/routing_contract_original_20261003.json",
+    "reports/xtrack_b_adamw_3gpu_s2026_20261002.json",
+    "rgbx_method/__init__.py",
+    "rgbx_method/data.py",
+    "rgbx_method/losses.py",
+    "rgbx_method/optimizer.py",
+    "rgbx_method/risk.py",
+    "rgbx_method/trajectory.py",
+    "scripts/audit_joint_endpoint.py",
+    "scripts/check_routing_contract.py",
+    "scripts/compare_complete_results.py",
+    "scripts/evaluate_existing_three.py",
+    "scripts/fetch_author_baseline.py",
+    "scripts/prepare_vot_workspace.py",
+    "scripts/run_full_method_job.py",
+    "scripts/train_full_method.py",
+    "scripts/xtrack_eval_parameters.py"
+  ]
 }
