@@ -69,5 +69,13 @@
   ],
   "actual_completed_updates_at_snapshot": 132,
   "tracking_scores": "NOT_RUN",
-  "objective_met": false
+  "objective_met": false,
+  "next_iteration_candidate": {
+    "status": "PROPOSED_NOT_RUN",
+    "candidate_distance_weight": 0,
+    "evidence": "reports/full_method_v1_cost_decomposition.json",
+    "decision": "Review full-run selection statistics and complete benchmark scores before changing the current fixed run.",
+    "comparison": "Fresh paired initialization from same author release/data/budget; never silently hot-edit the active optimizer protocol.",
+    "efficacy": "UNKNOWN_NO_NEW_TRAINING_OR_BENCHMARK"
+  }
 }

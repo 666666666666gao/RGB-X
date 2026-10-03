@@ -1,0 +1,935 @@
+{
+  "status": "ACTUAL_FIXED_CANDIDATE_COST_DIAGNOSTIC_NOT_NEW_TRAINING_OR_BENCHMARK",
+  "observed_at": "2026-10-03T07:18:49.701657+00:00",
+  "prefix_updates": 589,
+  "risk_events": 27,
+  "actual_nonzero_selections": 0,
+  "events_with_a_local_risk_reducing_candidate": 26,
+  "counterfactual_fixed_trials_nonzero_without_distance": 26,
+  "max_alpha0_distance_roundoff": 6.641612021636434e-11,
+  "candidate_distance_weight": 0.05,
+  "events": [
+    {
+      "global_step": 2,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 4.586681742250543e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -3.4477591137963004e-11,
+          "total_recorded_cost": 4.586647264659405e-06,
+          "cost_without_distance": 4.586681742250543e-06
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 4.601176897267578e-06,
+          "total_recorded_cost": 4.601176897267578e-06,
+          "cost_without_distance": 0.0
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 1.0512310788175714e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 9.202347476826358e-06,
+          "total_recorded_cost": 1.9714658265002072e-05,
+          "cost_without_distance": 1.0512310788175714e-05
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 0.5,
+      "base_distance_penalty_roundoff": -3.4477591137963004e-11
+    },
+    {
+      "global_step": 4,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 3.602465551589795e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -1.0574107920920204e-11,
+          "total_recorded_cost": 3.602464494179003e-05,
+          "cost_without_distance": 3.602465551589795e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 2.826298650785244e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 5.0378721151846583e-05,
+          "total_recorded_cost": 7.864170765969902e-05,
+          "cost_without_distance": 2.826298650785244e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00010075748286908492,
+          "total_recorded_cost": 0.00010075748286908492,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -1.0574107920920204e-11
+    },
+    {
+      "global_step": 19,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 8.023744144726214e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 1.3254913659721534e-13,
+          "total_recorded_cost": 8.023744157981128e-05,
+          "cost_without_distance": 8.023744144726214e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 3.591709660766259e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00022677073015431328,
+          "total_recorded_cost": 0.0002626878267619759,
+          "cost_without_distance": 3.591709660766259e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00045354152098298073,
+          "total_recorded_cost": 0.00045354152098298073,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": 1.3254913659721534e-13
+    },
+    {
+      "global_step": 25,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.00019476214395943762,
+          "trajectory_risk_mean": 0.0007445267811278597,
+          "distance_penalty_recovered": 6.641612021636434e-11,
+          "total_recorded_cost": 0.0009392889915034175,
+          "cost_without_distance": 0.0009392889250872973
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.00011657391069918478,
+          "trajectory_risk_mean": 0.0007446563934873626,
+          "distance_penalty_recovered": 0.0006743550787667389,
+          "total_recorded_cost": 0.0015355853829532862,
+          "cost_without_distance": 0.0008612303041865474
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 1.6806087741281903e-05,
+          "trajectory_risk_mean": 0.0008224238091890393,
+          "distance_penalty_recovered": 0.0013487099294687667,
+          "total_recorded_cost": 0.002187939826399088,
+          "cost_without_distance": 0.0008392298969303212
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": 6.641612021636434e-11
+    },
+    {
+      "global_step": 60,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 1.8677715850137994e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -1.5984576943323114e-12,
+          "total_recorded_cost": 1.86777142516803e-05,
+          "cost_without_distance": 1.8677715850137994e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 1.3231045213611334e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 4.328645440182695e-05,
+          "total_recorded_cost": 5.651749961543828e-05,
+          "cost_without_distance": 1.3231045213611334e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 8.657293801661581e-05,
+          "total_recorded_cost": 8.657293801661581e-05,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -1.5984576943323114e-12
+    },
+    {
+      "global_step": 64,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.00011236273869342729,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -2.3394186043110103e-11,
+          "total_recorded_cost": 0.00011236271529924124,
+          "cost_without_distance": 0.00011236273869342729
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 2.0649465926976154e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0002452449917708922,
+          "total_recorded_cost": 0.00026589445769786835,
+          "cost_without_distance": 2.0649465926976154e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0004904900561086833,
+          "total_recorded_cost": 0.0004904900561086833,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -2.3394186043110103e-11
+    },
+    {
+      "global_step": 72,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.00019179555562832889,
+          "trajectory_risk_mean": 0.00010837390663273113,
+          "distance_penalty_recovered": -3.4614735977176424e-11,
+          "total_recorded_cost": 0.00030016942764632404,
+          "cost_without_distance": 0.00030016946226106003
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 8.281512269700589e-05,
+          "trajectory_risk_mean": 0.00035274751408415447,
+          "distance_penalty_recovered": 0.00032640975426542334,
+          "total_recorded_cost": 0.0007619723910465837,
+          "cost_without_distance": 0.00043556263678116037
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0002669182937024369,
+          "distance_penalty_recovered": 0.0006528195594073998,
+          "total_recorded_cost": 0.0009197378531098366,
+          "cost_without_distance": 0.0002669182937024369
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -3.4614735977176424e-11
+    },
+    {
+      "global_step": 141,
+      "constraints": 2,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.0007952777982178699,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -3.1334496629342734e-11,
+          "total_recorded_cost": 0.0007952777668833733,
+          "cost_without_distance": 0.0007952777982178699
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.00034078746746223857,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0017946741945024164,
+          "total_recorded_cost": 0.002135461661964655,
+          "cost_without_distance": 0.00034078746746223857
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0035893486347049475,
+          "total_recorded_cost": 0.0035893486347049475,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -3.1334496629342734e-11
+    },
+    {
+      "global_step": 164,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.0004122736007090226,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -3.074515018660143e-11,
+          "total_recorded_cost": 0.00041227356996387243,
+          "cost_without_distance": 0.0004122736007090226
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.00021788507723257254,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0013083940648938685,
+          "total_recorded_cost": 0.001526279142126441,
+          "cost_without_distance": 0.00021788507723257254
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 1.5648625533918914e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0026167881826647714,
+          "total_recorded_cost": 0.0026324368081986904,
+          "cost_without_distance": 1.5648625533918914e-05
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -3.074515018660143e-11
+    },
+    {
+      "global_step": 212,
+      "constraints": 2,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.00029041854295861575,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -3.3564685319315e-11,
+          "total_recorded_cost": 0.00029041850939393044,
+          "cost_without_distance": 0.00029041854295861575
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.00016729948713464378,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0007296192166672861,
+          "total_recorded_cost": 0.00089691870380193,
+          "cost_without_distance": 0.00016729948713464378
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 2.942518606549073e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.001459238535764162,
+          "total_recorded_cost": 0.0014886637218296528,
+          "cost_without_distance": 2.942518606549073e-05
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -3.3564685319315e-11
+    },
+    {
+      "global_step": 221,
+      "constraints": 3,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.001380227102844167,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -6.23447181467146e-11,
+          "total_recorded_cost": 0.0013802270404994488,
+          "cost_without_distance": 0.001380227102844167
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.0007057607106171034,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00097241318530818,
+          "total_recorded_cost": 0.0016781738959252834,
+          "cost_without_distance": 0.0007057607106171034
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 5.5964857704123945e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0019448262817793407,
+          "total_recorded_cost": 0.0019504227675497532,
+          "cost_without_distance": 5.5964857704123945e-06
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -6.23447181467146e-11
+    },
+    {
+      "global_step": 272,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 6.0655963158209175e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -8.80267213287933e-12,
+          "total_recorded_cost": 6.065587513148785e-06,
+          "cost_without_distance": 6.0655963158209175e-06
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 2.3391738945103377e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 2.8792775177494888e-05,
+          "total_recorded_cost": 3.113194907200523e-05,
+          "cost_without_distance": 2.3391738945103377e-06
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 5.75855556235183e-05,
+          "total_recorded_cost": 5.75855556235183e-05,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -8.80267213287933e-12
+    },
+    {
+      "global_step": 287,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 7.15182632183468e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -2.3653153153019128e-11,
+          "total_recorded_cost": 7.151823956519365e-05,
+          "cost_without_distance": 7.15182632183468e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 4.373762036755912e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0002497642070326186,
+          "total_recorded_cost": 0.0002935018274001777,
+          "cost_without_distance": 4.373762036755912e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0004995284834876657,
+          "total_recorded_cost": 0.0004995284834876657,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -2.3653153153019128e-11
+    },
+    {
+      "global_step": 327,
+      "constraints": 2,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.0004337831777807967,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -1.4464248809104019e-11,
+          "total_recorded_cost": 0.00043378316331654787,
+          "cost_without_distance": 0.0004337831777807967
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.00018165841518768592,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0003724314267108448,
+          "total_recorded_cost": 0.0005540898418985307,
+          "cost_without_distance": 0.00018165841518768592
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00074486288940534,
+          "total_recorded_cost": 0.00074486288940534,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -1.4464248809104019e-11
+    },
+    {
+      "global_step": 355,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.00026404015186166116,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -1.561751314209381e-11,
+          "total_recorded_cost": 0.000264040136244148,
+          "cost_without_distance": 0.00026404015186166116
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.00014568231386180501,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0007048202041438641,
+          "total_recorded_cost": 0.0008505025180056691,
+          "cost_without_distance": 0.00014568231386180501
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 1.2065064571335236e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.001409640405849085,
+          "total_recorded_cost": 0.0014217054704204202,
+          "cost_without_distance": 1.2065064571335236e-05
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -1.561751314209381e-11
+    },
+    {
+      "global_step": 375,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.000249048107460839,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -2.3673054998490234e-11,
+          "total_recorded_cost": 0.000249048083787784,
+          "cost_without_distance": 0.000249048107460839
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 8.182983941231142e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0003014605645759009,
+          "total_recorded_cost": 0.00038329040398821235,
+          "cost_without_distance": 8.182983941231142e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0006029211799614131,
+          "total_recorded_cost": 0.0006029211799614131,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -2.3673054998490234e-11
+    },
+    {
+      "global_step": 403,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 3.7437710795855885e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -9.398478017112662e-12,
+          "total_recorded_cost": 3.7437616811075713e-06,
+          "cost_without_distance": 3.7437710795855885e-06
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 1.958975723177025e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 5.282525433685464e-06,
+          "total_recorded_cost": 2.4872282665455714e-05,
+          "cost_without_distance": 1.958975723177025e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 7.604722020219396e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 1.0565061268393565e-05,
+          "total_recorded_cost": 1.8169783288612962e-05,
+          "cost_without_distance": 7.604722020219396e-06
+        }
+      ],
+      "any_correction_reduces_local_risk": false,
+      "counterfactual_fixed_trials_alpha_without_distance": 0.0,
+      "base_distance_penalty_roundoff": -9.398478017112662e-12
+    },
+    {
+      "global_step": 432,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.00033690631889938036,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -2.8286265528216364e-11,
+          "total_recorded_cost": 0.00033690629061311483,
+          "cost_without_distance": 0.00033690631889938036
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 8.606652438220565e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0005400699080196303,
+          "total_recorded_cost": 0.0006261364324018359,
+          "cost_without_distance": 8.606652438220565e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.001080139889381826,
+          "total_recorded_cost": 0.001080139889381826,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -2.8286265528216364e-11
+    },
+    {
+      "global_step": 444,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 6.7942285491043e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -1.1746195379205848e-11,
+          "total_recorded_cost": 6.794227374484763e-05,
+          "cost_without_distance": 6.7942285491043e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 3.770889026429806e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0002922271493697509,
+          "total_recorded_cost": 0.00032993603963404894,
+          "cost_without_distance": 3.770889026429806e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 1.6153741478681638e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0005844542805254698,
+          "total_recorded_cost": 0.0005860696546733379,
+          "cost_without_distance": 1.6153741478681638e-06
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -1.1746195379205848e-11
+    },
+    {
+      "global_step": 465,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 7.037289298030339e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -2.011081925989977e-11,
+          "total_recorded_cost": 7.037287286948413e-05,
+          "cost_without_distance": 7.037289298030339e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 6.497489772660369e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0001478098133120901,
+          "total_recorded_cost": 0.00021278471103869379,
+          "cost_without_distance": 6.497489772660369e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 4.375519224654297e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0002956196270582511,
+          "total_recorded_cost": 0.0003393748193047941,
+          "cost_without_distance": 4.375519224654297e-05
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -2.011081925989977e-11
+    },
+    {
+      "global_step": 480,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 2.576487964157141e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -3.342771097428134e-11,
+          "total_recorded_cost": 2.5764846213860437e-05,
+          "cost_without_distance": 2.576487964157141e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 9.10170126795813e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 5.8536677555217895e-05,
+          "total_recorded_cost": 6.763837882317603e-05,
+          "cost_without_distance": 9.10170126795813e-06
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00011707335215760395,
+          "total_recorded_cost": 0.00011707335215760395,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -3.342771097428134e-11
+    },
+    {
+      "global_step": 495,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.00018274844626594615,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -2.3307989354759764e-11,
+          "total_recorded_cost": 0.0001827484229579568,
+          "cost_without_distance": 0.00018274844626594615
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 9.724891085619105e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0007250260930277967,
+          "total_recorded_cost": 0.0008222750038839877,
+          "cost_without_distance": 9.724891085619105e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 7.3039698612387995e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0014500521794694964,
+          "total_recorded_cost": 0.0014573561493307352,
+          "cost_without_distance": 7.3039698612387995e-06
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -2.3307989354759764e-11
+    },
+    {
+      "global_step": 506,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.00025577420276448604,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 9.072492757056239e-12,
+          "total_recorded_cost": 0.0002557742118369788,
+          "cost_without_distance": 0.00025577420276448604
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.00011813490422197246,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0005863536381746028,
+          "total_recorded_cost": 0.0007044885423965752,
+          "cost_without_distance": 0.00011813490422197246
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0011727072997018695,
+          "total_recorded_cost": 0.0011727072997018695,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": 9.072492757056239e-12
+    },
+    {
+      "global_step": 508,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 0.0003686119547953516,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -9.490331968637494e-12,
+          "total_recorded_cost": 0.0003686119453050196,
+          "cost_without_distance": 0.0003686119547953516
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 0.0001931630259705173,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0005846477860259427,
+          "total_recorded_cost": 0.00077781081199646,
+          "cost_without_distance": 0.0001931630259705173
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 6.440979963784661e-07,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.0011692956602596992,
+          "total_recorded_cost": 0.0011699397582560778,
+          "cost_without_distance": 6.440979963784661e-07
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -9.490331968637494e-12
+    },
+    {
+      "global_step": 520,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 2.3379669328784693e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -1.8445058848348683e-11,
+          "total_recorded_cost": 2.3379650883725844e-05,
+          "cost_without_distance": 2.3379669328784693e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 1.0370915306417245e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 8.607700331587161e-05,
+          "total_recorded_cost": 9.644791862228885e-05,
+          "cost_without_distance": 1.0370915306417245e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 8.674121303499762e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00017215403092092174,
+          "total_recorded_cost": 0.0001808281522244215,
+          "cost_without_distance": 8.674121303499762e-06
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -1.8445058848348683e-11
+    },
+    {
+      "global_step": 528,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 2.1016203677553197e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -1.6657557782808656e-11,
+          "total_recorded_cost": 2.1016187019995414e-05,
+          "cost_without_distance": 2.1016203677553197e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 6.182738791360746e-06,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 7.750761033766787e-05,
+          "total_recorded_cost": 8.369034912902862e-05,
+          "cost_without_distance": 6.182738791360746e-06
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 0.0,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00015501522284466773,
+          "total_recorded_cost": 0.00015501522284466773,
+          "cost_without_distance": 0.0
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -1.6657557782808656e-11
+    },
+    {
+      "global_step": 589,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "trials": [
+        {
+          "alpha": 0.0,
+          "localization_risk_mean": 5.9603832929750506e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": -3.0616126699286282e-12,
+          "total_recorded_cost": 5.9603829868137836e-05,
+          "cost_without_distance": 5.9603832929750506e-05
+        },
+        {
+          "alpha": 0.5,
+          "localization_risk_mean": 3.710209952035616e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00012466761305628647,
+          "total_recorded_cost": 0.00016176971257664263,
+          "cost_without_distance": 3.710209952035616e-05
+        },
+        {
+          "alpha": 1.0,
+          "localization_risk_mean": 1.044142503943232e-05,
+          "trajectory_risk_mean": 0.0,
+          "distance_penalty_recovered": 0.00024933523287344784,
+          "total_recorded_cost": 0.0002597766579128802,
+          "cost_without_distance": 1.044142503943232e-05
+        }
+      ],
+      "any_correction_reduces_local_risk": true,
+      "counterfactual_fixed_trials_alpha_without_distance": 1.0,
+      "base_distance_penalty_roundoff": -3.0616126699286282e-12
+    }
+  ],
+  "training_mutations": 0,
+  "formal_tracking_scores": "NOT_RUN",
+  "scope": "Risk components recomputed from stored actual candidate objectives and paired trajectory scores. Distance penalty is recovered as recorded total minus those terms, subject to float32 roundoff.",
+  "limitation": "Removing distance is an offline counterfactual over the same evaluated trials. A different accepted step changes later training; this does not establish a trained-method gain or justify claiming all corrections are beneficial."
+}
