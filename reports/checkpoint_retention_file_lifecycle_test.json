@@ -1,0 +1,17 @@
+{
+  "status": "PASS_RETENTION_SYNTHETIC_FILE_LIFECYCLE_ONLY",
+  "initial_test_failure": "AttributeError in script hashing because __file__ was a str; fixed sha() to normalize its input with Path. The initial failed fixture is preserved; no production worker was launched.",
+  "second_test_failure": "The Windows temporary directory resolves through a junction; the mock run stored an unresolved path. Corrected only the test fixture to record its resolved root, matching the production absolute-path contract. The second failed fixture is preserved.",
+  "current_checkpoint_preserved": true,
+  "future_checkpoint_during_save_preserved": true,
+  "old_completed_checkpoints_removed": true,
+  "byte_identical_latest_alias_removed": true,
+  "final_single_checkpoint": [
+    "XTrack_ep0015.pth.tar"
+  ],
+  "transitions": [
+    "older13_removed_current14_and_in_progress15_preserved"
+  ],
+  "production_retention_worker_executed": false,
+  "training_and_benchmark_executed": false
+}

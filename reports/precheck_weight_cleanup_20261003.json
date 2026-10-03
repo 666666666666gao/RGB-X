@@ -1,0 +1,104 @@
+{
+  "status": "COMPLETE_EXACT_PRECHECK_WEIGHTS_RETIRED",
+  "started_at": "2026-10-03T08:26:32.147646+00:00",
+  "authorization": "User explicitly requests timely cleanup of our unused weights and retention only of the best measured weights.",
+  "scope": "Exactly five completed precheck checkpoints, never an active training or reference checkpoint.",
+  "validated_targets": [
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026_sanity/XTrack_ep0001.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026_sanity/XTrack_ep0001.pth.tar",
+      "bytes": 477075987,
+      "sha256": "860a680f111def476eaba2166ff954e426dde4be8c6cbc8986c309c601435e42"
+    },
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026_sanity/latest.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026_sanity/latest.pth.tar",
+      "bytes": 477075987,
+      "sha256": "860a680f111def476eaba2166ff954e426dde4be8c6cbc8986c309c601435e42"
+    },
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_risk_branch_probe_s2026_sanity/XTrack_ep0001.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-full-method/xtrack_full_method_risk_branch_probe_s2026_sanity/XTrack_ep0001.pth.tar",
+      "bytes": 477076179,
+      "sha256": "d5d8c360247e403ffd1efb11f6c4d00852443ba58378f5e77ce2d49a4be556f9"
+    },
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_risk_branch_probe_s2026_sanity/latest.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-full-method/xtrack_full_method_risk_branch_probe_s2026_sanity/latest.pth.tar",
+      "bytes": 477076179,
+      "sha256": "d5d8c360247e403ffd1efb11f6c4d00852443ba58378f5e77ce2d49a4be556f9"
+    },
+    {
+      "path": "/data/gb/rgbx-risk/outputs/ddp_smoke_20261002/checkpoints/train/xtrack/rgbx_b_adamw_3gpu_smoke/XTrack_ep0001.pth.tar",
+      "resolved_path": "/data/gb/rgbx-risk/outputs/ddp_smoke_20261002/checkpoints/train/xtrack/rgbx_b_adamw_3gpu_smoke/XTrack_ep0001.pth.tar",
+      "bytes": 440620557,
+      "sha256": "a8cf9e2b2cfb78da4e5b61f9023525f47e6dbeccca59f7284199d1beb4d829ef"
+    }
+  ],
+  "deleted": [
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026_sanity/XTrack_ep0001.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026_sanity/XTrack_ep0001.pth.tar",
+      "bytes": 477075987,
+      "sha256": "860a680f111def476eaba2166ff954e426dde4be8c6cbc8986c309c601435e42"
+    },
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026_sanity/latest.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026_sanity/latest.pth.tar",
+      "bytes": 477075987,
+      "sha256": "860a680f111def476eaba2166ff954e426dde4be8c6cbc8986c309c601435e42"
+    },
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_risk_branch_probe_s2026_sanity/XTrack_ep0001.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-full-method/xtrack_full_method_risk_branch_probe_s2026_sanity/XTrack_ep0001.pth.tar",
+      "bytes": 477076179,
+      "sha256": "d5d8c360247e403ffd1efb11f6c4d00852443ba58378f5e77ce2d49a4be556f9"
+    },
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_risk_branch_probe_s2026_sanity/latest.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-full-method/xtrack_full_method_risk_branch_probe_s2026_sanity/latest.pth.tar",
+      "bytes": 477076179,
+      "sha256": "d5d8c360247e403ffd1efb11f6c4d00852443ba58378f5e77ce2d49a4be556f9"
+    },
+    {
+      "path": "/data/gb/rgbx-risk/outputs/ddp_smoke_20261002/checkpoints/train/xtrack/rgbx_b_adamw_3gpu_smoke/XTrack_ep0001.pth.tar",
+      "resolved_path": "/data/gb/rgbx-risk/outputs/ddp_smoke_20261002/checkpoints/train/xtrack/rgbx_b_adamw_3gpu_smoke/XTrack_ep0001.pth.tar",
+      "bytes": 440620557,
+      "sha256": "a8cf9e2b2cfb78da4e5b61f9023525f47e6dbeccca59f7284199d1beb4d829ef"
+    }
+  ],
+  "filesystem_available_before": {
+    "home": 788756762624,
+    "data": 5424971776
+  },
+  "retained_required_inputs": [
+    {
+      "path": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "resolved_path": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "bytes": 441674839
+    },
+    {
+      "path": "/data/gb/rgbx-risk/pretrained/OSTrack_ep0300.pth.tar",
+      "resolved_path": "/data/qianmj/BASE/pretrained/OSTrack_ep0300.pth.tar",
+      "bytes": 370179249
+    }
+  ],
+  "active_training_root_preserved": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026",
+  "precheck_logs_configs_and_audit_reports_preserved": true,
+  "limitation": "These retired binary checkpoints can no longer be reloaded; their original audit results and newly captured hashes remain. No formal model or metric is deleted.",
+  "ended_at": "2026-10-03T08:26:32.361205+00:00",
+  "removed_file_count": 5,
+  "removed_file_bytes": 2348924889,
+  "filesystem_available_after": {
+    "home": 790665080832,
+    "data": 5865586688
+  },
+  "current_training_pids_alive": {
+    "1603676": true,
+    "1603680": true,
+    "1603687": true,
+    "1603688": true,
+    "1603689": true
+  },
+  "formal_tracking_scores": "NOT_RUN"
+}

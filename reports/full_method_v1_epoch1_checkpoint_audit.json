@@ -1,0 +1,63 @@
+{
+  "status": "PASS_FIRST_EPOCH_CHECKPOINT_NOT_FINAL_OR_BENCHMARK",
+  "observed_at": "2026-10-03T08:39:41.579859+00:00",
+  "run_id": "xtrack_full_method_v1_s2026",
+  "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0001.pth.tar",
+  "checkpoint_bytes": 477077203,
+  "checkpoint_sha256": "ab7d5111764a7b79b7c400f5958f330bff45297caf03e05e25ad56c118e4b449",
+  "epoch": 1,
+  "global_step": 2500,
+  "strict_model_reload": true,
+  "all_model_tensors_finite": true,
+  "frozen_tensor_count": 244,
+  "frozen_tensors_unchanged": true,
+  "optimizer_reload_names_shapes_and_moments_valid": true,
+  "always_used_three_task_step_witnesses": 24,
+  "saved_replica_hashes_identical_and_match_loaded_parameters": true,
+  "rng_by_rank": [
+    {
+      "rank": 0,
+      "python_numpy_cpu_rng_restore_valid": true,
+      "cuda_rng_bytes": 816,
+      "cuda_rng_sha256": "c084c9f822d282e2bf56233f44af39ab0100fff74305de85a291b86860710c64"
+    },
+    {
+      "rank": 1,
+      "python_numpy_cpu_rng_restore_valid": true,
+      "cuda_rng_bytes": 816,
+      "cuda_rng_sha256": "c79e718cd5fc5a17341aae2f7b88924d18b00ecc236b16e60ffc0175f10cb30c"
+    },
+    {
+      "rank": 2,
+      "python_numpy_cpu_rng_restore_valid": true,
+      "cuda_rng_bytes": 816,
+      "cuda_rng_sha256": "1a9e757c26f9fae289ed8d1b12a83b5c13730d9c1825ef5c57824c5b151394d5"
+    }
+  ],
+  "cuda_rng_restore_executed": false,
+  "latest_training_epoch": 2,
+  "latest_training_step": 2570,
+  "current_training_pids_alive": {
+    "1603676": true,
+    "1603680": true,
+    "1603687": true,
+    "1603688": true,
+    "1603689": true
+  },
+  "epoch1_history": [
+    {
+      "epoch": 1,
+      "steps": 2500,
+      "means": {
+        "total": 0.9770804271936416,
+        "balance": 0.06800008946359158,
+        "classification": 15.100778038024902,
+        "iou": 0.8238697881937027
+      }
+    }
+  ],
+  "training_mutations": 0,
+  "formal_tracking_scores": "NOT_RUN",
+  "script_sha256": "291560ce92b5a420c114919526a2901baa6c826f8fe0c2782ba6e12381b5ad57",
+  "scope": "CPU audit of epoch1 saved state. RNG restore uses this isolated CPU audit process; no live trainer state or GPU is changed. CUDA RNG byte states are present but GPU restoration was not executed. Fifteen-epoch endpoint and complete benchmark comparison remain pending."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "LAUNCH_COMMAND_FAILED_BEFORE_PYTHON_SCRIPT_STARTED",
+  "observed_at": "2026-10-03T08:44:33.120165+00:00",
+  "tmux_command_exit_code": 0,
+  "original_stdout_log": "/home/gaob/rgbx_checkpoint_retention_stdout.log",
+  "original_stdout": "bash: \u884c 1: /data/gb/rgbx-risk/scripts/retain_full_method_checkpoints.py: \u6743\u9650\u4e0d\u591f\n",
+  "production_retention_receipt_created": false,
+  "matching_script_processes": [],
+  "cause": "PowerShell-to-SSH command quoting did not preserve the intended interpreter invocation. The shell attempted to execute the non-executable script directly.",
+  "correction": "Build the tmux shell command on the server using shlex-quoted paths and subprocess argument lists; preserve the original log.",
+  "training_protocol_changed": false
+}
