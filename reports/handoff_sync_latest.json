@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T01:39:39.279463+08:00",
-  "source_commit": "d606f828d5818a1b1c51c7f8e5a2f4cc25157a11",
-  "document_sha256": "b40196ddb7b1aa580bdb4d433f510df4264e247d565319d210a4ec8a19ff1fdd",
-  "document_bytes": 125037,
+  "verified_at": "2026-10-04T02:23:58.232797+08:00",
+  "source_commit": "150e106429bab7f393700573f6a9b8b185cba7fa",
+  "document_sha256": "96ca21846ab0b8f34ea223667574e3fc545784d359092ee3fa74d8928c37bf5f",
+  "document_bytes": 128104,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -15,19 +15,17 @@
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
   "completed_epoch_updates_checked": 15000,
-  "observed_training_global_step": 15110,
+  "observed_training_global_step": 16430,
   "generated_checkpoint_files_retired": 16,
   "generated_checkpoint_file_bytes_retired": 7596775850,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-04T01:39:39.279463+08:00",
+    "verified_at": "2026-10-04T02:23:58.232797+08:00",
     "all_published_files_match": true,
     "published_file_sha256": {
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "b40196ddb7b1aa580bdb4d433f510df4264e247d565319d210a4ec8a19ff1fdd",
-      "configs/current_goal.json": "6ac2750acc17e3b4a0c69212e4648d6fe87d8f17844e4dc7b055e135184f69ac",
-      "configs/checkpoint_retention_policy.json": "301d178610a3eab05de1c9e902f82312f9ac0cc9bbc86c33ae043f1a04c496fc",
-      "reports/full_method_v1_sixth_epoch_record_check.json": "173f571bab2b8cb9d28d9a4a1023c69e077f431aba8315ffa5bdf88a8cd8ee54",
-      "reports/full_method_v1_sixth_epoch_retention_snapshot.json": "05b24c49256a73cb199cf643e4002085efe7bd209c3732e8b4c8994ef2c09111"
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "96ca21846ab0b8f34ea223667574e3fc545784d359092ee3fa74d8928c37bf5f",
+      "configs/current_goal.json": "be26a90be654ced719753954559e8d7ef8bc935f78b6ec1742ac9dc2539f3fbf",
+      "reports/full_method_v1_trajectory_only_detail_analysis.json": "14cf89867ed9cae25589a77edca503d49ac7985dbbafefa362dab11aada30353"
     },
     "live_training_sources_unchanged": true,
     "process_states": {
@@ -35,28 +33,28 @@
       "1603680": "State:\tS (sleeping)",
       "1603687": "State:\tS (sleeping)",
       "1603688": "State:\tS (sleeping)",
-      "1603689": "State:\tS (sleeping)",
+      "1603689": "State:\tR (running)",
       "1629089": "State:\tS (sleeping)"
     },
-    "gpu_guard_status": "DISABLED_BY_USER",
     "guard_process_missing": true,
+    "gpu_guard_status": "DISABLED_BY_USER",
     "training": {
       "epoch": 7,
-      "step": 340,
-      "global_step": 15340,
+      "step": 1430,
+      "global_step": 16430,
       "completed_epochs": 6,
-      "training_examples": 368160,
+      "training_examples": 394320,
       "formal_tracking_scores": "NOT_RUN"
     },
     "weight_file_count": 1,
     "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0006.pth.tar"
   },
-  "subject": "SIXTH_EPOCH_AND_THREE_OBSERVED_TRAJECTORY_ONLY_HARM_CASES_NOT_BENCHMARK",
+  "subject": "THREE_STORED_TRAJECTORY_DETAIL_CASES_TWO_INTEGER_CROP_BOUNDARY_CHANGES",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-04T01:30:15.078855+08:00",
-  "scope": "Sixth epoch:2420 new localization rows plus80 existing verified rows reused by exact raw SHA; three trajectory-only damage cases from stored paired training-pool objectives. One necessary epoch6 recovery,16 generated weights retired. No model reload, independent trajectory intervention, new iteration or benchmark.",
+  "training_snapshot_observed_at": "2026-10-04T02:23:58.232797+08:00",
+  "scope": "New detail analysis of three previously identified training-pool events only. Two integer crop boundary changes; no frame GT or images loaded, component losses and trajectory routing not recorded, no causal attribution or benchmark. Prior15000-update checks/retirement counts preserved as historical evidence, not replayed. Source8unchanged, user GPU controls withdrawn.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
-  "latest_runtime_updates_at_publication": 15340
+  "latest_runtime_updates_at_publication": 16430
 }
