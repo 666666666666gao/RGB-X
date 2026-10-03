@@ -1,0 +1,270 @@
+{
+  "started_at": "2026-10-03T23:18:37.667501+08:00",
+  "guard_pid": 1907806,
+  "training_pids": [
+    1603676,
+    1603680,
+    1603687,
+    1603688,
+    1603689
+  ],
+  "poll_seconds": 30,
+  "pause_temperature_c": 75,
+  "resume_temperature_c": 70,
+  "required_power_limit_w": 250,
+  "events": [
+    {
+      "at": "2026-10-03T23:18:37.741017+08:00",
+      "action": "SIGSTOP_OWNED_TRAINING",
+      "readings": [
+        {
+          "gpu": 0,
+          "temperature_c": 77,
+          "power_w": 225.58,
+          "power_limit_w": 350.0
+        },
+        {
+          "gpu": 1,
+          "temperature_c": 77,
+          "power_w": 234.55,
+          "power_limit_w": 350.0
+        },
+        {
+          "gpu": 2,
+          "temperature_c": 73,
+          "power_w": 233.12,
+          "power_limit_w": 350.0
+        }
+      ],
+      "training_snapshot": {
+        "status": "RUNNING_NOT_EVALUATED",
+        "run_id": "xtrack_full_method_v1_s2026",
+        "protocol": {
+          "run_id": "xtrack_full_method_v1_s2026",
+          "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+          "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+          "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026",
+          "seed": 2026,
+          "epochs": 15,
+          "samples_per_epoch": 60000,
+          "batch_per_rank": 8,
+          "world_size": 3,
+          "lr": 1e-05,
+          "lr_drop_epoch": 10,
+          "lr_drop_factor": 0.1,
+          "weight_decay": 0.0001,
+          "grad_clip_norm": 0.1,
+          "risk_relative_tolerance": 0.002,
+          "max_relative_correction": 0.5,
+          "trajectory_length": 3,
+          "trajectory_period": 50,
+          "correction_strengths": [
+            0.0,
+            0.5,
+            1.0
+          ],
+          "trajectory_risk_weight": 1.0,
+          "candidate_distance_weight": 0.05,
+          "num_workers": 3,
+          "amp": false,
+          "checkpoint_every_epoch": true,
+          "modules_enabled": [
+            "localization_risk",
+            "task_adaptive_selective_correction",
+            "closed_loop_acceptance"
+          ],
+          "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+          "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+          "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+        },
+        "protocol_sha256": "452d8ea219af641f7a7b237eb654df9c1dfb88c551ea98ee43b600927ac6dded",
+        "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+        "world_size": 3,
+        "rank_pids": [
+          1603687,
+          1603688,
+          1603689
+        ],
+        "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026",
+        "modules_enabled": [
+          "localization_risk",
+          "task_adaptive_selective_correction",
+          "closed_loop_acceptance"
+        ],
+        "formal_tracking_scores": "NOT_RUN",
+        "started_at": "2026-10-03T06:55:18.472810+00:00",
+        "training_examples_per_update": 24,
+        "check_examples_per_update": 9,
+        "short_clip_source": "TRAIN_ONLY",
+        "baseline_setting": "AUTHOR_RELEASE_FINETUNE",
+        "attempt_id": "20261003T065518472838Z",
+        "observed_at": "2026-10-03T15:18:16.164723+00:00",
+        "epoch": 6,
+        "step": 30,
+        "global_step": 12530,
+        "latest": {
+          "attempt_id": "20261003T065518472838Z",
+          "epoch": 6,
+          "step": 30,
+          "global_step": 12530,
+          "before_localization": [
+            [
+              0.1821349561214447,
+              0.45877012610435486
+            ],
+            [
+              0.15906161069869995,
+              0.33159536123275757
+            ],
+            [
+              0.0374477356672287,
+              0.1489543467760086
+            ]
+          ],
+          "candidate_localization": [
+            [
+              0.18216489255428314,
+              0.45896464586257935
+            ],
+            [
+              0.15905547142028809,
+              0.33157622814178467
+            ],
+            [
+              0.037443988025188446,
+              0.14892062544822693
+            ]
+          ],
+          "accepted_localization": [
+            [
+              0.18216489255428314,
+              0.45896464586257935
+            ],
+            [
+              0.15905547142028809,
+              0.33157622814178467
+            ],
+            [
+              0.037443988025188446,
+              0.14892062544822693
+            ]
+          ],
+          "candidate_risk": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "accepted_risk": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "candidate_route_change": [
+            0.01388888992369175,
+            0.0,
+            0.0
+          ],
+          "accepted_route_change": [
+            0.01388888992369175,
+            0.0,
+            0.0
+          ],
+          "selected_correction_strength": 0.0,
+          "trajectory_checked": false,
+          "baseline_trajectory": null,
+          "accepted_trajectory": null,
+          "training_clips": null,
+          "global_task_counts": [
+            8,
+            8,
+            8
+          ],
+          "baseline_trajectory_details": null,
+          "candidate_trials": [
+            {
+              "alpha": 0.0,
+              "cost": 0.0,
+              "localization": [
+                [
+                  0.18216489255428314,
+                  0.45896464586257935
+                ],
+                [
+                  0.15905547142028809,
+                  0.33157622814178467
+                ],
+                [
+                  0.037443988025188446,
+                  0.14892062544822693
+                ]
+              ],
+              "trajectory": null,
+              "trajectory_details": null
+            }
+          ],
+          "pair_check_forward_examples": 18,
+          "trajectory_model_forward_examples": 0,
+          "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs",
+          "optimizer_statistics_updates": 1,
+          "weight_decay_applications": 1,
+          "step_seconds": 2.1825482900021598,
+          "peak_allocated_bytes": 5770099200,
+          "joint_grad_norm_before_clip": 2.038015365600586,
+          "gradient_clip_coefficient": 0.049067319422889354,
+          "correction_norm": 0.0,
+          "active_risk_constraints": 0
+        },
+        "training_examples": 300720,
+        "check_examples": 112770,
+        "wallclock_seconds": 30177.687122859003,
+        "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0005.pth.tar",
+        "completed_epochs": 5,
+        "replica_parameter_sha256": "2c14eeaeb413caf080b554b5b91b09fd3bee134c19772edcb4536f1b7fc0de6c"
+      }
+    }
+  ],
+  "paused_seconds": 0.0,
+  "scope": "Only five existing owned training/controller processes; no trainer, optimizer, checkpoint or hardware setting mutation.",
+  "status": "PAUSED_FOR_GPU_LIMITS",
+  "observed_at": "2026-10-03T23:21:38.402053+08:00",
+  "readings": [
+    {
+      "gpu": 0,
+      "temperature_c": 60,
+      "power_w": 112.53,
+      "power_limit_w": 350.0
+    },
+    {
+      "gpu": 1,
+      "temperature_c": 65,
+      "power_w": 150.23,
+      "power_limit_w": 350.0
+    },
+    {
+      "gpu": 2,
+      "temperature_c": 57,
+      "power_w": 111.98,
+      "power_limit_w": 350.0
+    }
+  ],
+  "power_limits_verified": false,
+  "current_pause_seconds": 180.66118497599382
+}

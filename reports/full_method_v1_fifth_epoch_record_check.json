@@ -1,0 +1,71 @@
+{
+  "status": "FIFTH_EPOCH_NEW_RECORDS_AND_ONE_RECOVERY_VERIFIED_NOT_BENCHMARK",
+  "observed_at": "2026-10-03T23:22:06.414126+08:00",
+  "completed_epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 114,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 161,
+      "mean_step_seconds": 2.415328442759649
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 2,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 2.389823864249629
+    },
+    {
+      "epoch": 3,
+      "updates": 2500,
+      "risk_events": 97,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 144,
+      "mean_step_seconds": 2.39314502257884
+    },
+    {
+      "epoch": 4,
+      "updates": 2500,
+      "risk_events": 90,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 140,
+      "mean_step_seconds": 2.399556109916605
+    },
+    {
+      "epoch": 5,
+      "updates": 2500,
+      "risk_events": 104,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 152,
+      "mean_step_seconds": 2.3784799392404037
+    }
+  ],
+  "earlier_10000_evidence": "reports/full_method_v1_fourth_epoch_record_check.json",
+  "new_records_checked": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/updates.jsonl",
+    "global_step_start": 10001,
+    "global_step_end": 12500,
+    "bytes": 5000619,
+    "sha256": "974022f3d584b35817a3c63d9f5ecef721ea96ff8d807c935a7281c340cf407a"
+  },
+  "fifth_epoch_localization_all_finite": true,
+  "fifth_epoch_global_task_counts_always": [
+    8,
+    8,
+    8
+  ],
+  "trajectory_only_deterioration": {
+    "scope": "Only fifth-epoch records using actual stored paired trajectory objectives and current tolerance; no new forward passes.",
+    "events": [],
+    "event_count": 0,
+    "efficacy": "UNKNOWN_NO_BENCHMARK_OR_INDEPENDENT_TRIGGER_EXPERIMENT",
+    "no_local_risk_checks_derived_from_record_counts": 48,
+    "denominator_scope": "Derived from fixed-run trigger logic and new epoch counts, not an additional forward pass."
+  },
+  "snapshot_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
+  "formal_tracking_scores": "NOT_RUN",
+  "scope": "New fifth-epoch records only plus registered checkpoint hash, single-file retention and live processes. No earlier record replay, model/optimizer reload, CUDA RNG restore or benchmark."
+}

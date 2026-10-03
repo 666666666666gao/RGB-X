@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T21:41:38.588143+08:00",
+  "updated_at": "2026-10-03T23:22:06.414126+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -103,7 +103,7 @@
     1603688,
     1603689
   ],
-  "actual_completed_updates_at_snapshot": 10100,
+  "actual_completed_updates_at_snapshot": 12530,
   "tracking_scores": "NOT_RUN",
   "objective_met": false,
   "next_iteration_candidate": {
@@ -115,9 +115,9 @@
     "efficacy": "UNKNOWN_NO_NEW_TRAINING_OR_BENCHMARK",
     "success_measure": "Fewer unrepaired localization harms while retaining learning progress; selection frequency alone is not success."
   },
-  "actual_training_examples_at_snapshot": 242400,
+  "actual_training_examples_at_snapshot": 300720,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 4,
+  "actual_completed_epochs_at_snapshot": 5,
   "first_epoch_risk_events": 114,
   "first_epoch_nonzero_corrections": 3,
   "first_epoch_trajectory_checks": 161,
@@ -155,13 +155,21 @@
       "accepted_nonzero_corrections": 3,
       "trajectory_checks": 140,
       "mean_step_seconds": 2.399556109916605
+    },
+    {
+      "epoch": 5,
+      "updates": 2500,
+      "risk_events": 104,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 152,
+      "mean_step_seconds": 2.3784799392404037
     }
   ],
-  "completed_epoch_statistics_scope": "First10000 updates checked across successive epoch milestones, not all10100 updates in the live snapshot.",
-  "completed_epoch_statistics_source": "reports/full_method_v1_fourth_epoch_record_check.json",
+  "completed_epoch_statistics_scope": "Completed12500 updates checked at successive milestones; current12530 paused snapshot is not the mechanism-statistics denominator.",
+  "completed_epoch_statistics_source": "reports/full_method_v1_fifth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-03T21:41:38.588143+08:00",
+  "runtime_snapshot_observed_at": "2026-10-03T23:22:06.414126+08:00",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "ordered_next_steps": [
     {
@@ -250,5 +258,31 @@
   ],
   "weight_retention": "Keep one necessary active recovery checkpoint while training; after complete evaluation retain only the best measured method weight. Preserve required public inputs, source, logs, metrics, hashes and retirement receipts.",
   "fourth_epoch_retention_evidence": "reports/full_method_v1_fourth_epoch_retention_snapshot.json",
-  "trajectory_only_deterioration_evidence": "reports/full_method_v1_fourth_epoch_record_check.json"
+  "trajectory_only_deterioration_evidence": "reports/full_method_v1_fifth_epoch_record_check.json",
+  "hardware_constraints": {
+    "source": "User explicitly requested temperature preferably at most75C and power at most250W.",
+    "server": "2028",
+    "gpu_indices": [
+      0,
+      1,
+      2
+    ],
+    "temperature_target_celsius": 75,
+    "power_limit_watts": 250,
+    "policy": "configs/gpu_limits.json",
+    "status": "OWNED_JOB_SUSPENDED_HARDWARE_LIMITS_NOT_APPLIED",
+    "limits_verified": false,
+    "observed_temperature_goal_violation": true,
+    "observed_power_goal_violation": true,
+    "hardware_condition_changes_must_be_recorded_for_cost_comparisons": true,
+    "last_power_limit_readback_at": "2026-10-03T23:14:26+08:00",
+    "guard_pid": 1907806,
+    "guard_source": "scripts/guard_active_full_method_gpu.py",
+    "guard_receipt": "reports/full_method_v1_gpu_guard.json",
+    "resume_condition": "All three configured power limits<=250W and all temperatures<=70C.",
+    "pause_condition": "Any configured power limit>250W or any temperature>=75C.",
+    "runtime_pause_is_not_goal_pause": true
+  },
+  "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
+  "training_runtime_state": "PAUSED_FOR_GPU_LIMITS_PROCESS_STATE_PRESERVED"
 }

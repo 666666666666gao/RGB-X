@@ -1,0 +1,250 @@
+{
+  "updated_at": "2026-10-03T23:22:06.414126+08:00",
+  "server": "2028",
+  "gpu_indices": [
+    0,
+    1,
+    2
+  ],
+  "temperature_target_celsius": 75,
+  "power_limit_watts": 250,
+  "status": "OWNED_JOB_SUSPENDED_HARDWARE_LIMITS_NOT_APPLIED",
+  "limits_verified": false,
+  "current_configured_power_limit_watts": [
+    350,
+    350,
+    350
+  ],
+  "current_configured_target_temperature_celsius": [
+    83,
+    83,
+    83
+  ],
+  "gpu_uuids": [
+    "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "GPU-f5c818cb-d7b0-bcd0-5544-2d172079bc40",
+    "GPU-e087b67f-9495-4385-6bde-335c5760d96e"
+  ],
+  "attempted_power_limit_command": "sudo -n nvidia-smi -i 0,1,2 -pl 250",
+  "actual_exit_code": 1,
+  "actual_error": "sudo: interactive authentication is required",
+  "target_temperature_command_not_executed": "sudo nvidia-smi -i 0,1,2 -gtt 75",
+  "required_next_action": "Operator executes the two administrator commands or enables narrowly scoped noninteractive execution; then verify driver settings and actual temperature/power.",
+  "temperature_is_best_effort_target_not_absolute_guarantee": true,
+  "monitoring_observations": [
+    {
+      "at": "2026-10-03T22:52:51+08:00",
+      "gpu": 0,
+      "temperature_c": 80,
+      "power_w": 239.52,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:52:51+08:00",
+      "gpu": 1,
+      "temperature_c": 77,
+      "power_w": 246.5,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:52:51+08:00",
+      "gpu": 2,
+      "temperature_c": 75,
+      "power_w": 252.63,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:53:51+08:00",
+      "gpu": 0,
+      "temperature_c": 79,
+      "power_w": 225.67,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:53:51+08:00",
+      "gpu": 1,
+      "temperature_c": 78,
+      "power_w": 229.64,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:53:51+08:00",
+      "gpu": 2,
+      "temperature_c": 76,
+      "power_w": 237.54,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:54:51+08:00",
+      "gpu": 0,
+      "temperature_c": 77,
+      "power_w": 212.41,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:54:51+08:00",
+      "gpu": 1,
+      "temperature_c": 76,
+      "power_w": 214.39,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:54:51+08:00",
+      "gpu": 2,
+      "temperature_c": 74,
+      "power_w": 224.81,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T22:55:51.029000+08:00",
+      "gpu": 0,
+      "temperature_c": 79,
+      "power_w": 240.77,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T22:55:51.029000+08:00",
+      "gpu": 1,
+      "temperature_c": 78,
+      "power_w": 247.17,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T22:55:51.030000+08:00",
+      "gpu": 2,
+      "temperature_c": 76,
+      "power_w": 251.03,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T22:56:51.031000+08:00",
+      "gpu": 0,
+      "temperature_c": 79,
+      "power_w": 195.53,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T22:56:51.031000+08:00",
+      "gpu": 1,
+      "temperature_c": 77,
+      "power_w": 195.45,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T22:56:51.032000+08:00",
+      "gpu": 2,
+      "temperature_c": 75,
+      "power_w": 204.17,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T22:59:45.165000+08:00",
+      "gpu": 0,
+      "temperature_c": 76,
+      "power_w": 224.26,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T22:59:45.171000+08:00",
+      "gpu": 1,
+      "temperature_c": 76,
+      "power_w": 232.49,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T22:59:45.176000+08:00",
+      "gpu": 2,
+      "temperature_c": 74,
+      "power_w": 238.0,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T23:14:26+08:00",
+      "gpu": 0,
+      "temperature_c": 78,
+      "power_w": 207.03,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T23:14:26+08:00",
+      "gpu": 1,
+      "temperature_c": 75,
+      "power_w": 207.4,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T23:14:26+08:00",
+      "gpu": 2,
+      "temperature_c": 73,
+      "power_w": 214.75,
+      "configured_limit_w": 350
+    },
+    {
+      "at": "2026-10-03T23:21:38.402053+08:00",
+      "gpu": 0,
+      "temperature_c": 60,
+      "power_w": 112.53,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T23:21:38.402053+08:00",
+      "gpu": 1,
+      "temperature_c": 65,
+      "power_w": 150.23,
+      "configured_limit_w": 350.0
+    },
+    {
+      "at": "2026-10-03T23:21:38.402053+08:00",
+      "gpu": 2,
+      "temperature_c": 57,
+      "power_w": 111.98,
+      "configured_limit_w": 350.0
+    }
+  ],
+  "observed_max_temperature_celsius": 80,
+  "observed_max_power_watts": 252.63,
+  "training_protocol_changed": false,
+  "scope": "Owned GPUs0/1/2 on2028 only. Read observations and rejected admin write; no applied hardware setting, trainer edit, new GPU workload or restart.",
+  "power_limit_last_verified_at": "2026-10-03T23:14:26+08:00",
+  "target_temperature_last_verified_at": "2026-10-03T22:45:04+08:00",
+  "finite_read_only_monitor": {
+    "native_session": 56893,
+    "actual_exit_code": 1,
+    "samples_observed": 5,
+    "scope": "300-second read-only sampler ended. Its transport exit is not a training or GPU-limit application result. Subsequent independent nvidia-smi read succeeded exit0."
+  },
+  "direct_write_attempt": {
+    "command": "nvidia-smi -i 0,1,2 -pl 250",
+    "actual_exit_code": 1,
+    "actual_error": "Failed to set power management limit for GPU 00000000:17:00.0: Insufficient Permissions\nTerminating early due to previous errors.",
+    "settings_applied": false
+  },
+  "owned_job_guard": {
+    "source": "User explicitly requested temperature preferably at most75C and power at most250W.",
+    "server": "2028",
+    "gpu_indices": [
+      0,
+      1,
+      2
+    ],
+    "temperature_target_celsius": 75,
+    "power_limit_watts": 250,
+    "policy": "configs/gpu_limits.json",
+    "status": "OWNED_JOB_SUSPENDED_HARDWARE_LIMITS_NOT_APPLIED",
+    "limits_verified": false,
+    "observed_temperature_goal_violation": true,
+    "observed_power_goal_violation": true,
+    "hardware_condition_changes_must_be_recorded_for_cost_comparisons": true,
+    "last_power_limit_readback_at": "2026-10-03T23:14:26+08:00",
+    "guard_pid": 1907806,
+    "guard_source": "scripts/guard_active_full_method_gpu.py",
+    "guard_receipt": "reports/full_method_v1_gpu_guard.json",
+    "resume_condition": "All three configured power limits<=250W and all temperatures<=70C.",
+    "pause_condition": "Any configured power limit>250W or any temperature>=75C.",
+    "runtime_pause_is_not_goal_pause": true
+  },
+  "guard_snapshot_evidence": "reports/full_method_v1_gpu_pause_snapshot.json",
+  "guard_resume_branch": "NOT_YET_EXECUTED",
+  "actual_training_pause_at": "2026-10-03T23:18:37.741017+08:00",
+  "note": "SIGSTOP preserves existing process/model/optimizer state; no train-source or RNG update while stopped. No hardware cap has been set. Pause duration and changed hardware conditions belong in cost reporting."
+}
