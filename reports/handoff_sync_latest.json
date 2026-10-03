@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T13:07:33.929357+00:00",
-  "source_commit": "83c9613da6959a6ee0ab7e6dd58194a759b9d89d",
-  "document_sha256": "f38c5e32ffe3d0c88f5c88cd273453939a3bd1d281bb6607eec67294613abc84",
-  "document_bytes": 106103,
+  "verified_at": "2026-10-03T13:46:34.811426+00:00",
+  "source_commit": "8351cf01d542b8110e88f061d481307b076cf644",
+  "document_sha256": "bb5ffabae8e81f1bb0e0617fb9ba34b83b0fa8355a8e6808201bea91346515ad",
+  "document_bytes": 109046,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,13 +14,13 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "completed_epoch_updates_checked": 7500,
-  "observed_training_global_step": 7680,
-  "generated_checkpoint_files_retired": 10,
-  "generated_checkpoint_file_bytes_retired": 4734311160,
+  "completed_epoch_updates_checked": 10000,
+  "observed_training_global_step": 10100,
+  "generated_checkpoint_files_retired": 12,
+  "generated_checkpoint_file_bytes_retired": 5688465886,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-03T13:07:33.929357+00:00",
+    "verified_at": "2026-10-03T13:46:34.811426+00:00",
     "all_published_files_match": true,
     "live_training_sources_unchanged": true,
     "processes_alive": {
@@ -32,9 +32,9 @@
       "1629089": true
     }
   },
-  "subject": "USER_REQUESTED_EXECUTION_GOAL_UPDATE",
+  "subject": "FOURTH_EPOCH_NEW_RECORD_CHECKS_AND_RETENTION",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-03T20:04:39.773341+08:00",
-  "scope": "Goal and the single handoff synchronized. Prior structured training/retirement counts retain their original snapshot time. No benchmark or model audit rerun."
+  "training_snapshot_observed_at": "2026-10-03T21:41:38.588143+08:00",
+  "scope": "New fourth-epoch records and checkpoint retention verified; training mechanism statistics cover completed10000 updates, not current10100. No model reload or benchmark."
 }
