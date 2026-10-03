@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T00:35:05.878706+08:00",
+  "updated_at": "2026-10-04T01:36:58.919118+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -103,7 +103,7 @@
     1603688,
     1603689
   ],
-  "actual_completed_updates_at_snapshot": 12710,
+  "actual_completed_updates_at_snapshot": 15110,
   "tracking_scores": "NOT_RUN",
   "objective_met": false,
   "next_iteration_candidate": {
@@ -123,9 +123,9 @@
       "review and verify the candidate with its actual protocol before a new formal run"
     ]
   },
-  "actual_training_examples_at_snapshot": 305040,
+  "actual_training_examples_at_snapshot": 362640,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 5,
+  "actual_completed_epochs_at_snapshot": 6,
   "first_epoch_risk_events": 114,
   "first_epoch_nonzero_corrections": 3,
   "first_epoch_trajectory_checks": 161,
@@ -171,13 +171,21 @@
       "accepted_nonzero_corrections": 1,
       "trajectory_checks": 152,
       "mean_step_seconds": 2.3784799392404037
+    },
+    {
+      "epoch": 6,
+      "updates": 2500,
+      "risk_events": 89,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 3.076616281334963
     }
   ],
-  "completed_epoch_statistics_scope": "Completed12500 updates checked at successive milestones; current12530 paused snapshot is not the mechanism-statistics denominator.",
-  "completed_epoch_statistics_source": "reports/full_method_v1_fifth_epoch_record_check.json",
+  "completed_epoch_statistics_scope": "Completed15000-update prefix. Epoch6 reuses80 verified rows by exact raw SHA and checks2420 new rows; current15110 is not the completed-epoch denominator.",
+  "completed_epoch_statistics_source": "reports/full_method_v1_sixth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-03T23:53:51.183571+08:00",
+  "runtime_snapshot_observed_at": "2026-10-04T01:30:15.078855+08:00",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "ordered_next_steps": [
     {
@@ -202,8 +210,9 @@
     },
     {
       "id": "P4",
-      "status": "NOT_IMPLEMENTED_NOT_RUN",
-      "work": "Find and measure trajectory-only deterioration, then allow it to generate/select updates independently. Compare single-frame, equal-sample ground-truth-centered multi-frame and predicted-box closed loop; compare 3-frame versus longer clips and explicitly handle visibility before occlusion/reappearance claims."
+      "status": "TRAJECTORY_ONLY_PATTERN_OBSERVED_INDEPENDENT_CONTROL_NOT_IMPLEMENTED_NOT_RUN",
+      "work": "Find and measure trajectory-only deterioration, then allow it to generate/select updates independently. Compare single-frame, equal-sample ground-truth-centered multi-frame and predicted-box closed loop; compare 3-frame versus longer clips and explicitly handle visibility before occlusion/reappearance claims.",
+      "observed_evidence": "reports/full_method_v1_sixth_epoch_record_check.json"
     },
     {
       "id": "P5",
@@ -266,7 +275,7 @@
   ],
   "weight_retention": "Keep one necessary active recovery checkpoint while training; after complete evaluation retain only the best measured method weight. Preserve required public inputs, source, logs, metrics, hashes and retirement receipts.",
   "fourth_epoch_retention_evidence": "reports/full_method_v1_fourth_epoch_retention_snapshot.json",
-  "trajectory_only_deterioration_evidence": "reports/full_method_v1_fifth_epoch_record_check.json",
+  "trajectory_only_deterioration_evidence": "reports/full_method_v1_sixth_epoch_record_check.json",
   "hardware_constraints": {
     "status": "WITHDRAWN_BY_EXPLICIT_USER_REQUEST",
     "enabled": false,
@@ -286,5 +295,24 @@
   },
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
-  "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json"
+  "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
+  "actual_epoch_at_snapshot": 7,
+  "actual_epoch_step_at_snapshot": 110,
+  "completed_epoch_totals": {
+    "updates": 15000,
+    "risk_events": 582,
+    "accepted_nonzero_corrections": 13,
+    "trajectory_checks": 871
+  },
+  "sixth_epoch_retention_evidence": "reports/full_method_v1_sixth_epoch_retention_snapshot.json",
+  "trajectory_only_deterioration_observed": {
+    "event_count": 3,
+    "derived_no_local_risk_periodic_checks": 48,
+    "global_steps": [
+      14700,
+      14800,
+      14850
+    ],
+    "scope": "Visible training-pool three-frame paired checks; alpha0 only. Pattern observed, independent intervention efficacy and benchmark effects not measured."
+  }
 }

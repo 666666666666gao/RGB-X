@@ -1,0 +1,187 @@
+{
+  "status": "SIXTH_EPOCH_NEW_RECORDS_AND_ONE_RECOVERY_VERIFIED_NOT_BENCHMARK",
+  "observed_at": "2026-10-04T01:30:15.078855+08:00",
+  "completed_epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 114,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 161,
+      "mean_step_seconds": 2.415328442759649
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 2,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 2.389823864249629
+    },
+    {
+      "epoch": 3,
+      "updates": 2500,
+      "risk_events": 97,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 144,
+      "mean_step_seconds": 2.39314502257884
+    },
+    {
+      "epoch": 4,
+      "updates": 2500,
+      "risk_events": 90,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 140,
+      "mean_step_seconds": 2.399556109916605
+    },
+    {
+      "epoch": 5,
+      "updates": 2500,
+      "risk_events": 104,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 152,
+      "mean_step_seconds": 2.3784799392404037
+    },
+    {
+      "epoch": 6,
+      "updates": 2500,
+      "risk_events": 89,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 3.076616281334963
+    }
+  ],
+  "completed_epoch_totals": {
+    "updates": 15000,
+    "risk_events": 582,
+    "accepted_nonzero_corrections": 13,
+    "trajectory_checks": 871
+  },
+  "earlier_12500_evidence": "reports/full_method_v1_fifth_epoch_record_check.json",
+  "sixth_epoch_raw_update_range": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/updates.jsonl",
+    "global_step_start": 12501,
+    "global_step_end": 15000,
+    "bytes": 4906929,
+    "sha256": "b4b0a138de351c1263e480501f72fa60210da95e278fa183aab981f4fbb9dd97"
+  },
+  "new_localization_records_checked": 2420,
+  "reused_localization_records": 80,
+  "reused_prefix_evidence": "reports/full_method_v1_best_effort_guard_resume_record.json",
+  "reused_prefix_sha256": "9dee55f516d70320d4bd2508ab64bd0f27fbf796550f22543a214eca0b6ff956",
+  "sixth_epoch_localization_all_finite": true,
+  "sixth_epoch_global_task_counts_always": [
+    8,
+    8,
+    8
+  ],
+  "trajectory_only_deterioration": {
+    "scope": "Only sixth-epoch records using actual stored paired trajectory objectives and current tolerance; no new forward passes.",
+    "events": [
+      {
+        "global_step": 14700,
+        "baseline_trajectory": [
+          0.11795932054519653,
+          0.06952324509620667,
+          0.6226072311401367
+        ],
+        "candidate_trajectory": [
+          0.11797519028186798,
+          0.0694960430264473,
+          0.795426070690155
+        ],
+        "trajectory_risk": [
+          0,
+          0,
+          0.275572811407197
+        ],
+        "candidate_strengths": [
+          0.0
+        ],
+        "selected_correction_strength": 0.0,
+        "relative_changes_before_tolerance": [
+          0.00013453567380771074,
+          -0.0003912658237072581,
+          0.27757281140719703
+        ]
+      },
+      {
+        "global_step": 14800,
+        "baseline_trajectory": [
+          0.05877086892724037,
+          0.6462487578392029,
+          0.19998952746391296
+        ],
+        "candidate_trajectory": [
+          0.05894109234213829,
+          0.6462084054946899,
+          0.19997626543045044
+        ],
+        "trajectory_risk": [
+          0.0008963909842588688,
+          0,
+          0
+        ],
+        "candidate_strengths": [
+          0.0
+        ],
+        "selected_correction_strength": 0.0,
+        "relative_changes_before_tolerance": [
+          0.002896390984258869,
+          -6.244088522175507e-05,
+          -6.631363967254474e-05
+        ]
+      },
+      {
+        "global_step": 14850,
+        "baseline_trajectory": [
+          0.14999672770500183,
+          0.3114020824432373,
+          0.0951773077249527
+        ],
+        "candidate_trajectory": [
+          0.1499890834093094,
+          0.31305980682373047,
+          0.09515178203582764
+        ],
+        "trajectory_risk": [
+          0,
+          0.0033234209851353055,
+          0
+        ],
+        "candidate_strengths": [
+          0.0
+        ],
+        "selected_correction_strength": 0.0,
+        "relative_changes_before_tolerance": [
+          -5.0963083057904196e-05,
+          0.0053234209851353055,
+          -0.0002681909137294178
+        ]
+      }
+    ],
+    "event_count": 3,
+    "efficacy": "UNKNOWN_NO_BENCHMARK_OR_INDEPENDENT_TRIGGER_EXPERIMENT",
+    "task_order": [
+      "RGB-T",
+      "RGB-D",
+      "RGB-Event"
+    ],
+    "no_localization_risk_periodic_checks": 48,
+    "denominator_scope": "137 trajectory checks minus89 local-risk events under the fixed trigger condition; derived count, not48 independent trials or a test-set failure rate.",
+    "definition": "All six candidate localization risks zero; stored paired composite closed-loop objective worsens beyond0.002 relative tolerance in at least one task. Alpha0 is the only available candidate."
+  },
+  "current_training_snapshot": {
+    "epoch": 7,
+    "step": 110,
+    "global_step": 15110,
+    "completed_epochs": 6,
+    "training_examples": 362640
+  },
+  "cost_scope": "Epoch6 raw mean3.076616281334963 seconds includes historical GPU-control pauses, including recorded1408.0314089300227-second step. Preserve original cost; no new algorithm change or guard.",
+  "retention_snapshot": "reports/full_method_v1_sixth_epoch_retention_snapshot.json",
+  "formal_tracking_scores": "NOT_RUN",
+  "scope": "Sixth-epoch aggregation plus2420 new localization checks and80 previously verified records reused by exact raw SHA; registered checkpoint hash, single-file retention and live processes. No earlier record replay, model/optimizer reload, CUDA RNG restore or benchmark.",
+  "training_protocol_changed": false,
+  "new_iteration_started": false
+}
