@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-03T20:04:39.773341+08:00",
-  "objective": "\u5b9e\u73b0\u5e76\u8bad\u7ec3\u5b8c\u6574\u7684\u7edf\u4e00RGB-X\u4e09\u4e2a\u6a21\u5757\uff0c\u5b8c\u6574\u8bc4\u6d4b\u73b0\u6709\u4e09\u96c6\uff1b\u82e5\u672a\u5168\u9762\u8d85\u8fc7\u540c\u534f\u8baebaseline\uff0c\u5219\u4f9d\u636e\u7ed3\u679c\u6301\u7eed\u5b9a\u4f4d\u95ee\u9898\u5e76\u4f18\u5316\u66f4\u65b0\u548c\u878d\u5408\u6a21\u5757\u3002",
+  "updated_at": "2026-10-03T21:05:48.779790+08:00",
+  "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -54,12 +54,48 @@
     ],
     "report_all_regressions": true,
     "published_numbers_are_context_not_local_measurements": true,
-    "tests_are_not_used_as_update_checks_or_training_samples": true
+    "tests_are_not_used_as_update_checks_or_training_samples": true,
+    "engineering_reference_gate": "Preserve the existing requirement: all seven headline metrics strictly improve over the author reference measured with the same frozen data and protocols.",
+    "fair_method_evidence": {
+      "reference_vs_method_is_not_module_attribution": true,
+      "matched_initialization": "Same published joint XTrack-B checkpoint and recorded SHA256",
+      "matched_controls": [
+        "training data and splits",
+        "source repair setting",
+        "task sampling and loss normalization",
+        "trainable parameter manifest",
+        "extra training budget",
+        "seed and initialization"
+      ],
+      "required_comparisons": [
+        "ordinary AdamW fine-tuning",
+        "repaired fixed-sampling AdamW",
+        "task-adaptive-only optimizer",
+        "localization-risk selective correction",
+        "decision-making closed-loop trajectory control",
+        "PCGrad",
+        "CAGrad"
+      ],
+      "required_evidence": [
+        "independent evidence for each module",
+        "multiple seeds or explicit uncertainty analysis",
+        "complete seven headline metrics and all regressions",
+        "per-sequence and attribute results",
+        "separate data-exposure and compute-budget accounting",
+        "stronger structure or cross-dataset validation"
+      ],
+      "development_targets_percentage_points_not_guarantees": {
+        "LasHeR_SR": "about +2 or more",
+        "DepthTrack_F": "about +2 or more",
+        "VisEvent_SR": "about +1.5 to +2 or more"
+      },
+      "targets_are_not_publication_rules_or_SOTA_claims": true
+    }
   },
   "routing_implementation_repairs": "Record separately from method contribution; independent correction and optimizer ablations deferred until full-method result",
   "checkpoint_and_result_root": "/home/gaob/rgbx-full-method",
-  "handoff": "docs/RGB-X_\u7814\u7a76\u4e0e\u5b9e\u9a8c\u5b8c\u6574\u4ea4\u63a5_2026-10-02.md",
-  "goal_tool_note": "create_goal rejected replacement because old monitoring goal is unfinished. This artifact records the user's newer objective; no old training completion is claimed.",
+  "handoff": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+  "goal_tool_note": "当前系统goal仍为active的“监控训练顺利进行”。工具仅支持创建目标或修改状态，不支持改写未完成目标的objective；没有把旧目标虚报完成。用户最新完整执行目标及验收要求以本文件为准。",
   "actual_run_id": "xtrack_full_method_v1_s2026",
   "actual_controller_pid": 1603676,
   "actual_rank_pids": [
@@ -71,12 +107,13 @@
   "tracking_scores": "NOT_RUN",
   "objective_met": false,
   "next_iteration_candidate": {
-    "status": "PROPOSED_NOT_RUN",
+    "status": "PLANNED_NOT_RUN",
     "candidate_distance_weight": 0,
     "evidence": "reports/full_method_v1_cost_decomposition.json",
-    "decision": "Review full-run selection statistics and complete benchmark scores before changing the current fixed run.",
-    "comparison": "Fresh paired initialization from same author release/data/budget; never silently hot-edit the active optimizer protocol.",
-    "efficacy": "UNKNOWN_NO_NEW_TRAINING_OR_BENCHMARK"
+    "decision": "Finish the fixed v1 run, endpoint audit and complete comparison, then test distance weight zero as the sole algorithm change.",
+    "comparison": "Fresh start from the same author release, repaired source, mixed 8T/8D/8E batches, seed, trainable parameters and 15-epoch budget; retain correction amplitude cap.",
+    "efficacy": "UNKNOWN_NO_NEW_TRAINING_OR_BENCHMARK",
+    "success_measure": "Fewer unrepaired localization harms while retaining learning progress; selection frequency alone is not success."
   },
   "actual_training_examples_at_snapshot": 184320,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
@@ -115,5 +152,93 @@
   "completed_epoch_statistics_scope": "First 7500 updates checked across successive epoch observers; not all updates in the later live snapshot.",
   "completed_epoch_statistics_source": "reports/full_method_v1_third_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
-  "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json"
+  "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
+  "runtime_snapshot_observed_at": "2026-10-03T20:04:39.773341+08:00",
+  "execution_goal_version": "2026-10-03-user-review-v2",
+  "ordered_next_steps": [
+    {
+      "id": "P0",
+      "status": "RUNNING",
+      "work": "Complete fixed full_method_v1: 15 epochs/37500 updates, endpoint audit, author reference and method full three-dataset evaluation. Preserve all results, including negative outcomes."
+    },
+    {
+      "id": "P1",
+      "status": "PLANNED_NOT_RUN",
+      "work": "Run one-change distance-weight-zero paired experiment; retain bounded correction and all other algorithm settings. Compare harmful accepted updates, uncorrected risks, localization/trajectory learning and complete benchmark metrics."
+    },
+    {
+      "id": "P2",
+      "status": "NOT_IMPLEMENTED_NOT_RUN",
+      "work": "Build fair A-G comparison chain from the same public initialization. Implement real ablation switches for calls, optimizer states and accounting; metadata-only modules_enabled is insufficient."
+    },
+    {
+      "id": "P3",
+      "status": "MEASURE_BEFORE_EXPANDING",
+      "work": "Measure per-sample harm distribution and small-denominator effects before changing risk scales or adding bounded training-only failure memory. Compare existing bounded linear correction with slack inequality constraints separately, with actual forward acceptance."
+    },
+    {
+      "id": "P4",
+      "status": "NOT_IMPLEMENTED_NOT_RUN",
+      "work": "Find and measure trajectory-only deterioration, then allow it to generate/select updates independently. Compare single-frame, equal-sample ground-truth-centered multi-frame and predicted-box closed loop; compare 3-frame versus longer clips and explicitly handle visibility before occlusion/reappearance claims."
+    },
+    {
+      "id": "P5",
+      "status": "AFTER_METHOD_EVIDENCE",
+      "work": "Validate on SUTrack-B224, then stronger B384 if warranted. Complete five core benchmarks later; RGBT234/VOT-RGBD2022/FE108/COESOT remain deferred for the current three-dataset development phase."
+    }
+  ],
+  "fair_comparison_chain": [
+    {
+      "id": "A",
+      "setting": "Public joint checkpoint, direct evaluation with original source",
+      "status": "QUEUED_IN_EXISTING_CONTROLLER"
+    },
+    {
+      "id": "B",
+      "setting": "Same public initialization and 15-epoch ordinary AdamW fine-tuning; original source recipe and task sampling explicitly recorded",
+      "status": "NOT_IMPLEMENTED_NOT_RUN"
+    },
+    {
+      "id": "C",
+      "setting": "Repaired source plus fixed mixed task sampling and explicit loss normalization, AdamW",
+      "status": "NOT_IMPLEMENTED_NOT_RUN"
+    },
+    {
+      "id": "D",
+      "setting": "C conditions plus task-specific adaptive optimizer statistics only",
+      "status": "NOT_IMPLEMENTED_NOT_RUN"
+    },
+    {
+      "id": "E",
+      "setting": "D plus localization risk and selective actual-displacement correction",
+      "status": "NOT_IMPLEMENTED_NOT_RUN"
+    },
+    {
+      "id": "F",
+      "setting": "E plus closed-loop trajectory control that can independently affect decisions",
+      "status": "NOT_IMPLEMENTED_NOT_RUN"
+    },
+    {
+      "id": "G",
+      "setting": "Matched PCGrad/CAGrad comparisons and SUTrack structure transfer",
+      "status": "NOT_IMPLEMENTED_NOT_RUN"
+    }
+  ],
+  "current_implementation_boundaries": {
+    "trajectory": "Local-risk acceptance plus periodic diagnostics; without active localization risks only alpha=0 is considered.",
+    "clips": "Three consecutive visible frames with finite positive boxes; one initialization, two predictions, one propagated crop. No demonstrated occlusion recovery or long-term drift result.",
+    "risk": "Task mean before positive-part risk; scale abs(before).clamp_min(1e-8). Per-sample cancellation and denominator effects are source-derived limitations, not verified performance bottlenecks.",
+    "correction": "Ridge Gram solve in restricted risk-gradient space plus amplitude cap and actual forward candidate checks; no all-target non-degradation or Pareto guarantee.",
+    "ablation": "modules_enabled currently records names; it does not disable the actual module calls or state updates.",
+    "distance_evidence": "589-update fixed-trial diagnostic: 26/27 risk events have a locally improving correction and would select nonzero alpha without distance. Counterfactual only, not new trained benchmark gain."
+  },
+  "research_claim_boundaries": [
+    "Do not attribute public-reference improvement solely to the modules.",
+    "Do not optimize correction frequency as the final objective.",
+    "Do not interpret training losses, risk statistics or preview checks as benchmark scores.",
+    "Repeated development use of current tests must be disclosed; tests never enter training update checks.",
+    "Three DDP GPUs are not three independent seeds; frames are not independent statistical trials.",
+    "No all-benchmarks-first or SOTA claim without comparable protocols and evidence."
+  ],
+  "weight_retention": "Keep one necessary active recovery checkpoint while training; after complete evaluation retain only the best measured method weight. Preserve required public inputs, source, logs, metrics, hashes and retirement receipts."
 }
