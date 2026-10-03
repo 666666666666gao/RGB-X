@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T08:45:27.147715+00:00",
+  "updated_at": "2026-10-03T18:23:05.756082+08:00",
   "objective": "\u5b9e\u73b0\u5e76\u8bad\u7ec3\u5b8c\u6574\u7684\u7edf\u4e00RGB-X\u4e09\u4e2a\u6a21\u5757\uff0c\u5b8c\u6574\u8bc4\u6d4b\u73b0\u6709\u4e09\u96c6\uff1b\u82e5\u672a\u5168\u9762\u8d85\u8fc7\u540c\u534f\u8baebaseline\uff0c\u5219\u4f9d\u636e\u7ed3\u679c\u6301\u7eed\u5b9a\u4f4d\u95ee\u9898\u5e76\u4f18\u5316\u66f4\u65b0\u548c\u878d\u5408\u6a21\u5757\u3002",
   "server": "2028",
   "gpu_indices": [
@@ -67,7 +67,7 @@
     1603688,
     1603689
   ],
-  "actual_completed_updates_at_snapshot": 2720,
+  "actual_completed_updates_at_snapshot": 5160,
   "tracking_scores": "NOT_RUN",
   "objective_met": false,
   "next_iteration_candidate": {
@@ -78,12 +78,33 @@
     "comparison": "Fresh paired initialization from same author release/data/budget; never silently hot-edit the active optimizer protocol.",
     "efficacy": "UNKNOWN_NO_NEW_TRAINING_OR_BENCHMARK"
   },
-  "actual_training_examples_at_snapshot": 65280,
+  "actual_training_examples_at_snapshot": 123840,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 1,
+  "actual_completed_epochs_at_snapshot": 2,
   "first_epoch_risk_events": 114,
   "first_epoch_nonzero_corrections": 3,
   "first_epoch_trajectory_checks": 161,
   "first_epoch_checkpoint_audit": "reports/full_method_v1_epoch1_checkpoint_audit.json",
-  "checkpoint_retention_policy": "configs/checkpoint_retention_policy.json"
+  "checkpoint_retention_policy": "configs/checkpoint_retention_policy.json",
+  "completed_epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 114,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 161,
+      "mean_step_seconds": 2.415328442759649
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 2,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 2.389823864249629
+    }
+  ],
+  "completed_epoch_statistics_scope": "First 5000 updates only; not all updates at the later live snapshot.",
+  "completed_epoch_statistics_source": "reports/full_method_v1_second_epoch_observer.json",
+  "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json"
 }

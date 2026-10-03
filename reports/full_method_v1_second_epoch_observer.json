@@ -1,0 +1,86 @@
+{
+  "status": "SECOND_EPOCH_AND_ONE_CHECKPOINT_RETENTION_VERIFIED_NOT_BENCHMARK",
+  "observer_pid": 1635454,
+  "first_check_at": "2026-10-03T18:10:00+08:00",
+  "poll_seconds": 240,
+  "started_at": "2026-10-03T09:26:49.340830+00:00",
+  "training_mutations": 0,
+  "observed_at": "2026-10-03T10:22:00.265174+00:00",
+  "global_step": 5130,
+  "latest_epoch": 3,
+  "completed_epochs": 2,
+  "retention_handled_epoch": 2,
+  "controller_status": "RUNNING",
+  "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0002.pth.tar",
+  "checkpoint_bytes": 477077267,
+  "checkpoint_sha256": "43d793550254d71299dc13ee70273220820bac3d3bad150faabce5fda82d6f90",
+  "completed_first_two_epoch_updates": 5000,
+  "epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 114,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 161,
+      "mean_step_seconds": 2.415328442759649
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 2,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 2.389823864249629
+    }
+  ],
+  "first_two_epoch_localization_all_finite": true,
+  "processes_alive": {
+    "1603676": true,
+    "1603680": true,
+    "1603687": true,
+    "1603688": true,
+    "1603689": true,
+    "1629089": true
+  },
+  "retention": {
+    "status": "ACTIVE_KEEP_ONE_COMPLETED_RECOVERY_CHECKPOINT",
+    "retention_worker_pid": 1629089,
+    "started_at": "2026-10-03T08:44:33.217797+00:00",
+    "run_id": "xtrack_full_method_v1_s2026",
+    "poll_seconds": 240,
+    "policy": "During active training retain only the most recently completed named checkpoint. It includes model, optimizer and three-rank RNG. Retire older completed epochs and the byte-identical latest alias.",
+    "best_by_benchmark": "NOT_DETERMINED_NO_FORMAL_SCORES",
+    "after_training": "Retain the final checkpoint until complete same-protocol evaluation and diagnosis; then preserve only the best measured method checkpoint across completed candidates.",
+    "reference_and_initialization_inputs": "Outside this cleanup scope and retained.",
+    "deleted": [
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/latest.pth.tar",
+        "bytes": 477077203,
+        "sha256": "ab7d5111764a7b79b7c400f5958f330bff45297caf03e05e25ad56c118e4b449"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0001.pth.tar",
+        "bytes": 477077203,
+        "sha256": "ab7d5111764a7b79b7c400f5958f330bff45297caf03e05e25ad56c118e4b449"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/latest.pth.tar",
+        "bytes": 477077267,
+        "sha256": "43d793550254d71299dc13ee70273220820bac3d3bad150faabce5fda82d6f90"
+      }
+    ],
+    "removed_file_bytes": 1431231673,
+    "handled_completed_epoch": 2,
+    "training_parameters_modified": false,
+    "script_sha256": "e903d1f01fea081abe8d85aadcbd07b09f31775b534cdf90d9d50ec622bc6799",
+    "retained_checkpoint": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0002.pth.tar",
+      "bytes": 477077267,
+      "sha256": "43d793550254d71299dc13ee70273220820bac3d3bad150faabce5fda82d6f90"
+    },
+    "alias_retired": true,
+    "observed_at": "2026-10-03T10:20:38.845210+00:00"
+  },
+  "formal_tracking_scores": "NOT_RUN",
+  "scope": "Metadata, full first-two-epoch update records and actual single-file retention. No repeated model reload or complete fifteen-epoch/benchmark claim."
+}

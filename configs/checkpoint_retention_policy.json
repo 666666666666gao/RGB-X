@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-03T08:45:27.147715+00:00",
+  "updated_at": "2026-10-03T18:23:05.756082+08:00",
   "authorization": "User explicitly requests timely cleanup of our unused generated weights and retention only of the best measured weight.",
   "precheck_cleanup": "reports/precheck_weight_cleanup_20261003.json",
   "active_training": "One most recently completed recovery checkpoint, including model, optimizer and rank RNG; retire older completed epochs and byte-identical latest alias.",
   "activation_gate": "Actual first-epoch CPU audit PASS before launching scripts/retain_full_method_checkpoints.py once.",
-  "retention_worker_status": "ACTUALLY_RUNNING_FIRST_ALIAS_RETIRED",
+  "retention_worker_status": "ACTUALLY_RUNNING_HANDLED_COMPLETED_EPOCH_2",
   "metric_selection": "Complete same-protocol LasHeR SR/PR, DepthTrack F/Recall/Precision and VisEvent SR/PR; never label a training-loss minimum as the best tracking checkpoint.",
   "best_method_status": "UNDETERMINED_FORMAL_METRICS_NOT_RUN",
   "after_complete_evaluation": "Keep the best fully measured method candidate and the current recovery point of an active next iteration. Retire other completed candidate weights after recording full metrics and diagnosis.",
@@ -19,5 +19,13 @@
   "activation_evidence": "reports/full_method_v1_checkpoint_retention_activation.json",
   "latest_recovery_path": "Read last_checkpoint from /home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/run.json; latest.pth.tar is a retired duplicate.",
   "generated_weight_files_removed_at_activation": 6,
-  "generated_weight_file_bytes_removed_at_activation": 2826002092
+  "generated_weight_file_bytes_removed_at_activation": 2826002092,
+  "latest_observation_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
+  "latest_observed_checkpoint": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0002.pth.tar",
+    "bytes": 477077267,
+    "sha256": "43d793550254d71299dc13ee70273220820bac3d3bad150faabce5fda82d6f90"
+  },
+  "generated_weight_files_removed_at_latest_observation": 8,
+  "generated_weight_file_bytes_removed_at_latest_observation": 3780156562
 }
