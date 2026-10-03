@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T07:24:48.187428+00:00",
-  "source_commit": "3f11ffa2e01b9e4ab65b32b6dceaaba6d0a51524",
-  "document_sha256": "ed99d421ae61ab6ce4f02ad21bcb8e3bc366955cb94a2dc39ee3182017e81dda",
-  "document_bytes": 87178,
+  "verified_at": "2026-10-03T07:51:44.726976+00:00",
+  "source_commit": "143909e361693c2cc27a82927427fdbd84b45fae",
+  "document_sha256": "9d3222d0dd47c2b288e23f0eeb576fbdc6a5e26ef1e01fc54d27d0fbaeae0fb2",
+  "document_bytes": 89724,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,8 +14,12 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "diagnostic_observed_at": "2026-10-03T07:18:49.701657+00:00",
-  "diagnostic_prefix_updates": 589,
-  "actual_nonzero_corrections": 0,
-  "counterfactual_fixed_trial_nonzero_without_distance": 26
+  "training_observed_at": "2026-10-03T07:48:01.030853+00:00",
+  "complete_updates_at_snapshot": 1310,
+  "risk_events_at_snapshot": 66,
+  "actual_nonzero_corrections_at_snapshot": 2,
+  "actual_accepted_steps": [
+    1069,
+    1308
+  ]
 }
