@@ -1,0 +1,15 @@
+{
+  "status": "PASS_LOCAL_AND_SERVER_FILE_VERIFIED",
+  "native_download_session": 60465,
+  "download_exit_code": 0,
+  "native_transfer_session": 64360,
+  "transfer_exit_code": 0,
+  "bytes": 441674839,
+  "sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+  "source": "https://huggingface.co/taryya/XTrack/resolve/main/XTrack_Base.pth.tar",
+  "local": "C:/Users/gb/.codex_tmp/XTrack_Base.pth.tar",
+  "remote": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+  "endpoint_cpu_audit": "reports/author_release_endpoint_audit.json",
+  "formal_tracking_scores": "NOT_RUN",
+  "remote_initial_network_failure": "reports/author_release_download_remote_failed.json"
+}

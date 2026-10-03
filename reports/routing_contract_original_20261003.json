@@ -1,0 +1,30 @@
+{
+  "status": "FAIL_ROUTING_CONTRACT",
+  "checks": {
+    "top_k_and_fusion_weights_translation_invariant": true,
+    "estimated_load_translation_invariant": false,
+    "router_supervision_uses_one_softmax": false,
+    "attention_and_ffn_supervision_both_included_once": false
+  },
+  "load_before": [
+    1.9547827243804932,
+    1.8850266933441162,
+    1.123099684715271,
+    0.4399532079696655,
+    0.2306910753250122,
+    0.0772295594215393
+  ],
+  "load_after": [
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0
+  ],
+  "append_arguments": [
+    "logits_attn",
+    "logits_attn"
+  ],
+  "role": "CPU_SYNTHETIC_IMPLEMENTATION_CHECK_NOT_TRACKING_ACCURACY"
+}

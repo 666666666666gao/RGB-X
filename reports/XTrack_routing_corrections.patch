@@ -1,0 +1,38 @@
+diff --git a/lib/models/layers/moe_lora.py b/lib/models/layers/moe_lora.py
+index d3071ac..5ae33a7 100644
+--- a/lib/models/layers/moe_lora.py
++++ b/lib/models/layers/moe_lora.py
+@@ -364,6 +364,7 @@ class MoE_lora(nn.Module):
+             noise_stddev = ((self.softplus(raw_noise_stddev) + noise_epsilon))
+             noisy_logits = clean_logits + (torch.randn_like(clean_logits) * noise_stddev)
+             logits = noisy_logits
++            raw_top_values = noisy_logits.topk(min(self.k + 1, self.num_experts), dim=1).values
+         else:
+             logits = clean_logits
+ 
+@@ -380,10 +381,10 @@ class MoE_lora(nn.Module):
+         gates = zeros.scatter(1, top_k_indices, top_k_gates)
+ 
+         if self.noisy_gating and self.k < self.num_experts and train:
+-            load = (self._prob_in_top_k(clean_logits, noisy_logits, noise_stddev, top_logits)).sum(0)
++            load = (self._prob_in_top_k(clean_logits, noisy_logits, noise_stddev, raw_top_values)).sum(0)
+         else:
+             load = self._gates_to_load(gates)
+-        return gates, load, self.softmax(logits), top_k_logits
++        return gates, load, logits, top_k_logits
+ 
+     def forward(self, x, z, x0, z0, loss_coef=1e-2):
+         """Args:
+diff --git a/lib/models/xtrack/vit_ce_adapter.py b/lib/models/xtrack/vit_ce_adapter.py
+index c0acdf0..5a6fe50 100644
+--- a/lib/models/xtrack/vit_ce_adapter.py
++++ b/lib/models/xtrack/vit_ce_adapter.py
+@@ -216,7 +216,7 @@ class VisionTransformerCE(VisionTransformer):
+                     ce_keep_rate)
+             loss_prompt_balance = loss_prompt_balance + loss_balance
+             logits_prompt.append(logits_attn)
+-            logits_prompt.append(logits_attn)
++            logits_prompt.append(logits_ffn)
+             #print(i, ": ", blk.keep_ratio_search)
+             if self.ce_loc is not None and i in self.ce_loc:
+                 removed_indexes_s.append(removed_index_s)

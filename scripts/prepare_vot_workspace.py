@@ -38,7 +38,7 @@ if data['dataset'] == 'DepthTrack':
 else:
     analyses.extend([dict(type='multistart_ar', name='per_sequence_ar'),
                      dict(type='multistart_eao_curves', name='per_sequence_eao', high=755)])
-tracker_id = 'xtrack_ep65_s2026_' + args.expected_sha256[:12]
+tracker_id = 'xtrack_joint_s2026_' + args.expected_sha256[:12]
 Workspace.initialize(str(root), dict(stack='stack.yaml', sequences=data['root'],
                                     registry=['trackers.ini']), download=False)
 (root/'stack.yaml').write_text(yaml.safe_dump(stack, sort_keys=False))
@@ -47,7 +47,7 @@ command = ['/home/gaob/conda/envs/rgbx-eval/bin/python', str(project/'scripts/ev
            '--config', identity['config'], '--checkpoint', identity['checkpoint'],
            '--expected-sha256', args.expected_sha256, '--terminal-audit', str(Path(args.terminal_audit).resolve()),
            '--seed', '2026']
-(root/'trackers.ini').write_text('[{}]\nlabel = XTrack-B joint epoch65 seed2026\nprotocol = trax\ncommand = {}\n'
+(root/'trackers.ini').write_text('[{}]\nlabel = XTrack-B joint checkpoint, inference seed2026\nprotocol = trax\ncommand = {}\n'
                               'timeout = 120\nenv_PYTHONPATH = {}:{}\n'.format(
                                   tracker_id, shlex.join(command), project/'third_party/XTrack', project/'scripts'))
 identity.update(dataset=data['dataset'], dataset_audit=str(data_path),

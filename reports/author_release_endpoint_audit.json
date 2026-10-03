@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "role": "joint_rgbx_checkpoint_audit_not_tracking_benchmark",
+  "endpoint_kind": "author_release",
+  "checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+  "checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+  "checkpoint_bytes": 441674839,
+  "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+  "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+  "strict_model_load": true,
+  "all_model_tensors_finite": true,
+  "observed_at": "2026-10-03T06:16:49.393318+00:00",
+  "formal_tracking_scores": "NOT_RUN",
+  "source": "https://huggingface.co/taryya/XTrack/resolve/main/XTrack_Base.pth.tar",
+  "training_provenance": "AUTHOR_RELEASE_NOT_LOCAL_REPRODUCTION",
+  "author_saved_epoch": 62
+}

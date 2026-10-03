@@ -1,0 +1,63 @@
+{
+  "updated_at": "2026-10-03T06:35:36.563474+00:00",
+  "objective": "实现并训练完整的统一RGB-X三个模块，完整评测现有三集；若未全面超过同协议baseline，则依据结果持续定位问题并优化更新和融合模块。",
+  "server": "2028",
+  "gpu_indices": [
+    0,
+    1,
+    2
+  ],
+  "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
+  "status": "SOURCE_IMPLEMENTED_AND_REVIEWED_REAL_SANITY_PENDING",
+  "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
+  "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
+  "modules": [
+    "Routing-condition-consistent response and box localization risk on actual candidate parameter displacement",
+    "Task-specific adaptive optimizer statistics and selective risk correction of trainable shared content/router parameters",
+    "Training-only predicted-box-driven closed-loop short-trajectory acceptance"
+  ],
+  "active_train_datasets": [
+    "LasHeR_train",
+    "DepthTrack_train",
+    "VisEvent_train"
+  ],
+  "active_test_datasets": [
+    "LasHeR",
+    "DepthTrack",
+    "VisEvent"
+  ],
+  "deferred_test_datasets": [
+    "RGBT234",
+    "VOT-RGBD2022",
+    "FE108",
+    "COESOT"
+  ],
+  "acceptance": {
+    "full_dataset_coverage": true,
+    "required_headlines": [
+      "LasHeR_SR",
+      "LasHeR_PR",
+      "DepthTrack_F",
+      "DepthTrack_Recall",
+      "DepthTrack_Precision",
+      "VisEvent_SR",
+      "VisEvent_PR"
+    ],
+    "all_required_headlines_must_improve_over_same_protocol_reference": true,
+    "additional_reports": [
+      "all_available_official_supplemental_metrics",
+      "curves",
+      "attributes",
+      "per_sequence",
+      "failures",
+      "training_and_inference_cost"
+    ],
+    "report_all_regressions": true,
+    "published_numbers_are_context_not_local_measurements": true,
+    "tests_are_not_used_as_update_checks_or_training_samples": true
+  },
+  "routing_implementation_repairs": "Record separately from method contribution; independent correction and optimizer ablations deferred until full-method result",
+  "checkpoint_and_result_root": "/home/gaob/rgbx-full-method",
+  "handoff": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+  "goal_tool_note": "create_goal rejected replacement because old monitoring goal is unfinished. This artifact records the user's newer objective; no old training completion is claimed."
+}

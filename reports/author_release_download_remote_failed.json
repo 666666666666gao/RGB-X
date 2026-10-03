@@ -1,0 +1,9 @@
+{
+  "status": "FAILED_NETWORK_UNREACHABLE",
+  "native_session_id": 43629,
+  "exit_code": 1,
+  "source": "https://huggingface.co/taryya/XTrack/resolve/main/XTrack_Base.pth.tar",
+  "script": "scripts/fetch_author_baseline.py",
+  "exception": "urllib.error.URLError: <urlopen error [Errno 101] Network is unreachable>",
+  "next_action": "Download the same content on the local workstation, verify expected size and SHA256, then transfer to 2028. No automatic retry loop."
+}

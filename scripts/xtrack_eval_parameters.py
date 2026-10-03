@@ -8,12 +8,25 @@ def verified_endpoint(config_path, checkpoint_path, expected_sha256, terminal_au
     audit_path = Path(terminal_audit_path).resolve(strict=True)
     audit = json.loads(audit_path.read_text())
     assert audit['status'] == 'PASS'
-    assert audit['role'] == 'formal_terminal_checkpoint_audit_not_tracking_benchmark'
-    assert audit['run_id'] == 'xtrack_b_adamw_3gpu_s2026_20261002'
-    assert audit['epoch'] == 65 and audit['seed'] == 2026
+    if audit['role'] == 'formal_terminal_checkpoint_audit_not_tracking_benchmark':
+        assert audit['run_id'] == 'xtrack_b_adamw_3gpu_s2026_20261002'
+        assert audit['epoch'] == 65 and audit['seed'] == 2026
+    else:
+        assert audit['role'] == 'joint_rgbx_checkpoint_audit_not_tracking_benchmark'
+        assert audit['endpoint_kind'] in ['author_release', 'full_method']
+        assert audit['strict_model_load'] and audit['all_model_tensors_finite']
+        if audit['endpoint_kind'] == 'author_release':
+            assert audit['checkpoint_sha256'] == '3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36'
+        else:
+            assert audit['run_id'] == 'xtrack_full_method_v1_s2026'
+            assert audit['epoch'] == 15 and audit['global_step'] == 37500
+            assert audit['controller_exit_code'] == 0
+            assert audit['frozen_tensors_unchanged'] and audit['replicas_identical']
     checkpoint = Path(checkpoint_path).resolve(strict=True)
     config = Path(config_path).resolve(strict=True)
     assert checkpoint == Path(audit['checkpoint']).resolve(strict=True)
+    if audit['role'] == 'joint_rgbx_checkpoint_audit_not_tracking_benchmark':
+        assert config == Path(audit['config']).resolve(strict=True)
     assert expected_sha256 == audit['checkpoint_sha256']
     assert hashlib.sha256(config.read_bytes()).hexdigest() == audit['config_sha256']
     digest = hashlib.sha256()

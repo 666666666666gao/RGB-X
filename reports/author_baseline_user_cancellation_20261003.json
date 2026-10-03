@@ -1,0 +1,38 @@
+{
+  "run_id": "xtrack_b_adamw_3gpu_s2026_20261002",
+  "requested_at": "2026-10-03T13:25:35.499314+08:00",
+  "reason": "User instructed to stop baseline reproduction and prioritize full three-module method training and iterative improvement against baseline.",
+  "status": "USER_CANCELLED_INCOMPLETE_NOT_BENCHMARKED",
+  "launcher_pid_signaled": 268542,
+  "launcher_signal": "SIGINT",
+  "scheduled_read_only_observer_pid_signaled": 1520813,
+  "archive": "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003",
+  "archived_files": [
+    "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003/xtrack_b_adamw_3gpu_s2026_20261002.json",
+    "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003/train_epoch_history_20261002.json",
+    "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003/xtrack_b_adamw_3gpu.yaml",
+    "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003/xtrack_b_adamw_3gpu_s2026_20261002.log",
+    "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003/xtrack-rgbx_b_adamw_3gpu.log"
+  ],
+  "last_printed_rows_at_request": [
+    "[train: 30, 1650 / 2500] FPS: 9.0 (8.7)  ,  DataTime: 0.009 (0.005)  ,  ForwardTime: 0.871  ,  TotalTime: 0.885  ,  Loss/total: 1.07928  ,  Loss/giou: 0.20465  ,  Loss/l1: 0.01799  ,  Loss/location: 0.33392  ,  balance: 0.07360  ,  classification: 17.25043  ,  IoU: 0.80940",
+    "[train: 30, 1650 / 2500] FPS: 9.0 (8.7)  ,  DataTime: 0.008 (0.005)  ,  ForwardTime: 0.872  ,  TotalTime: 0.885  ,  Loss/total: 1.06303  ,  Loss/giou: 0.20072  ,  Loss/l1: 0.01747  ,  Loss/location: 0.32796  ,  balance: 0.07379  ,  classification: 17.25028  ,  IoU: 0.81278",
+    "[train: 30, 1650 / 2500] FPS: 9.0 (8.7)  ,  DataTime: 0.008 (0.004)  ,  ForwardTime: 0.873  ,  TotalTime: 0.885  ,  Loss/total: 1.06333  ,  Loss/giou: 0.20148  ,  Loss/l1: 0.01761  ,  Loss/location: 0.32621  ,  balance: 0.07359  ,  classification: 17.25021  ,  IoU: 0.81219"
+  ],
+  "completed_training_epochs_from_last_strict_capture": 29,
+  "baseline_final_training_completed": false,
+  "baseline_formal_evaluation": "NOT_RUN",
+  "final_checkpoint_exists": false,
+  "finalized_at": "2026-10-03T13:38:30.132602+08:00",
+  "original_processes_absent": true,
+  "original_monitor_receipt_exit_code": 1,
+  "original_monitor_receipt_status_preserved": "FAILED",
+  "last_metric": "[train: 30, 1650 / 2500] FPS: 9.0 (8.7)  ,  DataTime: 0.008 (0.004)  ,  ForwardTime: 0.873  ,  TotalTime: 0.885  ,  Loss/total: 1.06333  ,  Loss/giou: 0.20148  ,  Loss/l1: 0.01761  ,  Loss/location: 0.32621  ,  balance: 0.07359  ,  classification: 17.25021  ,  IoU: 0.81219",
+  "gpu_snapshot": "0, 9 MiB, 0 %\n1, 9 MiB, 0 %\n2, 33 MiB, 0 %",
+  "final_archive_files": [
+    "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003/final-xtrack_b_adamw_3gpu_s2026_20261002.json",
+    "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003/final-xtrack_b_adamw_3gpu_s2026_20261002.log",
+    "/home/gaob/rgbx-risk-archives/author_baseline_cancelled_20261003/final-xtrack-rgbx_b_adamw_3gpu.log"
+  ],
+  "note": "Original monitor marks an interrupted run FAILED. This supplemental receipt records the user-requested cancellation; it is not a numerical training failure or a completed baseline."
+}

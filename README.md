@@ -1,35 +1,15 @@
-# RGB-X 定位风险驱动的联合训练
+# RGB-X 定位风险驱动联合训练
 
-2028 服务器项目：`/data/gb/rgbx-risk`。
-Conda 环境：`/data/gb/conda/envs/rgbx-risk`。
+2028项目：`/data/gb/rgbx-risk`；Conda：`/data/gb/conda/envs/rgbx-risk`。
 
-研究范围是 RGB-T、RGB-D、RGB-Event 联合训练，同一份模型权重支持三类任务。
-主研发基线为官方 XTrack-B；第二结构为 SUTrack-B224，B384 放在方法有效后。
-训练数据复用服务器已有 LasHeR、DepthTrack、VisEvent，不复制原始图像。
+一份联合权重支持RGB-T、RGB-D、RGB-Event，复用现有LasHeR、DepthTrack、VisEvent。
 
-截至2026-10-03 13:02（北京时间），单卡与三卡DDP预检通过；三卡XTrack-B联合AdamW基线完成29轮和五次训练期验证，进入第30/65轮。每卡batch8、全局24、seed2026。尚无正式测试集指标。
+用户最新目标：直接训练完整三个模块，以完整三集指标超过baseline为目标，未达到则诊断并继续优化。原AdamW复现已按用户要求中断：完成29轮与第30轮1650步，没有可评测终轮权重。原始日志及中断报告保留。
 
-部署、数据、参数范围、实测结果、问题和后续计划统一维护在唯一的 [研究与实验交接文档](docs/RGB-X_研究与实验完整交接_2026-10-02.md)。README 只提供入口；JSON、日志和补丁保留作原始证据。方法模块、PCGrad/CAGrad/AdaTask 等对照和 SUTrack 训练尚未实施。文献指标是作者报告，不是本项目复现结果。
+当前完整方法源码已实现，独立审阅与三卡真实预检尚待通过，新GPU训练尚未启动，正式跟踪结果仍0/3。使用作者公开XTrack-B联合权重初始化与同版本评测参考，额外微调预算会单独报告；不宣称与作者原训练同预算。
 
-激活环境：
+协议：`configs/full_method_v1.json`；当前目标：`configs/current_goal.json`。2028仅使用三卡0/1/2。其他四个测试集暂缓。
 
-```bash
-source /data/liangds/anaconda3/etc/profile.d/conda.sh
-conda activate /data/gb/conda/envs/rgbx-risk
-cd /data/gb/rgbx-risk
-```
+唯一交接文档：[研究与实验完整交接](docs/RGB-X_研究与实验完整交接_2026-10-02.md)。项目、桌面与服务器维护同一份字节一致文档，JSON、日志和补丁记录原始证据。
 
-官方代码来源：[XTrack](https://github.com/supertyd/XTrack)、[SUTrack](https://github.com/chenxin-dlut/SUTrack)。
-
-当前运行使用 `scripts/train_xtrack_3gpu.sh` 和配置 `rgbx_b_adamw_3gpu`，run ID 为 `xtrack_b_adamw_3gpu_s2026_20261002`。`scripts/run_xtrack_job.py` 在 tmux 会话 `rgbx_adamw_20261002` 内每 240 秒记录状态；SSH 断开不会终止它。
-
-65 轮训练只保存最终 checkpoint，没有中间恢复点。不要在正在训练的项目上重跑初始化或启动命令。只读查看：
-
-```bash
-cat reports/xtrack_b_adamw_3gpu_s2026_20261002.json
-tail -n 6 outputs/xtrack_b_adamw_3gpu_s2026_20261002/logs/xtrack-rgbx_b_adamw_3gpu.log
-```
-
-克隆本项目后，在全新目录执行 `bash scripts/fetch_sources.sh` 获取固定提交的作者源码；完整部署步骤见主交接文档第 15 节。作者源码使用其原有许可证，项目保留来源和修改补丁。仓库不包含数据、权重、Conda 环境或训练输出。
-
-按最新安排，先完成现有LasHeR、DepthTrack、VisEvent的完整训练、全量评测和配对改进；其余四个测试集暂缓。所有指标及回退统一登记到唯一交接文档，当前尚未证明全面超过baseline。
+官方来源：[XTrack](https://github.com/supertyd/XTrack)、[公开权重](https://huggingface.co/taryya/XTrack/tree/main)、[SUTrack](https://github.com/chenxin-dlut/SUTrack)。仓库不上传数据、模型权重或Conda环境。

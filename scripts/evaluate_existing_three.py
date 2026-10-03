@@ -18,7 +18,7 @@ parser.add_argument('--output-root', required=True)
 args = parser.parse_args()
 terminal_path = Path(args.terminal_audit).resolve(strict=True)
 terminal = json.loads(terminal_path.read_text())
-config = str(PROJECT/'configs/xtrack_b_adamw_3gpu.yaml')
+config = terminal['config'] if terminal['role'] == 'joint_rgbx_checkpoint_audit_not_tracking_benchmark' else str(PROJECT/'configs/xtrack_b_adamw_3gpu.yaml')
 identity = verified_endpoint(config,terminal['checkpoint'],terminal['checkpoint_sha256'],str(terminal_path))
 gpu_snapshot = subprocess.check_output(['nvidia-smi','--query-gpu=index,memory.used','--format=csv,noheader,nounits'],text=True)
 cards = [tuple(int(value.strip()) for value in line.split(',')) for line in gpu_snapshot.splitlines()]

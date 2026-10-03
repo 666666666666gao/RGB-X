@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checks": {
+    "top_k_and_fusion_weights_translation_invariant": true,
+    "estimated_load_translation_invariant": true,
+    "router_supervision_uses_one_softmax": true,
+    "attention_and_ffn_supervision_both_included_once": true
+  },
+  "load_before": [
+    1.9227226972579956,
+    1.8213979005813599,
+    0.22770905494689941,
+    0.06818407773971558,
+    0.027247458696365356,
+    0.0062857866287231445
+  ],
+  "load_after": [
+    1.9227226972579956,
+    1.8213979005813599,
+    0.22770920395851135,
+    0.06818416714668274,
+    0.027247488498687744,
+    0.0062857866287231445
+  ],
+  "append_arguments": [
+    "logits_attn",
+    "logits_ffn"
+  ],
+  "role": "CPU_SYNTHETIC_IMPLEMENTATION_CHECK_NOT_TRACKING_ACCURACY"
+}
