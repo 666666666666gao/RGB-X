@@ -1,9 +1,9 @@
 {
   "status": "PASS",
   "role": "source_and_preparation_artifact_sync_not_experiment_acceptance",
-  "verified_at": "2026-10-03T08:45:41.132748+08:00",
+  "verified_at": "2026-10-03T09:23:30.497201+08:00",
   "server": "2028",
-  "project_publication_commit": "ab08131b7bb87c75c30172f7aebdae306c17bcd4",
+  "project_publication_commit": "11850c100fa3bdea8e3e7a3f3502116fc5744284",
   "identical_owned_files": 3,
   "controller_execution": "NOT_STARTED",
   "benchmark_execution": "NOT_RUN",
@@ -11,15 +11,15 @@
   "files": {
     "README.md": {
       "bytes": 2428,
-      "sha256": "dfdc477e17a09ba440536135d03d8c52734c92c264565f3acfd13293fda8b4f7"
+      "sha256": "44998267dc406e0c38acbc354aff3058a726ec8ed8b2699a225ff7efd531a063"
     },
     "docs/RGB-X_研究与实验完整交接_2026-10-02.md": {
-      "bytes": 72371,
-      "sha256": "4dd02773fee0a5585974bada95bb89f1b2fc1ab79f0486d30cdbab4e31373876"
+      "bytes": 72528,
+      "sha256": "b3aaedad69b5310111026b67fb3a6ae1a444c67cec1d7ed3192e62200d606111"
     },
     "reports/train_epoch_history_20261002.json": {
-      "bytes": 54355,
-      "sha256": "f9d5c98a70daf612ed8f16127351509aad5176fbf610d0284c9afbf1a9701a3c"
+      "bytes": 56337,
+      "sha256": "5d6e30ab9d1677b6d2ea827c07b7b5ce85b37425e59474bdd7397c8a58fbcc0f"
     }
   }
 }
