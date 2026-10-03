@@ -1,0 +1,265 @@
+{
+  "status": "EARLY_SELECTION_DIAGNOSTIC_NOT_EFFICACY",
+  "observed_at": "2026-10-03T07:05:04.234153+00:00",
+  "complete_updates": 241,
+  "risk_event_updates": 11,
+  "accepted_nonzero_corrections": 0,
+  "events": [
+    {
+      "global_step": 2,
+      "selected_alpha": 0.0,
+      "correction_norm": 2.416489905954222e-06,
+      "relative_shared_correction": 0.0003959127524492148,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 4.586647264659405e-06,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 4.601176897267578e-06,
+          "delta_vs_original": 1.4529632608173415e-08
+        },
+        {
+          "alpha": 1.0,
+          "cost": 1.9714658265002072e-05,
+          "delta_vs_original": 1.5128011000342667e-05
+        }
+      ]
+    },
+    {
+      "global_step": 4,
+      "selected_alpha": 0.0,
+      "correction_norm": 1.9592844182625413e-05,
+      "relative_shared_correction": 0.004351785542705257,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 3.602464494179003e-05,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 7.864170765969902e-05,
+          "delta_vs_original": 4.261706271790899e-05
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.00010075748286908492,
+          "delta_vs_original": 6.47328379272949e-05
+        }
+      ]
+    },
+    {
+      "global_step": 19,
+      "selected_alpha": 0.0,
+      "correction_norm": 4.649895345210098e-05,
+      "relative_shared_correction": 0.019755923456183645,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 8.023744157981128e-05,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.0002626878267619759,
+          "delta_vs_original": 0.0001824503851821646
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.00045354152098298073,
+          "delta_vs_original": 0.00037330407940316945
+        }
+      ]
+    },
+    {
+      "global_step": 25,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.00012827331374865025,
+      "relative_shared_correction": 0.05808984720314936,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0009392889915034175,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.0015355853829532862,
+          "delta_vs_original": 0.0005962963914498687
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.002187939826399088,
+          "delta_vs_original": 0.0012486508348956704
+        }
+      ]
+    },
+    {
+      "global_step": 60,
+      "selected_alpha": 0.0,
+      "correction_norm": 7.846037988201715e-06,
+      "relative_shared_correction": 0.0037934936461737454,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 1.86777142516803e-05,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 5.651749961543828e-05,
+          "delta_vs_original": 3.783978536375798e-05
+        },
+        {
+          "alpha": 1.0,
+          "cost": 8.657293801661581e-05,
+          "delta_vs_original": 6.789522376493551e-05
+        }
+      ]
+    },
+    {
+      "global_step": 64,
+      "selected_alpha": 0.0,
+      "correction_norm": 4.518133937381208e-05,
+      "relative_shared_correction": 0.02154840286147739,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 0.00011236271529924124,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.00026589445769786835,
+          "delta_vs_original": 0.0001535317423986271
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0004904900561086833,
+          "delta_vs_original": 0.0003781273408094421
+        }
+      ]
+    },
+    {
+      "global_step": 72,
+      "selected_alpha": 0.0,
+      "correction_norm": 6.04099768679589e-05,
+      "relative_shared_correction": 0.029262637767665873,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 0.00030016942764632404,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.0007619723910465837,
+          "delta_vs_original": 0.0004618029634002596
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0009197378531098366,
+          "delta_vs_original": 0.0006195684254635125
+        }
+      ]
+    },
+    {
+      "global_step": 141,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.0003142233472317457,
+      "relative_shared_correction": 0.1587118223096128,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0007952777668833733,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.002135461661964655,
+          "delta_vs_original": 0.0013401838950812817
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0035893486347049475,
+          "delta_vs_original": 0.002794070867821574
+        }
+      ]
+    },
+    {
+      "global_step": 164,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.00022138352505862713,
+      "relative_shared_correction": 0.11097186322579411,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 0.00041227356996387243,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.001526279142126441,
+          "delta_vs_original": 0.0011140055721625686
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0026324368081986904,
+          "delta_vs_original": 0.002220163238234818
+        }
+      ]
+    },
+    {
+      "global_step": 212,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.00013256155943963677,
+      "relative_shared_correction": 0.06722119966298935,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 0.00029041850939393044,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.00089691870380193,
+          "delta_vs_original": 0.0006065001944079995
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0014886637218296528,
+          "delta_vs_original": 0.0011982452124357224
+        }
+      ]
+    },
+    {
+      "global_step": 221,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.0001795700954971835,
+      "relative_shared_correction": 0.08557082289699017,
+      "candidate_costs": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0013802270404994488,
+          "delta_vs_original": 0.0
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.0016781738959252834,
+          "delta_vs_original": 0.00029794685542583466
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0019504227675497532,
+          "delta_vs_original": 0.0005701957270503044
+        }
+      ]
+    }
+  ],
+  "conclusion": "Recorded trial costs explain the selected minimum. With no selected correction yet, this prefix cannot establish a benefit from selective correction or closed-loop selection. Later events and full benchmark are needed.",
+  "candidate_distance_weight": 0.05,
+  "formal_scores": "NOT_RUN"
+}

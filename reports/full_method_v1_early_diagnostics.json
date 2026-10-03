@@ -1,0 +1,1495 @@
+{
+  "status": "VERIFIED_LIVE_EARLY_FULL_METHOD_DIAGNOSTICS_NOT_BENCHMARK",
+  "observed_at": "2026-10-03T07:05:04.234153+00:00",
+  "observer_pid": 1610869,
+  "complete_updates": 241,
+  "training_examples": 5784,
+  "run": {
+    "status": "RUNNING_NOT_EVALUATED",
+    "run_id": "xtrack_full_method_v1_s2026",
+    "protocol": {
+      "run_id": "xtrack_full_method_v1_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.05,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "protocol_sha256": "452d8ea219af641f7a7b237eb654df9c1dfb88c551ea98ee43b600927ac6dded",
+    "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+    "world_size": 3,
+    "rank_pids": [
+      1603687,
+      1603688,
+      1603689
+    ],
+    "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026",
+    "modules_enabled": [
+      "localization_risk",
+      "task_adaptive_selective_correction",
+      "closed_loop_acceptance"
+    ],
+    "formal_tracking_scores": "NOT_RUN",
+    "started_at": "2026-10-03T06:55:18.472810+00:00",
+    "training_examples_per_update": 24,
+    "check_examples_per_update": 9,
+    "short_clip_source": "TRAIN_ONLY",
+    "baseline_setting": "AUTHOR_RELEASE_FINETUNE",
+    "attempt_id": "20261003T065518472838Z",
+    "observed_at": "2026-10-03T07:04:55.998381+00:00",
+    "epoch": 1,
+    "step": 240,
+    "global_step": 240,
+    "latest": {
+      "attempt_id": "20261003T065518472838Z",
+      "epoch": 1,
+      "step": 240,
+      "global_step": 240,
+      "before_localization": [
+        [
+          0.3283054828643799,
+          0.9380472898483276
+        ],
+        [
+          0.028068069368600845,
+          0.28094083070755005
+        ],
+        [
+          0.1244053766131401,
+          0.338367223739624
+        ]
+      ],
+      "candidate_localization": [
+        [
+          0.32819274067878723,
+          0.9378153085708618
+        ],
+        [
+          0.028083166107535362,
+          0.2809677720069885
+        ],
+        [
+          0.12437425553798676,
+          0.3384210467338562
+        ]
+      ],
+      "accepted_localization": [
+        [
+          0.32819274067878723,
+          0.9378153085708618
+        ],
+        [
+          0.028083166107535362,
+          0.2809677720069885
+        ],
+        [
+          0.12437425553798676,
+          0.3384210467338562
+        ]
+      ],
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_correction_strength": 0.0,
+      "trajectory_checked": false,
+      "baseline_trajectory": null,
+      "accepted_trajectory": null,
+      "training_clips": null,
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "baseline_trajectory_details": null,
+      "candidate_trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0,
+          "localization": [
+            [
+              0.32819274067878723,
+              0.9378153085708618
+            ],
+            [
+              0.028083166107535362,
+              0.2809677720069885
+            ],
+            [
+              0.12437425553798676,
+              0.3384210467338562
+            ]
+          ],
+          "trajectory": null,
+          "trajectory_details": null
+        }
+      ],
+      "pair_check_forward_examples": 18,
+      "trajectory_model_forward_examples": 0,
+      "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs",
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "step_seconds": 2.4552694489830174,
+      "peak_allocated_bytes": 5770099200,
+      "joint_grad_norm_before_clip": 1.4964197874069214,
+      "gradient_clip_coefficient": 0.06682612326796489,
+      "correction_norm": 0.0,
+      "active_risk_constraints": 0
+    },
+    "training_examples": 5760,
+    "check_examples": 2160,
+    "wallclock_seconds": 577.520799143007
+  },
+  "controller": {
+    "status": "RUNNING",
+    "run_id": "xtrack_full_method_v1_s2026",
+    "controller_pid": 1603676,
+    "exit_code": null,
+    "started_at": "2026-10-03T06:55:07.559657+00:00",
+    "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+    "poll_seconds": 240,
+    "protocol": {
+      "run_id": "xtrack_full_method_v1_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.05,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "source_hashes": {
+      "configs/full_method_v1.json": "452d8ea219af641f7a7b237eb654df9c1dfb88c551ea98ee43b600927ac6dded",
+      "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+      "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+      "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+      "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+      "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+      "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+      "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd"
+    },
+    "completed_stages": [],
+    "observed_at": "2026-10-03T07:03:07.765382+00:00",
+    "wallclock_seconds": 480.2054579919786,
+    "current_stage": "train",
+    "argv": [
+      "/data/gb/conda/envs/rgbx-risk/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nproc_per_node=3",
+      "--master_port=29529",
+      "/data/gb/rgbx-risk/scripts/train_full_method.py",
+      "--protocol",
+      "/data/gb/rgbx-risk/configs/full_method_v1.json"
+    ],
+    "worker_pid": 1603680
+  },
+  "original_processes_alive": {
+    "1603676": true,
+    "1603680": true,
+    "1603687": true,
+    "1603688": true,
+    "1603689": true
+  },
+  "source_and_protocol_unchanged": true,
+  "risk_event_updates": 11,
+  "accepted_nonzero_corrections": 0,
+  "trajectory_checks": 15,
+  "risk_events": [
+    {
+      "global_step": 2,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "correction_norm": 2.416489905954222e-06,
+      "candidate_shared_norm": 0.0061035919934511185,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          2.751988358795643e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          2.751988358795643e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 4.586647264659405e-06,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.7302330732345581,
+              1.51365065574646
+            ],
+            [
+              0.20326350629329681,
+              0.17971472442150116
+            ],
+            [
+              0.08512210845947266,
+              0.19254034757614136
+            ]
+          ],
+          "trajectory": [
+            2.019655227661133,
+            4.608898162841797,
+            0.09846343100070953
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 4.601176897267578e-06,
+          "delta_cost_vs_zero": 1.4529632608173415e-08,
+          "localization": [
+            [
+              0.7302445769309998,
+              1.5136640071868896
+            ],
+            [
+              0.20324626564979553,
+              0.1797112673521042
+            ],
+            [
+              0.08511519432067871,
+              0.19252344965934753
+            ]
+          ],
+          "trajectory": [
+            2.0197057723999023,
+            4.608919143676758,
+            0.09847404062747955
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 1.9714658265002072e-05,
+          "delta_cost_vs_zero": 1.5128011000342667e-05,
+          "localization": [
+            [
+              0.730228841304779,
+              1.5136685371398926
+            ],
+            [
+              0.20327071845531464,
+              0.17972561717033386
+            ],
+            [
+              0.08511598408222198,
+              0.19253110885620117
+            ]
+          ],
+          "trajectory": [
+            2.019646167755127,
+            4.608882427215576,
+            0.09849058091640472
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 4,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "correction_norm": 1.9592844182625413e-05,
+      "candidate_shared_norm": 0.004502254072576761,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00021614786237478256,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00021614786237478256,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 3.602464494179003e-05,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.2671268582344055,
+              0.7122631072998047
+            ],
+            [
+              0.2860487103462219,
+              0.17737078666687012
+            ],
+            [
+              0.08982047438621521,
+              0.2692870497703552
+            ]
+          ],
+          "trajectory": [
+            0.3792058229446411,
+            0.126482754945755,
+            0.42694711685180664
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 7.864170765969902e-05,
+          "delta_cost_vs_zero": 4.261706271790899e-05,
+          "localization": [
+            [
+              0.2671318054199219,
+              0.7122663259506226
+            ],
+            [
+              0.286035418510437,
+              0.1773776412010193
+            ],
+            [
+              0.08981513231992722,
+              0.2692832350730896
+            ]
+          ],
+          "trajectory": [
+            0.3792070746421814,
+            0.12648209929466248,
+            0.4269469380378723
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.00010075748286908492,
+          "delta_cost_vs_zero": 6.47328379272949e-05,
+          "localization": [
+            [
+              0.2671242356300354,
+              0.7122556567192078
+            ],
+            [
+              0.2859501838684082,
+              0.1773698776960373
+            ],
+            [
+              0.0898168683052063,
+              0.2692711353302002
+            ]
+          ],
+          "trajectory": [
+            0.37919723987579346,
+            0.12648454308509827,
+            0.426921010017395
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 19,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "correction_norm": 4.649895345210098e-05,
+      "candidate_shared_norm": 0.002353671472519636,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0004814246203750372,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0004814246203750372,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 8.023744157981128e-05,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.42506226897239685,
+              1.1640384197235107
+            ],
+            [
+              0.5031021237373352,
+              0.2345535010099411
+            ],
+            [
+              0.3326229751110077,
+              0.4257850646972656
+            ]
+          ],
+          "trajectory": [
+            0.13516902923583984,
+            0.21960337460041046,
+            0.21307513117790222
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.0002626878267619759,
+          "delta_cost_vs_zero": 0.0001824503851821646,
+          "localization": [
+            [
+              0.4250580668449402,
+              1.1640524864196777
+            ],
+            [
+              0.5029686689376831,
+              0.2345130890607834
+            ],
+            [
+              0.33265453577041626,
+              0.4257967174053192
+            ]
+          ],
+          "trajectory": [
+            0.13518421351909637,
+            0.21961939334869385,
+            0.213120698928833
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.00045354152098298073,
+          "delta_cost_vs_zero": 0.00037330407940316945,
+          "localization": [
+            [
+              0.42505496740341187,
+              1.1640634536743164
+            ],
+            [
+              0.5028181672096252,
+              0.23448358476161957
+            ],
+            [
+              0.33262160420417786,
+              0.4257931709289551
+            ]
+          ],
+          "trajectory": [
+            0.13517773151397705,
+            0.21959635615348816,
+            0.21307548880577087
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 25,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.00012827331374865025,
+      "candidate_shared_norm": 0.0022081881761550903,
+      "candidate_risk": [
+        [
+          0.001168572809547186,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.001168572809547186,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0009392889915034175,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.16486474871635437,
+              0.45361489057540894
+            ],
+            [
+              0.192653626203537,
+              0.1575198471546173
+            ],
+            [
+              0.15327996015548706,
+              0.465800940990448
+            ]
+          ],
+          "trajectory": [
+            0.19242309033870697,
+            0.09941450506448746,
+            0.40312859416007996
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.0015355853829532862,
+          "delta_cost_vs_zero": 0.0005962963914498687,
+          "localization": [
+            [
+              0.1647876501083374,
+              0.4535589814186096
+            ],
+            [
+              0.1926465928554535,
+              0.15748926997184753
+            ],
+            [
+              0.15327481925487518,
+              0.46580514311790466
+            ]
+          ],
+          "trajectory": [
+            0.19242316484451294,
+            0.09943689405918121,
+            0.4030960202217102
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.002187939826399088,
+          "delta_cost_vs_zero": 0.0012486508348956704,
+          "localization": [
+            [
+              0.16468927264213562,
+              0.45353853702545166
+            ],
+            [
+              0.19262099266052246,
+              0.15749166905879974
+            ],
+            [
+              0.15327265858650208,
+              0.4658101201057434
+            ]
+          ],
+          "trajectory": [
+            0.19246786832809448,
+            0.0994330570101738,
+            0.4031032919883728
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 60,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "correction_norm": 7.846037988201715e-06,
+      "candidate_shared_norm": 0.0020682881586253643,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00011206627823412418,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00011206627823412418,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 1.86777142516803e-05,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.35724279284477234,
+              0.5485373735427856
+            ],
+            [
+              0.1402789205312729,
+              0.33431121706962585
+            ],
+            [
+              0.3479869067668915,
+              0.19534379243850708
+            ]
+          ],
+          "trajectory": [
+            1.3090859651565552,
+            0.11680087447166443,
+            0.6390731334686279
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 5.651749961543828e-05,
+          "delta_cost_vs_zero": 3.783978536375798e-05,
+          "localization": [
+            [
+              0.3572303056716919,
+              0.548547089099884
+            ],
+            [
+              0.14027434587478638,
+              0.33431535959243774
+            ],
+            [
+              0.3479461371898651,
+              0.19534312188625336
+            ]
+          ],
+          "trajectory": [
+            1.309105634689331,
+            0.11679811775684357,
+            0.6390781402587891
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 8.657293801661581e-05,
+          "delta_cost_vs_zero": 6.789522376493551e-05,
+          "localization": [
+            [
+              0.35723209381103516,
+              0.5485363602638245
+            ],
+            [
+              0.1402616798877716,
+              0.3343222141265869
+            ],
+            [
+              0.34797048568725586,
+              0.19534854590892792
+            ]
+          ],
+          "trajectory": [
+            1.3090895414352417,
+            0.11682049185037613,
+            0.6390784382820129
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 64,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "correction_norm": 4.518133937381208e-05,
+      "candidate_shared_norm": 0.0020967372693121433,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.000674176262691617
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.000674176262691617
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.00011236271529924124,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.2271944284439087,
+              0.3108251690864563
+            ],
+            [
+              0.1316278874874115,
+              0.17510110139846802
+            ],
+            [
+              0.5927096605300903,
+              0.17294737696647644
+            ]
+          ],
+          "trajectory": [
+            0.2639178931713104,
+            0.27614468336105347,
+            0.19855183362960815
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.00026589445769786835,
+          "delta_cost_vs_zero": 0.0001535317423986271,
+          "localization": [
+            [
+              0.22718605399131775,
+              0.31084591150283813
+            ],
+            [
+              0.13161802291870117,
+              0.1750050038099289
+            ],
+            [
+              0.5927219390869141,
+              0.17294609546661377
+            ]
+          ],
+          "trajectory": [
+            0.26390761137008667,
+            0.276185542345047,
+            0.19854941964149475
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0004904900561086833,
+          "delta_cost_vs_zero": 0.0003781273408094421,
+          "localization": [
+            [
+              0.22718679904937744,
+              0.3108268976211548
+            ],
+            [
+              0.13160772621631622,
+              0.17496657371520996
+            ],
+            [
+              0.5927076935768127,
+              0.17293350398540497
+            ]
+          ],
+          "trajectory": [
+            0.2639129161834717,
+            0.2761642038822174,
+            0.19850043952465057
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 72,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "correction_norm": 6.04099768679589e-05,
+      "candidate_shared_norm": 0.002064406406134367,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0011507731396704912,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0011507731396704912,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.00030016942764632404,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.28012770414352417,
+              0.4864358603954315
+            ],
+            [
+              0.4162904918193817,
+              0.5446376800537109
+            ],
+            [
+              0.10950696468353271,
+              0.31896519660949707
+            ]
+          ],
+          "trajectory": [
+            0.14292092621326447,
+            0.055047616362571716,
+            0.2900705635547638
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.0007619723910465837,
+          "delta_cost_vs_zero": 0.0004618029634002596,
+          "localization": [
+            [
+              0.28011828660964966,
+              0.48643049597740173
+            ],
+            [
+              0.41601914167404175,
+              0.5446290969848633
+            ],
+            [
+              0.10951085388660431,
+              0.31897300481796265
+            ]
+          ],
+          "trajectory": [
+            0.14291857182979584,
+            0.05508787930011749,
+            0.2900724411010742
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0009197378531098366,
+          "delta_cost_vs_zero": 0.0006195684254635125,
+          "localization": [
+            [
+              0.2801293432712555,
+              0.48642730712890625
+            ],
+            [
+              0.41569575667381287,
+              0.5446285009384155
+            ],
+            [
+              0.10949873924255371,
+              0.31897425651550293
+            ]
+          ],
+          "trajectory": [
+            0.14292573928833008,
+            0.05507373809814453,
+            0.29007479548454285
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 141,
+      "constraints": 2,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.0003142233472317457,
+      "candidate_shared_norm": 0.0019798357971012592,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.003076942404732108,
+          0.0016947241965681314
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.003076942404732108,
+          0.0016947241965681314
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0007952777668833733,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.41610321402549744,
+              0.7847030162811279
+            ],
+            [
+              0.06497007608413696,
+              0.1501886248588562
+            ],
+            [
+              0.10439510643482208,
+              0.25966814160346985
+            ]
+          ],
+          "trajectory": [
+            0.20515428483486176,
+            0.5580134391784668,
+            1.6006677150726318
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.002135461661964655,
+          "delta_cost_vs_zero": 0.0013401838950812817,
+          "localization": [
+            [
+              0.4161003530025482,
+              0.7846875190734863
+            ],
+            [
+              0.06484689563512802,
+              0.15006572008132935
+            ],
+            [
+              0.10438159108161926,
+              0.2596655786037445
+            ]
+          ],
+          "trajectory": [
+            0.2051725536584854,
+            0.558060884475708,
+            1.6005871295928955
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0035893486347049475,
+          "delta_cost_vs_zero": 0.002794070867821574,
+          "localization": [
+            [
+              0.4160960614681244,
+              0.7846834659576416
+            ],
+            [
+              0.0647575706243515,
+              0.14992251992225647
+            ],
+            [
+              0.10436566919088364,
+              0.25969231128692627
+            ]
+          ],
+          "trajectory": [
+            0.2051718831062317,
+            0.5581059455871582,
+            1.6005747318267822
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 164,
+      "constraints": 1,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.00022138352505862713,
+      "candidate_shared_norm": 0.0019949518609791994,
+      "candidate_risk": [
+        [
+          0.0024736414197832346,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0024736414197832346,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.00041227356996387243,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.1392279714345932,
+              0.2569619417190552
+            ],
+            [
+              0.5861053466796875,
+              0.4810783863067627
+            ],
+            [
+              0.44221481680870056,
+              0.21632187068462372
+            ]
+          ],
+          "trajectory": [
+            0.20240075886249542,
+            0.5583899617195129,
+            0.6126419305801392
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.001526279142126441,
+          "delta_cost_vs_zero": 0.0011140055721625686,
+          "localization": [
+            [
+              0.13906630873680115,
+              0.25689250230789185
+            ],
+            [
+              0.5861558318138123,
+              0.4810889661312103
+            ],
+            [
+              0.4421747326850891,
+              0.2163149118423462
+            ]
+          ],
+          "trajectory": [
+            0.20234332978725433,
+            0.5583810806274414,
+            0.6126481294631958
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0026324368081986904,
+          "delta_cost_vs_zero": 0.002220163238234818,
+          "localization": [
+            [
+              0.1388981193304062,
+              0.2568008303642273
+            ],
+            [
+              0.5861594676971436,
+              0.4811047315597534
+            ],
+            [
+              0.44213348627090454,
+              0.21633198857307434
+            ]
+          ],
+          "trajectory": [
+            0.20237626135349274,
+            0.5583831071853638,
+            0.612646222114563
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 212,
+      "constraints": 2,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.00013256155943963677,
+      "candidate_shared_norm": 0.001972020138055086,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0008609404321759939,
+          0.0008815706241875887
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0008609404321759939,
+          0.0008815706241875887
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.00029041850939393044,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.15887853503227234,
+              0.3182135820388794
+            ],
+            [
+              0.10221036523580551,
+              0.3139517307281494
+            ],
+            [
+              0.25740838050842285,
+              0.26932430267333984
+            ]
+          ],
+          "trajectory": [
+            0.9730535745620728,
+            0.18550719320774078,
+            0.19757583737373352
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.00089691870380193,
+          "delta_cost_vs_zero": 0.0006065001944079995,
+          "localization": [
+            [
+              0.15887226164340973,
+              0.31821781396865845
+            ],
+            [
+              0.102212093770504,
+              0.31396597623825073
+            ],
+            [
+              0.2573184669017792,
+              0.2692199945449829
+            ]
+          ],
+          "trajectory": [
+            0.9730533361434937,
+            0.1855343133211136,
+            0.197595477104187
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0014886637218296528,
+          "delta_cost_vs_zero": 0.0011982452124357224,
+          "localization": [
+            [
+              0.15888097882270813,
+              0.3182141184806824
+            ],
+            [
+              0.10220880806446075,
+              0.3139669895172119
+            ],
+            [
+              0.2572106719017029,
+              0.26911062002182007
+            ]
+          ],
+          "trajectory": [
+            0.9729946851730347,
+            0.18552543222904205,
+            0.19758044183254242
+          ]
+        }
+      ]
+    },
+    {
+      "global_step": 221,
+      "constraints": 3,
+      "selected_alpha": 0.0,
+      "correction_norm": 0.0001795700954971835,
+      "candidate_shared_norm": 0.0020984967704862356,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0017208564095199108
+        ],
+        [
+          0.00288304197601974,
+          0.0036774638574570417
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0017208564095199108
+        ],
+        [
+          0.00288304197601974,
+          0.0036774638574570417
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0013802270404994488,
+          "delta_cost_vs_zero": 0.0,
+          "localization": [
+            [
+              0.1355922669172287,
+              0.2097221314907074
+            ],
+            [
+              0.1680082529783249,
+              0.22120735049247742
+            ],
+            [
+              0.03291499614715576,
+              0.31427618861198425
+            ]
+          ],
+          "trajectory": [
+            0.936245858669281,
+            0.2686963975429535,
+            0.21001940965652466
+          ]
+        },
+        {
+          "alpha": 0.5,
+          "cost": 0.0016781738959252834,
+          "delta_cost_vs_zero": 0.00029794685542583466,
+          "localization": [
+            [
+              0.1355464905500412,
+              0.20954714715480804
+            ],
+            [
+              0.16778646409511566,
+              0.220793217420578
+            ],
+            [
+              0.03291048854589462,
+              0.314279705286026
+            ]
+          ],
+          "trajectory": [
+            0.9362693428993225,
+            0.2686806917190552,
+            0.21002979576587677
+          ]
+        },
+        {
+          "alpha": 1.0,
+          "cost": 0.0019504227675497532,
+          "delta_cost_vs_zero": 0.0005701957270503044,
+          "localization": [
+            [
+              0.1355106085538864,
+              0.20935887098312378
+            ],
+            [
+              0.1675224006175995,
+              0.22040584683418274
+            ],
+            [
+              0.03291440010070801,
+              0.3142648935317993
+            ]
+          ],
+          "trajectory": [
+            0.9363321661949158,
+            0.26870086789131165,
+            0.21001160144805908
+          ]
+        }
+      ]
+    }
+  ],
+  "mean_update_seconds": 2.390215464123028,
+  "gpu_snapshot": "0, 6510, 47\n1, 6508, 48\n2, 6534, 45\n",
+  "conclusion": "This records actual candidate costs/selection, not efficacy or baseline improvement.",
+  "formal_tracking_scores": "NOT_RUN"
+}
