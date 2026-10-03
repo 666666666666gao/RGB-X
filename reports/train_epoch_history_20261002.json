@@ -1,14 +1,14 @@
 {
-  "observed_at": "2026-10-03T08:07:04.241848+08:00",
+  "observed_at": "2026-10-03T08:43:48.371518+08:00",
   "status": "PASS_COMPLETED_EPOCH_ROWS",
   "scope": "Completed training epoch log rows only; not final checkpoint or tracking benchmark validation.",
   "run_id": "xtrack_b_adamw_3gpu_s2026_20261002",
-  "completed_epochs": 21,
-  "completed_optimizer_updates": 52500,
-  "completed_training_examples": 1260000,
+  "completed_epochs": 22,
+  "completed_optimizer_updates": 55000,
+  "completed_training_examples": 1320000,
   "source_log": "/data/gb/rgbx-risk/outputs/xtrack_b_adamw_3gpu_s2026_20261002/logs/xtrack-rgbx_b_adamw_3gpu.log",
-  "source_log_snapshot_sha256": "6f4b67e42b2411d65c73f10da74e319c75782babdad8f98eadaa6e3ac0f243d5",
-  "finite_completed_epoch_printed_rows": 31500,
+  "source_log_snapshot_sha256": "a531ce2431a23203d1e6692443ba18d9bcfeaeb1b2253da5cc1fe48082ba7503",
+  "finite_completed_epoch_printed_rows": 33000,
   "epochs": [
     {
       "epoch": 1,
@@ -975,6 +975,52 @@
           }
         }
       ]
+    },
+    {
+      "epoch": 22,
+      "steps_per_rank": 2500,
+      "row_order_not_rank_ids": true,
+      "rows": [
+        {
+          "raw": "[train: 22, 2500 / 2500] FPS: 9.0 (9.2)  ,  DataTime: 0.007 (0.004)  ,  ForwardTime: 0.874  ,  TotalTime: 0.885  ,  Loss/total: 1.09180  ,  Loss/giou: 0.20799  ,  Loss/l1: 0.01839  ,  Loss/location: 0.33776  ,  balance: 0.07359  ,  classification: 17.25073  ,  IoU: 0.80636",
+          "metrics": {
+            "Loss/total": 1.0918,
+            "Loss/giou": 0.20799,
+            "Loss/l1": 0.01839,
+            "Loss/location": 0.33776,
+            "balance": 0.07359,
+            "classification": 17.25073,
+            "IoU": 0.80636,
+            "TotalTime": 0.885
+          }
+        },
+        {
+          "raw": "[train: 22, 2500 / 2500] FPS: 9.0 (9.2)  ,  DataTime: 0.008 (0.004)  ,  ForwardTime: 0.873  ,  TotalTime: 0.885  ,  Loss/total: 1.09143  ,  Loss/giou: 0.20777  ,  Loss/l1: 0.01848  ,  Loss/location: 0.33740  ,  balance: 0.07361  ,  classification: 17.25082  ,  IoU: 0.80683",
+          "metrics": {
+            "Loss/total": 1.09143,
+            "Loss/giou": 0.20777,
+            "Loss/l1": 0.01848,
+            "Loss/location": 0.3374,
+            "balance": 0.07361,
+            "classification": 17.25082,
+            "IoU": 0.80683,
+            "TotalTime": 0.885
+          }
+        },
+        {
+          "raw": "[train: 22, 2500 / 2500] FPS: 9.0 (9.2)  ,  DataTime: 0.009 (0.005)  ,  ForwardTime: 0.871  ,  TotalTime: 0.885  ,  Loss/total: 1.10636  ,  Loss/giou: 0.21116  ,  Loss/l1: 0.01892  ,  Loss/location: 0.34352  ,  balance: 0.07342  ,  classification: 17.25093  ,  IoU: 0.80421",
+          "metrics": {
+            "Loss/total": 1.10636,
+            "Loss/giou": 0.21116,
+            "Loss/l1": 0.01892,
+            "Loss/location": 0.34352,
+            "balance": 0.07342,
+            "classification": 17.25093,
+            "IoU": 0.80421,
+            "TotalTime": 0.885
+          }
+        }
+      ]
     }
   ],
   "validations": [
@@ -1165,52 +1211,52 @@
   ],
   "latest_training_rows": [
     {
-      "epoch": 22,
-      "step": 145,
-      "raw": "[train: 22, 145 / 2500] FPS: 8.9 (9.1)  ,  DataTime: 0.022 (0.005)  ,  ForwardTime: 0.874  ,  TotalTime: 0.901  ,  Loss/total: 1.14383  ,  Loss/giou: 0.21633  ,  Loss/l1: 0.01975  ,  Loss/location: 0.36658  ,  balance: 0.07334  ,  classification: 17.25117  ,  IoU: 0.80176",
+      "epoch": 23,
+      "step": 135,
+      "raw": "[train: 23, 135 / 2500] FPS: 8.8 (9.1)  ,  DataTime: 0.015 (0.005)  ,  ForwardTime: 0.885  ,  TotalTime: 0.905  ,  Loss/total: 1.07157  ,  Loss/giou: 0.20206  ,  Loss/l1: 0.01780  ,  Loss/location: 0.33183  ,  balance: 0.07410  ,  classification: 17.25097  ,  IoU: 0.81183",
       "metrics": {
-        "Loss/total": 1.14383,
-        "Loss/giou": 0.21633,
-        "Loss/l1": 0.01975,
-        "Loss/location": 0.36658,
-        "balance": 0.07334,
-        "classification": 17.25117,
-        "IoU": 0.80176,
-        "TotalTime": 0.901
+        "Loss/total": 1.07157,
+        "Loss/giou": 0.20206,
+        "Loss/l1": 0.0178,
+        "Loss/location": 0.33183,
+        "balance": 0.0741,
+        "classification": 17.25097,
+        "IoU": 0.81183,
+        "TotalTime": 0.905
       }
     },
     {
-      "epoch": 22,
-      "step": 145,
-      "raw": "[train: 22, 145 / 2500] FPS: 8.9 (9.1)  ,  DataTime: 0.014 (0.004)  ,  ForwardTime: 0.883  ,  TotalTime: 0.901  ,  Loss/total: 1.10270  ,  Loss/giou: 0.20858  ,  Loss/l1: 0.01913  ,  Loss/location: 0.34441  ,  balance: 0.07299  ,  classification: 17.24977  ,  IoU: 0.80575",
+      "epoch": 23,
+      "step": 135,
+      "raw": "[train: 23, 135 / 2500] FPS: 8.8 (9.1)  ,  DataTime: 0.016 (0.005)  ,  ForwardTime: 0.885  ,  TotalTime: 0.906  ,  Loss/total: 1.09242  ,  Loss/giou: 0.20359  ,  Loss/l1: 0.01797  ,  Loss/location: 0.34921  ,  balance: 0.07364  ,  classification: 17.25086  ,  IoU: 0.80885",
       "metrics": {
-        "Loss/total": 1.1027,
-        "Loss/giou": 0.20858,
-        "Loss/l1": 0.01913,
-        "Loss/location": 0.34441,
-        "balance": 0.07299,
-        "classification": 17.24977,
-        "IoU": 0.80575,
-        "TotalTime": 0.901
+        "Loss/total": 1.09242,
+        "Loss/giou": 0.20359,
+        "Loss/l1": 0.01797,
+        "Loss/location": 0.34921,
+        "balance": 0.07364,
+        "classification": 17.25086,
+        "IoU": 0.80885,
+        "TotalTime": 0.906
       }
     },
     {
-      "epoch": 22,
-      "step": 145,
-      "raw": "[train: 22, 145 / 2500] FPS: 8.9 (9.1)  ,  DataTime: 0.017 (0.004)  ,  ForwardTime: 0.880  ,  TotalTime: 0.901  ,  Loss/total: 1.08272  ,  Loss/giou: 0.20595  ,  Loss/l1: 0.01787  ,  Loss/location: 0.33436  ,  balance: 0.07461  ,  classification: 17.25113  ,  IoU: 0.80932",
+      "epoch": 23,
+      "step": 135,
+      "raw": "[train: 23, 135 / 2500] FPS: 8.8 (9.1)  ,  DataTime: 0.016 (0.004)  ,  ForwardTime: 0.886  ,  TotalTime: 0.906  ,  Loss/total: 1.11794  ,  Loss/giou: 0.21607  ,  Loss/l1: 0.01993  ,  Loss/location: 0.34056  ,  balance: 0.07306  ,  classification: 17.25121  ,  IoU: 0.80188",
       "metrics": {
-        "Loss/total": 1.08272,
-        "Loss/giou": 0.20595,
-        "Loss/l1": 0.01787,
-        "Loss/location": 0.33436,
-        "balance": 0.07461,
-        "classification": 17.25113,
-        "IoU": 0.80932,
-        "TotalTime": 0.901
+        "Loss/total": 1.11794,
+        "Loss/giou": 0.21607,
+        "Loss/l1": 0.01993,
+        "Loss/location": 0.34056,
+        "balance": 0.07306,
+        "classification": 17.25121,
+        "IoU": 0.80188,
+        "TotalTime": 0.906
       }
     }
   ],
-  "process_snapshot": "    PID STAT     ELAPSED\n 268474 S+      13:08:16\n 268542 Sl+     13:08:15\n 268595 Rl+     13:08:13\n 268596 Rl+     13:08:13\n 268597 Rl+     13:08:13\n",
-  "monitor_receipt_observed_at": "2026-10-03T08:03:37.027518+08:00",
+  "process_snapshot": "    PID STAT     ELAPSED\n 268474 S+      13:45:00\n 268542 Sl+     13:44:59\n 268595 Rl+     13:44:57\n 268596 Rl+     13:44:57\n 268597 Rl+     13:44:57\n",
+  "monitor_receipt_observed_at": "2026-10-03T08:43:39.605607+08:00",
   "disk_snapshot": "\u6587\u4ef6\u7cfb\u7edf        \u5bb9\u91cf  \u5df2\u7528  \u53ef\u7528 \u5df2\u7528% \u6302\u8f7d\u70b9\n/dev/sda        7.3T  6.9T  5.2G  100% /data\n"
 }
