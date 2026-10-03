@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-03T07:00:50.887457+00:00",
-  "source_commit": "34195696334a9352a3093f8d5db1521e86a7f53e",
+  "verified_at": "2026-10-03T07:24:48.187428+00:00",
+  "source_commit": "3f11ffa2e01b9e4ab65b32b6dceaaba6d0a51524",
+  "document_sha256": "ed99d421ae61ab6ce4f02ad21bcb8e3bc366955cb94a2dc39ee3182017e81dda",
+  "document_bytes": 87178,
   "four_copies_identical": true,
-  "document_sha256": "0040bb662fabb64cf0a62ae58449b4c718ca550ddd70367c39cfa819b528d57b",
-  "document_bytes": 85267,
   "locations": [
     "local_project",
     "Desktop_document",
@@ -12,23 +12,10 @@
     "GitHub_commit_blob"
   ],
   "active_run": "xtrack_full_method_v1_s2026",
-  "original_baseline": "USER_CANCELLED_INCOMPLETE",
   "formal_tracking_scores": "NOT_RUN",
-  "startup_observation": "2026-10-03T07:00:38.168855+00:00",
-  "synced_files": [
-    "README.md",
-    "docs/RGB-X_\u7814\u7a76\u4e0e\u5b9e\u9a8c\u5b8c\u6574\u4ea4\u63a5_2026-10-02.md",
-    "configs/current_goal.json",
-    "configs/full_method_risk_branch_probe.json",
-    "scripts/compare_complete_results.py",
-    "scripts/run_full_method_job.py",
-    "reports/full_method_code_review.json",
-    "reports/full_method_v1_startup_verified.json",
-    "reports/full_method_v1_three_gpu_sanity.json",
-    "reports/full_method_v1_three_gpu_sanity_run.json",
-    "reports/full_method_v1_three_gpu_sanity_updates.jsonl",
-    "reports/full_method_risk_branch_probe.json",
-    "reports/full_method_risk_branch_probe_run.json",
-    "reports/full_method_risk_branch_probe_updates.jsonl"
-  ]
+  "training_protocol_changed": false,
+  "diagnostic_observed_at": "2026-10-03T07:18:49.701657+00:00",
+  "diagnostic_prefix_updates": 589,
+  "actual_nonzero_corrections": 0,
+  "counterfactual_fixed_trial_nonzero_without_distance": 26
 }
