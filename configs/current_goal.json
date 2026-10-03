@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T01:36:58.919118+08:00",
+  "updated_at": "2026-10-04T02:21:47.648705+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -313,6 +313,11 @@
       14800,
       14850
     ],
-    "scope": "Visible training-pool three-frame paired checks; alpha0 only. Pattern observed, independent intervention efficacy and benchmark effects not measured."
-  }
+    "scope": "Visible training-pool three-frame paired checks; alpha0 only. Pattern observed, independent intervention efficacy and benchmark effects not measured.",
+    "integer_crop_boundary_changes": 2,
+    "largest_observed_second_prediction_center_change_pixels": 7.130659181166402,
+    "target_centers_outside_search": false,
+    "causal_attribution": "UNKNOWN_NO_FROZEN_SEARCH_MODEL_COUNTERFACTUAL"
+  },
+  "trajectory_only_detail_analysis": "reports/full_method_v1_trajectory_only_detail_analysis.json"
 }
