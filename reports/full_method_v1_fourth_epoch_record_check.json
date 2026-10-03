@@ -1,0 +1,63 @@
+{
+  "status": "FOURTH_EPOCH_NEW_RECORDS_AND_ONE_RECOVERY_VERIFIED_NOT_BENCHMARK",
+  "observed_at": "2026-10-03T21:41:38.588143+08:00",
+  "completed_epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 114,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 161,
+      "mean_step_seconds": 2.415328442759649
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 2,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 2.389823864249629
+    },
+    {
+      "epoch": 3,
+      "updates": 2500,
+      "risk_events": 97,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 144,
+      "mean_step_seconds": 2.39314502257884
+    },
+    {
+      "epoch": 4,
+      "updates": 2500,
+      "risk_events": 90,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 140,
+      "mean_step_seconds": 2.399556109916605
+    }
+  ],
+  "earlier_7500_evidence": "reports/full_method_v1_third_epoch_record_check.json",
+  "new_records_checked": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/updates.jsonl",
+    "global_step_start": 7501,
+    "global_step_end": 10000,
+    "bytes": 4917320,
+    "sha256": "802d5f9aee10c18187955812b0043f934d38b0da1cdc406ae549aaa6a3c03dfc"
+  },
+  "fourth_epoch_localization_all_finite": true,
+  "fourth_epoch_global_task_counts_always": [
+    8,
+    8,
+    8
+  ],
+  "trajectory_only_deterioration": {
+    "scope": "Only fourth-epoch records using actual stored paired trajectory objectives and current tolerance; no new forward passes.",
+    "events": [],
+    "event_count": 0,
+    "efficacy": "UNKNOWN_NO_BENCHMARK_OR_INDEPENDENT_TRIGGER_EXPERIMENT",
+    "no_local_risk_checks_derived_from_record_counts": 50,
+    "denominator_scope": "All localization-risk events trigger trajectory checks in this fixed formal run; the remaining checks are periodic no-local-risk checks. Derived from the new epoch counts, not an additional raw-record replay."
+  },
+  "scope": "New fourth-epoch records only plus registered checkpoint hash, single-file retention and live processes. No earlier record replay, model/optimizer reload, CUDA RNG restore or benchmark.",
+  "snapshot_evidence": "reports/full_method_v1_fourth_epoch_retention_snapshot.json",
+  "formal_tracking_scores": "NOT_RUN"
+}
