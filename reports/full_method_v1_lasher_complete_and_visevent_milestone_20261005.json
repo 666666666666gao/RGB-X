@@ -1,0 +1,200 @@
+{
+  "status": "ACTUAL_METHOD_LASHER_COMPLETE_HEADLINE_DELTAS_NEGATIVE_VISEVENT_RUNNING",
+  "observed_at": "2026-10-05T07:23:51.779911+08:00",
+  "initial_due_observation_at": "2026-10-05T07:21:21.431362+08:00",
+  "method_completed_datasets": [
+    "LasHeR"
+  ],
+  "reference_completed_datasets": [
+    "LasHeR",
+    "VisEvent",
+    "DepthTrack"
+  ],
+  "method_lasher": {
+    "status": "ACTUAL_FULL_METHOD_LASHER_FULL_METRICS_COLLECTED_NOT_ALL3_COMPARISON",
+    "dataset": "LasHeR",
+    "sequence_count": 245,
+    "frame_pairs": 220703,
+    "attributes": 19,
+    "headline_metrics": {
+      "SR_AUC": 0.5548465787350384,
+      "PR_at_20": 0.6903214880777397,
+      "NPR_AUC": 0.5920586963531068,
+      "NP_at_020": 0.6553677075460028
+    },
+    "all_sequence_metrics": {
+      "SR_AUC": 0.5548465787350383,
+      "PR_at_20": 0.6903214880777396,
+      "NPR_AUC": 0.5920586963531067,
+      "NP_at_020": 0.6553677075460027
+    },
+    "zero_curve_sequences": {
+      "success": 0,
+      "precision": 0,
+      "normalized_precision": 0
+    },
+    "same_protocol_dataset_deltas": {
+      "SR_AUC": {
+        "reference": 0.5554599303245381,
+        "method": 0.5548465787350384,
+        "delta": -0.000613351589499711
+      },
+      "PR_at_20": {
+        "reference": 0.6905088871059202,
+        "method": 0.6903214880777397,
+        "delta": -0.00018739902818043497
+      },
+      "NPR_AUC": {
+        "reference": 0.5921262401038353,
+        "method": 0.5920586963531068,
+        "delta": -6.754375072848262e-05
+      },
+      "NP_at_020": {
+        "reference": 0.6548772213736572,
+        "method": 0.6553677075460028,
+        "delta": 0.0004904861723455944
+      }
+    },
+    "reference_zero_curve_sequences": {
+      "success": 0,
+      "precision": 0,
+      "normalized_precision": 0
+    },
+    "source_identity": {
+      "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+      "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+      "checkpoint_sha256": "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+      "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+      "terminal_audit_sha256": "6b75c50a58027d3bc835e919f4bd26d03f723725e6d7c5d2ee8a990ad3f492e8"
+    },
+    "files": {
+      "coverage.json": {
+        "bytes": 94436,
+        "sha256": "2d59b1fa8ce99384bea972c414c58792b0aa8fcb41543bfd3f60c247b45b7eeb"
+      },
+      "scores/metrics.json": {
+        "bytes": 959925,
+        "sha256": "f94b4907c0faab77fe3a901ab51e10cc5cba6676ed58925fbe3ea745f5a8ea33"
+      },
+      "scores/per_sequence.csv": {
+        "bytes": 22832,
+        "sha256": "956a29d0f43493b1f9cfa732ad59d5220e839900fad817186dcd2465ab20d784"
+      },
+      "scores/full_curves.png": {
+        "bytes": 80206,
+        "sha256": "4236d7affcc40dc41f2791405df13ac7ea93c0a9426042454fc49018c9a088d3"
+      }
+    },
+    "fps": 4.559747899811485,
+    "timing": "synchronized_image_read_preprocessing_and_tracking",
+    "annotation_caveat": "Frozen author archive VisEvent version retained; external published-number equivalence unresolved.",
+    "collected_at": "2026-10-05T07:22:26.382285+08:00",
+    "scope": "Completed method dataset only. All per-sequence/attribute curves, official nonzero-curve means AND full-sequence means checked. Four copied artifacts retain exact bytes. No inference or scoring replay. One completed dataset does not establish all-seven or module efficacy; final complete-comparison and conditional paired uncertainty remain required."
+  },
+  "method_lasher_intake_sha256": "161e41fb0ee9748a53adeb18130914394767eb558c223b698d088fd2f5db410c",
+  "method_lasher_elapsed_seconds": 48402.456637816445,
+  "method_lasher_gpu_memory": {
+    "peak_allocated_bytes": 541109760,
+    "peak_reserved_bytes": 627048448,
+    "scope": "maximum_of_per_sequence_PyTorch_peaks_including_resident_model"
+  },
+  "recovery_controller_pid": 3560911,
+  "method_controller_pid": 3722438,
+  "current_worker_pids": [
+    4054224,
+    4054225,
+    4054226
+  ],
+  "processes_at_observation": {
+    "3560911": {
+      "exists": true,
+      "state": "State:\tS (sleeping)",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python scripts/resume_reference_depthtrack_and_method_v1.py "
+    },
+    "3722438": {
+      "exists": true,
+      "state": "State:\tS (sleeping)",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/evaluate_existing_three.py --terminal-audit /data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json --output-root /home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026 "
+    },
+    "4054224": {
+      "exists": true,
+      "state": "State:\tR (running)",
+      "command": "/home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar --expected-sha256 c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8 --terminal-audit /data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json --manifest /data/gb/rgbx-risk/reports/visevent_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/predictions --seed 2026 --shard 0 --shards 3 "
+    },
+    "4054225": {
+      "exists": true,
+      "state": "State:\tR (running)",
+      "command": "/home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar --expected-sha256 c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8 --terminal-audit /data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json --manifest /data/gb/rgbx-risk/reports/visevent_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/predictions --seed 2026 --shard 1 --shards 3 "
+    },
+    "4054226": {
+      "exists": true,
+      "state": "State:\tR (running)",
+      "command": "/home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar --expected-sha256 c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8 --terminal-audit /data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json --manifest /data/gb/rgbx-risk/reports/visevent_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/predictions --seed 2026 --shard 2 --shards 3 "
+    }
+  },
+  "source8_unchanged": true,
+  "weight_files_at_initial_due_observation": [
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+      "bytes": 477078419
+    }
+  ],
+  "visevent_progress": {
+    "completed_sequences": 10,
+    "completed_frames": 6030,
+    "expected_sequences": 320,
+    "expected_frames": 157421,
+    "shards": [
+      {
+        "shard": 0,
+        "completed_sequences": 4,
+        "completed_frames": 2006,
+        "total_frames": 49044,
+        "recorded_seconds": 315.04630824172636,
+        "fps": 6.367317906994331,
+        "estimated_remaining_seconds": 7387.411887873542
+      },
+      {
+        "shard": 1,
+        "completed_sequences": 2,
+        "completed_frames": 1500,
+        "total_frames": 55201,
+        "recorded_seconds": 249.03797238244442,
+        "fps": 6.023177853763077,
+        "estimated_remaining_seconds": 8915.725436606432
+      },
+      {
+        "shard": 2,
+        "completed_sequences": 4,
+        "completed_frames": 2524,
+        "total_frames": 53176,
+        "recorded_seconds": 401.57035320228897,
+        "fps": 6.285324551159154,
+        "estimated_remaining_seconds": 8058.772397148312
+      }
+    ],
+    "estimated_visevent_tracking_completion": "2026-10-05T09:52:27.505348+08:00",
+    "next_observation_not_before": "2026-10-05T09:58:27.505348+08:00",
+    "estimate_scope": "Slowest current shard: remaining full frames divided by measured complete-sequence FPS, plus six minutes for scoring and variation. Not method DepthTrack or all-suite finish.",
+    "manifest_sha256": "718323bd77c3cc10cf86e4af0fb44a379602bdf47ba40553015dc85d86f3eed8"
+  },
+  "observation": {
+    "completed_session": 23283,
+    "completed_exit_code": 0,
+    "scheduled_session": 23494,
+    "scheduled_pid": 45512,
+    "scheduled_started_at": "2026-10-05T07:25:29.323535+08:00",
+    "next_not_before": "2026-10-05T09:58:27.505348+08:00",
+    "policy": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
+    "near_completion_recheck_seconds": 240
+  },
+  "original_collected_evidence_sha256": {
+    "initial_stage": "45225acf37e239bc62ce74f86bc4ad45422cf98b1b2edad547e78b4e6f6dda15",
+    "visevent_actual_progress": "fb71f774029c8b85cd1b2e7bb251577b48371f2cd9ebcba0db9c3ea7d34e717c"
+  },
+  "all_seven_strict_improvement_possible_for_fixed_v1": false,
+  "complete_comparison_available": false,
+  "goal_achieved": false,
+  "significance_or_module_attribution_established": false,
+  "scope": "Already collected full LasHeR raw artifacts and one due-window VisEvent progress estimate only. Two required LasHeR headlines are below the measured reference; all remaining tests continue. Single fixed endpoint pair, not proof of statistical or causal failure. No new inference, scoring, early progress query, source edit, restart, weight action or hardware control."
+}
