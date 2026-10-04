@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T14:53:50.568752+08:00",
-  "source_commit": "19a8d900ab2a9f661302368a820ea6327a20010b",
-  "document_sha256": "0ccf11c322eb333d873e3e1abc532b879fcaff3c61fe2fae7dd72714cad5b783",
-  "document_bytes": 150575,
+  "verified_at": "2026-10-04T16:30:20.619042+08:00",
+  "source_commit": "5e775e709fb9d46dae04aeefa0c1df31c189fe7f",
+  "document_sha256": "5c8f3e286b0cdecf4ec02d3572661d4035826e08ce8140f383bb5b4edd4d9bb3",
+  "document_bytes": 153560,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,63 +14,122 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "completed_epoch_updates_checked": 35000,
-  "observed_training_global_step": 35160,
-  "generated_checkpoint_files_retired": 32,
-  "generated_checkpoint_file_bytes_retired": 15230023578,
+  "completed_epoch_updates_checked": 37500,
+  "observed_training_global_step": 37500,
+  "generated_checkpoint_files_retired": 34,
+  "generated_checkpoint_file_bytes_retired": 16184180352,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-04T14:53:50.568752+08:00",
+    "verified_at": "2026-10-04T16:30:20.619042+08:00",
     "all_published_files_match": true,
     "published_file_sha256": {
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "0ccf11c322eb333d873e3e1abc532b879fcaff3c61fe2fae7dd72714cad5b783",
-      "configs/current_goal.json": "6f6dc7205ce3d1ea58799cae9cd9de8b3a51a0fcce7296a6de769f59097d4766",
-      "configs/checkpoint_retention_policy.json": "d03931180fc6bad0b7491fc68e59d4159e11ec614e18de06eb76b74a106f1513",
-      "reports/full_method_v1_fourteenth_epoch_record_check.json": "868429b1ad1325d5507f5beb57d1c579225ffdfa158530c7b5a742a8cecf30ca",
-      "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json": "0dec780e5fa2632f320ae3e9d540f6d88da72eb762960bbabba7e79c58190a22"
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "5c8f3e286b0cdecf4ec02d3572661d4035826e08ce8140f383bb5b4edd4d9bb3",
+      "configs/current_goal.json": "9bb10f37a5c9565af020b593ca1a17c28b408ac6c71d01fcd294181d3e4c58c0",
+      "configs/checkpoint_retention_policy.json": "1ed0ece19a39862fa22bbcfb71785ddde34e4c5cd80e0d22d8a130cf2825e52e",
+      "reports/full_method_v1_fifteenth_epoch_record_check.json": "5b38afc29f5a4e9be5d5356992f1e35f2643ec0354d1358c0e9b884f2594df7d",
+      "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json": "8dbf016fbb58cf7028ace01fd3ce37cfe13900f7961323570b11d56a1fd310b0",
+      "reports/full_method_v1_endpoint_audit.json": "6b75c50a58027d3bc835e919f4bd26d03f723725e6d7c5d2ee8a990ad3f492e8"
     },
     "live_training_sources_unchanged": true,
     "process_states": {
-      "1603676": "State:\tS (sleeping)",
-      "1603680": "State:\tS (sleeping)",
-      "1603687": "State:\tR (running)",
-      "1603688": "State:\tR (running)",
-      "1603689": "State:\tR (running)",
-      "1629089": "State:\tS (sleeping)"
+      "1603676": {
+        "exists": true,
+        "state": "State:\tS (sleeping)"
+      },
+      "1603680": {
+        "exists": false
+      },
+      "1603687": {
+        "exists": false
+      },
+      "1603688": {
+        "exists": false
+      },
+      "1603689": {
+        "exists": false
+      },
+      "1629089": {
+        "exists": false
+      },
+      "3123499": {
+        "exists": true,
+        "state": "State:\tS (sleeping)"
+      }
     },
     "gpu_guard_status": "DISABLED_BY_USER",
     "guard_process_missing": true,
     "training": {
+      "status": "TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT",
       "epoch": 15,
-      "step": 280,
-      "global_step": 35280,
-      "completed_epochs": 14,
-      "training_examples": 846720,
-      "formal_tracking_scores": "NOT_RUN"
+      "step": 2500,
+      "global_step": 37500,
+      "completed_epochs": 15,
+      "training_examples": 900000
+    },
+    "actual_training_exit_code": 0,
+    "controller": {
+      "status": "RUNNING",
+      "current_stage": "reference-evaluation",
+      "worker_pid": 3123499,
+      "completed_stages": [
+        "train",
+        "method-endpoint-audit"
+      ]
+    },
+    "evaluation_receipts": {
+      "xtrack_author_release_s2026": {
+        "receipt_exists": true,
+        "status": "RUNNING_NOT_SCORED",
+        "completed_datasets": [],
+        "receipt_sha256": "a6e4ac0523f8505a17857145ccad0ca2ac118e92960d01e0e208106d8eebec83"
+      },
+      "xtrack_full_method_v1_s2026": {
+        "receipt_exists": false
+      }
     },
     "weight_file_count": 1,
-    "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0014.pth.tar"
+    "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar"
   },
-  "subject": "FOURTEENTH_EPOCH_NEW_RECORDS_AND_SINGLE_RECOVERY_NOT_BENCHMARK",
+  "subject": "FIFTEEN_EPOCH_TRAIN_EXIT0_ENDPOINT_AND_FULL_BENCHMARK_SEPARATE",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-04T14:49:11.472082+08:00",
-  "scope": "Only new32501..35000 epoch14 rows checked; completed35000 prefix assembled from prior32500 evidence plus new2500 rows. Actual trajectory-only counts are in the fourteenth-epoch record; previous epoch6 positive cases remain preserved. Oneep14 necessary recovery; retirement totals come from the original worker and precheck evidence. No model reload/new forward/independent trajectory control/benchmark. User GPU controls withdrawn.",
+  "training_snapshot_observed_at": "2026-10-04T16:29:49.128487+08:00",
+  "scope": "OnlyNEW35001..37500 epoch15 rows checked; full37500 statistics assembled from prior35000 evidence. Actual train exit0 and one terminal checkpoint verified; endpoint CPU audit and full benchmarking are separate receipts. Training ranks may normally exit. No forward/model reload by this publication, no independent trajectory-control efficacy or benchmark improvement claim; full research goal remains unmet.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
   "last_verified_runtime": {
-    "observed_at": "2026-10-04T14:53:50.568752+08:00",
+    "observed_at": "2026-10-04T16:30:20.619042+08:00",
     "training": {
+      "status": "TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT",
       "epoch": 15,
-      "step": 280,
-      "global_step": 35280,
-      "completed_epochs": 14,
-      "training_examples": 846720,
-      "formal_tracking_scores": "NOT_RUN"
+      "step": 2500,
+      "global_step": 37500,
+      "completed_epochs": 15,
+      "training_examples": 900000
+    },
+    "controller": {
+      "status": "RUNNING",
+      "current_stage": "reference-evaluation",
+      "worker_pid": 3123499,
+      "completed_stages": [
+        "train",
+        "method-endpoint-audit"
+      ]
+    },
+    "evaluation_receipts": {
+      "xtrack_author_release_s2026": {
+        "receipt_exists": true,
+        "status": "RUNNING_NOT_SCORED",
+        "completed_datasets": [],
+        "receipt_sha256": "a6e4ac0523f8505a17857145ccad0ca2ac118e92960d01e0e208106d8eebec83"
+      },
+      "xtrack_full_method_v1_s2026": {
+        "receipt_exists": false
+      }
     }
   },
   "candidate_training_started": false,
   "candidate_actual_gpu_sanity": "NOT_RUN",
   "candidate_launch_ready": false,
-  "latest_runtime_updates_at_publication": 35280
+  "latest_runtime_updates_at_publication": 37500
 }
