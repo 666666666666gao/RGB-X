@@ -1,0 +1,54 @@
+{
+  "status": "ACTUAL_STATIC_PARAMETER_MANIFEST_SCOPE_VERIFIED_NOT_MODEL_RELOAD_OR_BENCHMARK",
+  "analyzed_at": "2026-10-04T20:40:09.375318+08:00",
+  "run_id": "xtrack_full_method_v1_s2026",
+  "source_manifest": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/parameter_manifest.json",
+  "manifest_sha256": "400208b07b7acbc100b6b8b9d0cbea39f792b3295da2faf12a7f5de8cf81ec99",
+  "manifest_bytes": 107139,
+  "parameter_tensors": 504,
+  "trainable_parameter_elements": 5821440,
+  "categories": {
+    "shared_content": {
+      "parameter_tensors": 336,
+      "parameter_elements": 2231808,
+      "task_optimizer_states_per_parameter": 3,
+      "eligible_for_shared_risk_correction": true
+    },
+    "router": {
+      "parameter_tensors": 24,
+      "parameter_elements": 46080,
+      "task_optimizer_states_per_parameter": 3,
+      "eligible_for_shared_risk_correction": true
+    },
+    "routed_expert": {
+      "parameter_tensors": 144,
+      "parameter_elements": 3543552,
+      "task_optimizer_states_per_parameter": 1,
+      "eligible_for_shared_risk_correction": false
+    }
+  },
+  "eligible_shared_parameter_elements": 2277888,
+  "task_index_order": [
+    "RGB-T",
+    "RGB-D",
+    "RGB-Event"
+  ],
+  "router_supervision_experts": {
+    "RGB-T": [
+      0,
+      1
+    ],
+    "RGB-D": [
+      4,
+      5
+    ],
+    "RGB-Event": [
+      2,
+      3
+    ]
+  },
+  "supervision_mapping": "Matches original pinned XTrack actor. Dataset/task-index order differs from expert-group order and is explicitly remapped.",
+  "distributed_task_gradient_normalization": "local mean task loss multiplied by local_count/global_task_count, then SUM all-reduce; each task has eight global primary samples.",
+  "optimizer_source_sha256": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+  "scope": "Copy the existing immutable train-start manifest and check its source-declared categories, shapes and counts on CPU. Eligibility does not imply every parameter was modified in the20 accepted correction steps. Routed experts are not asserted task-exclusive; visitation is not inferred from names. Frozen backbone/head parameters are absent from this optimizer manifest. No live evaluation/process/native-session query, tensor/model load, GPU command, update, restart or deletion."
+}

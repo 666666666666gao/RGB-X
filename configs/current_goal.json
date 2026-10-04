@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T08:55:30.066324+00:00",
+  "updated_at": "2026-10-04T13:50:55.709776+00:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "TRAINING_COMPLETE_COMPLETE_METRICS_AND_RESULT_REVIEW_PENDING",
+  "status": "TRAINING_COMPLETE_REFERENCE_ONE_OF_THREE_SCORED_METHOD_EVALUATION_PENDING",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -264,7 +264,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-04T16:29:49.128487+08:00",
+  "runtime_snapshot_observed_at": "2026-10-04T21:46:29.847502+08:00",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "ordered_next_steps": [
     {
@@ -303,7 +303,7 @@
     {
       "id": "A",
       "setting": "Public joint checkpoint, direct evaluation with original source",
-      "status": "QUEUED_IN_EXISTING_CONTROLLER"
+      "status": "REFERENCE_LASHER_FULLY_SCORED_VISEVENT_RUNNING_DEPTHTRACK_PENDING"
     },
     {
       "id": "B",
@@ -432,20 +432,32 @@
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
-    "training_pause_requested": false
+    "training_pause_requested": false,
+    "next_observation_not_before": "2026-10-04T23:53:13.697917+08:00",
+    "estimate_evidence": "reports/reference_lasher_complete_intake_20261004.json",
+    "estimated_stage": "Remaining reference VisEvent only; DepthTrack and all method evaluations not included.",
+    "completed_observer_session": 64110,
+    "completed_observer_exit_code": 0,
+    "scheduled_observer_native_session": 8765,
+    "scheduled_observer_pid": 10152,
+    "scheduled_observer_started_at": "2026-10-04T21:51:27.725505+08:00",
+    "scheduled_observer_status": "ACTUALLY_STARTED_NO_INTERIM_QUERY"
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
   "latest_evaluation_receipts": {
     "xtrack_author_release_s2026": {
       "receipt_exists": true,
-      "completed_datasets": [],
+      "completed_datasets": [
+        "LasHeR"
+      ],
       "status": "RUNNING_NOT_SCORED",
-      "receipt_sha256": "a6e4ac0523f8505a17857145ccad0ca2ac118e92960d01e0e208106d8eebec83"
+      "snapshot_evidence": "reports/full_method_v1_reference_lasher_pipeline_snapshot_20261004.json"
     },
     "xtrack_full_method_v1_s2026": {
       "receipt_exists": false,
-      "completed_datasets": []
+      "completed_datasets": [],
+      "status": "NOT_STARTED"
     }
   },
   "endpoint_audit_status": "PASS",
@@ -462,5 +474,25 @@
     "accepted_updates_with_localization_risk": 958,
     "trajectory_only_events": 7,
     "scope": "Post-hoc analysis of immutable completed training telemetry; no live evaluation query or new model execution. Counterfactual selections are not retrained-method scores."
+  },
+  "reference_lasher_complete_metrics": {
+    "report": "reports/reference_xtrack_author_release_s2026/LasHeR/scores/metrics.json",
+    "intake": "reports/reference_lasher_complete_intake_20261004.json",
+    "headlines": {
+      "SR_AUC": 0.5554599303245381,
+      "PR_at_20": 0.6905088871059202,
+      "NPR_AUC": 0.5921262401038353,
+      "NP_at_020": 0.6548772213736572
+    },
+    "sequences": 245,
+    "frame_pairs": 220703,
+    "attributes": 19
+  },
+  "parameter_scope_manifest": {
+    "manifest": "reports/full_method_v1_parameter_manifest.json",
+    "summary": "reports/full_method_v1_parameter_scope_summary.json",
+    "trainable_elements": 5821440,
+    "shared_correction_eligible_elements": 2277888,
+    "scope": "Source-declared categories; not empirically measured task exclusivity or proof that every eligible parameter received a correction."
   }
 }
