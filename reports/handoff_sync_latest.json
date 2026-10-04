@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T14:10:12.599182+00:00",
-  "source_commit": "3677b0c620b9947c6d49d63deaf1a0bccf0956c1",
-  "document_sha256": "a8080ad831997319bba8740442d3381936dbd8ee644d88b6d21666424152cfd6",
-  "document_bytes": 168519,
+  "verified_at": "2026-10-04T16:20:30.468062+00:00",
+  "source_commit": "5dee2379c5b0c576e8089e8e5753466726cb9286",
+  "document_sha256": "773be00209e0c1cb387f047de58cbe8c93b6ee3d27be62d38e95ca81d9fa7350",
+  "document_bytes": 174365,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -12,7 +12,7 @@
     "GitHub_commit_blob"
   ],
   "active_run": "xtrack_full_method_v1_s2026",
-  "formal_tracking_scores": "REFERENCE_LASHER_COMPLETE_METHOD_NOT_STARTED_FULL_COMPARISON_PENDING",
+  "formal_tracking_scores": "REFERENCE_TWO_OF_THREE_COMPLETE_METHOD_NOT_STARTED",
   "training_protocol_changed": false,
   "completed_epoch_updates_checked": 37500,
   "observed_training_global_step": 37500,
@@ -90,14 +90,14 @@
     "weight_file_count": 1,
     "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar"
   },
-  "subject": "PAIRED_UNCERTAINTY_ENTRY_PREPARED_CPU_CHECKED_FULL_ACTUAL_PAIR_NOT_RUN",
+  "subject": "REFERENCE_VISEVENT_COMPLETE_AND_ACTUAL_NATIVE_DIRECTORY_FIX_RECOVERY",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
   "training_snapshot_observed_at": "2026-10-04T16:29:49.128487+08:00",
-  "scope": "Prepare and deploy a CPU-only future paired analysis; only existing reference arithmetic/identity and artificial DepthTrack cases were executed. Last actual runtime21:46 remains unchanged; no live progress query, real full-pair bootstrap, GPU/model/scoring, restart, hardware query/control or weight deletion. Same original observer8765 next23:53; goal unmet.",
+  "scope": "Complete reference VisEvent320 results and installedVOT red-green-cache regression, minimal directory creation fix and actually started three-card evaluation recovery. Original failures retained; SOURCE8/checkpoint unchanged, method0/3 and all7unproven. Dynamic recovery receipt not overwritten; no training/OPE replay or hardware controls.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
-  "last_verified_runtime": "2026-10-04T21:46:29.847502+08:00",
+  "last_verified_runtime": "2026-10-05T00:11:42.143275+08:00",
   "candidate_training_started": false,
   "candidate_actual_gpu_sanity": "NOT_RUN",
   "candidate_launch_ready": false,
@@ -145,13 +145,14 @@
     "source8_unchanged": true,
     "scope": "Publication bytes only; no live process/evaluation or hardware query."
   },
-  "runtime_observed_at": "2026-10-04T21:46:29.847502+08:00",
+  "runtime_observed_at": "2026-10-05T00:11:42.143275+08:00",
   "reference_completed_datasets": [
-    "LasHeR"
+    "LasHeR",
+    "VisEvent"
   ],
   "method_completed_datasets": [],
-  "next_observation_not_before": "2026-10-04T23:53:13.697917+08:00",
-  "scheduled_observer_native_session": 8765,
+  "next_observation_not_before": "2026-10-05T00:31:42.143275+08:00",
+  "scheduled_observer_native_session": 20632,
   "git_blob_all_published_files_match_raw_bytes": true,
   "artifact_integrity_fix": {
     "original_png_bytes": 80131,
@@ -184,5 +185,29 @@
     "ready_to_analyze_actual_pair": false,
     "remaining": "Both real endpoints must complete all three datasets and have an audited full comparison with matching source hashes.",
     "limitations": "One fixed endpoint pair; conditional on saved endpoint-specific DepthTrack threshold grids. Not training seed variation, module attribution, calibrated p-values or corrected multiple-metric significance."
-  }
+  },
+  "latest_publication_sync": {
+    "verified_at": "2026-10-04T16:20:30.468062+00:00",
+    "files_match": true,
+    "file_sha256": {
+      ".gitattributes": "a8b864b1c79f9f1015c4c1748d339c23f1a5730c5663adab22e6f2db8560e3d1",
+      "scripts/run_vot_sequences.py": "82983788b1d21e58f9bfc9ac181170e25540375eb6e8e42729d9e72ade10cc7e",
+      "scripts/check_vot_empty_results.py": "0d09fdc7be50f687e27eed35f1446d9de90f85792e85ec427ec6de1bd02204c7",
+      "scripts/resume_reference_depthtrack_and_method_v1.py": "c9479f1b372e917d91f2d439cc7b56b013d6b501934fff47a5422e7d7fcca80a",
+      "configs/current_goal.json": "31e1b0d74348adabaebc5e3b555ae5b10865f98682f183f941271fe652200f20",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "773be00209e0c1cb387f047de58cbe8c93b6ee3d27be62d38e95ca81d9fa7350",
+      "reports/reference_visevent_complete_intake_20261005.json": "75d4b4719343b280366c9b3027ed07d0f4b3c9f2ab652791d826f8f70add91dc",
+      "reports/reference_depthtrack_directory_failure_20261005.json": "ecd6aaee524daed57b5a240731213b08728454b7cb922cbc11ea708b9385bc47",
+      "reports/vot_empty_results_directory_regression_20261005.json": "0a58de6a9db463437552826d51175159469c21e4ae6862567ad795a04ae39400",
+      "reports/full_method_v1_evaluation_recovery_initial_snapshot_20261005.json": "51c7651fcbb0c70203063ce9fe592935ab9992770d8ff8eb78b46fbf696d5526",
+      "reports/reference_xtrack_author_release_s2026/VisEvent/coverage.json": "eea2e0dab780d48865261c532d482a9234d8b4c584f6c877f69c9aa28e1ad7c4",
+      "reports/reference_xtrack_author_release_s2026/VisEvent/scores/metrics.json": "fbc5caaff345ecb63b8dbd73aae73cd1b4ead261d2867d44b598de7d552fdffa",
+      "reports/reference_xtrack_author_release_s2026/VisEvent/scores/per_sequence.csv": "d61569816e141052957a1ce2b33d23d06727414c0f22295ea3ce4ecec13cb1b2",
+      "reports/reference_xtrack_author_release_s2026/VisEvent/scores/full_curves.png": "7405776b527eb663c2a670c41dc44548e12c447e06298d59c335f08fb9481787"
+    },
+    "source8_unchanged": true,
+    "scope": "Publication byte integrity and immutable train seal only; no live progress/process/native or hardware query, scoring/model task or dynamic recovery receipt overwrite."
+  },
+  "original_pipeline_status": "FAILED_DIRECTORY_CHECK_AFTER_TRAIN_EXIT0",
+  "evaluation_recovery_controller_pid": 3560911
 }
