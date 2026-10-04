@@ -1,0 +1,19 @@
+{
+  "checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+  "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+  "checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+  "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+  "terminal_audit_sha256": "e41c8074ff7c7c286441e04abe89b3040a8c29fac78215aa57a801ea09da8797",
+  "dataset": "DepthTrack",
+  "dataset_audit": "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+  "dataset_audit_sha256": "463b778647930b3027728c09e97483cedc99a8ff5ab72894e2753539aa111e03",
+  "terminal_audit": "/data/gb/rgbx-risk/reports/author_release_endpoint_audit.json",
+  "source_stack_sha256": "c56d409833b033a9e35058d836c525d002fe000124d6fee9efaef27ec66525c2",
+  "workspace_stack_sha256": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+  "trackers_ini_sha256": "c10fb5530d4ca4ea4465d9495447d6af3ffd41da4e5195554fe0c7172173776a",
+  "tracker_id": "xtrack_joint_s2026_3aeead46ab80",
+  "experiment_id": "rgbd-unsupervised",
+  "seed": 2026,
+  "expected_sequences": 50,
+  "expected_frame_pairs": 76373
+}

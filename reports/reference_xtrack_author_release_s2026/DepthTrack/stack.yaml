@@ -1,0 +1,12 @@
+title: VOT-RGBD2021 challenge
+url: http://www.votchallenge.net/vot2021/
+experiments:
+  rgbd-unsupervised:
+    type: unsupervised
+    repetitions: 1
+    analyses:
+    - type: average_tpr
+    - type: pr_curve
+    - type: f_curve
+    - type: pr_curves
+      name: per_sequence_pr_curves

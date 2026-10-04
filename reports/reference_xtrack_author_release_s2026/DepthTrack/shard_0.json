@@ -1,0 +1,27 @@
+{
+  "status": "TRAJECTORIES_WRITTEN_NOT_SCORED",
+  "shard": 0,
+  "gpu": 0,
+  "seed": 2026,
+  "completed_sequences": [
+    "adapter01_indoor",
+    "bag02_indoor",
+    "ball10_wild",
+    "ball18_indoor",
+    "beautifullight02_indoor",
+    "card_indoor",
+    "cube02_indoor",
+    "cup01_indoor",
+    "cup12_indoor",
+    "dumbbells01_indoor",
+    "flag_indoor",
+    "human02_indoor",
+    "notebook01_indoor",
+    "pigeon04_wild",
+    "shoes02_indoor",
+    "toiletpaper01_indoor",
+    "ukulele01_indoor"
+  ],
+  "shard_wallclock_seconds": 7530.8442756660515,
+  "identity_sha256": "f62353d4f28de2ffbd4b1bdaf94569a65bc249777ccac546f93ee5c53cf9545a"
+}
