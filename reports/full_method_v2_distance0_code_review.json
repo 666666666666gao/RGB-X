@@ -1,0 +1,97 @@
+{
+  "status": "SOURCE_REVIEW_PASS",
+  "blocking_issues": [],
+  "reviewer": "Codex root static self-review",
+  "review_independence": "self",
+  "acceptance_status": "provisional_static_only",
+  "runtime_attested": false,
+  "reviewed_at": "2026-10-04T23:49:43.403085+00:00",
+  "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+  "source_hashes": {
+    "configs/full_method_v2_distance0.json": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+    "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+    "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+    "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+    "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+    "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+    "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd",
+    "scripts/run_full_method_v2_distance0_job.py": "bf3f9f9520c73d38aa0df439e367ea540b87fa6e0a41032c3e0e60fc5ad346df",
+    "scripts/audit_joint_endpoint_v2_distance0.py": "91b7ed4899ad9476575ed1676c246616bd7f4adaea6df4a3a785473d061befa4",
+    "scripts/audit_full_method_v2_distance0_first_epoch.py": "8da030b336d3384c3d77d4ad38ea75bb58e955c9b72e183548e98db6004f2737",
+    "scripts/retain_full_method_v2_distance0_checkpoints.py": "2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102",
+    "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
+    "scripts/compare_complete_results.py": "cfc32d0149ce910c8de348f8156de6b4a7a941e5576bee6e8376d217f58a3200",
+    "scripts/analyze_paired_sequence_uncertainty.py": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189"
+  },
+  "current_local_source_hashes": {
+    "configs/full_method_v2_distance0.json": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+    "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+    "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+    "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+    "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+    "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+    "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd",
+    "scripts/run_full_method_v2_distance0_job.py": "bf3f9f9520c73d38aa0df439e367ea540b87fa6e0a41032c3e0e60fc5ad346df",
+    "scripts/audit_joint_endpoint_v2_distance0.py": "91b7ed4899ad9476575ed1676c246616bd7f4adaea6df4a3a785473d061befa4",
+    "scripts/audit_full_method_v2_distance0_first_epoch.py": "8da030b336d3384c3d77d4ad38ea75bb58e955c9b72e183548e98db6004f2737",
+    "scripts/retain_full_method_v2_distance0_checkpoints.py": "2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102",
+    "scripts/xtrack_eval_parameters.py": "db30ea1f57e250db01818dff8c35ee97286b161d500d95535203c2aaf813a979",
+    "scripts/compare_complete_results.py": "cfc32d0149ce910c8de348f8156de6b4a7a941e5576bee6e8376d217f58a3200",
+    "scripts/analyze_paired_sequence_uncertainty.py": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189"
+  },
+  "protocol_differences": {
+    "run_id": {
+      "v1": "xtrack_full_method_v1_s2026",
+      "v2": "xtrack_full_method_v2_distance0_s2026"
+    },
+    "output": {
+      "v1": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026",
+      "v2": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026"
+    },
+    "candidate_distance_weight": {
+      "v1": 0.05,
+      "v2": 0.0
+    }
+  },
+  "checks": [
+    "Exactly one algorithm setting differs: candidate_distance_weight .05 to zero; correction cap, sampling, optimizer, seed, initialization and budget unchanged.",
+    "Candidate controller requires actual completed v1 comparison covering all three datasets and all seven headlines; negative v1 status is accepted without fabricating a gain.",
+    "Reference reuse checks its actual complete status, author weight identity and saved reference artifact hashes; no reference inference is scheduled.",
+    "Formal launch requires candidate-specific two-step three-GPU sanity receipt, protocol equality, strict reload, unchanged frozen tensors and replica equality.",
+    "Formal training starts from the same public author release without a resume argument, on GPUs0/1/2 and independent master port29530.",
+    "Controller seals reviewed source hashes, checks memory availability and disk space; it has no temperature or power setting.",
+    "Separate candidate endpoint audit requires 15 completed epochs,37500 updates, actual controller exit0, model reload, frozen equality, finite optimizer states and three-task witnesses.",
+    "Separate candidate first-epoch audit binds exact protocol/public checkpoint, model/optimizer/RNG state and three replicas; it does not claim final tracking scores.",
+    "Separate candidate retainer deletes only regular owned earlier named checkpoints and a byte-identical latest alias, retains the required final until measured comparison, and has its own audit and receipt.",
+    "Candidate stages are training, endpoint audit, existing full-three evaluator, all-seven comparison, then10000-draw seed2026 paired-sequence CPU analysis.",
+    "Conditional paired bootstrap reuses the unchanged analyzer and original curve aggregation; it does not estimate training-seed variability or module causality.",
+    "Shared v1 training, verifier, scorer, current queue and checkpoint are not modified by this preparation."
+  ],
+  "known_boundaries": [
+    "M3 still only offers alpha0 when there is no local risk; distance0 does not implement independent trajectory intervention.",
+    "Current task-mean risks, fixed small denominator, bounded Gram correction, metadata-only modules_enabled and three visible frames remain unchanged.",
+    "Source review is self-review only; no independent reviewer or actual candidate CUDA/model/state/metric verification has occurred."
+  ],
+  "pending_identity_admission": {
+    "current_sha256": "db30ea1f57e250db01818dff8c35ee97286b161d500d95535203c2aaf813a979",
+    "required_before_formal_launch_sha256": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
+    "historical_prepared_crlf_sha256": "2c6f272a76ab380684194383e92a17c9c22eab62968ab6507e397908df17a156",
+    "canonical_deployment_newline": "LF",
+    "prepared_canonical_payload_sha256": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
+    "syntax_ast_equivalent_to_previously_checked_payload": true,
+    "applied": false,
+    "deployment": "Only after v1 completes all three datasets and its complete comparison. Apply the canonical LF payload, not Windows-default newline serialization. Current launch source-hash gate remains unsatisfied until this exact future admission is applied."
+  },
+  "candidate_training_started": false,
+  "candidate_gpu_sanity": "NOT_RUN",
+  "launch_ready": false,
+  "remaining_before_launch": [
+    "Actual v1 all-three result and full comparison",
+    "Apply exact sealed two-run verifier admission after v1 completion",
+    "Verify actual candidate two-step three-GPU sanity and saved state"
+  ],
+  "first_epoch_audit_and_retainer_activation": "After actual candidate epoch1 save, audit once and start its isolated retainer once.",
+  "scope": "Reviewed current local source and explicit future one-line verifier admission, not deployed execution or efficacy. Future verifier SHA in source_hashes deliberately prevents premature launch. No log/native-session/remote progress read, model execution, deletion or hardware control."
+}

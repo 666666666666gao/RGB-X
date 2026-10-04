@@ -107,7 +107,12 @@ run_stage('complete-comparison', [PYTHON, str(PROJECT / 'scripts/compare_complet
                                  '--training-updates', str(Path(protocol['output']) / 'updates.jsonl'),
                                  '--output', str(comparison_path)], cpu=True)
 comparison = json.loads(comparison_path.read_text())
+uncertainty_path = PROJECT / 'reports/full_method_v2_distance0_paired_sequence_uncertainty.json'
+run_stage('paired-sequence-uncertainty', [PYTHON, str(PROJECT / 'scripts/analyze_paired_sequence_uncertainty.py'),
+                                       '--comparison', str(comparison_path), '--output', str(uncertainty_path),
+                                       '--draws', '10000', '--seed', '2026'], cpu=True)
 receipt.update(status=comparison['status'], comparison=str(comparison_path),
+               paired_sequence_uncertainty=str(uncertainty_path),
                benchmark_goal=comparison['status'], ended_at=datetime.now(timezone.utc).isoformat())
 save()
 print(json.dumps(receipt))

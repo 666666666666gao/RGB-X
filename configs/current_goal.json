@@ -118,17 +118,27 @@
     "preparation_evidence": "reports/full_method_v2_distance0_configuration_preparation.json",
     "launch_ready": false,
     "remaining_before_launch": [
-      "finish the fixed v1 endpoint and full three-dataset comparison",
-      "after completed v1 scoring apply the explicit candidate run-ID admission to the common endpoint verifier and check identity/hash rejection cases",
-      "review candidate entry points and seal protocol/source hashes in its own review receipt",
-      "run the actual candidate-protocol two-step three-GPU sanity and verify its saved state"
+      "Actual v1 all-three result and full comparison",
+      "Apply exact sealed two-run verifier admission after v1 completion",
+      "Verify actual candidate two-step three-GPU sanity and saved state"
     ],
     "isolated_entry_status": "PREPARED_NOT_RUN",
     "isolated_entry_evidence": "reports/full_method_v2_distance0_entry_preparation.json",
     "identity_admission_status": "SYNTHETIC_CPU_CHECK_PASS_PREPARED_NOT_APPLIED",
     "identity_contract_evidence": "reports/full_method_v2_distance0_identity_contract_check.json",
     "retention_activation": "After candidate epoch1 is actually saved, run its isolated CPU audit once, then launch its isolated retention worker once. Do not reuse the v1 dynamic worker receipt.",
-    "full_run_diagnosis_evidence": "reports/full_method_v1_full_run_cost_decomposition.json"
+    "full_run_diagnosis_evidence": "reports/full_method_v1_full_run_cost_decomposition.json",
+    "source_review_status": "STATIC_SELF_SOURCE_REVIEW_PASS_NO_RUNTIME_OR_INDEPENDENT_ATTESTATION",
+    "source_review_evidence": "reports/full_method_v2_distance0_code_review.json",
+    "paired_sequence_uncertainty": {
+      "status": "CPU_STAGE_QUEUED_IN_UNSTARTED_CANDIDATE_CONTROLLER_NOT_EXECUTED",
+      "source": "scripts/analyze_paired_sequence_uncertainty.py",
+      "source_sha256": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
+      "output": "reports/full_method_v2_distance0_paired_sequence_uncertainty.json",
+      "draws": 10000,
+      "seed": 2026,
+      "scope": "Conditional whole-sequence pairing, not training-seed variance or module attribution."
+    }
   },
   "actual_training_examples_at_snapshot": 900000,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
@@ -269,7 +279,7 @@
   "ordered_next_steps": [
     {
       "id": "P0",
-      "status": "TRAINING_COMPLETE_ENDPOINT_AND_FULL_RESULT_PENDING",
+      "status": "TRAINING_ENDPOINT_REFERENCE_COMPLETE_METHOD_ONE_OF_THREE_COMPLETE_FULL_COMPARISON_PENDING",
       "work": "Complete fixed full_method_v1: 15 epochs/37500 updates, endpoint audit, author reference and method full three-dataset evaluation. Preserve all results, including negative outcomes."
     },
     {
