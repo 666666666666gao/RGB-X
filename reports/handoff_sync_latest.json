@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T13:53:52.841526+00:00",
-  "source_commit": "84ff969e7614a6ad08ad0858f70e7bdbac1fb589",
-  "document_sha256": "aa9d05d19518529315b0af8ae54807f808251293219361b9dd9312b089bb52e4",
-  "document_bytes": 164602,
+  "verified_at": "2026-10-04T13:57:25.113363+00:00",
+  "source_commit": "ad9f7c516a1114ff94dc62ebc26c02ac5e8e6662",
+  "document_sha256": "96f34506ec0fce7b3366b874afb366b469051490b8af19974364f5f5112e83f9",
+  "document_bytes": 165117,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -12,7 +12,7 @@
     "GitHub_commit_blob"
   ],
   "active_run": "xtrack_full_method_v1_s2026",
-  "formal_tracking_scores": "NOT_RUN",
+  "formal_tracking_scores": "REFERENCE_LASHER_COMPLETE_METHOD_NOT_STARTED_FULL_COMPARISON_PENDING",
   "training_protocol_changed": false,
   "completed_epoch_updates_checked": 37500,
   "observed_training_global_step": 37500,
@@ -127,22 +127,23 @@
     "scope": "Post-hoc analysis of immutable completed training telemetry; no live evaluation query or new model execution. Counterfactual selections are not retrained-method scores."
   },
   "published_file_sync": {
-    "verified_at": "2026-10-04T13:53:52.841526+00:00",
-    "published_files_identical": true,
+    "verified_at": "2026-10-04T13:57:25.113363+00:00",
+    "all_file_bytes_match": true,
     "file_sha256": {
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "aa9d05d19518529315b0af8ae54807f808251293219361b9dd9312b089bb52e4",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "96f34506ec0fce7b3366b874afb366b469051490b8af19974364f5f5112e83f9",
       "configs/current_goal.json": "4cfe7280ae1bcf945afdfff503a700b042f31458ff30c4e108cae5bf1d3b09eb",
       "reports/full_method_v1_parameter_manifest.json": "400208b07b7acbc100b6b8b9d0cbea39f792b3295da2faf12a7f5de8cf81ec99",
-      "reports/full_method_v1_parameter_scope_summary.json": "0369450470405b953d285e6ef17da2bce08ac967fe62d222fb6b9c8866bcefeb",
-      "reports/reference_lasher_complete_intake_20261004.json": "0304cc93ad6f76af803ec0fe06a7e04f423763633b21efc40a32835a5dfa3041",
-      "reports/full_method_v1_reference_lasher_pipeline_snapshot_20261004.json": "f3e886e037dc3f2d4ebd907c6e8389f43349a8f0934fbed4a219c6442f787cdc",
+      "reports/full_method_v1_parameter_scope_summary.json": "5c33a9fa20cc3a13d29d79d1d5ba803998694f17039f11741e0de7f6c0f7e4ac",
+      "reports/reference_lasher_complete_intake_20261004.json": "be87596b1eddafd8c9905f416b0cbad3787606fc679ee0ee03a326c6de7707a7",
+      "reports/full_method_v1_reference_lasher_pipeline_snapshot_20261004.json": "5f7321dfb315269c3d723707c156a8a9b00f8196fe96fa9c4d40f948eb9a6485",
       "reports/reference_xtrack_author_release_s2026/LasHeR/coverage.json": "5913ad62241b449479dc46a899a4b3dfaaed3d539d23bb10eb3146e92aba69f9",
       "reports/reference_xtrack_author_release_s2026/LasHeR/scores/metrics.json": "0c3dd14f8bddb9282d65169c055acb3dd7dabb10598e6ed4351611ab1eda0c9b",
       "reports/reference_xtrack_author_release_s2026/LasHeR/scores/per_sequence.csv": "a47eb37114192a06cd7784ef15f0e99786a9fb93e5bd52133bf0015c94e992f3",
-      "reports/reference_xtrack_author_release_s2026/LasHeR/scores/full_curves.png": "344b29850f64c0930aca848cd398bd48a0781784a010c81adab839b88635d813"
+      "reports/reference_xtrack_author_release_s2026/LasHeR/scores/full_curves.png": "344b29850f64c0930aca848cd398bd48a0781784a010c81adab839b88635d813",
+      ".gitattributes": "1b10fb351c03269d2a9465fada5995be125280ed29692211a033402d06ab878f"
     },
     "source8_unchanged": true,
-    "scope": "Published copy hashes and immutable completed training source seal only. No live evaluation/progress/native-session or hardware query."
+    "scope": "Publication bytes only; no live process/evaluation or hardware query."
   },
   "runtime_observed_at": "2026-10-04T21:46:29.847502+08:00",
   "reference_completed_datasets": [
@@ -150,5 +151,14 @@
   ],
   "method_completed_datasets": [],
   "next_observation_not_before": "2026-10-04T23:53:13.697917+08:00",
-  "scheduled_observer_native_session": 8765
+  "scheduled_observer_native_session": 8765,
+  "git_blob_all_published_files_match_raw_bytes": true,
+  "artifact_integrity_fix": {
+    "original_png_bytes": 80131,
+    "previous_git_blob_bytes": 80129,
+    "raw_png_sha256": "344b29850f64c0930aca848cd398bd48a0781784a010c81adab839b88635d813",
+    "original_csv_bytes_preserved": true,
+    "generated_json_newlines": "LF",
+    "metrics_changed": false
+  }
 }
