@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T08:11:28.097838+08:00",
-  "source_commit": "988402fbf8707eaff6c939445a4b6c8d27ddc6ec",
-  "document_sha256": "84e915037b7a7f14c75fec1104416c80a7a714d35066541d211ed00875338a93",
-  "document_bytes": 138232,
+  "verified_at": "2026-10-04T09:52:19.713906+08:00",
+  "source_commit": "3ddda7ed66b4afcb420d865da39ae4036a3efbd7",
+  "document_sha256": "fa7bb31b264bb3e1af0e04fc0499d1b4668f5114d83d3aef9ad8b716dad323e4",
+  "document_bytes": 140344,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -14,26 +14,26 @@
   "active_run": "xtrack_full_method_v1_s2026",
   "formal_tracking_scores": "NOT_RUN",
   "training_protocol_changed": false,
-  "completed_epoch_updates_checked": 25000,
-  "observed_training_global_step": 25110,
-  "generated_checkpoint_files_retired": 24,
-  "generated_checkpoint_file_bytes_retired": 11413398402,
+  "completed_epoch_updates_checked": 27500,
+  "observed_training_global_step": 27640,
+  "generated_checkpoint_files_retired": 26,
+  "generated_checkpoint_file_bytes_retired": 12367554408,
   "retention_worker_pid": 1629089,
   "source_sync": {
-    "verified_at": "2026-10-04T08:11:28.097838+08:00",
+    "verified_at": "2026-10-04T09:52:19.713906+08:00",
     "all_published_files_match": true,
     "published_file_sha256": {
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "84e915037b7a7f14c75fec1104416c80a7a714d35066541d211ed00875338a93",
-      "configs/current_goal.json": "5fcc5e3ecfeec6cbdd3c436fa632553f15353aa0d51469da8737c6419cc7210f",
-      "configs/checkpoint_retention_policy.json": "2ed5d5fe51833920cc292c10f1a461908028803f84c2cb799ddd30dbfbd413b8",
-      "reports/full_method_v1_tenth_epoch_record_check.json": "4860ec224dbd0450e161e9915ceea92cfd97fa7a7a4b8569f8b9f14f106a2604",
-      "reports/full_method_v1_tenth_epoch_retention_snapshot.json": "8647bc4c08a8e803905ba8307179fd343dfddeb04bb4fff87b3447501ad27a6d"
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "fa7bb31b264bb3e1af0e04fc0499d1b4668f5114d83d3aef9ad8b716dad323e4",
+      "configs/current_goal.json": "a472c1428ea20942cb1a60b7e337d78bb7afb410097645fef417a98ff57b57a9",
+      "configs/checkpoint_retention_policy.json": "9286def536715782d286030aab08ad8bf3653005c5623fcdb29054916d7d2f37",
+      "reports/full_method_v1_eleventh_epoch_record_check.json": "a55a17103ee82894c9ede0b31e2a7baa33a5a57a8916ed1b5cf6d5b54d1782ad",
+      "reports/full_method_v1_eleventh_epoch_retention_snapshot.json": "785c5b5adeb757822bd1996ac8a1002508e865938c27920120b906b2e53d7283"
     },
     "live_training_sources_unchanged": true,
     "process_states": {
       "1603676": "State:\tS (sleeping)",
       "1603680": "State:\tS (sleeping)",
-      "1603687": "State:\tR (running)",
+      "1603687": "State:\tS (sleeping)",
       "1603688": "State:\tR (running)",
       "1603689": "State:\tR (running)",
       "1629089": "State:\tS (sleeping)"
@@ -41,22 +41,22 @@
     "gpu_guard_status": "DISABLED_BY_USER",
     "guard_process_missing": true,
     "training": {
-      "epoch": 11,
-      "step": 130,
-      "global_step": 25130,
-      "completed_epochs": 10,
-      "training_examples": 603120,
+      "epoch": 12,
+      "step": 170,
+      "global_step": 27670,
+      "completed_epochs": 11,
+      "training_examples": 664080,
       "formal_tracking_scores": "NOT_RUN"
     },
     "weight_file_count": 1,
-    "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0010.pth.tar"
+    "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0011.pth.tar"
   },
-  "subject": "TENTH_EPOCH_NEW_RECORDS_AND_SINGLE_RECOVERY_NOT_BENCHMARK",
+  "subject": "ELEVENTH_EPOCH_NEW_RECORDS_AND_SINGLE_RECOVERY_NOT_BENCHMARK",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-04T08:10:37.240763+08:00",
-  "scope": "Only new22501..25000 epoch10 rows checked; completed25000 prefix assembled from prior22500 evidence plus new2500 rows. Actual trajectory-only counts are in the tenth-epoch record; previous epoch6 positive cases remain preserved. Oneep10 necessary recovery; retirement totals come from the original worker and precheck evidence. No model reload/new forward/independent trajectory control/benchmark. User GPU controls withdrawn.",
+  "training_snapshot_observed_at": "2026-10-04T09:51:16.935440+08:00",
+  "scope": "Only new25001..27500 epoch11 rows checked; completed27500 prefix assembled from prior25000 evidence plus new2500 rows. Actual trajectory-only counts are in the eleventh-epoch record; previous epoch6 positive cases remain preserved. Oneep11 necessary recovery; retirement totals come from the original worker and precheck evidence. No model reload/new forward/independent trajectory control/benchmark. User GPU controls withdrawn.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
-  "latest_runtime_updates_at_publication": 25130
+  "latest_runtime_updates_at_publication": 27670
 }
