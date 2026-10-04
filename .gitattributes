@@ -1,4 +1,5 @@
 * text eol=lf
 *.png -text
 reports/reference_xtrack_author_release_s2026/LasHeR/scores/per_sequence.csv -text whitespace=cr-at-eol
+reports/reference_xtrack_author_release_s2026/VisEvent/scores/per_sequence.csv -text whitespace=cr-at-eol
 reports/*.patch -text whitespace=-blank-at-eol

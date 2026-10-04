@@ -1,0 +1,53 @@
+{
+  "status": "ACTUAL_REFERENCE_VISEVENT_ALL320_FULL_METRICS_COLLECTED",
+  "headline_metrics": {
+    "SR_AUC": 0.6045030614193362,
+    "PR_at_20": 0.7692957488705718,
+    "NPR_AUC": 0.6671401395683385,
+    "NP_at_020": 0.7284162241798723
+  },
+  "all_sequence_metrics": {
+    "SR_AUC": 0.6045030614193362,
+    "PR_at_20": 0.7692957488705718,
+    "NPR_AUC": 0.6671401395683385,
+    "NP_at_020": 0.7284162241798723
+  },
+  "zero_curve_sequences": {
+    "success": 0,
+    "precision": 0,
+    "normalized_precision": 0
+  },
+  "sequence_count": 320,
+  "frame_pairs": 157421,
+  "attributes": 17,
+  "files": {
+    "coverage.json": {
+      "sha256": "eea2e0dab780d48865261c532d482a9234d8b4c584f6c877f69c9aa28e1ad7c4",
+      "bytes": 126861
+    },
+    "scores/metrics.json": {
+      "sha256": "fbc5caaff345ecb63b8dbd73aae73cd1b4ead261d2867d44b598de7d552fdffa",
+      "bytes": 1115524
+    },
+    "scores/per_sequence.csv": {
+      "sha256": "d61569816e141052957a1ce2b33d23d06727414c0f22295ea3ce4ecec13cb1b2",
+      "bytes": 31519
+    },
+    "scores/full_curves.png": {
+      "sha256": "7405776b527eb663c2a670c41dc44548e12c447e06298d59c335f08fb9481787",
+      "bytes": 76706
+    }
+  },
+  "manifest_sha256": "718323bd77c3cc10cf86e4af0fb44a379602bdf47ba40553015dc85d86f3eed8",
+  "fps": 6.056469422589361,
+  "elapsed_seconds": 25992.205857236346,
+  "identity": {
+    "checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+    "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+    "checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+    "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "terminal_audit_sha256": "e41c8074ff7c7c286441e04abe89b3040a8c29fac78215aa57a801ea09da8797"
+  },
+  "published_metric_comparability": "not_verified_against_annos_zip_306_row_person1_version",
+  "scope": "Completed reference scores only. No current process/log/native progress query or scoring replay. All four copied artifact hashes match server originals; local per-sequence aggregation/curve checks passed. Method scores remain unavailable."
+}

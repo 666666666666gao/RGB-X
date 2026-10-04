@@ -40,6 +40,7 @@ for row in assigned:
     assert hashlib.sha256(Path(row['groundtruth']).read_bytes()).hexdigest() == row['groundtruth_sha256']
     sequence = workspace.dataset[row['name']]
     assert len(sequence) == row['frame_count']
+    (root / 'results' / tracker.reference / experiment.identifier / sequence.name).mkdir(parents=True, exist_ok=True)
     assert not experiment.results(tracker, sequence).find('*')
     experiment.execute(tracker, sequence, force=True)
     complete, files, _ = experiment.scan(tracker, sequence)

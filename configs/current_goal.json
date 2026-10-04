@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T14:09:26.829966+00:00",
+  "updated_at": "2026-10-04T16:20:05.753286+00:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "TRAINING_COMPLETE_REFERENCE_ONE_OF_THREE_SCORED_METHOD_EVALUATION_PENDING",
+  "status": "TRAIN_EXIT0_REFERENCE_TWO_OF_THREE_SCORED_NATIVE_DIRECTORY_FIX_RECOVERY_RUNNING",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -264,7 +264,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-04T21:46:29.847502+08:00",
+  "runtime_snapshot_observed_at": "2026-10-05T00:11:42.143275+08:00",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "ordered_next_steps": [
     {
@@ -303,7 +303,7 @@
     {
       "id": "A",
       "setting": "Public joint checkpoint, direct evaluation with original source",
-      "status": "REFERENCE_LASHER_FULLY_SCORED_VISEVENT_RUNNING_DEPTHTRACK_PENDING"
+      "status": "REFERENCE_LASHER_VISEVENT_COMPLETE_DEPTHTRACK_DIRECTORY_ERROR_REPAIRED_AND_RESUMED"
     },
     {
       "id": "B",
@@ -433,14 +433,14 @@
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-04T23:53:13.697917+08:00",
+    "next_observation_not_before": "2026-10-05T00:31:42.143275+08:00",
     "estimate_evidence": "reports/reference_lasher_complete_intake_20261004.json",
-    "estimated_stage": "Remaining reference VisEvent only; DepthTrack and all method evaluations not included.",
-    "completed_observer_session": 64110,
+    "estimated_stage": "Initial corrected native tracking must be verified after the actual pre-model failure. First reference sequence has2775 frames; previous OPE timing suggests several minutes, native RPC speed is not yet measured. Allow20minutes from actual startup for the first meaningful trajectory/exit diagnostic; then estimate the remaining native stage from actual receipts.",
+    "completed_observer_session": 8765,
     "completed_observer_exit_code": 0,
-    "scheduled_observer_native_session": 8765,
-    "scheduled_observer_pid": 10152,
-    "scheduled_observer_started_at": "2026-10-04T21:51:27.725505+08:00",
+    "scheduled_observer_native_session": 20632,
+    "scheduled_observer_pid": 44968,
+    "scheduled_observer_started_at": "2026-10-05T00:16:38.917372+08:00",
     "scheduled_observer_status": "ACTUALLY_STARTED_NO_INTERIM_QUERY"
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
@@ -449,10 +449,11 @@
     "xtrack_author_release_s2026": {
       "receipt_exists": true,
       "completed_datasets": [
-        "LasHeR"
+        "LasHeR",
+        "VisEvent"
       ],
-      "status": "RUNNING_NOT_SCORED",
-      "snapshot_evidence": "reports/full_method_v1_reference_lasher_pipeline_snapshot_20261004.json"
+      "status": "RUNNING_REFERENCE_DEPTHTRACK_RECOVERY_NOT_SCORED",
+      "snapshot_evidence": "reports/full_method_v1_evaluation_recovery_initial_snapshot_20261005.json"
     },
     "xtrack_full_method_v1_s2026": {
       "receipt_exists": false,
@@ -506,5 +507,32 @@
     "ready_to_analyze_actual_pair": false,
     "remaining": "Both real endpoints must complete all three datasets and have an audited full comparison with matching source hashes.",
     "limitations": "One fixed endpoint pair; conditional on saved endpoint-specific DepthTrack threshold grids. Not training seed variation, module attribution, calibrated p-values or corrected multiple-metric significance."
+  },
+  "evaluation_recovery": {
+    "status": "ACTUAL_STARTED_REFERENCE_DEPTHTRACK",
+    "controller_pid": 3560911,
+    "worker_pids": [
+      3560954,
+      3560955,
+      3560956
+    ],
+    "original_controller_status": "FAILED_REFERENCE_DIRECTORY_CHECK_TRAINING_EXIT0",
+    "initial_snapshot": "reports/full_method_v1_evaluation_recovery_initial_snapshot_20261005.json",
+    "active_receipt": "reports/full_method_v1_evaluation_recovery_20261005.json",
+    "regression": "reports/vot_empty_results_directory_regression_20261005.json",
+    "preservation": "Original failed controller/worker logs and completed LasHeR/VisEvent retained. Same fixed checkpoint and protocols; no training or OPE replay."
+  },
+  "reference_visevent_complete_metrics": {
+    "report": "reports/reference_xtrack_author_release_s2026/VisEvent/scores/metrics.json",
+    "intake": "reports/reference_visevent_complete_intake_20261005.json",
+    "headlines": {
+      "SR_AUC": 0.6045030614193362,
+      "PR_at_20": 0.7692957488705718,
+      "NPR_AUC": 0.6671401395683385,
+      "NP_at_020": 0.7284162241798723
+    },
+    "sequences": 320,
+    "frame_pairs": 157421,
+    "attributes": 17
   }
 }

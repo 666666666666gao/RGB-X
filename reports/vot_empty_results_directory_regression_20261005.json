@@ -1,0 +1,11 @@
+{
+  "status": "ACTUAL_INSTALLED_VOT_EMPTY_DIRECTORY_REGRESSION_PASS_NOT_TRACKING",
+  "observed_at": "2026-10-04T16:05:37.708621+00:00",
+  "vot_toolkit": "0.7.1",
+  "original_missing_directory_exit_code": 1,
+  "original_error": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/gaob/conda/envs/rgbx-eval/lib/python3.8/site-packages/vot/tracker/results.py\", line 70, in find\n    return fnmatch.filter(self._storage.documents(), pattern)\n  File \"/home/gaob/conda/envs/rgbx-eval/lib/python3.8/site-packages/vot/workspace/storage.py\", line 233, in documents\n    return [name for name in os.listdir(self._root) if os.path.isfile(os.path.join(self._root, name))]\nFileNotFoundError: [Errno 2] No such file or directory: '/tmp/rgbx-vot-results-directory-kmh_a6iq/tracker/experiment/sequence'\n",
+  "corrected_empty_directory_exit_code": 0,
+  "nonempty_cache_rejected_exit_code": 1,
+  "source_sha256": "0d09fdc7be50f687e27eed35f1446d9de90f85792e85ec427ec6de1bd02204c7",
+  "scope": "Actual installed Results(LocalStorage).find seam: missing directory fails, explicit creation permits empty-cache check, and a pre-existing file is still rejected. Temporary fixture contains no real trajectories; no model, image, GPU, training or benchmark scoring."
+}
