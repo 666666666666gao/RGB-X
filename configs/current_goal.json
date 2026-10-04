@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T14:49:11.472082+08:00",
+  "updated_at": "2026-10-04T16:29:49.128487+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "FULL_THREE_MODULE_TRAINING_ACTIVE_COMPLETE_METRICS_PENDING",
+  "status": "TRAINING_COMPLETE_COMPLETE_METRICS_AND_RESULT_REVIEW_PENDING",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -103,8 +103,8 @@
     1603688,
     1603689
   ],
-  "actual_completed_updates_at_snapshot": 35160,
-  "tracking_scores": "NOT_RUN",
+  "actual_completed_updates_at_snapshot": 37500,
+  "tracking_scores": "USE_SEPARATE_EVALUATION_RECEIPTS_AND_FULL_COMPARISON_NOT_STATIC_TRAINING_FIELD",
   "objective_met": false,
   "next_iteration_candidate": {
     "status": "CONFIG_PREPARED_NOT_RUN",
@@ -129,9 +129,9 @@
     "identity_contract_evidence": "reports/full_method_v2_distance0_identity_contract_check.json",
     "retention_activation": "After candidate epoch1 is actually saved, run its isolated CPU audit once, then launch its isolated retention worker once. Do not reuse the v1 dynamic worker receipt."
   },
-  "actual_training_examples_at_snapshot": 843840,
+  "actual_training_examples_at_snapshot": 900000,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 14,
+  "actual_completed_epochs_at_snapshot": 15,
   "first_epoch_risk_events": 114,
   "first_epoch_nonzero_corrections": 3,
   "first_epoch_trajectory_checks": 161,
@@ -249,18 +249,26 @@
       "accepted_nonzero_corrections": 0,
       "trajectory_checks": 60,
       "mean_step_seconds": 2.349070809949073
+    },
+    {
+      "epoch": 15,
+      "updates": 2500,
+      "risk_events": 6,
+      "accepted_nonzero_corrections": 0,
+      "trajectory_checks": 56,
+      "mean_step_seconds": 2.402233928226889
     }
   ],
-  "completed_epoch_statistics_scope": "Completed35000-update prefix assembled from prior32500 proof plus new32501..35000 rows checked once. Current partial epoch15 is excluded from these statistics.",
-  "completed_epoch_statistics_source": "reports/full_method_v1_fourteenth_epoch_record_check.json",
+  "completed_epoch_statistics_scope": "Completed37500-update run assembled from prior35000 proof plus onlyNEW35001..37500 rows checked once; all15 epochs included. Training completion is not benchmark or research-goal completion.",
+  "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-04T14:49:11.472082+08:00",
+  "runtime_snapshot_observed_at": "2026-10-04T16:29:49.128487+08:00",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "ordered_next_steps": [
     {
       "id": "P0",
-      "status": "RUNNING",
+      "status": "TRAINING_COMPLETE_ENDPOINT_AND_FULL_RESULT_PENDING",
       "work": "Complete fixed full_method_v1: 15 epochs/37500 updates, endpoint audit, author reference and method full three-dataset evaluation. Preserve all results, including negative outcomes."
     },
     {
@@ -364,15 +372,15 @@
     "historical_policy": "configs/gpu_limits.json"
   },
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
-  "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
+  "training_runtime_state": "ACTUAL_TRAIN_EXIT0_FIXED_15_EPOCHS_COMPLETE",
   "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
   "actual_epoch_at_snapshot": 15,
-  "actual_epoch_step_at_snapshot": 160,
+  "actual_epoch_step_at_snapshot": 2500,
   "completed_epoch_totals": {
-    "updates": 35000,
-    "risk_events": 962,
+    "updates": 37500,
+    "risk_events": 968,
     "accepted_nonzero_corrections": 20,
-    "trajectory_checks": 1644
+    "trajectory_checks": 1700
   },
   "sixth_epoch_retention_evidence": "reports/full_method_v1_sixth_epoch_retention_snapshot.json",
   "trajectory_only_deterioration_observed": {
@@ -392,11 +400,10 @@
   "trajectory_only_detail_analysis": "reports/full_method_v1_trajectory_only_detail_analysis.json",
   "seventh_epoch_retention_evidence": "reports/full_method_v1_seventh_epoch_retention_snapshot.json",
   "latest_trajectory_only_check": {
-    "evidence": "reports/full_method_v1_fourteenth_epoch_record_check.json",
-    "epoch": 14,
-    "event_count": 1,
+    "evidence": "reports/full_method_v1_fifteenth_epoch_record_check.json",
+    "epoch": 15,
+    "event_count": 0,
     "no_localization_risk_periodic_checks": 50,
-    "scope": "This epoch only, stored paired three-frame visible training clips. No independent trajectory experiment or benchmark; previous positive cases remain valid.",
     "documented_positive_steps": [
       14700,
       14800,
@@ -404,14 +411,7 @@
       24950,
       34250
     ],
-    "latest_step": 34250,
-    "latest_protected_task": "RGB-D",
-    "latest_relative_objective_change": 0.013463579989310841,
-    "candidate_strengths": [
-      0.0
-    ],
-    "selected_strength": 0.0,
-    "interpretation": "No independent intervention is available for this training-only trajectory risk; distance0 alone does not change that limitation."
+    "scope": "This epoch only, stored paired three-frame visible training clips. Previously documented positive cases remain preserved; distance0 does not remove the no-local-risk alpha0-only restriction. No independent trajectory experiment or benchmark conclusion."
   },
   "eighth_epoch_retention_evidence": "reports/full_method_v1_eighth_epoch_retention_snapshot.json",
   "ninth_epoch_retention_evidence": "reports/full_method_v1_ninth_epoch_retention_snapshot.json",
@@ -428,5 +428,21 @@
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false
   },
-  "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json"
+  "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
+  "actual_training_exit_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
+  "latest_evaluation_receipts": {
+    "xtrack_author_release_s2026": {
+      "receipt_exists": true,
+      "completed_datasets": [],
+      "status": "RUNNING_NOT_SCORED",
+      "receipt_sha256": "a6e4ac0523f8505a17857145ccad0ca2ac118e92960d01e0e208106d8eebec83"
+    },
+    "xtrack_full_method_v1_s2026": {
+      "receipt_exists": false,
+      "completed_datasets": []
+    }
+  },
+  "endpoint_audit_status": "PASS",
+  "complete_comparison_available": false,
+  "fifteenth_epoch_retention_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json"
 }
