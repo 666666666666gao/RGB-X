@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T08:55:40.117152+00:00",
-  "source_commit": "e2ba595242b8084459ac4b64e4177ad979db2257",
-  "document_sha256": "303d983e45328d7ede637a9b00defc3b506a4e3e745745384da87e23bcb87813",
-  "document_bytes": 157976,
+  "verified_at": "2026-10-04T13:53:52.841526+00:00",
+  "source_commit": "84ff969e7614a6ad08ad0858f70e7bdbac1fb589",
+  "document_sha256": "aa9d05d19518529315b0af8ae54807f808251293219361b9dd9312b089bb52e4",
+  "document_bytes": 164602,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -90,44 +90,14 @@
     "weight_file_count": 1,
     "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar"
   },
-  "subject": "FULL37500_STATIC_TRAINING_COST_AND_SELECTION_ANALYSIS_NOT_NEW_MODEL_OR_LIVE_EVAL",
+  "subject": "ACTUAL_REFERENCE_LASHER_ALL245_COMPLETE_METRICS_AND_IMMUTABLE_PARAMETER_MANIFEST",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
   "training_snapshot_observed_at": "2026-10-04T16:29:49.128487+08:00",
-  "scope": "All37500 completed rows analyzed for candidate cost, residual localization risk, trajectory-only deterioration and extra forward accounting. Last verified live evaluation/training snapshot is preserved separately, not refreshed by static analysis. Original SOURCE8 unchanged; no live progress query, GPU/model task, weight deletion or training restart. Counterfactual counts are not trained benchmark scores.",
+  "scope": "Published full reference LasHeR four metrics,245 sequence curves,19 attributes,coverage and cost; method remains0/3, all-seven improvement unproven. Current original VisEvent workers actually live at21:46. ONEhandoff copies equal; fixed SOURCE8 unchanged, no new training/scoring/source repair/hardware control/weight deletion. Timer waits until23:53 without interim progress queries.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
-  "last_verified_runtime": {
-    "observed_at": "2026-10-04T16:30:20.619042+08:00",
-    "training": {
-      "status": "TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT",
-      "epoch": 15,
-      "step": 2500,
-      "global_step": 37500,
-      "completed_epochs": 15,
-      "training_examples": 900000
-    },
-    "controller": {
-      "status": "RUNNING",
-      "current_stage": "reference-evaluation",
-      "worker_pid": 3123499,
-      "completed_stages": [
-        "train",
-        "method-endpoint-audit"
-      ]
-    },
-    "evaluation_receipts": {
-      "xtrack_author_release_s2026": {
-        "receipt_exists": true,
-        "status": "RUNNING_NOT_SCORED",
-        "completed_datasets": [],
-        "receipt_sha256": "a6e4ac0523f8505a17857145ccad0ca2ac118e92960d01e0e208106d8eebec83"
-      },
-      "xtrack_full_method_v1_s2026": {
-        "receipt_exists": false
-      }
-    }
-  },
+  "last_verified_runtime": "2026-10-04T21:46:29.847502+08:00",
   "candidate_training_started": false,
   "candidate_actual_gpu_sanity": "NOT_RUN",
   "candidate_launch_ready": false,
@@ -155,5 +125,30 @@
     "accepted_updates_with_localization_risk": 958,
     "trajectory_only_events": 7,
     "scope": "Post-hoc analysis of immutable completed training telemetry; no live evaluation query or new model execution. Counterfactual selections are not retrained-method scores."
-  }
+  },
+  "published_file_sync": {
+    "verified_at": "2026-10-04T13:53:52.841526+00:00",
+    "published_files_identical": true,
+    "file_sha256": {
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "aa9d05d19518529315b0af8ae54807f808251293219361b9dd9312b089bb52e4",
+      "configs/current_goal.json": "4cfe7280ae1bcf945afdfff503a700b042f31458ff30c4e108cae5bf1d3b09eb",
+      "reports/full_method_v1_parameter_manifest.json": "400208b07b7acbc100b6b8b9d0cbea39f792b3295da2faf12a7f5de8cf81ec99",
+      "reports/full_method_v1_parameter_scope_summary.json": "0369450470405b953d285e6ef17da2bce08ac967fe62d222fb6b9c8866bcefeb",
+      "reports/reference_lasher_complete_intake_20261004.json": "0304cc93ad6f76af803ec0fe06a7e04f423763633b21efc40a32835a5dfa3041",
+      "reports/full_method_v1_reference_lasher_pipeline_snapshot_20261004.json": "f3e886e037dc3f2d4ebd907c6e8389f43349a8f0934fbed4a219c6442f787cdc",
+      "reports/reference_xtrack_author_release_s2026/LasHeR/coverage.json": "5913ad62241b449479dc46a899a4b3dfaaed3d539d23bb10eb3146e92aba69f9",
+      "reports/reference_xtrack_author_release_s2026/LasHeR/scores/metrics.json": "0c3dd14f8bddb9282d65169c055acb3dd7dabb10598e6ed4351611ab1eda0c9b",
+      "reports/reference_xtrack_author_release_s2026/LasHeR/scores/per_sequence.csv": "a47eb37114192a06cd7784ef15f0e99786a9fb93e5bd52133bf0015c94e992f3",
+      "reports/reference_xtrack_author_release_s2026/LasHeR/scores/full_curves.png": "344b29850f64c0930aca848cd398bd48a0781784a010c81adab839b88635d813"
+    },
+    "source8_unchanged": true,
+    "scope": "Published copy hashes and immutable completed training source seal only. No live evaluation/progress/native-session or hardware query."
+  },
+  "runtime_observed_at": "2026-10-04T21:46:29.847502+08:00",
+  "reference_completed_datasets": [
+    "LasHeR"
+  ],
+  "method_completed_datasets": [],
+  "next_observation_not_before": "2026-10-04T23:53:13.697917+08:00",
+  "scheduled_observer_native_session": 8765
 }
