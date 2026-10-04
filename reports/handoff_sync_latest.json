@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T13:57:25.113363+00:00",
-  "source_commit": "ad9f7c516a1114ff94dc62ebc26c02ac5e8e6662",
-  "document_sha256": "96f34506ec0fce7b3366b874afb366b469051490b8af19974364f5f5112e83f9",
-  "document_bytes": 165117,
+  "verified_at": "2026-10-04T14:10:12.599182+00:00",
+  "source_commit": "3677b0c620b9947c6d49d63deaf1a0bccf0956c1",
+  "document_sha256": "a8080ad831997319bba8740442d3381936dbd8ee644d88b6d21666424152cfd6",
+  "document_bytes": 168519,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -90,11 +90,11 @@
     "weight_file_count": 1,
     "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar"
   },
-  "subject": "ACTUAL_REFERENCE_LASHER_ALL245_COMPLETE_METRICS_AND_IMMUTABLE_PARAMETER_MANIFEST",
+  "subject": "PAIRED_UNCERTAINTY_ENTRY_PREPARED_CPU_CHECKED_FULL_ACTUAL_PAIR_NOT_RUN",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
   "training_snapshot_observed_at": "2026-10-04T16:29:49.128487+08:00",
-  "scope": "Published full reference LasHeR four metrics,245 sequence curves,19 attributes,coverage and cost; method remains0/3, all-seven improvement unproven. Current original VisEvent workers actually live at21:46. ONEhandoff copies equal; fixed SOURCE8 unchanged, no new training/scoring/source repair/hardware control/weight deletion. Timer waits until23:53 without interim progress queries.",
+  "scope": "Prepare and deploy a CPU-only future paired analysis; only existing reference arithmetic/identity and artificial DepthTrack cases were executed. Last actual runtime21:46 remains unchanged; no live progress query, real full-pair bootstrap, GPU/model/scoring, restart, hardware query/control or weight deletion. Same original observer8765 next23:53; goal unmet.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
   "last_verified_runtime": "2026-10-04T21:46:29.847502+08:00",
@@ -160,5 +160,29 @@
     "original_csv_bytes_preserved": true,
     "generated_json_newlines": "LF",
     "metrics_changed": false
+  },
+  "prepared_analysis_sync": {
+    "verified_at": "2026-10-04T14:10:12.599182+00:00",
+    "file_sha256": {
+      "scripts/analyze_paired_sequence_uncertainty.py": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
+      "reports/paired_sequence_uncertainty_preparation_20261004.json": "f3563f259cbabf656bd7e17bbdf94fc03a9460028ff33cc129591ea9bed6d802",
+      "configs/current_goal.json": "1a14cddc69d11f6179c735e7d4cabcdea431d9f9ebf0fc0d66efe7b1831b70bc",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "a8080ad831997319bba8740442d3381936dbd8ee644d88b6d21666424152cfd6"
+    },
+    "published_files_match": true,
+    "source8_unchanged": true,
+    "scope": "Copy/source integrity only; no live progress/process/session/hardware query or bootstrap/model execution."
+  },
+  "paired_uncertainty_preparation": {
+    "status": "ENTRY_PREPARED_ACTUAL_CPU_ARITHMETIC_CHECK_PASS_FULL_PAIR_NOT_RUN",
+    "source": "scripts/analyze_paired_sequence_uncertainty.py",
+    "source_sha256": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
+    "preparation_evidence": "reports/paired_sequence_uncertainty_preparation_20261004.json",
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 2026,
+    "sampling_unit": "Whole sequence, paired endpoint multiplicities within each dataset.",
+    "ready_to_analyze_actual_pair": false,
+    "remaining": "Both real endpoints must complete all three datasets and have an audited full comparison with matching source hashes.",
+    "limitations": "One fixed endpoint pair; conditional on saved endpoint-specific DepthTrack threshold grids. Not training seed variation, module attribution, calibrated p-values or corrected multiple-metric significance."
   }
 }
