@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "verified_at": "2026-10-04T16:30:20.619042+08:00",
-  "source_commit": "5e775e709fb9d46dae04aeefa0c1df31c189fe7f",
-  "document_sha256": "5c8f3e286b0cdecf4ec02d3572661d4035826e08ce8140f383bb5b4edd4d9bb3",
-  "document_bytes": 153560,
+  "verified_at": "2026-10-04T08:55:40.117152+00:00",
+  "source_commit": "e2ba595242b8084459ac4b64e4177ad979db2257",
+  "document_sha256": "303d983e45328d7ede637a9b00defc3b506a4e3e745745384da87e23bcb87813",
+  "document_bytes": 157976,
   "four_copies_identical": true,
   "locations": [
     "local_project",
@@ -90,11 +90,11 @@
     "weight_file_count": 1,
     "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar"
   },
-  "subject": "FIFTEEN_EPOCH_TRAIN_EXIT0_ENDPOINT_AND_FULL_BENCHMARK_SEPARATE",
+  "subject": "FULL37500_STATIC_TRAINING_COST_AND_SELECTION_ANALYSIS_NOT_NEW_MODEL_OR_LIVE_EVAL",
   "execution_goal_version": "2026-10-03-user-review-v2",
   "new_iteration_started": false,
   "training_snapshot_observed_at": "2026-10-04T16:29:49.128487+08:00",
-  "scope": "OnlyNEW35001..37500 epoch15 rows checked; full37500 statistics assembled from prior35000 evidence. Actual train exit0 and one terminal checkpoint verified; endpoint CPU audit and full benchmarking are separate receipts. Training ranks may normally exit. No forward/model reload by this publication, no independent trajectory-control efficacy or benchmark improvement claim; full research goal remains unmet.",
+  "scope": "All37500 completed rows analyzed for candidate cost, residual localization risk, trajectory-only deterioration and extra forward accounting. Last verified live evaluation/training snapshot is preserved separately, not refreshed by static analysis. Original SOURCE8 unchanged; no live progress query, GPU/model task, weight deletion or training restart. Counterfactual counts are not trained benchmark scores.",
   "hardware_limits_applied": false,
   "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
   "last_verified_runtime": {
@@ -131,5 +131,29 @@
   "candidate_training_started": false,
   "candidate_actual_gpu_sanity": "NOT_RUN",
   "candidate_launch_ready": false,
-  "latest_runtime_updates_at_publication": 37500
+  "latest_runtime_updates_at_publication": 37500,
+  "static_analysis_source_sync": {
+    "verified_at": "2026-10-04T08:55:40.117152+00:00",
+    "all_published_files_match": true,
+    "published_file_sha256": {
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "303d983e45328d7ede637a9b00defc3b506a4e3e745745384da87e23bcb87813",
+      "configs/current_goal.json": "7eca22972363840633756eabcc3b0c87958264fccd5c823c30056b86ceb72c6a",
+      "scripts/analyze_full_method_v1_costs.py": "ce1639ffc20cc451c1b8c24883b2695766629a294c7bf5c9198ac074d773cde9",
+      "reports/full_method_v1_full_run_cost_decomposition.json": "383414f0f04e82c2a410791331006d24aa91ddc675c6b426e17034851527ca5f"
+    },
+    "original_eight_training_sources_unchanged": true,
+    "scope": "Publication copy hashes and completed immutable training source seal only. No live evaluation or process query."
+  },
+  "completed_training_diagnosis": {
+    "report": "reports/full_method_v1_full_run_cost_decomposition.json",
+    "observed_at": "2026-10-04T08:48:31.195114+00:00",
+    "committed_updates": 37500,
+    "risk_events": 968,
+    "risk_events_with_locally_improving_candidates": 955,
+    "actual_nonzero_selections": 20,
+    "fixed_trial_nonzero_without_distance": 954,
+    "accepted_updates_with_localization_risk": 958,
+    "trajectory_only_events": 7,
+    "scope": "Post-hoc analysis of immutable completed training telemetry; no live evaluation query or new model execution. Counterfactual selections are not retrained-method scores."
+  }
 }
