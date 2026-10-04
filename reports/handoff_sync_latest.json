@@ -1,202 +1,73 @@
 {
-  "status": "PASS",
-  "verified_at": "2026-10-04T16:39:14.419093+00:00",
-  "source_commit": "0f26401ccf668755f4fd2a5799d0d05a74900029",
-  "document_sha256": "6eab4071d1d119f445d7ee46b2c24bf7c9cfef4babb1ee72a4e8d52ab124273d",
-  "document_bytes": 176539,
+  "status": "COMPLETE_REFERENCE_ARTIFACTS_AND_FOUR_HANDOFF_COPIES_IDENTICAL",
+  "verified_at": "2026-10-04T18:45:40.297381+00:00",
+  "source_commit": "c35e52268a02a766ae8d6147b7fdd29773ef321b",
+  "document_sha256": "02b04dc7016a3b772ff2e948a3e0c8f2effc1ee6eb1d72d0ce5e39611f64416f",
+  "document_bytes": 181903,
+  "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "four_copies_identical": true,
-  "locations": [
-    "local_project",
-    "Desktop_document",
-    "2028_project",
-    "GitHub_commit_blob"
-  ],
-  "active_run": "xtrack_full_method_v1_s2026",
-  "formal_tracking_scores": "REFERENCE_TWO_OF_THREE_COMPLETE_METHOD_NOT_STARTED",
-  "training_protocol_changed": false,
-  "completed_epoch_updates_checked": 37500,
-  "observed_training_global_step": 37500,
-  "generated_checkpoint_files_retired": 34,
-  "generated_checkpoint_file_bytes_retired": 16184180352,
-  "retention_worker_pid": 1629089,
-  "source_sync": {
-    "verified_at": "2026-10-04T16:30:20.619042+08:00",
-    "all_published_files_match": true,
-    "published_file_sha256": {
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "5c8f3e286b0cdecf4ec02d3572661d4035826e08ce8140f383bb5b4edd4d9bb3",
-      "configs/current_goal.json": "9bb10f37a5c9565af020b593ca1a17c28b408ac6c71d01fcd294181d3e4c58c0",
-      "configs/checkpoint_retention_policy.json": "1ed0ece19a39862fa22bbcfb71785ddde34e4c5cd80e0d22d8a130cf2825e52e",
-      "reports/full_method_v1_fifteenth_epoch_record_check.json": "5b38afc29f5a4e9be5d5356992f1e35f2643ec0354d1358c0e9b884f2594df7d",
-      "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json": "8dbf016fbb58cf7028ace01fd3ce37cfe13900f7961323570b11d56a1fd310b0",
-      "reports/full_method_v1_endpoint_audit.json": "6b75c50a58027d3bc835e919f4bd26d03f723725e6d7c5d2ee8a990ad3f492e8"
-    },
-    "live_training_sources_unchanged": true,
-    "process_states": {
-      "1603676": {
-        "exists": true,
-        "state": "State:\tS (sleeping)"
-      },
-      "1603680": {
-        "exists": false
-      },
-      "1603687": {
-        "exists": false
-      },
-      "1603688": {
-        "exists": false
-      },
-      "1603689": {
-        "exists": false
-      },
-      "1629089": {
-        "exists": false
-      },
-      "3123499": {
-        "exists": true,
-        "state": "State:\tS (sleeping)"
-      }
-    },
-    "gpu_guard_status": "DISABLED_BY_USER",
-    "guard_process_missing": true,
-    "training": {
-      "status": "TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT",
-      "epoch": 15,
-      "step": 2500,
-      "global_step": 37500,
-      "completed_epochs": 15,
-      "training_examples": 900000
-    },
-    "actual_training_exit_code": 0,
-    "controller": {
-      "status": "RUNNING",
-      "current_stage": "reference-evaluation",
-      "worker_pid": 3123499,
-      "completed_stages": [
-        "train",
-        "method-endpoint-audit"
-      ]
-    },
-    "evaluation_receipts": {
-      "xtrack_author_release_s2026": {
-        "receipt_exists": true,
-        "status": "RUNNING_NOT_SCORED",
-        "completed_datasets": [],
-        "receipt_sha256": "a6e4ac0523f8505a17857145ccad0ca2ac118e92960d01e0e208106d8eebec83"
-      },
-      "xtrack_full_method_v1_s2026": {
-        "receipt_exists": false
-      }
-    },
-    "weight_file_count": 1,
-    "current_recovery": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar"
+  "copies": {
+    "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
+    "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
+    "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+    "github": "https://github.com/666666666666gao/RGB-X/blob/c35e52268a02a766ae8d6147b7fdd29773ef321b/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
-  "subject": "ACTUAL_NINE_NATIVE_DEPTHTRACK_TRAJECTORIES_AND_CONSERVATIVE_ETA",
-  "execution_goal_version": "2026-10-03-user-review-v2",
-  "new_iteration_started": false,
-  "training_snapshot_observed_at": "2026-10-04T16:29:49.128487+08:00",
-  "scope": "Nine actual native trajectories after directory fix, not full RGB-D scores. Same live recovery; reference2/3/method0/3, next02:30 without interim queries. SOURCE8/checkpoint unchanged; dynamic worker report not overwritten, no new model/score replay or weight deletion.",
-  "hardware_limits_applied": false,
-  "training_runtime_state": "ORIGINAL_TRAINING_CONTINUED_GPU_GUARD_DISABLED_BY_USER",
-  "last_verified_runtime": "2026-10-05T00:35:17.534830+08:00",
-  "candidate_training_started": false,
-  "candidate_actual_gpu_sanity": "NOT_RUN",
-  "candidate_launch_ready": false,
-  "latest_runtime_updates_at_publication": 37500,
-  "static_analysis_source_sync": {
-    "verified_at": "2026-10-04T08:55:40.117152+00:00",
-    "all_published_files_match": true,
-    "published_file_sha256": {
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "303d983e45328d7ede637a9b00defc3b506a4e3e745745384da87e23bcb87813",
-      "configs/current_goal.json": "7eca22972363840633756eabcc3b0c87958264fccd5c823c30056b86ceb72c6a",
-      "scripts/analyze_full_method_v1_costs.py": "ce1639ffc20cc451c1b8c24883b2695766629a294c7bf5c9198ac074d773cde9",
-      "reports/full_method_v1_full_run_cost_decomposition.json": "383414f0f04e82c2a410791331006d24aa91ddc675c6b426e17034851527ca5f"
-    },
-    "original_eight_training_sources_unchanged": true,
-    "scope": "Publication copy hashes and completed immutable training source seal only. No live evaluation or process query."
+  "subject": "ACTUAL_AUTHOR_REFERENCE_ALL3_COMPLETE_FULL_METHOD_FIRST_DATASET_RUNNING",
+  "file_sha256": {
+    ".gitattributes": "dcd5fee207d886f0fc46c63d8ea69afe8b05e60abd7d03bacce3e4f38756dcab",
+    "configs/current_goal.json": "252eeb93c417fbd58fd948db1d7bb9f6b60c845d188a14de93097c64f0016ae7",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "02b04dc7016a3b772ff2e948a3e0c8f2effc1ee6eb1d72d0ce5e39611f64416f",
+    "reports/reference_complete_and_method_start_milestone_20261005.json": "d47eec9680ce8be5085b4c331111fc2f966d464317a07c875aca5ace7c4229f6",
+    "reports/reference_depthtrack_complete_intake_20261005.json": "40b1dfdc6ee33ed08bf53db30f9d34a1f83db514acb6dab012335efc1e373232",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/identity.json": "f62353d4f28de2ffbd4b1bdaf94569a65bc249777ccac546f93ee5c53cf9545a",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/stack.yaml": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/trackers.ini": "c10fb5530d4ca4ea4465d9495447d6af3ffd41da4e5195554fe0c7172173776a",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/coverage.json": "e4a593835547cbe8af68f40c8dc582b8192c5ca5a270d95aa8d5232d5e120094",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/official_metrics.json": "6961c8e0fe6ffbe0b233b3c884ad71ef51468bf686a3796a116509bc4c47d530",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/attribute_diagnostics.json": "73f53e76738103d3347965a3d4d8f218f84ef46d9ff00570a8f8a39f845c6d3f",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/per_sequence_metrics.csv": "0e4495d49320e649c18e3f1f0b2e5b1422b0216d01d2723445d1e608235975cb",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/full_PR_F_curves.png": "89b8d54fd48c8406912efc9b07272b6104adee2616a55e5b3fdbdde196651f57",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/shard_0.json": "088ec4f62a78f97917d3510dba019814b6017a1c5073dbb89e3777f5578a8448",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/shard_1.json": "80a5c1110130dca80d2d2c4861d94a82c56bd8db15425ce406da5e06d05698df",
+    "reports/reference_xtrack_author_release_s2026/DepthTrack/shard_2.json": "7b82122281e7e98c4d36fd5784c6515d5fdf689ed8bfb5d831960c78f2f4ccdf"
   },
-  "completed_training_diagnosis": {
-    "report": "reports/full_method_v1_full_run_cost_decomposition.json",
-    "observed_at": "2026-10-04T08:48:31.195114+00:00",
-    "committed_updates": 37500,
-    "risk_events": 968,
-    "risk_events_with_locally_improving_candidates": 955,
-    "actual_nonzero_selections": 20,
-    "fixed_trial_nonzero_without_distance": 954,
-    "accepted_updates_with_localization_risk": 958,
-    "trajectory_only_events": 7,
-    "scope": "Post-hoc analysis of immutable completed training telemetry; no live evaluation query or new model execution. Counterfactual selections are not retrained-method scores."
-  },
-  "published_file_sync": {
-    "verified_at": "2026-10-04T13:57:25.113363+00:00",
-    "all_file_bytes_match": true,
-    "file_sha256": {
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "96f34506ec0fce7b3366b874afb366b469051490b8af19974364f5f5112e83f9",
-      "configs/current_goal.json": "4cfe7280ae1bcf945afdfff503a700b042f31458ff30c4e108cae5bf1d3b09eb",
-      "reports/full_method_v1_parameter_manifest.json": "400208b07b7acbc100b6b8b9d0cbea39f792b3295da2faf12a7f5de8cf81ec99",
-      "reports/full_method_v1_parameter_scope_summary.json": "5c33a9fa20cc3a13d29d79d1d5ba803998694f17039f11741e0de7f6c0f7e4ac",
-      "reports/reference_lasher_complete_intake_20261004.json": "be87596b1eddafd8c9905f416b0cbad3787606fc679ee0ee03a326c6de7707a7",
-      "reports/full_method_v1_reference_lasher_pipeline_snapshot_20261004.json": "5f7321dfb315269c3d723707c156a8a9b00f8196fe96fa9c4d40f948eb9a6485",
-      "reports/reference_xtrack_author_release_s2026/LasHeR/coverage.json": "5913ad62241b449479dc46a899a4b3dfaaed3d539d23bb10eb3146e92aba69f9",
-      "reports/reference_xtrack_author_release_s2026/LasHeR/scores/metrics.json": "0c3dd14f8bddb9282d65169c055acb3dd7dabb10598e6ed4351611ab1eda0c9b",
-      "reports/reference_xtrack_author_release_s2026/LasHeR/scores/per_sequence.csv": "a47eb37114192a06cd7784ef15f0e99786a9fb93e5bd52133bf0015c94e992f3",
-      "reports/reference_xtrack_author_release_s2026/LasHeR/scores/full_curves.png": "344b29850f64c0930aca848cd398bd48a0781784a010c81adab839b88635d813",
-      ".gitattributes": "1b10fb351c03269d2a9465fada5995be125280ed29692211a033402d06ab878f"
-    },
-    "source8_unchanged": true,
-    "scope": "Publication bytes only; no live process/evaluation or hardware query."
-  },
-  "runtime_observed_at": "2026-10-05T00:35:17.534830+08:00",
-  "reference_completed_datasets": [
-    "LasHeR",
-    "VisEvent"
-  ],
-  "method_completed_datasets": [],
-  "next_observation_not_before": "2026-10-05T02:30:52.736506+08:00",
-  "scheduled_observer_native_session": 21492,
-  "git_blob_all_published_files_match_raw_bytes": true,
-  "artifact_integrity_fix": {
-    "original_png_bytes": 80131,
-    "previous_git_blob_bytes": 80129,
-    "raw_png_sha256": "344b29850f64c0930aca848cd398bd48a0781784a010c81adab839b88635d813",
-    "original_csv_bytes_preserved": true,
-    "generated_json_newlines": "LF",
-    "metrics_changed": false
-  },
-  "prepared_analysis_sync": {
-    "verified_at": "2026-10-04T14:10:12.599182+00:00",
-    "file_sha256": {
-      "scripts/analyze_paired_sequence_uncertainty.py": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
-      "reports/paired_sequence_uncertainty_preparation_20261004.json": "f3563f259cbabf656bd7e17bbdf94fc03a9460028ff33cc129591ea9bed6d802",
-      "configs/current_goal.json": "1a14cddc69d11f6179c735e7d4cabcdea431d9f9ebf0fc0d66efe7b1831b70bc",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "a8080ad831997319bba8740442d3381936dbd8ee644d88b6d21666424152cfd6"
-    },
-    "published_files_match": true,
-    "source8_unchanged": true,
-    "scope": "Copy/source integrity only; no live progress/process/session/hardware query or bootstrap/model execution."
-  },
-  "paired_uncertainty_preparation": {
-    "status": "ENTRY_PREPARED_ACTUAL_CPU_ARITHMETIC_CHECK_PASS_FULL_PAIR_NOT_RUN",
-    "source": "scripts/analyze_paired_sequence_uncertainty.py",
-    "source_sha256": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
-    "preparation_evidence": "reports/paired_sequence_uncertainty_preparation_20261004.json",
-    "bootstrap_draws": 10000,
-    "bootstrap_seed": 2026,
-    "sampling_unit": "Whole sequence, paired endpoint multiplicities within each dataset.",
-    "ready_to_analyze_actual_pair": false,
-    "remaining": "Both real endpoints must complete all three datasets and have an audited full comparison with matching source hashes.",
-    "limitations": "One fixed endpoint pair; conditional on saved endpoint-specific DepthTrack threshold grids. Not training seed variation, module attribution, calibrated p-values or corrected multiple-metric significance."
-  },
+  "published_files": 16,
   "latest_publication_sync": {
-    "verified_at": "2026-10-04T16:39:14.419093+00:00",
-    "files_match": true,
+    "verified_at": "2026-10-04T18:45:40.297381+00:00",
     "file_sha256": {
-      "reports/reference_depthtrack_actual_progress_and_timing_20261005.json": "a28d17d2d2bfa42181ac2a9528a2c7a2ef2968051d709c6f383d4af4096e5eb5",
-      "configs/current_goal.json": "c8edb27f01fcd4aa1f4b12db3f38c0791f52fbe1fe4af41eb2479c55018f161b",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "6eab4071d1d119f445d7ee46b2c24bf7c9cfef4babb1ee72a4e8d52ab124273d"
+      ".gitattributes": "dcd5fee207d886f0fc46c63d8ea69afe8b05e60abd7d03bacce3e4f38756dcab",
+      "configs/current_goal.json": "252eeb93c417fbd58fd948db1d7bb9f6b60c845d188a14de93097c64f0016ae7",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "02b04dc7016a3b772ff2e948a3e0c8f2effc1ee6eb1d72d0ce5e39611f64416f",
+      "reports/reference_complete_and_method_start_milestone_20261005.json": "d47eec9680ce8be5085b4c331111fc2f966d464317a07c875aca5ace7c4229f6",
+      "reports/reference_depthtrack_complete_intake_20261005.json": "40b1dfdc6ee33ed08bf53db30f9d34a1f83db514acb6dab012335efc1e373232",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/identity.json": "f62353d4f28de2ffbd4b1bdaf94569a65bc249777ccac546f93ee5c53cf9545a",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/stack.yaml": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/trackers.ini": "c10fb5530d4ca4ea4465d9495447d6af3ffd41da4e5195554fe0c7172173776a",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/coverage.json": "e4a593835547cbe8af68f40c8dc582b8192c5ca5a270d95aa8d5232d5e120094",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/official_metrics.json": "6961c8e0fe6ffbe0b233b3c884ad71ef51468bf686a3796a116509bc4c47d530",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/attribute_diagnostics.json": "73f53e76738103d3347965a3d4d8f218f84ef46d9ff00570a8f8a39f845c6d3f",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/per_sequence_metrics.csv": "0e4495d49320e649c18e3f1f0b2e5b1422b0216d01d2723445d1e608235975cb",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/full_PR_F_curves.png": "89b8d54fd48c8406912efc9b07272b6104adee2616a55e5b3fdbdde196651f57",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/shard_0.json": "088ec4f62a78f97917d3510dba019814b6017a1c5073dbb89e3777f5578a8448",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/shard_1.json": "80a5c1110130dca80d2d2c4861d94a82c56bd8db15425ce406da5e06d05698df",
+      "reports/reference_xtrack_author_release_s2026/DepthTrack/shard_2.json": "7b82122281e7e98c4d36fd5784c6515d5fdf689ed8bfb5d831960c78f2f4ccdf"
     },
+    "all_files_match": true,
     "source8_unchanged": true,
-    "scope": "Copy integrity and immutable train seal only; no live progress/process/log/native or hardware query. Dynamic recovery report not overwritten."
+    "scope": "Static publication bytes and immutable training seal only; no current process, log, native session, progress or hardware query. Dynamic recovery receipt not overwritten."
   },
-  "original_pipeline_status": "FAILED_DIRECTORY_CHECK_AFTER_TRAIN_EXIT0",
-  "evaluation_recovery_controller_pid": 3560911
+  "last_verified_runtime": "2026-10-05T02:30:54.570456+08:00",
+  "runtime_observed_at": "2026-10-05T02:30:54.570456+08:00",
+  "reference_complete_datasets": [
+    "LasHeR",
+    "VisEvent",
+    "DepthTrack"
+  ],
+  "method_complete_datasets": [],
+  "method_scores_available": false,
+  "goal_achieved": false,
+  "next_observation_not_before": "2026-10-05T07:21:18.570511+08:00",
+  "scheduled_observer_native_session": 23283,
+  "scheduled_observer_pid": 34904,
+  "scope": "Full author-reference metrics and actual method start, not a method gain or full research completion. Three frozen datasets and all supplementary artifacts preserved. Original training exit0; source8 and c9 checkpoint unchanged. No inference/scoring replay, early progress query, new model weight, deletion, or power/temperature action. Dynamic worker receipt not overwritten."
 }
