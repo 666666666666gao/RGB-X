@@ -1,0 +1,142 @@
+{
+  "status": "TWELFTH_EPOCH_NEW_RECORDS_AND_ONE_RECOVERY_VERIFIED_NOT_BENCHMARK",
+  "observed_at": "2026-10-04T11:31:49.413140+08:00",
+  "completed_epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 114,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 161,
+      "mean_step_seconds": 2.415328442759649
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 2,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 2.389823864249629
+    },
+    {
+      "epoch": 3,
+      "updates": 2500,
+      "risk_events": 97,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 144,
+      "mean_step_seconds": 2.39314502257884
+    },
+    {
+      "epoch": 4,
+      "updates": 2500,
+      "risk_events": 90,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 140,
+      "mean_step_seconds": 2.399556109916605
+    },
+    {
+      "epoch": 5,
+      "updates": 2500,
+      "risk_events": 104,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 152,
+      "mean_step_seconds": 2.3784799392404037
+    },
+    {
+      "epoch": 6,
+      "updates": 2500,
+      "risk_events": 89,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 3.076616281334963
+    },
+    {
+      "epoch": 7,
+      "updates": 2500,
+      "risk_events": 85,
+      "accepted_nonzero_corrections": 5,
+      "trajectory_checks": 134,
+      "mean_step_seconds": 2.394738950299658
+    },
+    {
+      "epoch": 8,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 135,
+      "mean_step_seconds": 2.3758077538426265
+    },
+    {
+      "epoch": 9,
+      "updates": 2500,
+      "risk_events": 84,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 134,
+      "mean_step_seconds": 2.3863033115528522
+    },
+    {
+      "epoch": 10,
+      "updates": 2500,
+      "risk_events": 93,
+      "accepted_nonzero_corrections": 0,
+      "trajectory_checks": 140,
+      "mean_step_seconds": 2.398263385786349
+    },
+    {
+      "epoch": 11,
+      "updates": 2500,
+      "risk_events": 6,
+      "accepted_nonzero_corrections": 0,
+      "trajectory_checks": 56,
+      "mean_step_seconds": 2.367247401859029
+    },
+    {
+      "epoch": 12,
+      "updates": 2500,
+      "risk_events": 5,
+      "accepted_nonzero_corrections": 0,
+      "trajectory_checks": 55,
+      "mean_step_seconds": 2.3794223327308894
+    }
+  ],
+  "completed_epoch_totals": {
+    "updates": 30000,
+    "risk_events": 943,
+    "accepted_nonzero_corrections": 20,
+    "trajectory_checks": 1525
+  },
+  "earlier_27500_evidence": "reports/full_method_v1_eleventh_epoch_record_check.json",
+  "new_records_checked": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/updates.jsonl",
+    "global_step_start": 27501,
+    "global_step_end": 30000,
+    "bytes": 4340223,
+    "sha256": "1e0cf92bc294fb3a8310b477a543d95b19f494f9664d349b5d6107e46596aa70"
+  },
+  "new_localization_records_checked": 2500,
+  "twelfth_epoch_localization_all_finite": true,
+  "twelfth_epoch_global_task_counts_always": [
+    8,
+    8,
+    8
+  ],
+  "trajectory_only_deterioration": {
+    "scope": "Only twelfth-epoch stored paired training-pool trajectory objectives; no new forward passes.",
+    "events": [],
+    "event_count": 0,
+    "no_localization_risk_periodic_checks": 50,
+    "efficacy": "UNKNOWN_NO_BENCHMARK_OR_INDEPENDENT_TRIGGER_EXPERIMENT"
+  },
+  "retention_snapshot": "reports/full_method_v1_twelfth_epoch_retention_snapshot.json",
+  "current_training_snapshot": {
+    "epoch": 13,
+    "step": 160,
+    "global_step": 30160,
+    "completed_epochs": 12,
+    "training_examples": 723840
+  },
+  "training_protocol_changed": false,
+  "new_iteration_started": false,
+  "formal_tracking_scores": "NOT_RUN",
+  "scope": "Only2500 new twelfth-epoch localization records; registered checkpoint hash and worker retention, live non-stopped processes. No prior record validation replay, model/optimizer reload, CUDA RNG restore, hardware control or benchmark."
+}
