@@ -1,0 +1,158 @@
+{
+  "observed_at": "2026-10-05T00:35:17.534830+08:00",
+  "recovery": {
+    "status": "RUNNING_RECOVERY_NOT_COMPLETE",
+    "controller_pid": 3560911,
+    "run_id": "xtrack_full_method_v1_s2026",
+    "started_at": "2026-10-04T16:11:32.431009+00:00",
+    "poll_seconds": 240,
+    "original_controller_status": "FAILED",
+    "original_controller_sha256": "e8958ffee6b09c95733f53943ea23639f3ffc127f8aa7a040bc085a638fca4e6",
+    "original_failed_reference_sha256": "07699159e3f62d94d475225e7607981b5724b8a3f18bf9e95f5b94ef34fcf133",
+    "original_completed_reference_datasets": [
+      "LasHeR",
+      "VisEvent"
+    ],
+    "completed_stages": [],
+    "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+    "source_hashes": {
+      "scripts/run_vot_sequences.py": "82983788b1d21e58f9bfc9ac181170e25540375eb6e8e42729d9e72ade10cc7e",
+      "scripts/check_vot_empty_results.py": "0d09fdc7be50f687e27eed35f1446d9de90f85792e85ec427ec6de1bd02204c7",
+      "scripts/resume_reference_depthtrack_and_method_v1.py": "c9479f1b372e917d91f2d439cc7b56b013d6b501934fff47a5422e7d7fcca80a"
+    },
+    "training_source_hashes": {
+      "configs/full_method_v1.json": "452d8ea219af641f7a7b237eb654df9c1dfb88c551ea98ee43b600927ac6dded",
+      "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+      "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+      "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+      "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+      "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+      "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+      "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd"
+    },
+    "benchmark_goal": "NOT_YET_JUDGED",
+    "scope": "Continue reference DepthTrack after an actual missing-directory failure before any tracker execution; preserve completed reference OPE and old failures. Then run complete method evaluation/comparison/conditional sequence uncertainty. Training and checkpoint do not change.",
+    "observed_at": "2026-10-04T16:31:32.963809+00:00",
+    "wallclock_seconds": 1200.5316653629998,
+    "current_stage": "reference-depthtrack",
+    "worker_pids": [
+      3560954,
+      3560955,
+      3560956
+    ]
+  },
+  "processes": {
+    "3560911": {
+      "exists": true,
+      "state": "State:\tS (sleeping)",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python scripts/resume_reference_depthtrack_and_method_v1.py "
+    },
+    "3560954": {
+      "exists": true,
+      "state": "State:\tS (sleeping)",
+      "command": "/home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/run_vot_sequences.py --workspace /home/gaob/rgbx-eval-results/xtrack_author_release_s2026/DepthTrack --shard 0 --gpu 0 "
+    },
+    "3560955": {
+      "exists": true,
+      "state": "State:\tS (sleeping)",
+      "command": "/home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/run_vot_sequences.py --workspace /home/gaob/rgbx-eval-results/xtrack_author_release_s2026/DepthTrack --shard 1 --gpu 1 "
+    },
+    "3560956": {
+      "exists": true,
+      "state": "State:\tS (sleeping)",
+      "command": "/home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/run_vot_sequences.py --workspace /home/gaob/rgbx-eval-results/xtrack_author_release_s2026/DepthTrack --shard 2 --gpu 2 "
+    }
+  },
+  "elapsed_since_recovery_start": 1425.103821,
+  "shards": [
+    {
+      "shard": 0,
+      "completed_sequences": 2,
+      "completed_frames": 5679,
+      "total_frames": 31881,
+      "completed_trajectories": [
+        {
+          "sequence": "adapter01_indoor",
+          "frames": 2775,
+          "rpc_tracking_seconds": 651.5080988407135
+        },
+        {
+          "sequence": "bag02_indoor",
+          "frames": 2904,
+          "rpc_tracking_seconds": 695.4776327610016
+        }
+      ],
+      "rpc_tracking_seconds": 1346.985731601715,
+      "log_tail": "{\"sequence\": \"adapter01_indoor\", \"shard\": 0, \"trajectory_files\": [\"adapter01_indoor_001.bin\", \"adapter01_indoor_001_confidence.value\", \"adapter01_indoor_001_gpu_peak_allocated_bytes.value\", \"adapter01_indoor_001_gpu_peak_reserved_bytes.value\", \"adapter01_indoor_001_time.value\"]}\n{\"sequence\": \"bag02_indoor\", \"shard\": 0, \"trajectory_files\": [\"bag02_indoor_001.bin\", \"bag02_indoor_001_gpu_peak_allocated_bytes.value\", \"bag02_indoor_001_time.value\", \"bag02_indoor_001_gpu_peak_reserved_bytes.value\", \"bag02_indoor_001_confidence.value\"]}\n",
+      "rpc_fps": 4.216080294515845,
+      "conservative_completed_frame_wallclock_fps": 3.984972825358806,
+      "conservative_remaining_seconds": 6575.201675971473
+    },
+    {
+      "shard": 1,
+      "completed_sequences": 3,
+      "completed_frames": 4218,
+      "total_frames": 22887,
+      "completed_trajectories": [
+        {
+          "sequence": "backpack_indoor",
+          "frames": 2111,
+          "rpc_tracking_seconds": 509.1649911403656
+        },
+        {
+          "sequence": "ball01_wild",
+          "frames": 531,
+          "rpc_tracking_seconds": 123.3893506526947
+        },
+        {
+          "sequence": "ball11_wild",
+          "frames": 1576,
+          "rpc_tracking_seconds": 380.5285186767578
+        }
+      ],
+      "rpc_tracking_seconds": 1013.0828604698181,
+      "log_tail": "{\"sequence\": \"backpack_indoor\", \"shard\": 1, \"trajectory_files\": [\"backpack_indoor_001.bin\", \"backpack_indoor_001_confidence.value\", \"backpack_indoor_001_gpu_peak_allocated_bytes.value\", \"backpack_indoor_001_gpu_peak_reserved_bytes.value\", \"backpack_indoor_001_time.value\"]}\n{\"sequence\": \"ball01_wild\", \"shard\": 1, \"trajectory_files\": [\"ball01_wild_001.bin\", \"ball01_wild_001_time.value\", \"ball01_wild_001_confidence.value\", \"ball01_wild_001_gpu_peak_reserved_bytes.value\", \"ball01_wild_001_gpu_peak_allocated_bytes.value\"]}\n{\"sequence\": \"ball11_wild\", \"shard\": 1, \"trajectory_files\": [\"ball11_wild_001.bin\", \"ball11_wild_001_gpu_peak_allocated_bytes.value\", \"ball11_wild_001_gpu_peak_reserved_bytes.value\", \"ball11_wild_001_time.value\", \"ball11_wild_001_confidence.value\"]}\n",
+      "rpc_fps": 4.163529129338837,
+      "conservative_completed_frame_wallclock_fps": 2.9597843594582574,
+      "conservative_remaining_seconds": 6307.554109589616
+    },
+    {
+      "shard": 2,
+      "completed_sequences": 4,
+      "completed_frames": 4613,
+      "total_frames": 21605,
+      "completed_trajectories": [
+        {
+          "sequence": "bag01_indoor",
+          "frames": 2463,
+          "rpc_tracking_seconds": 600.4807755947113
+        },
+        {
+          "sequence": "ball06_indoor",
+          "frames": 781,
+          "rpc_tracking_seconds": 171.34913301467896
+        },
+        {
+          "sequence": "ball15_wild",
+          "frames": 179,
+          "rpc_tracking_seconds": 38.945430278778076
+        },
+        {
+          "sequence": "bandlight_indoor",
+          "frames": 1190,
+          "rpc_tracking_seconds": 278.58949089050293
+        }
+      ],
+      "rpc_tracking_seconds": 1089.3648297786713,
+      "log_tail": "{\"sequence\": \"bag01_indoor\", \"shard\": 2, \"trajectory_files\": [\"bag01_indoor_001.bin\", \"bag01_indoor_001_time.value\", \"bag01_indoor_001_gpu_peak_reserved_bytes.value\", \"bag01_indoor_001_gpu_peak_allocated_bytes.value\", \"bag01_indoor_001_confidence.value\"]}\n{\"sequence\": \"ball06_indoor\", \"shard\": 2, \"trajectory_files\": [\"ball06_indoor_001.bin\", \"ball06_indoor_001_confidence.value\", \"ball06_indoor_001_gpu_peak_allocated_bytes.value\", \"ball06_indoor_001_gpu_peak_reserved_bytes.value\", \"ball06_indoor_001_time.value\"]}\n{\"sequence\": \"ball15_wild\", \"shard\": 2, \"trajectory_files\": [\"ball15_wild_001.bin\", \"ball15_wild_001_time.value\", \"ball15_wild_001_confidence.value\", \"ball15_wild_001_gpu_peak_reserved_bytes.value\", \"ball15_wild_001_gpu_peak_allocated_bytes.value\"]}\n{\"sequence\": \"bandlight_indoor\", \"shard\": 2, \"trajectory_files\": [\"bandlight_indoor_001.bin\", \"bandlight_indoor_001_gpu_peak_reserved_bytes.value\", \"bandlight_indoor_001_confidence.value\", \"bandlight_indoor_001_time.value\", \"bandlight_indoor_001_gpu_peak_allocated_bytes.value\"]}\n",
+      "rpc_fps": 4.234577685913758,
+      "conservative_completed_frame_wallclock_fps": 3.2369571479803088,
+      "conservative_remaining_seconds": 5249.374404169087
+    }
+  ],
+  "completed_sequences": 9,
+  "completed_frames": 14510,
+  "scope": "One due initial-native diagnostic: actual completed sequence logs and native time records only. No model/image loading, scoring replay, GPU hardware query, restart or source modification. Completed counts are trajectory progress, not benchmark scores.",
+  "estimated_tracking_completion": "2026-10-05T02:24:52.736506+08:00",
+  "next_observation_not_before": "2026-10-05T02:30:52.736506+08:00"
+}
