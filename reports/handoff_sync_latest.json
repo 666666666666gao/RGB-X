@@ -1,45 +1,42 @@
 {
-  "status": "ACTUAL_METHOD_LASHER_ARTIFACTS_AND_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-04T23:37:55.681979+00:00",
-  "source_commit": "d3e8019a62d90f12e7790ea39bd9fffcd600952f",
-  "document_sha256": "8879232d6abead38ae81544cf24b8a1aefd6a885adb2257f4da0852a6b33fce1",
-  "document_bytes": 186279,
+  "status": "STATIC_DISTANCE0_SOURCE_REVIEW_AND_FOUR_HANDOFF_COPIES_IDENTICAL",
+  "verified_at": "2026-10-04T23:51:03.943747+00:00",
+  "source_commit": "869b1b72d8ecf21f22d0757d7d71173f738e8cfc",
+  "document_sha256": "efcda72616b6057dc32fbc63d5329b4e5e9aa54f6ce98f8419c6a1f60aeed858",
+  "document_bytes": 188933,
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/d3e8019a62d90f12e7790ea39bd9fffcd600952f/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/869b1b72d8ecf21f22d0757d7d71173f738e8cfc/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
-  "subject": "ACTUAL_METHOD_LASHER_COMPLETE_NEGATIVE_HEADLINES_VISEVENT_RUNNING",
+  "subject": "UNSTARTED_DISTANCE0_SOURCE_REVIEW_AND_FUTURE_CPU_ANALYSIS_STAGE",
+  "candidate_launch_ready": false,
+  "candidate_model_execution": false,
+  "source_review_independence": "self",
+  "source_review_runtime_attested": false,
   "file_sha256": {
-    ".gitattributes": "5784be3c0518d86858255ca706976eca44017d84d8e24d1c5d54f00287930236",
-    "configs/current_goal.json": "4ca92c88ad40e1e41aba71654cb1732ea09f926772a47abe3ad39d89f5fd3078",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8879232d6abead38ae81544cf24b8a1aefd6a885adb2257f4da0852a6b33fce1",
-    "reports/full_method_v1_lasher_complete_intake_20261005.json": "161e41fb0ee9748a53adeb18130914394767eb558c223b698d088fd2f5db410c",
-    "reports/full_method_v1_lasher_complete_and_visevent_milestone_20261005.json": "ecf57285ce846042eed70da75113e99ca2a97339f30fe55d5bd42ea8eccf3513",
-    "reports/method_xtrack_full_method_v1_s2026/LasHeR/coverage.json": "2d59b1fa8ce99384bea972c414c58792b0aa8fcb41543bfd3f60c247b45b7eeb",
-    "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/metrics.json": "f94b4907c0faab77fe3a901ab51e10cc5cba6676ed58925fbe3ea745f5a8ea33",
-    "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/per_sequence.csv": "956a29d0f43493b1f9cfa732ad59d5220e839900fad817186dcd2465ab20d784",
-    "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/full_curves.png": "4236d7affcc40dc41f2791405df13ac7ea93c0a9426042454fc49018c9a088d3"
+    "scripts/run_full_method_v2_distance0_job.py": "bf3f9f9520c73d38aa0df439e367ea540b87fa6e0a41032c3e0e60fc5ad346df",
+    "reports/full_method_v2_distance0_code_review.json": "6dc2eaa16933b4853c653b6a7c553a69900da4d986dbcc556bc8ffe6f145e9fe",
+    "reports/full_method_v2_distance0_entry_preparation.json": "e6576720dfca626141d8b9250d9acf7ebf3644d6d2b122b091d8731b4d7440e9",
+    "configs/current_goal.json": "a611e84d8ab5e55226eba2c76ec3a0a04c5ae3537f66bac1ac445c9b35e071f8",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "efcda72616b6057dc32fbc63d5329b4e5e9aa54f6ce98f8419c6a1f60aeed858"
   },
-  "published_files": 9,
+  "published_files": 5,
   "latest_publication_sync": {
-    "verified_at": "2026-10-04T23:37:55.681979+00:00",
+    "verified_at": "2026-10-04T23:51:03.943747+00:00",
     "file_sha256": {
-      ".gitattributes": "5784be3c0518d86858255ca706976eca44017d84d8e24d1c5d54f00287930236",
-      "configs/current_goal.json": "4ca92c88ad40e1e41aba71654cb1732ea09f926772a47abe3ad39d89f5fd3078",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8879232d6abead38ae81544cf24b8a1aefd6a885adb2257f4da0852a6b33fce1",
-      "reports/full_method_v1_lasher_complete_intake_20261005.json": "161e41fb0ee9748a53adeb18130914394767eb558c223b698d088fd2f5db410c",
-      "reports/full_method_v1_lasher_complete_and_visevent_milestone_20261005.json": "ecf57285ce846042eed70da75113e99ca2a97339f30fe55d5bd42ea8eccf3513",
-      "reports/method_xtrack_full_method_v1_s2026/LasHeR/coverage.json": "2d59b1fa8ce99384bea972c414c58792b0aa8fcb41543bfd3f60c247b45b7eeb",
-      "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/metrics.json": "f94b4907c0faab77fe3a901ab51e10cc5cba6676ed58925fbe3ea745f5a8ea33",
-      "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/per_sequence.csv": "956a29d0f43493b1f9cfa732ad59d5220e839900fad817186dcd2465ab20d784",
-      "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/full_curves.png": "4236d7affcc40dc41f2791405df13ac7ea93c0a9426042454fc49018c9a088d3"
+      "scripts/run_full_method_v2_distance0_job.py": "bf3f9f9520c73d38aa0df439e367ea540b87fa6e0a41032c3e0e60fc5ad346df",
+      "reports/full_method_v2_distance0_code_review.json": "6dc2eaa16933b4853c653b6a7c553a69900da4d986dbcc556bc8ffe6f145e9fe",
+      "reports/full_method_v2_distance0_entry_preparation.json": "e6576720dfca626141d8b9250d9acf7ebf3644d6d2b122b091d8731b4d7440e9",
+      "configs/current_goal.json": "a611e84d8ab5e55226eba2c76ec3a0a04c5ae3537f66bac1ac445c9b35e071f8",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "efcda72616b6057dc32fbc63d5329b4e5e9aa54f6ce98f8419c6a1f60aeed858"
     },
     "all_files_match": true,
     "source8_unchanged": true,
+    "reviewed_current15_source_hashes_match": true,
     "scope": "Static publication bytes and immutable training seal only. No process, log, native-session, progress or hardware query. Dynamic recovery receipt not overwritten."
   },
   "last_verified_runtime": "2026-10-05T07:23:51.779911+08:00",
@@ -88,5 +85,5 @@
   "next_observation_not_before": "2026-10-05T09:58:27.505348+08:00",
   "scheduled_observer_native_session": 23494,
   "scheduled_observer_pid": 45512,
-  "scope": "Actual full method first dataset only, both required LasHeR headlines below measured reference. Remaining five headlines pending. Preserve all raw curves, attributes, sequences and costs. Original train exit0; source8/checkpoint unchanged. No inference/scoring replay, early progress query, new weight, deletion or hardware control. Dynamic worker receipt not overwritten."
+  "scope": "Static preparation of next candidate only; runtime remains the prior actual LasHeR-complete/VisEvent-running observation, both required LasHeR headlines below measured reference. Remaining five headlines pending. Preserve all raw curves, attributes, sequences and costs. Original train exit0; source8/checkpoint unchanged. No inference/scoring replay, early progress query, new weight, deletion or hardware control. Dynamic worker receipt not overwritten."
 }
