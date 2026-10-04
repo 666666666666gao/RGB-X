@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T13:50:55.709776+00:00",
+  "updated_at": "2026-10-04T14:09:26.829966+00:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -494,5 +494,17 @@
     "trainable_elements": 5821440,
     "shared_correction_eligible_elements": 2277888,
     "scope": "Source-declared categories; not empirically measured task exclusivity or proof that every eligible parameter received a correction."
+  },
+  "paired_sequence_uncertainty": {
+    "status": "ENTRY_PREPARED_ACTUAL_CPU_ARITHMETIC_CHECK_PASS_FULL_PAIR_NOT_RUN",
+    "source": "scripts/analyze_paired_sequence_uncertainty.py",
+    "source_sha256": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
+    "preparation_evidence": "reports/paired_sequence_uncertainty_preparation_20261004.json",
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 2026,
+    "sampling_unit": "Whole sequence, paired endpoint multiplicities within each dataset.",
+    "ready_to_analyze_actual_pair": false,
+    "remaining": "Both real endpoints must complete all three datasets and have an audited full comparison with matching source hashes.",
+    "limitations": "One fixed endpoint pair; conditional on saved endpoint-specific DepthTrack threshold grids. Not training seed variation, module attribution, calibrated p-values or corrected multiple-metric significance."
   }
 }

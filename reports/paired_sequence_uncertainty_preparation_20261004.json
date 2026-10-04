@@ -1,0 +1,105 @@
+{
+  "status": "ACTUAL_CPU_PREPARATION_CHECK_PASS_NOT_FULL_PAIRED_RESULT",
+  "observed_at": "2026-10-04T14:06:53.479951+00:00",
+  "source": "scripts/analyze_paired_sequence_uncertainty.py",
+  "source_sha256": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
+  "actual_lasher_reference_metrics_sha256": "0c3dd14f8bddb9282d65169c055acb3dd7dabb10598e6ed4351611ab1eda0c9b",
+  "actual_lasher_reference_point": {
+    "SR_AUC": 0.5554599303245381,
+    "PR_at_20": 0.6905088871059198,
+    "NPR_AUC": 0.5921262401038353,
+    "NP_at_020": 0.6548772213736571
+  },
+  "identity_pair_draws": 1000,
+  "identity_pair_deltas": {
+    "SR_AUC": {
+      "reference": 0.5554599303245381,
+      "method": 0.5554599303245381,
+      "delta": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_fraction_delta_positive": 0.0
+    },
+    "PR_at_20": {
+      "reference": 0.6905088871059198,
+      "method": 0.6905088871059198,
+      "delta": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_fraction_delta_positive": 0.0
+    },
+    "NPR_AUC": {
+      "reference": 0.5921262401038353,
+      "method": 0.5921262401038353,
+      "delta": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_fraction_delta_positive": 0.0
+    },
+    "NP_at_020": {
+      "reference": 0.6548772213736571,
+      "method": 0.6548772213736571,
+      "delta": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_fraction_delta_positive": 0.0
+    }
+  },
+  "synthetic_depth_macro_expected_F": 0.6666666666666666,
+  "synthetic_depth_macro_observed": {
+    "F_score": 0.6666666666666666,
+    "Recall": 1.0,
+    "Precision": 0.5
+  },
+  "synthetic_endpoint_grid_lengths": [
+    2,
+    3
+  ],
+  "synthetic_grid_delta_expected_F": 0.19047619047619047,
+  "synthetic_grid_result": {
+    "F_score": {
+      "reference": 0.6666666666666666,
+      "method": 0.8571428571428571,
+      "delta": 0.19047619047619047,
+      "percentile_95_interval": [
+        0.19047619047619047,
+        0.19047619047619047
+      ],
+      "bootstrap_fraction_delta_positive": 1.0
+    },
+    "Recall": {
+      "reference": 1.0,
+      "method": 1.0,
+      "delta": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_fraction_delta_positive": 0.0
+    },
+    "Precision": {
+      "reference": 0.5,
+      "method": 0.75,
+      "delta": 0.25,
+      "percentile_95_interval": [
+        0.25,
+        0.25
+      ],
+      "bootstrap_fraction_delta_positive": 1.0
+    }
+  },
+  "incomplete_comparison_exit_code": 1,
+  "incomplete_comparison_output_written": false,
+  "actual_method_bootstrap_run": false,
+  "actual_depthtrack_bootstrap_run": false,
+  "formal_seven_metric_uncertainty_complete": false,
+  "scope": "CPU arithmetic uses the completed reference LasHeR twice only as an identity check plus two artificial DepthTrack aggregation/grid cases. This is not a method comparison or a native DepthTrack benchmark. The full CLI remains prepared until both actual endpoints have complete three-dataset scoring and an audited comparison. No SSH, logs/native session polling, image/GT/model access, GPU, training, scoring replay or weights."
+}
