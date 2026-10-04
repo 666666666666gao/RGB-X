@@ -1,5 +1,5 @@
 {
-  "status": "CONFIGURATION_PREPARED_ONLY_NOT_RUN",
+  "status": "CONFIGURATION_AND_ISOLATED_ENTRIES_PREPARED_NOT_RUN",
   "prepared_at": "2026-10-04T00:35:05.878706+08:00",
   "reference_protocol": "configs/full_method_v1.json",
   "reference_protocol_sha256": "452d8ea219af641f7a7b237eb654df9c1dfb88c551ea98ee43b600927ac6dded",
@@ -45,11 +45,15 @@
   "efficacy": "UNKNOWN",
   "launch_ready": false,
   "remaining_before_launch": [
-    "finish fixed v1 training, endpoint audit and complete three-dataset comparison",
-    "prepare separate controller/audit/evaluation/retention paths; existing controller hardcodes v1",
-    "review and verify the candidate with its actual protocol before a new formal run"
+    "finish the fixed v1 endpoint and full three-dataset comparison",
+    "after completed v1 scoring apply the explicit candidate run-ID admission to the common endpoint verifier and check identity/hash rejection cases",
+    "review candidate entry points and seal protocol/source hashes in its own review receipt",
+    "run the actual candidate-protocol two-step three-GPU sanity and verify its saved state"
   ],
   "reference_result_is_not_a_matched_ordinary_finetuning_control": true,
   "mechanism_boundary": "Only the distance penalty changes. Trajectory-only independent intervention and sample-level risks remain future experiments.",
-  "success_measure": "Reduced unrepaired localization harms while preserving learning progress and complete tracking metrics; correction frequency alone is insufficient."
+  "success_measure": "Reduced unrepaired localization harms while preserving learning progress and complete tracking metrics; correction frequency alone is insufficient.",
+  "updated_at": "2026-10-04T13:26:50.662377+08:00",
+  "isolated_entry_evidence": "reports/full_method_v2_distance0_entry_preparation.json",
+  "identity_contract_evidence": "reports/full_method_v2_distance0_identity_contract_check.json"
 }

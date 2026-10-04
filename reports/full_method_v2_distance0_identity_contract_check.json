@@ -1,0 +1,36 @@
+{
+  "status": "SYNTHETIC_CPU_IDENTITY_CONTRACT_CHECK_PASS_PREPARED_CHANGE_NOT_APPLIED",
+  "cases": [
+    {
+      "case": "current_verifier_rejects_known_candidate_run_id",
+      "rejected": true
+    },
+    {
+      "case": "prepared_verifier_accepts_known_candidate_identity",
+      "accepted": true
+    },
+    {
+      "case": "v1_identity_result_unchanged",
+      "identical": true
+    },
+    {
+      "case": "unlisted_run_still_rejected",
+      "rejected": true
+    },
+    {
+      "case": "checkpoint_hash_mismatch_still_rejected",
+      "rejected": true
+    },
+    {
+      "case": "config_hash_mismatch_still_rejected",
+      "rejected": true
+    }
+  ],
+  "current_source_sha256": "db30ea1f57e250db01818dff8c35ee97286b161d500d95535203c2aaf813a979",
+  "prepared_source_sha256": "2c6f272a76ab380684194383e92a17c9c22eab62968ab6507e397908df17a156",
+  "current_evaluator_modified": false,
+  "actual_candidate_weights_loaded": false,
+  "gpu_training_or_inference": false,
+  "formal_tracking_scores": "NOT_RUN",
+  "scope": "Synthetic identity/hash fixtures only. This confirms the run-ID rejection and the proposed explicit admission; it does not verify model tensors, checkpoints, CUDA, data protocols or tracking performance."
+}

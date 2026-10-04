@@ -1,0 +1,71 @@
+{
+  "status": "ISOLATED_ENTRY_POINTS_PREPARED_NOT_RUN",
+  "candidate_protocol": "configs/full_method_v2_distance0.json",
+  "candidate_protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+  "sole_algorithm_change": "candidate_distance_weight:0.05 -> 0.0",
+  "prepared_files": {
+    "scripts/run_full_method_v2_distance0_job.py": "6fd4a5e9ebb5ee5a22134f53061981a6968a6ce21622111c30df09dcb14f4ff3",
+    "scripts/audit_joint_endpoint_v2_distance0.py": "91b7ed4899ad9476575ed1676c246616bd7f4adaea6df4a3a785473d061befa4",
+    "scripts/audit_full_method_v2_distance0_first_epoch.py": "8da030b336d3384c3d77d4ad38ea75bb58e955c9b72e183548e98db6004f2737",
+    "scripts/retain_full_method_v2_distance0_checkpoints.py": "2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102"
+  },
+  "entry_pairs": [
+    {
+      "original": "scripts/run_full_method_job.py",
+      "candidate": "scripts/run_full_method_v2_distance0_job.py"
+    },
+    {
+      "original": "scripts/audit_joint_endpoint.py",
+      "candidate": "scripts/audit_joint_endpoint_v2_distance0.py"
+    },
+    {
+      "original": "scripts/audit_full_method_first_epoch.py",
+      "candidate": "scripts/audit_full_method_v2_distance0_first_epoch.py"
+    },
+    {
+      "original": "scripts/retain_full_method_checkpoints.py",
+      "candidate": "scripts/retain_full_method_v2_distance0_checkpoints.py"
+    }
+  ],
+  "static_scope": "Parse and inspect isolated orchestration/audit/retention copies. This does not certify candidate runtime, model loading or benchmark results.",
+  "training_core_modified": false,
+  "v1_entries_modified": false,
+  "candidate_training_started": false,
+  "candidate_gpu_sanity": "NOT_RUN_WAIT_FOR_V1_COMPLETE_SCORES",
+  "candidate_source_review": "PENDING_NOT_AN_INDEPENDENT_REVIEW",
+  "launch_ready": false,
+  "remaining_before_launch": [
+    "finish the fixed v1 endpoint and full three-dataset comparison",
+    "after completed v1 scoring apply the explicit candidate run-ID admission to the common endpoint verifier and check identity/hash rejection cases",
+    "review candidate entry points and seal protocol/source hashes in its own review receipt",
+    "run the actual candidate-protocol two-step three-GPU sanity and verify its saved state"
+  ],
+  "retention_activation": "After candidate epoch1 is actually saved, run its isolated CPU audit once, then launch its isolated retention worker once. Do not reuse the v1 dynamic worker receipt.",
+  "reference_evaluation": "Reuse only the fully scored same published reference after checking its identity and all reference source hashes recorded by the completed v1 comparison.",
+  "port": 29530,
+  "formal_tracking_scores": "NOT_RUN",
+  "efficacy": "UNKNOWN",
+  "evaluation_identity_blocker": {
+    "current_source": "scripts/xtrack_eval_parameters.py",
+    "current_sha256": "db30ea1f57e250db01818dff8c35ee97286b161d500d95535203c2aaf813a979",
+    "evidence": "assert audit['run_id'] == 'xtrack_full_method_v1_s2026'",
+    "effect": "The common verification path rejects the candidate run ID before inference or scoring.",
+    "prepared_change": "assert audit['run_id'] in ['xtrack_full_method_v1_s2026', 'xtrack_full_method_v2_distance0_s2026']",
+    "deployment": "DEFERRED_UNTIL_V1_FULL_RESULT_PRESERVE_CURRENT_EVALUATOR",
+    "applied": false,
+    "scoring_algorithm_changed": false
+  },
+  "prepared_at": "2026-10-04T13:26:50.662377+08:00",
+  "local_v1_core_source_sha256_unchanged": {
+    "configs/full_method_v1.json": "452d8ea219af641f7a7b237eb654df9c1dfb88c551ea98ee43b600927ac6dded",
+    "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+    "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+    "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+    "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+    "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+    "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+    "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd"
+  },
+  "identity_contract_evidence": "reports/full_method_v2_distance0_identity_contract_check.json",
+  "preparation_does_not_refresh_live_training_snapshot": true
+}
