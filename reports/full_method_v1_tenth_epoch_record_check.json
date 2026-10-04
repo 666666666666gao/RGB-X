@@ -1,0 +1,149 @@
+{
+  "status": "TENTH_EPOCH_NEW_RECORDS_AND_ONE_RECOVERY_VERIFIED_NOT_BENCHMARK",
+  "observed_at": "2026-10-04T08:10:37.240763+08:00",
+  "completed_epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 114,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 161,
+      "mean_step_seconds": 2.415328442759649
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 2,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 2.389823864249629
+    },
+    {
+      "epoch": 3,
+      "updates": 2500,
+      "risk_events": 97,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 144,
+      "mean_step_seconds": 2.39314502257884
+    },
+    {
+      "epoch": 4,
+      "updates": 2500,
+      "risk_events": 90,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 140,
+      "mean_step_seconds": 2.399556109916605
+    },
+    {
+      "epoch": 5,
+      "updates": 2500,
+      "risk_events": 104,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 152,
+      "mean_step_seconds": 2.3784799392404037
+    },
+    {
+      "epoch": 6,
+      "updates": 2500,
+      "risk_events": 89,
+      "accepted_nonzero_corrections": 3,
+      "trajectory_checks": 137,
+      "mean_step_seconds": 3.076616281334963
+    },
+    {
+      "epoch": 7,
+      "updates": 2500,
+      "risk_events": 85,
+      "accepted_nonzero_corrections": 5,
+      "trajectory_checks": 134,
+      "mean_step_seconds": 2.394738950299658
+    },
+    {
+      "epoch": 8,
+      "updates": 2500,
+      "risk_events": 88,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 135,
+      "mean_step_seconds": 2.3758077538426265
+    },
+    {
+      "epoch": 9,
+      "updates": 2500,
+      "risk_events": 84,
+      "accepted_nonzero_corrections": 1,
+      "trajectory_checks": 134,
+      "mean_step_seconds": 2.3863033115528522
+    },
+    {
+      "epoch": 10,
+      "updates": 2500,
+      "risk_events": 93,
+      "accepted_nonzero_corrections": 0,
+      "trajectory_checks": 140,
+      "mean_step_seconds": 2.398263385786349
+    }
+  ],
+  "completed_epoch_totals": {
+    "updates": 25000,
+    "risk_events": 932,
+    "accepted_nonzero_corrections": 20,
+    "trajectory_checks": 1414
+  },
+  "earlier_22500_evidence": "reports/full_method_v1_ninth_epoch_record_check.json",
+  "new_records_checked": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/updates.jsonl",
+    "global_step_start": 22501,
+    "global_step_end": 25000,
+    "bytes": 4932862,
+    "sha256": "358be4b6617aa5e57983dc0bd9c778a8f78dd8f142297622e60a631c76e542cd"
+  },
+  "new_localization_records_checked": 2500,
+  "tenth_epoch_localization_all_finite": true,
+  "tenth_epoch_global_task_counts_always": [
+    8,
+    8,
+    8
+  ],
+  "trajectory_only_deterioration": {
+    "scope": "Only tenth-epoch stored paired training-pool trajectory objectives; no new forward passes.",
+    "events": [
+      {
+        "global_step": 24950,
+        "baseline_trajectory": [
+          0.45173197984695435,
+          0.17588159441947937,
+          0.1844787299633026
+        ],
+        "candidate_trajectory": [
+          0.45165446400642395,
+          0.1758461892604828,
+          0.20251287519931793
+        ],
+        "trajectory_risk": [
+          0,
+          0,
+          0.09575731456739082
+        ],
+        "candidate_strengths": [
+          0.0
+        ],
+        "selected_correction_strength": 0.0
+      }
+    ],
+    "event_count": 1,
+    "no_localization_risk_periodic_checks": 47,
+    "efficacy": "UNKNOWN_NO_BENCHMARK_OR_INDEPENDENT_TRIGGER_EXPERIMENT"
+  },
+  "retention_snapshot": "reports/full_method_v1_tenth_epoch_retention_snapshot.json",
+  "current_training_snapshot": {
+    "epoch": 11,
+    "step": 110,
+    "global_step": 25110,
+    "completed_epochs": 10,
+    "training_examples": 602640
+  },
+  "training_protocol_changed": false,
+  "new_iteration_started": false,
+  "formal_tracking_scores": "NOT_RUN",
+  "scope": "Only2500 new tenth-epoch localization records; registered checkpoint hash and worker retention, live non-stopped processes. No prior record validation replay, model/optimizer reload, CUDA RNG restore, hardware control or benchmark."
+}
