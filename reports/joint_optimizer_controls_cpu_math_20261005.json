@@ -1,0 +1,52 @@
+{
+  "status": "PASS_CPU_CONTROL_ALGEBRA_AND_OPTIMIZER_SEMANTICS_NOT_DDP_OR_BENCHMARK",
+  "started_at": "2026-10-05T10:23:10.289824+00:00",
+  "ended_at": "2026-10-05T10:23:15.573622+00:00",
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "/data/gb/rgbx-risk/scripts/check_joint_optimizer_control_math.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS_CPU_CONTROL_ALGEBRA_AND_OPTIMIZER_SEMANTICS_NOT_DDP_OR_BENCHMARK\", \"torch_version\": \"1.13.1+cu117\", \"dtype\": {\"loss_and_adamw\": \"float64\", \"task_stats\": \"production_float32\"}, \"model_forward_calls\": 0, \"dataset_reads\": 0, \"cuda_initialized\": false, \"mixed_rank_gradient_error\": 0.0, \"full_mixed_batch_balance_gradient_preserved\": true, \"ordinary_adamw_first_step\": 1.9988000001000001, \"sparse_none_gradient_skips_state_and_decay\": true, \"sparse_zero_gradient_commits_one_state_and_decay\": true, \"adaptive_shared_delta\": -0.0005333333392627537, \"adaptive_routed_expert_delta\": 4.999999873689376e-05, \"adaptive_three_shared_states_one_expert_state\": true, \"inactive_adaptive_parameter_skips_state_and_decay\": true, \"scope\": \"Synthetic CPU checks of global normalization, ordinary AdamW, sparse activation and existing task statistics. No GPU/model/real-data preflight, saved-state resume, evaluation, training result or canonical AdaTask acceptance.\"}\n",
+  "stderr": "",
+  "cuda_visible_devices": "",
+  "invocation_count": 1,
+  "control_source_sha256": {
+    "rgbx_controls/__init__.py": "cdaeaf1cb528158dced5aefd94deca4848c7ced4115428bf2c9cde69108d8292",
+    "rgbx_controls/updates.py": "66158fa5d26e77e9608f9007476d9b56d09200ac40b631deee6153feed6926d6",
+    "scripts/train_joint_optimizer_control.py": "12f66e73b7e71508649d3ba96805e85eae507706b825b539ad1593c722994c29",
+    "scripts/check_joint_optimizer_control_math.py": "cc93e106eaf07c03a526b86f3a867877414e185c99bdd19c6232c44dcb708c6d",
+    "configs/xtrack_fixed_mixed_adamw_s2026.json": "404371a7f81a01ce721cf6fc2cbf2b11b30f3b2012f372306a14a3f941b6656f",
+    "configs/xtrack_task_stats_only_s2026.json": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381",
+    "reports/joint_optimizer_controls_source_review_revised_20261005.json": "87aa805cc0f53514914ea46de428e2430e33c31a925107f741c1c3bbdfeda968"
+  },
+  "common_main_recipe_matched": true,
+  "code_review": "same-family/provisional source pass",
+  "active_distance0_runtime_queries": 0,
+  "active_distance0_source_mutations": 0,
+  "new_gpu_jobs": 0,
+  "goal_achieved": false,
+  "native_ssh_exit_code": 0,
+  "native_ssh_stderr": "",
+  "cpu_result": {
+    "status": "PASS_CPU_CONTROL_ALGEBRA_AND_OPTIMIZER_SEMANTICS_NOT_DDP_OR_BENCHMARK",
+    "torch_version": "1.13.1+cu117",
+    "dtype": {
+      "loss_and_adamw": "float64",
+      "task_stats": "production_float32"
+    },
+    "model_forward_calls": 0,
+    "dataset_reads": 0,
+    "cuda_initialized": false,
+    "mixed_rank_gradient_error": 0.0,
+    "full_mixed_batch_balance_gradient_preserved": true,
+    "ordinary_adamw_first_step": 1.9988000001000001,
+    "sparse_none_gradient_skips_state_and_decay": true,
+    "sparse_zero_gradient_commits_one_state_and_decay": true,
+    "adaptive_shared_delta": -0.0005333333392627537,
+    "adaptive_routed_expert_delta": 4.999999873689376e-05,
+    "adaptive_three_shared_states_one_expert_state": true,
+    "inactive_adaptive_parameter_skips_state_and_decay": true,
+    "scope": "Synthetic CPU checks of global normalization, ordinary AdamW, sparse activation and existing task statistics. No GPU/model/real-data preflight, saved-state resume, evaluation, training result or canonical AdaTask acceptance."
+  }
+}

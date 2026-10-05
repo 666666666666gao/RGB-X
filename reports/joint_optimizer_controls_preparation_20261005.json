@@ -1,0 +1,54 @@
+{
+  "status": "ISOLATED_C_D_SOURCE_REVIEW_PASS_CPU_MATH_PASS_REAL_DDP_AND_ENDPOINT_INTEGRATION_PENDING",
+  "prepared_at": "2026-10-05T10:08:39.451622+00:00",
+  "controls": [
+    "C_repaired_fixed_mixed_adamw",
+    "D_existing_task_statistics_only"
+  ],
+  "source_files": [
+    "rgbx_controls/__init__.py",
+    "rgbx_controls/updates.py",
+    "scripts/train_joint_optimizer_control.py",
+    "scripts/check_joint_optimizer_control_math.py"
+  ],
+  "protocol_files": [
+    "configs/xtrack_fixed_mixed_adamw_s2026.json",
+    "configs/xtrack_task_stats_only_s2026.json"
+  ],
+  "source_sha256": {
+    "rgbx_controls/__init__.py": "cdaeaf1cb528158dced5aefd94deca4848c7ced4115428bf2c9cde69108d8292",
+    "rgbx_controls/updates.py": "66158fa5d26e77e9608f9007476d9b56d09200ac40b631deee6153feed6926d6",
+    "scripts/train_joint_optimizer_control.py": "12f66e73b7e71508649d3ba96805e85eae507706b825b539ad1593c722994c29",
+    "scripts/check_joint_optimizer_control_math.py": "cc93e106eaf07c03a526b86f3a867877414e185c99bdd19c6232c44dcb708c6d",
+    "configs/xtrack_fixed_mixed_adamw_s2026.json": "404371a7f81a01ce721cf6fc2cbf2b11b30f3b2012f372306a14a3f941b6656f",
+    "configs/xtrack_task_stats_only_s2026.json": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381"
+  },
+  "fresh_code_review": "SOURCE_REVIEW_PASS_SAME_FAMILY_PROVISIONAL_NOT_RUNTIME_ATTESTED",
+  "cpu_math_runtime": "PASS_CPU_CONTROL_ALGEBRA_AND_OPTIMIZER_SEMANTICS_NOT_DDP_OR_BENCHMARK",
+  "real_three_gpu_sanity": "NOT_RUN",
+  "formal_control_training": "NOT_RUN",
+  "control_benchmarks": "NOT_RUN",
+  "active_distance0_source_mutations": 0,
+  "active_distance0_runtime_queries": 0,
+  "canonical_AdaTask_completed": false,
+  "remaining_before_formal_controls": [
+    "real three-rank sanity and saved-state audit when existing distance0 stages release GPUs",
+    "exact control endpoint audit/evaluation identity admission",
+    "owned first-epoch recovery audit/retention integration"
+  ],
+  "plan_source": "configs/current_goal.json ordered_next_steps P2 and the single handoff A-G fair comparison chain",
+  "skill": "C:/Users/gb/.codex/skills/experiment-bridge/SKILL.md",
+  "status_scope": "Fresh source review and actual synthetic CPU checks passed. No actual model/data forward, real DDP/control training, GPU recovery, endpoint/scoring acceptance or efficacy. Deployment was isolated from the sealed running distance0 sources.",
+  "initial_review": "reports/joint_optimizer_controls_source_review_20261005.json",
+  "minimal_source_fix": [
+    "Save and require formal sanity_steps=0 checkpoint for resume.",
+    "Require saved global_step == saved epoch * formal full-epoch steps.",
+    "Copy prior attempt run.json before writing the resumed receipt."
+  ],
+  "updated_at": "2026-10-05T18:51:24.934531+08:00",
+  "revised_review": "reports/joint_optimizer_controls_source_review_revised_20261005.json",
+  "cpu_math_evidence": "reports/joint_optimizer_controls_cpu_math_20261005.json",
+  "cpu_math_exit_code": 0,
+  "cpu_math_started_at": "2026-10-05T10:23:10.289824+00:00",
+  "cpu_math_ended_at": "2026-10-05T10:23:15.573622+00:00"
+}

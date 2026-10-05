@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T17:35:06.574078+08:00",
+  "updated_at": "2026-10-05T18:51:24.934531+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。 后续三个模块围绕目标级可靠定位能力保持与风险记忆、保留有益学习的风险约束实际更新、搜索状态敏感且可独立决策的闭环验收展开；同时检验旧能力退化和新能力改善，不以任务平均损失、梯度均衡或减少更新作为最终目标。",
   "server": "2028",
   "gpu_indices": [
@@ -125,12 +125,12 @@
     "isolated_entry_evidence": "reports/full_method_v2_distance0_entry_preparation.json",
     "identity_admission_status": "EXACT_TWO_RUN_ADMISSION_APPLIED_AFTER_V1_TERMINAL",
     "identity_contract_evidence": "reports/full_method_v2_distance0_identity_contract_check.json",
-    "retention_activation": "After candidate epoch1 is actually saved, run its isolated CPU audit once, then launch its isolated retention worker once. Do not reuse the v1 dynamic worker receipt.",
+    "retention_activation": "Actual first-epoch CPU audit passed and dedicated worker573595 launched once, observed active2026-10-05 17:20:12CST; static publication does not replace the worker receipt or make a fresh runtime claim.",
     "full_run_diagnosis_evidence": "reports/full_method_v1_full_run_cost_decomposition.json",
     "source_review_status": "STATIC_SELF_SOURCE_REVIEW_PASS_NO_RUNTIME_OR_INDEPENDENT_ATTESTATION",
     "source_review_evidence": "reports/full_method_v2_distance0_code_review.json",
     "paired_sequence_uncertainty": {
-      "status": "CPU_STAGE_QUEUED_IN_UNSTARTED_CANDIDATE_CONTROLLER_NOT_EXECUTED",
+      "status": "CPU_STAGE_QUEUED_IN_ACTUAL_RUNNING_CANDIDATE_CONTROLLER_NOT_EXECUTED_AT_LAST_SNAPSHOT",
       "source": "scripts/analyze_paired_sequence_uncertainty.py",
       "source_sha256": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
       "output": "reports/full_method_v2_distance0_paired_sequence_uncertainty.json",
@@ -292,8 +292,9 @@
     },
     {
       "id": "P2",
-      "status": "NOT_IMPLEMENTED_NOT_RUN",
-      "work": "Build fair A-G comparison chain from the same public initialization. Implement real ablation switches for calls, optimizer states and accounting; metadata-only modules_enabled is insufficient."
+      "status": "C_D_ISOLATED_SOURCE_AND_CPU_MATH_PASS_REAL_DDP_CONTROLS_AND_OTHER_COMPARISONS_PENDING",
+      "work": "Build fair A-G comparison chain from the same public initialization. Implement real ablation switches for calls, optimizer states and accounting; metadata-only modules_enabled is insufficient.",
+      "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json"
     },
     {
       "id": "P3",
@@ -326,12 +327,19 @@
     {
       "id": "C",
       "setting": "Repaired source plus fixed mixed task sampling and explicit loss normalization, AdamW",
-      "status": "NOT_IMPLEMENTED_NOT_RUN"
+      "status": "ISOLATED_SOURCE_REVIEW_PASS_CPU_MATH_PASS_NOT_REAL_DDP_TRAINED_OR_EVALUATED",
+      "entry": "scripts/train_joint_optimizer_control.py",
+      "protocol": "configs/xtrack_fixed_mixed_adamw_s2026.json",
+      "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json"
     },
     {
       "id": "D",
       "setting": "C conditions plus task-specific adaptive optimizer statistics only",
-      "status": "NOT_IMPLEMENTED_NOT_RUN"
+      "status": "ISOLATED_SOURCE_REVIEW_PASS_CPU_MATH_PASS_NOT_REAL_DDP_TRAINED_OR_EVALUATED",
+      "entry": "scripts/train_joint_optimizer_control.py",
+      "protocol": "configs/xtrack_task_stats_only_s2026.json",
+      "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json",
+      "canonical_AdaTask_completed": false
     },
     {
       "id": "E",
@@ -386,7 +394,7 @@
     "historical_policy": "configs/gpu_limits.json"
   },
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
-  "training_runtime_state": "ACTUAL_TRAIN_EXIT0_FIXED_15_EPOCHS_COMPLETE",
+  "training_runtime_state": "DISTANCE0_EPOCH1_AUDITED_TRAINING_CONTINUED_AT_20261005_171629_SNAPSHOT_NO_NEW_RUNTIME_QUERY",
   "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
   "actual_epoch_at_snapshot": 15,
   "actual_epoch_step_at_snapshot": 2500,
@@ -439,23 +447,22 @@
   "twelfth_epoch_retention_evidence": "reports/full_method_v1_twelfth_epoch_retention_snapshot.json",
   "thirteenth_epoch_retention_evidence": "reports/full_method_v1_thirteenth_epoch_retention_snapshot.json",
   "monitoring_policy": {
-    "updated_at": "2026-10-05T14:45:18.828725+08:00",
+    "updated_at": "2026-10-05T18:51:24.934531+08:00",
     "user_instruction": "这里你轮询太多了，没到时间不用轮询",
     "mode": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": null,
-    "estimate_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json",
-    "estimated_stage": "Slowest current native shard: remaining frames / complete-frame wallclock FPS from actual shard start, plus six minutes for scoring. Does not attest completion or queued uncertainty.",
-    "completed_observer_session": 76403,
-    "completed_observer_exit_code": 0,
-    "scheduled_observer_native_session": null,
-    "scheduled_observer_pid": null,
-    "scheduled_observer_started_at": "2026-10-05T13:39:20.048055+08:00",
-    "scheduled_observer_status": "V1_OBSERVER_CLOSED_COMPLETE_RESULTS_COLLECTED",
-    "next_action": "Execute the documented new candidate preflight once after static publication and actual free-GPU check."
+    "next_observation_not_before": "2026-10-06T09:37:01.070691+00:00",
+    "estimated_training_completion": "2026-10-06T09:32:01.070691+00:00",
+    "estimate_evidence": "reports/full_method_v2_distance0_completed_epoch1_diagnosis_20261005.json",
+    "estimated_stage": "Distance0 remaining updates using the last1000 completed first-epoch step times plus five minutes for save/controller recognition. Excludes inference/scoring and is not completion proof.",
+    "scheduled_observer_native_session": 72018,
+    "scheduled_observer_pid": 1536,
+    "scheduled_observer_started_at": "2026-10-05T09:23:22.504242+00:00",
+    "scheduled_observer_status": "ACTUAL_PASSIVE_ENDPOINT_TIMER_LAUNCHED_OBSERVATION_PENDING",
+    "next_action": "Do not query training, controller, GPU, logs or native72018 before2026-10-06 17:37:01.070691CST. Consume the same endpoint observer after due; no duplicate observer or relaunch on observation timeout."
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
@@ -1113,7 +1120,8 @@
     ],
     "actual_completed_updates_at_snapshot": 37500,
     "actual_training_examples_at_snapshot": 900000,
-    "actual_completed_epochs_at_snapshot": 15
+    "actual_completed_epochs_at_snapshot": 15,
+    "training_runtime_state": "ACTUAL_TRAIN_EXIT0_FIXED_15_EPOCHS_COMPLETE"
   },
   "completed_epoch_statistics_run_id": "xtrack_full_method_v1_s2026",
   "active_run_evidence": "reports/full_method_v2_distance0_completed_epoch1_diagnosis_20261005.json",
@@ -1396,5 +1404,35 @@
     "bytes": 477077203,
     "sha256": "716f71305c9ceb6bdb2752f6f34860ea54f5964bcff70aa7eb3b026fb0ed283e",
     "best_by_benchmark": "NOT_DETERMINED"
+  },
+  "joint_optimizer_controls_preparation": {
+    "status": "SOURCE_AND_CPU_SEMANTICS_PASS_REAL_MODEL_DDP_AND_BENCHMARK_PENDING",
+    "evidence": "reports/joint_optimizer_controls_preparation_20261005.json",
+    "cpu_math_evidence": "reports/joint_optimizer_controls_cpu_math_20261005.json",
+    "source_review_evidence": "reports/joint_optimizer_controls_source_review_revised_20261005.json",
+    "actual_gpu_jobs_started": 0,
+    "existing_distance0_sources_changed": 0,
+    "real_model_forward_calls": 0,
+    "canonical_AdaTask_completed": false,
+    "subsequent_launch_condition": "Complete existing distance0 training and all evaluation stages first; then run each exact real three-rank sanity and saved-state audit before any formal C/D launch. Integrate endpoint evaluation and owned retention first."
+  },
+  "completed_v1_monitoring_history": {
+    "updated_at": "2026-10-05T14:45:18.828725+08:00",
+    "user_instruction": "这里你轮询太多了，没到时间不用轮询",
+    "mode": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
+    "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
+    "necessary_near_completion_recheck_interval_seconds": 240,
+    "repeated_minute_log_polling_cancelled": true,
+    "training_pause_requested": false,
+    "next_observation_not_before": null,
+    "estimate_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json",
+    "estimated_stage": "Slowest current native shard: remaining frames / complete-frame wallclock FPS from actual shard start, plus six minutes for scoring. Does not attest completion or queued uncertainty.",
+    "completed_observer_session": 76403,
+    "completed_observer_exit_code": 0,
+    "scheduled_observer_native_session": null,
+    "scheduled_observer_pid": null,
+    "scheduled_observer_started_at": "2026-10-05T13:39:20.048055+08:00",
+    "scheduled_observer_status": "V1_OBSERVER_CLOSED_COMPLETE_RESULTS_COLLECTED",
+    "next_action": "Execute the documented new candidate preflight once after static publication and actual free-GPU check."
   }
 }

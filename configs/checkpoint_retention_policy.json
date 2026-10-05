@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-04T16:29:49.128487+08:00",
+  "updated_at": "2026-10-05T18:51:24.934531+08:00",
   "authorization": "User explicitly requests timely cleanup of our unused generated weights and retention only of the best measured weight.",
   "precheck_cleanup": "reports/precheck_weight_cleanup_20261003.json",
   "active_training": "One most recently completed recovery checkpoint, including model, optimizer and rank RNG; retire older completed epochs and byte-identical latest alias.",
-  "activation_gate": "Actual first-epoch CPU audit PASS before launching scripts/retain_full_method_checkpoints.py once.",
-  "retention_worker_status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
+  "activation_gate": "Actual distance0 epoch1 CPU audit PASS before launching the sealed dedicated retention worker once.",
+  "retention_worker_status": "ACTIVE_KEEP_ONE_COMPLETED_RECOVERY_CHECKPOINT",
   "metric_selection": "Complete same-protocol LasHeR SR/PR, DepthTrack F/Recall/Precision and VisEvent SR/PR; never label a training-loss minimum as the best tracking checkpoint.",
-  "best_method_status": "UNDETERMINED_FORMAL_METRICS_NOT_RUN",
+  "best_method_status": "V1_FULLY_MEASURED_ALL7_BELOW_REFERENCE_DISTANCE0_UNSCORED_KEEP_V1_UNTIL_PAIRED_CANDIDATE_COMPARISON",
   "after_complete_evaluation": "Keep the best fully measured method candidate and the current recovery point of an active next iteration. Retire other completed candidate weights after recording full metrics and diagnosis.",
   "required_inputs_retained": [
     "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
@@ -14,18 +14,37 @@
   ],
   "raw_evidence_retained": "All metrics, logs, configs, model and source audits, checkpoint hashes and cleanup receipts.",
   "live_training_protocol_changed": false,
-  "retention_worker_pid": 1629089,
-  "retention_session": "rgbx_full_method_checkpoint_retention_v2",
-  "activation_evidence": "reports/full_method_v1_checkpoint_retention_activation.json",
-  "latest_recovery_path": "Read last_checkpoint from /home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/run.json; latest.pth.tar is a retired duplicate.",
-  "generated_weight_files_removed_at_activation": 6,
-  "generated_weight_file_bytes_removed_at_activation": 2826002092,
-  "latest_observation_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
+  "retention_worker_pid": 573595,
+  "retention_session": "Detached owned distance0 worker; no new tmux session.",
+  "activation_evidence": "reports/full_method_v2_distance0_retention_launch_20261005.json",
+  "latest_recovery_path": "Read last_checkpoint from /home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/run.json; retain the most recently completed named checkpoint, with no claim of benchmark optimality.",
+  "latest_observation_evidence": "reports/full_method_v2_distance0_first_epoch_retention_observation_20261005.json",
   "latest_observed_checkpoint": {
-    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
-    "bytes": 477078419,
-    "sha256": "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8"
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0001.pth.tar",
+    "bytes": 477077203,
+    "sha256": "716f71305c9ceb6bdb2752f6f34860ea54f5964bcff70aa7eb3b026fb0ed283e"
   },
-  "generated_weight_files_removed_at_latest_observation": 34,
-  "generated_weight_file_bytes_removed_at_latest_observation": 16184180352
+  "generated_weight_files_removed_at_latest_observation": 37,
+  "generated_weight_file_bytes_removed_at_latest_observation": 17615409529,
+  "completed_v1_retention_history": {
+    "retention_worker_status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
+    "retention_worker_pid": 1629089,
+    "retention_session": "rgbx_full_method_checkpoint_retention_v2",
+    "activation_evidence": "reports/full_method_v1_checkpoint_retention_activation.json",
+    "latest_observation_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
+    "latest_observed_checkpoint": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+      "bytes": 477078419,
+      "sha256": "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8"
+    },
+    "generated_weight_files_removed_at_latest_observation": 34,
+    "generated_weight_file_bytes_removed_at_latest_observation": 16184180352,
+    "generated_weight_files_removed_at_activation": 6,
+    "generated_weight_file_bytes_removed_at_activation": 2826002092
+  },
+  "latest_observation_at": "2026-10-05T09:20:12.841852+00:00",
+  "protected_completed_candidate": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+  "unstarted_controls": "C/D isolated source review and CPU math passed; no actual model/DDP preflight, generated control weights or scores. Their endpoint/audit/retention integration remains pending.",
+  "distance0_weight_files_removed_at_first_retention_observation": 1,
+  "distance0_weight_file_bytes_removed_at_first_retention_observation": 477077203
 }

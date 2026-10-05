@@ -1,0 +1,99 @@
+{
+  "status": "SOURCE_REVIEW_PASS",
+  "review_date": "2026-10-05",
+  "review_round": 2,
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning_effort": "max",
+  "review_independence": "same-family",
+  "review_context": "One follow-up source review by the initially fresh delegated reviewer, as required after the two concrete initial findings. Independent implementation context does not establish cross-family acceptance or model-backend attestation.",
+  "acceptance_status": "provisional",
+  "runtime_attested": false,
+  "scope": "SOURCE_ONLY. Re-review of the isolated C/D trainer's minimal resume-budget and prior-receipt fixes, with the surrounding normalization/update/save logic and unchanged CPU semantic-check source inspected. This is not launch, GPU, recovery-runtime, endpoint or benchmark acceptance.",
+  "initial_review": "reports/joint_optimizer_controls_source_review_20261005.json",
+  "initial_review_status": "SOURCE_REVIEW_FAIL",
+  "initial_review_preserved": true,
+  "blocking_issues": [],
+  "nonblocking_issues": [],
+  "resolved_findings": [
+    {
+      "id": "R1",
+      "status": "RESOLVED_BY_SOURCE_INSPECTION",
+      "file": "scripts/train_joint_optimizer_control.py",
+      "lines": [81, 82, 93, 94, 95, 96, 97, 98, 99, 210, 211, 212, 213],
+      "finding": "The checkpoint now records sanity_steps. Resume requires a formal invocation, saved sanity_steps == 0, the same protocol and trainable parameter names, and saved global_step == saved epoch * formal_steps before restoring model/optimizer state. For the supplied protocol formal_steps is 60000/(8*3)=2500. The earlier three-step sanity checkpoint counterexample is rejected; a valid formal checkpoint at epoch e restores 2500e updates and the remaining 15-e full epochs bring the committed total to 37500.",
+      "limits": "This conclusion is from control-flow and arithmetic inspection. No checkpoint was generated or loaded and no rejection/resume runtime test was executed. The newly prepared controls have no legacy runtime checkpoints requiring a compatibility path."
+    },
+    {
+      "id": "R2",
+      "status": "RESOLVED_BY_SOURCE_INSPECTION",
+      "file": "scripts/train_joint_optimizer_control.py",
+      "lines": [7, 115, 116, 117, 118, 119, 120, 123, 125],
+      "finding": "Rank zero now copies the existing run.json to previous_attempt_<new_attempt_id>.json before appending the resume boundary and overwriting run.json. This matches the existing full trainer's convention and preserves the previous attempt's start, PIDs and elapsed receipt while retaining partial-attempt update rows.",
+      "limits": "No file-copy or resumed-training runtime check was executed. wallclock_seconds remains a per-attempt training-loop measurement; complete elapsed-cost reporting still belongs to the pending controller/accounting integration."
+    }
+  ],
+  "retained_source_conclusions": [
+    "No further concrete logic defect was found in the inspected current path.",
+    "C still SUM-reduces the correctly count-weighted equal-task joint gradient, clips it once, and applies ordinary AdamW once. A graph-unused parameter receives grad=None; an active zero gradient remains active.",
+    "D still uses the existing three shared/router task-statistics states and one joint expert state, with one propose/assign update and no localization-risk, correction or trajectory path. It remains an internal component control, not canonical AdaTask acceptance.",
+    "The complete mixed rank batch remains the balance-loss scope. The global batch remains 8T/8D/8E, with the supplied 15-epoch, FP32, MeME-only, seed-2026 and learning-rate/clip/decay recipe.",
+    "Only the training loader is iterated. Construction of the unused check-loader object is explicit and no bitwise augmentation equality is claimed.",
+    "The existing synthetic CPU checks remain mathematically coherent within their stated scope. They were read but not executed."
+  ],
+  "exact_inspected_source_list_this_round": [
+    "scripts/train_joint_optimizer_control.py",
+    "rgbx_controls/updates.py",
+    "scripts/check_joint_optimizer_control_math.py",
+    "reports/joint_optimizer_controls_preparation_20261005.json",
+    "reports/joint_optimizer_controls_source_review_20261005.json"
+  ],
+  "unchanged_context_from_initial_review": [
+    "rgbx_controls/__init__.py",
+    "configs/xtrack_fixed_mixed_adamw_s2026.json",
+    "configs/xtrack_task_stats_only_s2026.json",
+    "rgbx_method/data.py",
+    "rgbx_method/losses.py",
+    "rgbx_method/optimizer.py",
+    "scripts/train_full_method.py",
+    "configs/xtrack_b_adamw_3gpu.yaml",
+    "configs/current_goal.json P2 and fair_comparison_chain",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md current recipe and A-G chain"
+  ],
+  "review_instructions_previously_read": [
+    "C:/Users/gb/.codex/skills/experiment-bridge/SKILL.md",
+    "C:/Users/gb/.codex/skills/shared-references/local-codex-policy.md"
+  ],
+  "checks": {
+    "CPU_math_execution": "NOT_RUN",
+    "CPU_model_or_saved_state_execution": "NOT_RUN",
+    "GPU_preflight": "NOT_RUN",
+    "three_rank_sanity": "NOT_RUN",
+    "resume_runtime": "NOT_RUN",
+    "training": "NOT_RUN",
+    "runtime_checks": "NOT_RUN",
+    "benchmark_checks": "NOT_RUN",
+    "backend_attestation": "NOT_RUN"
+  },
+  "pending_acceptance_boundaries": [
+    "Actual CPU semantic checks",
+    "GPU preflight and real three-rank sanity with saved-state audit",
+    "Exact control endpoint and evaluation identity admission",
+    "Owned first-epoch recovery audit and retention integration",
+    "Full training, benchmark scoring and fair cost/performance comparison"
+  ],
+  "actions_this_round": {
+    "new_review_reports_written": 1,
+    "initial_review_mutations": 0,
+    "source_config_document_mutations": 0,
+    "SSH_queries": 0,
+    "active_runtime_or_progress_queries": 0,
+    "CPU_or_GPU_test_executions": 0,
+    "model_forward_calls": 0,
+    "installations": 0,
+    "weight_deletions": 0,
+    "git_publications": 0,
+    "external_notifications": 0,
+    "subagents_spawned": 0
+  },
+  "running_work_preserved": "No interaction with the running distance0/controller/retainer. The supplied next permitted progress observation remains 2026-10-06 17:37:01 CST; no fresh runtime claim is made."
+}
