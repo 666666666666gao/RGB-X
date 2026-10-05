@@ -1,0 +1,15 @@
+{
+  "status": "PASSIVE_TIMER_NO_REMOTE_QUERY_BEFORE_MILESTONE",
+  "local_pid": 39208,
+  "started_at": "2026-10-05T07:33:08.013495+00:00",
+  "observe_not_before": "2026-10-05T09:10:17.775236+00:00",
+  "controller_pid": 433952,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_distance0_epoch1_milestone_observation_20261005.json",
+  "polling_policy": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
+  "timer_sleep_max_seconds": 300,
+  "actual_remote_observations": 0,
+  "native_exec_session_id": 79216,
+  "execution_status": "NATIVE_TIMER_PROCESS_ACTUALLY_STARTED_RESULT_PENDING",
+  "no_progress_query_before_due": true,
+  "goal_achieved": false
+}

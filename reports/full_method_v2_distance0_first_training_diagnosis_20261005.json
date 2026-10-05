@@ -1,0 +1,467 @@
+{
+  "status": "PASS_EARLY_UPDATE_INTEGRITY_NOT_BENCHMARK_OR_MODULE_EFFICACY",
+  "observed_at": "2026-10-05T07:31:13.528580+00:00",
+  "run_id": "xtrack_full_method_v2_distance0_s2026",
+  "controller_pid": 433952,
+  "actual_global_step": 290,
+  "training_run_snapshot": {
+    "status": "RUNNING_NOT_EVALUATED",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "protocol": {
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.0,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+    "world_size": 3,
+    "rank_pids": [
+      434003,
+      434004,
+      434005
+    ],
+    "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+    "modules_enabled": [
+      "localization_risk",
+      "task_adaptive_selective_correction",
+      "closed_loop_acceptance"
+    ],
+    "formal_tracking_scores": "NOT_RUN",
+    "started_at": "2026-10-05T07:18:32.246709+00:00",
+    "training_examples_per_update": 24,
+    "check_examples_per_update": 9,
+    "short_clip_source": "TRAIN_ONLY",
+    "baseline_setting": "AUTHOR_RELEASE_FINETUNE",
+    "attempt_id": "20261005T071832246746Z",
+    "observed_at": "2026-10-05T07:31:07.335148+00:00",
+    "epoch": 1,
+    "step": 290,
+    "global_step": 290,
+    "latest": {
+      "attempt_id": "20261005T071832246746Z",
+      "epoch": 1,
+      "step": 290,
+      "global_step": 290,
+      "before_localization": [
+        [
+          0.48678457736968994,
+          0.31791502237319946
+        ],
+        [
+          0.03914020210504532,
+          0.256450355052948
+        ],
+        [
+          0.5578562021255493,
+          0.38642606139183044
+        ]
+      ],
+      "candidate_localization": [
+        [
+          0.48706433176994324,
+          0.31796032190322876
+        ],
+        [
+          0.03915531188249588,
+          0.25646018981933594
+        ],
+        [
+          0.557861864566803,
+          0.386422723531723
+        ]
+      ],
+      "accepted_localization": [
+        [
+          0.48706433176994324,
+          0.31796032190322876
+        ],
+        [
+          0.03915531188249588,
+          0.25646018981933594
+        ],
+        [
+          0.557861864566803,
+          0.386422723531723
+        ]
+      ],
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.0
+      ],
+      "selected_correction_strength": 0.0,
+      "trajectory_checked": false,
+      "baseline_trajectory": null,
+      "accepted_trajectory": null,
+      "training_clips": null,
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "baseline_trajectory_details": null,
+      "candidate_trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0,
+          "localization": [
+            [
+              0.48706433176994324,
+              0.31796032190322876
+            ],
+            [
+              0.03915531188249588,
+              0.25646018981933594
+            ],
+            [
+              0.557861864566803,
+              0.386422723531723
+            ]
+          ],
+          "trajectory": null,
+          "trajectory_details": null
+        }
+      ],
+      "pair_check_forward_examples": 18,
+      "trajectory_model_forward_examples": 0,
+      "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs",
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "step_seconds": 2.210355575021822,
+      "peak_allocated_bytes": 5770099200,
+      "joint_grad_norm_before_clip": 1.885437250137329,
+      "gradient_clip_coefficient": 0.05303806687528289,
+      "correction_norm": 0.0,
+      "active_risk_constraints": 0
+    },
+    "training_examples": 6960,
+    "check_examples": 2610,
+    "wallclock_seconds": 754.9777750690118
+  },
+  "three_rank_ps": "    PID    PPID STAT     ELAPSED COMMAND\n 434003  433956 Rl         12:50 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json\n 434004  433956 Rl         12:50 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json\n 434005  433956 Rl         12:50 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json\n",
+  "method": {
+    "updates": 290,
+    "checks": {
+      "finite_localization_and_risk": true,
+      "exact_task_counts": true,
+      "one_optimizer_statistics_and_decay_application": true,
+      "finite_step_time_and_gradient_norm": true
+    },
+    "primary_training_examples": 6960,
+    "risk_events": 14,
+    "nonzero_corrections": 14,
+    "accepted_remaining_risk_events": 10,
+    "adopted_lowered_recorded_aggregate_risk": 14,
+    "adopted_eliminated_recorded_aggregate_risk": 4,
+    "trajectory_checks": 19,
+    "pair_check_forward_examples": 5598,
+    "trajectory_model_forward_examples": 396,
+    "mean_step_seconds": 2.5818782722099747,
+    "mean_after_first10_step_seconds": 2.5539577630639543,
+    "last100_mean_step_seconds": 2.5635940851899797,
+    "rank0_peak_allocated_bytes": 5770099200,
+    "mean_candidate_positive_localization_risk": 1.1109820053238294e-05,
+    "mean_accepted_positive_localization_risk": 6.6005681031223e-07,
+    "selected_strength_counts": {
+      "0.0": 276,
+      "0.5": 2,
+      "1.0": 12
+    },
+    "representative_accepted_steps": [
+      {
+        "global_step": 2,
+        "selected_correction_strength": 0.5,
+        "candidate_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            2.751988358795643e-05,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "accepted_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "correction_norm": 2.416489905954222e-06,
+        "active_risk_constraints": 1
+      },
+      {
+        "global_step": 4,
+        "selected_correction_strength": 1.0,
+        "candidate_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.00017931964248418808,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "accepted_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            2.541416324675083e-05,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "correction_norm": 1.6256017261184752e-05,
+        "active_risk_constraints": 1
+      },
+      {
+        "global_step": 19,
+        "selected_correction_strength": 1.0,
+        "candidate_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.00034778635017573833,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "accepted_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.00010668928734958172,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "correction_norm": 3.35955191985704e-05,
+        "active_risk_constraints": 1
+      },
+      {
+        "global_step": 25,
+        "selected_correction_strength": 1.0,
+        "candidate_risk": [
+          [
+            0.0012071863748133183,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "accepted_risk": [
+          [
+            6.0324789956212044e-05,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "correction_norm": 0.00013250779011286795,
+        "active_risk_constraints": 1
+      },
+      {
+        "global_step": 60,
+        "selected_correction_strength": 1.0,
+        "candidate_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.00018013757653534412,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "accepted_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "correction_norm": 1.2610824342118576e-05,
+        "active_risk_constraints": 1
+      }
+    ]
+  },
+  "v1_equal_index_prefix": {
+    "updates": 290,
+    "checks": {
+      "finite_localization_and_risk": true,
+      "exact_task_counts": true,
+      "one_optimizer_statistics_and_decay_application": true,
+      "finite_step_time_and_gradient_norm": true
+    },
+    "primary_training_examples": 6960,
+    "risk_events": 13,
+    "nonzero_corrections": 0,
+    "accepted_remaining_risk_events": 13,
+    "adopted_lowered_recorded_aggregate_risk": 0,
+    "adopted_eliminated_recorded_aggregate_risk": 0,
+    "trajectory_checks": 18,
+    "pair_check_forward_examples": 5571,
+    "trajectory_model_forward_examples": 372,
+    "mean_step_seconds": 2.382232353892298,
+    "mean_after_first10_step_seconds": 2.359187281588259,
+    "last100_mean_step_seconds": 2.3656140534306176,
+    "rank0_peak_allocated_bytes": 5770099200,
+    "mean_candidate_positive_localization_risk": 1.2393888011146551e-05,
+    "mean_accepted_positive_localization_risk": 1.2393888011146551e-05,
+    "selected_strength_counts": {
+      "0.0": 290,
+      "0.5": 0,
+      "1.0": 0
+    },
+    "representative_accepted_steps": []
+  },
+  "method_prefix": {
+    "source": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/updates.jsonl",
+    "records": 290,
+    "bytes": 590082,
+    "sha256": "126396fd0045380ecb8ee31d4a50fd4ebccbc46f23f71979e3e78f27b9266b38",
+    "saved_snapshot": "/data/gb/rgbx-risk/reports/full_method_v2_distance0_early_updates_20261005.jsonl"
+  },
+  "v1_prefix": {
+    "source": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/updates.jsonl",
+    "records": 290,
+    "bytes": 584178,
+    "sha256": "4592a89a70c280696983f6fa4d7acd4cd105ebaa3e8f0c31a7611f66de6bb84e"
+  },
+  "first_epoch_completion_estimate": "2026-10-05T09:05:17.775236+00:00",
+  "next_observation_not_before": "2026-10-05T09:10:17.775236+00:00",
+  "next_action": "One observation near estimated first-epoch completion plus five-minute save margin; if actual checkpoint exists, execute isolated CPU audit once then launch owned retention once.",
+  "full15_training_duration_estimate_seconds": 95773.41611489828,
+  "limitations": [
+    "Early update telemetry only, no benchmark score.",
+    "Same update index does not establish identical later states or causal module effect.",
+    "Greater correction frequency is not a performance objective.",
+    "Positive-risk aggregates remain task means, not per-sample harm.",
+    "Recorded allocated peak is rank0 only.",
+    "Forecast is an estimate, not completed training."
+  ],
+  "no_temperature_power_or_reference_inference_queries": true,
+  "goal_achieved": false,
+  "native_observation_exit_code": 0
+}
