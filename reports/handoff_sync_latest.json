@@ -1,52 +1,102 @@
 {
-  "status": "ACTUAL_DUE_VISEVENT_TIMING_AND_REVISED_SCHEDULE_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-05T02:14:38.533252+00:00",
-  "source_commit": "ab48ac2bdf5c4bb568227bc15802181dfbab4f01",
-  "document_sha256": "b55f23c2e684a064662ae9790b6a425cee550ed481df649d856f731aef727db9",
-  "document_bytes": 201054,
+  "status": "ACTUAL_COMPLETE_METHOD_VISEVENT_AND_FOUR_HANDOFF_COPIES_IDENTICAL",
+  "verified_at": "2026-10-05T03:37:46.387088+00:00",
+  "source_commit": "f9b69a58e66d585cf4ed7f615570088d3b7fd55f",
+  "document_sha256": "18bb43938505d9e8b9df2360b52503c9da0c5a04a19886fe6728539734d137a7",
+  "document_bytes": 206726,
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/ab48ac2bdf5c4bb568227bc15802181dfbab4f01/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/f9b69a58e66d585cf4ed7f615570088d3b7fd55f/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
-    "reports/full_method_v1_visevent_revised_completion_milestone_20261005.json": "6263a6951f31efb7f63b6d1edfd99976cc72ae2757d5abb6f33a1b653f2c875a",
-    "configs/current_goal.json": "87403ac70d4dba77db695fc60282a87d8c8fb5c9fdffdb91cb5f3e29b160b34b",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "b55f23c2e684a064662ae9790b6a425cee550ed481df649d856f731aef727db9"
+    ".gitattributes": "d1acbc4ff40c79f61aef8f1953a08c4e5c4ba76990a2b9db9bd134c2110b6eed",
+    "scripts/analyze_complete_visevent_pair.py": "e64e6a4321945b90c87611eebae23c8047646be7d8b774d5fbd6ccf8c70ac928",
+    "reports/full_method_v1_visevent_complete_intake_20261005.json": "fd7fde31b7ba907516295e6b4ad31eebb99c71be5f3f2d408d03a9eb81c6dc34",
+    "reports/full_method_v1_visevent_paired_diagnosis_20261005.json": "1b63c928b9ffb967fffc6a707eea2fb19ceafa37160a78bcbecb6a87aca43d16",
+    "reports/full_method_v1_visevent_paired_per_sequence_20261005.csv": "0c545cd8ffda13b49fee74224a417ab562d1c66f69e8d6a0d13ad4db2ea9f61a",
+    "reports/full_method_v1_visevent_paired_attributes_20261005.csv": "bb167ef78966231c3d65fcf340237d426d8759db8ee88b31d292f8b511f6c636",
+    "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json": "1d423c73cbc08d66cf111af7466cf33bed4f4a0e1a8468db66d04973e438cd07",
+    "configs/current_goal.json": "ea1133f4813ef6070938a9af6b1c866a9a0a51c05c62b6c944b437c9191fb70a",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "18bb43938505d9e8b9df2360b52503c9da0c5a04a19886fe6728539734d137a7",
+    "reports/method_xtrack_full_method_v1_s2026/VisEvent/coverage.json": "2e8e41b6335ea5119aeaf3dfe8ff445dae2be0166abd6e1ebc15ebe797d94955",
+    "reports/method_xtrack_full_method_v1_s2026/VisEvent/scores/metrics.json": "bb157ca13bb52f4b30774c628c171b9c15c8c0a2ac60a6b962011b46c50158df",
+    "reports/method_xtrack_full_method_v1_s2026/VisEvent/scores/per_sequence.csv": "b450cf2cd20d39589a7731ffd4f764dbf18d084277aaa86c12a03201632b3f23",
+    "reports/method_xtrack_full_method_v1_s2026/VisEvent/scores/full_curves.png": "44af0360ed21b2b0e43f458718fd451dcd2133d5e863099ce799f877a2460f75"
   },
-  "published_files": 3,
+  "published_files": 13,
   "latest_publication_sync": {
-    "verified_at": "2026-10-05T02:14:38.533252+00:00",
+    "verified_at": "2026-10-05T03:37:46.387088+00:00",
     "file_sha256": {
-      "reports/full_method_v1_visevent_revised_completion_milestone_20261005.json": "6263a6951f31efb7f63b6d1edfd99976cc72ae2757d5abb6f33a1b653f2c875a",
-      "configs/current_goal.json": "87403ac70d4dba77db695fc60282a87d8c8fb5c9fdffdb91cb5f3e29b160b34b",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "b55f23c2e684a064662ae9790b6a425cee550ed481df649d856f731aef727db9"
+      ".gitattributes": "d1acbc4ff40c79f61aef8f1953a08c4e5c4ba76990a2b9db9bd134c2110b6eed",
+      "scripts/analyze_complete_visevent_pair.py": "e64e6a4321945b90c87611eebae23c8047646be7d8b774d5fbd6ccf8c70ac928",
+      "reports/full_method_v1_visevent_complete_intake_20261005.json": "fd7fde31b7ba907516295e6b4ad31eebb99c71be5f3f2d408d03a9eb81c6dc34",
+      "reports/full_method_v1_visevent_paired_diagnosis_20261005.json": "1b63c928b9ffb967fffc6a707eea2fb19ceafa37160a78bcbecb6a87aca43d16",
+      "reports/full_method_v1_visevent_paired_per_sequence_20261005.csv": "0c545cd8ffda13b49fee74224a417ab562d1c66f69e8d6a0d13ad4db2ea9f61a",
+      "reports/full_method_v1_visevent_paired_attributes_20261005.csv": "bb167ef78966231c3d65fcf340237d426d8759db8ee88b31d292f8b511f6c636",
+      "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json": "1d423c73cbc08d66cf111af7466cf33bed4f4a0e1a8468db66d04973e438cd07",
+      "configs/current_goal.json": "ea1133f4813ef6070938a9af6b1c866a9a0a51c05c62b6c944b437c9191fb70a",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "18bb43938505d9e8b9df2360b52503c9da0c5a04a19886fe6728539734d137a7",
+      "reports/method_xtrack_full_method_v1_s2026/VisEvent/coverage.json": "2e8e41b6335ea5119aeaf3dfe8ff445dae2be0166abd6e1ebc15ebe797d94955",
+      "reports/method_xtrack_full_method_v1_s2026/VisEvent/scores/metrics.json": "bb157ca13bb52f4b30774c628c171b9c15c8c0a2ac60a6b962011b46c50158df",
+      "reports/method_xtrack_full_method_v1_s2026/VisEvent/scores/per_sequence.csv": "b450cf2cd20d39589a7731ffd4f764dbf18d084277aaa86c12a03201632b3f23",
+      "reports/method_xtrack_full_method_v1_s2026/VisEvent/scores/full_curves.png": "44af0360ed21b2b0e43f458718fd451dcd2133d5e863099ce799f877a2460f75"
     },
     "all_files_match": true,
-    "scope": "Static publication bytes only; no process, log, progress or hardware read. Dynamic recovery receipt not overwritten."
+    "source8_unchanged": true,
+    "scope": "Static publication bytes and immutable training seal only; no process, log, progress or hardware read. Dynamic recovery receipt not overwritten."
   },
-  "last_verified_runtime": "2026-10-05T10:10:07.913406+08:00",
-  "runtime_observed_at": "2026-10-05T10:10:07.913406+08:00",
+  "last_verified_runtime": "2026-10-05T11:28:17.438770+08:00",
+  "runtime_observed_at": "2026-10-05T11:28:17.438770+08:00",
   "reference_complete_datasets": [
     "LasHeR",
     "VisEvent",
     "DepthTrack"
   ],
   "method_complete_datasets": [
-    "LasHeR"
+    "LasHeR",
+    "VisEvent"
   ],
+  "method_visevent_headlines": {
+    "SR_AUC": 0.5971315019183786,
+    "PR_at_20": 0.7558738077542955,
+    "NPR_AUC": 0.6590712676816596,
+    "NP_at_020": 0.7189768485299204
+  },
+  "method_visevent_deltas": {
+    "SR_AUC": {
+      "reference": 0.6045030614193362,
+      "method": 0.5971315019183786,
+      "delta": -0.007371559500957581
+    },
+    "PR_at_20": {
+      "reference": 0.7692957488705718,
+      "method": 0.7558738077542955,
+      "delta": -0.01342194111627637
+    },
+    "NPR_AUC": {
+      "reference": 0.6671401395683385,
+      "method": 0.6590712676816596,
+      "delta": -0.00806887188667893
+    },
+    "NP_at_020": {
+      "reference": 0.7284162241798723,
+      "method": 0.7189768485299204,
+      "delta": -0.009439375649951898
+    }
+  },
   "method_all_three_scores_available": false,
   "complete_comparison_available": false,
   "goal_achieved": false,
   "candidate_launch_ready": false,
   "candidate_model_execution": false,
   "all_seven_strict_improvement_possible_for_fixed_v1": false,
-  "next_observation_not_before": "2026-10-05T11:02:47.972608+08:00",
-  "scheduled_observer_native_session": 72643,
-  "scheduled_observer_pid": 42360,
-  "actual_milestone": "reports/full_method_v1_visevent_revised_completion_milestone_20261005.json",
-  "scope": "Actual VisEvent262/320seq132939/157421frames at10:10; no new dataset score. Re-estimated sole due read11:02:47. Source/checkpoint/queue remain fixed. Static sync time is not live progress. No early progress query, inference/scoring replay, restart, deletion or hardware control. Worker-owned recovery receipt untouched."
+  "next_observation_not_before": "2026-10-05T13:35:54.654276+08:00",
+  "scheduled_observer_native_session": 96952,
+  "scheduled_observer_pid": 10152,
+  "actual_milestone": "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json",
+  "scope": "Complete method VisEvent320/157421/17 full raw scores and CPU saved-pair description; all four VisEvent metrics lower. DepthTrack existing three workers, next sole read13:35:54. Static sync time is not live progress. No early progress read, inference/scoring replay, restart, deletion or hardware control; dynamic recovery receipt untouched."
 }
