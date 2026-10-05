@@ -1,0 +1,92 @@
+{
+  "status": "USER_RESEARCH_REQUIREMENTS_RECORDED_NO_EXPERIMENT_CHANGE",
+  "recorded_at": "2026-10-05T12:07:07.848611+08:00",
+  "prior_goal_sha256": "ea1133f4813ef6070938a9af6b1c866a9a0a51c05c62b6c944b437c9191fb70a",
+  "updated_goal_sha256": "05c916fb1967e544a544c6062fd516bf9eb142ced27b67e52fb4ea440e41edb2",
+  "actual_runtime_evidence": "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json",
+  "runtime_observed_at": "2026-10-05T11:28:17.438770+08:00",
+  "immediate_order": [
+    "Finish current v1 all3 and all7 comparison plus queued conditional sequence uncertainty",
+    "Same-public-initialization distance0 single-factor experiment after real two-step preflight",
+    "Separately implement and validate the proposed preservation/constraints/state-sensitive upgrades and fair comparisons"
+  ],
+  "literature_status": "User-supplied PCT/MPT/MIR/SRFT/GEM/CPO/RoIAlign/DAgger pointers are design references; no new independent literature verification or result claim made here.",
+  "design": {
+    "status": "USER_ACCEPTED_NEXT_STAGE_DESIGN_NOT_IMPLEMENTED_OR_VALIDATED",
+    "updated_at": "2026-10-05T12:07:07.848611+08:00",
+    "mainline": "Preserve reliable target-localization abilities, retain beneficial learning, and prevent small changes from amplifying through predicted-box search-state feedback.",
+    "module_1": {
+      "name": "Target-level capability preservation and bounded risk memory",
+      "risks": [
+        "Per-sample step damage relative to the immediately preceding model",
+        "Reliability-weighted preservation damage relative to the fixed public reference"
+      ],
+      "reliability": "Use training ground truth to establish reference reliability; confidence alone is insufficient and erroneous reference predictions must not be blindly copied.",
+      "localization_signals": [
+        "existing target response objective",
+        "box localization",
+        "target-versus-strong-distractor response margin"
+      ],
+      "reference_outputs": "Reference and candidate outputs must correspond to exactly the same crop, geometric augmentation and input preprocessing.",
+      "memory": "Random coverage plus bounded training-only records of fragile sequence/frame/crop/augmentation states; never add test videos to update checks.",
+      "required_controls": [
+        "random checks",
+        "total-loss risk",
+        "ordinary distillation",
+        "single-step task-mean risk"
+      ]
+    },
+    "module_2": {
+      "name": "Risk-constrained task-adaptive actual updates that preserve beneficial learning",
+      "immediate_experiment": "Distance0 only: remove the0.05 candidate distance penalty and retain the bounded correction, initialization, seed, data, budget and all other algorithm settings.",
+      "later_experiment": "Compare bounded Gram correction with a slack inequality-constrained correction in the eligible actual-displacement subspace; use real forward acceptance, no global no-regression or Pareto guarantee.",
+      "feasible_candidate_selection": "Among risk-feasible candidates, measure retained objective improvement; correction frequency and zero-update frequency are not success measures.",
+      "routing": "Allow useful Top-k changes; diagnose content-only, router-only and combined updates on fixed training clips before attributing harm to routing.",
+      "eligible_scope": "Current risk-eligible parameters2277888 of5821440 trainable, about39.13%; record violated targets, residual harm and bound saturation before considering minimal active-expert expansion.",
+      "required_controls": [
+        "ordinary AdamW",
+        "task-adaptive-only statistics",
+        "PCGrad",
+        "CAGrad",
+        "current bounded linear correction"
+      ]
+    },
+    "module_3": {
+      "name": "Search-state-sensitive closed-loop acceptance with independent decisions",
+      "triggers": [
+        "single-frame localization damage",
+        "independent closed-loop trajectory damage"
+      ],
+      "trajectory_only_candidates": "A trajectory-only risk must be able to generate or select an alternative actual update; existing alpha0 still applies the full adaptive update and is not a rejected or zero update.",
+      "learning_accounting": "Record preserved learning, backtracking, update rejection and additional forward cost; a zero-update candidate alone is not a solution.",
+      "crop_attribution": "Fixed training clips: before-parameters/before-crop, after-parameters/before-crop, before-parameters/after-crop, after-parameters/after-crop. Keep original images, template, preprocessing and evaluation coordinates fixed; record actual integer crop boundaries and GT errors separately from between-model prediction differences.",
+      "capture_requirement": "Use actual available paired model states or capture future paired states; do not claim to replay a historical update without its pre/post parameters.",
+      "primary_route": "Training-only neighboring search-state checks near measured crop-boundary sensitivity; use matched RGB/auxiliary geometry and preserve the inference crop pipeline.",
+      "separate_control": "Continuous sampling versus integer crop quantization is an attribution control, not optimizer credit.",
+      "required_controls": [
+        "single-frame checks",
+        "equal-sample GT-centered independent multi-frame checks",
+        "predicted-box closed loop",
+        "3-frame versus longer clips"
+      ],
+      "clip_expansion": "Keep random coverage; add measured training-pool distractor/edge cases, then occlusion/reappearance only with correct visibility handling."
+    },
+    "new_diagnostics": {
+      "capability_preservation": "Predeclare training/validation reliability and material-damage thresholds; report both losses of reference-reliable cases and repairs of reference failures alongside complete official scores.",
+      "closed_loop_amplification": "Separate fixed-input parameter effects, induced crop effects and their interaction, integer boundary changes, GT localization errors and actual target-out-of-search events.",
+      "inference_and_evaluation": "No inference-network or crop change in the immediate distance0 experiment; baseline protocols and complete raw results remain fixed."
+    },
+    "evidence_boundaries": [
+      "Test sequence changes do not prove task-mean cancellation in training; record per-sample training damage first.",
+      "The observed near-zero denominator floor activation count is0; do not add defensive branches for an unobserved floor failure.",
+      "Route-set changes are associated with risk, not established causes, and stable route sets do not guarantee safety.",
+      "Existing seven trajectory-only events demonstrate a decision gap; distance0 alone does not repair it.",
+      "Saved fixed-pair whole-sequence bootstrap is conditional sampling uncertainty, not training-seed variance or module attribution."
+    ]
+  },
+  "goal_achieved": false,
+  "active_experiment_unchanged": true,
+  "scheduled_observer_session": 96952,
+  "next_observation_not_before": "2026-10-05T13:35:54.654276+08:00",
+  "scope": "Only the future requirements and single handoff were updated. V1 training/evaluation and distance0 protocol/sources unchanged; no live progress, hardware read/control, model/scorer execution, restart or weight action."
+}
