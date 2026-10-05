@@ -5,3 +5,4 @@ reports/reference_xtrack_author_release_s2026/VisEvent/scores/per_sequence.csv -
 reports/*.patch -text whitespace=-blank-at-eol
 reports/reference_xtrack_author_release_s2026/DepthTrack/per_sequence_metrics.csv -text whitespace=cr-at-eol
 reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/per_sequence.csv -text whitespace=cr-at-eol
+reports/method_xtrack_full_method_v1_s2026/VisEvent/scores/per_sequence.csv -text whitespace=cr-at-eol
