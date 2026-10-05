@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T19:19:59.862310+08:00",
+  "updated_at": "2026-10-05T20:21:59.700943+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。 后续三个模块围绕目标级可靠定位能力保持与风险记忆、保留有益学习的风险约束实际更新、搜索状态敏感且可独立决策的闭环验收展开；同时检验旧能力退化和新能力改善，不以任务平均损失、梯度均衡或减少更新作为最终目标。",
   "server": "2028",
   "gpu_indices": [
@@ -331,7 +331,8 @@
       "entry": "scripts/train_joint_optimizer_control.py",
       "protocol": "configs/xtrack_fixed_mixed_adamw_s2026.json",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json",
-      "checkpoint_preparation": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json"
+      "checkpoint_preparation": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
+      "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json"
     },
     {
       "id": "D",
@@ -341,7 +342,8 @@
       "protocol": "configs/xtrack_task_stats_only_s2026.json",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json",
       "canonical_AdaTask_completed": false,
-      "checkpoint_preparation": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json"
+      "checkpoint_preparation": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
+      "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json"
     },
     {
       "id": "E",
@@ -1416,13 +1418,19 @@
     "existing_distance0_sources_changed": 0,
     "real_model_forward_calls": 0,
     "canonical_AdaTask_completed": false,
-    "subsequent_launch_condition": "Complete existing distance0 training and evaluation first; finish exact control execution/controller receipt and evaluation identity integration, then actual two-step three-rank sanity and saved-state audit before formal control training. Activate owned retention only after the actual formal epoch1 audit.",
+    "subsequent_launch_condition": "Complete actual distance0 controller training/endpoint/all-three-evaluation/comparison/uncertainty and actual process exit first. Activate exact reviewed C/D admission after release; real C sanity+CPU saved-state audit precedes formal C, then complete C scoring before D. Schedule actual first-epoch audit/retention separately as in distance0; no worker launch is claimed.",
     "checkpoint_integration_evidence": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
     "checkpoint_source_review_evidence": "reports/joint_optimizer_controls_checkpoint_source_review_revised_20261005.json",
     "checkpoint_state_cpu_evidence": "reports/joint_optimizer_controls_checkpoint_cpu_math_20261005.json",
     "checkpoint_integration_status": "SOURCE_AND_SYNTHETIC_CPU_STATE_CHECK_PASS_REAL_CHECKPOINT_CUDA_RESTORE_AND_RETENTION_EXECUTION_PENDING",
     "retention_workers_started": 0,
-    "control_generated_checkpoint_files": 0
+    "control_generated_checkpoint_files": 0,
+    "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
+    "execution_source_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
+    "execution_CPU_contract_evidence": "reports/joint_optimizer_controls_execution_cpu_contracts_20261005.json",
+    "execution_status": "HELD_SOURCE_REVIEW_AND_SYNTHETIC_CONTRACT_PASS_NOT_ACTIVATED_OR_RUN",
+    "execution_controllers_started": 0,
+    "shared_evaluation_admission_activated": false
   },
   "completed_v1_monitoring_history": {
     "updated_at": "2026-10-05T14:45:18.828725+08:00",

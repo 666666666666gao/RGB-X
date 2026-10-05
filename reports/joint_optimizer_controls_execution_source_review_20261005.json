@@ -1,0 +1,204 @@
+{
+  "status": "SOURCE_REVIEW_PASS",
+  "reviewed_at": "2026-10-05T19:52:37.5825281+08:00",
+  "review_kind": "Fresh-context Phase 2.5 source-only review",
+  "reviewer_agent": "/root/rgbx_controls_execution_source_review_20261005",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "max",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "runtime_attested": false,
+  "model_backend_independently_attested": false,
+  "project": "C:/Users/gb/projects/rgbx-risk",
+  "scope": "Read-only review of the held C/D evaluation-admission template and patch, execution contracts, real-sanity/formal controller sources, copied control comparison and synthetic contract-check source. Related existing producers/consumers were read to check actual interfaces. No source, configuration, live entry, existing report or handoff was modified; this JSON is the only new artifact.",
+  "review_policy": [
+    "User-supplied C:/Users/gb AGENTS.md instructions",
+    "C:/Users/gb/.codex/skills/experiment-bridge/SKILL.md Phase 2.5",
+    "C:/Users/gb/.codex/skills/shared-references/local-codex-policy.md"
+  ],
+  "blocking_issues": [],
+  "nonblocking_issues": [
+    {
+      "id": "C-D-EXECUTION-NB001",
+      "severity": "NONBLOCKING",
+      "file": "scripts/audit_joint_optimizer_control_checkpoint.py",
+      "lines": [
+        106
+      ],
+      "related_location": {
+        "file": "rgbx_controls/execution.py",
+        "lines": [
+          58
+        ]
+      },
+      "finding": "The existing audit report's scope text always says that control endpoint identity is not admitted by the existing v1/v2 evaluation entry yet. Every successful invocation through the new controllers first requires the shared entry to equal the prepared control-admitting entry. Therefore newly generated sanity/endpoint audit reports will contain this stale statement after activation.",
+      "reproducible_source_path": [
+        "launch_inputs requires sha(scripts/xtrack_eval_parameters.py) == preparation.prepared_entry_sha256.",
+        "The prepared entry admits the two exact optimizer_control endpoint identities.",
+        "The sanity/formal controllers then invoke audit_joint_optimizer_control_checkpoint.py, which unconditionally writes the old not-admitted-yet sentence into scope."
+      ],
+      "impact": "Report wording only. It does not alter status, saved-state validation, the actual admission gate, numerical scores or controller execution.",
+      "minimal_suggestion": "At a later permitted edit, remove the last not-admitted-yet sentence or describe only this CPU audit's lack of tracking execution. No fallback, wrapper or control-flow change is needed.",
+      "runtime_reproduction": "NOT_RUN",
+      "reviewer_modified_file": false
+    }
+  ],
+  "reviewed_source_sha256": {
+    "rgbx_controls/execution.py": "72a324d12210a6724158369d2779e1a25ff3d86cb8fd9553ff7e1f899559460b",
+    "scripts/run_joint_optimizer_control_sanity.py": "5f537dcf9c87419b7f820326ab5a83378da10f1b1fefe5689323a9fd4eea03cd",
+    "scripts/run_joint_optimizer_control_job.py": "dfccab3171e37cc4659eb3639364f99713184eb17875d84774503e7ef083f101",
+    "scripts/xtrack_eval_parameters_controls_prepared.py": "e541ce37939dadf90c0e1e60130ddcd41989677f12f23b609d32dbb82140802d",
+    "scripts/compare_joint_optimizer_control_results.py": "aa90b45b38f9aff3f4488859a55573141f77608a15b236193b69e2a3fbcc78c4",
+    "scripts/check_joint_optimizer_control_execution_contracts.py": "cc25104c2ea88695389121c881f6035f61722388ef24098e180968d8f674ef0b",
+    "reports/joint_optimizer_controls_identity_admission.patch": "0ba5d2ca3bdcbac4bf5487390fe82a9f4ef97bb12a4d50a20683b4677a602ef6"
+  },
+  "preparation_record_at_review": {
+    "path": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
+    "sha256": "4a47216754cc9bf2fa319d0ed22585b7927e4a4f48f3615e0ea29d4de114448f",
+    "all_16_declared_source_digests_match_current_local_files": true,
+    "source_review_report_field": "Intentionally pending executor insertion after this real review; not treated as a missing launch fallback.",
+    "source_review_and_CPU_execution_statuses_not_rewritten_by_reviewer": true
+  },
+  "related_interface_source_sha256": {
+    "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
+    "scripts/compare_complete_results.py": "cfc32d0149ce910c8de348f8156de6b4a7a941e5576bee6e8376d217f58a3200",
+    "scripts/train_joint_optimizer_control.py": "517ce1aa99f8e6a89aa4e2dd29514ddcfe1c0e8fd143b2220a09daa8381280cc",
+    "scripts/audit_joint_optimizer_control_checkpoint.py": "e9e95855a7b8c033c53835a3ce7af27ddb52b3340a6446dadb05bdac83c57bc6",
+    "scripts/retain_joint_optimizer_control_checkpoints.py": "bc3882ff781c32f5a3a4e787742cdf9201e68ef59471612201ae9dc50604f57f",
+    "scripts/run_full_method_v2_distance0_job.py": "bf3f9f9520c73d38aa0df439e367ea540b87fa6e0a41032c3e0e60fc5ad346df",
+    "scripts/evaluate_existing_three.py": "4da96f68d7c7ac856301fbf014b94d44f785aa63a75017b0f5f72b8d65780c79",
+    "scripts/analyze_paired_sequence_uncertainty.py": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
+    "configs/xtrack_fixed_mixed_adamw_s2026.json": "404371a7f81a01ce721cf6fc2cbf2b11b30f3b2012f372306a14a3f941b6656f",
+    "configs/xtrack_task_stats_only_s2026.json": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381"
+  },
+  "source_conclusions": [
+    {
+      "topic": "Held admission preserves existing roles and binds the new controls",
+      "locations": [
+        "scripts/xtrack_eval_parameters_controls_prepared.py:7-48",
+        "reports/joint_optimizer_controls_identity_admission.patch:3-26"
+      ],
+      "conclusion": "The textual diff preserves the legacy 65-epoch role and author-release checks. v1/v2 remain in the original full_method branch with the original endpoint checks. optimizer_control is restricted to the two exact run IDs, matching optimizer kind, endpoint stage, seed 2026, epoch 15, global_step 37500, actual exit0 audit field, validated optimizer witnesses, frozen tensors and matching replicas. The original config/checkpoint identity checks remain in the common path. A control ID cannot pass by selecting full_method. The patch text matches the inspected admission hunk; it was not applied."
+    },
+    {
+      "topic": "Distance0 terminal gate and cached reference",
+      "locations": [
+        "rgbx_controls/execution.py:19-26",
+        "rgbx_controls/execution.py:41-65",
+        "scripts/run_full_method_v2_distance0_job.py:84-117"
+      ],
+      "conclusion": "The gate requires the actual distance0 run ID, exit0, final comparison status and the exact five completed stage labels emitted by its existing controller. It requires the matching completed conditional-bootstrap comparison digest, absent controller /proc entry, prepared shared-entry bytes, source-review PASS and all preparation source digests. Cached author run identity/completed datasets and comparison source bytes are checked. The controllers do not rerun author inference."
+    },
+    {
+      "topic": "Real sanity execution and saved-state audit producer/consumer",
+      "locations": [
+        "scripts/run_joint_optimizer_control_sanity.py:23-58",
+        "scripts/audit_joint_optimizer_control_checkpoint.py:39-69",
+        "rgbx_controls/execution.py:29-38"
+      ],
+      "conclusion": "The intended command uses three ranks and exactly --sanity-steps 2, writes an actual worker exit receipt only after process.wait(), aborts on a nonzero training exit, and then calls the CPU auditor with stage sanity and the stable execution-receipt path. run_id, protocol digest, status, epoch1/global2 and audit status fields agree with the existing auditor and formal sanity gate. training_exit.json is not rewritten by the subsequent saved-state audit bookkeeping."
+    },
+    {
+      "topic": "Formal cold start, training exit provenance and endpoint",
+      "locations": [
+        "scripts/run_joint_optimizer_control_job.py:24-95",
+        "scripts/train_joint_optimizer_control.py:63-66",
+        "scripts/audit_joint_optimizer_control_checkpoint.py:62-69"
+      ],
+      "conclusion": "Formal launch requires the exact successful sanity run, its CPU audit, stable execution digest and matching owned checkpoint bytes. The formal command has neither --resume nor --sanity-steps and the driver loads the configured public initial checkpoint. The endpoint execution receipt is emitted after the actual train child exit0 with stage endpoint, matching the auditor contract; evaluation begins only after that CPU audit returns exit0. Source inspection does not attest actual model initialization or a real child process."
+    },
+    {
+      "topic": "Sanity checkpoint retirement boundary",
+      "locations": [
+        "scripts/run_joint_optimizer_control_job.py:25-39",
+        "scripts/run_joint_optimizer_control_job.py:60-71"
+      ],
+      "conclusion": "The only new production deletion is the exact protocol-owned <run_id>_sanity/XTrack_ep0001.pth.tar, after spawning the formal training command. The path must resolve to itself, equal the audit path, be a single-link regular file and match the saved-state audit digest. The worker's actual exit0 and absent worker /proc entry are required first. The public initializer, formal recovery points, other run roots and textual evidence are outside this deletion selection. This is process-launch ordering, not a new runtime attestation that the model has already initialized."
+    },
+    {
+      "topic": "Fresh roots, resource checks and later first-epoch operation",
+      "locations": [
+        "scripts/run_joint_optimizer_control_sanity.py:24-30",
+        "scripts/run_joint_optimizer_control_job.py:40-51",
+        "scripts/evaluate_existing_three.py:23-34",
+        "scripts/retain_joint_optimizer_control_checkpoints.py:35-81"
+      ],
+      "conclusion": "The sanity/formal controllers require fresh owned controller roots and absent respective training output roots; existing evaluation requires a fresh exact evaluation parent/root. Startup GPU queries select only index and memory.used with all three GPUs below 500 MiB. The controllers use 240-second waits and contain no temperature/power query or control. The first-epoch observer, exact CPU audit and separate owned retention launch are explicitly external pending actions. No automatic retention worker is claimed."
+    },
+    {
+      "topic": "Full C/D evaluation and the D-to-C dependency",
+      "locations": [
+        "rgbx_controls/execution.py:66-74",
+        "scripts/run_joint_optimizer_control_job.py:94-117",
+        "scripts/evaluate_existing_three.py:73-99"
+      ],
+      "conclusion": "D requires the named C evaluation to have all three completed datasets and a seven-headline author comparison with unchanged cached sources. Each formal job evaluates its own exact audited endpoint through the existing full LasHeR245/VisEvent320/DepthTrack50 pipeline. Both receive author comparison plus uncertainty; D additionally receives D-vs-C comparison plus uncertainty using the already scored C root. The D gate is a C-score/comparison dependency, not a claim that C's controller or all research work has completed."
+    },
+    {
+      "topic": "Unchanged numerical comparison and honest component interpretation",
+      "locations": [
+        "scripts/compare_joint_optimizer_control_results.py:14-142",
+        "scripts/compare_complete_results.py"
+      ],
+      "conclusion": "A read-only textual diff shows additions only for allowed control/reference roles, training identity and zero removed-module calls, plus provenance/interpretation text. Metric deltas, OPE and DepthTrack aggregation, per-sequence/attribute retention and training-cost formulas are unchanged. Actual scores are checked as real_gt; cost accounting retains attempted versus committed updates. D is explicitly labelled existing task statistics only with canonical_AdaTask_completed=false. The report does not claim that author-reference improvement establishes module causality."
+    },
+    {
+      "topic": "Existing whole-sequence uncertainty contract remains compatible",
+      "locations": [
+        "scripts/analyze_paired_sequence_uncertainty.py:73-141",
+        "scripts/run_joint_optimizer_control_job.py:101-112"
+      ],
+      "conclusion": "The new comparison emits the unchanged keys/sources consumed by the existing analyzer. The analyzer verifies completed identities and cached source digests, resamples whole paired sequences, checks reproduced point metrics, preserves each DepthTrack endpoint's own fixed score grid and forbids overwriting an uncertainty output. The controllers request 10000 draws and seed 2026. No image/model inference is requested for this stage."
+    },
+    {
+      "topic": "Synthetic contract checker remains a synthetic source-only preparation",
+      "locations": [
+        "scripts/check_joint_optimizer_control_execution_contracts.py:12-80",
+        "rgbx_controls/__init__.py",
+        "scripts/xtrack_eval_parameters_controls_prepared.py:51-55"
+      ],
+      "conclusion": "The checker imports the held template without calling parameters(), so its source path does not import the model or torch. It constructs only temporary synthetic byte/JSON fixtures, checks the completion gate and both admitted control identities plus deliberate rejections, and removes its temporary directory before printing its clearly synthetic result. It does not patch or activate the live entry, touch real checkpoints or read benchmark data. This reviewer did not execute it."
+    }
+  ],
+  "checks": {
+    "CPU_synthetic_identity_execution": "NOT_RUN",
+    "CPU_math_execution": "NOT_RUN",
+    "CPU_model_or_saved_state_execution": "NOT_RUN",
+    "GPU_preflight": "NOT_RUN",
+    "three_rank_sanity": "NOT_RUN",
+    "GPU_resume_or_CUDA_RNG_restoration": "NOT_RUN",
+    "training": "NOT_RUN",
+    "retention_execution": "NOT_RUN",
+    "benchmark_scoring": "NOT_RUN",
+    "bootstrap_execution": "NOT_RUN",
+    "patch_application": "NOT_RUN",
+    "backend_attestation": "NOT_RUN"
+  },
+  "pending_acceptance_boundaries": [
+    "The executor may record this real review in the preparation JSON. The held synthetic byte/JSON checker remains a separate unexecuted preparation step in this review.",
+    "Do not activate the shared evaluation entry while sealed distance0 is running. Its actual five-stage terminal success and process exit must precede activation and control launch.",
+    "No distance0 observation, log, process/PID, GPU or native-timer query was made. The supplied next permitted observation remains 2026-10-06 17:37:01.070691 CST.",
+    "Real C/D three-rank two-step sanity and the actual saved-state CPU audits remain unexecuted; source PASS alone does not satisfy them.",
+    "Formal first-epoch scheduled observation, exact CPU audit and independent 240-second retainer activation remain external future actions.",
+    "Actual CUDA restoration, full 15-epoch/37500-update training, all three real benchmark scores, author comparisons and D-vs-C comparison/conditional uncertainty remain pending.",
+    "The old v1 seven-metric negative result and previous source/CPU reports remain historical evidence and were not modified or relabelled. Broader A-G comparisons, canonical AdaTask, other modules and SUTrack remain outside this source PASS."
+  ],
+  "actions_and_limits": {
+    "source_config_or_handoff_mutations": 0,
+    "only_created_file": "reports/joint_optimizer_controls_execution_source_review_20261005.json",
+    "prior_reports_preserved": true,
+    "active_shared_entry_matches_supplied_original_sha256": true,
+    "CPU_or_GPU_test_executions": 0,
+    "model_forward_calls": 0,
+    "dataset_reads": 0,
+    "SSH_calls": 0,
+    "remote_calls": 0,
+    "runtime_log_progress_PID_or_GPU_queries": 0,
+    "retention_workers_started": 0,
+    "checkpoint_deletions": 0,
+    "source_activation_or_patch_application": 0,
+    "publications": 0,
+    "external_notifications": 0,
+    "additional_markdown_files": 0
+  }
+}

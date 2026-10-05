@@ -3,7 +3,7 @@
   "prepared_at": "2026-10-05T19:02:42.477692+08:00",
   "source_sha256": {
     "rgbx_controls/checkpoint.py": "ab65765f6968990d4b140422b6f039d56c6a3228a9550acd8c99063dfd8d3d32",
-    "scripts/audit_joint_optimizer_control_checkpoint.py": "e9e95855a7b8c033c53835a3ce7af27ddb52b3340a6446dadb05bdac83c57bc6",
+    "scripts/audit_joint_optimizer_control_checkpoint.py": "5fb1fe7d3fee1c80b2d979bd53be5f4105d9ca5b8846d96eaae8a8f5864c107e",
     "scripts/retain_joint_optimizer_control_checkpoints.py": "bc3882ff781c32f5a3a4e787742cdf9201e68ef59471612201ae9dc50604f57f",
     "scripts/check_joint_optimizer_control_checkpoint_math.py": "bd82f6706091a1d050726a12cfc2f5f281a35a8562451dcf6b7df4e32544f93c",
     "scripts/train_joint_optimizer_control.py": "517ce1aa99f8e6a89aa4e2dd29514ddcfe1c0e8fd143b2220a09daa8381280cc"
@@ -20,7 +20,7 @@
   "initial_review": "reports/joint_optimizer_controls_checkpoint_source_review_20261005.json",
   "minimal_source_fix": "On formal resume preserve completed_epochs=restored epoch and last_checkpoint=the actual resolved restored checkpoint in the rebuilt run receipt. No fallback added to retention and no running distance0 source changed.",
   "prior_control_entry_sha256": "12f66e73b7e71508649d3ba96805e85eae507706b825b539ad1593c722994c29",
-  "updated_at": "2026-10-05T19:19:59.862310+08:00",
+  "updated_at": "2026-10-05T20:21:59.700943+08:00",
   "revised_review": "reports/joint_optimizer_controls_checkpoint_source_review_revised_20261005.json",
   "fresh_code_review": "SOURCE_REVIEW_PASS_SAME_FAMILY_PROVISIONAL_NO_RUNTIME_ATTESTATION",
   "CPU_state_roundtrip_evidence": "reports/joint_optimizer_controls_checkpoint_cpu_math_20261005.json",
@@ -33,5 +33,7 @@
     "real first-epoch checkpoint audit then one owned retention worker launch",
     "actual model/CUDA resume and full training",
     "complete same-protocol three-dataset scoring and comparison"
-  ]
+  ],
+  "latest_audit_scope_text_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
+  "latest_audit_scope_change": "Report wording only: admission and actual tracking must be verified separately. Prior CPU state report retains the previous source bytes; state checker/helper and numerical audit logic did not change."
 }

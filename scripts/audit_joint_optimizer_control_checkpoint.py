@@ -103,7 +103,7 @@ def main():
                   optimizer_check=optimizer_check, rng_check=rng_check, training_mutations=0,
                   cuda_initialized=torch.cuda.is_initialized(), model_forward_calls=0, formal_tracking_scores='NOT_RUN',
                   observed_at=datetime.now(timezone.utc).isoformat(), run_sha256=sha(run_path), script_sha256=sha(__file__),
-                  scope='Exact saved-state CPU audit; no real CUDA restoration, model forward, training update or benchmark. Control endpoint identity is not admitted by the existing v1/v2 evaluation entry yet.')
+                  scope='Exact saved-state CPU audit; no real CUDA restoration, model forward, training update or benchmark. Evaluation admission and actual tracking must be verified separately.')
     assert not report['cuda_initialized']
     if args.stage != 'epoch1':
         report.update(controller_exit_code=0, execution_receipt=str(args.execution), execution_receipt_sha256=sha(args.execution))

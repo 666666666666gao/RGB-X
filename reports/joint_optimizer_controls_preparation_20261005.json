@@ -32,9 +32,10 @@
   "active_distance0_runtime_queries": 0,
   "canonical_AdaTask_completed": false,
   "remaining_before_formal_controls": [
-    "real three-rank sanity with exact execution receipt and saved-state audit after distance0 releases GPUs",
-    "control execution/controller and exact endpoint/evaluation identity integration",
-    "real first-epoch audit then owned retention activation"
+    "Actual distance0 all-stage terminal completion then activate reviewed exact C/D admission",
+    "Real C two-step DDP and saved-state audit before formal C",
+    "Scheduled actual epoch1 CPU audit then owned retention launch per control",
+    "Complete C all-three scoring before D real sanity/formal/component comparison"
   ],
   "plan_source": "configs/current_goal.json ordered_next_steps P2 and the single handoff A-G fair comparison chain",
   "skill": "C:/Users/gb/.codex/skills/experiment-bridge/SKILL.md",
@@ -45,7 +46,7 @@
     "Require saved global_step == saved epoch * formal full-epoch steps.",
     "Copy prior attempt run.json before writing the resumed receipt."
   ],
-  "updated_at": "2026-10-05T19:19:59.862310+08:00",
+  "updated_at": "2026-10-05T20:21:59.700943+08:00",
   "revised_review": "reports/joint_optimizer_controls_source_review_revised_20261005.json",
   "cpu_math_evidence": "reports/joint_optimizer_controls_cpu_math_20261005.json",
   "cpu_math_exit_code": 0,
@@ -57,5 +58,9 @@
   "latest_control_entry_fix_scope": "Resume metadata only; no loss, sampling, optimizer rule, trainable range or budget change.",
   "prior_cpu_math_source_scope": "The earlier actual CPU algebra/optimizer report preserves the prior driver SHA12f66e73...; optimization helpers are unchanged. The new driver metadata fix is source-reviewed separately, not GPU-resume tested.",
   "checkpoint_state_cpu_check": "reports/joint_optimizer_controls_checkpoint_cpu_math_20261005.json",
-  "retention_workers_launched": 0
+  "retention_workers_launched": 0,
+  "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
+  "execution_identity_status": "SOURCE_AND_SYNTHETIC_CONTRACT_CHECK_PASS_SHARED_ADMISSION_HELD_NO_CONTROLLER_RUN",
+  "controllers_started": 0,
+  "identity_patch_applied": false
 }

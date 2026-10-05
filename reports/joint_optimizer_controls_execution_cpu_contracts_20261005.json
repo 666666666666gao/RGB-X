@@ -1,0 +1,79 @@
+{
+  "status": "PASS_CPU_SYNTHETIC_CONTROL_IDENTITY_AND_STAGE_CONTRACTS_NOT_RUNTIME_OR_BENCHMARK",
+  "started_at": "2026-10-05T12:08:46.812323+00:00",
+  "ended_at": "2026-10-05T12:08:46.958200+00:00",
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "/data/gb/rgbx-risk/scripts/check_joint_optimizer_control_execution_contracts.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS_CPU_SYNTHETIC_CONTROL_IDENTITY_AND_STAGE_CONTRACTS_NOT_RUNTIME_OR_BENCHMARK\", \"controls\": [{\"run_id\": \"xtrack_fixed_mixed_adamw_s2026\", \"synthetic_endpoint_admitted\": true, \"wrong_optimizer_rejected\": true, \"sanity_role_rejected\": true, \"full_method_role_cannot_admit_control\": true, \"wrong_digest_rejected\": true}, {\"run_id\": \"xtrack_task_stats_only_s2026\", \"synthetic_endpoint_admitted\": true, \"wrong_optimizer_rejected\": true, \"sanity_role_rejected\": true, \"full_method_role_cannot_admit_control\": true, \"wrong_digest_rejected\": true}], \"incomplete_distance0_stages_rejected\": true, \"failed_distance0_exit_rejected\": true, \"model_forward_calls\": 0, \"dataset_reads\": 0, \"generated_model_checkpoints\": 0, \"live_entry_activated\": false, \"torch_imported\": false, \"scope\": \"Synthetic byte/JSON identity and completion-state contracts using the held prepared template. No real model checkpoint, actual stage completion, GPU/DDP job, source activation or tracking metric acceptance. Temporary fixtures are removed.\"}\n",
+  "stderr": "",
+  "cuda_visible_devices": "",
+  "invocation_count": 1,
+  "source_sha256": {
+    "rgbx_controls/execution.py": "72a324d12210a6724158369d2779e1a25ff3d86cb8fd9553ff7e1f899559460b",
+    "scripts/run_joint_optimizer_control_sanity.py": "5f537dcf9c87419b7f820326ab5a83378da10f1b1fefe5689323a9fd4eea03cd",
+    "scripts/run_joint_optimizer_control_job.py": "dfccab3171e37cc4659eb3639364f99713184eb17875d84774503e7ef083f101",
+    "scripts/xtrack_eval_parameters_controls_prepared.py": "e541ce37939dadf90c0e1e60130ddcd41989677f12f23b609d32dbb82140802d",
+    "scripts/compare_joint_optimizer_control_results.py": "aa90b45b38f9aff3f4488859a55573141f77608a15b236193b69e2a3fbcc78c4",
+    "scripts/check_joint_optimizer_control_execution_contracts.py": "cc25104c2ea88695389121c881f6035f61722388ef24098e180968d8f674ef0b",
+    "reports/joint_optimizer_controls_identity_admission.patch": "0ba5d2ca3bdcbac4bf5487390fe82a9f4ef97bb12a4d50a20683b4677a602ef6",
+    "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json": "d8578a4ecbd36c8a7f4c65fbfaeaf190d3dda5e8d33c221e7360d5e4a0d2f614",
+    "scripts/audit_joint_optimizer_control_checkpoint.py": "5fb1fe7d3fee1c80b2d979bd53be5f4105d9ca5b8846d96eaae8a8f5864c107e"
+  },
+  "implementation_manifest_sha256": {
+    "scripts/xtrack_eval_parameters_controls_prepared.py": "e541ce37939dadf90c0e1e60130ddcd41989677f12f23b609d32dbb82140802d",
+    "scripts/compare_joint_optimizer_control_results.py": "aa90b45b38f9aff3f4488859a55573141f77608a15b236193b69e2a3fbcc78c4",
+    "rgbx_controls/execution.py": "72a324d12210a6724158369d2779e1a25ff3d86cb8fd9553ff7e1f899559460b",
+    "scripts/run_joint_optimizer_control_sanity.py": "5f537dcf9c87419b7f820326ab5a83378da10f1b1fefe5689323a9fd4eea03cd",
+    "scripts/run_joint_optimizer_control_job.py": "dfccab3171e37cc4659eb3639364f99713184eb17875d84774503e7ef083f101",
+    "scripts/check_joint_optimizer_control_execution_contracts.py": "cc25104c2ea88695389121c881f6035f61722388ef24098e180968d8f674ef0b",
+    "scripts/train_joint_optimizer_control.py": "517ce1aa99f8e6a89aa4e2dd29514ddcfe1c0e8fd143b2220a09daa8381280cc",
+    "scripts/audit_joint_optimizer_control_checkpoint.py": "5fb1fe7d3fee1c80b2d979bd53be5f4105d9ca5b8846d96eaae8a8f5864c107e",
+    "scripts/retain_joint_optimizer_control_checkpoints.py": "bc3882ff781c32f5a3a4e787742cdf9201e68ef59471612201ae9dc50604f57f",
+    "rgbx_controls/updates.py": "66158fa5d26e77e9608f9007476d9b56d09200ac40b631deee6153feed6926d6",
+    "rgbx_controls/checkpoint.py": "ab65765f6968990d4b140422b6f039d56c6a3228a9550acd8c99063dfd8d3d32",
+    "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+    "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+    "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+    "configs/xtrack_fixed_mixed_adamw_s2026.json": "404371a7f81a01ce721cf6fc2cbf2b11b30f3b2012f372306a14a3f941b6656f",
+    "configs/xtrack_task_stats_only_s2026.json": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381"
+  },
+  "live_entry_activated": false,
+  "distance0_runtime_queries": 0,
+  "distance0_source_mutations": 0,
+  "new_GPU_jobs": 0,
+  "goal_achieved": false,
+  "native_ssh_exit_code": 0,
+  "native_ssh_stderr": "",
+  "cpu_result": {
+    "status": "PASS_CPU_SYNTHETIC_CONTROL_IDENTITY_AND_STAGE_CONTRACTS_NOT_RUNTIME_OR_BENCHMARK",
+    "controls": [
+      {
+        "run_id": "xtrack_fixed_mixed_adamw_s2026",
+        "synthetic_endpoint_admitted": true,
+        "wrong_optimizer_rejected": true,
+        "sanity_role_rejected": true,
+        "full_method_role_cannot_admit_control": true,
+        "wrong_digest_rejected": true
+      },
+      {
+        "run_id": "xtrack_task_stats_only_s2026",
+        "synthetic_endpoint_admitted": true,
+        "wrong_optimizer_rejected": true,
+        "sanity_role_rejected": true,
+        "full_method_role_cannot_admit_control": true,
+        "wrong_digest_rejected": true
+      }
+    ],
+    "incomplete_distance0_stages_rejected": true,
+    "failed_distance0_exit_rejected": true,
+    "model_forward_calls": 0,
+    "dataset_reads": 0,
+    "generated_model_checkpoints": 0,
+    "live_entry_activated": false,
+    "torch_imported": false,
+    "scope": "Synthetic byte/JSON identity and completion-state contracts using the held prepared template. No real model checkpoint, actual stage completion, GPU/DDP job, source activation or tracking metric acceptance. Temporary fixtures are removed."
+  }
+}
