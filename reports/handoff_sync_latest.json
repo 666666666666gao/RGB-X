@@ -1,45 +1,35 @@
 {
-  "status": "ACTUAL_COMPLETE_TRAINING_ROUTE_RISK_DIAGNOSIS_AND_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-05T00:25:11.894555+00:00",
-  "source_commit": "a1fd70fa051f38f94b6e4e2496b47653864c1f7d",
-  "document_sha256": "0963e65960e34e2f69483351825de21e93657f8fabecb6cb365af0d1004f2fe2",
-  "document_bytes": 199212,
+  "status": "ACTUAL_DUE_VISEVENT_TIMING_AND_REVISED_SCHEDULE_FOUR_HANDOFF_COPIES_IDENTICAL",
+  "verified_at": "2026-10-05T02:14:38.533252+00:00",
+  "source_commit": "ab48ac2bdf5c4bb568227bc15802181dfbab4f01",
+  "document_sha256": "b55f23c2e684a064662ae9790b6a425cee550ed481df649d856f731aef727db9",
+  "document_bytes": 201054,
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/a1fd70fa051f38f94b6e4e2496b47653864c1f7d/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/ab48ac2bdf5c4bb568227bc15802181dfbab4f01/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
-  "subject": "ACTUAL_CPU_COMPLETED37500_ROUTE_RISK_DIAGNOSIS_NOT_NEW_BENCHMARK",
-  "candidate_launch_ready": false,
-  "candidate_model_execution": false,
-  "source_review_independence": "self",
-  "source_review_runtime_attested": false,
   "file_sha256": {
-    "scripts/analyze_full_method_route_risk.py": "6139b5f9a09bb30fd879f508e2f4f368e0c0836bacb8793a7773c2cce74bef5a",
-    "reports/full_method_v1_complete_route_risk_diagnosis_20261005.json": "7d75d7cf526c919cef636677c05a5740c192b02b0d385708b41008a00cfa07e1",
-    "configs/current_goal.json": "988720dd4a87719a77e77c1380cd831fb42deee23822199398037bcb09f156ed",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "0963e65960e34e2f69483351825de21e93657f8fabecb6cb365af0d1004f2fe2"
+    "reports/full_method_v1_visevent_revised_completion_milestone_20261005.json": "6263a6951f31efb7f63b6d1edfd99976cc72ae2757d5abb6f33a1b653f2c875a",
+    "configs/current_goal.json": "87403ac70d4dba77db695fc60282a87d8c8fb5c9fdffdb91cb5f3e29b160b34b",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "b55f23c2e684a064662ae9790b6a425cee550ed481df649d856f731aef727db9"
   },
-  "published_files": 4,
+  "published_files": 3,
   "latest_publication_sync": {
-    "verified_at": "2026-10-05T00:25:11.894555+00:00",
+    "verified_at": "2026-10-05T02:14:38.533252+00:00",
     "file_sha256": {
-      "scripts/analyze_full_method_route_risk.py": "6139b5f9a09bb30fd879f508e2f4f368e0c0836bacb8793a7773c2cce74bef5a",
-      "reports/full_method_v1_complete_route_risk_diagnosis_20261005.json": "7d75d7cf526c919cef636677c05a5740c192b02b0d385708b41008a00cfa07e1",
-      "configs/current_goal.json": "988720dd4a87719a77e77c1380cd831fb42deee23822199398037bcb09f156ed",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "0963e65960e34e2f69483351825de21e93657f8fabecb6cb365af0d1004f2fe2"
+      "reports/full_method_v1_visevent_revised_completion_milestone_20261005.json": "6263a6951f31efb7f63b6d1edfd99976cc72ae2757d5abb6f33a1b653f2c875a",
+      "configs/current_goal.json": "87403ac70d4dba77db695fc60282a87d8c8fb5c9fdffdb91cb5f3e29b160b34b",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "b55f23c2e684a064662ae9790b6a425cee550ed481df649d856f731aef727db9"
     },
     "all_files_match": true,
-    "source8_unchanged": true,
-    "reviewed_current15_source_hashes_match": true,
-    "complete_training_diagnosis_sources_match": true,
-    "scope": "Static publication bytes and immutable training seal only. No process, log, native-session, progress or hardware query. Dynamic recovery receipt not overwritten."
+    "scope": "Static publication bytes only; no process, log, progress or hardware read. Dynamic recovery receipt not overwritten."
   },
-  "last_verified_runtime": "2026-10-05T07:23:51.779911+08:00",
-  "runtime_observed_at": "2026-10-05T07:23:51.779911+08:00",
+  "last_verified_runtime": "2026-10-05T10:10:07.913406+08:00",
+  "runtime_observed_at": "2026-10-05T10:10:07.913406+08:00",
   "reference_complete_datasets": [
     "LasHeR",
     "VisEvent",
@@ -48,41 +38,15 @@
   "method_complete_datasets": [
     "LasHeR"
   ],
-  "method_scores_available": true,
   "method_all_three_scores_available": false,
   "complete_comparison_available": false,
-  "method_lasher_headlines": {
-    "SR_AUC": 0.5548465787350384,
-    "PR_at_20": 0.6903214880777397,
-    "NPR_AUC": 0.5920586963531068,
-    "NP_at_020": 0.6553677075460028
-  },
-  "method_lasher_deltas": {
-    "SR_AUC": {
-      "reference": 0.5554599303245381,
-      "method": 0.5548465787350384,
-      "delta": -0.000613351589499711
-    },
-    "PR_at_20": {
-      "reference": 0.6905088871059202,
-      "method": 0.6903214880777397,
-      "delta": -0.00018739902818043497
-    },
-    "NPR_AUC": {
-      "reference": 0.5921262401038353,
-      "method": 0.5920586963531068,
-      "delta": -6.754375072848262e-05
-    },
-    "NP_at_020": {
-      "reference": 0.6548772213736572,
-      "method": 0.6553677075460028,
-      "delta": 0.0004904861723455944
-    }
-  },
-  "all_seven_strict_improvement_possible_for_fixed_v1": false,
   "goal_achieved": false,
-  "next_observation_not_before": "2026-10-05T09:58:27.505348+08:00",
-  "scheduled_observer_native_session": 23494,
-  "scheduled_observer_pid": 45512,
-  "scope": "Executed CPU descriptive analysis of immutable completed37500-step training records; runtime remains the prior actual LasHeR-complete/VisEvent-running observation, both required LasHeR headlines below measured reference. No causal or significance claim. Remaining five headlines pending. Preserve all raw curves, attributes, sequences and costs. Original train exit0; source8/checkpoint unchanged. No inference/scoring replay, early progress query, new weight, deletion or hardware control. Dynamic worker receipt not overwritten."
+  "candidate_launch_ready": false,
+  "candidate_model_execution": false,
+  "all_seven_strict_improvement_possible_for_fixed_v1": false,
+  "next_observation_not_before": "2026-10-05T11:02:47.972608+08:00",
+  "scheduled_observer_native_session": 72643,
+  "scheduled_observer_pid": 42360,
+  "actual_milestone": "reports/full_method_v1_visevent_revised_completion_milestone_20261005.json",
+  "scope": "Actual VisEvent262/320seq132939/157421frames at10:10; no new dataset score. Re-estimated sole due read11:02:47. Source/checkpoint/queue remain fixed. Static sync time is not live progress. No early progress query, inference/scoring replay, restart, deletion or hardware control. Worker-owned recovery receipt untouched."
 }
