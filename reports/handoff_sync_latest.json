@@ -1,22 +1,22 @@
 {
-  "status": "DISTANCE0_ACTUAL_EARLY_DIAGNOSIS_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-05T07:36:50.310088+00:00",
-  "source_commit": "58e78ca2cd17da218dea1e42fc2789844f8b4fe7",
+  "status": "DISTANCE0_REAL_EPOCH1_AUDIT_RETENTION_FOUR_HANDOFF_COPIES_IDENTICAL",
+  "verified_at": "2026-10-05T09:40:10.250796+00:00",
+  "source_commit": "6d82ce65041f95280913b789df12289311c40ce0",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "9c3cda0a04c21c526ef3cc05e83367c40ad760e917da6a77cebb2582ca1ac128",
-  "document_bytes": 226027,
+  "document_sha256": "d4626008979709c127a2c4ec2bebdd82813c3608c668289c19034213c716268b",
+  "document_bytes": 231918,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/58e78ca2cd17da218dea1e42fc2789844f8b4fe7/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/6d82ce65041f95280913b789df12289311c40ce0/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
-    ".gitattributes": "09aa1a6651f1a0185815e85273d6879a354b810b00b95500f3202cf0c09ef163",
+    ".gitattributes": "1a905725b8e9a961ec853e11abe85be4f9d2dc124f0251d6ab28ade8cee3c21e",
     "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
-    "configs/current_goal.json": "98a805eabe82036b176989e63eb81f2ee2c320a17f775b21b657d513caeb30ee",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "9c3cda0a04c21c526ef3cc05e83367c40ad760e917da6a77cebb2582ca1ac128",
+    "configs/current_goal.json": "e4f91ab072bb3aa29c2d36e4b4d3724a89e7add9db7a77d10c4a084532405a58",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "d4626008979709c127a2c4ec2bebdd82813c3608c668289c19034213c716268b",
     "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
     "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
     "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -45,16 +45,26 @@
     "reports/full_method_v2_distance0_sanity_weight_cleanup_20261005.json": "55768016e88c413da0d042715a5f5a70751be878343550922cd86843cbe181b1",
     "reports/full_method_v2_distance0_first_training_diagnosis_20261005.json": "44269461ccb23c360a0c42c246df51fd026c0665c9899e01a667edfba7ec3277",
     "reports/full_method_v2_distance0_early_updates_20261005.jsonl": "126396fd0045380ecb8ee31d4a50fd4ebccbc46f23f71979e3e78f27b9266b38",
-    "reports/full_method_v2_distance0_epoch1_observer_launch_20261005.json": "89155dd0d409eff0aa845eb2db5f107bf18743e45105eda6673629fba8f3f500"
+    "reports/full_method_v2_distance0_epoch1_observer_launch_20261005.json": "89155dd0d409eff0aa845eb2db5f107bf18743e45105eda6673629fba8f3f500",
+    "reports/full_method_v2_distance0_epoch1_milestone_observation_20261005.json": "5ae52aa493f266c9394654acbeb250e9010ec43fd535e33c81450d503695cefa",
+    "reports/full_method_v2_distance0_epoch1_audit_execution_20261005.json": "b491a2257e98b6c838461c01deb55a596a3de5de99af202e792a199306e04f4c",
+    "reports/full_method_v2_distance0_epoch1_checkpoint_audit.json": "11928baffb6a5cb5d22574eda67633bf1089dcb4458680d38837258f17fbb526",
+    "reports/full_method_v2_distance0_epoch1_collection_failure_20261005.json": "e85363e7119177d53063269fc1c2eb870d8fb276cebffe72fb26f029f5b09895",
+    "reports/full_method_v2_distance0_completed_epoch1_diagnosis_20261005.json": "ac5b97a789f6f3e81aebdb21c8af61eb28d83e1180af2c263ccdf7b56dca9b35",
+    "reports/full_method_v2_distance0_completed_epoch1_updates_20261005.jsonl": "e76332a1689957920fc884d1ef70b4f74c4bde43602fd3f3f416f5ca86f48697",
+    "reports/full_method_v2_distance0_retention_launch_20261005.json": "50ceb24b6241f7e4ce726c3b909a7abeda648e67bda033a2836de7bd4e4d3cc2",
+    "reports/full_method_v2_distance0_first_epoch_retention_observation_20261005.json": "1b25800b53ec91de2aab902600731e8478a6f9acaeabdb80bd905c891d3fca1a",
+    "reports/full_method_v2_distance0_training_endpoint_observer_launch_20261005.json": "2d787c2b73d78bc759880a08f65fc64f5f8ac18afb75d22afd8828feb30fb81a",
+    "reports/full_method_v2_distance0_epoch1_publication_first_attempt_20261005.json": "8ae547746ad1b3a29cf617d76f5bfdf7e1ccac577ab6ec04a5908312c620645b"
   },
-  "published_files": 33,
+  "published_files": 43,
   "latest_publication_sync": {
-    "verified_at": "2026-10-05T07:36:50.310088+00:00",
+    "verified_at": "2026-10-05T09:40:10.250796+00:00",
     "file_sha256": {
-      ".gitattributes": "09aa1a6651f1a0185815e85273d6879a354b810b00b95500f3202cf0c09ef163",
+      ".gitattributes": "1a905725b8e9a961ec853e11abe85be4f9d2dc124f0251d6ab28ade8cee3c21e",
       "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
-      "configs/current_goal.json": "98a805eabe82036b176989e63eb81f2ee2c320a17f775b21b657d513caeb30ee",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "9c3cda0a04c21c526ef3cc05e83367c40ad760e917da6a77cebb2582ca1ac128",
+      "configs/current_goal.json": "e4f91ab072bb3aa29c2d36e4b4d3724a89e7add9db7a77d10c4a084532405a58",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "d4626008979709c127a2c4ec2bebdd82813c3608c668289c19034213c716268b",
       "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
       "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
       "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -83,13 +93,23 @@
       "reports/full_method_v2_distance0_sanity_weight_cleanup_20261005.json": "55768016e88c413da0d042715a5f5a70751be878343550922cd86843cbe181b1",
       "reports/full_method_v2_distance0_first_training_diagnosis_20261005.json": "44269461ccb23c360a0c42c246df51fd026c0665c9899e01a667edfba7ec3277",
       "reports/full_method_v2_distance0_early_updates_20261005.jsonl": "126396fd0045380ecb8ee31d4a50fd4ebccbc46f23f71979e3e78f27b9266b38",
-      "reports/full_method_v2_distance0_epoch1_observer_launch_20261005.json": "89155dd0d409eff0aa845eb2db5f107bf18743e45105eda6673629fba8f3f500"
+      "reports/full_method_v2_distance0_epoch1_observer_launch_20261005.json": "89155dd0d409eff0aa845eb2db5f107bf18743e45105eda6673629fba8f3f500",
+      "reports/full_method_v2_distance0_epoch1_milestone_observation_20261005.json": "5ae52aa493f266c9394654acbeb250e9010ec43fd535e33c81450d503695cefa",
+      "reports/full_method_v2_distance0_epoch1_audit_execution_20261005.json": "b491a2257e98b6c838461c01deb55a596a3de5de99af202e792a199306e04f4c",
+      "reports/full_method_v2_distance0_epoch1_checkpoint_audit.json": "11928baffb6a5cb5d22574eda67633bf1089dcb4458680d38837258f17fbb526",
+      "reports/full_method_v2_distance0_epoch1_collection_failure_20261005.json": "e85363e7119177d53063269fc1c2eb870d8fb276cebffe72fb26f029f5b09895",
+      "reports/full_method_v2_distance0_completed_epoch1_diagnosis_20261005.json": "ac5b97a789f6f3e81aebdb21c8af61eb28d83e1180af2c263ccdf7b56dca9b35",
+      "reports/full_method_v2_distance0_completed_epoch1_updates_20261005.jsonl": "e76332a1689957920fc884d1ef70b4f74c4bde43602fd3f3f416f5ca86f48697",
+      "reports/full_method_v2_distance0_retention_launch_20261005.json": "50ceb24b6241f7e4ce726c3b909a7abeda648e67bda033a2836de7bd4e4d3cc2",
+      "reports/full_method_v2_distance0_first_epoch_retention_observation_20261005.json": "1b25800b53ec91de2aab902600731e8478a6f9acaeabdb80bd905c891d3fca1a",
+      "reports/full_method_v2_distance0_training_endpoint_observer_launch_20261005.json": "2d787c2b73d78bc759880a08f65fc64f5f8ac18afb75d22afd8828feb30fb81a",
+      "reports/full_method_v2_distance0_epoch1_publication_first_attempt_20261005.json": "8ae547746ad1b3a29cf617d76f5bfdf7e1ccac577ab6ec04a5908312c620645b"
     },
     "all_files_match": true,
-    "reviewed15_source_hashes_match": true,
-    "scope": "Static byte verification only; no progress/log/GPU/model/scoring query."
+    "reviewed15_sources_unchanged": true,
+    "scope": "Static byte verification only; no live progress/log/GPU/model/scoring query and no worker-owned receipt replacement."
   },
-  "last_verified_runtime": "2026-10-05T07:31:13.528580+00:00",
+  "last_verified_runtime": "2026-10-05T09:16:29.979968+00:00",
   "reference_complete_datasets": [
     "LasHeR",
     "VisEvent",
@@ -151,11 +171,11 @@
   "goal_achieved": false,
   "candidate_launch_ready": true,
   "candidate_preflight": "ACTUAL_EXIT0_SAVED_STATE26_PASS_SAME_FAMILY_PROVISIONAL",
-  "candidate_formal_training": "ACTUAL_THREE_RANK_FIRST290_UPDATES_NO_BENCHMARK",
-  "next_action": "No remote progress query before17:10:17.775236CST. Consume the single scheduled observer after its actual read, then audit actual epoch1 checkpoint and activate dedicated retention once.",
-  "scheduled_observer_native_session": 79216,
-  "scheduled_observer_pid": 39208,
-  "scope": "Complete negative v1 retained. Actual distance0 early training telemetry is not benchmark improvement, per-sample safety or module attribution. Static publication timestamp is not newer runtime evidence.",
+  "candidate_formal_training": "ACTUAL_EPOCH1_SAVED_CPU_AUDIT_PASS_TRAINING_CONTINUES_NO_BENCHMARK",
+  "next_action": "No training query before2026-10-06 17:37:01.070691CST. Consume the one scheduled endpoint observer after due, then continue actual training/evaluation stage as evidence permits.",
+  "scheduled_observer_native_session": 72018,
+  "scheduled_observer_pid": 1536,
+  "scope": "Completed first epoch, actual CPU saved-state audit, observed owned retention and fixed negative v1 results retained. No tracking or causal method efficacy claimed; static publication time is not new training progress.",
   "total_complete_sequences": 615,
   "arithmetic_correction": "245+50+320=615; every raw score and count unchanged",
   "candidate_run_id": "xtrack_full_method_v2_distance0_s2026",
@@ -165,9 +185,9 @@
     434004,
     434005
   ],
-  "candidate_completed_updates_at_snapshot": 290,
+  "candidate_completed_updates_at_snapshot": 2800,
   "candidate_scores_available": false,
-  "next_actual_runtime_not_before": "2026-10-05T09:10:17.775236+00:00",
+  "next_actual_runtime_not_before": "2026-10-06T09:37:01.070691+00:00",
   "candidate_first_training_diagnosis": {
     "updates": 290,
     "checks": {
@@ -369,6 +389,42 @@
       }
     ]
   },
-  "scheduled_observer_status": "ACTUALLY_STARTED_PASSIVE_TIMER_OBSERVATION_NOT_YET_DONE",
-  "first_epoch_completion_estimate": "2026-10-05T09:05:17.775236+00:00"
+  "scheduled_observer_status": "ACTUAL_PASSIVE_ENDPOINT_TIMER_LAUNCHED_OBSERVATION_PENDING",
+  "first_epoch_completion_estimate": "2026-10-05T09:05:17.775236+00:00",
+  "last_verified_retention": "2026-10-05T09:20:12.841852+00:00",
+  "candidate_completed_epochs_at_snapshot": 1,
+  "candidate_epoch1_statistics": {
+    "updates": 2500,
+    "primary_training_examples": 60000,
+    "checks": {
+      "finite_localization_and_risk": true,
+      "exact_task_counts": true,
+      "one_optimizer_statistics_and_decay_application": true,
+      "finite_step_time_and_gradient_norm": true
+    },
+    "risk_events": 109,
+    "nonzero_corrections": 106,
+    "adopted_lowered_recorded_aggregate_risk": 106,
+    "adopted_eliminated_recorded_aggregate_risk": 49,
+    "accepted_remaining_risk_events": 60,
+    "trajectory_checks": 154,
+    "trajectory_only_positive_cost_events": 0,
+    "trajectory_only_steps": [],
+    "trajectory_only_alternative_candidates_available": false,
+    "mean_step_seconds": 2.51561701665516,
+    "last1000_mean_step_seconds": 2.5167461303513847,
+    "pair_check_forward_examples": 47943,
+    "trajectory_model_forward_examples": 3156,
+    "rank0_peak_allocated_bytes": 5770099200,
+    "mean_candidate_positive_localization_risk": 5.9189240944882236e-05,
+    "mean_accepted_positive_localization_risk": 1.8101757857948542e-06,
+    "selected_strength_counts": {
+      "0.0": 2394,
+      "0.5": 13,
+      "1.0": 93
+    }
+  },
+  "candidate_retention_worker_pid": 573595,
+  "candidate_recovery_weights_retained_at_snapshot": 1,
+  "estimated_training_completion": "2026-10-06T09:32:01.070691+00:00"
 }
