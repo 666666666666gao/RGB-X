@@ -1,0 +1,162 @@
+{
+  "collected_at": "2026-10-05T14:28:52.365437+08:00",
+  "files": {
+    "reports/full_method_v1_complete_comparison.json": {
+      "remote": "/data/gb/rgbx-risk/reports/full_method_v1_complete_comparison.json",
+      "bytes": 697046,
+      "sha256": "07fd7be76cf2bccd903ded589db6ed443f27d4bcaf56caccc27ad9dd7765f0fa"
+    },
+    "reports/full_method_v1_paired_sequence_uncertainty.json": {
+      "remote": "/data/gb/rgbx-risk/reports/full_method_v1_paired_sequence_uncertainty.json",
+      "bytes": 8935,
+      "sha256": "20dafccb73c053342ee98906cbc02515ca330ed0ef81a948933c066f868419a3"
+    },
+    "reports/full_method_v1_complete_recovery_receipt_20261005.json": {
+      "remote": "/data/gb/rgbx-risk/reports/full_method_v1_evaluation_recovery_20261005.json",
+      "bytes": 3172,
+      "sha256": "6a07210a8e35dc5364989284a323875824678eaada51e9b2f0940d8dbfea347e"
+    },
+    "reports/method_xtrack_full_method_v1_s2026/run.json": {
+      "remote": "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/run.json",
+      "bytes": 14470,
+      "sha256": "58f8b519ce2538ca363685142f8635e3cd6a4004c3e44a4260b5b5a113a3ae3e"
+    },
+    "reports/reference_xtrack_author_release_s2026/run.json": {
+      "remote": "/home/gaob/rgbx-eval-results/xtrack_author_release_s2026/run.json",
+      "bytes": 15270,
+      "sha256": "9563cbcbe39df31ba97156882d27f7f08aba86696eb4a041c8952f03336c2cf8"
+    }
+  },
+  "complete_source_bindings_verified": true,
+  "required_headlines": {
+    "LasHeR_SR": {
+      "reference": 0.5554599303245381,
+      "method": 0.5548465787350384,
+      "delta": -0.000613351589499711,
+      "improved": false
+    },
+    "LasHeR_PR": {
+      "reference": 0.6905088871059202,
+      "method": 0.6903214880777397,
+      "delta": -0.00018739902818043497,
+      "improved": false
+    },
+    "VisEvent_SR": {
+      "reference": 0.6045030614193362,
+      "method": 0.5971315019183786,
+      "delta": -0.007371559500957581,
+      "improved": false
+    },
+    "VisEvent_PR": {
+      "reference": 0.7692957488705718,
+      "method": 0.7558738077542955,
+      "delta": -0.01342194111627637,
+      "improved": false
+    },
+    "DepthTrack_F": {
+      "reference": 0.613343119157631,
+      "method": 0.6053532431652036,
+      "delta": -0.007989875992427398,
+      "improved": false
+    },
+    "DepthTrack_Recall": {
+      "reference": 0.6156268604286835,
+      "method": 0.6075466984971374,
+      "delta": -0.008080161931546148,
+      "improved": false
+    },
+    "DepthTrack_Precision": {
+      "reference": 0.6110762588858001,
+      "method": 0.6031755691337564,
+      "delta": -0.007900689752043721,
+      "improved": false
+    }
+  },
+  "improved_count": 0,
+  "regressions_or_ties": [
+    "LasHeR_SR",
+    "LasHeR_PR",
+    "VisEvent_SR",
+    "VisEvent_PR",
+    "DepthTrack_F",
+    "DepthTrack_Recall",
+    "DepthTrack_Precision"
+  ],
+  "uncertainty_required_headlines": {
+    "LasHeR_SR": {
+      "reference": 0.555459930324538,
+      "method": 0.5548465787350383,
+      "delta": -0.000613351589499711,
+      "percentile_95_interval": [
+        -0.009142201631011546,
+        0.008265036353104748
+      ],
+      "bootstrap_fraction_delta_positive": 0.436
+    },
+    "LasHeR_PR": {
+      "reference": 0.6905088871059202,
+      "method": 0.6903214880777397,
+      "delta": -0.00018739902818043497,
+      "percentile_95_interval": [
+        -0.01163408011428963,
+        0.012118198997462894
+      ],
+      "bootstrap_fraction_delta_positive": 0.4801
+    },
+    "VisEvent_SR": {
+      "reference": 0.6045030614193363,
+      "method": 0.5971315019183784,
+      "delta": -0.007371559500957914,
+      "percentile_95_interval": [
+        -0.014121971995381514,
+        -0.0013232704414204428
+      ],
+      "bootstrap_fraction_delta_positive": 0.0077
+    },
+    "VisEvent_PR": {
+      "reference": 0.7692957488705718,
+      "method": 0.7558738077542955,
+      "delta": -0.01342194111627637,
+      "percentile_95_interval": [
+        -0.022955938965474036,
+        -0.004898011641045802
+      ],
+      "bootstrap_fraction_delta_positive": 0.0005
+    },
+    "DepthTrack_F": {
+      "reference": 0.613343119157631,
+      "method": 0.6053532431652036,
+      "delta": -0.007989875992427398,
+      "percentile_95_interval": [
+        -0.031400217014414436,
+        0.016739889418655615
+      ],
+      "bootstrap_fraction_delta_positive": 0.2579
+    },
+    "DepthTrack_Recall": {
+      "reference": 0.6156268604286835,
+      "method": 0.6075466984971374,
+      "delta": -0.008080161931546148,
+      "percentile_95_interval": [
+        -0.034146451288205364,
+        0.016956279540543514
+      ],
+      "bootstrap_fraction_delta_positive": 0.2456
+    },
+    "DepthTrack_Precision": {
+      "reference": 0.6110762588858001,
+      "method": 0.6031755691337564,
+      "delta": -0.007900689752043721,
+      "percentile_95_interval": [
+        -0.03003875311832427,
+        0.017089275038754514
+      ],
+      "bootstrap_fraction_delta_positive": 0.2811
+    }
+  },
+  "recovery_actual_exit_code": 0,
+  "scope": "Copy already completed fixed-pair comparison/conditional bootstrap and terminal receipts. No recomputation, image/model load, hardware query/control or job/weight action.",
+  "status": "ACTUAL_V1_FULL_COMPARISON_AND_CONDITIONAL_UNCERTAINTY_COLLECTED_GOAL_UNMET",
+  "all_seven_strict_improvement": false,
+  "goal_achieved": false
+}

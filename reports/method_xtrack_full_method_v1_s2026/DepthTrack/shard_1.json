@@ -1,0 +1,27 @@
+{
+  "status": "TRAJECTORIES_WRITTEN_NOT_SCORED",
+  "shard": 1,
+  "gpu": 1,
+  "seed": 2026,
+  "completed_sequences": [
+    "backpack_indoor",
+    "ball01_wild",
+    "ball11_wild",
+    "ball20_indoor",
+    "book03_indoor",
+    "cat01_indoor",
+    "cube03_indoor",
+    "cup02_indoor",
+    "developmentboard_indoor",
+    "earphone01_indoor",
+    "glass01_indoor",
+    "lock02_indoor",
+    "pigeon01_wild",
+    "pot_indoor",
+    "squirrel_wild",
+    "toy02_indoor",
+    "yogurt_indoor"
+  ],
+  "shard_wallclock_seconds": 9134.354108964966,
+  "identity_sha256": "fcff471ec35e64d57c522c2148a33af30e5e15b2816e105c0c6561c29cb95b28"
+}

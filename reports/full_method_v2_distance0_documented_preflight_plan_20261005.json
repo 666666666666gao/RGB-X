@@ -1,0 +1,39 @@
+{
+  "status": "EXACT_INVOCATION_DOCUMENTED_NOT_EXECUTED",
+  "created_at": "2026-10-05T14:45:18.826207+08:00",
+  "environment_ledger": "docs/RGB-X_\u7814\u7a76\u4e0e\u5b9e\u9a8c\u5b8c\u6574\u4ea4\u63a5_2026-10-02.md sections2/4 plus current preflight section",
+  "environment_spec": "configs/env-spec.json",
+  "environment_spec_canonical_sha256": "433a922a61d09bbf39d671e9ee1636c4ab0cac3ec6865b32baac9e7ce7e12fa4",
+  "warm_reuse_no_rebuild": true,
+  "ssh": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ClearAllForwardings=yes",
+    "-o",
+    "ConnectTimeout=20",
+    "2028"
+  ],
+  "remote_command": "cd /data/gb/rgbx-risk && env CUDA_VISIBLE_DEVICES=0,1,2 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/third_party/XTrack:/data/gb/rgbx-risk/third_party/XTrack/lib/train /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29530 /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json --sanity-steps 2 > /home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity_launcher.log 2>&1",
+  "protocol": "configs/full_method_v2_distance0.json",
+  "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+  "admission_source_sha256": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
+  "sanity_output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity",
+  "gate": "Complete v1 all3/all7 and conditional bootstrap already verified; before execution assert three GPUs memory.used<500MiB and fresh sanity output/log paths.",
+  "exact_execution_owner": "Fresh gpt-6-astra/max/fork_none agent follows the documented invocation without improvisation; not started yet.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "runtime_attested": false,
+  "required_actual_checks": [
+    "actual process exit0",
+    "SANITY_COMPLETE_NOT_FORMAL_RESULT and global_step2",
+    "exact protocol and run identity",
+    "strict saved-state reload",
+    "frozen tensors unchanged",
+    "finite model/optimizer state",
+    "three identical replica parameter hashes and three-rank RNG states"
+  ],
+  "formal_training": "NOT_STARTED; only after the actual two-step result is verified",
+  "scope": "Documented preparation only. No new environment, GPU/kernel/model execution, formal run or benchmark claim."
+}

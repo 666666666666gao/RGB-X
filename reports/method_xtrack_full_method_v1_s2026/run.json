@@ -1,0 +1,425 @@
+{
+  "status": "ALL_THREE_SCORED_REQUIRES_RESULT_AUDIT",
+  "identity": {
+    "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+    "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+    "checkpoint_sha256": "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+    "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "terminal_audit_sha256": "6b75c50a58027d3bc835e919f4bd26d03f723725e6d7c5d2ee8a990ad3f492e8"
+  },
+  "output_root": "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026",
+  "controller_pid": 3722438,
+  "started_at": "2026-10-04T18:27:37.288693+00:00",
+  "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+  "terminal_audit_sha256": "6b75c50a58027d3bc835e919f4bd26d03f723725e6d7c5d2ee8a990ad3f492e8",
+  "poll_seconds": 240,
+  "completed_datasets": [
+    "LasHeR",
+    "VisEvent",
+    "DepthTrack"
+  ],
+  "worker_processes": [
+    {
+      "dataset": "LasHeR",
+      "shard": 0,
+      "pid": 3722583
+    },
+    {
+      "dataset": "LasHeR",
+      "shard": 1,
+      "pid": 3722584
+    },
+    {
+      "dataset": "LasHeR",
+      "shard": 2,
+      "pid": 3722585
+    },
+    {
+      "dataset": "VisEvent",
+      "shard": 0,
+      "pid": 4054224
+    },
+    {
+      "dataset": "VisEvent",
+      "shard": 1,
+      "pid": 4054225
+    },
+    {
+      "dataset": "VisEvent",
+      "shard": 2,
+      "pid": 4054226
+    },
+    {
+      "dataset": "DepthTrack",
+      "shard": 0,
+      "pid": 163475
+    },
+    {
+      "dataset": "DepthTrack",
+      "shard": 1,
+      "pid": 163477
+    },
+    {
+      "dataset": "DepthTrack",
+      "shard": 2,
+      "pid": 163478
+    }
+  ],
+  "commands": [
+    {
+      "label": "cuda-witness",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/gpu_witness.py"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0,1,2"
+    },
+    {
+      "label": "LasHeR",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/LasHeR/predictions",
+        "--seed",
+        "2026",
+        "--shard",
+        "0",
+        "--shards",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0"
+    },
+    {
+      "label": "LasHeR",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/LasHeR/predictions",
+        "--seed",
+        "2026",
+        "--shard",
+        "1",
+        "--shards",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "1"
+    },
+    {
+      "label": "LasHeR",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/LasHeR/predictions",
+        "--seed",
+        "2026",
+        "--shard",
+        "2",
+        "--shards",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "2"
+    },
+    {
+      "label": "LasHeR-coverage",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/audit_ope_coverage.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/LasHeR/predictions",
+        "--report",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/LasHeR/coverage.json"
+      ],
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    {
+      "label": "LasHeR-scoring",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/score_lasher.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+        "--attributes",
+        "/data/gb/rgbx-risk/reports/lasher_test_attributes.json",
+        "--predictions",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/LasHeR/predictions",
+        "--coverage",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/LasHeR/coverage.json",
+        "--toolkit",
+        "/home/gaob/.cache/rgbx_lasher_toolkit_src",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/LasHeR/scores"
+      ],
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    {
+      "label": "VisEvent",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/predictions",
+        "--seed",
+        "2026",
+        "--shard",
+        "0",
+        "--shards",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0"
+    },
+    {
+      "label": "VisEvent",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/predictions",
+        "--seed",
+        "2026",
+        "--shard",
+        "1",
+        "--shards",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "1"
+    },
+    {
+      "label": "VisEvent",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/predictions",
+        "--seed",
+        "2026",
+        "--shard",
+        "2",
+        "--shards",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "2"
+    },
+    {
+      "label": "VisEvent-coverage",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/audit_ope_coverage.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/predictions",
+        "--report",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/coverage.json"
+      ],
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    {
+      "label": "VisEvent-scoring",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/score_visevent.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+        "--attributes",
+        "/data/gb/rgbx-risk/reports/visevent_test_attributes.json",
+        "--predictions",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/predictions",
+        "--coverage",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/coverage.json",
+        "--toolkit",
+        "/home/gaob/.cache/rgbx_official_visevent_source",
+        "--output",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/VisEvent/scores"
+      ],
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    {
+      "label": "DepthTrack-workspace",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/prepare_vot_workspace.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "--checkpoint",
+        "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+        "--expected-sha256",
+        "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+        "--dataset-audit",
+        "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/DepthTrack"
+      ],
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    {
+      "label": "DepthTrack",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/run_vot_sequences.py",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/DepthTrack",
+        "--shard",
+        "0",
+        "--gpu",
+        "0"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0"
+    },
+    {
+      "label": "DepthTrack",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/run_vot_sequences.py",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/DepthTrack",
+        "--shard",
+        "1",
+        "--gpu",
+        "1"
+      ],
+      "CUDA_VISIBLE_DEVICES": "1"
+    },
+    {
+      "label": "DepthTrack",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/run_vot_sequences.py",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/DepthTrack",
+        "--shard",
+        "2",
+        "--gpu",
+        "2"
+      ],
+      "CUDA_VISIBLE_DEVICES": "2"
+    },
+    {
+      "label": "DepthTrack-official-scoring",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/audit_and_score_vot.py",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/DepthTrack"
+      ],
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    {
+      "label": "DepthTrack-attributes",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/score_depthtrack_attributes.py",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/xtrack_full_method_v1_s2026/DepthTrack",
+        "--attributes",
+        "/data/gb/rgbx-risk/reports/depthtrack_test_attributes.json"
+      ],
+      "CUDA_VISIBLE_DEVICES": ""
+    }
+  ],
+  "observed_at": "2026-10-05T06:00:45.542552+00:00",
+  "wallclock_seconds": 41588.25367479498,
+  "worker_exit_codes": [
+    0,
+    0,
+    0
+  ]
+}

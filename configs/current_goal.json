@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T13:41:27.696561+08:00",
+  "updated_at": "2026-10-05T14:45:18.828725+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。 后续三个模块围绕目标级可靠定位能力保持与风险记忆、保留有益学习的风险约束实际更新、搜索状态敏感且可独立决策的闭环验收展开；同时检验旧能力退化和新能力改善，不以任务平均损失、梯度均衡或减少更新作为最终目标。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "TRAIN_EXIT0_REFERENCE_ALL3_SCORED_METHOD_TWO_OF_THREE_COMPLETE_DEPTHTRACK_RUNNING_GOAL_UNMET",
+  "status": "V1_FULL_RESULTS_0_OF7_IMPROVED_DISTANCE0_REAL_PREFLIGHT_PENDING_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -107,7 +107,7 @@
     1603689
   ],
   "actual_completed_updates_at_snapshot": 37500,
-  "tracking_scores": "AUTHOR_REFERENCE_3_OF_3_METHOD_2_OF_3_LASHER_AND_VISEVENT_REQUIRED_HEADLINES_LOWER",
+  "tracking_scores": "AUTHOR_AND_METHOD_ALL3_COMPLETE_ALL7_V1_REQUIRED_HEADLINES_LOWER",
   "objective_met": false,
   "next_iteration_candidate": {
     "status": "CONFIG_PREPARED_NOT_RUN",
@@ -277,17 +277,17 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-05T13:37:49.506648+08:00",
+  "runtime_snapshot_observed_at": "2026-10-05T14:25:56.871837+08:00",
   "execution_goal_version": "2026-10-05-user-review-v3",
   "ordered_next_steps": [
     {
       "id": "P0",
-      "status": "TRAINING_ENDPOINT_REFERENCE_COMPLETE_METHOD_TWO_OF_THREE_COMPLETE_FULL_COMPARISON_PENDING",
+      "status": "COMPLETE_FIXED_V1_RESULTS_0_OF7_IMPROVEMENT_NOT_RESEARCH_GOAL_SUCCESS",
       "work": "Complete fixed full_method_v1: 15 epochs/37500 updates, endpoint audit, author reference and method full three-dataset evaluation. Preserve all results, including negative outcomes."
     },
     {
       "id": "P1",
-      "status": "PLANNED_NOT_RUN",
+      "status": "EXACT_ADMISSION_APPLIED_DOCUMENTED_REAL_PREFLIGHT_PENDING_NOT_TRAINED",
       "work": "Run one-change distance-weight-zero paired experiment; retain bounded correction and all other algorithm settings. Compare harmful accepted updates, uncorrected risks, localization/trajectory learning and complete benchmark metrics."
     },
     {
@@ -439,22 +439,23 @@
   "twelfth_epoch_retention_evidence": "reports/full_method_v1_twelfth_epoch_retention_snapshot.json",
   "thirteenth_epoch_retention_evidence": "reports/full_method_v1_thirteenth_epoch_retention_snapshot.json",
   "monitoring_policy": {
-    "updated_at": "2026-10-05T13:41:27.696561+08:00",
+    "updated_at": "2026-10-05T14:45:18.828725+08:00",
     "user_instruction": "这里你轮询太多了，没到时间不用轮询",
     "mode": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-05T14:25:54.663745+08:00",
+    "next_observation_not_before": null,
     "estimate_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json",
     "estimated_stage": "Slowest current native shard: remaining frames / complete-frame wallclock FPS from actual shard start, plus six minutes for scoring. Does not attest completion or queued uncertainty.",
-    "completed_observer_session": 96952,
+    "completed_observer_session": 76403,
     "completed_observer_exit_code": 0,
-    "scheduled_observer_native_session": 76403,
-    "scheduled_observer_pid": 48632,
+    "scheduled_observer_native_session": null,
+    "scheduled_observer_pid": null,
     "scheduled_observer_started_at": "2026-10-05T13:39:20.048055+08:00",
-    "scheduled_observer_status": "SCHEDULED_ONE_TIME_OBSERVER_NO_INTERIM_QUERY"
+    "scheduled_observer_status": "V1_OBSERVER_CLOSED_COMPLETE_RESULTS_COLLECTED",
+    "next_action": "Execute the documented new candidate preflight once after static publication and actual free-GPU check."
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
@@ -466,21 +467,22 @@
         "VisEvent",
         "DepthTrack"
       ],
-      "status": "SCORED",
-      "snapshot_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json"
+      "status": "ALL_THREE_SCORED_REQUIRES_RESULT_AUDIT",
+      "snapshot_evidence": "reports/full_method_v1_complete_result_intake_20261005.json"
     },
     "xtrack_full_method_v1_s2026": {
       "receipt_exists": true,
       "completed_datasets": [
         "LasHeR",
-        "VisEvent"
+        "VisEvent",
+        "DepthTrack"
       ],
-      "status": "RUNNING_NOT_SCORED",
-      "snapshot_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json"
+      "status": "ALL_THREE_SCORED_REQUIRES_RESULT_AUDIT",
+      "snapshot_evidence": "reports/full_method_v1_complete_result_intake_20261005.json"
     }
   },
   "endpoint_audit_status": "PASS",
-  "complete_comparison_available": false,
+  "complete_comparison_available": true,
   "fifteenth_epoch_retention_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
   "completed_training_diagnosis": {
     "report": "reports/full_method_v1_full_run_cost_decomposition.json",
@@ -527,7 +529,7 @@
     "limitations": "One fixed endpoint pair; conditional on saved endpoint-specific DepthTrack threshold grids. Not training seed variation, module attribution, calibrated p-values or corrected multiple-metric significance."
   },
   "evaluation_recovery": {
-    "status": "ACTUAL_METHOD_VISEVENT_COMPLETE_DEPTHTRACK_RUNNING_GOAL_UNMET",
+    "status": "IMPROVEMENT_GOAL_UNMET_REQUIRES_DIAGNOSIS",
     "controller_pid": 3560911,
     "worker_pids": [
       163475,
@@ -552,7 +554,8 @@
     ],
     "method_completed_datasets": [
       "LasHeR",
-      "VisEvent"
+      "VisEvent",
+      "DepthTrack"
     ],
     "method_visevent_progress": {
       "completed_sequences": 262,
@@ -573,7 +576,10 @@
         163475,
         163478
       ]
-    }
+    },
+    "actual_exit_code": 0,
+    "ended_at": "2026-10-05T06:11:50.976944+00:00",
+    "terminal_snapshot": "reports/full_method_v1_complete_recovery_receipt_20261005.json"
   },
   "reference_visevent_complete_metrics": {
     "report": "reports/reference_xtrack_author_release_s2026/VisEvent/scores/metrics.json",
@@ -697,7 +703,7 @@
     "collected_at": "2026-10-05T02:32:10.143444+08:00",
     "scope": "Completed author-reference native scores only. Full 50-sequence coverage, original official PR aggregation, separate group definitions, 50 CSV rows, 11 raw artifact hashes verified. No neural inference or scorer replay. Method scores not inferred."
   },
-  "latest_evaluation_milestone": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json",
+  "latest_evaluation_milestone": "reports/full_method_v1_complete_result_intake_20261005.json",
   "method_lasher_complete_metrics": {
     "report": "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/metrics.json",
     "intake": "reports/full_method_v1_lasher_complete_intake_20261005.json",
@@ -923,5 +929,172 @@
       "Existing seven trajectory-only events demonstrate a decision gap; distance0 alone does not repair it.",
       "Saved fixed-pair whole-sequence bootstrap is conditional sampling uncertainty, not training-seed variance or module attribution."
     ]
+  },
+  "method_required_headlines": {
+    "LasHeR_SR": 0.5548465787350384,
+    "LasHeR_PR": 0.6903214880777397,
+    "VisEvent_SR": 0.5971315019183786,
+    "VisEvent_PR": 0.7558738077542955,
+    "DepthTrack_F": 0.6053532431652036,
+    "DepthTrack_Recall": 0.6075466984971374,
+    "DepthTrack_Precision": 0.6031755691337564
+  },
+  "completed_v1_full_comparison": {
+    "report": "reports/full_method_v1_complete_comparison.json",
+    "sha256": "07fd7be76cf2bccd903ded589db6ed443f27d4bcaf56caccc27ad9dd7765f0fa",
+    "status": "IMPROVEMENT_GOAL_UNMET_REQUIRES_DIAGNOSIS",
+    "required_count": 7,
+    "improved_count": 0,
+    "required_headlines": {
+      "LasHeR_SR": {
+        "reference": 0.5554599303245381,
+        "method": 0.5548465787350384,
+        "delta": -0.000613351589499711,
+        "improved": false
+      },
+      "LasHeR_PR": {
+        "reference": 0.6905088871059202,
+        "method": 0.6903214880777397,
+        "delta": -0.00018739902818043497,
+        "improved": false
+      },
+      "VisEvent_SR": {
+        "reference": 0.6045030614193362,
+        "method": 0.5971315019183786,
+        "delta": -0.007371559500957581,
+        "improved": false
+      },
+      "VisEvent_PR": {
+        "reference": 0.7692957488705718,
+        "method": 0.7558738077542955,
+        "delta": -0.01342194111627637,
+        "improved": false
+      },
+      "DepthTrack_F": {
+        "reference": 0.613343119157631,
+        "method": 0.6053532431652036,
+        "delta": -0.007989875992427398,
+        "improved": false
+      },
+      "DepthTrack_Recall": {
+        "reference": 0.6156268604286835,
+        "method": 0.6075466984971374,
+        "delta": -0.008080161931546148,
+        "improved": false
+      },
+      "DepthTrack_Precision": {
+        "reference": 0.6110762588858001,
+        "method": 0.6031755691337564,
+        "delta": -0.007900689752043721,
+        "improved": false
+      }
+    }
+  },
+  "completed_v1_paired_sequence_uncertainty": {
+    "report": "reports/full_method_v1_paired_sequence_uncertainty.json",
+    "sha256": "20dafccb73c053342ee98906cbc02515ca330ed0ef81a948933c066f868419a3",
+    "status": "PAIRED_SEQUENCE_BOOTSTRAP_COMPLETE_CONDITIONAL_ON_SAVED_SCORE_GRIDS",
+    "draws": 10000,
+    "bootstrap_seed": 2026,
+    "required_headlines": {
+      "LasHeR_SR": {
+        "reference": 0.555459930324538,
+        "method": 0.5548465787350383,
+        "delta": -0.000613351589499711,
+        "percentile_95_interval": [
+          -0.009142201631011546,
+          0.008265036353104748
+        ],
+        "bootstrap_fraction_delta_positive": 0.436
+      },
+      "LasHeR_PR": {
+        "reference": 0.6905088871059202,
+        "method": 0.6903214880777397,
+        "delta": -0.00018739902818043497,
+        "percentile_95_interval": [
+          -0.01163408011428963,
+          0.012118198997462894
+        ],
+        "bootstrap_fraction_delta_positive": 0.4801
+      },
+      "VisEvent_SR": {
+        "reference": 0.6045030614193363,
+        "method": 0.5971315019183784,
+        "delta": -0.007371559500957914,
+        "percentile_95_interval": [
+          -0.014121971995381514,
+          -0.0013232704414204428
+        ],
+        "bootstrap_fraction_delta_positive": 0.0077
+      },
+      "VisEvent_PR": {
+        "reference": 0.7692957488705718,
+        "method": 0.7558738077542955,
+        "delta": -0.01342194111627637,
+        "percentile_95_interval": [
+          -0.022955938965474036,
+          -0.004898011641045802
+        ],
+        "bootstrap_fraction_delta_positive": 0.0005
+      },
+      "DepthTrack_F": {
+        "reference": 0.613343119157631,
+        "method": 0.6053532431652036,
+        "delta": -0.007989875992427398,
+        "percentile_95_interval": [
+          -0.031400217014414436,
+          0.016739889418655615
+        ],
+        "bootstrap_fraction_delta_positive": 0.2579
+      },
+      "DepthTrack_Recall": {
+        "reference": 0.6156268604286835,
+        "method": 0.6075466984971374,
+        "delta": -0.008080161931546148,
+        "percentile_95_interval": [
+          -0.034146451288205364,
+          0.016956279540543514
+        ],
+        "bootstrap_fraction_delta_positive": 0.2456
+      },
+      "DepthTrack_Precision": {
+        "reference": 0.6110762588858001,
+        "method": 0.6031755691337564,
+        "delta": -0.007900689752043721,
+        "percentile_95_interval": [
+          -0.03003875311832427,
+          0.017089275038754514
+        ],
+        "bootstrap_fraction_delta_positive": 0.2811
+      }
+    },
+    "training_seed_variance": false,
+    "causal_module_evidence": false
+  },
+  "method_depthtrack_complete_metrics": {
+    "report": "reports/method_xtrack_full_method_v1_s2026/DepthTrack/official_metrics.json",
+    "intake": "reports/full_method_v1_depthtrack_complete_intake_20261005.json",
+    "headlines": {
+      "Precision": 0.6031755691337564,
+      "Recall": 0.6075466984971374,
+      "F_score": 0.6053532431652036
+    },
+    "sequences": 50,
+    "frame_pairs": 76373,
+    "attributes": 15,
+    "confidence_thresholds": 100,
+    "fps": 3.903189294000362,
+    "timing": "Native tracker RPC tracking seconds; not OPE image-read/preprocess/track and not three-GPU wall-clock throughput.",
+    "gpu_memory": {
+      "peak_allocated_bytes": 541109760.0,
+      "peak_reserved_bytes": 627048448.0,
+      "scope": "maximum_of_PyTorch_peaks_saved_in_native_trajectory_properties"
+    }
+  },
+  "distance0_documented_preflight": {
+    "report": "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json",
+    "status": "EXACT_INVOCATION_DOCUMENTED_NOT_EXECUTED",
+    "runtime_attested": false,
+    "identity_admission": "reports/full_method_v2_distance0_identity_admission_activation_20261005.json"
   }
 }

@@ -18,7 +18,7 @@ def verified_endpoint(config_path, checkpoint_path, expected_sha256, terminal_au
         if audit['endpoint_kind'] == 'author_release':
             assert audit['checkpoint_sha256'] == '3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36'
         else:
-            assert audit['run_id'] == 'xtrack_full_method_v1_s2026'
+            assert audit['run_id'] in ['xtrack_full_method_v1_s2026', 'xtrack_full_method_v2_distance0_s2026']
             assert audit['epoch'] == 15 and audit['global_step'] == 37500
             assert audit['controller_exit_code'] == 0
             assert audit['frozen_tensors_unchanged'] and audit['replicas_identical']

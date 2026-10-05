@@ -31,13 +31,11 @@
   "training_core_modified": false,
   "v1_entries_modified": false,
   "candidate_training_started": false,
-  "candidate_gpu_sanity": "NOT_RUN_WAIT_FOR_V1_COMPLETE_SCORES",
+  "candidate_gpu_sanity": "NOT_RUN_DOCUMENTED_NEXT_AFTER_V1_COMPLETE",
   "candidate_source_review": "STATIC_SELF_SOURCE_REVIEW_PASS_NO_RUNTIME_OR_INDEPENDENT_ATTESTATION",
   "launch_ready": false,
   "remaining_before_launch": [
-    "Actual v1 all-three result and full comparison",
-    "Apply exact sealed two-run verifier admission after v1 completion",
-    "Verify actual candidate two-step three-GPU sanity and saved state"
+    "Fresh exact documented two-step three-GPU sanity and actual saved-state verification"
   ],
   "retention_activation": "After candidate epoch1 is actually saved, run its isolated CPU audit once, then launch its isolated retention worker once. Do not reuse the v1 dynamic worker receipt.",
   "reference_evaluation": "Reuse only the fully scored same published reference after checking its identity and all reference source hashes recorded by the completed v1 comparison.",
@@ -46,13 +44,14 @@
   "efficacy": "UNKNOWN",
   "evaluation_identity_blocker": {
     "current_source": "scripts/xtrack_eval_parameters.py",
-    "current_sha256": "db30ea1f57e250db01818dff8c35ee97286b161d500d95535203c2aaf813a979",
+    "current_sha256": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
     "evidence": "assert audit['run_id'] == 'xtrack_full_method_v1_s2026'",
     "effect": "The common verification path rejects the candidate run ID before inference or scoring.",
     "prepared_change": "assert audit['run_id'] in ['xtrack_full_method_v1_s2026', 'xtrack_full_method_v2_distance0_s2026']",
     "deployment": "DEFERRED_UNTIL_V1_FULL_RESULT_PRESERVE_CURRENT_EVALUATOR",
-    "applied": false,
-    "scoring_algorithm_changed": false
+    "applied": true,
+    "scoring_algorithm_changed": false,
+    "activation_evidence": "reports/full_method_v2_distance0_identity_admission_activation_20261005.json"
   },
   "prepared_at": "2026-10-04T13:26:50.662377+08:00",
   "local_v1_core_source_sha256_unchanged": {

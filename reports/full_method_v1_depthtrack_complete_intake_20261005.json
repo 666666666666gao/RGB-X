@@ -1,0 +1,98 @@
+{
+  "status": "ACTUAL_FULL_METHOD_DEPTHTRACK_ALL50_OFFICIAL_METRICS_COLLECTED_REQUIRES_FULL_COMPARISON",
+  "sequence_count": 50,
+  "frame_pairs": 76373,
+  "trajectories": 50,
+  "missing_sequences": 0,
+  "missing_trajectories": 0,
+  "headline_metrics": {
+    "Precision": 0.6031755691337564,
+    "Recall": 0.6075466984971374,
+    "F_score": 0.6053532431652036
+  },
+  "cpu_overall_reaggregation_absolute_errors": {
+    "Precision": 2.220446049250313e-16,
+    "Recall": 0.0,
+    "F_score": 2.220446049250313e-16
+  },
+  "confidence_thresholds": 100,
+  "attributes": 15,
+  "attribute_scope": "15 whole-sequence groups and 15 tagged-frame groups; supplemental diagnostics, not official overall metrics.",
+  "tagged_frame_scope": "Verified saved PR/F internal consistency and tag counts; original native overlap/tag recomputation is the completed server scorer, not replayed by this intake.",
+  "rpc_tracking_seconds": 19566.819400072098,
+  "fps": 3.903189294000362,
+  "gpu_memory": {
+    "peak_allocated_bytes": 541109760.0,
+    "peak_reserved_bytes": 627048448.0,
+    "scope": "maximum_of_PyTorch_peaks_saved_in_native_trajectory_properties"
+  },
+  "timing_scope": "Native tracker RPC tracking seconds; not OPE image-read/preprocess/track and not three-GPU wall-clock throughput.",
+  "identity": {
+    "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+    "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+    "checkpoint_sha256": "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+    "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "terminal_audit_sha256": "6b75c50a58027d3bc835e919f4bd26d03f723725e6d7c5d2ee8a990ad3f492e8",
+    "dataset": "DepthTrack",
+    "dataset_audit": "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+    "dataset_audit_sha256": "463b778647930b3027728c09e97483cedc99a8ff5ab72894e2753539aa111e03",
+    "terminal_audit": "/data/gb/rgbx-risk/reports/full_method_v1_endpoint_audit.json",
+    "source_stack_sha256": "c56d409833b033a9e35058d836c525d002fe000124d6fee9efaef27ec66525c2",
+    "workspace_stack_sha256": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+    "trackers_ini_sha256": "978c6968cdeb29a7cfa4cd9f04dc8ba3153c2dd3535220c1982491d9e9855fd9",
+    "tracker_id": "xtrack_joint_s2026_c9a490d4bac9",
+    "experiment_id": "rgbd-unsupervised",
+    "seed": 2026,
+    "expected_sequences": 50,
+    "expected_frame_pairs": 76373
+  },
+  "files": {
+    "identity.json": {
+      "sha256": "fcff471ec35e64d57c522c2148a33af30e5e15b2816e105c0c6561c29cb95b28",
+      "bytes": 1179
+    },
+    "stack.yaml": {
+      "sha256": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+      "bytes": 284
+    },
+    "trackers.ini": {
+      "sha256": "978c6968cdeb29a7cfa4cd9f04dc8ba3153c2dd3535220c1982491d9e9855fd9",
+      "bytes": 629
+    },
+    "coverage.json": {
+      "sha256": "1fe1ad5fd9f07d6d621b9335af43becc74899e268a90e00c5140da02a73b48e2",
+      "bytes": 44377
+    },
+    "official_metrics.json": {
+      "sha256": "69b9bcce41eff89804e558c64a080ede5586fd6605437095bb5af0d7fcc9e3e0",
+      "bytes": 656292
+    },
+    "attribute_diagnostics.json": {
+      "sha256": "e3ebff4de38bfb0eb6886ce73cc69f2d1ee85db7b07fb60cac3fc3342d8d0453",
+      "bytes": 712775
+    },
+    "per_sequence_metrics.csv": {
+      "sha256": "e35cc64050cced22007d344f2fe27d7f23c76a83f0697636daed799013795abf",
+      "bytes": 3855
+    },
+    "full_PR_F_curves.png": {
+      "sha256": "df6fe5585075d6c4d48167473e032f7d5035221aaedb8fe77c94fe65ca1ec901",
+      "bytes": 54639
+    },
+    "shard_0.json": {
+      "sha256": "035d2883f401abd8e300e8e96b4bce8af937ae71707d8ce6bb8b9a776ea49982",
+      "bytes": 642
+    },
+    "shard_1.json": {
+      "sha256": "7b7bb1f8e8348e3b0c21c5bd8acac18e99a30ec3e0046c82ba55c8b402654031",
+      "bytes": 624
+    },
+    "shard_2.json": {
+      "sha256": "5fb07e09b0baa7be934606ac41f25da31bca20a452c34a2394c54a9e6168c7f8",
+      "bytes": 604
+    }
+  },
+  "dataset_audit_sha256": "463b778647930b3027728c09e97483cedc99a8ff5ab72894e2753539aa111e03",
+  "collected_at": "2026-10-05T14:27:14.338577+08:00",
+  "scope": "Completed full-method native scores only. Full 50-sequence coverage, original official PR aggregation, separate group definitions, 50 CSV rows, 11 raw artifact hashes verified. No neural inference or scorer replay. Full seven-headline comparison and conditional paired uncertainty are separate required steps; a single dataset is not a full improvement claim."
+}
