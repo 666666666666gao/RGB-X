@@ -1,22 +1,22 @@
 {
   "status": "ACTUAL_V1_COMPLETE_ALL7_NEGATIVE_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-05T06:47:19.877037+00:00",
-  "source_commit": "e6a378704d5018931d2a5364714c2e27417d63c3",
+  "verified_at": "2026-10-05T06:55:57.251066+00:00",
+  "source_commit": "9b334c54ef8074b3953c0acfe8dd299ed2713677",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "f87302036093424b3edb038205fcb6cb2c6b8c1393a96ce8dbfdbe5c0cd34e5f",
+  "document_sha256": "dfeff101c70f2ec9f1f80f782085b6739e777a264d596d27a6c117afc2fc18c9",
   "document_bytes": 219470,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/e6a378704d5018931d2a5364714c2e27417d63c3/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/9b334c54ef8074b3953c0acfe8dd299ed2713677/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
     ".gitattributes": "e793e2451fb6f89c8b86f1118b40d729846b565300f7eb785c940337c84d874c",
     "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
     "configs/current_goal.json": "e8807d4132b6de1bc84e262ad2a04c7c3ef1fa91a83bb79768b903971c2c41c0",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "f87302036093424b3edb038205fcb6cb2c6b8c1393a96ce8dbfdbe5c0cd34e5f",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "dfeff101c70f2ec9f1f80f782085b6739e777a264d596d27a6c117afc2fc18c9",
     "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
     "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
     "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -41,12 +41,12 @@
   },
   "published_files": 25,
   "latest_publication_sync": {
-    "verified_at": "2026-10-05T06:47:19.877037+00:00",
+    "verified_at": "2026-10-05T06:55:57.251066+00:00",
     "file_sha256": {
       ".gitattributes": "e793e2451fb6f89c8b86f1118b40d729846b565300f7eb785c940337c84d874c",
       "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
       "configs/current_goal.json": "e8807d4132b6de1bc84e262ad2a04c7c3ef1fa91a83bb79768b903971c2c41c0",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "f87302036093424b3edb038205fcb6cb2c6b8c1393a96ce8dbfdbe5c0cd34e5f",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "dfeff101c70f2ec9f1f80f782085b6739e777a264d596d27a6c117afc2fc18c9",
       "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
       "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
       "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -70,9 +70,7 @@
       "reports/method_xtrack_full_method_v1_s2026/DepthTrack/shard_2.json": "5fb07e09b0baa7be934606ac41f25da31bca20a452c34a2394c54a9e6168c7f8"
     },
     "all_files_match": true,
-    "source8_unchanged": true,
-    "future_review15_sources_match": true,
-    "scope": "Static byte verification only. No process/log/GPU/model/scoring query; original recovery receipt not overwritten."
+    "scope": "Static complete result bytes and one corrected arithmetic total only; no runtime or model execution."
   },
   "last_verified_runtime": "2026-10-05T14:25:56.871837+08:00",
   "reference_complete_datasets": [
@@ -140,5 +138,7 @@
   "next_action": "Documented fresh real candidate sanity after free-GPU check",
   "scheduled_observer_native_session": null,
   "scheduled_observer_pid": null,
-  "scope": "All complete real-GT v1 results, costs, attributes, sequences and conditional uncertainty retained. Full-method benchmark gate failed0of7, not a training numerical failure. Exact sealed identity admission applied only after v1 termination. Fresh candidate preflight not yet executed. Static publication timestamp is not live runtime evidence."
+  "scope": "All complete real-GT v1 results, costs, attributes, sequences and conditional uncertainty retained. Full-method benchmark gate failed0of7, not a training numerical failure. Exact sealed identity admission applied only after v1 termination. Fresh candidate preflight not yet executed. Static publication timestamp is not live runtime evidence.",
+  "total_complete_sequences": 615,
+  "arithmetic_correction": "245+50+320=615; every raw score and count unchanged"
 }
