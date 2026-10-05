@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T12:07:07.848611+08:00",
+  "updated_at": "2026-10-05T13:41:27.696561+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。 后续三个模块围绕目标级可靠定位能力保持与风险记忆、保留有益学习的风险约束实际更新、搜索状态敏感且可独立决策的闭环验收展开；同时检验旧能力退化和新能力改善，不以任务平均损失、梯度均衡或减少更新作为最终目标。",
   "server": "2028",
   "gpu_indices": [
@@ -277,7 +277,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-05T11:28:17.438770+08:00",
+  "runtime_snapshot_observed_at": "2026-10-05T13:37:49.506648+08:00",
   "execution_goal_version": "2026-10-05-user-review-v3",
   "ordered_next_steps": [
     {
@@ -439,21 +439,21 @@
   "twelfth_epoch_retention_evidence": "reports/full_method_v1_twelfth_epoch_retention_snapshot.json",
   "thirteenth_epoch_retention_evidence": "reports/full_method_v1_thirteenth_epoch_retention_snapshot.json",
   "monitoring_policy": {
-    "updated_at": "2026-10-05T11:35:47.976865+08:00",
+    "updated_at": "2026-10-05T13:41:27.696561+08:00",
     "user_instruction": "这里你轮询太多了，没到时间不用轮询",
     "mode": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-05T13:35:54.654276+08:00",
-    "estimate_evidence": "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json",
-    "estimated_stage": "Actual current shard start + measured matching public-reference complete native shard wall time, maximum across three GPUs, plus six-minute scoring margin. An estimate, not proof of method speed or suite completion.",
-    "completed_observer_session": 67147,
+    "next_observation_not_before": "2026-10-05T14:25:54.663745+08:00",
+    "estimate_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json",
+    "estimated_stage": "Slowest current native shard: remaining frames / complete-frame wallclock FPS from actual shard start, plus six minutes for scoring. Does not attest completion or queued uncertainty.",
+    "completed_observer_session": 96952,
     "completed_observer_exit_code": 0,
-    "scheduled_observer_native_session": 96952,
-    "scheduled_observer_pid": 10152,
-    "scheduled_observer_started_at": "2026-10-05T11:30:26.299144+08:00",
+    "scheduled_observer_native_session": 76403,
+    "scheduled_observer_pid": 48632,
+    "scheduled_observer_started_at": "2026-10-05T13:39:20.048055+08:00",
     "scheduled_observer_status": "SCHEDULED_ONE_TIME_OBSERVER_NO_INTERIM_QUERY"
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
@@ -467,7 +467,7 @@
         "DepthTrack"
       ],
       "status": "SCORED",
-      "snapshot_evidence": "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json"
+      "snapshot_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json"
     },
     "xtrack_full_method_v1_s2026": {
       "receipt_exists": true,
@@ -476,7 +476,7 @@
         "VisEvent"
       ],
       "status": "RUNNING_NOT_SCORED",
-      "snapshot_evidence": "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json"
+      "snapshot_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json"
     }
   },
   "endpoint_audit_status": "PASS",
@@ -539,7 +539,7 @@
     "active_receipt": "reports/full_method_v1_evaluation_recovery_20261005.json",
     "regression": "reports/vot_empty_results_directory_regression_20261005.json",
     "preservation": "Original failed controller/worker logs and completed LasHeR/VisEvent retained. Same fixed checkpoint and protocols; no training or OPE replay.",
-    "progress_evidence": "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json",
+    "progress_evidence": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json",
     "completed_reference_depthtrack_sequences": 50,
     "completed_reference_depthtrack_frames": 76373,
     "estimated_reference_depthtrack_tracking_completion": "2026-10-05T02:24:52.736506+08:00",
@@ -561,7 +561,19 @@
       "expected_frames": 157421,
       "observed_at": "2026-10-05T10:10:07.913406+08:00"
     },
-    "estimated_method_depthtrack_tracking_completion": "2026-10-05T13:29:54.654276+08:00"
+    "estimated_method_depthtrack_tracking_completion": "2026-10-05T14:19:54.663745+08:00",
+    "method_depthtrack_progress": {
+      "completed_sequences": 45,
+      "expected_sequences": 50,
+      "completed_frames": 70885,
+      "expected_frames": 76373,
+      "observed_at": "2026-10-05T13:37:49.506648+08:00",
+      "active_native_worker": 163477,
+      "completed_native_workers": [
+        163475,
+        163478
+      ]
+    }
   },
   "reference_visevent_complete_metrics": {
     "report": "reports/reference_xtrack_author_release_s2026/VisEvent/scores/metrics.json",
@@ -685,7 +697,7 @@
     "collected_at": "2026-10-05T02:32:10.143444+08:00",
     "scope": "Completed author-reference native scores only. Full 50-sequence coverage, original official PR aggregation, separate group definitions, 50 CSV rows, 11 raw artifact hashes verified. No neural inference or scorer replay. Method scores not inferred."
   },
-  "latest_evaluation_milestone": "reports/full_method_v1_visevent_complete_and_depthtrack_milestone_20261005.json",
+  "latest_evaluation_milestone": "reports/full_method_v1_depthtrack_revised_completion_milestone_20261005.json",
   "method_lasher_complete_metrics": {
     "report": "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/metrics.json",
     "intake": "reports/full_method_v1_lasher_complete_intake_20261005.json",
