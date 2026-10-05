@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T18:51:24.934531+08:00",
+  "updated_at": "2026-10-05T19:19:59.862310+08:00",
   "authorization": "User explicitly requests timely cleanup of our unused generated weights and retention only of the best measured weight.",
   "precheck_cleanup": "reports/precheck_weight_cleanup_20261003.json",
   "active_training": "One most recently completed recovery checkpoint, including model, optimizer and rank RNG; retire older completed epochs and byte-identical latest alias.",
@@ -44,7 +44,8 @@
   },
   "latest_observation_at": "2026-10-05T09:20:12.841852+00:00",
   "protected_completed_candidate": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
-  "unstarted_controls": "C/D isolated source review and CPU math passed; no actual model/DDP preflight, generated control weights or scores. Their endpoint/audit/retention integration remains pending.",
+  "unstarted_controls": "C/D exact sanity/epoch1/endpoint saved-state audit and 240-second owned single-recovery cleanup entries are implemented and source-reviewed; synthetic CPU optimizer state roundtrip/rejection passed. Real checkpoints, real DDP/CUDA restore, cleanup execution and control controller/evaluation identity are pending. No C/D worker launched or control weight deleted.",
   "distance0_weight_files_removed_at_first_retention_observation": 1,
-  "distance0_weight_file_bytes_removed_at_first_retention_observation": 477077203
+  "distance0_weight_file_bytes_removed_at_first_retention_observation": 477077203,
+  "unstarted_control_audit_retention_evidence": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json"
 }

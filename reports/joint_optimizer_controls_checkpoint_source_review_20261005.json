@@ -1,0 +1,155 @@
+{
+  "status": "SOURCE_REVIEW_FAIL",
+  "reviewed_at": "2026-10-05T19:08:25.8756405+08:00",
+  "review_kind": "fresh-context source-only review",
+  "reviewer_agent": "/root/rgbx_controls_checkpoint_source_review_20261005",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "max",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "runtime_attested": false,
+  "model_backend_independently_attested": false,
+  "project": "C:/Users/gb/projects/rgbx-risk",
+  "review_policy": [
+    "C:/Users/gb/AGENTS.md",
+    "C:/Users/gb/.codex/skills/experiment-bridge/SKILL.md Phase 2.5",
+    "C:/Users/gb/.codex/skills/shared-references/local-codex-policy.md"
+  ],
+  "plan_sources": [
+    "configs/current_goal.json:294-357 (P2 and A-G comparison chain)",
+    "configs/current_goal.json:1408-1417 (control launch boundaries)",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md:1794-1826"
+  ],
+  "reviewed_source_sha256": {
+    "rgbx_controls/checkpoint.py": "ab65765f6968990d4b140422b6f039d56c6a3228a9550acd8c99063dfd8d3d32",
+    "scripts/audit_joint_optimizer_control_checkpoint.py": "e9e95855a7b8c033c53835a3ce7af27ddb52b3340a6446dadb05bdac83c57bc6",
+    "scripts/retain_joint_optimizer_control_checkpoints.py": "bc3882ff781c32f5a3a4e787742cdf9201e68ef59471612201ae9dc50604f57f",
+    "scripts/check_joint_optimizer_control_checkpoint_math.py": "697e195324126d0ae84cbd6900399772e0adfbef9dba54609cf0f9299d3484a1",
+    "scripts/train_joint_optimizer_control.py": "12f66e73b7e71508649d3ba96805e85eae507706b825b539ad1593c722994c29",
+    "rgbx_controls/updates.py": "66158fa5d26e77e9608f9007476d9b56d09200ac40b631deee6153feed6926d6",
+    "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+    "configs/xtrack_fixed_mixed_adamw_s2026.json": "404371a7f81a01ce721cf6fc2cbf2b11b30f3b2012f372306a14a3f941b6656f",
+    "configs/xtrack_task_stats_only_s2026.json": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381"
+  },
+  "preparation_record": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
+  "blocking_issues": [
+    {
+      "id": "C-D-RETENTION-RESUME-001",
+      "severity": "BLOCKING",
+      "title": "The existing resume path removes fields required by the active retention worker",
+      "location": {
+        "file": "scripts/retain_joint_optimizer_control_checkpoints.py",
+        "lines": "56-61"
+      },
+      "related_locations": [
+        {
+          "file": "scripts/train_joint_optimizer_control.py",
+          "lines": "93-106",
+          "reason": "The supported --resume path loads a real saved epoch, step count and optimizer/RNG state."
+        },
+        {
+          "file": "scripts/train_joint_optimizer_control.py",
+          "lines": "107-125",
+          "reason": "A new receipt is then written without completed_epochs or last_checkpoint, including on resume."
+        },
+        {
+          "file": "scripts/train_joint_optimizer_control.py",
+          "lines": "207-218",
+          "reason": "Those fields are restored only when the next complete epoch checkpoint has been saved."
+        },
+        {
+          "file": "scripts/retain_joint_optimizer_control_checkpoints.py",
+          "lines": "44-45,76-81",
+          "reason": "The worker polls every 240 seconds, and its existing report prevents simply relaunching the same entry after it has crashed."
+        }
+      ],
+      "static_counterexample": [
+        "Complete and audit formal epoch 1 for either C or D, then activate the prepared retention worker; its handled_completed_epoch becomes 1.",
+        "Resume that formal run using its valid XTrack_ep0001.pth.tar and --resume. The trainer accepts sanity_steps=0 and global_step=2500 and loads initial_epoch=1.",
+        "Before epoch 2 finishes, train_joint_optimizer_control.py:125 writes the new run.json with no completed_epochs or last_checkpoint. These fields remain absent throughout this resumed epoch, not merely during a millisecond write window.",
+        "The next scheduled retention read reaches retain_joint_optimizer_control_checkpoints.py:58 and raises KeyError('completed_epochs') before its handled-epoch comparison. The worker exits and leaves its status receipt looking active.",
+        "Later training checkpoints can accumulate without the required rolling cleanup. A direct restart also fails at the existing-output assertion, so continuation of the previous worker cannot be assumed."
+      ],
+      "why_in_scope": "This follows the already implemented and explicitly advertised checkpoint recovery path. It needs neither a malicious operator, corrupt checkpoint, exotic filesystem behavior nor a timing race.",
+      "minimal_fix": "When constructing the resumed training receipt, preserve completed_epochs from the loaded initial_epoch and last_checkpoint from the actual resumed recovery point before overwriting run.json. Keep the existing retention worker and its strict field access; do not add a get()/fallback, compatibility layer or exception suppression.",
+      "executed_reproduction": false,
+      "validation_after_fix": "Source-review the resumed receipt and its path representation against the existing retention consumer. Real resume and retention execution remain separate pending gates."
+    }
+  ],
+  "nonblocking_issues": [],
+  "source_checks_without_additional_findings": [
+    {
+      "scope": "Native AdamW saved-state format and sparse activity",
+      "evidence": [
+        "rgbx_controls/checkpoint.py:11-41",
+        "rgbx_controls/updates.py:24-36",
+        "scripts/train_joint_optimizer_control.py:73-75,148-156,210-213",
+        "scripts/check_joint_optimizer_control_math.py:40-55"
+      ],
+      "conclusion": "The auditor reconstructs native AdamW on the same named parameter order, validates the sole group's hyperparameters and identifiers, loads on CPU, permits absent state for never-active parameters and per-parameter steps below the global budget, and checks finite correctly shaped moments and nonnegative second moments. This matches the intended Torch 1.13.1 None-versus-active-zero behavior: None skips state/decay; active zero advances state and applies decay. Always-used ffn1_1 weight/bias witnesses must reach the exact global count. The pre-existing CPU semantics script contains explicit assertions for both sparse cases; that script was read, not rerun."
+    },
+    {
+      "scope": "TaskAdaptiveAdamW state names, shapes and task counts",
+      "evidence": [
+        "rgbx_controls/checkpoint.py:42-57",
+        "rgbx_method/optimizer.py:8-21,30-60,82-89",
+        "third_party/XTrack/lib/models/layers/attn_adapt_blocks.py:18,39-43"
+      ],
+      "conclusion": "The reconstructed optimizer uses three state slots for shared/router parameters and one for experts, exactly as the producer. Names, state count, expected m/v shapes, finite moments, nonnegative variance, bounded integer steps and the 24 always-used witnesses' exact three-task budgets are checked. Existing optimizer load_state_dict only changes lr and state; the auditor separately checks all other saved hyperparameters against the constructor values. This is a component control, not acceptance of canonical AdaTask."
+    },
+    {
+      "scope": "Exact sanity, epoch1 and endpoint stages",
+      "evidence": [
+        "scripts/audit_joint_optimizer_control_checkpoint.py:39-72,87,108-112",
+        "scripts/train_joint_optimizer_control.py:81-83,94-98,196-224"
+      ],
+      "conclusion": "The auditor requires exact run/protocol identity, seed 2026, three ranks, per-rank batch 8, 15x60000 formal samples and no AMP. Sanity requires epoch 1/global_step 2/sanity_steps 2 and two saved steps; epoch1 requires 2500/global_step 2500/sanity_steps 0; endpoint requires 15x2500/global_step 37500/sanity_steps 0. Optimizer witnesses independently constrain those counts. Sanity and endpoint additionally require their exact terminal status, matching last checkpoint, and an EXITED/exit_code 0 execution receipt with the exact run, stage and protocol. No source claim substitutes for a real receipt."
+    },
+    {
+      "scope": "Public initialization, frozen tensors, replicas and RNG",
+      "evidence": [
+        "scripts/audit_joint_optimizer_control_checkpoint.py:73-107",
+        "rgbx_controls/checkpoint.py:64-73",
+        "scripts/train_joint_optimizer_control.py:63-70,198-214"
+      ],
+      "conclusion": "The checkpoint is strictly loaded into the configured CPU model and all saved model tensors must be finite. The exact public initialization hash and equality of 244 frozen tensors are required. The auditor checks 504 trainable tensors/5821440 elements and all three saved trainable-replica digests against loaded values. Three Python/NumPy/CPU RNG states are restored only into local RNG objects. CUDA RNG is deliberately checked only as nonempty uint8 bytes; the report correctly says no CUDA RNG restoration was executed."
+    },
+    {
+      "scope": "Owned cleanup scope and completed-file ordering, apart from the resume issue",
+      "evidence": [
+        "scripts/retain_joint_optimizer_control_checkpoints.py:12,23-43,55-81",
+        "scripts/train_joint_optimizer_control.py:207-219"
+      ],
+      "conclusion": "The two exact formal run IDs are hardcoded. Activation requires the exact first-epoch CPU audit and checkpoint bytes. The producer writes checkpoint.tmp and atomically renames it before advertising a completed epoch; the retainer keeps that advertised checkpoint and deletes only strictly older XTrack_ep????.pth.tar files in the same resolved owned run directory. Regular-file/single-link checks exclude indirect targets. checkpoint.tmp, newer files, sanity roots, public inputs, other runs and text evidence are outside the deletion selection. Polling is 240 seconds. The terminal checkpoint is retained for complete three-dataset scoring; best-method selection is explicitly outside this worker."
+    },
+    {
+      "scope": "Prepared in-memory CPU roundtrip and rejection script",
+      "evidence": [
+        "scripts/check_joint_optimizer_control_checkpoint_math.py:18-86"
+      ],
+      "conclusion": "The script builds both real optimizer formats on small CPU tensors, performs two synthetic updates, serializes through BytesIO, reloads on CPU, invokes the validator, checks unchanged parameters and serialized input, and asserts rejection of reordered names, nonfinite moments and counters exceeding the declared budget. The single AssertionError handler is limited to deliberate negative assertions. The validator's zero parameter_update_calls refers to the validation step, not the synthetic setup. It creates no checkpoint file and its output explicitly excludes real model, DDP, restoration and benchmark acceptance. Its runtime success, including the serialized-byte equality assertion on the target Torch version, remains unexecuted in this review."
+    }
+  ],
+  "pending_runtime_and_integration_boundaries": [
+    "Fix and re-review C-D-RETENTION-RESUME-001 before accepting this source set.",
+    "The newly prepared in-memory CPU serialization/roundtrip/rejection script has not been run by this reviewer.",
+    "No real C/D XTrack checkpoint currently exists in the supplied task state. Full-model load, real three-rank sanity, real resume, saved CUDA RNG restoration, first-epoch/endpoint audits and rolling retention execution remain pending.",
+    "The control execution/controller receipt producer and exact scoring identity are explicitly not yet integrated. They are known subsequent preparation, not invented additional defects in this bounded four-file review.",
+    "Both controls still require actual exit0 receipts, full 15-epoch training, complete LasHeR/VisEvent/DepthTrack formal evaluation and comparison before any result or best-weight acceptance.",
+    "Existing distance0 must complete its current training and evaluation gates before formal C/D launches. Do not query its training processes, logs, native observer or GPU before 2026-10-06 17:37:01.070691 CST."
+  ],
+  "actions_and_limits": {
+    "source_files_modified": 0,
+    "only_created_file": "reports/joint_optimizer_controls_checkpoint_source_review_20261005.json",
+    "existing_reports_preserved": true,
+    "cpu_or_gpu_tests_started": 0,
+    "model_forward_calls": 0,
+    "ssh_calls": 0,
+    "remote_calls": 0,
+    "training_process_log_or_gpu_queries": 0,
+    "retention_workers_started": 0,
+    "checkpoint_deletions": 0,
+    "additional_human_markdown_files": 0,
+    "scope_statement": "This is source inspection only. It is not actual recovery, DDP validation, a full-model checkpoint audit, executed retention, formal launch readiness, or benchmark acceptance."
+  }
+}

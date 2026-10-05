@@ -18,7 +18,7 @@
   "source_sha256": {
     "rgbx_controls/__init__.py": "cdaeaf1cb528158dced5aefd94deca4848c7ced4115428bf2c9cde69108d8292",
     "rgbx_controls/updates.py": "66158fa5d26e77e9608f9007476d9b56d09200ac40b631deee6153feed6926d6",
-    "scripts/train_joint_optimizer_control.py": "12f66e73b7e71508649d3ba96805e85eae507706b825b539ad1593c722994c29",
+    "scripts/train_joint_optimizer_control.py": "517ce1aa99f8e6a89aa4e2dd29514ddcfe1c0e8fd143b2220a09daa8381280cc",
     "scripts/check_joint_optimizer_control_math.py": "cc93e106eaf07c03a526b86f3a867877414e185c99bdd19c6232c44dcb708c6d",
     "configs/xtrack_fixed_mixed_adamw_s2026.json": "404371a7f81a01ce721cf6fc2cbf2b11b30f3b2012f372306a14a3f941b6656f",
     "configs/xtrack_task_stats_only_s2026.json": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381"
@@ -32,9 +32,9 @@
   "active_distance0_runtime_queries": 0,
   "canonical_AdaTask_completed": false,
   "remaining_before_formal_controls": [
-    "real three-rank sanity and saved-state audit when existing distance0 stages release GPUs",
-    "exact control endpoint audit/evaluation identity admission",
-    "owned first-epoch recovery audit/retention integration"
+    "real three-rank sanity with exact execution receipt and saved-state audit after distance0 releases GPUs",
+    "control execution/controller and exact endpoint/evaluation identity integration",
+    "real first-epoch audit then owned retention activation"
   ],
   "plan_source": "configs/current_goal.json ordered_next_steps P2 and the single handoff A-G fair comparison chain",
   "skill": "C:/Users/gb/.codex/skills/experiment-bridge/SKILL.md",
@@ -45,10 +45,17 @@
     "Require saved global_step == saved epoch * formal full-epoch steps.",
     "Copy prior attempt run.json before writing the resumed receipt."
   ],
-  "updated_at": "2026-10-05T18:51:24.934531+08:00",
+  "updated_at": "2026-10-05T19:19:59.862310+08:00",
   "revised_review": "reports/joint_optimizer_controls_source_review_revised_20261005.json",
   "cpu_math_evidence": "reports/joint_optimizer_controls_cpu_math_20261005.json",
   "cpu_math_exit_code": 0,
   "cpu_math_started_at": "2026-10-05T10:23:10.289824+00:00",
-  "cpu_math_ended_at": "2026-10-05T10:23:15.573622+00:00"
+  "cpu_math_ended_at": "2026-10-05T10:23:15.573622+00:00",
+  "checkpoint_integration_preparation": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
+  "latest_control_entry_review": "reports/joint_optimizer_controls_checkpoint_source_review_revised_20261005.json",
+  "latest_control_entry_fix": "Preserve completed_epochs and actual recovery path on resume so the future retention worker can keep its existing completed checkpoint.",
+  "latest_control_entry_fix_scope": "Resume metadata only; no loss, sampling, optimizer rule, trainable range or budget change.",
+  "prior_cpu_math_source_scope": "The earlier actual CPU algebra/optimizer report preserves the prior driver SHA12f66e73...; optimization helpers are unchanged. The new driver metadata fix is source-reviewed separately, not GPU-resume tested.",
+  "checkpoint_state_cpu_check": "reports/joint_optimizer_controls_checkpoint_cpu_math_20261005.json",
+  "retention_workers_launched": 0
 }

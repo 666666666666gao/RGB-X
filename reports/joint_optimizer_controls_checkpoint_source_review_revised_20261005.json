@@ -1,0 +1,99 @@
+{
+  "status": "SOURCE_REVIEW_PASS",
+  "reviewed_at": "2026-10-05T19:12:31.5252099+08:00",
+  "review_kind": "source-only revision review by the same fresh-context reviewer",
+  "reviewer_agent": "/root/rgbx_controls_checkpoint_source_review_20261005",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "max",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "runtime_attested": false,
+  "model_backend_independently_attested": false,
+  "project": "C:/Users/gb/projects/rgbx-risk",
+  "review_policy": [
+    "C:/Users/gb/AGENTS.md",
+    "C:/Users/gb/.codex/skills/experiment-bridge/SKILL.md Phase 2.5",
+    "C:/Users/gb/.codex/skills/shared-references/local-codex-policy.md"
+  ],
+  "initial_review": {
+    "path": "reports/joint_optimizer_controls_checkpoint_source_review_20261005.json",
+    "status": "SOURCE_REVIEW_FAIL",
+    "sha256": "6e678da8272d3da3473eab7e4a586c975d089db039a959246f4f76b9d5f8c62f",
+    "preserved": true
+  },
+  "reviewed_source_sha256": {
+    "rgbx_controls/checkpoint.py": "ab65765f6968990d4b140422b6f039d56c6a3228a9550acd8c99063dfd8d3d32",
+    "scripts/audit_joint_optimizer_control_checkpoint.py": "e9e95855a7b8c033c53835a3ce7af27ddb52b3340a6446dadb05bdac83c57bc6",
+    "scripts/retain_joint_optimizer_control_checkpoints.py": "bc3882ff781c32f5a3a4e787742cdf9201e68ef59471612201ae9dc50604f57f",
+    "scripts/check_joint_optimizer_control_checkpoint_math.py": "bd82f6706091a1d050726a12cfc2f5f281a35a8562451dcf6b7df4e32544f93c",
+    "scripts/train_joint_optimizer_control.py": "517ce1aa99f8e6a89aa4e2dd29514ddcfe1c0e8fd143b2220a09daa8381280cc"
+  },
+  "preparation_record": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
+  "preparation_source_hashes_match": true,
+  "blocking_issues": [],
+  "nonblocking_issues": [],
+  "resolved_issues": [
+    {
+      "id": "C-D-RETENTION-RESUME-001",
+      "resolution": "RESOLVED_IN_SOURCE",
+      "fix_location": {
+        "file": "scripts/train_joint_optimizer_control.py",
+        "lines": "114-115"
+      },
+      "consumer_location": {
+        "file": "scripts/retain_joint_optimizer_control_checkpoints.py",
+        "lines": "56-61"
+      },
+      "evidence": [
+        "The existing formal resume checks at train_joint_optimizer_control.py:93-101 load initial_epoch from the actual checkpoint after requiring sanity_steps=0 and global_step=epoch*formal_steps.",
+        "The added conditional writes completed_epochs=initial_epoch and last_checkpoint=str(Path(args.resume).resolve(strict=True)) into the rebuilt receipt before its first run.json write at line 127.",
+        "For the owned named recovery checkpoint required by the retention policy, the resolved absolute path equals the consumer's root/XTrack_ep%04d.pth.tar. Relative spellings of that same actual checkpoint are normalized before publication.",
+        "The previous counterexample now leaves run.json with completed_epochs=1 and the actual ep0001 recovery path throughout resumed epoch 2. The active worker can read the prior completed epoch at its next 240-second poll. If it has already handled epoch 1, it skips deletion and continues normally.",
+        "Once the next checkpoint is atomically saved, the existing lines 217-220 advance the same receipt to the new completed epoch and checkpoint, allowing the original worker to apply its unchanged retention policy."
+      ],
+      "scope": "The correction is two lines of resume receipt metadata in the unlaunched C/D driver. It adds no fallback, exception suppression, optimizer branch or compatibility layer. It does not change gradients, parameter updates, RNG restoration, sampling, learning rate, the resumed epoch loop, or the 15-epoch/37500-update formal budget.",
+      "executed_resume_or_retention_reproduction": false
+    }
+  ],
+  "other_revision_checked": {
+    "file": "scripts/check_joint_optimizer_control_checkpoint_math.py",
+    "lines": "38-54,78-82",
+    "conclusion": "The new line 54 explicitly checks that the always-inactive synthetic parameter remains equal to its initialized ones after the two setup updates, for both optimizer branches. This supports the printed unchanged-unused-parameter claim. The serialization, CPU reload, unchanged validation input and intentional rejection checks otherwise retain the semantics reviewed in the initial report. No new runtime claim is made.",
+    "executed": false
+  },
+  "unchanged_source_conclusions": [
+    "The optimizer-state validator, exact stage auditor and retention worker have exactly the same source hashes as the initial review. Their previously recorded source checks remain applicable.",
+    "Native AdamW permits legitimately absent sparse states and bounded per-parameter counts while enforcing exact always-used witness counts; TaskAdaptiveAdamW retains its three shared/router states and one expert state.",
+    "The exact stage gates remain sanity=2 real saved steps, epoch1=2500 and endpoint=37500, with sanity_steps separation and terminal EXITED/exit0 execution-receipt requirements for sanity and endpoint.",
+    "Strict public initialization, frozen tensors, saved three-replica equality and CPU RNG validation remain required. CUDA RNG bytes are checked without claiming actual CUDA restoration.",
+    "Cleanup still requires the exact first-epoch CPU audit, remains inside the two named owned formal run roots, preserves the newest completed checkpoint and checkpoint.tmp, and polls at 240 seconds. Public inputs, other runs and text evidence remain outside its deletion selection.",
+    "The endpoint remains retained until complete three-dataset scoring and comparison; selecting the best measured method is outside this rolling worker."
+  ],
+  "historical_evidence_boundary": {
+    "prior_control_driver_sha256": "12f66e73b7e71508649d3ba96805e85eae507706b825b539ad1593c722994c29",
+    "prior_cpu_math_report": "reports/joint_optimizer_controls_cpu_math_20261005.json",
+    "conclusion": "The earlier source reviews and CPU semantics report remain historical evidence for their original source identities. They are not relabeled as execution of the revised driver or the new saved-state roundtrip script. The inspected driver diff changes only resume receipt metadata."
+  },
+  "pending_runtime_and_integration_boundaries": [
+    "The newly prepared in-memory CPU saved-state serialization/roundtrip/rejection check remains unexecuted by this reviewer.",
+    "No real C/D model checkpoint, real three-rank sanity, GPU resume, CUDA RNG restoration, full-model saved-state audit or executed retention is accepted by this source PASS.",
+    "The control execution/controller receipt producer and exact scoring identity are still pending integration. This PASS is not formal-launch readiness.",
+    "Actual sanity and endpoint exit0 receipts, 15-epoch training, all three complete formal benchmark evaluations and best-method comparison remain required.",
+    "Existing distance0 training and evaluation gates precede formal C/D launch. No process, log, native observer or GPU query is allowed before 2026-10-06 17:37:01.070691 CST."
+  ],
+  "actions_and_limits": {
+    "source_files_modified_by_reviewer": 0,
+    "only_created_file": "reports/joint_optimizer_controls_checkpoint_source_review_revised_20261005.json",
+    "existing_reports_preserved": true,
+    "cpu_or_gpu_tests_started": 0,
+    "model_forward_calls": 0,
+    "ssh_calls": 0,
+    "remote_calls": 0,
+    "training_process_log_or_gpu_queries": 0,
+    "retention_workers_started": 0,
+    "checkpoint_deletions": 0,
+    "publications": 0,
+    "additional_human_markdown_files": 0,
+    "scope_statement": "Source inspection only; not an executed recovery, DDP/full-model audit, retention run, GPU preflight or benchmark acceptance."
+  }
+}

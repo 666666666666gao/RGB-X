@@ -111,6 +111,8 @@ def main():
                    localization_check_calls=0, correction_calls=0, trajectory_calls=0, check_examples=0,
                    unused_check_loader_constructed_not_iterated=True, formal_tracking_scores='NOT_RUN',
                    started_at=datetime.now(timezone.utc).isoformat(), rank_pids=[None] * world)
+    if args.resume:
+        receipt.update(completed_epochs=initial_epoch, last_checkpoint=str(Path(args.resume).resolve(strict=True)))
     dist.all_gather_object(receipt['rank_pids'], os.getpid())
     receipt['attempt_id'] = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     if rank == 0:

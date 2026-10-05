@@ -1,0 +1,62 @@
+{
+  "status": "PASS_CPU_CONTROL_OPTIMIZER_STATE_ROUNDTRIP_AND_REJECTION_NOT_REAL_CHECKPOINT_AUDIT",
+  "started_at": "2026-10-05T11:14:17.597748+00:00",
+  "ended_at": "2026-10-05T11:14:22.196954+00:00",
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "/data/gb/rgbx-risk/scripts/check_joint_optimizer_control_checkpoint_math.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"PASS_CPU_CONTROL_OPTIMIZER_STATE_ROUNDTRIP_AND_REJECTION_NOT_REAL_CHECKPOINT_AUDIT\", \"checks\": [{\"optimizer\": \"adamw\", \"serialized_cpu_roundtrip\": true, \"loaded_state_valid\": true, \"parameter_values_unchanged\": true, \"serialized_input_unchanged\": true, \"wrong_parameter_order_rejected\": true, \"nonfinite_moment_rejected\": true, \"optimizer_steps_exceeding_committed_updates_rejected\": true, \"sparse_unused_parameter_retained_without_update\": true}, {\"optimizer\": \"task_adaptive_only\", \"serialized_cpu_roundtrip\": true, \"loaded_state_valid\": true, \"parameter_values_unchanged\": true, \"serialized_input_unchanged\": true, \"wrong_parameter_order_rejected\": true, \"nonfinite_moment_rejected\": true, \"optimizer_steps_exceeding_committed_updates_rejected\": true, \"sparse_unused_parameter_retained_without_update\": true}], \"cuda_initialized\": false, \"model_forward_calls\": 0, \"dataset_reads\": 0, \"generated_checkpoint_files\": 0, \"scope\": \"In-memory synthetic CPU optimizer-state serialization/reload and rejection checks only. Exact real XTrack checkpoint/model/RNG audits, DDP and benchmarks remain unexecuted.\"}\n",
+  "stderr": "",
+  "cuda_visible_devices": "",
+  "invocation_count": 1,
+  "control_source_sha256": {
+    "rgbx_controls/checkpoint.py": "ab65765f6968990d4b140422b6f039d56c6a3228a9550acd8c99063dfd8d3d32",
+    "scripts/audit_joint_optimizer_control_checkpoint.py": "e9e95855a7b8c033c53835a3ce7af27ddb52b3340a6446dadb05bdac83c57bc6",
+    "scripts/retain_joint_optimizer_control_checkpoints.py": "bc3882ff781c32f5a3a4e787742cdf9201e68ef59471612201ae9dc50604f57f",
+    "scripts/check_joint_optimizer_control_checkpoint_math.py": "bd82f6706091a1d050726a12cfc2f5f281a35a8562451dcf6b7df4e32544f93c",
+    "scripts/train_joint_optimizer_control.py": "517ce1aa99f8e6a89aa4e2dd29514ddcfe1c0e8fd143b2220a09daa8381280cc",
+    "reports/joint_optimizer_controls_checkpoint_source_review_revised_20261005.json": "2cf0078c5b7e80d321837c5255c7b80af4b770e6e1672d1fa0b5711e5dee6e5f"
+  },
+  "common_main_recipe_matched": true,
+  "code_review": "same-family/provisional source pass",
+  "active_distance0_runtime_queries": 0,
+  "active_distance0_source_mutations": 0,
+  "new_gpu_jobs": 0,
+  "goal_achieved": false,
+  "native_ssh_exit_code": 0,
+  "native_ssh_stderr": "",
+  "cpu_result": {
+    "status": "PASS_CPU_CONTROL_OPTIMIZER_STATE_ROUNDTRIP_AND_REJECTION_NOT_REAL_CHECKPOINT_AUDIT",
+    "checks": [
+      {
+        "optimizer": "adamw",
+        "serialized_cpu_roundtrip": true,
+        "loaded_state_valid": true,
+        "parameter_values_unchanged": true,
+        "serialized_input_unchanged": true,
+        "wrong_parameter_order_rejected": true,
+        "nonfinite_moment_rejected": true,
+        "optimizer_steps_exceeding_committed_updates_rejected": true,
+        "sparse_unused_parameter_retained_without_update": true
+      },
+      {
+        "optimizer": "task_adaptive_only",
+        "serialized_cpu_roundtrip": true,
+        "loaded_state_valid": true,
+        "parameter_values_unchanged": true,
+        "serialized_input_unchanged": true,
+        "wrong_parameter_order_rejected": true,
+        "nonfinite_moment_rejected": true,
+        "optimizer_steps_exceeding_committed_updates_rejected": true,
+        "sparse_unused_parameter_retained_without_update": true
+      }
+    ],
+    "cuda_initialized": false,
+    "model_forward_calls": 0,
+    "dataset_reads": 0,
+    "generated_checkpoint_files": 0,
+    "scope": "In-memory synthetic CPU optimizer-state serialization/reload and rejection checks only. Exact real XTrack checkpoint/model/RNG audits, DDP and benchmarks remain unexecuted."
+  }
+}
