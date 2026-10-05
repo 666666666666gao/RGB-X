@@ -1,0 +1,1064 @@
+{
+  "status": "ACTUAL_COMPLETED37500_ROUTING_AND_LOCALIZATION_RISK_DESCRIPTIVE_DIAGNOSIS",
+  "analyzed_at": "2026-10-05T00:19:29.584085+00:00",
+  "input": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/updates.jsonl",
+    "bytes": 71091121,
+    "sha256": "181ea2e5f7b93413a0cc51ac3a82180283a0ca3242d63f27462350499aad4173",
+    "committed_updates": 37500
+  },
+  "existing_analysis_sha256": "383414f0f04e82c2a410791331006d24aa91ddc675c6b426e17034851527ca5f",
+  "script_sha256": "6139b5f9a09bb30fd879f508e2f4f368e0c0836bacb8793a7773c2cce74bef5a",
+  "task_order": [
+    "RGB-T",
+    "RGB-D",
+    "RGB-Event"
+  ],
+  "objective_order": [
+    "response",
+    "box"
+  ],
+  "updates": 37500,
+  "risk_events": 968,
+  "nonzero_selections": 20,
+  "updates_with_any_candidate_route_change": 19628,
+  "updates_with_any_accepted_route_change": 19628,
+  "task_results": [
+    {
+      "task": "RGB-T",
+      "updates_with_any_localization_risk": 260,
+      "updates_with_accepted_localization_risk": 256,
+      "candidate_route_change_updates": 9321,
+      "accepted_route_change_updates": 9320,
+      "risk_and_route_change_updates": 216,
+      "risk_without_route_change_updates": 44,
+      "route_change_without_task_risk_updates": 9105,
+      "neither_task_risk_nor_route_change_updates": 28135,
+      "selected_nonzero_steps_with_task_risk": 4,
+      "selected_nonzero_steps_with_task_route_change": 5,
+      "objectives": [
+        {
+          "objective": "response",
+          "candidate_risk_occurrences": 195,
+          "accepted_risk_occurrences": 194,
+          "risk_fully_eliminated_occurrences": 1,
+          "positive_risk_reduced_but_not_eliminated_occurrences": 0,
+          "newly_positive_after_selection": 0,
+          "normalization_floor_activated": 0,
+          "normalization_floor_activated_with_risk": 0,
+          "before_loss_all_updates": {
+            "minimum": 0.0003649332793429494,
+            "median": 0.3254939913749695,
+            "maximum": 3.0765721797943115
+          },
+          "before_loss_risky_updates": {
+            "minimum": 0.006874898448586464,
+            "median": 0.285042941570282,
+            "maximum": 1.2356345653533936
+          }
+        },
+        {
+          "objective": "box",
+          "candidate_risk_occurrences": 90,
+          "accepted_risk_occurrences": 87,
+          "risk_fully_eliminated_occurrences": 3,
+          "positive_risk_reduced_but_not_eliminated_occurrences": 0,
+          "newly_positive_after_selection": 0,
+          "normalization_floor_activated": 0,
+          "normalization_floor_activated_with_risk": 0,
+          "before_loss_all_updates": {
+            "minimum": 0.06419142335653305,
+            "median": 0.4541555494070053,
+            "maximum": 4.135838508605957
+          },
+          "before_loss_risky_updates": {
+            "minimum": 0.13653679192066193,
+            "median": 0.4587125927209854,
+            "maximum": 1.8828825950622559
+          }
+        }
+      ],
+      "mean_candidate_route_change_fraction": 0.004209629932790995,
+      "mean_accepted_route_change_fraction": 0.00420925956239303
+    },
+    {
+      "task": "RGB-D",
+      "updates_with_any_localization_risk": 436,
+      "updates_with_accepted_localization_risk": 433,
+      "candidate_route_change_updates": 8614,
+      "accepted_route_change_updates": 8614,
+      "risk_and_route_change_updates": 342,
+      "risk_without_route_change_updates": 94,
+      "route_change_without_task_risk_updates": 8272,
+      "neither_task_risk_nor_route_change_updates": 28792,
+      "selected_nonzero_steps_with_task_risk": 11,
+      "selected_nonzero_steps_with_task_route_change": 10,
+      "objectives": [
+        {
+          "objective": "response",
+          "candidate_risk_occurrences": 378,
+          "accepted_risk_occurrences": 375,
+          "risk_fully_eliminated_occurrences": 3,
+          "positive_risk_reduced_but_not_eliminated_occurrences": 7,
+          "newly_positive_after_selection": 0,
+          "normalization_floor_activated": 0,
+          "normalization_floor_activated_with_risk": 0,
+          "before_loss_all_updates": {
+            "minimum": 0.00014202325837686658,
+            "median": 0.15501054376363754,
+            "maximum": 1.9843597412109375
+          },
+          "before_loss_risky_updates": {
+            "minimum": 0.0006367551977746189,
+            "median": 0.09299153834581375,
+            "maximum": 1.3582847118377686
+          }
+        },
+        {
+          "objective": "box",
+          "candidate_risk_occurrences": 81,
+          "accepted_risk_occurrences": 81,
+          "risk_fully_eliminated_occurrences": 0,
+          "positive_risk_reduced_but_not_eliminated_occurrences": 2,
+          "newly_positive_after_selection": 0,
+          "normalization_floor_activated": 0,
+          "normalization_floor_activated_with_risk": 0,
+          "before_loss_all_updates": {
+            "minimum": 0.05821257084608078,
+            "median": 0.2616986334323883,
+            "maximum": 2.793121099472046
+          },
+          "before_loss_risky_updates": {
+            "minimum": 0.11112862080335617,
+            "median": 0.2591346502304077,
+            "maximum": 0.7586106657981873
+          }
+        }
+      ],
+      "mean_candidate_route_change_fraction": 0.003862592871238788,
+      "mean_accepted_route_change_fraction": 0.003862592871238788
+    },
+    {
+      "task": "RGB-Event",
+      "updates_with_any_localization_risk": 286,
+      "updates_with_accepted_localization_risk": 283,
+      "candidate_route_change_updates": 10136,
+      "accepted_route_change_updates": 10136,
+      "risk_and_route_change_updates": 239,
+      "risk_without_route_change_updates": 47,
+      "route_change_without_task_risk_updates": 9897,
+      "neither_task_risk_nor_route_change_updates": 27317,
+      "selected_nonzero_steps_with_task_risk": 5,
+      "selected_nonzero_steps_with_task_route_change": 15,
+      "objectives": [
+        {
+          "objective": "response",
+          "candidate_risk_occurrences": 224,
+          "accepted_risk_occurrences": 224,
+          "risk_fully_eliminated_occurrences": 0,
+          "positive_risk_reduced_but_not_eliminated_occurrences": 2,
+          "newly_positive_after_selection": 0,
+          "normalization_floor_activated": 0,
+          "normalization_floor_activated_with_risk": 0,
+          "before_loss_all_updates": {
+            "minimum": 7.270342030096799e-05,
+            "median": 0.2056717425584793,
+            "maximum": 2.244572401046753
+          },
+          "before_loss_risky_updates": {
+            "minimum": 0.0007633139612153172,
+            "median": 0.15861882269382477,
+            "maximum": 1.1153993606567383
+          }
+        },
+        {
+          "objective": "box",
+          "candidate_risk_occurrences": 89,
+          "accepted_risk_occurrences": 85,
+          "risk_fully_eliminated_occurrences": 4,
+          "positive_risk_reduced_but_not_eliminated_occurrences": 0,
+          "newly_positive_after_selection": 0,
+          "normalization_floor_activated": 0,
+          "normalization_floor_activated_with_risk": 0,
+          "before_loss_all_updates": {
+            "minimum": 0.04751237481832504,
+            "median": 0.32196711003780365,
+            "maximum": 3.004631757736206
+          },
+          "before_loss_risky_updates": {
+            "minimum": 0.13338950276374817,
+            "median": 0.29451900720596313,
+            "maximum": 1.1748614311218262
+          }
+        }
+      ],
+      "mean_candidate_route_change_fraction": 0.00469148181527853,
+      "mean_accepted_route_change_fraction": 0.00469148181527853
+    }
+  ],
+  "all_twenty_nonzero_selection_records": [
+    {
+      "global_step": 1069,
+      "epoch": 1,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0009996008593589067,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 1308,
+      "epoch": 1,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.07119454443454742
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0277777798473835,
+        0.0,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0277777798473835,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "global_step": 1800,
+      "epoch": 1,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0010033089201897383,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00037775794044137,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.0277777798473835
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.0277777798473835
+      ]
+    },
+    {
+      "global_step": 4043,
+      "epoch": 2,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.05554302781820297
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 4855,
+      "epoch": 2,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0013112768065184355,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0004356098361313343,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0277777798473835,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0277777798473835,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 6768,
+      "epoch": 3,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00018012779764831066
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.9576709493994713e-05
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.0277777798473835
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.0277777798473835
+      ]
+    },
+    {
+      "global_step": 9069,
+      "epoch": 4,
+      "selected_correction_strength": 1.0,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.06920836120843887,
+          0.01316054817289114
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0015644277445971966,
+          0.0005532845389097929
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0277777798473835,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0277777798473835,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 9128,
+      "epoch": 4,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00044904183596372604,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.01388888992369175,
+        0.0,
+        0.0277777798473835
+      ],
+      "accepted_route_change": [
+        0.01388888992369175,
+        0.0,
+        0.0277777798473835
+      ]
+    },
+    {
+      "global_step": 9342,
+      "epoch": 4,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0006562909111380577,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0001894256565719843,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.01388888992369175,
+        0.01388888992369175,
+        0.0277777798473835
+      ],
+      "accepted_route_change": [
+        0.01388888992369175,
+        0.01388888992369175,
+        0.0277777798473835
+      ]
+    },
+    {
+      "global_step": 12043,
+      "epoch": 5,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0017406085971742868,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0006394388619810343,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 12764,
+      "epoch": 6,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.03811193257570267
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.0
+      ]
+    },
+    {
+      "global_step": 13041,
+      "epoch": 6,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00014361320063471794,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          3.303005360066891e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 13743,
+      "epoch": 6,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0010395003482699394,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00041626463644206524,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 15478,
+      "epoch": 7,
+      "selected_correction_strength": 1.0,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0025376013945788145,
+          0.006670788861811161
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.00011824374087154865,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 16287,
+      "epoch": 7,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.27323728799819946
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.01388888992369175,
+        0.01388888992369175,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 16307,
+      "epoch": 7,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0023267369251698256,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.001056696753948927,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.01388888992369175
+      ]
+    },
+    {
+      "global_step": 16863,
+      "epoch": 7,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.2271902710199356
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.01388888992369175,
+        0.0
+      ]
+    },
+    {
+      "global_step": 17159,
+      "epoch": 7,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.052179351449012756
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "global_step": 19181,
+      "epoch": 8,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.69888686388731e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0277777798473835,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0277777798473835,
+        0.0
+      ]
+    },
+    {
+      "global_step": 21649,
+      "epoch": 9,
+      "selected_correction_strength": 0.5,
+      "candidate_risk": [
+        [
+          0.0010357964783906937,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0277777798473835,
+        0.01388888992369175,
+        0.01388888992369175
+      ],
+      "accepted_route_change": [
+        0.0277777798473835,
+        0.01388888992369175,
+        0.01388888992369175
+      ]
+    }
+  ],
+  "route_change_definition": "Per task, rank-mean fraction of returned routing Top2 expert sets changed on the paired check batch; sets are sorted before comparison. Three augmented training-pool check pairs per task. Evaluation mode disables noise/dropout.",
+  "bounds": "Top2-set stability does not imply constant gate weights, content, expert contributions or safe predictions. Co-occurrence is not causal attribution. Stored task-mean localization harms are not benchmark scores or per-sample harm labels. Floor activation is an observed arithmetic condition, not evidence that a replacement scale improves accuracy.",
+  "scope": "Read the SHA-bound already completed training telemetry once. No model, optimizer, inference, scorer, current evaluation log/session/process, hardware query or weight action. Current live evaluation remains untouched; no efficacy, significance or full research completion claim."
+}

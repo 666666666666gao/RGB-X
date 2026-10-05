@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T00:03:17.609932+00:00",
+  "updated_at": "2026-10-05T00:23:47.294058+00:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。",
   "server": "2028",
   "gpu_indices": [
@@ -733,5 +733,15 @@
     },
     "interpretation": "Global near-ties can mask substantial paired sequence gains and harms. Attribute memberships overlap and sign counts alone do not determine mean gains. Descriptive saved-score evidence only; no training-seed, causality or significance claim. Retain all245 sequence and19 attribute results, not only examples.",
     "full_all_seven_comparison_available": false
+  },
+  "completed_route_risk_diagnosis": {
+    "report": "reports/full_method_v1_complete_route_risk_diagnosis_20261005.json",
+    "source": "scripts/analyze_full_method_route_risk.py",
+    "status": "ACTUAL_COMPLETED37500_ROUTING_AND_LOCALIZATION_RISK_DESCRIPTIVE_DIAGNOSIS",
+    "updates": 37500,
+    "candidate_route_change_updates": 19628,
+    "normalization_floor_activated": 0,
+    "nonzero_selections": 20,
+    "scope": "Completed training-pool task-mean check signals, not fresh runtime, causal attribution, per-sample ground truth or benchmark gain."
   }
 }
