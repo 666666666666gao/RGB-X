@@ -1,0 +1,931 @@
+{
+  "status": "PASS_DOCUMENTED_TWO_STEP_SANITY_NOT_FORMAL_RESULT",
+  "recorded_at": "2026-10-05T15:10:45.656481+08:00",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "max",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "runtime_attested": false,
+  "runtime_attestation_note": "Model and effort attribution follows this fresh native agent spawn request. No separately exposed backend model/effort attestation was available. Actual experiment execution is attested by the native process exit and saved-state evidence below.",
+  "experiment_execution_runtime_attested": true,
+  "skill": "C:/Users/gb/.codex/skills/run-experiment/SKILL.md",
+  "compute_contract": "C:/Users/gb/.codex/skills/shared-references/compute-env-contract.md section4.3",
+  "provider_ledger": "docs/RGB-X_\u7814\u7a76\u4e0e\u5b9e\u9a8c\u5b8c\u6574\u4ea4\u63a5_2026-10-02.md sections2/4 and final current preflight section",
+  "document_sha256_at_launch": "dfeff101c70f2ec9f1f80f782085b6739e777a264d596d27a6c117afc2fc18c9",
+  "documented_plan": {
+    "path": "C:\\Users\\gb\\projects\\rgbx-risk\\reports\\full_method_v2_distance0_documented_preflight_plan_20261005.json",
+    "sha256": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d"
+  },
+  "parent_actual_launch_gate": {
+    "path": "C:\\Users\\gb\\projects\\rgbx-risk\\reports\\full_method_v2_distance0_actual_preflight_gate_20261005.json",
+    "sha256": "e9a95bf2482055ab24a966dbee39c30909f056bf9ce86f95a6712d4d08afd627",
+    "observed_at": "2026-10-05T15:01:20.388953+08:00",
+    "gpu_memory_snapshot": "0, 9\n1, 9\n2, 33\n",
+    "prior_pipeline_exit0": true
+  },
+  "environment": {
+    "provider": "SSH2028",
+    "project": "/data/gb/rgbx-risk",
+    "conda": "/data/gb/conda/envs/rgbx-risk",
+    "canonical_spec_sha256": "433a922a61d09bbf39d671e9ee1636c4ab0cac3ec6865b32baac9e7ce7e12fa4",
+    "warm_reuse": true,
+    "rebuild_install_or_old_preflight_replay": false
+  },
+  "execution": {
+    "status": "EXITED_EXACT_DOCUMENTED_INVOCATION",
+    "start_at": "2026-10-05T15:05:32.568927+08:00",
+    "launch_count": 1,
+    "native_local_python_pid": 4272,
+    "ssh_argv": [
+      "ssh",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ClearAllForwardings=yes",
+      "-o",
+      "ConnectTimeout=20",
+      "2028",
+      "cd /data/gb/rgbx-risk && env CUDA_VISIBLE_DEVICES=0,1,2 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/third_party/XTrack:/data/gb/rgbx-risk/third_party/XTrack/lib/train /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29530 /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json --sanity-steps 2 > /home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity_launcher.log 2>&1"
+    ],
+    "actual_remote_command": "cd /data/gb/rgbx-risk && env CUDA_VISIBLE_DEVICES=0,1,2 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/third_party/XTrack:/data/gb/rgbx-risk/third_party/XTrack/lib/train /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29530 /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json --sanity-steps 2 > /home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity_launcher.log 2>&1",
+    "command_sha256": "f4267440b1e36482967eadd4df4a0e36b0ebd10e8596f4cb8d3666abbc7e18d4",
+    "plan_path": "C:\\Users\\gb\\projects\\rgbx-risk\\reports\\full_method_v2_distance0_documented_preflight_plan_20261005.json",
+    "plan_sha256": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
+    "document_sha256": "dfeff101c70f2ec9f1f80f782085b6739e777a264d596d27a6c117afc2fc18c9",
+    "observation_rule": "No relaunch. First observation 180 seconds after start; subsequent needed observations 180-300 seconds apart.",
+    "estimated_duration_seconds": [
+      60,
+      180
+    ],
+    "first_observation_not_before": "2026-10-05T15:08:32.569433+08:00",
+    "native_local_ssh_pid": 5116,
+    "native_exec_session_id": 66468,
+    "exit_code": 0,
+    "end_at": "2026-10-05T15:06:41.078152+08:00",
+    "ssh_stdout": "",
+    "ssh_stderr": "",
+    "cpu_audit": {
+      "status": "EXITED",
+      "start_at": "2026-10-05T15:10:28.897716+08:00",
+      "local_python_pid": 46516,
+      "local_ssh_pid": 29848,
+      "command": "cd /data/gb/rgbx-risk && env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONDONTWRITEBYTECODE=1 /data/gb/conda/envs/rgbx-risk/bin/python -",
+      "stdin_script_sha256": "d37645b2537c587d035c6ad8d02f8411071761cca5cafc82fae6db096a0b9ef7",
+      "first_observation_not_before": "2026-10-05T15:13:28.960859+08:00",
+      "end_at": "2026-10-05T15:10:45.651225+08:00",
+      "exit_code": 0,
+      "native_exec_session_id": 43958
+    }
+  },
+  "actual_command_exactly_equals_documented_remote_command": true,
+  "documented_invocation_execution_count": 1,
+  "actual_process_exit0": true,
+  "cpu_audit": {
+    "actual_ssh_argv": [
+      "ssh",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ClearAllForwardings=yes",
+      "-o",
+      "ConnectTimeout=20",
+      "2028",
+      "cd /data/gb/rgbx-risk && env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONDONTWRITEBYTECODE=1 /data/gb/conda/envs/rgbx-risk/bin/python -"
+    ],
+    "start_at": "2026-10-05T15:10:28.897716+08:00",
+    "end_at": "2026-10-05T15:10:45.651225+08:00",
+    "exit_code": 0,
+    "stdin_script_sha256": "d37645b2537c587d035c6ad8d02f8411071761cca5cafc82fae6db096a0b9ef7",
+    "stdin_script": "EXPECTED_SOURCE_HASHES={'configs/full_method_v2_distance0.json': 'f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481', 'scripts/train_full_method.py': 'e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482', 'rgbx_method/__init__.py': 'c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc', 'rgbx_method/data.py': 'ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d', 'rgbx_method/losses.py': '2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9', 'rgbx_method/optimizer.py': 'a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2', 'rgbx_method/risk.py': '3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450', 'rgbx_method/trajectory.py': '68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd', 'scripts/run_full_method_v2_distance0_job.py': 'bf3f9f9520c73d38aa0df439e367ea540b87fa6e0a41032c3e0e60fc5ad346df', 'scripts/audit_joint_endpoint_v2_distance0.py': '91b7ed4899ad9476575ed1676c246616bd7f4adaea6df4a3a785473d061befa4', 'scripts/audit_full_method_v2_distance0_first_epoch.py': '8da030b336d3384c3d77d4ad38ea75bb58e955c9b72e183548e98db6004f2737', 'scripts/retain_full_method_v2_distance0_checkpoints.py': '2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102', 'scripts/xtrack_eval_parameters.py': 'f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003', 'scripts/compare_complete_results.py': 'cfc32d0149ce910c8de348f8156de6b4a7a941e5576bee6e8376d217f58a3200', 'scripts/analyze_paired_sequence_uncertainty.py': 'dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189'}\nEXPECTED_PROTOCOL_SHA='f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481'\nEXPECTED_INITIAL_SHA='3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36'\nEXPECTED_ENV_SHA='433a922a61d09bbf39d671e9ee1636c4ab0cac3ec6865b32baac9e7ce7e12fa4'\nimport contextlib,datetime,hashlib,json,math,os,pathlib,random,sys\nimport numpy as np\nimport torch\nproject=pathlib.Path('/data/gb/rgbx-risk')\nroot=pathlib.Path('/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity')\ndef sha(p):\n    h=hashlib.sha256()\n    with pathlib.Path(p).open('rb') as f:\n        for block in iter(lambda:f.read(8*1024*1024),b''):\n            h.update(block)\n    return h.hexdigest()\ndef tensor_sha(t):\n    return hashlib.sha256(t.detach().cpu().contiguous().numpy().tobytes()).hexdigest()\nsys.path[:0]=[str(project),str(project/'third_party/XTrack'),str(project/'third_party/XTrack/lib/train')]\nwith contextlib.redirect_stdout(sys.stderr):\n    from lib.config.xtrack.config import cfg,update_config_from_file\n    from lib.models.xtrack import build_xtrack\n    from rgbx_method.optimizer import TaskAdaptiveAdamW\nprotocol_path=project/'configs/full_method_v2_distance0.json'\nprotocol=json.loads(protocol_path.read_text(encoding='utf-8'))\nrun_path=root/'run.json'\nrun=json.loads(run_path.read_text(encoding='utf-8'))\nupdates_path=root/'updates.jsonl'\nupdates=[json.loads(x) for x in updates_path.read_text(encoding='utf-8').splitlines() if x]\nmanifest_path=root/'parameter_manifest.json'\nmanifest=json.loads(manifest_path.read_text(encoding='utf-8'))\ncheckpoint_path=pathlib.Path(run['last_checkpoint'])\nsaved=torch.load(checkpoint_path,map_location='cpu')\ninitial_path=pathlib.Path(protocol['initial_checkpoint'])\ninitial=torch.load(initial_path,map_location='cpu')['net']\nwith contextlib.redirect_stdout(sys.stderr):\n    update_config_from_file(str(project/protocol['base_config']))\n    model=build_xtrack(cfg,training=False)\n    strict=model.load_state_dict(saved['net'],strict=True)\nfrozen=[name for name in saved['net'] if 'MeME' not in name]\nfrozen_changed=[name for name in frozen if not torch.equal(saved['net'][name],initial[name])]\ntrainable_changed=[name for name in saved['net'] if 'MeME' in name and not torch.equal(saved['net'][name],initial[name])]\nnonfinite_model=[name for name,t in saved['net'].items() if not torch.isfinite(t).all().item()]\nfor name,parameter in model.named_parameters():\n    parameter.requires_grad_('MeME' in name)\noptimizer=TaskAdaptiveAdamW(model.named_parameters(),protocol['lr'],protocol['weight_decay'],protocol['grad_clip_norm'])\nexpected_shapes=[tuple(s['m'].shape) for s in optimizer.state]\noptimizer.load_state_dict(saved['optimizer'])\noptimizer_shapes_valid=len(optimizer.state)==len(expected_shapes) and all(tuple(s['m'].shape)==tuple(s['v'].shape)==shape for s,shape in zip(optimizer.state,expected_shapes))\noptimizer_steps_valid=all(len(s['steps'])==shape[0] and all(isinstance(x,int) and 0<=x<=2 for x in s['steps']) for s,shape in zip(optimizer.state,expected_shapes))\nnonfinite_optimizer=[{'parameter_index':i,'state':key} for i,s in enumerate(optimizer.state) for key in ['m','v'] if not torch.isfinite(s[key]).all().item()]\noptimizer_hyperparameters_finite=all(math.isfinite(saved['optimizer'][key]) for key in ['lr','weight_decay','clip_norm','beta1','beta2','eps'])\nloaded_parameter_sha256=hashlib.sha256(optimizer.values().numpy().tobytes()).hexdigest()\nreplicas=saved['replicas_identical']\nrng_evidence=[]\nfor rank,rng in enumerate(saved['rng_by_rank']):\n    random.Random().setstate(rng['python'])\n    np.random.RandomState().set_state(rng['numpy'])\n    torch.Generator(device='cpu').set_state(rng['torch_cpu'])\n    rng_evidence.append({'rank':rank,'python_numpy_torch_cpu_restore_valid':True,'torch_cpu_bytes':rng['torch_cpu'].numel(),'torch_cpu_sha256':tensor_sha(rng['torch_cpu']),'torch_cuda_bytes':rng['torch_cuda'].numel(),'torch_cuda_sha256':tensor_sha(rng['torch_cuda']),'torch_cuda_state_present_valid':rng['torch_cuda'].dtype==torch.uint8 and rng['torch_cuda'].ndim==1 and rng['torch_cuda'].numel()>0,'cuda_rng_restore_executed':False})\nsource_hashes={relative:sha(project/relative) for relative in EXPECTED_SOURCE_HASHES}\nenv_spec=json.loads((project/'configs/env-spec.json').read_text(encoding='utf-8'))\nenv_canonical=hashlib.sha256(json.dumps(env_spec,sort_keys=True,separators=(',',':')).encode('utf-8')).hexdigest()\nartifact_paths=[run_path,checkpoint_path,root/'latest.pth.tar',updates_path,manifest_path,root.parent/'xtrack_full_method_v2_distance0_s2026_sanity_launcher.log']\nartifacts={str(p):{'sha256':sha(p),'bytes':p.stat().st_size} for p in artifact_paths}\npublic_sha=sha(initial_path)\nwitnesses=[i for i,name in enumerate(optimizer.names) if name.endswith(('MeME_attn.ffn1_1.weight','MeME_attn.ffn1_1.bias'))]\nchecks={\n 'terminal_sanity_status':run['status']=='SANITY_COMPLETE_NOT_FORMAL_RESULT',\n 'global_step2':run['global_step']==saved['global_step']==2,\n 'epoch1_two_steps':saved['epoch']==run['completed_epochs']==1 and len(saved['epoch_history'])==1 and saved['epoch_history'][0]['steps']==2,\n 'exact_protocol_sha256':sha(protocol_path)==run['protocol_sha256']==EXPECTED_PROTOCOL_SHA,\n 'run_and_checkpoint_protocol_equal':saved['protocol']==run['protocol']==protocol,\n 'run_id_and_output_equal':run['run_id']==protocol['run_id']=='xtrack_full_method_v2_distance0_s2026' and run['output']==str(root) and checkpoint_path==root/'XTrack_ep0001.pth.tar',\n 'same_public_initialization':public_sha==run['initial_checkpoint_sha256']==EXPECTED_INITIAL_SHA,\n 'strict_model_reload':not strict.missing_keys and not strict.unexpected_keys,\n 'model_state_finite':len(nonfinite_model)==0,\n 'all_model_tensors_cpu':all(t.device.type=='cpu' for t in saved['net'].values()),\n 'frozen_tensors_unchanged':len(frozen)==244 and not frozen_changed,\n 'optimizer_loaded_names_and_shapes':optimizer.names==saved['optimizer']['names'] and optimizer_shapes_valid,\n 'optimizer_states_finite':not nonfinite_optimizer and optimizer_hyperparameters_finite,\n 'optimizer_steps_valid':optimizer_steps_valid,\n 'always_used_shared_step_witnesses':len(witnesses)==24 and all(optimizer.state[i]['steps']==[2,2,2] for i in witnesses),\n 'three_replica_hashes_equal_loaded_parameters':len(replicas)==3 and len(set(replicas))==1 and replicas[0]==loaded_parameter_sha256==run['replica_parameter_sha256'],\n 'three_saved_rng_states_valid':len(rng_evidence)==3 and all(x['torch_cuda_state_present_valid'] and x['python_numpy_torch_cpu_restore_valid'] for x in rng_evidence),\n 'epoch_history_finite':all(math.isfinite(x) for x in saved['epoch_history'][0]['means'].values()),\n 'saved_latest_equal':artifacts[str(checkpoint_path)]['sha256']==artifacts[str(root/'latest.pth.tar')]['sha256'],\n 'updates_exactly_two':len(updates)==2 and [r['global_step'] for r in updates]==[1,2],\n 'three_rank_processes_exited':len(run['rank_pids'])==3 and all(not pathlib.Path('/proc',str(pid)).exists() for pid in run['rank_pids']),\n 'all15_reviewed_sources_unchanged':source_hashes==EXPECTED_SOURCE_HASHES,\n 'environment_spec_unchanged':env_canonical==EXPECTED_ENV_SHA,\n 'formal_tracking_scores_not_run':run['formal_tracking_scores']=='NOT_RUN',\n 'formal_output_and_controller_absent':not pathlib.Path(protocol['output']).exists() and not (root.parent/'xtrack_full_method_v2_distance0_s2026_controller').exists(),\n 'audit_cuda_uninitialized':not torch.cuda.is_initialized()\n}\nbranch_records=[]\nfor r in updates:\n    branch_records.append({k:r[k] for k in ['global_step','selected_correction_strength','trajectory_checked','active_risk_constraints','correction_norm','baseline_trajectory','accepted_trajectory','candidate_risk','accepted_risk','pair_check_forward_examples','trajectory_model_forward_examples','global_task_counts','optimizer_statistics_updates','weight_decay_applications','step_seconds']})\n    branch_records[-1]['candidate_trial_strengths']=[t['alpha'] for t in r['candidate_trials']]\n    branch_records[-1]['baseline_trajectory_rank_count']=len(r['baseline_trajectory_details']) if r['baseline_trajectory_details'] is not None else 0\n    branch_records[-1]['trial_trajectory_rank_counts']=[len(t['trajectory_details']) if t['trajectory_details'] is not None else 0 for t in r['candidate_trials']]\nresult={\n 'status':'PASS_CPU_SAVED_STATE_CHECKS' if all(checks.values()) else 'FAIL_CPU_SAVED_STATE_CHECKS',\n 'observed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),\n 'cpu_audit_pid':os.getpid(),'runtime':{'python':sys.version,'torch':torch.__version__,'cuda_visible_devices':os.environ['CUDA_VISIBLE_DEVICES'],'cuda_initialized':torch.cuda.is_initialized()},\n 'checks':checks,'artifacts':artifacts,\n 'protocol_path':str(protocol_path),'protocol_sha256':sha(protocol_path),'protocol':protocol,\n 'public_initialization':{'path':str(initial_path),'sha256':public_sha},\n 'environment_spec_canonical_sha256':env_canonical,\n 'actual_source_hashes':source_hashes,'run_receipt':run,\n 'checkpoint':{'path':str(checkpoint_path),'keys':list(saved),'epoch':saved['epoch'],'global_step':saved['global_step'],'epoch_history':saved['epoch_history'],'strict_missing_keys':list(strict.missing_keys),'strict_unexpected_keys':list(strict.unexpected_keys),'model_tensor_count':len(saved['net']),'frozen_tensor_count':len(frozen),'frozen_changed_names':frozen_changed,'changed_trainable_tensor_count':len(trainable_changed),'nonfinite_model_names':nonfinite_model,'optimizer_state_count':len(optimizer.state),'nonfinite_optimizer_states':nonfinite_optimizer,'loaded_trainable_parameter_sha256':loaded_parameter_sha256,'replica_hashes':replicas,'rng_by_rank':rng_evidence},\n 'actual_two_step_branch_execution':branch_records,\n 'scope':'CPU deserialization, strict model state load, tensor equality and finiteness, optimizer and RNG validation only. No model forward pass, score generation, GPU/RNG restoration, formal training, or benchmark execution.'\n}\nprint(json.dumps(result,ensure_ascii=True))\n",
+    "stderr": "",
+    "stdout_if_failed": null
+  },
+  "saved_state_evidence": {
+    "status": "PASS_CPU_SAVED_STATE_CHECKS",
+    "observed_at": "2026-10-05T07:10:46.540683+00:00",
+    "cpu_audit_pid": 425928,
+    "runtime": {
+      "python": "3.8.20 (default, Oct  3 2024, 15:24:27) \n[GCC 11.2.0]",
+      "torch": "1.13.1+cu117",
+      "cuda_visible_devices": "",
+      "cuda_initialized": false
+    },
+    "checks": {
+      "terminal_sanity_status": true,
+      "global_step2": true,
+      "epoch1_two_steps": true,
+      "exact_protocol_sha256": true,
+      "run_and_checkpoint_protocol_equal": true,
+      "run_id_and_output_equal": true,
+      "same_public_initialization": true,
+      "strict_model_reload": true,
+      "model_state_finite": true,
+      "all_model_tensors_cpu": true,
+      "frozen_tensors_unchanged": true,
+      "optimizer_loaded_names_and_shapes": true,
+      "optimizer_states_finite": true,
+      "optimizer_steps_valid": true,
+      "always_used_shared_step_witnesses": true,
+      "three_replica_hashes_equal_loaded_parameters": true,
+      "three_saved_rng_states_valid": true,
+      "epoch_history_finite": true,
+      "saved_latest_equal": true,
+      "updates_exactly_two": true,
+      "three_rank_processes_exited": true,
+      "all15_reviewed_sources_unchanged": true,
+      "environment_spec_unchanged": true,
+      "formal_tracking_scores_not_run": true,
+      "formal_output_and_controller_absent": true,
+      "audit_cuda_uninitialized": true
+    },
+    "artifacts": {
+      "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity/run.json": {
+        "sha256": "20300cad6772e650c502ab0cfa83922b998ed81e390a13f17c298a179dc8bedd",
+        "bytes": 11758
+      },
+      "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity/XTrack_ep0001.pth.tar": {
+        "sha256": "b42d79d31a80647d8208b974c3c2b46fa9a1e18e33909577b9ff719c9956d03c",
+        "bytes": 477075987
+      },
+      "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity/latest.pth.tar": {
+        "sha256": "b42d79d31a80647d8208b974c3c2b46fa9a1e18e33909577b9ff719c9956d03c",
+        "bytes": 477075987
+      },
+      "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity/updates.jsonl": {
+        "sha256": "56a9164eb422fb937cc8c32473bc77d1113fedf8488fb03dda6697e2e710271b",
+        "bytes": 8909
+      },
+      "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity/parameter_manifest.json": {
+        "sha256": "400208b07b7acbc100b6b8b9d0cbea39f792b3295da2faf12a7f5de8cf81ec99",
+        "bytes": 107139
+      },
+      "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity_launcher.log": {
+        "sha256": "dd62f81055196806d464271b163f2311bb7290e88c6482cae20167e0813a57df",
+        "bytes": 9444
+      }
+    },
+    "protocol_path": "/data/gb/rgbx-risk/configs/full_method_v2_distance0.json",
+    "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "protocol": {
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.0,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "public_initialization": {
+      "path": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36"
+    },
+    "environment_spec_canonical_sha256": "433a922a61d09bbf39d671e9ee1636c4ab0cac3ec6865b32baac9e7ce7e12fa4",
+    "actual_source_hashes": {
+      "configs/full_method_v2_distance0.json": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+      "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+      "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+      "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+      "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+      "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+      "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+      "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd",
+      "scripts/run_full_method_v2_distance0_job.py": "bf3f9f9520c73d38aa0df439e367ea540b87fa6e0a41032c3e0e60fc5ad346df",
+      "scripts/audit_joint_endpoint_v2_distance0.py": "91b7ed4899ad9476575ed1676c246616bd7f4adaea6df4a3a785473d061befa4",
+      "scripts/audit_full_method_v2_distance0_first_epoch.py": "8da030b336d3384c3d77d4ad38ea75bb58e955c9b72e183548e98db6004f2737",
+      "scripts/retain_full_method_v2_distance0_checkpoints.py": "2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102",
+      "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
+      "scripts/compare_complete_results.py": "cfc32d0149ce910c8de348f8156de6b4a7a941e5576bee6e8376d217f58a3200",
+      "scripts/analyze_paired_sequence_uncertainty.py": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189"
+    },
+    "run_receipt": {
+      "status": "SANITY_COMPLETE_NOT_FORMAL_RESULT",
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "protocol": {
+        "run_id": "xtrack_full_method_v2_distance0_s2026",
+        "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+        "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+        "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+        "seed": 2026,
+        "epochs": 15,
+        "samples_per_epoch": 60000,
+        "batch_per_rank": 8,
+        "world_size": 3,
+        "lr": 1e-05,
+        "lr_drop_epoch": 10,
+        "lr_drop_factor": 0.1,
+        "weight_decay": 0.0001,
+        "grad_clip_norm": 0.1,
+        "risk_relative_tolerance": 0.002,
+        "max_relative_correction": 0.5,
+        "trajectory_length": 3,
+        "trajectory_period": 50,
+        "correction_strengths": [
+          0.0,
+          0.5,
+          1.0
+        ],
+        "trajectory_risk_weight": 1.0,
+        "candidate_distance_weight": 0.0,
+        "num_workers": 3,
+        "amp": false,
+        "checkpoint_every_epoch": true,
+        "modules_enabled": [
+          "localization_risk",
+          "task_adaptive_selective_correction",
+          "closed_loop_acceptance"
+        ],
+        "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+        "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+        "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+      },
+      "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+      "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+      "world_size": 3,
+      "rank_pids": [
+        420186,
+        420187,
+        420188
+      ],
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity",
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "formal_tracking_scores": "NOT_RUN",
+      "started_at": "2026-10-05T07:06:16.301499+00:00",
+      "training_examples_per_update": 24,
+      "check_examples_per_update": 9,
+      "short_clip_source": "TRAIN_ONLY",
+      "baseline_setting": "AUTHOR_RELEASE_FINETUNE",
+      "attempt_id": "20261005T070616301532Z",
+      "observed_at": "2026-10-05T07:06:34.857763+00:00",
+      "epoch": 1,
+      "step": 2,
+      "global_step": 2,
+      "latest": {
+        "attempt_id": "20261005T070616301532Z",
+        "epoch": 1,
+        "step": 2,
+        "global_step": 2,
+        "before_localization": [
+          [
+            0.4398009479045868,
+            0.6551940441131592
+          ],
+          [
+            0.2951686978340149,
+            0.5867736339569092
+          ],
+          [
+            0.5276705026626587,
+            0.688391923904419
+          ]
+        ],
+        "candidate_localization": [
+          [
+            0.4395202100276947,
+            0.6551533341407776
+          ],
+          [
+            0.2950901985168457,
+            0.5866585969924927
+          ],
+          [
+            0.5277161002159119,
+            0.6883797645568848
+          ]
+        ],
+        "accepted_localization": [
+          [
+            0.4395202100276947,
+            0.6551533341407776
+          ],
+          [
+            0.2950901985168457,
+            0.5866585969924927
+          ],
+          [
+            0.5277161002159119,
+            0.6883797645568848
+          ]
+        ],
+        "candidate_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "accepted_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "candidate_route_change": [
+          0.0277777798473835,
+          0.0,
+          0.0
+        ],
+        "accepted_route_change": [
+          0.0277777798473835,
+          0.0,
+          0.0
+        ],
+        "selected_correction_strength": 0.0,
+        "trajectory_checked": true,
+        "baseline_trajectory": [
+          0.30819904804229736,
+          0.09223073720932007,
+          1.710875153541565
+        ],
+        "accepted_trajectory": [
+          0.308402955532074,
+          0.09224703907966614,
+          1.710455060005188
+        ],
+        "training_clips": [
+          {
+            "dataset": "lasher",
+            "sequence_id": 108,
+            "frame_ids": [
+              797,
+              798,
+              799
+            ]
+          },
+          {
+            "dataset": "depthtrack",
+            "sequence_id": 49,
+            "frame_ids": [
+              262,
+              263,
+              264
+            ]
+          },
+          {
+            "dataset": "visevent",
+            "sequence_id": 466,
+            "frame_ids": [
+              234,
+              235,
+              236
+            ]
+          }
+        ],
+        "global_task_counts": [
+          8,
+          8,
+          8
+        ],
+        "baseline_trajectory_details": [
+          {
+            "predicted_boxes": [
+              [
+                309.57433128356934,
+                344.6649570465088,
+                26.116703033447266,
+                47.561824798583984
+              ],
+              [
+                308.6998453140259,
+                344.0320796966553,
+                26.15382194519043,
+                47.50093460083008
+              ]
+            ],
+            "search_crop_boxes": [
+              [
+                311.0,
+                345.0,
+                26.0,
+                46.0
+              ],
+              [
+                309.57433128356934,
+                344.6649570465088,
+                26.116703033447266,
+                47.561824798583984
+              ]
+            ],
+            "target_outside_search": [
+              0.0,
+              0.0
+            ],
+            "uses_gt_only_for_initialization": true
+          },
+          {
+            "predicted_boxes": [
+              [
+                396.7576198577881,
+                264.7809143066406,
+                38.38808059692383,
+                41.03662109375
+              ],
+              [
+                397.6775703430176,
+                264.01093101501465,
+                38.482154846191406,
+                41.77400588989258
+              ]
+            ],
+            "search_crop_boxes": [
+              [
+                397.0,
+                266.0,
+                39.0,
+                40.0
+              ],
+              [
+                396.7576198577881,
+                264.7809143066406,
+                38.38808059692383,
+                41.03662109375
+              ]
+            ],
+            "target_outside_search": [
+              0.0,
+              0.0
+            ],
+            "uses_gt_only_for_initialization": true
+          },
+          {
+            "predicted_boxes": [
+              [
+                247.1467728614807,
+                103.25664281845093,
+                10,
+                10.657173156738281
+              ],
+              [
+                247.24630069732666,
+                103.24513244628906,
+                10,
+                10.726618766784668
+              ]
+            ],
+            "search_crop_boxes": [
+              [
+                247.9320068359375,
+                103.19650268554688,
+                9.37909984588623,
+                11.393099784851074
+              ],
+              [
+                247.1467728614807,
+                103.25664281845093,
+                10,
+                10.657173156738281
+              ]
+            ],
+            "target_outside_search": [
+              0.0,
+              0.0
+            ],
+            "uses_gt_only_for_initialization": true
+          }
+        ],
+        "candidate_trials": [
+          {
+            "alpha": 0.0,
+            "cost": 0.0,
+            "localization": [
+              [
+                0.4395202100276947,
+                0.6551533341407776
+              ],
+              [
+                0.2950901985168457,
+                0.5866585969924927
+              ],
+              [
+                0.5277161002159119,
+                0.6883797645568848
+              ]
+            ],
+            "trajectory": [
+              0.308402955532074,
+              0.09224703907966614,
+              1.710455060005188
+            ],
+            "trajectory_details": [
+              {
+                "predicted_boxes": [
+                  [
+                    309.57226181030273,
+                    344.6646957397461,
+                    26.119590759277344,
+                    47.564056396484375
+                  ],
+                  [
+                    308.69739151000977,
+                    344.03244400024414,
+                    26.157020568847656,
+                    47.502723693847656
+                  ]
+                ],
+                "search_crop_boxes": [
+                  [
+                    311.0,
+                    345.0,
+                    26.0,
+                    46.0
+                  ],
+                  [
+                    309.57226181030273,
+                    344.6646957397461,
+                    26.119590759277344,
+                    47.564056396484375
+                  ]
+                ],
+                "target_outside_search": [
+                  0.0,
+                  0.0
+                ],
+                "uses_gt_only_for_initialization": true
+              },
+              {
+                "predicted_boxes": [
+                  [
+                    396.75575065612793,
+                    264.77961349487305,
+                    38.39128494262695,
+                    41.037696838378906
+                  ],
+                  [
+                    397.6769771575928,
+                    264.01036643981934,
+                    38.48247146606445,
+                    41.7744026184082
+                  ]
+                ],
+                "search_crop_boxes": [
+                  [
+                    397.0,
+                    266.0,
+                    39.0,
+                    40.0
+                  ],
+                  [
+                    396.75575065612793,
+                    264.77961349487305,
+                    38.39128494262695,
+                    41.037696838378906
+                  ]
+                ],
+                "target_outside_search": [
+                  0.0,
+                  0.0
+                ],
+                "uses_gt_only_for_initialization": true
+              },
+              {
+                "predicted_boxes": [
+                  [
+                    247.14515686035156,
+                    103.25600147247314,
+                    10,
+                    10.659024238586426
+                  ],
+                  [
+                    247.243097782135,
+                    103.2450385093689,
+                    10,
+                    10.728153228759766
+                  ]
+                ],
+                "search_crop_boxes": [
+                  [
+                    247.9320068359375,
+                    103.19650268554688,
+                    9.37909984588623,
+                    11.393099784851074
+                  ],
+                  [
+                    247.14515686035156,
+                    103.25600147247314,
+                    10,
+                    10.659024238586426
+                  ]
+                ],
+                "target_outside_search": [
+                  0.0,
+                  0.0
+                ],
+                "uses_gt_only_for_initialization": true
+              }
+            ]
+          }
+        ],
+        "pair_check_forward_examples": 18,
+        "trajectory_model_forward_examples": 12,
+        "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs",
+        "optimizer_statistics_updates": 1,
+        "weight_decay_applications": 1,
+        "step_seconds": 3.5872082650312223,
+        "peak_allocated_bytes": 5698355200,
+        "joint_grad_norm_before_clip": 2.0528368949890137,
+        "gradient_clip_coefficient": 0.04871305242566909,
+        "correction_norm": 0.0,
+        "active_risk_constraints": 0
+      },
+      "training_examples": 48,
+      "check_examples": 18,
+      "wallclock_seconds": 18.27461633301573,
+      "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity/XTrack_ep0001.pth.tar",
+      "completed_epochs": 1,
+      "replica_parameter_sha256": "637fba0966dde3d56d99e85dc9f1b53ff802c2ad0875d7a72ee92585f3d56464",
+      "sanity_checkpoint_check": {
+        "strict_reload": true,
+        "frozen_tensors_unchanged": true,
+        "frozen_tensor_count": 244,
+        "optimizer_state_finite": true,
+        "replicas_identical": true,
+        "rng_rank_count": 3
+      },
+      "ended_at": "2026-10-05T07:06:36.813746+00:00",
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "steps": 2,
+          "means": {
+            "total": 0.9620371162891388,
+            "balance": 0.07099412754178047,
+            "classification": 15.412290573120117,
+            "iou": 0.8236472010612488
+          }
+        }
+      ]
+    },
+    "checkpoint": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_sanity/XTrack_ep0001.pth.tar",
+      "keys": [
+        "net",
+        "optimizer",
+        "epoch",
+        "global_step",
+        "protocol",
+        "epoch_history",
+        "rng_by_rank",
+        "replicas_identical"
+      ],
+      "epoch": 1,
+      "global_step": 2,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "steps": 2,
+          "means": {
+            "total": 0.9620371162891388,
+            "balance": 0.07099412754178047,
+            "classification": 15.412290573120117,
+            "iou": 0.8236472010612488
+          }
+        }
+      ],
+      "strict_missing_keys": [],
+      "strict_unexpected_keys": [],
+      "model_tensor_count": 772,
+      "frozen_tensor_count": 244,
+      "frozen_changed_names": [],
+      "changed_trainable_tensor_count": 492,
+      "nonfinite_model_names": [],
+      "optimizer_state_count": 504,
+      "nonfinite_optimizer_states": [],
+      "loaded_trainable_parameter_sha256": "637fba0966dde3d56d99e85dc9f1b53ff802c2ad0875d7a72ee92585f3d56464",
+      "replica_hashes": [
+        "637fba0966dde3d56d99e85dc9f1b53ff802c2ad0875d7a72ee92585f3d56464",
+        "637fba0966dde3d56d99e85dc9f1b53ff802c2ad0875d7a72ee92585f3d56464",
+        "637fba0966dde3d56d99e85dc9f1b53ff802c2ad0875d7a72ee92585f3d56464"
+      ],
+      "rng_by_rank": [
+        {
+          "rank": 0,
+          "python_numpy_torch_cpu_restore_valid": true,
+          "torch_cpu_bytes": 5056,
+          "torch_cpu_sha256": "e6e0b8fbcda887e5d69dfdb178a10b8067efe49ea552761adfd928f5a4fe1bd5",
+          "torch_cuda_bytes": 816,
+          "torch_cuda_sha256": "6ea980b7d06c152a398adb04e517c96883b6fe2a439b12ac003fc6898712f682",
+          "torch_cuda_state_present_valid": true,
+          "cuda_rng_restore_executed": false
+        },
+        {
+          "rank": 1,
+          "python_numpy_torch_cpu_restore_valid": true,
+          "torch_cpu_bytes": 5056,
+          "torch_cpu_sha256": "b00fe5b891344e9a349a99c9aa5ead406dbf1b708aaf6f526389c569f93ae8eb",
+          "torch_cuda_bytes": 816,
+          "torch_cuda_sha256": "e9951540e751384c3729ff90bbefce5242741629213f952334370e420e4756bb",
+          "torch_cuda_state_present_valid": true,
+          "cuda_rng_restore_executed": false
+        },
+        {
+          "rank": 2,
+          "python_numpy_torch_cpu_restore_valid": true,
+          "torch_cpu_bytes": 5056,
+          "torch_cpu_sha256": "4ae696b00cf820ca3d872a8473dc95fc2f1b41da33bac1de578b40ef23ace4a3",
+          "torch_cuda_bytes": 816,
+          "torch_cuda_sha256": "59a35fffce551516457f15d899cbcfd923e457da39e7bdd6a0ea45cd107f29b0",
+          "torch_cuda_state_present_valid": true,
+          "cuda_rng_restore_executed": false
+        }
+      ]
+    },
+    "actual_two_step_branch_execution": [
+      {
+        "global_step": 1,
+        "selected_correction_strength": 0.0,
+        "trajectory_checked": true,
+        "active_risk_constraints": 0,
+        "correction_norm": 0.0,
+        "baseline_trajectory": [
+          0.29844439029693604,
+          0.15024761855602264,
+          0.7582767605781555
+        ],
+        "accepted_trajectory": [
+          0.2988523840904236,
+          0.15025410056114197,
+          0.7575848698616028
+        ],
+        "candidate_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "accepted_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pair_check_forward_examples": 18,
+        "trajectory_model_forward_examples": 12,
+        "global_task_counts": [
+          8,
+          8,
+          8
+        ],
+        "optimizer_statistics_updates": 1,
+        "weight_decay_applications": 1,
+        "step_seconds": 9.012847929028794,
+        "candidate_trial_strengths": [
+          0.0
+        ],
+        "baseline_trajectory_rank_count": 3,
+        "trial_trajectory_rank_counts": [
+          3
+        ]
+      },
+      {
+        "global_step": 2,
+        "selected_correction_strength": 0.0,
+        "trajectory_checked": true,
+        "active_risk_constraints": 0,
+        "correction_norm": 0.0,
+        "baseline_trajectory": [
+          0.30819904804229736,
+          0.09223073720932007,
+          1.710875153541565
+        ],
+        "accepted_trajectory": [
+          0.308402955532074,
+          0.09224703907966614,
+          1.710455060005188
+        ],
+        "candidate_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "accepted_risk": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "pair_check_forward_examples": 18,
+        "trajectory_model_forward_examples": 12,
+        "global_task_counts": [
+          8,
+          8,
+          8
+        ],
+        "optimizer_statistics_updates": 1,
+        "weight_decay_applications": 1,
+        "step_seconds": 3.5872082650312223,
+        "candidate_trial_strengths": [
+          0.0
+        ],
+        "baseline_trajectory_rank_count": 3,
+        "trial_trajectory_rank_counts": [
+          3
+        ]
+      }
+    ],
+    "scope": "CPU deserialization, strict model state load, tensor equality and finiteness, optimizer and RNG validation only. No model forward pass, score generation, GPU/RNG restoration, formal training, or benchmark execution."
+  },
+  "doc_vs_reality_divergences": [],
+  "limitations": [
+    "Two real sanity optimizer updates only; not the formal fifteen-epoch run.",
+    "No benchmark inference or score regeneration executed.",
+    "This sanity is not module efficacy, benefit-preservation, seven-metric improvement, or multi-seed evidence.",
+    "A selective-correction branch absent in these two steps is an untested branch, not a failure or efficacy result.",
+    "CUDA RNG states were inspected on CPU; no GPU RNG restoration or new GPU/model forward was executed by the post-exit audit.",
+    "Same-family fresh-context review remains provisional; no cross-family or separately attested model-backend claim."
+  ],
+  "scope_controls": {
+    "source_protocol_or_document_mutations": 0,
+    "sanity_restarts": 0,
+    "formal_controller_launches": 0,
+    "benchmark_or_evaluation_launches": 0,
+    "checkpoint_deletions": 0,
+    "git_publications": 0,
+    "temperature_or_power_queries_or_controls": 0
+  },
+  "local_report_readback": {
+    "verified_at": "2026-10-05T15:15:04.056603+08:00",
+    "native_sanity_exit_observed": true,
+    "native_cpu_audit_exit_observed": true,
+    "initial_inspection_issue": "A local readback expected the CPU audit native session id in the completed report snapshot and raised KeyError. The CPU audit had finalized the report before that session id was attached to its recovery handle. The recorded native handle supplied session43958; no experiment or CPU audit was rerun."
+  }
+}

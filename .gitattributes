@@ -7,3 +7,4 @@ reports/reference_xtrack_author_release_s2026/DepthTrack/per_sequence_metrics.cs
 reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/per_sequence.csv -text whitespace=cr-at-eol
 reports/method_xtrack_full_method_v1_s2026/VisEvent/scores/per_sequence.csv -text whitespace=cr-at-eol
 reports/method_xtrack_full_method_v1_s2026/DepthTrack/per_sequence_metrics.csv -text whitespace=cr-at-eol
+reports/full_method_v2_distance0_documented_sanity_20261005.json -text whitespace=cr-at-eol

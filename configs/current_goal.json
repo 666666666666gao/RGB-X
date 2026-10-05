@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T14:45:18.828725+08:00",
+  "updated_at": "2026-10-05T15:25:10.042480+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。 后续三个模块围绕目标级可靠定位能力保持与风险记忆、保留有益学习的风险约束实际更新、搜索状态敏感且可独立决策的闭环验收展开；同时检验旧能力退化和新能力改善，不以任务平均损失、梯度均衡或减少更新作为最终目标。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "V1_FULL_RESULTS_0_OF7_IMPROVED_DISTANCE0_REAL_PREFLIGHT_PENDING_GOAL_UNMET",
+  "status": "DISTANCE0_FORMAL_TRAINING_STARTED_V1_ALL7_LOWER_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -99,35 +99,31 @@
   "checkpoint_and_result_root": "/home/gaob/rgbx-full-method",
   "handoff": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "goal_tool_note": "当前系统goal仍为active的“监控训练顺利进行”。工具仅支持创建目标或修改状态，不支持改写未完成目标的objective；没有把旧目标虚报完成。用户最新完整执行目标及验收要求以本文件为准。",
-  "actual_run_id": "xtrack_full_method_v1_s2026",
-  "actual_controller_pid": 1603676,
+  "actual_run_id": "xtrack_full_method_v2_distance0_s2026",
+  "actual_controller_pid": 433952,
   "actual_rank_pids": [
-    1603687,
-    1603688,
-    1603689
+    434003,
+    434004,
+    434005
   ],
-  "actual_completed_updates_at_snapshot": 37500,
-  "tracking_scores": "AUTHOR_AND_METHOD_ALL3_COMPLETE_ALL7_V1_REQUIRED_HEADLINES_LOWER",
+  "actual_completed_updates_at_snapshot": 70,
+  "tracking_scores": "V1_ALL3_COMPLETE_ALL7_LOWER_DISTANCE0_NOT_YET_EVALUATED",
   "objective_met": false,
   "next_iteration_candidate": {
-    "status": "CONFIG_PREPARED_NOT_RUN",
+    "status": "FORMAL_TRAINING_RUNNING_NO_BENCHMARK_RESULT",
     "candidate_distance_weight": 0,
     "evidence": "reports/full_method_v1_cost_decomposition.json",
     "decision": "Finish the fixed v1 run, endpoint audit and complete comparison, then test distance weight zero as the sole algorithm change.",
     "comparison": "Fresh start from the same author release, repaired source, mixed 8T/8D/8E batches, seed, trainable parameters and 15-epoch budget; retain correction amplitude cap.",
-    "efficacy": "UNKNOWN_NO_NEW_TRAINING_OR_BENCHMARK",
+    "efficacy": "UNKNOWN_FORMAL_TRAINING_STARTED_NO_TRACKING_RESULT",
     "success_measure": "Fewer unrepaired localization harms while retaining learning progress; selection frequency alone is not success.",
     "protocol": "configs/full_method_v2_distance0.json",
     "preparation_evidence": "reports/full_method_v2_distance0_configuration_preparation.json",
-    "launch_ready": false,
-    "remaining_before_launch": [
-      "Actual v1 all-three result and full comparison",
-      "Apply exact sealed two-run verifier admission after v1 completion",
-      "Verify actual candidate two-step three-GPU sanity and saved state"
-    ],
-    "isolated_entry_status": "PREPARED_NOT_RUN",
+    "launch_ready": true,
+    "remaining_before_launch": [],
+    "isolated_entry_status": "ACTUAL_CONTROLLER_LAUNCHED_ONCE",
     "isolated_entry_evidence": "reports/full_method_v2_distance0_entry_preparation.json",
-    "identity_admission_status": "SYNTHETIC_CPU_CHECK_PASS_PREPARED_NOT_APPLIED",
+    "identity_admission_status": "EXACT_TWO_RUN_ADMISSION_APPLIED_AFTER_V1_TERMINAL",
     "identity_contract_evidence": "reports/full_method_v2_distance0_identity_contract_check.json",
     "retention_activation": "After candidate epoch1 is actually saved, run its isolated CPU audit once, then launch its isolated retention worker once. Do not reuse the v1 dynamic worker receipt.",
     "full_run_diagnosis_evidence": "reports/full_method_v1_full_run_cost_decomposition.json",
@@ -141,11 +137,15 @@
       "draws": 10000,
       "seed": 2026,
       "scope": "Conditional whole-sequence pairing, not training-seed variance or module attribution."
-    }
+    },
+    "must_not_relaunch": true,
+    "documented_sanity": "reports/full_method_v2_distance0_documented_sanity_20261005.json",
+    "formal_launch": "reports/full_method_v2_distance0_formal_launch_20261005.json",
+    "startup_evidence": "reports/full_method_v2_distance0_startup_observation_20261005.json"
   },
-  "actual_training_examples_at_snapshot": 900000,
+  "actual_training_examples_at_snapshot": 1680,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 15,
+  "actual_completed_epochs_at_snapshot": 0,
   "first_epoch_risk_events": 114,
   "first_epoch_nonzero_corrections": 3,
   "first_epoch_trajectory_checks": 161,
@@ -277,7 +277,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-05T14:25:56.871837+08:00",
+  "runtime_snapshot_observed_at": "2026-10-05T07:21:51.246815+00:00",
   "execution_goal_version": "2026-10-05-user-review-v3",
   "ordered_next_steps": [
     {
@@ -287,7 +287,7 @@
     },
     {
       "id": "P1",
-      "status": "EXACT_ADMISSION_APPLIED_DOCUMENTED_REAL_PREFLIGHT_PENDING_NOT_TRAINED",
+      "status": "ACTUAL_SANITY_PASS_FORMAL_DISTANCE0_RUNNING_NOT_YET_EVALUATED",
       "work": "Run one-change distance-weight-zero paired experiment; retain bounded correction and all other algorithm settings. Compare harmful accepted updates, uncorrected risks, localization/trajectory learning and complete benchmark metrics."
     },
     {
@@ -1093,8 +1093,42 @@
   },
   "distance0_documented_preflight": {
     "report": "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json",
-    "status": "EXACT_INVOCATION_DOCUMENTED_NOT_EXECUTED",
+    "status": "PASS_DOCUMENTED_TWO_STEP_SANITY_NOT_FORMAL_RESULT",
     "runtime_attested": false,
-    "identity_admission": "reports/full_method_v2_distance0_identity_admission_activation_20261005.json"
+    "identity_admission": "reports/full_method_v2_distance0_identity_admission_activation_20261005.json",
+    "actual_evidence": "reports/full_method_v2_distance0_documented_sanity_20261005.json",
+    "actual_process_exit0": true,
+    "saved_state_checks_passed": 26,
+    "experiment_execution_runtime_attested": true,
+    "review_independence": "same-family",
+    "acceptance_status": "provisional"
+  },
+  "completed_v1_execution_snapshot": {
+    "actual_run_id": "xtrack_full_method_v1_s2026",
+    "actual_controller_pid": 1603676,
+    "actual_rank_pids": [
+      1603687,
+      1603688,
+      1603689
+    ],
+    "actual_completed_updates_at_snapshot": 37500,
+    "actual_training_examples_at_snapshot": 900000,
+    "actual_completed_epochs_at_snapshot": 15
+  },
+  "completed_epoch_statistics_run_id": "xtrack_full_method_v1_s2026",
+  "active_run_evidence": "reports/full_method_v2_distance0_startup_observation_20261005.json",
+  "active_distance0_milestones": {
+    "first_diagnostic_not_before": "2026-10-05T07:28:21.783057+00:00",
+    "preliminary_first_epoch_completion_estimate": "2026-10-05T09:00:21.116321+00:00",
+    "estimate_scope": "Early single-step timing; refine at first necessary ten-minute diagnosis before scheduling first-epoch CPU audit.",
+    "polling_policy": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
+    "first_epoch_action": "After actual epoch1 checkpoint exists, execute isolated CPU checkpoint audit once then launch dedicated retention worker once.",
+    "temperature_or_power_controls": false
+  },
+  "distance0_sanity_weight_cleanup": {
+    "report": "reports/full_method_v2_distance0_sanity_weight_cleanup_20261005.json",
+    "removed_files": 2,
+    "removed_file_bytes": 954151974,
+    "protected": "Public initializer, v1 evaluated endpoint, formal training weights and all evidence retained."
   }
 }

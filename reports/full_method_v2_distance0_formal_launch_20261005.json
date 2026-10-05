@@ -1,0 +1,29 @@
+{
+  "status": "FORMAL_CONTROLLER_LAUNCHED_STARTUP_NOT_YET_OBSERVED",
+  "started_at": "2026-10-05T07:18:21.783057+00:00",
+  "controller_pid": 433952,
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "/data/gb/rgbx-risk/scripts/run_full_method_v2_distance0_job.py"
+  ],
+  "log_path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_controller_launcher.log",
+  "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+  "controller_root": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_controller",
+  "run_id": "xtrack_full_method_v2_distance0_s2026",
+  "launch_count": 1,
+  "sanity_report_sha256": "702c417e6dff1623e6a8d9488398fe4add9bb6f608b1b100290f99df6f212a77",
+  "sanity_exit_code": 0,
+  "sanity_saved_state_checks": 26,
+  "reviewed15_source_hashes_match": true,
+  "gpu_memory_snapshot": "0, 9\n1, 9\n2, 33\n",
+  "disk_free_bytes": 786436997120,
+  "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+  "startup_observation_not_before": "2026-10-05T07:21:21.783057+00:00",
+  "first_training_diagnostic_not_before": "2026-10-05T07:28:21.783057+00:00",
+  "polling_policy": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
+  "temperature_or_power_queries_or_controls": false,
+  "goal_achieved": false,
+  "scope": "One controller launch, no reference inference replay. Formal fifteen epochs then endpoint audit, complete three-dataset method evaluation, all7 comparison and conditional paired-sequence bootstrap. Startup and training completion are not yet observed.",
+  "native_launch_ssh_exit_code": 0,
+  "native_launch_ssh_stderr": ""
+}
