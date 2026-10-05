@@ -1,0 +1,18 @@
+{
+  "status": "PRECOMMIT_BYTE_GUARD_REJECTED_RAW_MILESTONE_CRLF_NORMALIZATION",
+  "recorded_at": "2026-10-05T09:37:45.172203+00:00",
+  "initial_native_exit_code": 1,
+  "source_commit_created": false,
+  "push_attempted": false,
+  "affected_raw_artifact": "reports/full_method_v2_distance0_epoch1_milestone_observation_20261005.json",
+  "correction": "Exact raw artifact added to .gitattributes -text whitespace=cr-at-eol; original bytes retained, no source/model/training/evaluation change.",
+  "scope": "Publication byte mismatch detected before commit. Correction is limited to transport normalization, not result editing.",
+  "actual_local_sha256": "5ae52aa493f266c9394654acbeb250e9010ec43fd535e33c81450d503695cefa",
+  "rejected_staged_sha256": "a7efdc83cf2f6e16a37ec0c05225fc034b94e970f5112313c94ee3f9f71a2cb9",
+  "raw_crlf_lines": 541,
+  "precommit_byte_guard_rejections": 2,
+  "second_attempt_native_exit_code": 1,
+  "second_attempt_cause": "Git retained the previously normalized staged blob despite text:unset; only this path was explicitly restaged with git add --renormalize.",
+  "actual_restaged_sha256": "5ae52aa493f266c9394654acbeb250e9010ec43fd535e33c81450d503695cefa",
+  "actual_raw_equals_git_stage": true
+}

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T15:35:02.811093+08:00",
+  "updated_at": "2026-10-05T17:35:06.574078+08:00",
   "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。 后续三个模块围绕目标级可靠定位能力保持与风险记忆、保留有益学习的风险约束实际更新、搜索状态敏感且可独立决策的闭环验收展开；同时检验旧能力退化和新能力改善，不以任务平均损失、梯度均衡或减少更新作为最终目标。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "DISTANCE0_FORMAL_TRAINING_STARTED_V1_ALL7_LOWER_GOAL_UNMET",
+  "status": "DISTANCE0_EPOCH1_AUDITED_RETENTION_ACTIVE_FULL15_AND_BENCHMARK_PENDING_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -106,7 +106,7 @@
     434004,
     434005
   ],
-  "actual_completed_updates_at_snapshot": 290,
+  "actual_completed_updates_at_snapshot": 2800,
   "tracking_scores": "V1_ALL3_COMPLETE_ALL7_LOWER_DISTANCE0_NOT_YET_EVALUATED",
   "objective_met": false,
   "next_iteration_candidate": {
@@ -143,13 +143,13 @@
     "formal_launch": "reports/full_method_v2_distance0_formal_launch_20261005.json",
     "startup_evidence": "reports/full_method_v2_distance0_startup_observation_20261005.json"
   },
-  "actual_training_examples_at_snapshot": 6960,
+  "actual_training_examples_at_snapshot": 67200,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 0,
-  "first_epoch_risk_events": 114,
-  "first_epoch_nonzero_corrections": 3,
-  "first_epoch_trajectory_checks": 161,
-  "first_epoch_checkpoint_audit": "reports/full_method_v1_epoch1_checkpoint_audit.json",
+  "actual_completed_epochs_at_snapshot": 1,
+  "first_epoch_risk_events": 109,
+  "first_epoch_nonzero_corrections": 106,
+  "first_epoch_trajectory_checks": 154,
+  "first_epoch_checkpoint_audit": "reports/full_method_v2_distance0_epoch1_checkpoint_audit.json",
   "checkpoint_retention_policy": "configs/checkpoint_retention_policy.json",
   "completed_epoch_statistics": [
     {
@@ -277,7 +277,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-05T07:31:13.528580+00:00",
+  "runtime_snapshot_observed_at": "2026-10-05T09:16:29.979968+00:00",
   "execution_goal_version": "2026-10-05-user-review-v3",
   "ordered_next_steps": [
     {
@@ -1116,22 +1116,27 @@
     "actual_completed_epochs_at_snapshot": 15
   },
   "completed_epoch_statistics_run_id": "xtrack_full_method_v1_s2026",
-  "active_run_evidence": "reports/full_method_v2_distance0_first_training_diagnosis_20261005.json",
+  "active_run_evidence": "reports/full_method_v2_distance0_completed_epoch1_diagnosis_20261005.json",
   "active_distance0_milestones": {
     "first_diagnostic_not_before": "2026-10-05T07:28:21.783057+00:00",
     "preliminary_first_epoch_completion_estimate": "2026-10-05T09:00:21.116321+00:00",
-    "estimate_scope": "First290 real steps, mean after first10 warmup steps2.553957763sec; five-minute save margin.",
+    "estimate_scope": "Last1000 committed first-epoch step times; inference/scoring excluded. Not a promise or terminal training proof.",
     "polling_policy": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
     "first_epoch_action": "After actual epoch1 checkpoint exists, execute isolated CPU checkpoint audit once then launch dedicated retention worker once.",
     "temperature_or_power_controls": false,
     "first_diagnostic_actual": "2026-10-05T07:31:13.528580+00:00",
     "first_epoch_completion_estimate": "2026-10-05T09:05:17.775236+00:00",
-    "next_observation_not_before": "2026-10-05T09:10:17.775236+00:00",
-    "actual_scheduled_observer_native_session": 79216,
-    "actual_scheduled_observer_pid": 39208,
-    "actual_timer_started_at": "2026-10-05T07:33:08.013495+00:00",
-    "actual_scheduled_observer_evidence": "reports/full_method_v2_distance0_epoch1_observer_launch_20261005.json",
-    "scheduled_observation_completed": false
+    "next_observation_not_before": "2026-10-06T09:37:01.070691+00:00",
+    "actual_scheduled_observer_native_session": 72018,
+    "actual_scheduled_observer_pid": 1536,
+    "actual_timer_started_at": "2026-10-05T09:23:22.504242+00:00",
+    "actual_scheduled_observer_evidence": "reports/full_method_v2_distance0_training_endpoint_observer_launch_20261005.json",
+    "scheduled_observation_completed": true,
+    "actual_first_epoch_observation": "2026-10-05T09:10:20.059417+00:00",
+    "epoch1_cpu_audit_status": "PASS_FIRST_EPOCH_CHECKPOINT_NOT_FINAL_OR_BENCHMARK",
+    "epoch1_retention_actual_observation": "2026-10-05T09:20:12.841852+00:00",
+    "estimated_training_completion": "2026-10-06T09:32:01.070691+00:00",
+    "next_scheduled_observation_completed": false
   },
   "distance0_sanity_weight_cleanup": {
     "report": "reports/full_method_v2_distance0_sanity_weight_cleanup_20261005.json",
@@ -1347,5 +1352,49 @@
     "Positive-risk aggregates remain task means, not per-sample harm.",
     "Recorded allocated peak is rank0 only.",
     "Forecast is an estimate, not completed training."
-  ]
+  ],
+  "active_run_completed_epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "primary_training_examples": 60000,
+      "checks": {
+        "finite_localization_and_risk": true,
+        "exact_task_counts": true,
+        "one_optimizer_statistics_and_decay_application": true,
+        "finite_step_time_and_gradient_norm": true
+      },
+      "risk_events": 109,
+      "nonzero_corrections": 106,
+      "adopted_lowered_recorded_aggregate_risk": 106,
+      "adopted_eliminated_recorded_aggregate_risk": 49,
+      "accepted_remaining_risk_events": 60,
+      "trajectory_checks": 154,
+      "trajectory_only_positive_cost_events": 0,
+      "trajectory_only_steps": [],
+      "trajectory_only_alternative_candidates_available": false,
+      "mean_step_seconds": 2.51561701665516,
+      "last1000_mean_step_seconds": 2.5167461303513847,
+      "pair_check_forward_examples": 47943,
+      "trajectory_model_forward_examples": 3156,
+      "rank0_peak_allocated_bytes": 5770099200,
+      "mean_candidate_positive_localization_risk": 5.9189240944882236e-05,
+      "mean_accepted_positive_localization_risk": 1.8101757857948542e-06,
+      "selected_strength_counts": {
+        "0.0": 2394,
+        "0.5": 13,
+        "1.0": 93
+      }
+    }
+  ],
+  "distance0_epoch1_summary_field_error": "reports/full_method_v2_distance0_epoch1_collection_failure_20261005.json",
+  "distance0_epoch1_cpu_audit_execution": "reports/full_method_v2_distance0_epoch1_audit_execution_20261005.json",
+  "distance0_epoch1_retention_evidence": "reports/full_method_v2_distance0_first_epoch_retention_observation_20261005.json",
+  "distance0_retention_worker_pid": 573595,
+  "distance0_retained_recovery_checkpoint": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0001.pth.tar",
+    "bytes": 477077203,
+    "sha256": "716f71305c9ceb6bdb2752f6f34860ea54f5964bcff70aa7eb3b026fb0ed283e",
+    "best_by_benchmark": "NOT_DETERMINED"
+  }
 }

@@ -1,0 +1,541 @@
+{
+  "status": "SCHEDULED_FIRST_EPOCH_MILESTONE_OBSERVED",
+  "observed_at": "2026-10-05T09:10:20.059417+00:00",
+  "controller": {
+    "status": "RUNNING",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "controller_pid": 433952,
+    "exit_code": null,
+    "started_at": "2026-10-05T07:18:21.931580+00:00",
+    "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+    "poll_seconds": 240,
+    "protocol": {
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.0,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "source_hashes": {
+      "configs/full_method_v2_distance0.json": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+      "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+      "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+      "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+      "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+      "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+      "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+      "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd"
+    },
+    "completed_stages": [],
+    "observed_at": "2026-10-05T09:06:24.653194+00:00",
+    "wallclock_seconds": 6482.7213691960205,
+    "current_stage": "train",
+    "argv": [
+      "/data/gb/conda/envs/rgbx-risk/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nproc_per_node=3",
+      "--master_port=29530",
+      "/data/gb/rgbx-risk/scripts/train_full_method.py",
+      "--protocol",
+      "/data/gb/rgbx-risk/configs/full_method_v2_distance0.json"
+    ],
+    "worker_pid": 433956
+  },
+  "training_run": {
+    "status": "RUNNING_NOT_EVALUATED",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "protocol": {
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.0,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+    "world_size": 3,
+    "rank_pids": [
+      434003,
+      434004,
+      434005
+    ],
+    "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+    "modules_enabled": [
+      "localization_risk",
+      "task_adaptive_selective_correction",
+      "closed_loop_acceptance"
+    ],
+    "formal_tracking_scores": "NOT_RUN",
+    "started_at": "2026-10-05T07:18:32.246709+00:00",
+    "training_examples_per_update": 24,
+    "check_examples_per_update": 9,
+    "short_clip_source": "TRAIN_ONLY",
+    "baseline_setting": "AUTHOR_RELEASE_FINETUNE",
+    "attempt_id": "20261005T071832246746Z",
+    "observed_at": "2026-10-05T09:10:05.161278+00:00",
+    "epoch": 2,
+    "step": 150,
+    "global_step": 2650,
+    "latest": {
+      "attempt_id": "20261005T071832246746Z",
+      "epoch": 2,
+      "step": 150,
+      "global_step": 2650,
+      "before_localization": [
+        [
+          0.24914740025997162,
+          0.30618390440940857
+        ],
+        [
+          0.008229659870266914,
+          0.2046549767255783
+        ],
+        [
+          0.167340487241745,
+          0.22782187163829803
+        ]
+      ],
+      "candidate_localization": [
+        [
+          0.24917617440223694,
+          0.30613598227500916
+        ],
+        [
+          0.008222288452088833,
+          0.2046678364276886
+        ],
+        [
+          0.167317196726799,
+          0.22786925733089447
+        ]
+      ],
+      "accepted_localization": [
+        [
+          0.24917617440223694,
+          0.30613598227500916
+        ],
+        [
+          0.008222288452088833,
+          0.2046678364276886
+        ],
+        [
+          0.167317196726799,
+          0.22786925733089447
+        ]
+      ],
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.01388888992369175,
+        0.01388888992369175,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.01388888992369175,
+        0.01388888992369175,
+        0.0
+      ],
+      "selected_correction_strength": 0.0,
+      "trajectory_checked": true,
+      "baseline_trajectory": [
+        0.400924950838089,
+        0.2715049982070923,
+        0.08976904302835464
+      ],
+      "accepted_trajectory": [
+        0.4009275436401367,
+        0.2714574337005615,
+        0.08979155123233795
+      ],
+      "training_clips": [
+        {
+          "dataset": "lasher",
+          "sequence_id": 455,
+          "frame_ids": [
+            122,
+            123,
+            124
+          ]
+        },
+        {
+          "dataset": "depthtrack",
+          "sequence_id": 2,
+          "frame_ids": [
+            103,
+            104,
+            105
+          ]
+        },
+        {
+          "dataset": "visevent",
+          "sequence_id": 315,
+          "frame_ids": [
+            30,
+            31,
+            32
+          ]
+        }
+      ],
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "baseline_trajectory_details": [
+        {
+          "predicted_boxes": [
+            [
+              331.85548210144043,
+              151.3931121826172,
+              34.25314712524414,
+              76.731201171875
+            ],
+            [
+              335.465518951416,
+              152.00101852416992,
+              38.002952575683594,
+              75.26055145263672
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              326.0,
+              151.0,
+              33.0,
+              76.0
+            ],
+            [
+              331.85548210144043,
+              151.3931121826172,
+              34.25314712524414,
+              76.731201171875
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        },
+        {
+          "predicted_boxes": [
+            [
+              314.60486602783203,
+              67.04830169677734,
+              130.6239471435547,
+              159.4472198486328
+            ],
+            [
+              329.0730094909668,
+              66.92780303955078,
+              123.60428619384766,
+              155.43223571777344
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              291.0,
+              64.0,
+              137.0,
+              172.0
+            ],
+            [
+              314.60486602783203,
+              67.04830169677734,
+              130.6239471435547,
+              159.4472198486328
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        },
+        {
+          "predicted_boxes": [
+            [
+              121.96773910522461,
+              164.53082275390625,
+              57.04721450805664,
+              35.59494400024414
+            ],
+            [
+              125.09850883483887,
+              164.94648933410645,
+              55.90580749511719,
+              34.836822509765625
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              118.24040222167969,
+              164.3072052001953,
+              59.707698822021484,
+              36.94620132446289
+            ],
+            [
+              121.96773910522461,
+              164.53082275390625,
+              57.04721450805664,
+              35.59494400024414
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        }
+      ],
+      "candidate_trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0,
+          "localization": [
+            [
+              0.24917617440223694,
+              0.30613598227500916
+            ],
+            [
+              0.008222288452088833,
+              0.2046678364276886
+            ],
+            [
+              0.167317196726799,
+              0.22786925733089447
+            ]
+          ],
+          "trajectory": [
+            0.4009275436401367,
+            0.2714574337005615,
+            0.08979155123233795
+          ],
+          "trajectory_details": [
+            {
+              "predicted_boxes": [
+                [
+                  331.8567924499512,
+                  151.3957748413086,
+                  34.249610900878906,
+                  76.72642517089844
+                ],
+                [
+                  335.46631622314453,
+                  152.0030288696289,
+                  38.00103759765625,
+                  75.25715637207031
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  326.0,
+                  151.0,
+                  33.0,
+                  76.0
+                ],
+                [
+                  331.8567924499512,
+                  151.3957748413086,
+                  34.249610900878906,
+                  76.72642517089844
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            },
+            {
+              "predicted_boxes": [
+                [
+                  314.60742950439453,
+                  67.0526123046875,
+                  130.62144470214844,
+                  159.4400634765625
+                ],
+                [
+                  329.0757484436035,
+                  66.92953491210938,
+                  123.60173797607422,
+                  155.427978515625
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  291.0,
+                  64.0,
+                  137.0,
+                  172.0
+                ],
+                [
+                  314.60742950439453,
+                  67.0526123046875,
+                  130.62144470214844,
+                  159.4400634765625
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            },
+            {
+              "predicted_boxes": [
+                [
+                  121.96832275390625,
+                  164.5308609008789,
+                  57.04609298706055,
+                  35.59416580200195
+                ],
+                [
+                  125.09751319885254,
+                  164.9468231201172,
+                  55.90630340576172,
+                  34.83536148071289
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  118.24040222167969,
+                  164.3072052001953,
+                  59.707698822021484,
+                  36.94620132446289
+                ],
+                [
+                  121.96832275390625,
+                  164.5308609008789,
+                  57.04609298706055,
+                  35.59416580200195
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            }
+          ]
+        }
+      ],
+      "pair_check_forward_examples": 18,
+      "trajectory_model_forward_examples": 12,
+      "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs",
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "step_seconds": 3.029957113903947,
+      "peak_allocated_bytes": 5770099200,
+      "joint_grad_norm_before_clip": 1.7853769063949585,
+      "gradient_clip_coefficient": 0.05601055084294191,
+      "correction_norm": 0.0,
+      "active_risk_constraints": 0
+    },
+    "training_examples": 63600,
+    "check_examples": 23850,
+    "wallclock_seconds": 6692.803901248961,
+    "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0001.pth.tar",
+    "completed_epochs": 1,
+    "replica_parameter_sha256": "a38b5df569d6bccfdac33db720ef07d568d85addaf3c18dd13584654832abe88"
+  },
+  "controller_and_torchrun_ps": "    PID    PPID STAT     ELAPSED COMMAND\n 433952       1 Ss      01:51:58 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_full_method_v2_distance0_job.py\n 433956  433952 Sl      01:51:58 /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29530 /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json\n",
+  "rank_ps": "    PID    PPID STAT     ELAPSED COMMAND\n 434003  433956 Sl      01:51:56 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json\n 434004  433956 Sl      01:51:56 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json\n 434005  433956 Sl      01:51:56 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_full_method.py --protocol /data/gb/rgbx-risk/configs/full_method_v2_distance0.json\n",
+  "first_epoch_checkpoint_exists": true,
+  "first_epoch_checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0001.pth.tar",
+  "actual_remote_observations": 1,
+  "no_temperature_power_or_reference_inference_queries": true,
+  "goal_achieved": false,
+  "train_log_tail": "behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [12], which does not match the required output shape [1, 3, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 3, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [294912], which does not match the required output shape [1, 3, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [12], which does not match the required output shape [1, 3, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 3, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [786432], which does not match the required output shape [1, 8, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [32], which does not match the required output shape [1, 8, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [3145728], which does not match the required output shape [1, 8, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [786432], which does not match the required output shape [1, 8, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [32], which does not match the required output shape [1, 8, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [3145728], which does not match the required output shape [1, 8, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [786432], which does not match the required output shape [1, 8, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [32], which does not match the required output shape [1, 8, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [3145728], which does not match the required output shape [1, 8, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)\n  return torch.stack(batch, 1, out=out)\n",
+  "controller_launcher_log_tail": "",
+  "native_observer_ssh_exit_code": 0
+}

@@ -1,0 +1,18 @@
+{
+  "status": "READONLY_SUMMARY_FIELD_ASSUMPTION_CORRECTED_FROM_AUDITED_SNAPSHOT",
+  "recorded_at": "2026-10-05T09:18:48.185046+00:00",
+  "initial_native_exit_code": 1,
+  "initial_command": "rgbx_distance0_collect_completed_epoch1_20261005.py",
+  "actual_failed_tool_chunk": "1a5d83",
+  "initial_stdout": null,
+  "initial_remote_stderr_retained": false,
+  "observed_runtime_schema": "In-progress run.json has no epoch_history; train_full_method.py only adds that field to the run receipt on terminal completion. Saved checkpoints already contain it.",
+  "wrong_access": "run['epoch_history'][0]",
+  "correct_access": "audit['epoch1_history'][0]",
+  "existing_raw2500_snapshot_reused": true,
+  "corrected_native_exit_code": 0,
+  "corrected_report": "reports/full_method_v2_distance0_completed_epoch1_diagnosis_20261005.json",
+  "training_source_or_optimizer_mutations": 0,
+  "model_reexecution": 0,
+  "scope": "Private read-only summary failure. CPU checkpoint audit and formal training continued; no training restart and no interpretation as model or method failure."
+}

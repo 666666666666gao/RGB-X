@@ -1,0 +1,45 @@
+{
+  "status": "PASS_ACTUAL_RETAINER_ALIVE_ONE_RECOVERY_WEIGHT_RETAINED",
+  "observed_at": "2026-10-05T09:20:12.841852+00:00",
+  "worker_receipt_source": "/data/gb/rgbx-risk/reports/full_method_v2_distance0_checkpoint_retention.json",
+  "worker_receipt_snapshot": {
+    "status": "ACTIVE_KEEP_ONE_COMPLETED_RECOVERY_CHECKPOINT",
+    "retention_worker_pid": 573595,
+    "started_at": "2026-10-05T09:16:27.932993+00:00",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "poll_seconds": 240,
+    "policy": "During active training retain only the most recently completed named checkpoint. It includes model, optimizer and three-rank RNG. Retire older completed epochs and the byte-identical latest alias.",
+    "best_by_benchmark": "NOT_DETERMINED_NO_FORMAL_SCORES",
+    "after_training": "Retain the final checkpoint until complete same-protocol evaluation and diagnosis; then preserve only the best measured method checkpoint across completed candidates.",
+    "reference_and_initialization_inputs": "Outside this cleanup scope and retained.",
+    "deleted": [
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077203,
+        "sha256": "716f71305c9ceb6bdb2752f6f34860ea54f5964bcff70aa7eb3b026fb0ed283e"
+      }
+    ],
+    "removed_file_bytes": 477077203,
+    "handled_completed_epoch": 1,
+    "training_parameters_modified": false,
+    "script_sha256": "2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102",
+    "retained_checkpoint": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0001.pth.tar",
+      "bytes": 477077203,
+      "sha256": "716f71305c9ceb6bdb2752f6f34860ea54f5964bcff70aa7eb3b026fb0ed283e"
+    },
+    "alias_retired": true,
+    "observed_at": "2026-10-05T09:16:29.571312+00:00"
+  },
+  "retention_worker_ps": "    PID    PPID STAT     ELAPSED COMMAND\n 573595       1 Ss         03:44 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/retain_full_method_v2_distance0_checkpoints.py\n",
+  "retained_files": [
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0001.pth.tar",
+      "bytes": 477077203
+    }
+  ],
+  "live_worker_receipt_not_overwritten": true,
+  "no_temperature_power_or_reference_inference_queries": true,
+  "goal_achieved": false,
+  "native_ssh_exit_code": 0
+}

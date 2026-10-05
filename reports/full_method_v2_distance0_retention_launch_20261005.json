@@ -1,0 +1,22 @@
+{
+  "status": "OWNED_RETENTION_WORKER_LAUNCHED_FIRST_DELETE_NOT_YET_OBSERVED",
+  "started_at": "2026-10-05T09:16:27.881045+00:00",
+  "retention_worker_pid": 573595,
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "/data/gb/rgbx-risk/scripts/retain_full_method_v2_distance0_checkpoints.py"
+  ],
+  "invocation_count": 1,
+  "log_path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_controller/owned_checkpoint_retention.log",
+  "dynamic_worker_receipt": "/data/gb/rgbx-risk/reports/full_method_v2_distance0_checkpoint_retention.json",
+  "audit_sha256": "11928baffb6a5cb5d22574eda67633bf1089dcb4458680d38837258f17fbb526",
+  "source_sha256": "2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102",
+  "first_observation_not_before": "2026-10-05T09:19:27.881045+00:00",
+  "poll_seconds": 240,
+  "policy": "Only current distance0 owned checkpoints. Retain one completed recovery point; after evaluation preserve best measured candidate. Public/v1/evidence protected.",
+  "training_mutations": 0,
+  "temperature_or_power_queries_or_controls": 0,
+  "goal_achieved": false,
+  "native_ssh_exit_code": 0,
+  "native_ssh_stderr": ""
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASSIVE_TIMER_NO_REMOTE_QUERY_BEFORE_ESTIMATED_ENDPOINT",
+  "local_pid": 1536,
+  "started_at": "2026-10-05T09:23:22.504242+00:00",
+  "observe_not_before": "2026-10-06T09:37:01.070691+00:00",
+  "controller_pid": 433952,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_distance0_training_endpoint_observation_20261006.json",
+  "actual_remote_observations": 0,
+  "polling_policy": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
+  "timer_sleep_max_seconds": 300,
+  "native_exec_session_id": 72018,
+  "execution_status": "NATIVE_PASSIVE_TIMER_ACTUALLY_STARTED_ENDPOINT_OBSERVATION_PENDING",
+  "goal_achieved": false
+}
