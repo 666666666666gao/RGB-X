@@ -1,0 +1,1020 @@
+{
+  "status": "COMPLETE_SAVED_LASHER_PAIR_DESCRIPTIVE_DIAGNOSIS_NOT_ALL3_COMPARISON",
+  "analyzed_at": "2026-10-05T00:01:32.581926+00:00",
+  "sequence_count": 245,
+  "frame_pairs": 220703,
+  "attributes": 19,
+  "identities": {
+    "reference": {
+      "checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+      "checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+      "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+      "terminal_audit_sha256": "e41c8074ff7c7c286441e04abe89b3040a8c29fac78215aa57a801ea09da8797"
+    },
+    "method": {
+      "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v1_s2026/XTrack_ep0015.pth.tar",
+      "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+      "checkpoint_sha256": "c9a490d4bac93e83e3697abd8fa24eb280cbfcbead226dc4a1629fa2d422fdc8",
+      "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+      "terminal_audit_sha256": "6b75c50a58027d3bc835e919f4bd26d03f723725e6d7c5d2ee8a990ad3f492e8"
+    }
+  },
+  "headline_metrics": {
+    "SR_AUC": {
+      "reference": 0.5554599303245381,
+      "method": 0.5548465787350384,
+      "delta": -0.000613351589499711
+    },
+    "PR_at_20": {
+      "reference": 0.6905088871059202,
+      "method": 0.6903214880777397,
+      "delta": -0.00018739902818043497
+    },
+    "NPR_AUC": {
+      "reference": 0.5921262401038353,
+      "method": 0.5920586963531068,
+      "delta": -6.754375072848262e-05
+    },
+    "NP_at_020": {
+      "reference": 0.6548772213736572,
+      "method": 0.6553677075460028,
+      "delta": 0.0004904861723455944
+    }
+  },
+  "sequence_delta_distributions": {
+    "SR_AUC": {
+      "positive": 113,
+      "zero": 1,
+      "negative": 131,
+      "median_delta": -0.0005602240896358246,
+      "p10_delta": -0.0290965250965251,
+      "p25_delta": -0.007017543859649256,
+      "p75_delta": 0.004884004884004867,
+      "p90_delta": 0.01982938354106529,
+      "minimum_delta": -0.4560461082200212,
+      "maximum_delta": 0.5667473769168684,
+      "improve_at_least_10_percentage_points": 6,
+      "degrade_at_least_10_percentage_points": 5,
+      "sum_positive_sequence_deltas": 2.9821024134586898,
+      "sum_negative_sequence_deltas": -3.1323735528861105,
+      "worst_ten_sequences": [
+        {
+          "sequence": "1blackteacher",
+          "frames": 851,
+          "reference": 0.8320743103351799,
+          "method": 0.3760282021151587,
+          "delta": -0.4560461082200212
+        },
+        {
+          "sequence": "blkboyhead",
+          "frames": 556,
+          "reference": 0.4764474134977732,
+          "method": 0.15930113052415212,
+          "delta": -0.3171462829736211
+        },
+        {
+          "sequence": "darkouterwhiteboy",
+          "frames": 749,
+          "reference": 0.5430733040879904,
+          "method": 0.29556869476762665,
+          "delta": -0.24750460932036372
+        },
+        {
+          "sequence": "bikefromlight",
+          "frames": 172,
+          "reference": 0.6495016611295682,
+          "method": 0.4543189368770763,
+          "delta": -0.1951827242524919
+        },
+        {
+          "sequence": "foldedfolderatlefthand",
+          "frames": 1146,
+          "reference": 0.49044294855813186,
+          "method": 0.3387351450178675,
+          "delta": -0.15170780354026436
+        },
+        {
+          "sequence": "darktreesboy",
+          "frames": 503,
+          "reference": 0.604279087380479,
+          "method": 0.5127331250591688,
+          "delta": -0.09154596232131018
+        },
+        {
+          "sequence": "whitebikebelow",
+          "frames": 566,
+          "reference": 0.6224970553592463,
+          "method": 0.535419821638903,
+          "delta": -0.08707723372034326
+        },
+        {
+          "sequence": "shinybikeboy2left",
+          "frames": 832,
+          "reference": 0.4923878205128205,
+          "method": 0.40544871794871795,
+          "delta": -0.08693910256410253
+        },
+        {
+          "sequence": "umbrellawillopen",
+          "frames": 490,
+          "reference": 0.7754130223517978,
+          "method": 0.712536443148688,
+          "delta": -0.06287657920310974
+        },
+        {
+          "sequence": "1strowrightgirl3540",
+          "frames": 3540,
+          "reference": 0.2362927091740651,
+          "method": 0.17441485068603713,
+          "delta": -0.06187785848802799
+        }
+      ],
+      "best_ten_sequences": [
+        {
+          "sequence": "11runtwo",
+          "frames": 295,
+          "reference": 0.15076674737691687,
+          "method": 0.7175141242937852,
+          "delta": 0.5667473769168684
+        },
+        {
+          "sequence": "boy2basketballground",
+          "frames": 206,
+          "reference": 0.05594082293111419,
+          "method": 0.48404993065187235,
+          "delta": 0.42810910772075816
+        },
+        {
+          "sequence": "carcominginlight",
+          "frames": 155,
+          "reference": 0.2537634408602151,
+          "method": 0.5145929339477727,
+          "delta": 0.26082949308755765
+        },
+        {
+          "sequence": "couple",
+          "frames": 101,
+          "reference": 0.24705327675624705,
+          "method": 0.42244224422442234,
+          "delta": 0.17538896746817528
+        },
+        {
+          "sequence": "womanback2car",
+          "frames": 95,
+          "reference": 0.6070175438596491,
+          "method": 0.781954887218045,
+          "delta": 0.17493734335839584
+        },
+        {
+          "sequence": "advancedredcup",
+          "frames": 1411,
+          "reference": 0.4418008167122271,
+          "method": 0.5710573385980899,
+          "delta": 0.12925652188586284
+        },
+        {
+          "sequence": "midof3girls",
+          "frames": 439,
+          "reference": 0.453628376179629,
+          "method": 0.5521206204577503,
+          "delta": 0.09849224427812137
+        },
+        {
+          "sequence": "rightdarksingleman",
+          "frames": 1133,
+          "reference": 0.3367376959609969,
+          "method": 0.4097423611986719,
+          "delta": 0.07300466523767501
+        },
+        {
+          "sequence": "girllongskirt",
+          "frames": 304,
+          "reference": 0.2916666666666667,
+          "method": 0.35103383458646614,
+          "delta": 0.05936716791979946
+        },
+        {
+          "sequence": "girlrightthewautress",
+          "frames": 308,
+          "reference": 0.4499072356215213,
+          "method": 0.5077303648732221,
+          "delta": 0.0578231292517008
+        }
+      ]
+    },
+    "PR_at_20": {
+      "positive": 101,
+      "zero": 45,
+      "negative": 99,
+      "median_delta": 0.0,
+      "p10_delta": -0.05114638447971781,
+      "p25_delta": -0.007874015748031482,
+      "p75_delta": 0.0089126559714795,
+      "p90_delta": 0.025811015962385945,
+      "minimum_delta": -0.5511163337250293,
+      "maximum_delta": 0.7220338983050847,
+      "improve_at_least_10_percentage_points": 11,
+      "degrade_at_least_10_percentage_points": 8,
+      "sum_positive_sequence_deltas": 4.274852624595403,
+      "sum_negative_sequence_deltas": -4.320765386499546,
+      "worst_ten_sequences": [
+        {
+          "sequence": "1blackteacher",
+          "frames": 851,
+          "reference": 0.9917743830787309,
+          "method": 0.4406580493537015,
+          "delta": -0.5511163337250293
+        },
+        {
+          "sequence": "darkouterwhiteboy",
+          "frames": 749,
+          "reference": 0.9385847797062751,
+          "method": 0.520694259012016,
+          "delta": -0.417890520694259
+        },
+        {
+          "sequence": "blkboyhead",
+          "frames": 556,
+          "reference": 0.5773381294964028,
+          "method": 0.2014388489208633,
+          "delta": -0.37589928057553956
+        },
+        {
+          "sequence": "bikefromlight",
+          "frames": 172,
+          "reference": 0.8197674418604651,
+          "method": 0.5581395348837209,
+          "delta": -0.2616279069767442
+        },
+        {
+          "sequence": "foldedfolderatlefthand",
+          "frames": 1146,
+          "reference": 0.5261780104712042,
+          "method": 0.32897033158813266,
+          "delta": -0.1972076788830715
+        },
+        {
+          "sequence": "whitebikebelow",
+          "frames": 566,
+          "reference": 0.9169611307420494,
+          "method": 0.734982332155477,
+          "delta": -0.1819787985865724
+        },
+        {
+          "sequence": "shinybikeboy2left",
+          "frames": 832,
+          "reference": 0.6875,
+          "method": 0.5661057692307693,
+          "delta": -0.12139423076923073
+        },
+        {
+          "sequence": "darktreesboy",
+          "frames": 503,
+          "reference": 0.7117296222664016,
+          "method": 0.5904572564612326,
+          "delta": -0.12127236580516898
+        },
+        {
+          "sequence": "boyoncall",
+          "frames": 310,
+          "reference": 0.8032258064516129,
+          "method": 0.7032258064516129,
+          "delta": -0.09999999999999998
+        },
+        {
+          "sequence": "whiterunningboy",
+          "frames": 346,
+          "reference": 0.661849710982659,
+          "method": 0.569364161849711,
+          "delta": -0.09248554913294804
+        }
+      ],
+      "best_ten_sequences": [
+        {
+          "sequence": "11runtwo",
+          "frames": 295,
+          "reference": 0.18983050847457628,
+          "method": 0.911864406779661,
+          "delta": 0.7220338983050847
+        },
+        {
+          "sequence": "boy2basketballground",
+          "frames": 206,
+          "reference": 0.07766990291262135,
+          "method": 0.7330097087378641,
+          "delta": 0.6553398058252428
+        },
+        {
+          "sequence": "carcominginlight",
+          "frames": 155,
+          "reference": 0.38064516129032255,
+          "method": 0.6387096774193548,
+          "delta": 0.25806451612903225
+        },
+        {
+          "sequence": "couple",
+          "frames": 101,
+          "reference": 0.32673267326732675,
+          "method": 0.5841584158415841,
+          "delta": 0.2574257425742574
+        },
+        {
+          "sequence": "womanback2car",
+          "frames": 95,
+          "reference": 0.7578947368421053,
+          "method": 0.968421052631579,
+          "delta": 0.21052631578947367
+        },
+        {
+          "sequence": "rightdarksingleman",
+          "frames": 1133,
+          "reference": 0.5825242718446602,
+          "method": 0.7537511032656664,
+          "delta": 0.17122683142100625
+        },
+        {
+          "sequence": "advancedredcup",
+          "frames": 1411,
+          "reference": 0.44294826364280654,
+          "method": 0.6002834868887313,
+          "delta": 0.1573352232459248
+        },
+        {
+          "sequence": "whitefardown",
+          "frames": 67,
+          "reference": 0.8507462686567164,
+          "method": 0.9850746268656716,
+          "delta": 0.13432835820895517
+        },
+        {
+          "sequence": "midof3girls",
+          "frames": 439,
+          "reference": 0.5535307517084282,
+          "method": 0.6788154897494305,
+          "delta": 0.12528473804100226
+        },
+        {
+          "sequence": "boy`sheadingreycol",
+          "frames": 269,
+          "reference": 0.35315985130111527,
+          "method": 0.4684014869888476,
+          "delta": 0.11524163568773232
+        }
+      ]
+    },
+    "NPR_AUC": {
+      "positive": 112,
+      "zero": 1,
+      "negative": 132,
+      "median_delta": -0.0003953194180897901,
+      "p10_delta": -0.029437348912167666,
+      "p25_delta": -0.005985552115583048,
+      "p75_delta": 0.006420878210439185,
+      "p90_delta": 0.020127053261789134,
+      "minimum_delta": -0.4894818091749036,
+      "maximum_delta": 0.6053173811897642,
+      "improve_at_least_10_percentage_points": 7,
+      "degrade_at_least_10_percentage_points": 5,
+      "sum_positive_sequence_deltas": 3.249381469680832,
+      "sum_negative_sequence_deltas": -3.265929688609335,
+      "worst_ten_sequences": [
+        {
+          "sequence": "1blackteacher",
+          "frames": 851,
+          "reference": 0.8922144651044905,
+          "method": 0.40273265592958696,
+          "delta": -0.4894818091749036
+        },
+        {
+          "sequence": "blkboyhead",
+          "frames": 556,
+          "reference": 0.496191282268303,
+          "method": 0.17315559317252083,
+          "delta": -0.3230356890957822
+        },
+        {
+          "sequence": "darkouterwhiteboy",
+          "frames": 749,
+          "reference": 0.5326841016780545,
+          "method": 0.282468127437891,
+          "delta": -0.25021597424016345
+        },
+        {
+          "sequence": "bikefromlight",
+          "frames": 172,
+          "reference": 0.6958504331965344,
+          "method": 0.48267213862289104,
+          "delta": -0.21317829457364335
+        },
+        {
+          "sequence": "foldedfolderatlefthand",
+          "frames": 1146,
+          "reference": 0.5072203401430381,
+          "method": 0.3394244259658488,
+          "delta": -0.16779591417718925
+        },
+        {
+          "sequence": "darktreesboy",
+          "frames": 503,
+          "reference": 0.6177834951077847,
+          "method": 0.5178731532374381,
+          "delta": -0.09991034187034664
+        },
+        {
+          "sequence": "whitebikebelow",
+          "frames": 566,
+          "reference": 0.693307004780711,
+          "method": 0.5955795745860182,
+          "delta": -0.09772743019469277
+        },
+        {
+          "sequence": "shinybikeboy2left",
+          "frames": 832,
+          "reference": 0.5663650075414781,
+          "method": 0.4800622171945702,
+          "delta": -0.08630279034690791
+        },
+        {
+          "sequence": "umbrellawillopen",
+          "frames": 490,
+          "reference": 0.8114445778311324,
+          "method": 0.7428571428571429,
+          "delta": -0.06858743497398956
+        },
+        {
+          "sequence": "11leftboy",
+          "frames": 152,
+          "reference": 0.8552631578947367,
+          "method": 0.7945046439628484,
+          "delta": -0.06075851393188836
+        }
+      ],
+      "best_ten_sequences": [
+        {
+          "sequence": "11runtwo",
+          "frames": 295,
+          "reference": 0.16124958457959457,
+          "method": 0.7665669657693588,
+          "delta": 0.6053173811897642
+        },
+        {
+          "sequence": "boy2basketballground",
+          "frames": 206,
+          "reference": 0.06044165238911098,
+          "method": 0.496954121454407,
+          "delta": 0.436512469065296
+        },
+        {
+          "sequence": "carcominginlight",
+          "frames": 155,
+          "reference": 0.2843769765970905,
+          "method": 0.5752055660974067,
+          "delta": 0.2908285895003162
+        },
+        {
+          "sequence": "womanback2car",
+          "frames": 95,
+          "reference": 0.6594427244582043,
+          "method": 0.8396284829721361,
+          "delta": 0.18018575851393182
+        },
+        {
+          "sequence": "couple",
+          "frames": 101,
+          "reference": 0.27994564162298585,
+          "method": 0.4597165598912833,
+          "delta": 0.17977091826829744
+        },
+        {
+          "sequence": "advancedredcup",
+          "frames": 1411,
+          "reference": 0.4463806784230347,
+          "method": 0.5866788955128471,
+          "delta": 0.14029821708981244
+        },
+        {
+          "sequence": "rightdarksingleman",
+          "frames": 1133,
+          "reference": 0.4111762975269543,
+          "method": 0.5442777287437482,
+          "delta": 0.13310143121679396
+        },
+        {
+          "sequence": "midof3girls",
+          "frames": 439,
+          "reference": 0.45026575550493547,
+          "method": 0.54781365849301,
+          "delta": 0.09754790298807453
+        },
+        {
+          "sequence": "girllongskirt",
+          "frames": 304,
+          "reference": 0.20072239422084626,
+          "method": 0.26812435500515996,
+          "delta": 0.06740196078431371
+        },
+        {
+          "sequence": "girlrightthewautress",
+          "frames": 308,
+          "reference": 0.4908326967150497,
+          "method": 0.5482556659027248,
+          "delta": 0.05742296918767509
+        }
+      ]
+    },
+    "NP_at_020": {
+      "positive": 101,
+      "zero": 44,
+      "negative": 100,
+      "median_delta": 0.0,
+      "p10_delta": -0.0330705715467321,
+      "p25_delta": -0.008547008547008628,
+      "p75_delta": 0.00793650793650802,
+      "p90_delta": 0.022916385755164984,
+      "minimum_delta": -0.5393654524089306,
+      "maximum_delta": 0.688135593220339,
+      "improve_at_least_10_percentage_points": 8,
+      "degrade_at_least_10_percentage_points": 7,
+      "sum_positive_sequence_deltas": 3.749827485398498,
+      "sum_negative_sequence_deltas": -3.629658373173805,
+      "worst_ten_sequences": [
+        {
+          "sequence": "1blackteacher",
+          "frames": 851,
+          "reference": 0.9800235017626322,
+          "method": 0.4406580493537015,
+          "delta": -0.5393654524089306
+        },
+        {
+          "sequence": "blkboyhead",
+          "frames": 556,
+          "reference": 0.5629496402877698,
+          "method": 0.2014388489208633,
+          "delta": -0.36151079136690656
+        },
+        {
+          "sequence": "bikefromlight",
+          "frames": 172,
+          "reference": 0.7965116279069767,
+          "method": 0.5406976744186046,
+          "delta": -0.2558139534883721
+        },
+        {
+          "sequence": "darkouterwhiteboy",
+          "frames": 749,
+          "reference": 0.48598130841121495,
+          "method": 0.27102803738317754,
+          "delta": -0.2149532710280374
+        },
+        {
+          "sequence": "foldedfolderatlefthand",
+          "frames": 1146,
+          "reference": 0.5453752181500873,
+          "method": 0.35776614310645727,
+          "delta": -0.18760907504363
+        },
+        {
+          "sequence": "darktreesboy",
+          "frames": 503,
+          "reference": 0.6918489065606361,
+          "method": 0.5785288270377733,
+          "delta": -0.11332007952286283
+        },
+        {
+          "sequence": "whitebikebelow",
+          "frames": 566,
+          "reference": 0.7968197879858657,
+          "method": 0.6872791519434629,
+          "delta": -0.10954063604240283
+        },
+        {
+          "sequence": "shinybikeboy2left",
+          "frames": 832,
+          "reference": 0.6298076923076923,
+          "method": 0.53125,
+          "delta": -0.09855769230769229
+        },
+        {
+          "sequence": "umbrellawillbefold",
+          "frames": 566,
+          "reference": 0.8162544169611308,
+          "method": 0.7367491166077739,
+          "delta": -0.0795053003533569
+        },
+        {
+          "sequence": "whitecarturnright",
+          "frames": 103,
+          "reference": 0.7281553398058253,
+          "method": 0.6504854368932039,
+          "delta": -0.07766990291262132
+        }
+      ],
+      "best_ten_sequences": [
+        {
+          "sequence": "11runtwo",
+          "frames": 295,
+          "reference": 0.1864406779661017,
+          "method": 0.8745762711864407,
+          "delta": 0.688135593220339
+        },
+        {
+          "sequence": "boy2basketballground",
+          "frames": 206,
+          "reference": 0.07281553398058252,
+          "method": 0.558252427184466,
+          "delta": 0.4854368932038835
+        },
+        {
+          "sequence": "carcominginlight",
+          "frames": 155,
+          "reference": 0.3096774193548387,
+          "method": 0.6258064516129033,
+          "delta": 0.31612903225806455
+        },
+        {
+          "sequence": "womanback2car",
+          "frames": 95,
+          "reference": 0.7473684210526316,
+          "method": 0.9578947368421052,
+          "delta": 0.21052631578947367
+        },
+        {
+          "sequence": "couple",
+          "frames": 101,
+          "reference": 0.31683168316831684,
+          "method": 0.5247524752475248,
+          "delta": 0.20792079207920794
+        },
+        {
+          "sequence": "advancedredcup",
+          "frames": 1411,
+          "reference": 0.443656980864635,
+          "method": 0.5995747696669029,
+          "delta": 0.15591778880226792
+        },
+        {
+          "sequence": "rightdarksingleman",
+          "frames": 1133,
+          "reference": 0.4748455428067079,
+          "method": 0.6134157105030892,
+          "delta": 0.1385701676963813
+        },
+        {
+          "sequence": "midof3girls",
+          "frames": 439,
+          "reference": 0.489749430523918,
+          "method": 0.5899772209567198,
+          "delta": 0.10022779043280178
+        },
+        {
+          "sequence": "truckgonorth",
+          "frames": 152,
+          "reference": 0.9078947368421053,
+          "method": 0.9802631578947368,
+          "delta": 0.07236842105263153
+        },
+        {
+          "sequence": "bike2trees",
+          "frames": 146,
+          "reference": 0.6301369863013698,
+          "method": 0.6986301369863014,
+          "delta": 0.06849315068493156
+        }
+      ]
+    }
+  },
+  "joint_SR_PR_sign_counts": {
+    "SR_negative_PR_negative": 84,
+    "SR_positive_PR_positive": 82,
+    "SR_negative_PR_zero": 29,
+    "SR_positive_PR_zero": 16,
+    "SR_negative_PR_positive": 18,
+    "SR_positive_PR_negative": 15,
+    "SR_zero_PR_positive": 1
+  },
+  "attribute_metrics": [
+    {
+      "attribute": "NO",
+      "sequences": 33,
+      "SR_AUC_reference": 0.729246198235,
+      "SR_AUC_method": 0.7240146332294165,
+      "SR_AUC_delta": -0.005231565005583527,
+      "PR_at_20_reference": 0.8933332056959871,
+      "PR_at_20_method": 0.885092801206507,
+      "PR_at_20_delta": -0.008240404489480047,
+      "NPR_AUC_reference": 0.7893629970524563,
+      "NPR_AUC_method": 0.7829998667473441,
+      "NPR_AUC_delta": -0.006363130305112152,
+      "NP_at_020_reference": 0.8789593023939274,
+      "NP_at_020_method": 0.8729412019317571,
+      "NP_at_020_delta": -0.006018100462170328
+    },
+    {
+      "attribute": "PO",
+      "sequences": 215,
+      "SR_AUC_reference": 0.5320374326497065,
+      "SR_AUC_method": 0.5319426417594116,
+      "SR_AUC_delta": -9.47908902948491e-05,
+      "PR_at_20_reference": 0.6623571742292225,
+      "PR_at_20_method": 0.6629476531727907,
+      "PR_at_20_delta": 0.0005904789435682289,
+      "NPR_AUC_reference": 0.5652182698594649,
+      "NPR_AUC_method": 0.5658741130384703,
+      "NPR_AUC_delta": 0.0006558431790054664,
+      "NP_at_020_reference": 0.6232671386179406,
+      "NP_at_020_method": 0.6246175509208592,
+      "NP_at_020_delta": 0.0013504123029186577
+    },
+    {
+      "attribute": "TO",
+      "sequences": 87,
+      "SR_AUC_reference": 0.5053870039379799,
+      "SR_AUC_method": 0.5133298647760198,
+      "SR_AUC_delta": 0.007942860838039967,
+      "PR_at_20_reference": 0.6337833175008638,
+      "PR_at_20_method": 0.6447649507630975,
+      "PR_at_20_delta": 0.01098163326223367,
+      "NPR_AUC_reference": 0.5371308370224452,
+      "NPR_AUC_method": 0.5458878263020273,
+      "NPR_AUC_delta": 0.008756989279582017,
+      "NP_at_020_reference": 0.5907109947535163,
+      "NP_at_020_method": 0.6019745788274063,
+      "NP_at_020_delta": 0.011263584073890054
+    },
+    {
+      "attribute": "HO",
+      "sequences": 17,
+      "SR_AUC_reference": 0.5213387813544537,
+      "SR_AUC_method": 0.5209659706550841,
+      "SR_AUC_delta": -0.00037281069936956346,
+      "PR_at_20_reference": 0.5815252904804464,
+      "PR_at_20_method": 0.5811826478607772,
+      "PR_at_20_delta": -0.00034264261966920895,
+      "NPR_AUC_reference": 0.5390900605626857,
+      "NPR_AUC_method": 0.5383944971067407,
+      "NPR_AUC_delta": -0.0006955634559450141,
+      "NP_at_020_reference": 0.5807108661961696,
+      "NP_at_020_method": 0.5792273582216323,
+      "NP_at_020_delta": -0.0014835079745373347
+    },
+    {
+      "attribute": "MB",
+      "sequences": 88,
+      "SR_AUC_reference": 0.49440686599311784,
+      "SR_AUC_method": 0.4944849944579438,
+      "SR_AUC_delta": 7.812846482596614e-05,
+      "PR_at_20_reference": 0.622768522842011,
+      "PR_at_20_method": 0.6204663542284724,
+      "PR_at_20_delta": -0.002302168613538602,
+      "NPR_AUC_reference": 0.5242959395541935,
+      "NPR_AUC_method": 0.5245755598468242,
+      "NPR_AUC_delta": 0.0002796202926307334,
+      "NP_at_020_reference": 0.5746096668541888,
+      "NP_at_020_method": 0.5763843163839235,
+      "NP_at_020_delta": 0.0017746495297347176
+    },
+    {
+      "attribute": "LI",
+      "sequences": 51,
+      "SR_AUC_reference": 0.4764578213222671,
+      "SR_AUC_method": 0.48050364365178144,
+      "SR_AUC_delta": 0.004045822329514337,
+      "PR_at_20_reference": 0.5905739299596098,
+      "PR_at_20_method": 0.5932676271443565,
+      "PR_at_20_delta": 0.0026936971847467683,
+      "NPR_AUC_reference": 0.5037666459052739,
+      "NPR_AUC_method": 0.5102311977140165,
+      "NPR_AUC_delta": 0.0064645518087426135,
+      "NP_at_020_reference": 0.5486989553979954,
+      "NP_at_020_method": 0.5560939906232928,
+      "NP_at_020_delta": 0.007395035225297386
+    },
+    {
+      "attribute": "HI",
+      "sequences": 34,
+      "SR_AUC_reference": 0.5860014158894212,
+      "SR_AUC_method": 0.5765430121280376,
+      "SR_AUC_delta": -0.009458403761383627,
+      "PR_at_20_reference": 0.7366870980188466,
+      "PR_at_20_method": 0.7155947678907537,
+      "PR_at_20_delta": -0.021092330128092862,
+      "NPR_AUC_reference": 0.6284487561918973,
+      "NPR_AUC_method": 0.6193434883893072,
+      "NPR_AUC_delta": -0.009105267802590133,
+      "NP_at_020_reference": 0.6979825895609417,
+      "NP_at_020_method": 0.6886170430791883,
+      "NP_at_020_delta": -0.009365546481753473
+    },
+    {
+      "attribute": "AIV",
+      "sequences": 7,
+      "SR_AUC_reference": 0.4781910915387047,
+      "SR_AUC_method": 0.4762200332757547,
+      "SR_AUC_delta": -0.0019710582629500206,
+      "PR_at_20_reference": 0.5492128039189633,
+      "PR_at_20_method": 0.5480645413328146,
+      "PR_at_20_delta": -0.0011482625861487517,
+      "NPR_AUC_reference": 0.48823718845055647,
+      "NPR_AUC_method": 0.4880629307744589,
+      "NPR_AUC_delta": -0.0001742576760975778,
+      "NP_at_020_reference": 0.5119188627242072,
+      "NP_at_020_method": 0.5133696522946777,
+      "NP_at_020_delta": 0.001450789570470512
+    },
+    {
+      "attribute": "LR",
+      "sequences": 68,
+      "SR_AUC_reference": 0.45152839463154076,
+      "SR_AUC_method": 0.45439151904513136,
+      "SR_AUC_delta": 0.002863124413590601,
+      "PR_at_20_reference": 0.6074677851250686,
+      "PR_at_20_method": 0.6083640872888133,
+      "PR_at_20_delta": 0.0008963021637447,
+      "NPR_AUC_reference": 0.48270440534454395,
+      "NPR_AUC_method": 0.4873184798173704,
+      "NPR_AUC_delta": 0.004614074472826468,
+      "NP_at_020_reference": 0.530920232878387,
+      "NP_at_020_method": 0.536873740454879,
+      "NP_at_020_delta": 0.005953507576492045
+    },
+    {
+      "attribute": "DEF",
+      "sequences": 46,
+      "SR_AUC_reference": 0.5921984653561222,
+      "SR_AUC_method": 0.5957068792279171,
+      "SR_AUC_delta": 0.003508413871794902,
+      "PR_at_20_reference": 0.7237397242629169,
+      "PR_at_20_method": 0.7314584611636796,
+      "PR_at_20_delta": 0.007718736900762746,
+      "NPR_AUC_reference": 0.6327109089607118,
+      "NPR_AUC_method": 0.63736677928585,
+      "NPR_AUC_delta": 0.004655870325138145,
+      "NP_at_020_reference": 0.698110874792298,
+      "NP_at_020_method": 0.7038159123622318,
+      "NP_at_020_delta": 0.005705037569933791
+    },
+    {
+      "attribute": "BC",
+      "sequences": 78,
+      "SR_AUC_reference": 0.5300436306081567,
+      "SR_AUC_method": 0.5464968868123841,
+      "SR_AUC_delta": 0.01645325620422733,
+      "PR_at_20_reference": 0.6669571146664008,
+      "PR_at_20_method": 0.6877026314065458,
+      "PR_at_20_delta": 0.02074551674014491,
+      "NPR_AUC_reference": 0.5709597728752809,
+      "NPR_AUC_method": 0.5891543520706659,
+      "NPR_AUC_delta": 0.01819457919538503,
+      "NP_at_020_reference": 0.6309905531191685,
+      "NP_at_020_method": 0.6516981241895057,
+      "NP_at_020_delta": 0.02070757107033716
+    },
+    {
+      "attribute": "SA",
+      "sequences": 107,
+      "SR_AUC_reference": 0.48214166429916017,
+      "SR_AUC_method": 0.4862447530967571,
+      "SR_AUC_delta": 0.00410308879759691,
+      "PR_at_20_reference": 0.5961174266990623,
+      "PR_at_20_method": 0.6020719006360568,
+      "PR_at_20_delta": 0.005954473936994442,
+      "NPR_AUC_reference": 0.5065028879560923,
+      "NPR_AUC_method": 0.5111442271170388,
+      "NPR_AUC_delta": 0.004641339160946445,
+      "NP_at_020_reference": 0.5541709646275679,
+      "NP_at_020_method": 0.5609920959471129,
+      "NP_at_020_delta": 0.006821131319544982
+    },
+    {
+      "attribute": "CM",
+      "sequences": 133,
+      "SR_AUC_reference": 0.5349332625443698,
+      "SR_AUC_method": 0.5355837804287085,
+      "SR_AUC_delta": 0.000650517884338675,
+      "PR_at_20_reference": 0.668885841324147,
+      "PR_at_20_method": 0.6682549358659118,
+      "PR_at_20_delta": -0.000630905458235187,
+      "NPR_AUC_reference": 0.569419380045544,
+      "NPR_AUC_method": 0.5710337723414252,
+      "NPR_AUC_delta": 0.0016143922958811174,
+      "NP_at_020_reference": 0.6298435347403271,
+      "NP_at_020_method": 0.6329493059023897,
+      "NP_at_020_delta": 0.003105771162062676
+    },
+    {
+      "attribute": "TC",
+      "sequences": 148,
+      "SR_AUC_reference": 0.49139485460028914,
+      "SR_AUC_method": 0.487896124153697,
+      "SR_AUC_delta": -0.0034987304465921576,
+      "PR_at_20_reference": 0.613378225736101,
+      "PR_at_20_method": 0.6085665481776484,
+      "PR_at_20_delta": -0.004811677558452576,
+      "NPR_AUC_reference": 0.5193588387675053,
+      "NPR_AUC_method": 0.5162042674070311,
+      "NPR_AUC_delta": -0.0031545713604742565,
+      "NP_at_020_reference": 0.5708782024831486,
+      "NP_at_020_method": 0.568204176729181,
+      "NP_at_020_delta": -0.0026740257539675794
+    },
+    {
+      "attribute": "FL",
+      "sequences": 20,
+      "SR_AUC_reference": 0.485182093985459,
+      "SR_AUC_method": 0.45643702011193427,
+      "SR_AUC_delta": -0.028745073873524707,
+      "PR_at_20_reference": 0.6086378253137694,
+      "PR_at_20_method": 0.5761890568004173,
+      "PR_at_20_delta": -0.0324487685133521,
+      "NPR_AUC_reference": 0.5256339294592557,
+      "NPR_AUC_method": 0.4972385596362553,
+      "NPR_AUC_delta": -0.028395369823000394,
+      "NP_at_020_reference": 0.5813418682904636,
+      "NP_at_020_method": 0.5480860676749448,
+      "NP_at_020_delta": -0.033255800615518805
+    },
+    {
+      "attribute": "OV",
+      "sequences": 7,
+      "SR_AUC_reference": 0.6571756069954192,
+      "SR_AUC_method": 0.6520327283529352,
+      "SR_AUC_delta": -0.005142878642483972,
+      "PR_at_20_reference": 0.758882656852733,
+      "PR_at_20_method": 0.7517285445572871,
+      "PR_at_20_delta": -0.007154112295445936,
+      "NPR_AUC_reference": 0.6952711149800478,
+      "NPR_AUC_method": 0.6919612111234967,
+      "NPR_AUC_delta": -0.0033099038565510552,
+      "NP_at_020_reference": 0.7613925613383145,
+      "NP_at_020_method": 0.7607012447056756,
+      "NP_at_020_delta": -0.0006913166326388831
+    },
+    {
+      "attribute": "FM",
+      "sequences": 193,
+      "SR_AUC_reference": 0.5496576352379572,
+      "SR_AUC_method": 0.5491445864426048,
+      "SR_AUC_delta": -0.000513048795352411,
+      "PR_at_20_reference": 0.6807267443943196,
+      "PR_at_20_method": 0.6795562252872904,
+      "PR_at_20_delta": -0.0011705191070291443,
+      "NPR_AUC_reference": 0.5862193375631131,
+      "NPR_AUC_method": 0.5865611258477331,
+      "NPR_AUC_delta": 0.0003417882846200593,
+      "NP_at_020_reference": 0.6455867754007755,
+      "NP_at_020_method": 0.6464006725508883,
+      "NP_at_020_delta": 0.0008138971501128189
+    },
+    {
+      "attribute": "SV",
+      "sequences": 222,
+      "SR_AUC_reference": 0.5521365496853619,
+      "SR_AUC_method": 0.5544727922522901,
+      "SR_AUC_delta": 0.002336242566928215,
+      "PR_at_20_reference": 0.6852348784750047,
+      "PR_at_20_method": 0.6890554280047363,
+      "PR_at_20_delta": 0.003820549529731543,
+      "NPR_AUC_reference": 0.5890339581600144,
+      "NPR_AUC_method": 0.5920452429574126,
+      "NPR_AUC_delta": 0.003011284797398206,
+      "NP_at_020_reference": 0.6516327590515998,
+      "NP_at_020_method": 0.6551934381619035,
+      "NP_at_020_delta": 0.003560679110303666
+    },
+    {
+      "attribute": "ARV",
+      "sequences": 109,
+      "SR_AUC_reference": 0.5179299053997245,
+      "SR_AUC_method": 0.5138034614792406,
+      "SR_AUC_delta": -0.004126443920483891,
+      "PR_at_20_reference": 0.6289639107296052,
+      "PR_at_20_method": 0.6250008746019,
+      "PR_at_20_delta": -0.003963036127705211,
+      "NPR_AUC_reference": 0.5491803323277133,
+      "NPR_AUC_method": 0.5462020804003949,
+      "NPR_AUC_delta": -0.002978251927318487,
+      "NP_at_020_reference": 0.5989592545773853,
+      "NP_at_020_method": 0.5957337593448432,
+      "NP_at_020_delta": -0.0032254952325421193
+    }
+  ],
+  "metric_units": "Fractions0-1; multiply deltas by100 for percentage points. Every sequence has equal weight in the official overall point estimates.",
+  "source_sha256": {
+    "reports/reference_xtrack_author_release_s2026/LasHeR/scores/metrics.json": "0c3dd14f8bddb9282d65169c055acb3dd7dabb10598e6ed4351611ab1eda0c9b",
+    "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/metrics.json": "f94b4907c0faab77fe3a901ab51e10cc5cba6676ed58925fbe3ea745f5a8ea33",
+    "reports/lasher_test_attributes.json": "4f68d69b056ec0bcc0c9d46ee4b53ee85644e9349eb7ed38a31299c91517d26c",
+    "reports/reference_lasher_complete_intake_20261004.json": "be87596b1eddafd8c9905f416b0cbad3787606fc679ee0ee03a326c6de7707a7",
+    "reports/full_method_v1_lasher_complete_intake_20261005.json": "161e41fb0ee9748a53adeb18130914394767eb558c223b698d088fd2f5db410c"
+  },
+  "output_sha256": {
+    "reports/full_method_v1_lasher_paired_per_sequence_20261005.csv": "0b5803701e7ad43c8310a8f2ce56d7a43859e61b024a177aa353f9dbd4a85cbe",
+    "reports/full_method_v1_lasher_paired_attributes_20261005.csv": "59f4297bb6c7b326bedb887367af71a9cde626b2c5bc776c30a5652fbb29ab94"
+  },
+  "script_sha256": "0935c51a134c99ab6706fc5c7fab700324ebf571b042611dc918f1ad2848a670",
+  "official_zero_curve_masks_affect_this_pair": false,
+  "statistical_or_causal_attribution_established": false,
+  "full_research_goal_achieved": false,
+  "interpretation": "Global near-ties can mask substantial paired sequence gains and harms. Attribute memberships overlap and sign counts alone do not determine mean gains. Descriptive saved-score evidence only; no training-seed, causality or significance claim. Retain all245 sequence and19 attribute results, not only examples.",
+  "scope": "CPU arithmetic on complete already scored LasHeR artifacts only; raw hashes, endpoint identities, all sequence names/frames and every attribute mean verified. No live log/session/remote progress query, model/inference/scorer execution, training intervention, weight action or hardware control. Remaining two datasets and queued all-seven conditional uncertainty still required. Test results are development diagnostics, never training-pool risk samples."
+}
