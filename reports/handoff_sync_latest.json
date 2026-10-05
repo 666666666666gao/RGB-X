@@ -1,45 +1,41 @@
 {
-  "status": "ACTUAL_COMPLETE_LASHER_PAIRED_DIAGNOSIS_AND_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-05T00:04:19.121408+00:00",
-  "source_commit": "a8a827dba0632a1a740699b320f383408f44912d",
-  "document_sha256": "8883318df9c2690238c86e8c3ac2e6189001c45ab6d3ddd9e5728c3277ec8424",
-  "document_bytes": 193978,
+  "status": "ACTUAL_COMPLETE_TRAINING_ROUTE_RISK_DIAGNOSIS_AND_FOUR_HANDOFF_COPIES_IDENTICAL",
+  "verified_at": "2026-10-05T00:25:11.894555+00:00",
+  "source_commit": "a1fd70fa051f38f94b6e4e2496b47653864c1f7d",
+  "document_sha256": "0963e65960e34e2f69483351825de21e93657f8fabecb6cb365af0d1004f2fe2",
+  "document_bytes": 199212,
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/a8a827dba0632a1a740699b320f383408f44912d/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/a1fd70fa051f38f94b6e4e2496b47653864c1f7d/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
-  "subject": "ACTUAL_CPU_ANALYSIS_ALL245_ALL19_SAVED_LASHER_PAIR_NOT_ALL3",
+  "subject": "ACTUAL_CPU_COMPLETED37500_ROUTE_RISK_DIAGNOSIS_NOT_NEW_BENCHMARK",
   "candidate_launch_ready": false,
   "candidate_model_execution": false,
   "source_review_independence": "self",
   "source_review_runtime_attested": false,
   "file_sha256": {
-    "scripts/analyze_complete_lasher_pair.py": "0935c51a134c99ab6706fc5c7fab700324ebf571b042611dc918f1ad2848a670",
-    "reports/full_method_v1_lasher_paired_diagnosis_20261005.json": "1264a60403514f2d32cd13b430ce50eca2070595ba518dcef0c51ef41b619503",
-    "reports/full_method_v1_lasher_paired_per_sequence_20261005.csv": "0b5803701e7ad43c8310a8f2ce56d7a43859e61b024a177aa353f9dbd4a85cbe",
-    "reports/full_method_v1_lasher_paired_attributes_20261005.csv": "59f4297bb6c7b326bedb887367af71a9cde626b2c5bc776c30a5652fbb29ab94",
-    "configs/current_goal.json": "29abc20377cb7fe76eae9afd41678140e4d09bb8edeaf557a750d4732102d8cb",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8883318df9c2690238c86e8c3ac2e6189001c45ab6d3ddd9e5728c3277ec8424"
+    "scripts/analyze_full_method_route_risk.py": "6139b5f9a09bb30fd879f508e2f4f368e0c0836bacb8793a7773c2cce74bef5a",
+    "reports/full_method_v1_complete_route_risk_diagnosis_20261005.json": "7d75d7cf526c919cef636677c05a5740c192b02b0d385708b41008a00cfa07e1",
+    "configs/current_goal.json": "988720dd4a87719a77e77c1380cd831fb42deee23822199398037bcb09f156ed",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "0963e65960e34e2f69483351825de21e93657f8fabecb6cb365af0d1004f2fe2"
   },
-  "published_files": 6,
+  "published_files": 4,
   "latest_publication_sync": {
-    "verified_at": "2026-10-05T00:04:19.121408+00:00",
+    "verified_at": "2026-10-05T00:25:11.894555+00:00",
     "file_sha256": {
-      "scripts/analyze_complete_lasher_pair.py": "0935c51a134c99ab6706fc5c7fab700324ebf571b042611dc918f1ad2848a670",
-      "reports/full_method_v1_lasher_paired_diagnosis_20261005.json": "1264a60403514f2d32cd13b430ce50eca2070595ba518dcef0c51ef41b619503",
-      "reports/full_method_v1_lasher_paired_per_sequence_20261005.csv": "0b5803701e7ad43c8310a8f2ce56d7a43859e61b024a177aa353f9dbd4a85cbe",
-      "reports/full_method_v1_lasher_paired_attributes_20261005.csv": "59f4297bb6c7b326bedb887367af71a9cde626b2c5bc776c30a5652fbb29ab94",
-      "configs/current_goal.json": "29abc20377cb7fe76eae9afd41678140e4d09bb8edeaf557a750d4732102d8cb",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8883318df9c2690238c86e8c3ac2e6189001c45ab6d3ddd9e5728c3277ec8424"
+      "scripts/analyze_full_method_route_risk.py": "6139b5f9a09bb30fd879f508e2f4f368e0c0836bacb8793a7773c2cce74bef5a",
+      "reports/full_method_v1_complete_route_risk_diagnosis_20261005.json": "7d75d7cf526c919cef636677c05a5740c192b02b0d385708b41008a00cfa07e1",
+      "configs/current_goal.json": "988720dd4a87719a77e77c1380cd831fb42deee23822199398037bcb09f156ed",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "0963e65960e34e2f69483351825de21e93657f8fabecb6cb365af0d1004f2fe2"
     },
     "all_files_match": true,
     "source8_unchanged": true,
     "reviewed_current15_source_hashes_match": true,
-    "complete_diagnosis_sources_and_outputs_match": true,
+    "complete_training_diagnosis_sources_match": true,
     "scope": "Static publication bytes and immutable training seal only. No process, log, native-session, progress or hardware query. Dynamic recovery receipt not overwritten."
   },
   "last_verified_runtime": "2026-10-05T07:23:51.779911+08:00",
@@ -88,5 +84,5 @@
   "next_observation_not_before": "2026-10-05T09:58:27.505348+08:00",
   "scheduled_observer_native_session": 23494,
   "scheduled_observer_pid": 45512,
-  "scope": "Executed CPU descriptive analysis of all245 LasHeR sequences and19 overlapping attribute groups; runtime remains the prior actual LasHeR-complete/VisEvent-running observation, both required LasHeR headlines below measured reference. No causal or significance claim. Remaining five headlines pending. Preserve all raw curves, attributes, sequences and costs. Original train exit0; source8/checkpoint unchanged. No inference/scoring replay, early progress query, new weight, deletion or hardware control. Dynamic worker receipt not overwritten."
+  "scope": "Executed CPU descriptive analysis of immutable completed37500-step training records; runtime remains the prior actual LasHeR-complete/VisEvent-running observation, both required LasHeR headlines below measured reference. No causal or significance claim. Remaining five headlines pending. Preserve all raw curves, attributes, sequences and costs. Original train exit0; source8/checkpoint unchanged. No inference/scoring replay, early progress query, new weight, deletion or hardware control. Dynamic worker receipt not overwritten."
 }
