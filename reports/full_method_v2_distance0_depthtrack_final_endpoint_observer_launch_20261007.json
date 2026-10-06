@@ -1,0 +1,39 @@
+{
+  "status": "PASSIVE_TIMER_NO_REMOTE_QUERY_BEFORE_ESTIMATED_DEPTHTRACK_ENDPOINT",
+  "local_pid": 36224,
+  "started_at": "2026-10-06T18:11:57.623856+00:00",
+  "observe_not_before": "2026-10-06T18:20:00+00:00",
+  "controller_pid": 433952,
+  "evaluation_controller_pid": 2038303,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_distance0_depthtrack_final_endpoint_observation_20261007.json",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "previous_observation_sha256": "18d878c67fe2eb0678d3da6e9d8f4aecbfafac8bab3de63439386c1e9bf11fb8",
+  "historical_coverage_sha256": "1fe1ad5fd9f07d6d621b9335af43becc74899e268a90e00c5140da02a73b48e2",
+  "dataset_audit_sha256": "463b778647930b3027728c09e97483cedc99a8ff5ab72894e2753539aa111e03",
+  "depthtrack_shard_forecasts": [
+    {
+      "shard": 0,
+      "assigned_sequences": 17,
+      "assigned_frames": 31881,
+      "historical_rpc_seconds": 6243.8279757499695,
+      "rpc_based_endpoint": "2026-10-06T17:51:45.553629+00:00"
+    },
+    {
+      "shard": 1,
+      "assigned_sequences": 17,
+      "assigned_frames": 22887,
+      "historical_rpc_seconds": 8958.004752397537,
+      "rpc_based_endpoint": "2026-10-06T18:36:59.730405+00:00"
+    },
+    {
+      "shard": 2,
+      "assigned_sequences": 16,
+      "assigned_frames": 21605,
+      "historical_rpc_seconds": 4364.986671924591,
+      "rpc_based_endpoint": "2026-10-06T17:20:26.712325+00:00"
+    }
+  ],
+  "forecast_scope": "At02:10 there are49 of50 binary trajectories and only shard0 PID2423400 appears in saved ps. Its last assigned ukulele01_indoor has1613 frames and historical296.296426 RPC seconds.02:20 permits remaining work plus scoring/comparison;49 trajectories do not prove full coverage or terminal exit0.",
+  "native_observer_session": 46398
+}

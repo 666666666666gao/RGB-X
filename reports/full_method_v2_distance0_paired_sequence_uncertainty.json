@@ -1,0 +1,247 @@
+{
+  "status": "PAIRED_SEQUENCE_BOOTSTRAP_COMPLETE_CONDITIONAL_ON_SAVED_SCORE_GRIDS",
+  "observed_at": "2026-10-06T18:24:13.258871+00:00",
+  "metric_units": "fractions_0_to_1",
+  "draws": 10000,
+  "bootstrap_seed": 2026,
+  "sampling_unit": "Whole sequence; same sampled multiplicities for both endpoints in each dataset.",
+  "datasets": {
+    "LasHeR": {
+      "sequences": 245,
+      "metrics": {
+        "SR_AUC": {
+          "reference": 0.555459930324538,
+          "method": 0.5539893818361229,
+          "delta": -0.001470548488415102,
+          "percentile_95_interval": [
+            -0.011535659019489422,
+            0.008419005874555654
+          ],
+          "bootstrap_fraction_delta_positive": 0.3818
+        },
+        "PR_at_20": {
+          "reference": 0.6905088871059202,
+          "method": 0.6879301990501853,
+          "delta": -0.0025786880557349123,
+          "percentile_95_interval": [
+            -0.015534543672709686,
+            0.010450587182824359
+          ],
+          "bootstrap_fraction_delta_positive": 0.3384
+        },
+        "NPR_AUC": {
+          "reference": 0.5921262401038352,
+          "method": 0.5912385737160161,
+          "delta": -0.0008876663878191193,
+          "percentile_95_interval": [
+            -0.011503478485634572,
+            0.009439073664661804
+          ],
+          "bootstrap_fraction_delta_positive": 0.4319
+        },
+        "NP_at_020": {
+          "reference": 0.6548772213736572,
+          "method": 0.6541598709539099,
+          "delta": -0.000717350419747298,
+          "percentile_95_interval": [
+            -0.01257532475161596,
+            0.010713179939180086
+          ],
+          "bootstrap_fraction_delta_positive": 0.4525
+        }
+      },
+      "aggregation": "Equal-sequence means with the pinned toolkit curve-specific nonzero masks."
+    },
+    "VisEvent": {
+      "sequences": 320,
+      "metrics": {
+        "SR_AUC": {
+          "reference": 0.6045030614193363,
+          "method": 0.5978613014783827,
+          "delta": -0.006641759940953618,
+          "percentile_95_interval": [
+            -0.013365806838351304,
+            -0.0006093761819187345
+          ],
+          "bootstrap_fraction_delta_positive": 0.0131
+        },
+        "PR_at_20": {
+          "reference": 0.7692957488705718,
+          "method": 0.7594856032802182,
+          "delta": -0.009810145590353647,
+          "percentile_95_interval": [
+            -0.01880336319039189,
+            -0.0017130465846765673
+          ],
+          "bootstrap_fraction_delta_positive": 0.0069
+        },
+        "NPR_AUC": {
+          "reference": 0.6671401395683387,
+          "method": 0.6604038833047632,
+          "delta": -0.006736256263575546,
+          "percentile_95_interval": [
+            -0.013842510448026073,
+            -0.0003510486591640855
+          ],
+          "bootstrap_fraction_delta_positive": 0.0181
+        },
+        "NP_at_020": {
+          "reference": 0.7284162241798723,
+          "method": 0.7206402941530661,
+          "delta": -0.00777593002680621,
+          "percentile_95_interval": [
+            -0.015582426107793807,
+            -0.0007547077484248135
+          ],
+          "bootstrap_fraction_delta_positive": 0.0139
+        }
+      },
+      "aggregation": "Equal-sequence means with the pinned toolkit curve-specific nonzero masks."
+    },
+    "DepthTrack": {
+      "sequences": 50,
+      "metrics": {
+        "F_score": {
+          "reference": 0.613343119157631,
+          "method": 0.6018114842274309,
+          "delta": -0.011531634930200041,
+          "percentile_95_interval": [
+            -0.0363674604134687,
+            0.014161529642862861
+          ],
+          "bootstrap_fraction_delta_positive": 0.178
+        },
+        "Recall": {
+          "reference": 0.6156268604286835,
+          "method": 0.6037766393139197,
+          "delta": -0.01185022111476386,
+          "percentile_95_interval": [
+            -0.03682907738913008,
+            0.013995785936075965
+          ],
+          "bootstrap_fraction_delta_positive": 0.1718
+        },
+        "Precision": {
+          "reference": 0.6110762588858001,
+          "method": 0.599859079902239,
+          "delta": -0.011217178983561116,
+          "percentile_95_interval": [
+            -0.037306897894982025,
+            0.01503435127888
+          ],
+          "bootstrap_fraction_delta_positive": 0.1947
+        }
+      },
+      "aggregation": "Each endpoint separately averages resampled sequence PR curves, maximizes its own F curve, then reads P/R at that maximum.",
+      "confidence_threshold_scope": "Fixed endpoint-specific grids from the complete original evaluations; thresholds are not regenerated from resampled raw confidence and are not matched by index across endpoints."
+    }
+  },
+  "required_headlines": {
+    "LasHeR_SR": {
+      "reference": 0.555459930324538,
+      "method": 0.5539893818361229,
+      "delta": -0.001470548488415102,
+      "percentile_95_interval": [
+        -0.011535659019489422,
+        0.008419005874555654
+      ],
+      "bootstrap_fraction_delta_positive": 0.3818
+    },
+    "LasHeR_PR": {
+      "reference": 0.6905088871059202,
+      "method": 0.6879301990501853,
+      "delta": -0.0025786880557349123,
+      "percentile_95_interval": [
+        -0.015534543672709686,
+        0.010450587182824359
+      ],
+      "bootstrap_fraction_delta_positive": 0.3384
+    },
+    "VisEvent_SR": {
+      "reference": 0.6045030614193363,
+      "method": 0.5978613014783827,
+      "delta": -0.006641759940953618,
+      "percentile_95_interval": [
+        -0.013365806838351304,
+        -0.0006093761819187345
+      ],
+      "bootstrap_fraction_delta_positive": 0.0131
+    },
+    "VisEvent_PR": {
+      "reference": 0.7692957488705718,
+      "method": 0.7594856032802182,
+      "delta": -0.009810145590353647,
+      "percentile_95_interval": [
+        -0.01880336319039189,
+        -0.0017130465846765673
+      ],
+      "bootstrap_fraction_delta_positive": 0.0069
+    },
+    "DepthTrack_F": {
+      "reference": 0.613343119157631,
+      "method": 0.6018114842274309,
+      "delta": -0.011531634930200041,
+      "percentile_95_interval": [
+        -0.0363674604134687,
+        0.014161529642862861
+      ],
+      "bootstrap_fraction_delta_positive": 0.178
+    },
+    "DepthTrack_Recall": {
+      "reference": 0.6156268604286835,
+      "method": 0.6037766393139197,
+      "delta": -0.01185022111476386,
+      "percentile_95_interval": [
+        -0.03682907738913008,
+        0.013995785936075965
+      ],
+      "bootstrap_fraction_delta_positive": 0.1718
+    },
+    "DepthTrack_Precision": {
+      "reference": 0.6110762588858001,
+      "method": 0.599859079902239,
+      "delta": -0.011217178983561116,
+      "percentile_95_interval": [
+        -0.037306897894982025,
+        0.01503435127888
+      ],
+      "bootstrap_fraction_delta_positive": 0.1947
+    }
+  },
+  "comparison_sha256": "c93db8a2c43f99be5559c40e85b030fe722f5ff84baacd427bbeb001619d9433",
+  "sources": [
+    {
+      "path": "/home/gaob/rgbx-eval-results/xtrack_author_release_s2026/LasHeR/scores/metrics.json",
+      "sha256": "0c3dd14f8bddb9282d65169c055acb3dd7dabb10598e6ed4351611ab1eda0c9b"
+    },
+    {
+      "path": "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/scores/metrics.json",
+      "sha256": "355f4d264368673081a13bad8977dbac04b4fde3678a3c1f8f2ad15c080a8fb4"
+    },
+    {
+      "path": "/home/gaob/rgbx-eval-results/xtrack_author_release_s2026/VisEvent/scores/metrics.json",
+      "sha256": "fbc5caaff345ecb63b8dbd73aae73cd1b4ead261d2867d44b598de7d552fdffa"
+    },
+    {
+      "path": "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/VisEvent/scores/metrics.json",
+      "sha256": "b1dc44bb75322fabc718c5622de6ad5c441bd9a63a25aefbbe16fbfcb1c99fcd"
+    },
+    {
+      "path": "/home/gaob/rgbx-eval-results/xtrack_author_release_s2026/DepthTrack/attribute_diagnostics.json",
+      "sha256": "73f53e76738103d3347965a3d4d8f218f84ef46d9ff00570a8f8a39f845c6d3f"
+    },
+    {
+      "path": "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/DepthTrack/attribute_diagnostics.json",
+      "sha256": "b484964eb853829bdf8f4a391c566f0dd09ad041c270a7dd609496401a09fb2f"
+    },
+    {
+      "path": "/home/gaob/rgbx-eval-results/xtrack_author_release_s2026/DepthTrack/official_metrics.json",
+      "sha256": "6961c8e0fe6ffbe0b233b3c884ad71ef51468bf686a3796a116509bc4c47d530"
+    },
+    {
+      "path": "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/DepthTrack/official_metrics.json",
+      "sha256": "77a011a7a2c9e9e4633eefed3ce58631634fb2e95248acbe9e7637a676beb97e"
+    }
+  ],
+  "interpretation": "Conditional sequence-sampling variability for one fixed pair of trained endpoints. This is not training-seed variance, a calibrated p-value, proof of module attribution or a multiple-comparison-corrected significance claim. No image, model or optimizer is executed; the original benchmark point estimates remain unchanged."
+}

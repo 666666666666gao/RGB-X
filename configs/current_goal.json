@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T01:46:54.833625+08:00",
+  "updated_at": "2026-10-07T02:32:08.750625+08:00",
   "objective": "在2028使用三卡与一份RGB-T/RGB-D/RGB-Event联合权重，完整评测并持续依据真实证据改进，争取全部主要指标超过同协议参考。在distance0全部五阶段真实结束后，优先完成C固定混采修正AdamW与D仅任务统计公平微调对照，再决定下一版方法。三个模块沿决策一致的目标级风险、独立确认的能力保持更新、可独立干预的搜索状态传播控制形成完整链路；分别验证模块作用、成熟优化器比较、训练成本与不确定性，再推进SUTrack及完整基准。原始65轮复现保持取消；修正次数、总损失下降和局部检查通过均不代替完整跟踪增益。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "DISTANCE0_LASHER_AND_VISEVENT_ALL8_LOWER_REFERENCE_DEPTHTRACK_PENDING_C_THEN_D_NEXT_GOAL_UNMET",
+  "status": "DISTANCE0_ALL_FIVE_STAGES_EXIT0_ALL7_LOWER_PREPARE_REAL_C_SANITY_THEN_C_D_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -103,15 +103,15 @@
   "actual_controller_pid": 433952,
   "actual_rank_pids": [],
   "actual_completed_updates_at_snapshot": 37500,
-  "tracking_scores": "V1_ALL3_ALL7_LOWER_DISTANCE0_2_OF3_SCORED_LASHER_AND_VISEVENT_ALL8_LOWER_REFERENCE",
+  "tracking_scores": "V1_AND_DISTANCE0_ALL_THREE_FULL_SCORED_BOTH_ALL7_BELOW_REFERENCE",
   "objective_met": false,
   "next_iteration_candidate": {
-    "status": "TRAIN_EXIT0_ENDPOINT_PASS_TWO_DATASETS_NEGATIVE_REFERENCE_DEPTHTRACK_PENDING",
+    "status": "ACTUAL_ALL_FIVE_STAGES_COMPLETED_EXIT0",
     "candidate_distance_weight": 0,
     "evidence": "reports/full_method_v1_cost_decomposition.json",
     "decision": "Finish existing distance0 evaluation/comparison/uncertainty, then prioritize C followed by D, not another correction-frequency tuning or complex full-method run.",
     "comparison": "Fresh start from the same author release, repaired source, mixed 8T/8D/8E batches, seed, trainable parameters and 15-epoch budget; retain correction amplitude cap.",
-    "efficacy": "VISEVENT_ALL4_ABOVE_V1_BUT_BELOW_REFERENCE_LASHER_ALL4_BELOW_BOTH_DEPTHTRACK_UNKNOWN",
+    "efficacy": "ALL7_REQUIRED_HEADLINES_BELOW_REFERENCE_LASHER_AND_DEPTH_BELOW_V1_VISEVENT_ABOVE_V1",
     "success_measure": "Fewer unrepaired localization harms while retaining learning progress; selection frequency alone is not success.",
     "protocol": "configs/full_method_v2_distance0.json",
     "preparation_evidence": "reports/full_method_v2_distance0_configuration_preparation.json",
@@ -126,13 +126,9 @@
     "source_review_status": "STATIC_SELF_SOURCE_REVIEW_PASS_NO_RUNTIME_OR_INDEPENDENT_ATTESTATION",
     "source_review_evidence": "reports/full_method_v2_distance0_code_review.json",
     "paired_sequence_uncertainty": {
-      "status": "CPU_STAGE_QUEUED_IN_ACTUAL_RUNNING_CANDIDATE_CONTROLLER_NOT_EXECUTED_AT_LAST_SNAPSHOT",
-      "source": "scripts/analyze_paired_sequence_uncertainty.py",
-      "source_sha256": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189",
+      "status": "ACTUAL_COMPLETED_10000_WHOLE_SEQUENCE_DRAWS_CONDITIONAL_NOT_TRAIN_SEEDS",
       "output": "reports/full_method_v2_distance0_paired_sequence_uncertainty.json",
-      "draws": 10000,
-      "seed": 2026,
-      "scope": "Conditional whole-sequence pairing, not training-seed variance or module attribution."
+      "comparison_sha256": "c93db8a2c43f99be5559c40e85b030fe722f5ff84baacd427bbeb001619d9433"
     },
     "must_not_relaunch": true,
     "documented_sanity": "reports/full_method_v2_distance0_documented_sanity_20261005.json",
@@ -275,7 +271,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-06T17:40:02.785210+00:00",
+  "runtime_snapshot_observed_at": "2026-10-06T18:29:02.596068+00:00",
   "execution_goal_version": "2026-10-06-user-review-v4",
   "ordered_next_steps": [
     {
@@ -285,12 +281,12 @@
     },
     {
       "id": "P1",
-      "status": "DISTANCE0_TRAIN_COMPLETE_LASHER_VISEVENT_NEGATIVE_FINISH_DEPTHTRACK_AND_PIPELINE",
+      "status": "COMPLETE_DISTANCE0_0_OF7_IMPROVEMENT_NOT_RESEARCH_SUCCESS",
       "work": "Preserve v1 and distance0 negative results. Complete VisEvent/DepthTrack, full comparison and conditional uncertainty from the existing pipeline; do not rerun the cached reference or drop the active consumer checkpoint."
     },
     {
       "id": "P2",
-      "status": "IMMEDIATE_NEXT_FULL_TRAINING_C_THEN_D_SOURCE_CPU_PASS_REAL_PENDING",
+      "status": "DISTANCE0_RELEASE_VERIFIED_READY_FOR_REAL_C_SANITY_AUDIT_THEN_FORMAL_C_D",
       "work": "After all five distance0 stages and actual controller exit0, use existing reviewed C sanity/audit and formal repaired fixed-mixed AdamW entry. Complete C full scores before task-statistics-only D. Use C/D to select the optimization base; retain B, canonical AdaTask, PCGrad/CAGrad and true module ablations in the full comparison scope.",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json"
     },
@@ -451,21 +447,21 @@
   "twelfth_epoch_retention_evidence": "reports/full_method_v1_twelfth_epoch_retention_snapshot.json",
   "thirteenth_epoch_retention_evidence": "reports/full_method_v1_thirteenth_epoch_retention_snapshot.json",
   "monitoring_policy": {
-    "updated_at": "2026-10-07T01:46:54.833625+08:00",
+    "updated_at": "2026-10-07T02:32:08.750625+08:00",
     "user_instruction": "这里你轮询太多了，没到时间不用轮询",
     "mode": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-06T18:10:00+00:00",
+    "next_observation_not_before": null,
     "estimate_evidence": "reports/full_method_v2_distance0_depthtrack_endpoint_observer_launch_20261007.json",
     "estimated_stage": "At01:40 only shard0 PID2423400 appears in the saved ps. Its historical RPC sum gives01:51:46;02:10 permits overhead and scoring/comparison. Missing shard1/2 PIDs are not exit0 receipt proof; all historical shard estimates are retained. Historical RPC excludes orchestration overhead and is not terminal proof.",
-    "scheduled_observer_native_session": 1948,
-    "scheduled_observer_pid": 38796,
+    "scheduled_observer_native_session": null,
+    "scheduled_observer_pid": null,
     "scheduled_observer_started_at": "2026-10-06T17:45:28.917137+00:00",
-    "scheduled_observer_status": "EXISTING_PASSIVE_DEPTHTRACK_ENDPOINT_TIMER_PENDING",
-    "next_action": "One existing observation at2026-10-07 02:10CST; no earlier progress/log/GPU/native polling and no duplicate timer. Consume actual controller/evaluation/scorer receipts before C/D admission."
+    "scheduled_observer_status": "TERMINAL_OBSERVER_CONSUMED_EXIT0_NO_PENDING_DISTANCE0_QUERY",
+    "next_action": "Use exact reviewed C/D admission after verified distance0 release, real C two-step sanity and saved-state audit before full C. Estimate the next sanity/training milestone rather than re-querying completed distance0."
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
@@ -493,14 +489,15 @@
     "xtrack_full_method_v2_distance0_s2026": {
       "completed_datasets": [
         "LasHeR",
-        "VisEvent"
+        "VisEvent",
+        "DepthTrack"
       ],
-      "status": "TWO_DATASETS_FULL_SCORED_DEPTHTRACK_PENDING",
-      "snapshot_evidence": "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json"
+      "status": "ALL_THREE_SCORED_COMPLETE_COMPARISON_AND_UNCERTAINTY_VERIFIED",
+      "snapshot_evidence": "reports/full_method_v2_distance0_complete_result_intake_20261007.json"
     }
   },
   "endpoint_audit_status": "PASS",
-  "complete_comparison_available": false,
+  "complete_comparison_available": true,
   "fifteenth_epoch_retention_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
   "completed_training_diagnosis": {
     "report": "reports/full_method_v1_full_run_cost_decomposition.json",
@@ -613,7 +610,7 @@
     "attributes": 17
   },
   "actual_evaluation_controller_pid": 3560911,
-  "actual_method_evaluation_controller_pid": 2038303,
+  "actual_method_evaluation_controller_pid": null,
   "reference_required_headlines": {
     "LasHeR_SR": 0.5554599303245381,
     "LasHeR_PR": 0.6905088871059202,
@@ -721,7 +718,7 @@
     "collected_at": "2026-10-05T02:32:10.143444+08:00",
     "scope": "Completed author-reference native scores only. Full 50-sequence coverage, original official PR aggregation, separate group definitions, 50 CSV rows, 11 raw artifact hashes verified. No neural inference or scorer replay. Method scores not inferred."
   },
-  "latest_evaluation_milestone": "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json",
+  "latest_evaluation_milestone": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
   "method_lasher_complete_metrics": {
     "report": "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/metrics.json",
     "intake": "reports/full_method_v1_lasher_complete_intake_20261005.json",
@@ -1164,9 +1161,9 @@
     "temperature_or_power_controls": false,
     "first_diagnostic_actual": "2026-10-05T07:31:13.528580+00:00",
     "first_epoch_completion_estimate": "2026-10-05T09:05:17.775236+00:00",
-    "next_observation_not_before": "2026-10-06T18:10:00+00:00",
-    "actual_scheduled_observer_native_session": 1948,
-    "actual_scheduled_observer_pid": 38796,
+    "next_observation_not_before": null,
+    "actual_scheduled_observer_native_session": null,
+    "actual_scheduled_observer_pid": null,
     "actual_timer_started_at": "2026-10-06T17:45:28.917137+00:00",
     "actual_scheduled_observer_evidence": "reports/full_method_v2_distance0_depthtrack_endpoint_observer_launch_20261007.json",
     "scheduled_observation_completed": true,
@@ -1174,8 +1171,10 @@
     "epoch1_cpu_audit_status": "PASS_FIRST_EPOCH_CHECKPOINT_NOT_FINAL_OR_BENCHMARK",
     "epoch1_retention_actual_observation": "2026-10-05T09:20:12.841852+00:00",
     "estimated_training_completion": "2026-10-06T09:32:01.070691+00:00",
-    "next_scheduled_observation_completed": false,
-    "training_endpoint_completed": true
+    "next_scheduled_observation_completed": true,
+    "training_endpoint_completed": true,
+    "terminal_observation_evidence": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
+    "all_five_stages_completed": true
   },
   "distance0_sanity_weight_cleanup": {
     "report": "reports/full_method_v2_distance0_sanity_weight_cleanup_20261005.json",
@@ -1707,9 +1706,7 @@
     "D_above_C_but_full_below_D": "Prioritize risk/confirmation/correction effects on useful learning.",
     "only_generation_improves": "Diagnose check-distribution transfer and reference preservation before increasing interventions."
   },
-  "active_evaluation_worker_pids": [
-    2423400
-  ],
+  "active_evaluation_worker_pids": [],
   "active_evaluation_worker_pid_scope": "Only this DepthTrack shard0 PID appears in the saved01:40 ps; absence of other PIDs is not terminal receipt proof.",
   "distance0_visevent_metrics": {
     "SR_AUC": 0.5978613014783833,
@@ -1762,5 +1759,19 @@
         "delta": 0.0016634456231456873
       }
     }
+  },
+  "actual_controller_status": "EXITED_ACTUAL_ALL_FIVE_STAGES",
+  "distance0_complete_comparison": "reports/full_method_v2_distance0_complete_comparison.json",
+  "distance0_paired_sequence_uncertainty": "reports/full_method_v2_distance0_paired_sequence_uncertainty.json",
+  "distance0_complete_result": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
+  "distance0_depthtrack_metrics": {
+    "Precision": 0.599859079902239,
+    "Recall": 0.6037766393139197,
+    "F_score": 0.6018114842274309
+  },
+  "distance0_depthtrack_deltas_vs_v1": {
+    "Precision": -0.0033164892315173944,
+    "Recall": -0.003770059183217711,
+    "F_score": -0.0035417589377726433
   }
 }

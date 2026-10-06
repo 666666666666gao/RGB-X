@@ -1,0 +1,12 @@
+{
+  "status": "PASSIVE_TIMER_FOR_REMAINING_CPU_CONTROLLER_STAGES",
+  "local_pid": 47392,
+  "started_at": "2026-10-06T18:22:15.458957+00:00",
+  "observe_not_before": "2026-10-06T18:29:00+00:00",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "previous_observation_sha256": "0b67f89dc14aa49d3f7db362aca7b5ec0a88b8fd9fa45acc060248a2e3a23c40",
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_distance0_controller_terminal_observation_20261007.json",
+  "estimate": "At02:20 complete-comparison worker is already a zombie, elapsed53s; its controller checks every240s. Permit one240s recognition interval, bootstrap and another240s recognition interval plus margin.02:29 is a forecast, not process or goal completion proof.",
+  "native_observer_session": 29874
+}
