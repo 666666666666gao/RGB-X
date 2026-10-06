@@ -1,22 +1,22 @@
 {
-  "status": "DISTANCE0_COMPLETE_TRAINING_AND_EVALUATION_START_PUBLISHED_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-06T09:49:16.455876+00:00",
-  "source_commit": "19a91d4b544c33d07ff2d0ba85a7543bc3cea3cd",
+  "status": "DISTANCE0_LASHER_COMPLETE_NEGATIVE_RESULT_PUBLISHED_FOUR_HANDOFF_COPIES_IDENTICAL",
+  "verified_at": "2026-10-06T13:52:12.718051+00:00",
+  "source_commit": "d8b25bee41c19bba86be9961014a14f32996d078",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "0412b30f946fbc740e84d7254fa665c1390094ae41e51473c09f1dd535e26a6b",
-  "document_bytes": 259219,
+  "document_sha256": "ef9d3e05c9d656230851399bb38920b9f097b19c7ff2354614c83950263f301b",
+  "document_bytes": 264211,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/19a91d4b544c33d07ff2d0ba85a7543bc3cea3cd/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/d8b25bee41c19bba86be9961014a14f32996d078/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
-    ".gitattributes": "1ec92e898e242b8dfa6fa0c9fd5ea702127879e6d62d751adea3be0e36f48c60",
+    ".gitattributes": "73346c664bce82f0f45114d61ef0c6df2eb6ac5dd3a868ba66edf844bd447245",
     "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
     "configs/current_goal.json": "b77408a28d6fc54dd7152e81c4f10778ae63a5bb9aa2dc3e6f22130cc852b94b",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "0412b30f946fbc740e84d7254fa665c1390094ae41e51473c09f1dd535e26a6b",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "ef9d3e05c9d656230851399bb38920b9f097b19c7ff2354614c83950263f301b",
     "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
     "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
     "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -90,16 +90,24 @@
     "reports/full_method_v2_distance0_endpoint_audit.json": "6271f469e40a8507eff3aeae3c9d1f471b1e004fc2ec42a7fab140176c17e1bf",
     "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json": "eeac41d74be7cfa4221f49fc82844df7fc75beec0f632a50eaf8a11ff690a5d4",
     "reports/full_method_v2_distance0_lasher_endpoint_observer_launch_20261006.json": "2ef9ac5e94fd702422d14cd3c10c03381a2a67b30cbb8fa8d7b503ba7bd4e147",
-    "reports/full_method_v2_distance0_terminal_publication_first_attempt_20261006.json": "1ef17277c558066edf34aac472b1507501361b90d5798e433dda7b7f1aa8a236"
+    "reports/full_method_v2_distance0_terminal_publication_first_attempt_20261006.json": "1ef17277c558066edf34aac472b1507501361b90d5798e433dda7b7f1aa8a236",
+    "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json": "55164162e33079ea92bd548454abeac755b24f45d3426a44fb8ac1916d5563ff",
+    "reports/full_method_v2_distance0_lasher_paired_diagnosis_20261006.json": "89c90cdc0207671f65cb843f7f1acad641ddfdb3c220f4216c97fc398a2b420d",
+    "reports/full_method_v2_distance0_lasher_complete_observation_20261006.json": "59d4f121181c804185b32f47e677d143c99c5212389c5efe9bbca1680ef26236",
+    "reports/full_method_v2_distance0_visevent_endpoint_observer_launch_20261006.json": "14d9b79d31cac40e70efe5426dbab04d443cca88377741623b7dbe179acd5c48",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/coverage.json": "0a9e1e3a51eeec6fd7a72e20f7d9c4670ceb7fbd7866f3b08ec6e1b908e0f383",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/metrics.json": "355f4d264368673081a13bad8977dbac04b4fde3678a3c1f8f2ad15c080a8fb4",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/per_sequence.csv": "da21e0cea5b8bb2b75529613ff567ca0234fde5f10b616a650275f15e363d030",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/full_curves.png": "d7ac543231107b7d60c8d9d99716efab8463cdc07ab3445b0fe43a2f15065951"
   },
-  "published_files": 78,
+  "published_files": 86,
   "latest_publication_sync": {
-    "verified_at": "2026-10-06T09:49:16.455876+00:00",
+    "verified_at": "2026-10-06T13:52:12.718051+00:00",
     "file_sha256": {
-      ".gitattributes": "1ec92e898e242b8dfa6fa0c9fd5ea702127879e6d62d751adea3be0e36f48c60",
+      ".gitattributes": "73346c664bce82f0f45114d61ef0c6df2eb6ac5dd3a868ba66edf844bd447245",
       "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
       "configs/current_goal.json": "b77408a28d6fc54dd7152e81c4f10778ae63a5bb9aa2dc3e6f22130cc852b94b",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "0412b30f946fbc740e84d7254fa665c1390094ae41e51473c09f1dd535e26a6b",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "ef9d3e05c9d656230851399bb38920b9f097b19c7ff2354614c83950263f301b",
       "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
       "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
       "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -173,25 +181,50 @@
       "reports/full_method_v2_distance0_endpoint_audit.json": "6271f469e40a8507eff3aeae3c9d1f471b1e004fc2ec42a7fab140176c17e1bf",
       "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json": "eeac41d74be7cfa4221f49fc82844df7fc75beec0f632a50eaf8a11ff690a5d4",
       "reports/full_method_v2_distance0_lasher_endpoint_observer_launch_20261006.json": "2ef9ac5e94fd702422d14cd3c10c03381a2a67b30cbb8fa8d7b503ba7bd4e147",
-      "reports/full_method_v2_distance0_terminal_publication_first_attempt_20261006.json": "1ef17277c558066edf34aac472b1507501361b90d5798e433dda7b7f1aa8a236"
+      "reports/full_method_v2_distance0_terminal_publication_first_attempt_20261006.json": "1ef17277c558066edf34aac472b1507501361b90d5798e433dda7b7f1aa8a236",
+      "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json": "55164162e33079ea92bd548454abeac755b24f45d3426a44fb8ac1916d5563ff",
+      "reports/full_method_v2_distance0_lasher_paired_diagnosis_20261006.json": "89c90cdc0207671f65cb843f7f1acad641ddfdb3c220f4216c97fc398a2b420d",
+      "reports/full_method_v2_distance0_lasher_complete_observation_20261006.json": "59d4f121181c804185b32f47e677d143c99c5212389c5efe9bbca1680ef26236",
+      "reports/full_method_v2_distance0_visevent_endpoint_observer_launch_20261006.json": "14d9b79d31cac40e70efe5426dbab04d443cca88377741623b7dbe179acd5c48",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/coverage.json": "0a9e1e3a51eeec6fd7a72e20f7d9c4670ceb7fbd7866f3b08ec6e1b908e0f383",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/metrics.json": "355f4d264368673081a13bad8977dbac04b4fde3678a3c1f8f2ad15c080a8fb4",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/per_sequence.csv": "da21e0cea5b8bb2b75529613ff567ca0234fde5f10b616a650275f15e363d030",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/full_curves.png": "d7ac543231107b7d60c8d9d99716efab8463cdc07ab3445b0fe43a2f15065951"
     },
     "all_files_match": true,
     "reviewed15_sources_unchanged": true,
     "scope": "Static publication only. Active endpoint audit and retention receipts not overwritten; no evaluation progress/log/PID/GPU query."
   },
   "last_verified_runtime": {
-    "observed_at": "2026-10-06T09:43:05.428339+00:00",
+    "observed_at": "2026-10-06T13:40:02.634085+00:00",
     "training_global_step": 37500,
     "completed_epochs": 15,
     "training_exit_code": 0,
     "training_exit_at": "2026-10-06T08:42:56.865396+00:00",
     "endpoint_audit": "PASS",
     "evaluation_status": "RUNNING_NOT_SCORED",
-    "formal_tracking_scores": "NOT_YET_SCORED",
+    "formal_tracking_scores": "LASHER_COMPLETE_OTHER2_PENDING",
     "actual_process_observation_at": "2026-10-06T09:37:03.570959+00:00",
     "risk_events": 966,
     "nonzero_corrections": 948,
-    "same_checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75"
+    "same_checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+    "current_stage": "method-evaluation",
+    "completed_datasets": [
+      "LasHeR"
+    ],
+    "lasher_headline_metrics": {
+      "SR_AUC": 0.5539893818361226,
+      "PR_at_20": 0.6879301990501853,
+      "NPR_AUC": 0.5912385737160156,
+      "NP_at_020": 0.6541598709539099
+    },
+    "lasher_required_improved_count": 0,
+    "current_vis_workers": [
+      2254629,
+      2254630,
+      2254631
+    ],
+    "lasher_full_intake_at": "2026-10-06T13:45:02.751733+00:00"
   },
   "reference_complete_datasets": [
     "LasHeR",
@@ -255,10 +288,10 @@
   "candidate_launch_ready": true,
   "candidate_preflight": "ACTUAL_EXIT0_SAVED_STATE26_PASS_SAME_FAMILY_PROVISIONAL",
   "candidate_formal_training": "ACTUAL_EPOCH1_SAVED_CPU_AUDIT_PASS_TRAINING_CONTINUES_NO_BENCHMARK",
-  "next_action": "One existing passive observation at2026-10-06 21:40CST for LasHeR full scoring. No early progress queries or reference rerun. Finish distance0 all five stages before held C/D admission or real GPU controls.",
+  "next_action": "One existing passive observation at2026-10-07 01:40CST for VisEvent full scoring. No early progress queries or reference rerun. Finish distance0 all five stages before held C/D admission or real GPU controls.",
   "scheduled_observer_native_session": 72018,
   "scheduled_observer_pid": 1536,
-  "scope": "Actual completed37500 telemetry, real training exit0/endpoint PASS and17:37 running evaluation evidence. Publication time is not a new runtime snapshot; no formal distance0 metric or efficacy claim.",
+  "scope": "Actual scheduled21:40 full245 LasHeR score and VisEvent process evidence,21:45 exact artifact validation and both baseline analyses. Publication time is not a runtime snapshot. LasHeR all4 lower than both baselines; other2 pending, no efficacy claim.",
   "total_complete_sequences": 615,
   "arithmetic_correction": "245+50+320=615; every raw score and count unchanged",
   "candidate_run_id": "xtrack_full_method_v2_distance0_s2026",
@@ -270,7 +303,7 @@
   ],
   "candidate_completed_updates_at_snapshot": 2800,
   "candidate_scores_available": false,
-  "next_actual_runtime_not_before": "2026-10-06T13:40:00+00:00",
+  "next_actual_runtime_not_before": "2026-10-06T17:40:00+00:00",
   "candidate_first_training_diagnosis": {
     "updates": 290,
     "checks": {
@@ -699,9 +732,13 @@
   "joint_optimizer_controls_execution_source_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
   "joint_optimizer_controls_shared_admission_activated": false,
   "joint_optimizer_controls_controllers_started": 0,
-  "active_native_observer_session": 37052,
-  "active_local_timer_pid": 11676,
+  "active_native_observer_session": 76382,
+  "active_local_timer_pid": 48220,
   "distance0_training_complete": true,
-  "distance0_formal_tracking_scores": "NOT_YET_SCORED",
-  "distance0_completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json"
+  "distance0_formal_tracking_scores": "LASHER_COMPLETE_OTHER2_PENDING",
+  "distance0_completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
+  "distance0_completed_datasets": [
+    "LasHeR"
+  ],
+  "distance0_lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json"
 }
