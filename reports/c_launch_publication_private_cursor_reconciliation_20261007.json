@@ -1,0 +1,22 @@
+{
+  "status": "PUBLICATION_SYNCHRONIZED_PRIVATE_CURSOR_FAILURE_RECONCILED_NO_PUBLICATION_REPLAY",
+  "native_session": 27545,
+  "actual_script_exit_code": 1,
+  "completed_source_commit": "6074e4984c1929761989fd853627c8e604a35783",
+  "completed_proof_commit": "abed7d6ec220e764e5a6694905c5f479a0500a29",
+  "original_static_verified_at": "2026-10-06T18:57:27.818523+00:00",
+  "original_document_sha256": "8bda8bea07ba199129ceda370e62f1b28153900ef999354ee7018e84291ae4c6",
+  "exact_failure": "Final private cursor assertion expected remaining_active_observer_native_session is None while actual next observer was87403.",
+  "public_sync_completed": true,
+  "publication_rerun": false,
+  "training_failure": false,
+  "reconciled_at": "2026-10-07T03:07:33.661564+08:00",
+  "actual_consumed_startup_observer": 87403,
+  "next_epoch1_observer": 12645,
+  "subsequent_C630_publication_first_attempt": {
+    "actual_exit_code": 1,
+    "before_commit_push_or_remote_mutation": true,
+    "cause": "Raw immutable startup packet contains CRLF; indexed bytes converted to LF before exact SHA check. Original packet retained unchanged; exact path registered -text using the existing repository convention.",
+    "training_failure": false
+  }
+}

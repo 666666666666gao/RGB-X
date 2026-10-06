@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T02:55:07.464606+08:00",
+  "updated_at": "2026-10-07T03:07:33.661564+08:00",
   "objective": "在2028使用三卡与一份RGB-T/RGB-D/RGB-Event联合权重，完整评测并持续依据真实证据改进，争取全部主要指标超过同协议参考。在distance0全部五阶段真实结束后，优先完成C固定混采修正AdamW与D仅任务统计公平微调对照，再决定下一版方法。三个模块沿决策一致的目标级风险、独立确认的能力保持更新、可独立干预的搜索状态传播控制形成完整链路；分别验证模块作用、成熟优化器比较、训练成本与不确定性，再推进SUTrack及完整基准。原始65轮复现保持取消；修正次数、总损失下降和局部检查通过均不代替完整跟踪增益。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "REAL_C_SANITY_AND_AUDIT_PASS_FORMAL_C_WRAPPER_STARTED_INITIAL_UPDATE_PENDING_D_NOT_STARTED_GOAL_UNMET",
+  "status": "FORMAL_C_RUNNING_ACTUAL630_FIXED_MIXED_FINITE_UPDATES_D_NOT_STARTED_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -101,8 +101,12 @@
   "goal_tool_note": "当前系统goal仍为active的“监控训练顺利进行”。工具仅支持创建目标或修改状态，不支持改写未完成目标的objective；没有把旧目标虚报完成。用户最新完整执行目标及验收要求以本文件为准。",
   "actual_run_id": "xtrack_fixed_mixed_adamw_s2026",
   "actual_controller_pid": 2605254,
-  "actual_rank_pids": [],
-  "actual_completed_updates_at_snapshot": null,
+  "actual_rank_pids": [
+    2605305,
+    2605306,
+    2605307
+  ],
+  "actual_completed_updates_at_snapshot": 630,
   "tracking_scores": "V1_AND_DISTANCE0_ALL_THREE_FULL_SCORED_BOTH_ALL7_BELOW_REFERENCE",
   "objective_met": false,
   "next_iteration_candidate": {
@@ -137,9 +141,9 @@
     "completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
     "lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json"
   },
-  "actual_training_examples_at_snapshot": null,
+  "actual_training_examples_at_snapshot": 15120,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": null,
+  "actual_completed_epochs_at_snapshot": 0,
   "first_epoch_risk_events": 109,
   "first_epoch_nonzero_corrections": 106,
   "first_epoch_trajectory_checks": 154,
@@ -271,7 +275,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-06T18:49:44.967701+00:00",
+  "runtime_snapshot_observed_at": "2026-10-06T18:59:47.565660+00:00",
   "execution_goal_version": "2026-10-06-user-review-v4",
   "ordered_next_steps": [
     {
@@ -286,7 +290,7 @@
     },
     {
       "id": "P2",
-      "status": "C_ACTUAL_SANITY_PASS_FORMAL_WRAPPER_STARTED_COMPLETE_C_BEFORE_D",
+      "status": "C_FORMAL_RUNNING630_COMPLETE_C_FULL_SCORES_BEFORE_D",
       "work": "After all five distance0 stages and actual controller exit0, use existing reviewed C sanity/audit and formal repaired fixed-mixed AdamW entry. Complete C full scores before task-statistics-only D. Use C/D to select the optimization base; retain B, canonical AdaTask, PCGrad/CAGrad and true module ablations in the full comparison scope.",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json"
     },
@@ -396,10 +400,10 @@
     "historical_policy": "configs/gpu_limits.json"
   },
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
-  "training_runtime_state": "DISTANCE0_EPOCH1_AUDITED_TRAINING_CONTINUED_AT_20261005_171629_SNAPSHOT_NO_NEW_RUNTIME_QUERY",
+  "training_runtime_state": "C_RUNNING_NOT_EVALUATED_ACTUAL630_UPDATE_SNAPSHOT",
   "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
-  "actual_epoch_at_snapshot": null,
-  "actual_epoch_step_at_snapshot": null,
+  "actual_epoch_at_snapshot": 1,
+  "actual_epoch_step_at_snapshot": 630,
   "completed_epoch_totals": {
     "updates": 37500,
     "risk_events": 968,
@@ -449,21 +453,21 @@
   "twelfth_epoch_retention_evidence": "reports/full_method_v1_twelfth_epoch_retention_snapshot.json",
   "thirteenth_epoch_retention_evidence": "reports/full_method_v1_thirteenth_epoch_retention_snapshot.json",
   "monitoring_policy": {
-    "updated_at": "2026-10-07T02:55:07.464606+08:00",
+    "updated_at": "2026-10-07T03:07:33.661564+08:00",
     "user_instruction": "这里你轮询太多了，没到时间不用轮询",
     "mode": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-06T18:59:44.967701+00:00",
-    "estimate_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_first_diagnostic_observer_launch_20261007.json",
-    "estimated_stage": "Verify actual training start and finite fixed mixed24 exposure, estimate completed epoch1 time from observed C step timings for one scheduled CPU checkpoint audit and retention activation.",
-    "scheduled_observer_native_session": 87403,
-    "scheduled_observer_pid": 13320,
-    "scheduled_observer_started_at": "2026-10-06T18:52:16.999410+00:00",
-    "scheduled_observer_status": "ONE_PASSIVE_C_FIRST_DIAGNOSTIC_TIMER_PENDING",
-    "next_action": "First C startup/throughput diagnostic at02:59:44CST, then estimate actual epoch1 checkpoint time for CPU audit and one owned retention worker; no early progress poll."
+    "next_observation_not_before": "2026-10-07T03:31:00+08:00",
+    "estimate_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_first_diagnostic_intake_20261007.json",
+    "estimated_stage": "Actual saved C epoch1 checkpoint, CPU audit and one retention worker activation.",
+    "scheduled_observer_native_session": 12645,
+    "scheduled_observer_pid": 46224,
+    "scheduled_observer_started_at": "2026-10-06T19:05:52.267089+00:00",
+    "scheduled_observer_status": "ONE_PASSIVE_C_EPOCH1_TIMER_PENDING",
+    "next_action": "One actual read at03:31CST, about3 minutes after the measured epoch1 update estimate; no earlier logs/native/remote progress polling."
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": null,
@@ -611,7 +615,7 @@
     "frame_pairs": 157421,
     "attributes": 17
   },
-  "actual_evaluation_controller_pid": 3560911,
+  "actual_evaluation_controller_pid": null,
   "actual_method_evaluation_controller_pid": null,
   "reference_required_headlines": {
     "LasHeR_SR": 0.5554599303245381,
@@ -1153,7 +1157,7 @@
     "training_runtime_state": "ACTUAL_TRAIN_EXIT0_FIXED_15_EPOCHS_COMPLETE"
   },
   "completed_epoch_statistics_run_id": "xtrack_full_method_v1_s2026",
-  "active_run_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_formal_launch_20261007.json",
+  "active_run_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_first_diagnostic_intake_20261007.json",
   "active_distance0_milestones": {
     "first_diagnostic_not_before": "2026-10-05T07:28:21.783057+00:00",
     "preliminary_first_epoch_completion_estimate": "2026-10-05T09:00:21.116321+00:00",
@@ -1412,7 +1416,7 @@
     "source_review_evidence": "reports/joint_optimizer_controls_source_review_revised_20261005.json",
     "actual_gpu_jobs_started": 2,
     "existing_distance0_sources_changed": 0,
-    "real_model_forward_calls": "ACTUAL_TWO_STEP_SANITY_COMPLETED_FORMAL_STARTUP_FORWARD_COUNT_NOT_YET_OBSERVED",
+    "real_model_forward_calls": "ACTUAL_REAL_TWO_STEP_SANITY_AND_FORMAL630_UPDATES; no inference/check/trajectory extras",
     "canonical_AdaTask_completed": false,
     "subsequent_launch_condition": "Complete actual distance0 controller training/endpoint/all-three-evaluation/comparison/uncertainty and actual process exit first. Activate exact reviewed C/D admission after release; real C sanity+CPU saved-state audit precedes formal C, then complete C scoring before D. Schedule actual first-epoch audit/retention separately as in distance0; no worker launch is claimed.",
     "checkpoint_integration_evidence": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
@@ -1420,18 +1424,19 @@
     "checkpoint_state_cpu_evidence": "reports/joint_optimizer_controls_checkpoint_cpu_math_20261005.json",
     "checkpoint_integration_status": "SOURCE_AND_SYNTHETIC_CPU_STATE_CHECK_PASS_REAL_CHECKPOINT_CUDA_RESTORE_AND_RETENTION_EXECUTION_PENDING",
     "retention_workers_started": 0,
-    "control_generated_checkpoint_files": 0,
+    "control_generated_checkpoint_files": "Sanity one produced/audited/retired; formal epoch1 not yet observed.",
     "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
     "execution_source_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
     "execution_CPU_contract_evidence": "reports/joint_optimizer_controls_execution_cpu_contracts_20261005.json",
-    "execution_status": "ACTUAL_C_SANITY_AND_SAVED_STATE_AUDIT_PASS_FORMAL_C_WRAPPER_LAUNCHED",
+    "execution_status": "C_REAL_SANITY_PASS_FORMAL630_UPDATES_RUNNING_D_NOT_STARTED",
     "execution_controllers_started": 2,
     "shared_evaluation_admission_activated": true,
     "priority": "C_THEN_D_AFTER_EXISTING_DISTANCE0_ALL_FIVE_STAGES_AND_EXIT0",
     "admission_activation_evidence": "reports/joint_optimizer_controls_admission_activation_20261007.json",
     "C_formal_launch": "reports/xtrack_fixed_mixed_adamw_s2026_formal_launch_20261007.json",
     "C_sanity": "reports/xtrack_fixed_mixed_adamw_s2026_documented_sanity_20261007.json",
-    "D_started": false
+    "D_started": false,
+    "C_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_first_diagnostic_intake_20261007.json"
   },
   "completed_v1_monitoring_history": {
     "updated_at": "2026-10-05T14:45:18.828725+08:00",
@@ -1454,7 +1459,7 @@
   },
   "active_run_completed_totals": null,
   "latest_user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json",
-  "actual_rank_pid_scope": "Original training ranks434003/434004/434005 ended; evaluation workers2254629/2254630/2254631 were observed alive only at the saved21:40 snapshot, not rechecked during this update.",
+  "actual_rank_pid_scope": "Actual ps in the immutable 02:59:47 CST observation; not refreshed during static recording or publication.",
   "distance0_retention_terminal": {
     "ended_at": "2026-10-06T08:45:30.745634+00:00",
     "removed_files": 29,
@@ -1528,7 +1533,7 @@
       }
     }
   },
-  "actual_controller_status": "FORMAL_C_JOB_WRAPPER_LAUNCHED_INITIAL_UPDATE_NOT_YET_OBSERVED",
+  "actual_controller_status": "RUNNING",
   "distance0_complete_comparison": "reports/full_method_v2_distance0_complete_comparison.json",
   "distance0_paired_sequence_uncertainty": "reports/full_method_v2_distance0_paired_sequence_uncertainty.json",
   "distance0_complete_result": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
@@ -1789,5 +1794,6 @@
   "active_control_expected_examples": 900000,
   "active_control_optimizer": "adamw",
   "active_control_extra_modules_enabled": [],
-  "weight_retirement_evidence": "reports/completed_dominated_method_weight_retirement_20261007.json"
+  "weight_retirement_evidence": "reports/completed_dominated_method_weight_retirement_20261007.json",
+  "active_control_sanity_weight_retirement": "reports/xtrack_fixed_mixed_adamw_s2026_sanity_weight_retirement_20261007.json"
 }

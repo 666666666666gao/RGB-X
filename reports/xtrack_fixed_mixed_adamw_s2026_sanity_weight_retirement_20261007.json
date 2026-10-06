@@ -1,0 +1,19 @@
+{
+  "status": "ACTUAL_FORMAL_CONTROLLER_REPORTED_OWN_AUDITED_SANITY_WEIGHT_RETIRED",
+  "run_id": "xtrack_fixed_mixed_adamw_s2026",
+  "observed_at": "2026-10-06T18:59:47.565660+00:00",
+  "controller_pid": 2605254,
+  "controller_retirement_receipt": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026_sanity/XTrack_ep0001.pth.tar",
+    "bytes": 440684667,
+    "sha256": "c0ee89de4bd4d4297eb2b6290ee7af763f4863b24a15d92eb0c79c8e6e99b970",
+    "audit_sha256": "f324638b7bdfea02fda6a75a332f34a8c215aff05a06cdca48e80902c9c37d8b",
+    "removed_at": "2026-10-06T18:49:45.879657+00:00"
+  },
+  "source_observation": "reports/xtrack_fixed_mixed_adamw_s2026_first_diagnostic_observation_20261007.json",
+  "source_observation_sha256": "f1a8b5ac53eba92b5591713feff938a2539b1ca9cc87f93c893c6a601c5c061c",
+  "generated_weights_retired_cumulative": 68,
+  "retired_file_bytes_cumulative": 32368430190,
+  "public_reference_retained": true,
+  "scope": "Actual controller deletion receipt captured at startup. No new deletion or independent current path/stat check performed by this recorder. All raw sanity evidence retained."
+}
