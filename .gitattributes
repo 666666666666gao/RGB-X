@@ -11,3 +11,4 @@ reports/full_method_v2_distance0_documented_sanity_20261005.json -text whitespac
 reports/full_method_v2_distance0_epoch1_milestone_observation_20261005.json -text whitespace=cr-at-eol
 reports/full_method_v2_distance0_training_endpoint_observation_20261006.json -text whitespace=cr-at-eol
 reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/per_sequence.csv -text whitespace=cr-at-eol
+reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/per_sequence.csv -text whitespace=cr-at-eol

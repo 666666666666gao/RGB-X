@@ -1,0 +1,39 @@
+{
+  "status": "PASSIVE_TIMER_NO_REMOTE_QUERY_BEFORE_ESTIMATED_DEPTHTRACK_ENDPOINT",
+  "local_pid": 38796,
+  "started_at": "2026-10-06T17:45:28.917137+00:00",
+  "observe_not_before": "2026-10-06T18:10:00+00:00",
+  "controller_pid": 433952,
+  "evaluation_controller_pid": 2038303,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_distance0_depthtrack_endpoint_observation_20261007.json",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "previous_observation_sha256": "15fe7f628f9c9808cb25237005809ca1589343e2b621651ef4dd3de3dd55a108",
+  "historical_coverage_sha256": "1fe1ad5fd9f07d6d621b9335af43becc74899e268a90e00c5140da02a73b48e2",
+  "dataset_audit_sha256": "463b778647930b3027728c09e97483cedc99a8ff5ab72894e2753539aa111e03",
+  "depthtrack_shard_forecasts": [
+    {
+      "shard": 0,
+      "assigned_sequences": 17,
+      "assigned_frames": 31881,
+      "historical_rpc_seconds": 6243.8279757499695,
+      "rpc_based_endpoint": "2026-10-06T17:51:45.613186+00:00"
+    },
+    {
+      "shard": 1,
+      "assigned_sequences": 17,
+      "assigned_frames": 22887,
+      "historical_rpc_seconds": 8958.004752397537,
+      "rpc_based_endpoint": "2026-10-06T18:36:59.789962+00:00"
+    },
+    {
+      "shard": 2,
+      "assigned_sequences": 16,
+      "assigned_frames": 21605,
+      "historical_rpc_seconds": 4364.986671924591,
+      "rpc_based_endpoint": "2026-10-06T17:20:26.771882+00:00"
+    }
+  ],
+  "forecast_scope": "At01:40 only shard0 PID2423400 appears in the saved ps. Its historical RPC sum gives01:51:46;02:10 permits overhead and scoring/comparison. Missing shard1/2 PIDs are not exit0 receipt proof; all historical shard estimates are retained. Historical RPC excludes orchestration overhead and is not terminal proof.",
+  "native_observer_session": 1948
+}
