@@ -13,12 +13,21 @@ def verified_endpoint(config_path, checkpoint_path, expected_sha256, terminal_au
         assert audit['epoch'] == 65 and audit['seed'] == 2026
     else:
         assert audit['role'] == 'joint_rgbx_checkpoint_audit_not_tracking_benchmark'
-        assert audit['endpoint_kind'] in ['author_release', 'full_method']
+        assert audit['endpoint_kind'] in ['author_release', 'full_method', 'optimizer_control']
         assert audit['strict_model_load'] and audit['all_model_tensors_finite']
         if audit['endpoint_kind'] == 'author_release':
             assert audit['checkpoint_sha256'] == '3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36'
         else:
-            assert audit['run_id'] in ['xtrack_full_method_v1_s2026', 'xtrack_full_method_v2_distance0_s2026']
+            if audit['endpoint_kind'] == 'full_method':
+                assert audit['run_id'] in ['xtrack_full_method_v1_s2026', 'xtrack_full_method_v2_distance0_s2026']
+            else:
+                controls = {'xtrack_fixed_mixed_adamw_s2026': 'adamw',
+                            'xtrack_task_stats_only_s2026': 'task_adaptive_only'}
+                assert audit['run_id'] in controls and audit['stage'] == 'endpoint' and audit['seed'] == 2026
+                assert audit['optimizer_check']['optimizer_kind'] == controls[audit['run_id']]
+                assert audit['optimizer_check']['names_shapes_moments_steps_valid']
+                assert audit['optimizer_check']['always_used_witness_tensors'] == 24
+                assert audit['saved_replica_hash_matches_loaded_parameters']
             assert audit['epoch'] == 15 and audit['global_step'] == 37500
             assert audit['controller_exit_code'] == 0
             assert audit['frozen_tensors_unchanged'] and audit['replicas_identical']

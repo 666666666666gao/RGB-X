@@ -1,0 +1,20 @@
+{
+  "status": "ACTUAL_TRAINING_INPUT_WARNING_CONFIRMED_NO_LOADER_CHANGE",
+  "observed_at": "2026-10-06T18:46:00.845457+00:00",
+  "sequence": "toy07_indoor_320",
+  "path": "/data/gb/rgbx-risk/data/depthtrack/train/toy07_indoor_320/color/00001379.jpg",
+  "resolved_path": "/data/wangwj/dataset/DepthTrack/toy07_indoor_320/color/00001379.jpg",
+  "exists": false,
+  "rgb_jpg_count": 1367,
+  "groundtruth_rows": 1406,
+  "first_rgb": "00000001.jpg",
+  "last_rgb": "00001367.jpg",
+  "existing_sampler": "TrackingSampler.__getitem__ lines108/151-170 retries invalid samples after an existing caught read/processing failure; no new fallback added.",
+  "meaning": "Sanity48 valid training examples and checkpoint checks passed; frame availability is not complete. No measured exact retry count, global paired-data census or causal benchmark effect.",
+  "fair_control": "C/D retain identical existing dataset/sampling implementation; record this real defect separately before any controlled data-availability change.",
+  "model_or_data_source_changed": false,
+  "source_sha256": {
+    "third_party/XTrack/lib/train/data/sampler.py": "b57ec85e5e848aa31be884dd44fe13fc148f0b1223d805c07c36e960b6e7d401",
+    "third_party/XTrack/lib/train/dataset/depthtrack.py": "29c83c197558a0f17338a4b290125d09e5b8b4fe85518a71e5e52c486086a526"
+  }
+}

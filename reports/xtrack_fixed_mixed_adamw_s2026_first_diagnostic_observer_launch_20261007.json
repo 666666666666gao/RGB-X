@@ -1,0 +1,14 @@
+{
+  "status": "PASSIVE_TIMER_FOR_ONE_C_STARTUP_DIAGNOSTIC",
+  "local_pid": 13320,
+  "started_at": "2026-10-06T18:52:16.999410+00:00",
+  "observe_not_before": "2026-10-06T18:59:44.967701+00:00",
+  "controller_pid": 2605254,
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_c_first_diagnostic_observation_20261007.json",
+  "purpose": "Verify actual training start and finite fixed mixed24 exposure, estimate completed epoch1 time from observed C step timings for one scheduled CPU checkpoint audit and retention activation.",
+  "preliminary_first_epoch_seconds": 2046.6148050036281,
+  "estimate_scope": "Two-step sanity warm second-step time only, excludes setup/save/epoch overhead; first actual diagnostic will calibrate formal throughput.",
+  "native_observer_session": 87403
+}
