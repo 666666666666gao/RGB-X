@@ -1,22 +1,22 @@
 {
-  "status": "DISTANCE0_VISEVENT_COMPLETE_TWO_DATASETS_PUBLISHED_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-06T17:47:59.640775+00:00",
-  "source_commit": "9b08610d4fe68760c22a544b145b729a8731fbae",
+  "status": "DISTANCE0_ALL_FIVE_STAGES_EXIT0_SEVEN_NEGATIVE_RESULTS_FOUR_COPIES_IDENTICAL",
+  "verified_at": "2026-10-06T18:33:41.408805+00:00",
+  "source_commit": "1ddec9643c9208313cea53c66351bd56333e7aaf",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "780945d19d6453abf3c045358df28f941c7a19d1e76e585f122d62b470c7122c",
-  "document_bytes": 267730,
+  "document_sha256": "faf110220fc53d10c45768503ef0fab91ff28802d9f3f40d159506ada9c82587",
+  "document_bytes": 270178,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/9b08610d4fe68760c22a544b145b729a8731fbae/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/1ddec9643c9208313cea53c66351bd56333e7aaf/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
-    ".gitattributes": "086072cd7ce24c73fafd4a658a3427c78bd134153c52bc78fe76ba5216273d29",
+    ".gitattributes": "bc1c679b99148b018e1c74b7e98bd58285f0cad9080718b4a0b28c3a3a02e079",
     "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
-    "configs/current_goal.json": "9cc4c6a0799cdfbea3a4d821e665ac278a0e607013c973f2ec40e75a6b51399d",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "780945d19d6453abf3c045358df28f941c7a19d1e76e585f122d62b470c7122c",
+    "configs/current_goal.json": "9a2f745bd87ab730695c5c130dd73a8469cfbf1bbc286a4d79602bb3c901468c",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "faf110220fc53d10c45768503ef0fab91ff28802d9f3f40d159506ada9c82587",
     "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
     "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
     "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -107,16 +107,33 @@
     "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/coverage.json": "92ef9a9019e69d9a1428ff8d920f39a75585e8ebbf609bc64688ec97fcc18673",
     "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/metrics.json": "b1dc44bb75322fabc718c5622de6ad5c441bd9a63a25aefbbe16fbfcb1c99fcd",
     "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/per_sequence.csv": "9e3d7028ecdbf4a8e18058ae444ae662f34b76aba2a0459e52840969d738dd93",
-    "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/full_curves.png": "dec59e9f6f529344f1a271ca3da525a849b6e2eb6cbc7f8e418bacbd500af299"
+    "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/full_curves.png": "dec59e9f6f529344f1a271ca3da525a849b6e2eb6cbc7f8e418bacbd500af299",
+    "reports/full_method_v2_distance0_depthtrack_complete_intake_20261007.json": "2e7196da5b552ad0c8d26041121fe8cc8b57f5c091865f67f189a0c183cd8334",
+    "reports/full_method_v2_distance0_complete_result_intake_20261007.json": "0ceea89e348c121d0a7459408f1e73f3bca1708243b49f7f7eaab61d0f5f249b",
+    "reports/full_method_v2_distance0_complete_comparison.json": "c93db8a2c43f99be5559c40e85b030fe722f5ff84baacd427bbeb001619d9433",
+    "reports/full_method_v2_distance0_paired_sequence_uncertainty.json": "66c235ced9297cc5e2e5f37c85e484a951a3f64750b1920530b6b586aa353e33",
+    "reports/full_method_v2_distance0_depthtrack_final_endpoint_observer_launch_20261007.json": "24572ed16e9f3bcdc7c21ea390f5c9eb14ffc1b716dc21cc11000876079bfe89",
+    "reports/full_method_v2_distance0_controller_terminal_observer_launch_20261007.json": "629149be05f0773a729e45a7c0e5bbebc92ede2593c8e2b40f9156408a8e0f0a",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/identity.json": "96cfbb7b87f685e213078c1c5428683ed65ead6f664e71c722ef6ccbdc4d1884",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/stack.yaml": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/trackers.ini": "d59bf2a81b9410f0fe29e79862dfbeb216417d9be0b7832fccedeab1bb49ab63",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/coverage.json": "aba03d7673fbb92efe6806090ce2f72f044706796c21ff3d4b38d885c6958f48",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/official_metrics.json": "77a011a7a2c9e9e4633eefed3ce58631634fb2e95248acbe9e7637a676beb97e",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/attribute_diagnostics.json": "b484964eb853829bdf8f4a391c566f0dd09ad041c270a7dd609496401a09fb2f",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/per_sequence_metrics.csv": "908350467c370d575681039786e42291379eec9da4f1e291d96475150639482a",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/full_PR_F_curves.png": "81fd6037a0eb67f0e8c68d85a604e6e45d399f6ba2186b4c3b3cda4a9d947133",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/shard_0.json": "363ea92194f5bfb4eae527879c0ca906f3584a6426944fbcf245f982712e58bd",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/shard_1.json": "54b80c08d7171d3bc64e6b98fefa9d581130350cb875f1a7d238e4cd5d01c95a",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/shard_2.json": "c358fd33a2ecba29c3c6ee8a2d05f98b77de9c1ed7ef6feba6910d6d8351a56b"
   },
-  "published_files": 95,
+  "published_files": 112,
   "latest_publication_sync": {
-    "verified_at": "2026-10-06T17:47:59.640775+00:00",
+    "verified_at": "2026-10-06T18:33:41.408805+00:00",
     "file_sha256": {
-      ".gitattributes": "086072cd7ce24c73fafd4a658a3427c78bd134153c52bc78fe76ba5216273d29",
+      ".gitattributes": "bc1c679b99148b018e1c74b7e98bd58285f0cad9080718b4a0b28c3a3a02e079",
       "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
-      "configs/current_goal.json": "9cc4c6a0799cdfbea3a4d821e665ac278a0e607013c973f2ec40e75a6b51399d",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "780945d19d6453abf3c045358df28f941c7a19d1e76e585f122d62b470c7122c",
+      "configs/current_goal.json": "9a2f745bd87ab730695c5c130dd73a8469cfbf1bbc286a4d79602bb3c901468c",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "faf110220fc53d10c45768503ef0fab91ff28802d9f3f40d159506ada9c82587",
       "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
       "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
       "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -207,35 +224,59 @@
       "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/coverage.json": "92ef9a9019e69d9a1428ff8d920f39a75585e8ebbf609bc64688ec97fcc18673",
       "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/metrics.json": "b1dc44bb75322fabc718c5622de6ad5c441bd9a63a25aefbbe16fbfcb1c99fcd",
       "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/per_sequence.csv": "9e3d7028ecdbf4a8e18058ae444ae662f34b76aba2a0459e52840969d738dd93",
-      "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/full_curves.png": "dec59e9f6f529344f1a271ca3da525a849b6e2eb6cbc7f8e418bacbd500af299"
+      "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/full_curves.png": "dec59e9f6f529344f1a271ca3da525a849b6e2eb6cbc7f8e418bacbd500af299",
+      "reports/full_method_v2_distance0_depthtrack_complete_intake_20261007.json": "2e7196da5b552ad0c8d26041121fe8cc8b57f5c091865f67f189a0c183cd8334",
+      "reports/full_method_v2_distance0_complete_result_intake_20261007.json": "0ceea89e348c121d0a7459408f1e73f3bca1708243b49f7f7eaab61d0f5f249b",
+      "reports/full_method_v2_distance0_complete_comparison.json": "c93db8a2c43f99be5559c40e85b030fe722f5ff84baacd427bbeb001619d9433",
+      "reports/full_method_v2_distance0_paired_sequence_uncertainty.json": "66c235ced9297cc5e2e5f37c85e484a951a3f64750b1920530b6b586aa353e33",
+      "reports/full_method_v2_distance0_depthtrack_final_endpoint_observer_launch_20261007.json": "24572ed16e9f3bcdc7c21ea390f5c9eb14ffc1b716dc21cc11000876079bfe89",
+      "reports/full_method_v2_distance0_controller_terminal_observer_launch_20261007.json": "629149be05f0773a729e45a7c0e5bbebc92ede2593c8e2b40f9156408a8e0f0a",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/identity.json": "96cfbb7b87f685e213078c1c5428683ed65ead6f664e71c722ef6ccbdc4d1884",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/stack.yaml": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/trackers.ini": "d59bf2a81b9410f0fe29e79862dfbeb216417d9be0b7832fccedeab1bb49ab63",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/coverage.json": "aba03d7673fbb92efe6806090ce2f72f044706796c21ff3d4b38d885c6958f48",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/official_metrics.json": "77a011a7a2c9e9e4633eefed3ce58631634fb2e95248acbe9e7637a676beb97e",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/attribute_diagnostics.json": "b484964eb853829bdf8f4a391c566f0dd09ad041c270a7dd609496401a09fb2f",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/per_sequence_metrics.csv": "908350467c370d575681039786e42291379eec9da4f1e291d96475150639482a",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/full_PR_F_curves.png": "81fd6037a0eb67f0e8c68d85a604e6e45d399f6ba2186b4c3b3cda4a9d947133",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/shard_0.json": "363ea92194f5bfb4eae527879c0ca906f3584a6426944fbcf245f982712e58bd",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/shard_1.json": "54b80c08d7171d3bc64e6b98fefa9d581130350cb875f1a7d238e4cd5d01c95a",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/shard_2.json": "c358fd33a2ecba29c3c6ee8a2d05f98b77de9c1ed7ef6feba6910d6d8351a56b"
     },
     "all_files_match": true,
     "reviewed15_sources_unchanged": true,
     "scope": "Static publication only. Active endpoint audit and retention receipts not overwritten; no evaluation progress/log/PID/GPU query."
   },
   "last_verified_runtime": {
-    "observed_at": "2026-10-06T17:40:02.785210+00:00",
+    "observed_at": "2026-10-06T18:29:02.596068+00:00",
     "training_global_step": 37500,
     "completed_epochs": 15,
     "training_exit_code": 0,
     "endpoint_audit": "PASS",
-    "evaluation_status": "RUNNING_NOT_SCORED",
-    "controller_status": "RUNNING",
-    "current_stage": "method-evaluation",
+    "controller_exit_code": 0,
+    "controller_status": "IMPROVEMENT_GOAL_UNMET_REQUIRES_DIAGNOSIS",
+    "completed_stages": [
+      "train",
+      "method-endpoint-audit",
+      "method-evaluation",
+      "complete-comparison",
+      "paired-sequence-uncertainty"
+    ],
     "completed_datasets": [
       "LasHeR",
-      "VisEvent"
+      "VisEvent",
+      "DepthTrack"
     ],
-    "formal_tracking_scores": "LASHER_AND_VISEVENT_COMPLETE_DEPTHTRACK_PENDING",
-    "visevent_headline_metrics": {
-      "SR_AUC": 0.5978613014783833,
-      "PR_at_20": 0.7594856032802182,
-      "NPR_AUC": 0.660403883304764,
-      "NP_at_020": 0.7206402941530661
+    "formal_tracking_scores": "ALL_THREE_COMPLETE_ALL7_BELOW_REFERENCE",
+    "improved_count": 0,
+    "required_count": 7,
+    "depthtrack_headline_metrics": {
+      "Precision": 0.599859079902239,
+      "Recall": 0.6037766393139197,
+      "F_score": 0.6018114842274309
     },
-    "same_checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
-    "actual_processes": "    PID    PPID STAT     ELAPSED COMMAND\n 433952       1 Ss    1-10:21:40 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_full_method_v2_distance0_job.py\n2038303  433952 S       08:53:05 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/evaluate_existing_three.py --terminal-audit /data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json --output-root /home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026\n2423400 2038303 Sl      01:32:21 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/run_vot_sequences.py --workspace /home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/DepthTrack --shard 0 --gpu 0\n",
-    "visevent_intake_at": "2026-10-06T17:42:08.926112+00:00"
+    "actual_processes": "    PID    PPID STAT     ELAPSED COMMAND\n",
+    "terminal_result_intake": "reports/full_method_v2_distance0_complete_result_intake_20261007.json"
   },
   "reference_complete_datasets": [
     "LasHeR",
@@ -299,10 +340,10 @@
   "candidate_launch_ready": true,
   "candidate_preflight": "ACTUAL_EXIT0_SAVED_STATE26_PASS_SAME_FAMILY_PROVISIONAL",
   "candidate_formal_training": "ACTUAL_EPOCH1_SAVED_CPU_AUDIT_PASS_TRAINING_CONTINUES_NO_BENCHMARK",
-  "next_action": "One existing passive observation at2026-10-07 02:10CST for DepthTrack and all five controller stages. No early progress query or reference rerun; C/D actual launch remains pending.",
+  "next_action": "Distance0 all five stages and actual controller exit0 verified. Activate reviewed admission and run real C two-step sanity/saved-state audit then full C, score before D. No pending distance0 observer or reference replay.",
   "scheduled_observer_native_session": 72018,
   "scheduled_observer_pid": 1536,
-  "scope": "Actual01:40 scheduled observation, full320 VisEvent artifacts validated01:42 and paired with reference/v1; all4 below reference, above v1. Only DepthTrack pending. Static sync is not a newer runtime claim. Existing15 sources unchanged; C/D and new diagnostics not run.",
+  "scope": "Actual02:29 all-five-stage exit0 snapshot, full615 sequences and native DepthTrack aggregation verified. Seven required scores all lower than reference, complete bootstrap retained and source bytes bound. Fifteen active sources unchanged at terminal; C/D actual execution still pending. Static publication is not a later runtime observation.",
   "total_complete_sequences": 615,
   "arithmetic_correction": "245+50+320=615; every raw score and count unchanged",
   "candidate_run_id": "xtrack_full_method_v2_distance0_s2026",
@@ -314,7 +355,7 @@
   ],
   "candidate_completed_updates_at_snapshot": 2800,
   "candidate_scores_available": false,
-  "next_actual_runtime_not_before": "2026-10-06T18:10:00+00:00",
+  "next_actual_runtime_not_before": null,
   "candidate_first_training_diagnosis": {
     "updates": 290,
     "checks": {
@@ -743,18 +784,22 @@
   "joint_optimizer_controls_execution_source_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
   "joint_optimizer_controls_shared_admission_activated": false,
   "joint_optimizer_controls_controllers_started": 0,
-  "active_native_observer_session": 1948,
-  "active_local_timer_pid": 38796,
+  "active_native_observer_session": null,
+  "active_local_timer_pid": null,
   "distance0_training_complete": true,
-  "distance0_formal_tracking_scores": "LASHER_AND_VISEVENT_COMPLETE_DEPTHTRACK_PENDING",
+  "distance0_formal_tracking_scores": "ALL_THREE_COMPLETE_ALL7_BELOW_REFERENCE",
   "distance0_completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
   "distance0_completed_datasets": [
     "LasHeR",
-    "VisEvent"
+    "VisEvent",
+    "DepthTrack"
   ],
   "distance0_lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json",
   "execution_goal_version": "2026-10-06-user-review-v4",
-  "current_goal_sha256": "9cc4c6a0799cdfbea3a4d821e665ac278a0e607013c973f2ec40e75a6b51399d",
+  "current_goal_sha256": "9a2f745bd87ab730695c5c130dd73a8469cfbf1bbc286a4d79602bb3c901468c",
   "user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json",
-  "distance0_visevent_evidence": "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json"
+  "distance0_visevent_evidence": "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json",
+  "distance0_complete_result": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
+  "distance0_all_five_stages_completed": true,
+  "distance0_controller_exit_code": 0
 }
