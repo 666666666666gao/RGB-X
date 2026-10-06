@@ -1,22 +1,22 @@
 {
-  "status": "USER_REVIEW_C_THEN_D_AND_TWO_DIAGNOSTICS_PUBLISHED_FOUR_HANDOFF_COPIES_IDENTICAL",
-  "verified_at": "2026-10-06T15:54:29.250859+00:00",
-  "source_commit": "f7e4e6ceda8cfff0b4b59d0440840f548906cb95",
+  "status": "DISTANCE0_VISEVENT_COMPLETE_TWO_DATASETS_PUBLISHED_FOUR_HANDOFF_COPIES_IDENTICAL",
+  "verified_at": "2026-10-06T17:47:59.640775+00:00",
+  "source_commit": "9b08610d4fe68760c22a544b145b729a8731fbae",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "5bb56d9b8408648912702a6b650ba4c1bc0eef117921c733d638124e3988e9b1",
-  "document_bytes": 265715,
+  "document_sha256": "780945d19d6453abf3c045358df28f941c7a19d1e76e585f122d62b470c7122c",
+  "document_bytes": 267730,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/f7e4e6ceda8cfff0b4b59d0440840f548906cb95/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/9b08610d4fe68760c22a544b145b729a8731fbae/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
-    ".gitattributes": "73346c664bce82f0f45114d61ef0c6df2eb6ac5dd3a868ba66edf844bd447245",
+    ".gitattributes": "086072cd7ce24c73fafd4a658a3427c78bd134153c52bc78fe76ba5216273d29",
     "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
-    "configs/current_goal.json": "3028e07b4010d03b721e8f4ae5aa484783bcc6d57453bee4b9fc66d87ccdcf54",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "5bb56d9b8408648912702a6b650ba4c1bc0eef117921c733d638124e3988e9b1",
+    "configs/current_goal.json": "9cc4c6a0799cdfbea3a4d821e665ac278a0e607013c973f2ec40e75a6b51399d",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "780945d19d6453abf3c045358df28f941c7a19d1e76e585f122d62b470c7122c",
     "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
     "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
     "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -99,16 +99,24 @@
     "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/metrics.json": "355f4d264368673081a13bad8977dbac04b4fde3678a3c1f8f2ad15c080a8fb4",
     "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/per_sequence.csv": "da21e0cea5b8bb2b75529613ff567ca0234fde5f10b616a650275f15e363d030",
     "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/full_curves.png": "d7ac543231107b7d60c8d9d99716efab8463cdc07ab3445b0fe43a2f15065951",
-    "reports/user_review_priority_and_source_facts_20261006.json": "de545f9d74c5a8175f9c8ff0f98d6787167bbde0676faf3afe2fe70d794f993a"
+    "reports/user_review_priority_and_source_facts_20261006.json": "de545f9d74c5a8175f9c8ff0f98d6787167bbde0676faf3afe2fe70d794f993a",
+    "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json": "de531d4890f9eaec40f15dd8d72c9fc1298cf2316324424bb399c44d69277e08",
+    "reports/full_method_v2_distance0_visevent_paired_diagnosis_20261007.json": "301213510a23315c79a2bc94cdcf917d594a232b6ffec48f30962dba91c1b0cd",
+    "reports/full_method_v2_distance0_visevent_complete_observation_20261007.json": "351b4d75b93a037d1df7687dc1691ff978b27a96dc628df606f2113f6fd64f14",
+    "reports/full_method_v2_distance0_depthtrack_endpoint_observer_launch_20261007.json": "47ca4facf3cb033711a9adc88594bcf50896263997de9567604298f7d1f7d0e1",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/coverage.json": "92ef9a9019e69d9a1428ff8d920f39a75585e8ebbf609bc64688ec97fcc18673",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/metrics.json": "b1dc44bb75322fabc718c5622de6ad5c441bd9a63a25aefbbe16fbfcb1c99fcd",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/per_sequence.csv": "9e3d7028ecdbf4a8e18058ae444ae662f34b76aba2a0459e52840969d738dd93",
+    "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/full_curves.png": "dec59e9f6f529344f1a271ca3da525a849b6e2eb6cbc7f8e418bacbd500af299"
   },
-  "published_files": 87,
+  "published_files": 95,
   "latest_publication_sync": {
-    "verified_at": "2026-10-06T15:54:29.250859+00:00",
+    "verified_at": "2026-10-06T17:47:59.640775+00:00",
     "file_sha256": {
-      ".gitattributes": "73346c664bce82f0f45114d61ef0c6df2eb6ac5dd3a868ba66edf844bd447245",
+      ".gitattributes": "086072cd7ce24c73fafd4a658a3427c78bd134153c52bc78fe76ba5216273d29",
       "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
-      "configs/current_goal.json": "3028e07b4010d03b721e8f4ae5aa484783bcc6d57453bee4b9fc66d87ccdcf54",
-      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "5bb56d9b8408648912702a6b650ba4c1bc0eef117921c733d638124e3988e9b1",
+      "configs/current_goal.json": "9cc4c6a0799cdfbea3a4d821e665ac278a0e607013c973f2ec40e75a6b51399d",
+      "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "780945d19d6453abf3c045358df28f941c7a19d1e76e585f122d62b470c7122c",
       "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
       "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
       "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -191,42 +199,43 @@
       "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/metrics.json": "355f4d264368673081a13bad8977dbac04b4fde3678a3c1f8f2ad15c080a8fb4",
       "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/per_sequence.csv": "da21e0cea5b8bb2b75529613ff567ca0234fde5f10b616a650275f15e363d030",
       "reports/method_xtrack_full_method_v2_distance0_s2026/LasHeR/scores/full_curves.png": "d7ac543231107b7d60c8d9d99716efab8463cdc07ab3445b0fe43a2f15065951",
-      "reports/user_review_priority_and_source_facts_20261006.json": "de545f9d74c5a8175f9c8ff0f98d6787167bbde0676faf3afe2fe70d794f993a"
+      "reports/user_review_priority_and_source_facts_20261006.json": "de545f9d74c5a8175f9c8ff0f98d6787167bbde0676faf3afe2fe70d794f993a",
+      "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json": "de531d4890f9eaec40f15dd8d72c9fc1298cf2316324424bb399c44d69277e08",
+      "reports/full_method_v2_distance0_visevent_paired_diagnosis_20261007.json": "301213510a23315c79a2bc94cdcf917d594a232b6ffec48f30962dba91c1b0cd",
+      "reports/full_method_v2_distance0_visevent_complete_observation_20261007.json": "351b4d75b93a037d1df7687dc1691ff978b27a96dc628df606f2113f6fd64f14",
+      "reports/full_method_v2_distance0_depthtrack_endpoint_observer_launch_20261007.json": "47ca4facf3cb033711a9adc88594bcf50896263997de9567604298f7d1f7d0e1",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/coverage.json": "92ef9a9019e69d9a1428ff8d920f39a75585e8ebbf609bc64688ec97fcc18673",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/metrics.json": "b1dc44bb75322fabc718c5622de6ad5c441bd9a63a25aefbbe16fbfcb1c99fcd",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/per_sequence.csv": "9e3d7028ecdbf4a8e18058ae444ae662f34b76aba2a0459e52840969d738dd93",
+      "reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/full_curves.png": "dec59e9f6f529344f1a271ca3da525a849b6e2eb6cbc7f8e418bacbd500af299"
     },
     "all_files_match": true,
     "reviewed15_sources_unchanged": true,
     "scope": "Static publication only. Active endpoint audit and retention receipts not overwritten; no evaluation progress/log/PID/GPU query."
   },
   "last_verified_runtime": {
-    "observed_at": "2026-10-06T13:40:02.634085+00:00",
+    "observed_at": "2026-10-06T17:40:02.785210+00:00",
     "training_global_step": 37500,
     "completed_epochs": 15,
     "training_exit_code": 0,
-    "training_exit_at": "2026-10-06T08:42:56.865396+00:00",
     "endpoint_audit": "PASS",
     "evaluation_status": "RUNNING_NOT_SCORED",
-    "formal_tracking_scores": "LASHER_COMPLETE_OTHER2_PENDING",
-    "actual_process_observation_at": "2026-10-06T09:37:03.570959+00:00",
-    "risk_events": 966,
-    "nonzero_corrections": 948,
-    "same_checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+    "controller_status": "RUNNING",
     "current_stage": "method-evaluation",
     "completed_datasets": [
-      "LasHeR"
+      "LasHeR",
+      "VisEvent"
     ],
-    "lasher_headline_metrics": {
-      "SR_AUC": 0.5539893818361226,
-      "PR_at_20": 0.6879301990501853,
-      "NPR_AUC": 0.5912385737160156,
-      "NP_at_020": 0.6541598709539099
+    "formal_tracking_scores": "LASHER_AND_VISEVENT_COMPLETE_DEPTHTRACK_PENDING",
+    "visevent_headline_metrics": {
+      "SR_AUC": 0.5978613014783833,
+      "PR_at_20": 0.7594856032802182,
+      "NPR_AUC": 0.660403883304764,
+      "NP_at_020": 0.7206402941530661
     },
-    "lasher_required_improved_count": 0,
-    "current_vis_workers": [
-      2254629,
-      2254630,
-      2254631
-    ],
-    "lasher_full_intake_at": "2026-10-06T13:45:02.751733+00:00"
+    "same_checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+    "actual_processes": "    PID    PPID STAT     ELAPSED COMMAND\n 433952       1 Ss    1-10:21:40 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_full_method_v2_distance0_job.py\n2038303  433952 S       08:53:05 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/evaluate_existing_three.py --terminal-audit /data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json --output-root /home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026\n2423400 2038303 Sl      01:32:21 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/run_vot_sequences.py --workspace /home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/DepthTrack --shard 0 --gpu 0\n",
+    "visevent_intake_at": "2026-10-06T17:42:08.926112+00:00"
   },
   "reference_complete_datasets": [
     "LasHeR",
@@ -290,10 +299,10 @@
   "candidate_launch_ready": true,
   "candidate_preflight": "ACTUAL_EXIT0_SAVED_STATE26_PASS_SAME_FAMILY_PROVISIONAL",
   "candidate_formal_training": "ACTUAL_EPOCH1_SAVED_CPU_AUDIT_PASS_TRAINING_CONTINUES_NO_BENCHMARK",
-  "next_action": "One existing passive observation at2026-10-07 01:40CST for VisEvent full scoring. No early progress queries or reference rerun. Finish distance0 all five stages before held C/D admission or real GPU controls.",
+  "next_action": "One existing passive observation at2026-10-07 02:10CST for DepthTrack and all five controller stages. No early progress query or reference rerun; C/D actual launch remains pending.",
   "scheduled_observer_native_session": 72018,
   "scheduled_observer_pid": 1536,
-  "scope": "Accepted user priorities and local static source facts only, including logging-weight caveat. Runtime remains the saved21:40/21:45 snapshot; no new progress query or neural jobs. C then D after existing pipeline exit; two diagnostics registered, not run.",
+  "scope": "Actual01:40 scheduled observation, full320 VisEvent artifacts validated01:42 and paired with reference/v1; all4 below reference, above v1. Only DepthTrack pending. Static sync is not a newer runtime claim. Existing15 sources unchanged; C/D and new diagnostics not run.",
   "total_complete_sequences": 615,
   "arithmetic_correction": "245+50+320=615; every raw score and count unchanged",
   "candidate_run_id": "xtrack_full_method_v2_distance0_s2026",
@@ -305,7 +314,7 @@
   ],
   "candidate_completed_updates_at_snapshot": 2800,
   "candidate_scores_available": false,
-  "next_actual_runtime_not_before": "2026-10-06T17:40:00+00:00",
+  "next_actual_runtime_not_before": "2026-10-06T18:10:00+00:00",
   "candidate_first_training_diagnosis": {
     "updates": 290,
     "checks": {
@@ -734,16 +743,18 @@
   "joint_optimizer_controls_execution_source_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
   "joint_optimizer_controls_shared_admission_activated": false,
   "joint_optimizer_controls_controllers_started": 0,
-  "active_native_observer_session": 76382,
-  "active_local_timer_pid": 48220,
+  "active_native_observer_session": 1948,
+  "active_local_timer_pid": 38796,
   "distance0_training_complete": true,
-  "distance0_formal_tracking_scores": "LASHER_COMPLETE_OTHER2_PENDING",
+  "distance0_formal_tracking_scores": "LASHER_AND_VISEVENT_COMPLETE_DEPTHTRACK_PENDING",
   "distance0_completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
   "distance0_completed_datasets": [
-    "LasHeR"
+    "LasHeR",
+    "VisEvent"
   ],
   "distance0_lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json",
   "execution_goal_version": "2026-10-06-user-review-v4",
-  "current_goal_sha256": "3028e07b4010d03b721e8f4ae5aa484783bcc6d57453bee4b9fc66d87ccdcf54",
-  "user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json"
+  "current_goal_sha256": "9cc4c6a0799cdfbea3a4d821e665ac278a0e607013c973f2ec40e75a6b51399d",
+  "user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json",
+  "distance0_visevent_evidence": "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json"
 }
