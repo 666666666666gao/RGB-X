@@ -1,0 +1,1122 @@
+{
+  "status": "ONE_ESTIMATED_TRAINING_ENDPOINT_OBSERVATION",
+  "observed_at": "2026-10-06T09:37:03.570959+00:00",
+  "controller": {
+    "status": "RUNNING",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "controller_pid": 433952,
+    "exit_code": null,
+    "started_at": "2026-10-05T07:18:21.931580+00:00",
+    "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+    "poll_seconds": 240,
+    "protocol": {
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.0,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "source_hashes": {
+      "configs/full_method_v2_distance0.json": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+      "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+      "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+      "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+      "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+      "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+      "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+      "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd"
+    },
+    "completed_stages": [
+      "train",
+      "method-endpoint-audit"
+    ],
+    "observed_at": "2026-10-06T09:34:57.988820+00:00",
+    "wallclock_seconds": 94596.05698843807,
+    "current_stage": "method-evaluation",
+    "argv": [
+      "/data/gb/conda/envs/rgbx-risk/bin/python",
+      "/data/gb/rgbx-risk/scripts/evaluate_existing_three.py",
+      "--terminal-audit",
+      "/data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json",
+      "--output-root",
+      "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026"
+    ],
+    "worker_pid": 2038303,
+    "last_stage_exit_code": 0
+  },
+  "training_run": {
+    "status": "TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "protocol": {
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.0,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+    "world_size": 3,
+    "rank_pids": [
+      434003,
+      434004,
+      434005
+    ],
+    "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+    "modules_enabled": [
+      "localization_risk",
+      "task_adaptive_selective_correction",
+      "closed_loop_acceptance"
+    ],
+    "formal_tracking_scores": "NOT_RUN",
+    "started_at": "2026-10-05T07:18:32.246709+00:00",
+    "training_examples_per_update": 24,
+    "check_examples_per_update": 9,
+    "short_clip_source": "TRAIN_ONLY",
+    "baseline_setting": "AUTHOR_RELEASE_FINETUNE",
+    "attempt_id": "20261005T071832246746Z",
+    "observed_at": "2026-10-06T08:42:49.391438+00:00",
+    "epoch": 15,
+    "step": 2500,
+    "global_step": 37500,
+    "latest": {
+      "attempt_id": "20261005T071832246746Z",
+      "epoch": 15,
+      "step": 2500,
+      "global_step": 37500,
+      "before_localization": [
+        [
+          0.8730083703994751,
+          0.8265458941459656
+        ],
+        [
+          0.13745275139808655,
+          0.3488117456436157
+        ],
+        [
+          0.45741185545921326,
+          0.6224554777145386
+        ]
+      ],
+      "candidate_localization": [
+        [
+          0.8729841113090515,
+          0.8265487551689148
+        ],
+        [
+          0.1374482363462448,
+          0.34880149364471436
+        ],
+        [
+          0.45740199089050293,
+          0.6224797368049622
+        ]
+      ],
+      "accepted_localization": [
+        [
+          0.8729841113090515,
+          0.8265487551689148
+        ],
+        [
+          0.1374482363462448,
+          0.34880149364471436
+        ],
+        [
+          0.45740199089050293,
+          0.6224797368049622
+        ]
+      ],
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_correction_strength": 0.0,
+      "trajectory_checked": true,
+      "baseline_trajectory": [
+        1.565326452255249,
+        0.49884748458862305,
+        1.0505433082580566
+      ],
+      "accepted_trajectory": [
+        1.5653557777404785,
+        0.49886074662208557,
+        1.0505547523498535
+      ],
+      "training_clips": [
+        {
+          "dataset": "lasher",
+          "sequence_id": 813,
+          "frame_ids": [
+            269,
+            270,
+            271
+          ]
+        },
+        {
+          "dataset": "depthtrack",
+          "sequence_id": 94,
+          "frame_ids": [
+            195,
+            196,
+            197
+          ]
+        },
+        {
+          "dataset": "visevent",
+          "sequence_id": 444,
+          "frame_ids": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "baseline_trajectory_details": [
+        {
+          "predicted_boxes": [
+            [
+              343.016978263855,
+              262.0471477508545,
+              26.2488956451416,
+              40.198673248291016
+            ],
+            [
+              343.9564456939697,
+              262.56617736816406,
+              26.716442108154297,
+              40.08381652832031
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              341.0,
+              263.0,
+              27.0,
+              37.0
+            ],
+            [
+              343.016978263855,
+              262.0471477508545,
+              26.2488956451416,
+              40.198673248291016
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        },
+        {
+          "predicted_boxes": [
+            [
+              210.358304977417,
+              281.1797571182251,
+              44.0628547668457,
+              19.626890182495117
+            ],
+            [
+              212.05648231506348,
+              275.8276586532593,
+              44.639522552490234,
+              23.228303909301758
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              210.0,
+              279.0,
+              41.0,
+              19.0
+            ],
+            [
+              210.358304977417,
+              281.1797571182251,
+              44.0628547668457,
+              19.626890182495117
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        },
+        {
+          "predicted_boxes": [
+            [
+              202.31768798828125,
+              48.73201942443848,
+              40.02104568481445,
+              58.334747314453125
+            ],
+            [
+              202.04740715026855,
+              49.80240058898926,
+              44.15674591064453,
+              59.800994873046875
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              206.8865966796875,
+              42.69889831542969,
+              33.886600494384766,
+              60.88100051879883
+            ],
+            [
+              202.31768798828125,
+              48.73201942443848,
+              40.02104568481445,
+              58.334747314453125
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        }
+      ],
+      "candidate_trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0,
+          "localization": [
+            [
+              0.8729841113090515,
+              0.8265487551689148
+            ],
+            [
+              0.1374482363462448,
+              0.34880149364471436
+            ],
+            [
+              0.45740199089050293,
+              0.6224797368049622
+            ]
+          ],
+          "trajectory": [
+            1.5653557777404785,
+            0.49886074662208557,
+            1.0505547523498535
+          ],
+          "trajectory_details": [
+            {
+              "predicted_boxes": [
+                [
+                  343.01686000823975,
+                  262.0475616455078,
+                  26.249086380004883,
+                  40.19795227050781
+                ],
+                [
+                  343.9565782546997,
+                  262.5664539337158,
+                  26.716176986694336,
+                  40.08366012573242
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  341.0,
+                  263.0,
+                  27.0,
+                  37.0
+                ],
+                [
+                  343.01686000823975,
+                  262.0475616455078,
+                  26.249086380004883,
+                  40.19795227050781
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            },
+            {
+              "predicted_boxes": [
+                [
+                  210.3582878112793,
+                  281.1798391342163,
+                  44.062889099121094,
+                  19.626794815063477
+                ],
+                [
+                  212.05645942687988,
+                  275.82766342163086,
+                  44.6397819519043,
+                  23.22834014892578
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  210.0,
+                  279.0,
+                  41.0,
+                  19.0
+                ],
+                [
+                  210.3582878112793,
+                  281.1798391342163,
+                  44.062889099121094,
+                  19.626794815063477
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            },
+            {
+              "predicted_boxes": [
+                [
+                  202.31760597229004,
+                  48.73193359375,
+                  40.02154541015625,
+                  58.335086822509766
+                ],
+                [
+                  202.04747009277344,
+                  49.802812576293945,
+                  44.15671157836914,
+                  59.80055236816406
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  206.8865966796875,
+                  42.69889831542969,
+                  33.886600494384766,
+                  60.88100051879883
+                ],
+                [
+                  202.31760597229004,
+                  48.73193359375,
+                  40.02154541015625,
+                  58.335086822509766
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            }
+          ]
+        }
+      ],
+      "pair_check_forward_examples": 18,
+      "trajectory_model_forward_examples": 12,
+      "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs",
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "step_seconds": 3.3627295239130035,
+      "peak_allocated_bytes": 5770316288,
+      "joint_grad_norm_before_clip": 2.7778143882751465,
+      "gradient_clip_coefficient": 0.035999512574553735,
+      "correction_norm": 0.0,
+      "active_risk_constraints": 0
+    },
+    "training_examples": 900000,
+    "check_examples": 337500,
+    "wallclock_seconds": 91457.03407153802,
+    "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+    "completed_epochs": 15,
+    "replica_parameter_sha256": "26023db160c68a0c479c1275f613e80eb5e83ef47cace1859f4a66b68b970456",
+    "ended_at": "2026-10-06T08:42:51.030287+00:00",
+    "epoch_history": [
+      {
+        "epoch": 1,
+        "steps": 2500,
+        "means": {
+          "total": 0.9770754349470139,
+          "balance": 0.0680006440371275,
+          "classification": 15.100700662231445,
+          "iou": 0.8238727973937988
+        }
+      },
+      {
+        "epoch": 2,
+        "steps": 2500,
+        "means": {
+          "total": 0.9706955296039581,
+          "balance": 0.06743518979847431,
+          "classification": 14.755293559646606,
+          "iou": 0.8236947834968567
+        }
+      },
+      {
+        "epoch": 3,
+        "steps": 2500,
+        "means": {
+          "total": 0.9709795738697052,
+          "balance": 0.06668742682337761,
+          "classification": 14.493624071121216,
+          "iou": 0.8230972840785981
+        }
+      },
+      {
+        "epoch": 4,
+        "steps": 2500,
+        "means": {
+          "total": 0.9698939035415649,
+          "balance": 0.06582806108444929,
+          "classification": 14.283640438079834,
+          "iou": 0.8232871954917907
+        }
+      },
+      {
+        "epoch": 5,
+        "steps": 2500,
+        "means": {
+          "total": 0.9686690037727356,
+          "balance": 0.06493156426846981,
+          "classification": 14.099481594467163,
+          "iou": 0.8233975374221801
+        }
+      },
+      {
+        "epoch": 6,
+        "steps": 2500,
+        "means": {
+          "total": 0.957884748840332,
+          "balance": 0.0640529296591878,
+          "classification": 13.925824100875854,
+          "iou": 0.8244889672994614
+        }
+      },
+      {
+        "epoch": 7,
+        "steps": 2500,
+        "means": {
+          "total": 0.9463771695375442,
+          "balance": 0.06266950074285269,
+          "classification": 13.73886427307129,
+          "iou": 0.8257515150308609
+        }
+      },
+      {
+        "epoch": 8,
+        "steps": 2500,
+        "means": {
+          "total": 0.9598888394355773,
+          "balance": 0.061519209705293176,
+          "classification": 13.564136151504517,
+          "iou": 0.8232118816137314
+        }
+      },
+      {
+        "epoch": 9,
+        "steps": 2500,
+        "means": {
+          "total": 0.9496542783737183,
+          "balance": 0.06017927648872137,
+          "classification": 13.383926884460449,
+          "iou": 0.8239279702425003
+        }
+      },
+      {
+        "epoch": 10,
+        "steps": 2500,
+        "means": {
+          "total": 0.9451841717243195,
+          "balance": 0.058922078715264795,
+          "classification": 13.207243867874146,
+          "iou": 0.8250911972522735
+        }
+      },
+      {
+        "epoch": 11,
+        "steps": 2500,
+        "means": {
+          "total": 0.9402227275133133,
+          "balance": 0.05810625940859318,
+          "classification": 13.108359856796264,
+          "iou": 0.8251931318044663
+        }
+      },
+      {
+        "epoch": 12,
+        "steps": 2500,
+        "means": {
+          "total": 0.9461104552030564,
+          "balance": 0.05814824152588844,
+          "classification": 13.10243194847107,
+          "iou": 0.8241970225334168
+        }
+      },
+      {
+        "epoch": 13,
+        "steps": 2500,
+        "means": {
+          "total": 0.9468755697965622,
+          "balance": 0.05766881828010082,
+          "classification": 13.08397003364563,
+          "iou": 0.8241665618896484
+        }
+      },
+      {
+        "epoch": 14,
+        "steps": 2500,
+        "means": {
+          "total": 0.9444360780477524,
+          "balance": 0.057783730386197565,
+          "classification": 13.070530986785888,
+          "iou": 0.8246002446889877
+        }
+      },
+      {
+        "epoch": 15,
+        "steps": 2500,
+        "means": {
+          "total": 0.9477965210199356,
+          "balance": 0.0576502860724926,
+          "classification": 13.052996746826173,
+          "iou": 0.8235588457107544
+        }
+      }
+    ]
+  },
+  "stage_evidence": {
+    "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026_controller/training_exit.json": {
+      "exists": true,
+      "value": {
+        "status": "EXITED",
+        "run_id": "xtrack_full_method_v2_distance0_s2026",
+        "controller_pid": 433952,
+        "exit_code": 0,
+        "started_at": "2026-10-05T07:18:21.931580+00:00",
+        "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+        "poll_seconds": 240,
+        "protocol": {
+          "run_id": "xtrack_full_method_v2_distance0_s2026",
+          "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+          "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+          "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+          "seed": 2026,
+          "epochs": 15,
+          "samples_per_epoch": 60000,
+          "batch_per_rank": 8,
+          "world_size": 3,
+          "lr": 1e-05,
+          "lr_drop_epoch": 10,
+          "lr_drop_factor": 0.1,
+          "weight_decay": 0.0001,
+          "grad_clip_norm": 0.1,
+          "risk_relative_tolerance": 0.002,
+          "max_relative_correction": 0.5,
+          "trajectory_length": 3,
+          "trajectory_period": 50,
+          "correction_strengths": [
+            0.0,
+            0.5,
+            1.0
+          ],
+          "trajectory_risk_weight": 1.0,
+          "candidate_distance_weight": 0.0,
+          "num_workers": 3,
+          "amp": false,
+          "checkpoint_every_epoch": true,
+          "modules_enabled": [
+            "localization_risk",
+            "task_adaptive_selective_correction",
+            "closed_loop_acceptance"
+          ],
+          "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+          "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+          "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+        },
+        "source_hashes": {
+          "configs/full_method_v2_distance0.json": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+          "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+          "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+          "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+          "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+          "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+          "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+          "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd"
+        },
+        "completed_stages": [
+          "train"
+        ],
+        "observed_at": "2026-10-06T08:42:56.863177+00:00",
+        "wallclock_seconds": 91474.93132654199,
+        "current_stage": "train",
+        "argv": [
+          "/data/gb/conda/envs/rgbx-risk/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--nproc_per_node=3",
+          "--master_port=29530",
+          "/data/gb/rgbx-risk/scripts/train_full_method.py",
+          "--protocol",
+          "/data/gb/rgbx-risk/configs/full_method_v2_distance0.json"
+        ],
+        "worker_pid": 433956,
+        "last_stage_exit_code": 0,
+        "ended_at": "2026-10-06T08:42:56.865396+00:00"
+      }
+    },
+    "/data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json": {
+      "exists": true,
+      "value": {
+        "status": "PASS",
+        "role": "joint_rgbx_checkpoint_audit_not_tracking_benchmark",
+        "endpoint_kind": "full_method",
+        "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+        "checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+        "checkpoint_bytes": 477078419,
+        "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+        "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+        "strict_model_load": true,
+        "all_model_tensors_finite": true,
+        "observed_at": "2026-10-06T08:43:06.232881+00:00",
+        "formal_tracking_scores": "NOT_RUN",
+        "run_id": "xtrack_full_method_v2_distance0_s2026",
+        "epoch": 15,
+        "global_step": 37500,
+        "seed": 2026,
+        "controller_exit_code": 0,
+        "replicas_identical": true,
+        "frozen_tensors_unchanged": true,
+        "frozen_tensor_count": 244,
+        "optimizer_finite": true,
+        "always_used_witness_tensors": 24,
+        "run_sha256": "1a504c6b27c5c0eca2abeae42b31b9d84c7691a20566c99cd4bf14040b90990f",
+        "controller_sha256": "7110daa6236a0542fe0527c006cd3cd29322465d7ba94af7ba7a5dee2f205b12",
+        "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+        "training_provenance": "AUTHOR_RELEASE_PLUS_FULL_METHOD_FINETUNE_NOT_EQUAL_TOTAL_BUDGET"
+      }
+    },
+    "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/run.json": {
+      "exists": true,
+      "value": {
+        "status": "RUNNING_NOT_SCORED",
+        "identity": {
+          "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+          "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+          "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+          "terminal_audit_sha256": "6271f469e40a8507eff3aeae3c9d1f471b1e004fc2ec42a7fab140176c17e1bf"
+        },
+        "output_root": "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026",
+        "controller_pid": 2038303,
+        "started_at": "2026-10-06T08:46:57.871523+00:00",
+        "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+        "terminal_audit_sha256": "6271f469e40a8507eff3aeae3c9d1f471b1e004fc2ec42a7fab140176c17e1bf",
+        "poll_seconds": 240,
+        "completed_datasets": [],
+        "worker_processes": [
+          {
+            "dataset": "LasHeR",
+            "shard": 0,
+            "pid": 2038406
+          },
+          {
+            "dataset": "LasHeR",
+            "shard": 1,
+            "pid": 2038407
+          },
+          {
+            "dataset": "LasHeR",
+            "shard": 2,
+            "pid": 2038408
+          }
+        ],
+        "commands": [
+          {
+            "label": "cuda-witness",
+            "argv": [
+              "/home/gaob/conda/envs/rgbx-eval/bin/python",
+              "/data/gb/rgbx-risk/scripts/gpu_witness.py"
+            ],
+            "CUDA_VISIBLE_DEVICES": "0,1,2"
+          },
+          {
+            "label": "LasHeR",
+            "argv": [
+              "/home/gaob/conda/envs/rgbx-eval/bin/python",
+              "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+              "--config",
+              "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+              "--checkpoint",
+              "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+              "--expected-sha256",
+              "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+              "--terminal-audit",
+              "/data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json",
+              "--manifest",
+              "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+              "--output",
+              "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions",
+              "--seed",
+              "2026",
+              "--shard",
+              "0",
+              "--shards",
+              "3"
+            ],
+            "CUDA_VISIBLE_DEVICES": "0"
+          },
+          {
+            "label": "LasHeR",
+            "argv": [
+              "/home/gaob/conda/envs/rgbx-eval/bin/python",
+              "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+              "--config",
+              "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+              "--checkpoint",
+              "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+              "--expected-sha256",
+              "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+              "--terminal-audit",
+              "/data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json",
+              "--manifest",
+              "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+              "--output",
+              "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions",
+              "--seed",
+              "2026",
+              "--shard",
+              "1",
+              "--shards",
+              "3"
+            ],
+            "CUDA_VISIBLE_DEVICES": "1"
+          },
+          {
+            "label": "LasHeR",
+            "argv": [
+              "/home/gaob/conda/envs/rgbx-eval/bin/python",
+              "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+              "--config",
+              "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+              "--checkpoint",
+              "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+              "--expected-sha256",
+              "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+              "--terminal-audit",
+              "/data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json",
+              "--manifest",
+              "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+              "--output",
+              "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions",
+              "--seed",
+              "2026",
+              "--shard",
+              "2",
+              "--shards",
+              "3"
+            ],
+            "CUDA_VISIBLE_DEVICES": "2"
+          }
+        ],
+        "observed_at": "2026-10-06T09:35:04.568774+00:00",
+        "wallclock_seconds": 2886.697062752908,
+        "worker_exit_codes": [
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "/data/gb/rgbx-risk/reports/full_method_v2_distance0_complete_comparison.json": {
+      "exists": false,
+      "value": null
+    },
+    "/data/gb/rgbx-risk/reports/full_method_v2_distance0_paired_sequence_uncertainty.json": {
+      "exists": false,
+      "value": null
+    }
+  },
+  "controller_and_worker_ps": "    PID    PPID STAT     ELAPSED COMMAND\n 433952       1 Ss    1-02:18:41 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_full_method_v2_distance0_job.py\n2038303  433952 S          50:06 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/evaluate_existing_three.py --terminal-audit /data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json --output-root /home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026\n",
+  "worker_children_ps": "    PID    PPID STAT     ELAPSED COMMAND\n2038406 2038303 Rl         50:00 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar --expected-sha256 3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75 --terminal-audit /data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json --manifest /data/gb/rgbx-risk/reports/lasher_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions --seed 2026 --shard 0 --shards 3\n2038407 2038303 Rl         50:00 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar --expected-sha256 3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75 --terminal-audit /data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json --manifest /data/gb/rgbx-risk/reports/lasher_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions --seed 2026 --shard 1 --shards 3\n2038408 2038303 Rl         49:59 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar --expected-sha256 3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75 --terminal-audit /data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json --manifest /data/gb/rgbx-risk/reports/lasher_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions --seed 2026 --shard 2 --shards 3\n",
+  "checkpoint_files": [
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+      "bytes": 477078419
+    }
+  ],
+  "owned_retention_receipt": {
+    "status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
+    "retention_worker_pid": 573595,
+    "started_at": "2026-10-05T09:16:27.932993+00:00",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "poll_seconds": 240,
+    "policy": "During active training retain only the most recently completed named checkpoint. It includes model, optimizer and three-rank RNG. Retire older completed epochs and the byte-identical latest alias.",
+    "best_by_benchmark": "NOT_DETERMINED_NO_FORMAL_SCORES",
+    "after_training": "Retain the final checkpoint until complete same-protocol evaluation and diagnosis; then preserve only the best measured method checkpoint across completed candidates.",
+    "reference_and_initialization_inputs": "Outside this cleanup scope and retained.",
+    "deleted": [
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077203,
+        "sha256": "716f71305c9ceb6bdb2752f6f34860ea54f5964bcff70aa7eb3b026fb0ed283e"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0001.pth.tar",
+        "bytes": 477077203,
+        "sha256": "716f71305c9ceb6bdb2752f6f34860ea54f5964bcff70aa7eb3b026fb0ed283e"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077267,
+        "sha256": "e7ed198375d3f5df2e4f25bcd3a3cf485dfb9dcc6ec7980bae4a1e90e02adcc0"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0002.pth.tar",
+        "bytes": 477077267,
+        "sha256": "e7ed198375d3f5df2e4f25bcd3a3cf485dfb9dcc6ec7980bae4a1e90e02adcc0"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077395,
+        "sha256": "63effcc1dd5e0479bb08b8d77ab378c53302af94cb5fd797161c0c1bfa55c93f"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0003.pth.tar",
+        "bytes": 477077395,
+        "sha256": "63effcc1dd5e0479bb08b8d77ab378c53302af94cb5fd797161c0c1bfa55c93f"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077459,
+        "sha256": "539517403566861c0faf4a18419960d2234cbffcbd68db1d3665e64b8ba525b7"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0004.pth.tar",
+        "bytes": 477077459,
+        "sha256": "539517403566861c0faf4a18419960d2234cbffcbd68db1d3665e64b8ba525b7"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077523,
+        "sha256": "a69f5c93ac8601d2a50b9fc605796f7c18894c753ca690d41352493dd185bc57"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0005.pth.tar",
+        "bytes": 477077523,
+        "sha256": "a69f5c93ac8601d2a50b9fc605796f7c18894c753ca690d41352493dd185bc57"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077651,
+        "sha256": "1528bfc32ffc6bd779e2d34f673054336f71944cb8fd9745e68abfa3e0661c7b"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0006.pth.tar",
+        "bytes": 477077651,
+        "sha256": "1528bfc32ffc6bd779e2d34f673054336f71944cb8fd9745e68abfa3e0661c7b"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077779,
+        "sha256": "d3662785c4d232309183f3cc1ef56923a0cb62295967542b845d0b31dc9f463d"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0007.pth.tar",
+        "bytes": 477077779,
+        "sha256": "d3662785c4d232309183f3cc1ef56923a0cb62295967542b845d0b31dc9f463d"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077843,
+        "sha256": "862127c859472ccac18b673a07df9c2223e41dc2dc5ed0c2b178cd8866f50876"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0008.pth.tar",
+        "bytes": 477077843,
+        "sha256": "862127c859472ccac18b673a07df9c2223e41dc2dc5ed0c2b178cd8866f50876"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077971,
+        "sha256": "bfb8bc6c99ac5ed47856b952b2a4a8eb423463a4d858414888f2c3ea1ea43081"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0009.pth.tar",
+        "bytes": 477077971,
+        "sha256": "bfb8bc6c99ac5ed47856b952b2a4a8eb423463a4d858414888f2c3ea1ea43081"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477077971,
+        "sha256": "098c389484bfa1feed7f84c5a2b225890ec7dc18d17d04910c20ae7e71cee770"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0010.pth.tar",
+        "bytes": 477077971,
+        "sha256": "098c389484bfa1feed7f84c5a2b225890ec7dc18d17d04910c20ae7e71cee770"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477078099,
+        "sha256": "f3c8b4230d7e6a7229a69561e02070291171a9a8f9146606fc8de513fa38f6ae"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0011.pth.tar",
+        "bytes": 477078099,
+        "sha256": "f3c8b4230d7e6a7229a69561e02070291171a9a8f9146606fc8de513fa38f6ae"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477078163,
+        "sha256": "27e6ca86c093ea4ed7ae98ad5d370f9a70c8c1b074de9f5d4ed7c2f2c33b8c13"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0012.pth.tar",
+        "bytes": 477078163,
+        "sha256": "27e6ca86c093ea4ed7ae98ad5d370f9a70c8c1b074de9f5d4ed7c2f2c33b8c13"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477078291,
+        "sha256": "1db28c91b39f8d7efff3f94ba475f4ef902b3723c843a76c2d2fddb157ac74c0"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0013.pth.tar",
+        "bytes": 477078291,
+        "sha256": "1db28c91b39f8d7efff3f94ba475f4ef902b3723c843a76c2d2fddb157ac74c0"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477078355,
+        "sha256": "8bad87a411098d53314393286fe03de9050c94622c71978e29a41ba1780dd85a"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0014.pth.tar",
+        "bytes": 477078355,
+        "sha256": "8bad87a411098d53314393286fe03de9050c94622c71978e29a41ba1780dd85a"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/latest.pth.tar",
+        "bytes": 477078419,
+        "sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75"
+      }
+    ],
+    "removed_file_bytes": 13835256359,
+    "handled_completed_epoch": 15,
+    "training_parameters_modified": false,
+    "script_sha256": "2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102",
+    "retained_checkpoint": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+      "bytes": 477078419,
+      "sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75"
+    },
+    "alias_retired": true,
+    "observed_at": "2026-10-06T08:45:30.744711+00:00",
+    "ended_at": "2026-10-06T08:45:30.745634+00:00"
+  },
+  "train_log_tail": "b0a9902e36\", \"world_size\": 3, \"rank_pids\": [434003, 434004, 434005], \"output\": \"/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026\", \"modules_enabled\": [\"localization_risk\", \"task_adaptive_selective_correction\", \"closed_loop_acceptance\"], \"formal_tracking_scores\": \"NOT_RUN\", \"started_at\": \"2026-10-05T07:18:32.246709+00:00\", \"training_examples_per_update\": 24, \"check_examples_per_update\": 9, \"short_clip_source\": \"TRAIN_ONLY\", \"baseline_setting\": \"AUTHOR_RELEASE_FINETUNE\", \"attempt_id\": \"20261005T071832246746Z\", \"observed_at\": \"2026-10-06T08:42:49.391438+00:00\", \"epoch\": 15, \"step\": 2500, \"global_step\": 37500, \"latest\": {\"attempt_id\": \"20261005T071832246746Z\", \"epoch\": 15, \"step\": 2500, \"global_step\": 37500, \"before_localization\": [[0.8730083703994751, 0.8265458941459656], [0.13745275139808655, 0.3488117456436157], [0.45741185545921326, 0.6224554777145386]], \"candidate_localization\": [[0.8729841113090515, 0.8265487551689148], [0.1374482363462448, 0.34880149364471436], [0.45740199089050293, 0.6224797368049622]], \"accepted_localization\": [[0.8729841113090515, 0.8265487551689148], [0.1374482363462448, 0.34880149364471436], [0.45740199089050293, 0.6224797368049622]], \"candidate_risk\": [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0]], \"accepted_risk\": [[0.0, 0.0], [0.0, 0.0], [0.0, 0.0]], \"candidate_route_change\": [0.0, 0.0, 0.0], \"accepted_route_change\": [0.0, 0.0, 0.0], \"selected_correction_strength\": 0.0, \"trajectory_checked\": true, \"baseline_trajectory\": [1.565326452255249, 0.49884748458862305, 1.0505433082580566], \"accepted_trajectory\": [1.5653557777404785, 0.49886074662208557, 1.0505547523498535], \"training_clips\": [{\"dataset\": \"lasher\", \"sequence_id\": 813, \"frame_ids\": [269, 270, 271]}, {\"dataset\": \"depthtrack\", \"sequence_id\": 94, \"frame_ids\": [195, 196, 197]}, {\"dataset\": \"visevent\", \"sequence_id\": 444, \"frame_ids\": [2, 3, 4]}], \"global_task_counts\": [8, 8, 8], \"baseline_trajectory_details\": [{\"predicted_boxes\": [[343.016978263855, 262.0471477508545, 26.2488956451416, 40.198673248291016], [343.9564456939697, 262.56617736816406, 26.716442108154297, 40.08381652832031]], \"search_crop_boxes\": [[341.0, 263.0, 27.0, 37.0], [343.016978263855, 262.0471477508545, 26.2488956451416, 40.198673248291016]], \"target_outside_search\": [0.0, 0.0], \"uses_gt_only_for_initialization\": true}, {\"predicted_boxes\": [[210.358304977417, 281.1797571182251, 44.0628547668457, 19.626890182495117], [212.05648231506348, 275.8276586532593, 44.639522552490234, 23.228303909301758]], \"search_crop_boxes\": [[210.0, 279.0, 41.0, 19.0], [210.358304977417, 281.1797571182251, 44.0628547668457, 19.626890182495117]], \"target_outside_search\": [0.0, 0.0], \"uses_gt_only_for_initialization\": true}, {\"predicted_boxes\": [[202.31768798828125, 48.73201942443848, 40.02104568481445, 58.334747314453125], [202.04740715026855, 49.80240058898926, 44.15674591064453, 59.800994873046875]], \"search_crop_boxes\": [[206.8865966796875, 42.69889831542969, 33.886600494384766, 60.88100051879883], [202.31768798828125, 48.73201942443848, 40.02104568481445, 58.334747314453125]], \"target_outside_search\": [0.0, 0.0], \"uses_gt_only_for_initialization\": true}], \"candidate_trials\": [{\"alpha\": 0.0, \"cost\": 0.0, \"localization\": [[0.8729841113090515, 0.8265487551689148], [0.1374482363462448, 0.34880149364471436], [0.45740199089050293, 0.6224797368049622]], \"trajectory\": [1.5653557777404785, 0.49886074662208557, 1.0505547523498535], \"trajectory_details\": [{\"predicted_boxes\": [[343.01686000823975, 262.0475616455078, 26.249086380004883, 40.19795227050781], [343.9565782546997, 262.5664539337158, 26.716176986694336, 40.08366012573242]], \"search_crop_boxes\": [[341.0, 263.0, 27.0, 37.0], [343.01686000823975, 262.0475616455078, 26.249086380004883, 40.19795227050781]], \"target_outside_search\": [0.0, 0.0], \"uses_gt_only_for_initialization\": true}, {\"predicted_boxes\": [[210.3582878112793, 281.1798391342163, 44.062889099121094, 19.626794815063477], [212.05645942687988, 275.82766342163086, 44.6397819519043, 23.22834014892578]], \"search_crop_boxes\": [[210.0, 279.0, 41.0, 19.0], [210.3582878112793, 281.1798391342163, 44.062889099121094, 19.626794815063477]], \"target_outside_search\": [0.0, 0.0], \"uses_gt_only_for_initialization\": true}, {\"predicted_boxes\": [[202.31760597229004, 48.73193359375, 40.02154541015625, 58.335086822509766], [202.04747009277344, 49.802812576293945, 44.15671157836914, 59.80055236816406]], \"search_crop_boxes\": [[206.8865966796875, 42.69889831542969, 33.886600494384766, 60.88100051879883], [202.31760597229004, 48.73193359375, 40.02154541015625, 58.335086822509766]], \"target_outside_search\": [0.0, 0.0], \"uses_gt_only_for_initialization\": true}]}], \"pair_check_forward_examples\": 18, \"trajectory_model_forward_examples\": 12, \"routing_check_mode\": \"eval_no_noise_no_dropout_same_augmented_training_pairs\", \"optimizer_statistics_updates\": 1, \"weight_decay_applications\": 1, \"step_seconds\": 3.3627295239130035, \"peak_allocated_bytes\": 5770316288, \"joint_grad_norm_before_clip\": 2.7778143882751465, \"gradient_clip_coefficient\": 0.035999512574553735, \"correction_norm\": 0.0, \"active_risk_constraints\": 0}, \"training_examples\": 900000, \"check_examples\": 337500, \"wallclock_seconds\": 91457.03407153802, \"last_checkpoint\": \"/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar\", \"completed_epochs\": 15, \"replica_parameter_sha256\": \"26023db160c68a0c479c1275f613e80eb5e83ef47cace1859f4a66b68b970456\", \"ended_at\": \"2026-10-06T08:42:51.030287+00:00\", \"epoch_history\": [{\"epoch\": 1, \"steps\": 2500, \"means\": {\"total\": 0.9770754349470139, \"balance\": 0.0680006440371275, \"classification\": 15.100700662231445, \"iou\": 0.8238727973937988}}, {\"epoch\": 2, \"steps\": 2500, \"means\": {\"total\": 0.9706955296039581, \"balance\": 0.06743518979847431, \"classification\": 14.755293559646606, \"iou\": 0.8236947834968567}}, {\"epoch\": 3, \"steps\": 2500, \"means\": {\"total\": 0.9709795738697052, \"balance\": 0.06668742682337761, \"classification\": 14.493624071121216, \"iou\": 0.8230972840785981}}, {\"epoch\": 4, \"steps\": 2500, \"means\": {\"total\": 0.9698939035415649, \"balance\": 0.06582806108444929, \"classification\": 14.283640438079834, \"iou\": 0.8232871954917907}}, {\"epoch\": 5, \"steps\": 2500, \"means\": {\"total\": 0.9686690037727356, \"balance\": 0.06493156426846981, \"classification\": 14.099481594467163, \"iou\": 0.8233975374221801}}, {\"epoch\": 6, \"steps\": 2500, \"means\": {\"total\": 0.957884748840332, \"balance\": 0.0640529296591878, \"classification\": 13.925824100875854, \"iou\": 0.8244889672994614}}, {\"epoch\": 7, \"steps\": 2500, \"means\": {\"total\": 0.9463771695375442, \"balance\": 0.06266950074285269, \"classification\": 13.73886427307129, \"iou\": 0.8257515150308609}}, {\"epoch\": 8, \"steps\": 2500, \"means\": {\"total\": 0.9598888394355773, \"balance\": 0.061519209705293176, \"classification\": 13.564136151504517, \"iou\": 0.8232118816137314}}, {\"epoch\": 9, \"steps\": 2500, \"means\": {\"total\": 0.9496542783737183, \"balance\": 0.06017927648872137, \"classification\": 13.383926884460449, \"iou\": 0.8239279702425003}}, {\"epoch\": 10, \"steps\": 2500, \"means\": {\"total\": 0.9451841717243195, \"balance\": 0.058922078715264795, \"classification\": 13.207243867874146, \"iou\": 0.8250911972522735}}, {\"epoch\": 11, \"steps\": 2500, \"means\": {\"total\": 0.9402227275133133, \"balance\": 0.05810625940859318, \"classification\": 13.108359856796264, \"iou\": 0.8251931318044663}}, {\"epoch\": 12, \"steps\": 2500, \"means\": {\"total\": 0.9461104552030564, \"balance\": 0.05814824152588844, \"classification\": 13.10243194847107, \"iou\": 0.8241970225334168}}, {\"epoch\": 13, \"steps\": 2500, \"means\": {\"total\": 0.9468755697965622, \"balance\": 0.05766881828010082, \"classification\": 13.08397003364563, \"iou\": 0.8241665618896484}}, {\"epoch\": 14, \"steps\": 2500, \"means\": {\"total\": 0.9444360780477524, \"balance\": 0.057783730386197565, \"classification\": 13.070530986785888, \"iou\": 0.8246002446889877}}, {\"epoch\": 15, \"steps\": 2500, \"means\": {\"total\": 0.9477965210199356, \"balance\": 0.0576502860724926, \"classification\": 13.052996746826173, \"iou\": 0.8235588457107544}}]}\n",
+  "controller_log_tail": "",
+  "actual_remote_observations": 1,
+  "no_temperature_power_or_reference_inference_queries": true,
+  "goal_achieved": false,
+  "native_observer_ssh_exit_code": 0
+}

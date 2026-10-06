@@ -1,0 +1,1457 @@
+{
+  "status": "ACTUAL_COMPLETE37500_TRAINING_TELEMETRY_NOT_BENCHMARK",
+  "observed_at": "2026-10-06T09:43:05.428339+00:00",
+  "run_id": "xtrack_full_method_v2_distance0_s2026",
+  "source": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/updates.jsonl",
+    "bytes": 71067231,
+    "sha256": "6f0b2a110972c89740e7e96e2fda123135906bcb16606b0d0330005c45f70392",
+    "updates": 37500
+  },
+  "training_execution": {
+    "status": "EXITED",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "controller_pid": 433952,
+    "exit_code": 0,
+    "started_at": "2026-10-05T07:18:21.931580+00:00",
+    "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+    "poll_seconds": 240,
+    "protocol": {
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.0,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "source_hashes": {
+      "configs/full_method_v2_distance0.json": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+      "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+      "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+      "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+      "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+      "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+      "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+      "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd"
+    },
+    "completed_stages": [
+      "train"
+    ],
+    "observed_at": "2026-10-06T08:42:56.863177+00:00",
+    "wallclock_seconds": 91474.93132654199,
+    "current_stage": "train",
+    "argv": [
+      "/data/gb/conda/envs/rgbx-risk/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nproc_per_node=3",
+      "--master_port=29530",
+      "/data/gb/rgbx-risk/scripts/train_full_method.py",
+      "--protocol",
+      "/data/gb/rgbx-risk/configs/full_method_v2_distance0.json"
+    ],
+    "worker_pid": 433956,
+    "last_stage_exit_code": 0,
+    "ended_at": "2026-10-06T08:42:56.865396+00:00"
+  },
+  "endpoint_audit": {
+    "status": "PASS",
+    "role": "joint_rgbx_checkpoint_audit_not_tracking_benchmark",
+    "endpoint_kind": "full_method",
+    "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+    "checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+    "checkpoint_bytes": 477078419,
+    "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+    "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "strict_model_load": true,
+    "all_model_tensors_finite": true,
+    "observed_at": "2026-10-06T08:43:06.232881+00:00",
+    "formal_tracking_scores": "NOT_RUN",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "epoch": 15,
+    "global_step": 37500,
+    "seed": 2026,
+    "controller_exit_code": 0,
+    "replicas_identical": true,
+    "frozen_tensors_unchanged": true,
+    "frozen_tensor_count": 244,
+    "optimizer_finite": true,
+    "always_used_witness_tensors": 24,
+    "run_sha256": "1a504c6b27c5c0eca2abeae42b31b9d84c7691a20566c99cd4bf14040b90990f",
+    "controller_sha256": "7110daa6236a0542fe0527c006cd3cd29322465d7ba94af7ba7a5dee2f205b12",
+    "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "training_provenance": "AUTHOR_RELEASE_PLUS_FULL_METHOD_FINETUNE_NOT_EQUAL_TOTAL_BUDGET"
+  },
+  "source_hashes_verified_unchanged": {
+    "configs/full_method_v2_distance0.json": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "scripts/train_full_method.py": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+    "rgbx_method/__init__.py": "c6792805443155daa37134907848dc0d64142f860de9609ea131ee7a5a220bdc",
+    "rgbx_method/data.py": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+    "rgbx_method/losses.py": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+    "rgbx_method/optimizer.py": "a57dabd77f1877567b2eceb4f1b86d25df80f4e229fd4cfde3bf2a80d02b49f2",
+    "rgbx_method/risk.py": "3880d0fb7d628e15601e274c287a209705bdbc87c3e79270d0b4e6ba1cc44450",
+    "rgbx_method/trajectory.py": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd",
+    "scripts/run_full_method_v2_distance0_job.py": "bf3f9f9520c73d38aa0df439e367ea540b87fa6e0a41032c3e0e60fc5ad346df",
+    "scripts/audit_joint_endpoint_v2_distance0.py": "91b7ed4899ad9476575ed1676c246616bd7f4adaea6df4a3a785473d061befa4",
+    "scripts/audit_full_method_v2_distance0_first_epoch.py": "8da030b336d3384c3d77d4ad38ea75bb58e955c9b72e183548e98db6004f2737",
+    "scripts/retain_full_method_v2_distance0_checkpoints.py": "2504bcf3d1e3c98a36bb3903276b2a166b5ba9b0fdc94c2693064f002ff74102",
+    "scripts/xtrack_eval_parameters.py": "f8b0202382d500956244211b2978827149fa0208c83df13a122611725bd2f003",
+    "scripts/compare_complete_results.py": "cfc32d0149ce910c8de348f8156de6b4a7a941e5576bee6e8376d217f58a3200",
+    "scripts/analyze_paired_sequence_uncertainty.py": "dde5f9d499d9389e9fc01e3879af667063a90ee869aaba9e7455035cf96b5189"
+  },
+  "training_run": {
+    "status": "TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT",
+    "run_id": "xtrack_full_method_v2_distance0_s2026",
+    "protocol": {
+      "run_id": "xtrack_full_method_v2_distance0_s2026",
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "risk_relative_tolerance": 0.002,
+      "max_relative_correction": 0.5,
+      "trajectory_length": 3,
+      "trajectory_period": 50,
+      "correction_strengths": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "trajectory_risk_weight": 1.0,
+      "candidate_distance_weight": 0.0,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "modules_enabled": [
+        "localization_risk",
+        "task_adaptive_selective_correction",
+        "closed_loop_acceptance"
+      ],
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "risk_checks": "Each update uses independent augmented training-pool pairs, same evaluation routing conditions before/after; balance and router BCE contribute to the actual training displacement but not localization risk labels.",
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch."
+    },
+    "protocol_sha256": "f589b5081d409ae4524acd9d4aa2f195435bf8112a37a538aa2fef18a778d481",
+    "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+    "world_size": 3,
+    "rank_pids": [
+      434003,
+      434004,
+      434005
+    ],
+    "output": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026",
+    "modules_enabled": [
+      "localization_risk",
+      "task_adaptive_selective_correction",
+      "closed_loop_acceptance"
+    ],
+    "formal_tracking_scores": "NOT_RUN",
+    "started_at": "2026-10-05T07:18:32.246709+00:00",
+    "training_examples_per_update": 24,
+    "check_examples_per_update": 9,
+    "short_clip_source": "TRAIN_ONLY",
+    "baseline_setting": "AUTHOR_RELEASE_FINETUNE",
+    "attempt_id": "20261005T071832246746Z",
+    "observed_at": "2026-10-06T08:42:49.391438+00:00",
+    "epoch": 15,
+    "step": 2500,
+    "global_step": 37500,
+    "latest": {
+      "attempt_id": "20261005T071832246746Z",
+      "epoch": 15,
+      "step": 2500,
+      "global_step": 37500,
+      "before_localization": [
+        [
+          0.8730083703994751,
+          0.8265458941459656
+        ],
+        [
+          0.13745275139808655,
+          0.3488117456436157
+        ],
+        [
+          0.45741185545921326,
+          0.6224554777145386
+        ]
+      ],
+      "candidate_localization": [
+        [
+          0.8729841113090515,
+          0.8265487551689148
+        ],
+        [
+          0.1374482363462448,
+          0.34880149364471436
+        ],
+        [
+          0.45740199089050293,
+          0.6224797368049622
+        ]
+      ],
+      "accepted_localization": [
+        [
+          0.8729841113090515,
+          0.8265487551689148
+        ],
+        [
+          0.1374482363462448,
+          0.34880149364471436
+        ],
+        [
+          0.45740199089050293,
+          0.6224797368049622
+        ]
+      ],
+      "candidate_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "accepted_risk": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "candidate_route_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "accepted_route_change": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_correction_strength": 0.0,
+      "trajectory_checked": true,
+      "baseline_trajectory": [
+        1.565326452255249,
+        0.49884748458862305,
+        1.0505433082580566
+      ],
+      "accepted_trajectory": [
+        1.5653557777404785,
+        0.49886074662208557,
+        1.0505547523498535
+      ],
+      "training_clips": [
+        {
+          "dataset": "lasher",
+          "sequence_id": 813,
+          "frame_ids": [
+            269,
+            270,
+            271
+          ]
+        },
+        {
+          "dataset": "depthtrack",
+          "sequence_id": 94,
+          "frame_ids": [
+            195,
+            196,
+            197
+          ]
+        },
+        {
+          "dataset": "visevent",
+          "sequence_id": 444,
+          "frame_ids": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "baseline_trajectory_details": [
+        {
+          "predicted_boxes": [
+            [
+              343.016978263855,
+              262.0471477508545,
+              26.2488956451416,
+              40.198673248291016
+            ],
+            [
+              343.9564456939697,
+              262.56617736816406,
+              26.716442108154297,
+              40.08381652832031
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              341.0,
+              263.0,
+              27.0,
+              37.0
+            ],
+            [
+              343.016978263855,
+              262.0471477508545,
+              26.2488956451416,
+              40.198673248291016
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        },
+        {
+          "predicted_boxes": [
+            [
+              210.358304977417,
+              281.1797571182251,
+              44.0628547668457,
+              19.626890182495117
+            ],
+            [
+              212.05648231506348,
+              275.8276586532593,
+              44.639522552490234,
+              23.228303909301758
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              210.0,
+              279.0,
+              41.0,
+              19.0
+            ],
+            [
+              210.358304977417,
+              281.1797571182251,
+              44.0628547668457,
+              19.626890182495117
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        },
+        {
+          "predicted_boxes": [
+            [
+              202.31768798828125,
+              48.73201942443848,
+              40.02104568481445,
+              58.334747314453125
+            ],
+            [
+              202.04740715026855,
+              49.80240058898926,
+              44.15674591064453,
+              59.800994873046875
+            ]
+          ],
+          "search_crop_boxes": [
+            [
+              206.8865966796875,
+              42.69889831542969,
+              33.886600494384766,
+              60.88100051879883
+            ],
+            [
+              202.31768798828125,
+              48.73201942443848,
+              40.02104568481445,
+              58.334747314453125
+            ]
+          ],
+          "target_outside_search": [
+            0.0,
+            0.0
+          ],
+          "uses_gt_only_for_initialization": true
+        }
+      ],
+      "candidate_trials": [
+        {
+          "alpha": 0.0,
+          "cost": 0.0,
+          "localization": [
+            [
+              0.8729841113090515,
+              0.8265487551689148
+            ],
+            [
+              0.1374482363462448,
+              0.34880149364471436
+            ],
+            [
+              0.45740199089050293,
+              0.6224797368049622
+            ]
+          ],
+          "trajectory": [
+            1.5653557777404785,
+            0.49886074662208557,
+            1.0505547523498535
+          ],
+          "trajectory_details": [
+            {
+              "predicted_boxes": [
+                [
+                  343.01686000823975,
+                  262.0475616455078,
+                  26.249086380004883,
+                  40.19795227050781
+                ],
+                [
+                  343.9565782546997,
+                  262.5664539337158,
+                  26.716176986694336,
+                  40.08366012573242
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  341.0,
+                  263.0,
+                  27.0,
+                  37.0
+                ],
+                [
+                  343.01686000823975,
+                  262.0475616455078,
+                  26.249086380004883,
+                  40.19795227050781
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            },
+            {
+              "predicted_boxes": [
+                [
+                  210.3582878112793,
+                  281.1798391342163,
+                  44.062889099121094,
+                  19.626794815063477
+                ],
+                [
+                  212.05645942687988,
+                  275.82766342163086,
+                  44.6397819519043,
+                  23.22834014892578
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  210.0,
+                  279.0,
+                  41.0,
+                  19.0
+                ],
+                [
+                  210.3582878112793,
+                  281.1798391342163,
+                  44.062889099121094,
+                  19.626794815063477
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            },
+            {
+              "predicted_boxes": [
+                [
+                  202.31760597229004,
+                  48.73193359375,
+                  40.02154541015625,
+                  58.335086822509766
+                ],
+                [
+                  202.04747009277344,
+                  49.802812576293945,
+                  44.15671157836914,
+                  59.80055236816406
+                ]
+              ],
+              "search_crop_boxes": [
+                [
+                  206.8865966796875,
+                  42.69889831542969,
+                  33.886600494384766,
+                  60.88100051879883
+                ],
+                [
+                  202.31760597229004,
+                  48.73193359375,
+                  40.02154541015625,
+                  58.335086822509766
+                ]
+              ],
+              "target_outside_search": [
+                0.0,
+                0.0
+              ],
+              "uses_gt_only_for_initialization": true
+            }
+          ]
+        }
+      ],
+      "pair_check_forward_examples": 18,
+      "trajectory_model_forward_examples": 12,
+      "routing_check_mode": "eval_no_noise_no_dropout_same_augmented_training_pairs",
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "step_seconds": 3.3627295239130035,
+      "peak_allocated_bytes": 5770316288,
+      "joint_grad_norm_before_clip": 2.7778143882751465,
+      "gradient_clip_coefficient": 0.035999512574553735,
+      "correction_norm": 0.0,
+      "active_risk_constraints": 0
+    },
+    "training_examples": 900000,
+    "check_examples": 337500,
+    "wallclock_seconds": 91457.03407153802,
+    "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+    "completed_epochs": 15,
+    "replica_parameter_sha256": "26023db160c68a0c479c1275f613e80eb5e83ef47cace1859f4a66b68b970456",
+    "ended_at": "2026-10-06T08:42:51.030287+00:00",
+    "epoch_history": [
+      {
+        "epoch": 1,
+        "steps": 2500,
+        "means": {
+          "total": 0.9770754349470139,
+          "balance": 0.0680006440371275,
+          "classification": 15.100700662231445,
+          "iou": 0.8238727973937988
+        }
+      },
+      {
+        "epoch": 2,
+        "steps": 2500,
+        "means": {
+          "total": 0.9706955296039581,
+          "balance": 0.06743518979847431,
+          "classification": 14.755293559646606,
+          "iou": 0.8236947834968567
+        }
+      },
+      {
+        "epoch": 3,
+        "steps": 2500,
+        "means": {
+          "total": 0.9709795738697052,
+          "balance": 0.06668742682337761,
+          "classification": 14.493624071121216,
+          "iou": 0.8230972840785981
+        }
+      },
+      {
+        "epoch": 4,
+        "steps": 2500,
+        "means": {
+          "total": 0.9698939035415649,
+          "balance": 0.06582806108444929,
+          "classification": 14.283640438079834,
+          "iou": 0.8232871954917907
+        }
+      },
+      {
+        "epoch": 5,
+        "steps": 2500,
+        "means": {
+          "total": 0.9686690037727356,
+          "balance": 0.06493156426846981,
+          "classification": 14.099481594467163,
+          "iou": 0.8233975374221801
+        }
+      },
+      {
+        "epoch": 6,
+        "steps": 2500,
+        "means": {
+          "total": 0.957884748840332,
+          "balance": 0.0640529296591878,
+          "classification": 13.925824100875854,
+          "iou": 0.8244889672994614
+        }
+      },
+      {
+        "epoch": 7,
+        "steps": 2500,
+        "means": {
+          "total": 0.9463771695375442,
+          "balance": 0.06266950074285269,
+          "classification": 13.73886427307129,
+          "iou": 0.8257515150308609
+        }
+      },
+      {
+        "epoch": 8,
+        "steps": 2500,
+        "means": {
+          "total": 0.9598888394355773,
+          "balance": 0.061519209705293176,
+          "classification": 13.564136151504517,
+          "iou": 0.8232118816137314
+        }
+      },
+      {
+        "epoch": 9,
+        "steps": 2500,
+        "means": {
+          "total": 0.9496542783737183,
+          "balance": 0.06017927648872137,
+          "classification": 13.383926884460449,
+          "iou": 0.8239279702425003
+        }
+      },
+      {
+        "epoch": 10,
+        "steps": 2500,
+        "means": {
+          "total": 0.9451841717243195,
+          "balance": 0.058922078715264795,
+          "classification": 13.207243867874146,
+          "iou": 0.8250911972522735
+        }
+      },
+      {
+        "epoch": 11,
+        "steps": 2500,
+        "means": {
+          "total": 0.9402227275133133,
+          "balance": 0.05810625940859318,
+          "classification": 13.108359856796264,
+          "iou": 0.8251931318044663
+        }
+      },
+      {
+        "epoch": 12,
+        "steps": 2500,
+        "means": {
+          "total": 0.9461104552030564,
+          "balance": 0.05814824152588844,
+          "classification": 13.10243194847107,
+          "iou": 0.8241970225334168
+        }
+      },
+      {
+        "epoch": 13,
+        "steps": 2500,
+        "means": {
+          "total": 0.9468755697965622,
+          "balance": 0.05766881828010082,
+          "classification": 13.08397003364563,
+          "iou": 0.8241665618896484
+        }
+      },
+      {
+        "epoch": 14,
+        "steps": 2500,
+        "means": {
+          "total": 0.9444360780477524,
+          "balance": 0.057783730386197565,
+          "classification": 13.070530986785888,
+          "iou": 0.8246002446889877
+        }
+      },
+      {
+        "epoch": 15,
+        "steps": 2500,
+        "means": {
+          "total": 0.9477965210199356,
+          "balance": 0.0576502860724926,
+          "classification": 13.052996746826173,
+          "iou": 0.8235588457107544
+        }
+      }
+    ]
+  },
+  "totals": {
+    "updates": 37500,
+    "risk_events": 966,
+    "nonzero_corrections": 948,
+    "corrections_lowering_recorded_aggregate_risk": 948,
+    "corrections_eliminating_recorded_aggregate_risk": 460,
+    "accepted_remaining_risk_events": 506,
+    "trajectory_checks": 1699,
+    "no_local_risk_periodic_checks": 733,
+    "trajectory_only_positive_cost_events": 12,
+    "pair_check_forward_examples": 701082,
+    "trajectory_model_forward_examples": 31980,
+    "update_seconds": 90972.86431481712
+  },
+  "epoch_statistics": [
+    {
+      "epoch": 1,
+      "updates": 2500,
+      "risk_events": 109,
+      "nonzero_corrections": 106,
+      "corrections_lowering_recorded_aggregate_risk": 106,
+      "corrections_eliminating_recorded_aggregate_risk": 49,
+      "accepted_remaining_risk_events": 60,
+      "trajectory_checks": 154,
+      "no_local_risk_periodic_checks": 45,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 47943,
+      "trajectory_model_forward_examples": 3156,
+      "update_seconds": 6289.0425416379
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 93,
+      "nonzero_corrections": 92,
+      "corrections_lowering_recorded_aggregate_risk": 92,
+      "corrections_eliminating_recorded_aggregate_risk": 41,
+      "accepted_remaining_risk_events": 52,
+      "trajectory_checks": 142,
+      "no_local_risk_periodic_checks": 49,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47511,
+      "trajectory_model_forward_examples": 2820,
+      "update_seconds": 6114.060295428848
+    },
+    {
+      "epoch": 3,
+      "updates": 2500,
+      "risk_events": 95,
+      "nonzero_corrections": 94,
+      "corrections_lowering_recorded_aggregate_risk": 94,
+      "corrections_eliminating_recorded_aggregate_risk": 51,
+      "accepted_remaining_risk_events": 44,
+      "trajectory_checks": 145,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47565,
+      "trajectory_model_forward_examples": 2880,
+      "update_seconds": 6115.958610675065
+    },
+    {
+      "epoch": 4,
+      "updates": 2500,
+      "risk_events": 96,
+      "nonzero_corrections": 96,
+      "corrections_lowering_recorded_aggregate_risk": 96,
+      "corrections_eliminating_recorded_aggregate_risk": 44,
+      "accepted_remaining_risk_events": 52,
+      "trajectory_checks": 145,
+      "no_local_risk_periodic_checks": 49,
+      "trajectory_only_positive_cost_events": 2,
+      "pair_check_forward_examples": 47592,
+      "trajectory_model_forward_examples": 2892,
+      "update_seconds": 6071.01873684302
+    },
+    {
+      "epoch": 5,
+      "updates": 2500,
+      "risk_events": 91,
+      "nonzero_corrections": 85,
+      "corrections_lowering_recorded_aggregate_risk": 85,
+      "corrections_eliminating_recorded_aggregate_risk": 45,
+      "accepted_remaining_risk_events": 46,
+      "trajectory_checks": 139,
+      "no_local_risk_periodic_checks": 48,
+      "trajectory_only_positive_cost_events": 3,
+      "pair_check_forward_examples": 47457,
+      "trajectory_model_forward_examples": 2760,
+      "update_seconds": 6071.306553387665
+    },
+    {
+      "epoch": 6,
+      "updates": 2500,
+      "risk_events": 80,
+      "nonzero_corrections": 80,
+      "corrections_lowering_recorded_aggregate_risk": 80,
+      "corrections_eliminating_recorded_aggregate_risk": 37,
+      "accepted_remaining_risk_events": 43,
+      "trajectory_checks": 128,
+      "no_local_risk_periodic_checks": 48,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47160,
+      "trajectory_model_forward_examples": 2496,
+      "update_seconds": 6042.429155233898
+    },
+    {
+      "epoch": 7,
+      "updates": 2500,
+      "risk_events": 83,
+      "nonzero_corrections": 83,
+      "corrections_lowering_recorded_aggregate_risk": 83,
+      "corrections_eliminating_recorded_aggregate_risk": 45,
+      "accepted_remaining_risk_events": 38,
+      "trajectory_checks": 132,
+      "no_local_risk_periodic_checks": 49,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47241,
+      "trajectory_model_forward_examples": 2580,
+      "update_seconds": 6081.432661524508
+    },
+    {
+      "epoch": 8,
+      "updates": 2500,
+      "risk_events": 80,
+      "nonzero_corrections": 80,
+      "corrections_lowering_recorded_aggregate_risk": 80,
+      "corrections_eliminating_recorded_aggregate_risk": 35,
+      "accepted_remaining_risk_events": 45,
+      "trajectory_checks": 127,
+      "no_local_risk_periodic_checks": 47,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47160,
+      "trajectory_model_forward_examples": 2484,
+      "update_seconds": 6040.27366853389
+    },
+    {
+      "epoch": 9,
+      "updates": 2500,
+      "risk_events": 92,
+      "nonzero_corrections": 89,
+      "corrections_lowering_recorded_aggregate_risk": 89,
+      "corrections_eliminating_recorded_aggregate_risk": 47,
+      "accepted_remaining_risk_events": 45,
+      "trajectory_checks": 142,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47484,
+      "trajectory_model_forward_examples": 2808,
+      "update_seconds": 6064.389362404239
+    },
+    {
+      "epoch": 10,
+      "updates": 2500,
+      "risk_events": 111,
+      "nonzero_corrections": 107,
+      "corrections_lowering_recorded_aggregate_risk": 107,
+      "corrections_eliminating_recorded_aggregate_risk": 51,
+      "accepted_remaining_risk_events": 60,
+      "trajectory_checks": 159,
+      "no_local_risk_periodic_checks": 48,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47997,
+      "trajectory_model_forward_examples": 3240,
+      "update_seconds": 6067.539825962507
+    },
+    {
+      "epoch": 11,
+      "updates": 2500,
+      "risk_events": 8,
+      "nonzero_corrections": 8,
+      "corrections_lowering_recorded_aggregate_risk": 8,
+      "corrections_eliminating_recorded_aggregate_risk": 2,
+      "accepted_remaining_risk_events": 6,
+      "trajectory_checks": 58,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45216,
+      "trajectory_model_forward_examples": 792,
+      "update_seconds": 5999.756466247025
+    },
+    {
+      "epoch": 12,
+      "updates": 2500,
+      "risk_events": 6,
+      "nonzero_corrections": 6,
+      "corrections_lowering_recorded_aggregate_risk": 6,
+      "corrections_eliminating_recorded_aggregate_risk": 2,
+      "accepted_remaining_risk_events": 4,
+      "trajectory_checks": 56,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45162,
+      "trajectory_model_forward_examples": 744,
+      "update_seconds": 6017.998159268522
+    },
+    {
+      "epoch": 13,
+      "updates": 2500,
+      "risk_events": 5,
+      "nonzero_corrections": 5,
+      "corrections_lowering_recorded_aggregate_risk": 5,
+      "corrections_eliminating_recorded_aggregate_risk": 1,
+      "accepted_remaining_risk_events": 4,
+      "trajectory_checks": 55,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45135,
+      "trajectory_model_forward_examples": 720,
+      "update_seconds": 6006.234546488966
+    },
+    {
+      "epoch": 14,
+      "updates": 2500,
+      "risk_events": 13,
+      "nonzero_corrections": 13,
+      "corrections_lowering_recorded_aggregate_risk": 13,
+      "corrections_eliminating_recorded_aggregate_risk": 8,
+      "accepted_remaining_risk_events": 5,
+      "trajectory_checks": 63,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45351,
+      "trajectory_model_forward_examples": 912,
+      "update_seconds": 5981.518201617408
+    },
+    {
+      "epoch": 15,
+      "updates": 2500,
+      "risk_events": 4,
+      "nonzero_corrections": 4,
+      "corrections_lowering_recorded_aggregate_risk": 4,
+      "corrections_eliminating_recorded_aggregate_risk": 2,
+      "accepted_remaining_risk_events": 2,
+      "trajectory_checks": 54,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45108,
+      "trajectory_model_forward_examples": 696,
+      "update_seconds": 6009.9055295636645
+    }
+  ],
+  "selected_strength_counts": {
+    "0.0": 36552,
+    "0.5": 91,
+    "1.0": 857
+  },
+  "candidate_risk_component_occurrences": [
+    [
+      196,
+      87
+    ],
+    [
+      360,
+      91
+    ],
+    [
+      232,
+      83
+    ]
+  ],
+  "accepted_risk_component_occurrences": [
+    [
+      106,
+      46
+    ],
+    [
+      161,
+      47
+    ],
+    [
+      126,
+      44
+    ]
+  ],
+  "newly_harmed_localization_components_after_selection": 2,
+  "normalization_floor_activations": 0,
+  "rank0_peak_allocated_bytes": 5770316288,
+  "mean_step_seconds": 2.425943048395123,
+  "task_route_risk_associations": [
+    {
+      "task": "RGB-T",
+      "risk_and_route_change": 222,
+      "risk_without_route_change": 39,
+      "route_change_without_risk": 9137,
+      "neither": 28102,
+      "mean_candidate_route_change_fraction": 0.004235185489058495,
+      "mean_accepted_route_change_fraction": 0.004235185489058495
+    },
+    {
+      "task": "RGB-D",
+      "risk_and_route_change": 332,
+      "risk_without_route_change": 94,
+      "route_change_without_risk": 8347,
+      "neither": 28727,
+      "mean_candidate_route_change_fraction": 0.0038644447238743306,
+      "mean_accepted_route_change_fraction": 0.00386222250148654
+    },
+    {
+      "task": "RGB-Event",
+      "risk_and_route_change": 245,
+      "risk_without_route_change": 45,
+      "route_change_without_risk": 9930,
+      "neither": 27280,
+      "mean_candidate_route_change_fraction": 0.004730741078704596,
+      "mean_accepted_route_change_fraction": 0.004730000337858995
+    }
+  ],
+  "trajectory_only_events": [
+    {
+      "global_step": 4050,
+      "epoch": 2,
+      "recorded_cost": 0.0013577714562416077,
+      "python_recomputed_mean_risk": 0.0013577715448344163,
+      "baseline_trajectory": [
+        0.7779902219772339,
+        0.2182319611310959,
+        0.4263700842857361
+      ],
+      "candidate_trajectory": [
+        0.7827152013778687,
+        0.21825680136680603,
+        0.42636653780937195
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 6450,
+      "epoch": 3,
+      "recorded_cost": 0.00010874712461372837,
+      "python_recomputed_mean_risk": 0.00010874718756485402,
+      "baseline_trajectory": [
+        0.3579823970794678,
+        0.10831718146800995,
+        0.43463826179504395
+      ],
+      "candidate_trajectory": [
+        0.3580014109611511,
+        0.10829822719097137,
+        0.4356493353843689
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 8250,
+      "epoch": 4,
+      "recorded_cost": 0.0003291480243206024,
+      "python_recomputed_mean_risk": 0.0003291480590789893,
+      "baseline_trajectory": [
+        0.33016103506088257,
+        0.1872609555721283,
+        0.3701867461204529
+      ],
+      "candidate_trajectory": [
+        0.33114737272262573,
+        0.18720975518226624,
+        0.3700592517852783
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 8350,
+      "epoch": 4,
+      "recorded_cost": 0.0007494310266338289,
+      "python_recomputed_mean_risk": 0.0007494310374568845,
+      "baseline_trajectory": [
+        0.09231558442115784,
+        0.2652294635772705,
+        0.12612861394882202
+      ],
+      "candidate_trajectory": [
+        0.09270776808261871,
+        0.26525193452835083,
+        0.12621355056762695
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 10150,
+      "epoch": 5,
+      "recorded_cost": 0.02266891673207283,
+      "python_recomputed_mean_risk": 0.022668915551098175,
+      "baseline_trajectory": [
+        0.31855666637420654,
+        0.11355900019407272,
+        0.08606275916099548
+      ],
+      "candidate_trajectory": [
+        0.31854546070098877,
+        0.1215088963508606,
+        0.08607505261898041
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 10200,
+      "epoch": 5,
+      "recorded_cost": 0.004550478886812925,
+      "python_recomputed_mean_risk": 0.004550478654178355,
+      "baseline_trajectory": [
+        0.3201965391635895,
+        0.1688103824853897,
+        0.19629642367362976
+      ],
+      "candidate_trajectory": [
+        0.320158988237381,
+        0.17145250737667084,
+        0.19625328481197357
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 10800,
+      "epoch": 5,
+      "recorded_cost": 0.0005450274329632521,
+      "python_recomputed_mean_risk": 0.0005450274638786854,
+      "baseline_trajectory": [
+        0.5183272957801819,
+        0.13453662395477295,
+        0.7746546268463135
+      ],
+      "candidate_trajectory": [
+        0.5202114582061768,
+        0.13454632461071014,
+        0.7746334075927734
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 13600,
+      "epoch": 6,
+      "recorded_cost": 0.0008305065566673875,
+      "python_recomputed_mean_risk": 0.000830506527020285,
+      "baseline_trajectory": [
+        1.2864408493041992,
+        0.12301191687583923,
+        0.14312922954559326
+      ],
+      "candidate_trajectory": [
+        1.2922189235687256,
+        0.12296228855848312,
+        0.14308059215545654
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 15600,
+      "epoch": 7,
+      "recorded_cost": 0.0003082601760979742,
+      "python_recomputed_mean_risk": 0.00030826020115453707,
+      "baseline_trajectory": [
+        0.21616002917289734,
+        0.08334831893444061,
+        0.2848382890224457
+      ],
+      "candidate_trajectory": [
+        0.21614310145378113,
+        0.08359209448099136,
+        0.284851998090744
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 18300,
+      "epoch": 8,
+      "recorded_cost": 8.242655167123303e-05,
+      "python_recomputed_mean_risk": 8.242659516076256e-05,
+      "baseline_trajectory": [
+        0.6891124844551086,
+        1.330765962600708,
+        0.8532015085220337
+      ],
+      "candidate_trajectory": [
+        0.6897610425949097,
+        1.3337565660476685,
+        0.8533511161804199
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 21700,
+      "epoch": 9,
+      "recorded_cost": 0.0025820410810410976,
+      "python_recomputed_mean_risk": 0.0025820410640637202,
+      "baseline_trajectory": [
+        0.2692503035068512,
+        0.303511381149292,
+        0.3925953507423401
+      ],
+      "candidate_trajectory": [
+        0.26919859647750854,
+        0.3064694404602051,
+        0.392589271068573
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    },
+    {
+      "global_step": 23850,
+      "epoch": 10,
+      "recorded_cost": 0.00011471216566860676,
+      "python_recomputed_mean_risk": 0.00011471218446078811,
+      "baseline_trajectory": [
+        0.1890697181224823,
+        0.37039026618003845,
+        0.4147641062736511
+      ],
+      "candidate_trajectory": [
+        0.1895129233598709,
+        0.3704456686973572,
+        0.41474732756614685
+      ],
+      "candidate_strengths": [
+        0.0
+      ],
+      "selected_strength": 0.0
+    }
+  ],
+  "evaluation_snapshot": {
+    "status": "RUNNING_NOT_SCORED",
+    "identity": {
+      "checkpoint": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+      "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+      "checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+      "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+      "terminal_audit_sha256": "6271f469e40a8507eff3aeae3c9d1f471b1e004fc2ec42a7fab140176c17e1bf"
+    },
+    "output_root": "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026",
+    "controller_pid": 2038303,
+    "started_at": "2026-10-06T08:46:57.871523+00:00",
+    "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+    "terminal_audit_sha256": "6271f469e40a8507eff3aeae3c9d1f471b1e004fc2ec42a7fab140176c17e1bf",
+    "poll_seconds": 240,
+    "completed_datasets": [],
+    "worker_processes": [
+      {
+        "dataset": "LasHeR",
+        "shard": 0,
+        "pid": 2038406
+      },
+      {
+        "dataset": "LasHeR",
+        "shard": 1,
+        "pid": 2038407
+      },
+      {
+        "dataset": "LasHeR",
+        "shard": 2,
+        "pid": 2038408
+      }
+    ],
+    "commands": [
+      {
+        "label": "cuda-witness",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/gpu_witness.py"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0,1,2"
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "0",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "1",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/full_method_v2_distance0_endpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026/LasHeR/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "2",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "2"
+      }
+    ],
+    "observed_at": "2026-10-06T09:43:04.770852+00:00",
+    "wallclock_seconds": 3366.8991458859527,
+    "worker_exit_codes": [
+      null,
+      null,
+      null
+    ]
+  },
+  "lasher_completed_work_for_eta": [
+    {
+      "shard": 0,
+      "assigned_sequences": 82,
+      "completed_sequences": 21,
+      "assigned_frame_pairs": 73377,
+      "completed_frame_pairs": 9337,
+      "completed_elapsed_seconds": 1963.5567754682852
+    },
+    {
+      "shard": 1,
+      "assigned_sequences": 82,
+      "completed_sequences": 19,
+      "assigned_frame_pairs": 69596,
+      "completed_frame_pairs": 13133,
+      "completed_elapsed_seconds": 2755.8032285023946
+    },
+    {
+      "shard": 2,
+      "assigned_sequences": 81,
+      "completed_sequences": 22,
+      "assigned_frame_pairs": 77730,
+      "completed_frame_pairs": 14707,
+      "completed_elapsed_seconds": 3215.3754646463785
+    }
+  ],
+  "limitations": [
+    "Training-pool task-mean risk is not benchmark performance or sample-level capability preservation.",
+    "Route-risk co-occurrence does not prove causal attribution.",
+    "Alpha0 applies the full adaptive update, not a rejected or zero update.",
+    "Checking trajectory-only risk still offers no alternative without local risk.",
+    "Main/check pair counts and trajectory forward calls are different units, not distinct images or FLOPs.",
+    "The peak is rank0 allocated memory, not the maximum of all three GPUs.",
+    "Completed sequence timing forecasts cannot prove future progress or an evaluation endpoint."
+  ],
+  "goal_achieved": false,
+  "collection_ssh_exit_code": 0,
+  "analysis_program_source": "\nimport collections, datetime, hashlib, json, math\nfrom pathlib import Path\n\nproject = Path('/data/gb/rgbx-risk')\nroot = Path('/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026')\neval_root = Path('/home/gaob/rgbx-eval-results/xtrack_full_method_v2_distance0_s2026')\nrun = json.loads((root / 'run.json').read_text())\nexit_path = root.with_name(root.name + '_controller') / 'training_exit.json'\nexecution = json.loads(exit_path.read_text())\naudit_path = project / 'reports/full_method_v2_distance0_endpoint_audit.json'\naudit = json.loads(audit_path.read_text())\nprotocol = json.loads((project / 'configs/full_method_v2_distance0.json').read_text())\nsealed = json.loads((project / 'reports/full_method_v2_distance0_code_review.json').read_text())['source_hashes']\nassert all(hashlib.sha256((project / name).read_bytes()).hexdigest() == digest for name, digest in sealed.items())\nassert run['status'] == 'TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT'\nassert run['global_step'] == 37500 and run['completed_epochs'] == 15 and run['training_examples'] == 900000\nassert execution['exit_code'] == 0 and audit['status'] == 'PASS' and audit['global_step'] == 37500\nassert protocol['candidate_distance_weight'] == 0 and run['protocol'] == protocol\nassert audit['checkpoint_sha256'] == '3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75'\n\ndef flat(values):\n    return [value for task in values for value in task]\n\ndef positive(values):\n    return any(value > 0 for value in flat(values))\n\ndef risk(before, after):\n    if isinstance(before[0], list):\n        before, after = flat(before), flat(after)\n    return sum(max((b-a)/max(abs(a), 1e-8)-protocol['risk_relative_tolerance'], 0.)\n               for a,b in zip(before,after))/len(before)\n\nepoch_stats = [dict(epoch=epoch, updates=0, risk_events=0, nonzero_corrections=0,\n    corrections_lowering_recorded_aggregate_risk=0, corrections_eliminating_recorded_aggregate_risk=0,\n    accepted_remaining_risk_events=0, trajectory_checks=0, no_local_risk_periodic_checks=0,\n    trajectory_only_positive_cost_events=0, pair_check_forward_examples=0,\n    trajectory_model_forward_examples=0, update_seconds=0.) for epoch in range(1,16)]\nstrengths = collections.Counter()\ncandidate_components, accepted_components = [[0,0] for _ in range(3)], [[0,0] for _ in range(3)]\ntasks = [dict(task=name, risk_and_route_change=0, risk_without_route_change=0,\n    route_change_without_risk=0, neither=0, candidate_route_fraction_sum=0.,\n    accepted_route_fraction_sum=0.) for name in ['RGB-T','RGB-D','RGB-Event']]\ntrajectory_only = []\nnewly_harmed_components = 0\nnormalization_floor_activations = 0\npeak = 0\ndigest = hashlib.sha256()\nraw_bytes = 0\nwith (root / 'updates.jsonl').open('rb') as stream:\n    for index, line in enumerate(stream,1):\n        digest.update(line)\n        raw_bytes += len(line)\n        row = json.loads(line)\n        assert row['global_step'] == index and row['epoch'] == (index-1)//2500+1\n        assert row['attempt_id'] == run['attempt_id'] and row['global_task_counts'] == [8,8,8]\n        assert row['optimizer_statistics_updates'] == row['weight_decay_applications'] == 1\n        assert all(math.isfinite(v) for name in ['before_localization','candidate_localization',\n            'accepted_localization','candidate_risk','accepted_risk'] for v in flat(row[name]))\n        assert math.isfinite(row['step_seconds']) and row['step_seconds'] > 0\n        assert math.isfinite(row['joint_grad_norm_before_clip'])\n        assert min(row['candidate_trials'], key=lambda trial:trial['cost'])['alpha'] == row['selected_correction_strength']\n        stat = epoch_stats[row['epoch']-1]\n        has_risk = positive(row['candidate_risk'])\n        adopted = row['selected_correction_strength'] != 0\n        assert has_risk == bool(row['active_risk_constraints'])\n        stat['updates'] += 1\n        stat['risk_events'] += has_risk\n        stat['nonzero_corrections'] += adopted\n        stat['corrections_lowering_recorded_aggregate_risk'] += adopted and sum(flat(row['accepted_risk'])) < sum(flat(row['candidate_risk']))\n        stat['corrections_eliminating_recorded_aggregate_risk'] += adopted and not positive(row['accepted_risk'])\n        stat['accepted_remaining_risk_events'] += positive(row['accepted_risk'])\n        stat['trajectory_checks'] += row['trajectory_checked']\n        stat['pair_check_forward_examples'] += row['pair_check_forward_examples']\n        stat['trajectory_model_forward_examples'] += row['trajectory_model_forward_examples']\n        stat['update_seconds'] += row['step_seconds']\n        strengths[str(row['selected_correction_strength'])] += 1\n        peak = max(peak,row['peak_allocated_bytes'])\n        if row['trajectory_checked'] and not has_risk:\n            stat['no_local_risk_periodic_checks'] += 1\n            assert len(row['candidate_trials']) == 1 and row['candidate_trials'][0]['alpha'] == 0\n            if row['candidate_trials'][0]['cost'] > 0:\n                stat['trajectory_only_positive_cost_events'] += 1\n                trajectory_only.append(dict(global_step=index, epoch=row['epoch'],\n                    recorded_cost=row['candidate_trials'][0]['cost'],\n                    python_recomputed_mean_risk=risk(row['baseline_trajectory'],row['candidate_trials'][0]['trajectory']),\n                    baseline_trajectory=row['baseline_trajectory'], candidate_trajectory=row['candidate_trials'][0]['trajectory'],\n                    candidate_strengths=[0.], selected_strength=row['selected_correction_strength']))\n        for m,task in enumerate(tasks):\n            changed = row['candidate_route_change'][m] > 0\n            task_risk = any(v > 0 for v in row['candidate_risk'][m])\n            task['risk_and_route_change'] += changed and task_risk\n            task['risk_without_route_change'] += not changed and task_risk\n            task['route_change_without_risk'] += changed and not task_risk\n            task['neither'] += not changed and not task_risk\n            task['candidate_route_fraction_sum'] += row['candidate_route_change'][m]\n            task['accepted_route_fraction_sum'] += row['accepted_route_change'][m]\n            for k in range(2):\n                c,a = row['candidate_risk'][m][k],row['accepted_risk'][m][k]\n                assert c >= 0 and a >= 0\n                candidate_components[m][k] += c > 0\n                accepted_components[m][k] += a > 0\n                newly_harmed_components += c == 0 and a > 0\n                normalization_floor_activations += abs(row['before_localization'][m][k]) < 1e-8\nassert index == 37500 and all(stat['updates'] == 2500 for stat in epoch_stats)\ntotals = {key:sum(stat[key] for stat in epoch_stats) for key in epoch_stats[0] if key != 'epoch'}\nfor task in tasks:\n    assert sum(task[key] for key in ['risk_and_route_change','risk_without_route_change','route_change_without_risk','neither']) == 37500\n    task['mean_candidate_route_change_fraction'] = task.pop('candidate_route_fraction_sum')/37500\n    task['mean_accepted_route_change_fraction'] = task.pop('accepted_route_fraction_sum')/37500\n\nmanifest = json.loads((project / 'reports/lasher_eval_manifest.json').read_text())\neval_run = json.loads((eval_root / 'run.json').read_text())\nshard_work = []\nfor shard in range(3):\n    assigned = manifest['sequences'][shard::3]\n    finished = []\n    for sequence in assigned:\n        path = eval_root / 'LasHeR/predictions' / (sequence['name']+'.json')\n        if path.exists():\n            item = json.loads(path.read_text())\n            assert item['checkpoint_sha256'] == audit['checkpoint_sha256']\n            finished.append(item)\n    shard_work.append(dict(shard=shard,assigned_sequences=len(assigned),completed_sequences=len(finished),\n        assigned_frame_pairs=sum(len(sequence['frames']) for sequence in assigned),\n        completed_frame_pairs=sum(item['frame_count'] for item in finished),\n        completed_elapsed_seconds=sum(item['elapsed_seconds'] for item in finished)))\n\nvalue = dict(status='ACTUAL_COMPLETE37500_TRAINING_TELEMETRY_NOT_BENCHMARK',\n    observed_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),run_id=root.name,\n    source=dict(path=str(root/'updates.jsonl'),bytes=raw_bytes,sha256=digest.hexdigest(),updates=index),\n    training_execution=execution,endpoint_audit=audit,source_hashes_verified_unchanged=sealed,\n    training_run=run,totals=totals,epoch_statistics=epoch_stats,selected_strength_counts=dict(strengths),\n    candidate_risk_component_occurrences=candidate_components,accepted_risk_component_occurrences=accepted_components,\n    newly_harmed_localization_components_after_selection=newly_harmed_components,\n    normalization_floor_activations=normalization_floor_activations,\n    rank0_peak_allocated_bytes=peak,mean_step_seconds=totals['update_seconds']/37500,\n    task_route_risk_associations=tasks,trajectory_only_events=trajectory_only,\n    evaluation_snapshot=eval_run,lasher_completed_work_for_eta=shard_work,\n    limitations=['Training-pool task-mean risk is not benchmark performance or sample-level capability preservation.',\n        'Route-risk co-occurrence does not prove causal attribution.',\n        'Alpha0 applies the full adaptive update, not a rejected or zero update.',\n        'Checking trajectory-only risk still offers no alternative without local risk.',\n        'Main/check pair counts and trajectory forward calls are different units, not distinct images or FLOPs.',\n        'The peak is rank0 allocated memory, not the maximum of all three GPUs.',\n        'Completed sequence timing forecasts cannot prove future progress or an evaluation endpoint.'],goal_achieved=False)\nprint(json.dumps(value))\n",
+  "analysis_program_sha256": "5be1ad33ab6e50746e5e9e5e2472334d58f346296c52781ffbb37b56d5338046"
+}

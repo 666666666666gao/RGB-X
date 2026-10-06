@@ -1,0 +1,16 @@
+{
+  "status": "PRECOMMIT_RAW_BYTE_HASH_CHECK_FAILED_CORRECTED_BEFORE_PUBLICATION",
+  "recorded_at": "2026-10-06T09:48:51.063460+00:00",
+  "actual_command_exit_code": 1,
+  "tool_chunk": "f5a1e9",
+  "failed_stage": "staged_raw_byte_hash_check",
+  "github_commits": 0,
+  "remote_mutations": 0,
+  "original_file": "reports/full_method_v2_distance0_training_endpoint_observation_20261006.json",
+  "original_raw_sha256": "a6d780810c27a9c45ae32883c55c04d0af8b8045be3db7a0a1a93b84aed7eeb5",
+  "git_normalized_sha256": "151ceb1ac25b21462b9285fe94d8bc6c4f90957576c867fa9375e45790b3784f",
+  "raw_crlf_count": 1122,
+  "correction": "Exact-file -text whitespace=cr-at-eol; preserve actual observation bytes; restage only owned publication.",
+  "new_gpu_jobs": 0,
+  "training_or_evaluation_restarts": 0
+}
