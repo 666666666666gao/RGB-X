@@ -1,0 +1,199 @@
+{
+  "status": "LOCAL_STATIC_SOURCE_FACTS_AND_ACCEPTED_PRIORITY_NOT_RUNTIME_OR_CAUSAL_PROOF",
+  "recorded_at": "2026-10-06T23:53:21.394352+08:00",
+  "base_commit": "7e47bdaade85143db0bbd1d1a69020fc6a978aee",
+  "source_facts": {
+    "scripts/train_full_method.py": {
+      "sha256": "e1a060529e515318eac361d9e5c89f60ea3b7f381a39234cb6c5c0e946071482",
+      "excerpts": [
+        {
+          "first_line": 125,
+          "last_line": 133,
+          "text": "        for step, (training_batch, check_batch) in enumerate(zip(*loaders), 1):\n            tick = time.perf_counter()\n            global_step += 1\n            training_batch, check_batch = training_batch.to(device), check_batch.to(device)\n            training_batch['epoch'] = check_batch['epoch'] = epoch\n            assert check_batch['dataset'] == ['lasher', 'depthtrack', 'visevent']\n            model.train()\n            actor.fix_bns()\n            prediction = actor.forward_pass(training_batch)"
+        },
+        {
+          "first_line": 153,
+          "last_line": 175,
+          "text": "            model.eval()\n            with torch.no_grad():\n                _, before_local, _, before_routes, _ = components(actor.forward_pass(check_batch), check_batch, cfg)\n                before = global_mean(before_local)\n                optimizer.assign(base + candidate)\n                _, after_local, _, after_routes, _ = components(actor.forward_pass(check_batch), check_batch, cfg)\n                after = global_mean(after_local)\n            risk, scale = localization_risk(before, after, protocol['risk_relative_tolerance'])\n            active_risks = torch.nonzero(risk > 0, as_tuple=False)\n            corrected = candidate\n            correction_stats = dict(correction_norm=0., active_risk_constraints=0)\n            if len(active_risks):\n                _, objectives, _, _, _ = components(actor.forward_pass(check_batch), check_batch, cfg)\n                risk_gradients = []\n                for number, (task, target) in enumerate(active_risks.tolist()):\n                    values = torch.autograd.grad(objectives[task, target] / world, optimizer.parameters,\n                                                retain_graph=number + 1 < len(active_risks), allow_unused=True)\n                    flat = flatten_gradients(values, optimizer.parameters)\n                    dist.all_reduce(flat)\n                    risk_gradients.append(flat)\n                excess = (after - before - protocol['risk_relative_tolerance'] * scale)[risk > 0]\n                corrected, correction_stats = correct_displacement(candidate, torch.stack(risk_gradients), excess,\n                                                                     shared_mask, protocol['max_relative_correction'])"
+        },
+        {
+          "first_line": 191,
+          "last_line": 202,
+          "text": "            strengths = protocol['correction_strengths'] if len(active_risks) else [0.0]\n            choices = []\n            for alpha in strengths:\n                displacement = candidate + alpha * (corrected - candidate)\n                optimizer.assign(base + displacement)\n                with torch.no_grad():\n                    if alpha == 0:\n                        value, routes = after, after_routes\n                    else:\n                        _, local_value, _, routes, _ = components(actor.forward_pass(check_batch), check_batch, cfg)\n                        value = global_mean(local_value)\n                    candidate_risk, _ = localization_risk(before, value, protocol['risk_relative_tolerance'])"
+        },
+        {
+          "first_line": 223,
+          "last_line": 232,
+          "text": "            optimizer.assign(base + displacement)\n            accepted_risk, _ = localization_risk(before, accepted, protocol['risk_relative_tolerance'])\n            candidate_route_change = route_changes(before_routes, after_routes)\n            accepted_route_change = route_changes(before_routes, accepted_routes)\n            metric_vector = global_mean(torch.stack([metrics[key] for key in sums]))\n            for key, value in zip(sums, metric_vector.tolist()):\n                sums[key] += value\n            torch.cuda.synchronize(device)\n            record = dict(attempt_id=receipt['attempt_id'], epoch=epoch, step=step, global_step=global_step, before_localization=before.tolist(),\n                          candidate_localization=after.tolist(), accepted_localization=accepted.tolist(),"
+        }
+      ]
+    },
+    "rgbx_method/losses.py": {
+      "sha256": "2b8fe537013b61cf18d30d114e5db039592debcb01f4a07756b6965fc55e55b9",
+      "excerpts": [
+        {
+          "first_line": 11,
+          "last_line": 39,
+          "text": "def components(prediction, batch, cfg):\n    boxes = prediction['pred_boxes']\n    assert boxes.shape[1] == 1 and torch.isfinite(boxes).all()\n    predicted = box_cxcywh_to_xyxy(boxes[:, 0])\n    target = box_xywh_to_xyxy(batch['search_anno'][-1]).clamp(0, 1)\n    giou, iou = generalized_box_iou(predicted, target)\n    l1 = (predicted - target).abs().mean(1)\n    heatmap = generate_heatmap(batch['search_anno'], cfg.DATA.SEARCH.SIZE, cfg.MODEL.BACKBONE.STRIDE)[-1].unsqueeze(1)\n    labels = torch.zeros((len(boxes), 6), device=boxes.device)\n    task_ids = torch.tensor([TASK_NAMES.index(name) for name in batch['dataset']], device=boxes.device)\n    labels[task_ids == 0, :2] = 1\n    labels[task_ids == 1, 4:] = 1\n    labels[task_ids == 2, 2:4] = 1\n    router = sum(F.binary_cross_entropy(probabilities, labels, reduction='none').mean(1)\n                 for probabilities in prediction['logits_all'])\n    objectives, counts, tasks = [], [], []\n    focal = FocalLoss()\n    for task in range(3):\n        mask = task_ids == task\n        assert mask.any()\n        box = 2 * (1 - giou[mask]).mean() + 5 * l1[mask].mean()\n        response = focal(prediction['score_map'][mask], heatmap[mask])\n        objectives.append(torch.stack((response, box)))\n        tasks.append(response + box + 0.01 * router[mask].mean() + prediction['loss_prompt_balance'])\n        counts.append(mask.sum())\n    indices = torch.stack([value.detach().topk(2, dim=1).indices.sort(1).values for value in prediction['logits_all']], dim=1)\n    return torch.stack(tasks), torch.stack(objectives), torch.stack(counts), indices, dict(\n        total=torch.stack(tasks).mean().detach(), balance=prediction['loss_prompt_balance'].detach(),\n        classification=router.mean().detach(), iou=iou.mean().detach())"
+        }
+      ]
+    },
+    "rgbx_method/data.py": {
+      "sha256": "ba0dad4da1db54f08bde406d849adacc8128f8fb32963d39cfda0ae822a9544d",
+      "excerpts": [
+        {
+          "first_line": 18,
+          "last_line": 34,
+          "text": "\n    def __getitem__(self, index):\n        return self.samplers[index % 3][index // 3]\n\n\nclass MixedBatchSampler:\n    def __init__(self, steps, per_rank, rank, world_size):\n        self.steps, self.per_rank, self.rank, self.world_size = steps, per_rank, rank, world_size\n\n    def __len__(self):\n        return self.steps\n\n    def __iter__(self):\n        for step in range(self.steps):\n            start = (step * self.world_size + self.rank) * self.per_rank\n            yield list(range(start, start + self.per_rank))\n"
+        }
+      ]
+    },
+    "rgbx_method/trajectory.py": {
+      "sha256": "68b09600229d9cd6336836d3b333893b294fba7464ee19ac338a5068a0a57abd",
+      "excerpts": [
+        {
+          "first_line": 39,
+          "last_line": 56,
+          "text": "                                       cfg.MODEL.BACKBONE.STRIDE)[-1].unsqueeze(1)\n            response_loss = FocalLoss()(prediction['score_map'], heatmap)\n            decoded = self.model.box_head.cal_bbox(self.window * prediction['score_map'], prediction['size_map'],\n                                                   prediction['offset_map']).view(-1, 4).mean(0)\n            cx, cy, width, height = (decoded * cfg.TEST.SEARCH_SIZE / resize).tolist()\n            half = cfg.TEST.SEARCH_SIZE / resize / 2\n            cx += previous[0] + previous[2] / 2 - half\n            cy += previous[1] + previous[3] / 2 - half\n            state = clip_box([cx - width / 2, cy - height / 2, width, height], image.shape[0], image.shape[1], margin=10)\n            predicted_boxes.append(list(state))\n            image_scale = torch.tensor([image.shape[1], image.shape[0]] * 2, device=self.device)\n            global_predicted = box_xywh_to_xyxy(torch.tensor(state, device=self.device).view(1, 4)) / image_scale\n            global_target = box_xywh_to_xyxy(ground_truth.to(self.device).view(1, 4)) / image_scale\n            giou, _ = generalized_box_iou(global_predicted, global_target)\n            box_loss = 2 * (1 - giou.mean()) + 5 * (global_predicted - global_target).abs().mean()\n            values.append(response_loss + box_loss + outside)\n            outside_flags.append(outside.item())\n        assert crop_states[1] == predicted_boxes[0]"
+        }
+      ]
+    },
+    "third_party/XTrack/lib/models/xtrack/ostrack_adapter.py": {
+      "sha256": "45a5b3061c3dcda26df1ccbfdbfc04e8c4c87e66bede61ff1623e75c14c2536f",
+      "excerpts": [
+        {
+          "first_line": 50,
+          "last_line": 54,
+          "text": "        # Forward head\n        feat_last = x\n        if isinstance(x, list):\n            feat_last = x[-1]\n        out = self.forward_head(feat_last, None)"
+        },
+        {
+          "first_line": 81,
+          "last_line": 91,
+          "text": "        elif self.head_type == \"CENTER\":\n            # run the center head\n            score_map_ctr, bbox, size_map, offset_map = self.box_head(opt_feat, gt_score_map)\n            # outputs_coord = box_xyxy_to_cxcywh(bbox)\n            outputs_coord = bbox\n            #print(\"outputs_coord\", outputs_coord.shape)\n            outputs_coord_new = outputs_coord.view(bs, Nq, 4)\n            out = {'pred_boxes': outputs_coord_new,\n                   'score_map': score_map_ctr,\n                   'size_map': size_map,\n                   'offset_map': offset_map}"
+        }
+      ]
+    },
+    "third_party/XTrack/lib/models/layers/head.py": {
+      "sha256": "01d3c4d78da3527a886e0c5eec50e99534367487f8d9ee0de6d4a4f6e09bc73c",
+      "excerpts": [
+        {
+          "first_line": 130,
+          "last_line": 156,
+          "text": "    def forward(self, x, gt_score_map=None):\n        \"\"\" Forward pass with input x. \"\"\"\n        score_map_ctr, size_map, offset_map = self.get_score_map(x)\n\n        # assert gt_score_map is None\n        if gt_score_map is None:\n            bbox = self.cal_bbox(score_map_ctr, size_map, offset_map)\n        else:\n            bbox = self.cal_bbox(gt_score_map.unsqueeze(1), size_map, offset_map)\n\n        return score_map_ctr, bbox, size_map, offset_map\n\n    def cal_bbox(self, score_map_ctr, size_map, offset_map, return_score=False):\n        max_score, idx = torch.max(score_map_ctr.flatten(1), dim=1, keepdim=True)\n        idx_y = idx // self.feat_sz\n        idx_x = idx % self.feat_sz\n\n        idx = idx.unsqueeze(1).expand(idx.shape[0], 2, 1)\n        size = size_map.flatten(2).gather(dim=2, index=idx)\n        offset = offset_map.flatten(2).gather(dim=2, index=idx).squeeze(-1)\n\n        # bbox = torch.cat([idx_x - size[:, 0] / 2, idx_y - size[:, 1] / 2,\n        #                   idx_x + size[:, 0] / 2, idx_y + size[:, 1] / 2], dim=1) / self.feat_sz\n        # cx, cy, w, h\n        bbox = torch.cat([(idx_x.to(torch.float) + offset[:, :1]) / self.feat_sz,\n                          (idx_y.to(torch.float) + offset[:, 1:]) / self.feat_sz,\n                          size.squeeze(-1)], dim=1)"
+        }
+      ]
+    },
+    "third_party/XTrack/lib/test/tracker/xtrack.py": {
+      "sha256": "e7baa6fc36c94efa185b782816cbfe71ed64deb01a956de670973d0f034e9442",
+      "excerpts": [
+        {
+          "first_line": 79,
+          "last_line": 89,
+          "text": "        # add hann windows\n        pred_score_map = out_dict['score_map']\n        response = self.output_window * pred_score_map\n        pred_boxes, best_score = self.network.box_head.cal_bbox(response, out_dict['size_map'], out_dict['offset_map'], return_score=True)\n        max_score = best_score[0][0].item()\n        pred_boxes = pred_boxes.view(-1, 4)\n        # Baseline: Take the mean of all pred boxes as the final result\n        pred_box = (pred_boxes.mean(\n            dim=0) * self.params.search_size / resize_factor).tolist()  # (cx, cy, w, h) [0,1]\n        # get the final box result\n        self.state = clip_box(self.map_box_back(pred_box, resize_factor), H, W, margin=10)"
+        }
+      ]
+    }
+  },
+  "generation_and_acceptance": "The same check_batch detects local damage, generates risk gradients and evaluates correction candidates; no second independent confirmation batch is present.",
+  "local_box": "pred_boxes is decoded from the raw CENTER response maximum.",
+  "deployment_box": "The tracker decodes the Hann-weighted maximum, maps to the original image and clips with margin10.",
+  "existing_trajectory": "ClosedLoopProbe already uses Hann decoding, original-image mapping and margin10 clipping; do not claim the trajectory probe lacks these operations.",
+  "logging": {
+    "rank_task_counts": [
+      [
+        3,
+        3,
+        2
+      ],
+      [
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        3,
+        3
+      ]
+    ],
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "total_router_weights": "Task/rank means are equally weighted (1/9 each).",
+    "classification_router_weights": "Sample means give each task/rank cell n/24 weight.",
+    "arithmetic_residual": [
+      {
+        "epoch": 1,
+        "total": 0.9770754349470139,
+        "balance": 0.0680006440371275,
+        "classification": 15.100700662231445,
+        "arithmetic_residual": 0.7580677842875719
+      },
+      {
+        "epoch": 15,
+        "total": 0.9477965210199356,
+        "balance": 0.0576502860724926,
+        "classification": 13.052996746826173,
+        "arithmetic_residual": 0.7596162674791813
+      }
+    ],
+    "interpretation": "An exact arithmetic residual, not an exactly measured response-plus-box objective. Per-task/rank router means were not saved, so those localization means cannot be exactly reconstructed from these aggregate logs. Direct objective logging is required in a separately reviewed future diagnostic."
+  },
+  "registered_diagnostics": [
+    {
+      "id": "generation_vs_independent_confirmation",
+      "status": "REGISTERED_NOT_IMPLEMENTED_NOT_RUN",
+      "plan": "Capture real candidate states; generate correction on one training-pool batch and evaluate the same candidate on different training clips with matched transforms and routing randomness. Record benefit/harm transfer, learning gain and forward cost. Both batches are training signals, never test data."
+    },
+    {
+      "id": "raw_vs_deployment_decisions",
+      "status": "REGISTERED_NOT_IMPLEMENTED_NOT_RUN",
+      "plan": "For matched inputs and actual candidate states, record raw peak, Hann peak, decoded/mapped/clipped boxes, target-distractor deployment margin and GT errors. Measure peak changes and false-negative risks rather than assuming they explain benchmark degradation."
+    }
+  ],
+  "full_training_priority": [
+    "Finish distance0 remaining full evaluation, comparison and paired uncertainty with actual controller exit0.",
+    "Activate the reviewed C/D admission, run actual C sanity and saved-state audit, then full fixed-mixed repaired AdamW C and all three scores.",
+    "Run and score task-statistics-only D; compare D versus C before retaining task-adaptive statistics in the next method."
+  ],
+  "no_new_complex_method_before_C_D": true,
+  "new_neural_jobs_started": 0,
+  "active_sources_changed": 0,
+  "existing_runtime_snapshot": {
+    "observed_at": "2026-10-06T13:40:02.634085+00:00",
+    "training_global_step": 37500,
+    "completed_epochs": 15,
+    "training_exit_code": 0,
+    "training_exit_at": "2026-10-06T08:42:56.865396+00:00",
+    "endpoint_audit": "PASS",
+    "evaluation_status": "RUNNING_NOT_SCORED",
+    "formal_tracking_scores": "LASHER_COMPLETE_OTHER2_PENDING",
+    "actual_process_observation_at": "2026-10-06T09:37:03.570959+00:00",
+    "risk_events": 966,
+    "nonzero_corrections": 948,
+    "same_checkpoint_sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+    "current_stage": "method-evaluation",
+    "completed_datasets": [
+      "LasHeR"
+    ],
+    "lasher_headline_metrics": {
+      "SR_AUC": 0.5539893818361226,
+      "PR_at_20": 0.6879301990501853,
+      "NPR_AUC": 0.5912385737160156,
+      "NP_at_020": 0.6541598709539099
+    },
+    "lasher_required_improved_count": 0,
+    "current_vis_workers": [
+      2254629,
+      2254630,
+      2254631
+    ],
+    "lasher_full_intake_at": "2026-10-06T13:45:02.751733+00:00"
+  },
+  "next_runtime_not_before": "2026-10-06T17:40:00+00:00",
+  "observer_native_session": 76382,
+  "literature_status": "User-supplied SLT and WiSE-FT leads registered for primary-source verification/comparable controls; no new literature metric verification performed.",
+  "goal_achieved": false
+}

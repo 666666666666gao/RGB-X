@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-05T20:21:59.700943+08:00",
-  "objective": "在2028三卡上完成一份RGB-T/RGB-D/RGB-Event联合权重的完整方法训练和现有三集全量评测；保留当前v1固定15轮结果，下一轮单独检验去掉额外距离惩罚；从同一公开联合权重建立相同数据、额外预算及参数范围的公平微调与优化器对照，逐项验证定位风险识别、实际位移修正与独立闭环轨迹控制；未达到完整指标和机制证据要求则依据真实结果继续改进，再验证SUTrack迁移及后续跨数据集泛化。 后续三个模块围绕目标级可靠定位能力保持与风险记忆、保留有益学习的风险约束实际更新、搜索状态敏感且可独立决策的闭环验收展开；同时检验旧能力退化和新能力改善，不以任务平均损失、梯度均衡或减少更新作为最终目标。",
+  "updated_at": "2026-10-06T23:53:21.394352+08:00",
+  "objective": "在2028使用三卡与一份RGB-T/RGB-D/RGB-Event联合权重，完整评测并持续依据真实证据改进，争取全部主要指标超过同协议参考。在distance0全部五阶段真实结束后，优先完成C固定混采修正AdamW与D仅任务统计公平微调对照，再决定下一版方法。三个模块沿决策一致的目标级风险、独立确认的能力保持更新、可独立干预的搜索状态传播控制形成完整链路；分别验证模块作用、成熟优化器比较、训练成本与不确定性，再推进SUTrack及完整基准。原始65轮复现保持取消；修正次数、总损失下降和局部检查通过均不代替完整跟踪增益。",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "DISTANCE0_EPOCH1_AUDITED_RETENTION_ACTIVE_FULL15_AND_BENCHMARK_PENDING_GOAL_UNMET",
+  "status": "DISTANCE0_TRAIN_EXIT0_ENDPOINT_PASS_LASHER_NEGATIVE_OTHER2_PENDING_C_THEN_D_NEXT_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -101,21 +101,17 @@
   "goal_tool_note": "当前系统goal仍为active的“监控训练顺利进行”。工具仅支持创建目标或修改状态，不支持改写未完成目标的objective；没有把旧目标虚报完成。用户最新完整执行目标及验收要求以本文件为准。",
   "actual_run_id": "xtrack_full_method_v2_distance0_s2026",
   "actual_controller_pid": 433952,
-  "actual_rank_pids": [
-    434003,
-    434004,
-    434005
-  ],
-  "actual_completed_updates_at_snapshot": 2800,
-  "tracking_scores": "V1_ALL3_COMPLETE_ALL7_LOWER_DISTANCE0_NOT_YET_EVALUATED",
+  "actual_rank_pids": [],
+  "actual_completed_updates_at_snapshot": 37500,
+  "tracking_scores": "V1_ALL3_ALL7_LOWER_DISTANCE0_LASHER_ALL4_LOWER_OTHER2_PENDING",
   "objective_met": false,
   "next_iteration_candidate": {
-    "status": "FORMAL_TRAINING_RUNNING_NO_BENCHMARK_RESULT",
+    "status": "TRAIN_EXIT0_ENDPOINT_PASS_LASHER_NEGATIVE_OTHER2_PENDING",
     "candidate_distance_weight": 0,
     "evidence": "reports/full_method_v1_cost_decomposition.json",
-    "decision": "Finish the fixed v1 run, endpoint audit and complete comparison, then test distance weight zero as the sole algorithm change.",
+    "decision": "Finish existing distance0 evaluation/comparison/uncertainty, then prioritize C followed by D, not another correction-frequency tuning or complex full-method run.",
     "comparison": "Fresh start from the same author release, repaired source, mixed 8T/8D/8E batches, seed, trainable parameters and 15-epoch budget; retain correction amplitude cap.",
-    "efficacy": "UNKNOWN_FORMAL_TRAINING_STARTED_NO_TRACKING_RESULT",
+    "efficacy": "LASHER_ALL4_LOWER_THAN_REFERENCE_AND_V1_OTHER2_UNKNOWN",
     "success_measure": "Fewer unrepaired localization harms while retaining learning progress; selection frequency alone is not success.",
     "protocol": "configs/full_method_v2_distance0.json",
     "preparation_evidence": "reports/full_method_v2_distance0_configuration_preparation.json",
@@ -125,7 +121,7 @@
     "isolated_entry_evidence": "reports/full_method_v2_distance0_entry_preparation.json",
     "identity_admission_status": "EXACT_TWO_RUN_ADMISSION_APPLIED_AFTER_V1_TERMINAL",
     "identity_contract_evidence": "reports/full_method_v2_distance0_identity_contract_check.json",
-    "retention_activation": "Actual first-epoch CPU audit passed and dedicated worker573595 launched once, observed active2026-10-05 17:20:12CST; static publication does not replace the worker receipt or make a fresh runtime claim.",
+    "retention_activation": "Dedicated worker finished and retained only epoch15; full benchmark ranking remains pending.",
     "full_run_diagnosis_evidence": "reports/full_method_v1_full_run_cost_decomposition.json",
     "source_review_status": "STATIC_SELF_SOURCE_REVIEW_PASS_NO_RUNTIME_OR_INDEPENDENT_ATTESTATION",
     "source_review_evidence": "reports/full_method_v2_distance0_code_review.json",
@@ -141,11 +137,13 @@
     "must_not_relaunch": true,
     "documented_sanity": "reports/full_method_v2_distance0_documented_sanity_20261005.json",
     "formal_launch": "reports/full_method_v2_distance0_formal_launch_20261005.json",
-    "startup_evidence": "reports/full_method_v2_distance0_startup_observation_20261005.json"
+    "startup_evidence": "reports/full_method_v2_distance0_startup_observation_20261005.json",
+    "completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
+    "lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json"
   },
-  "actual_training_examples_at_snapshot": 67200,
+  "actual_training_examples_at_snapshot": 900000,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 1,
+  "actual_completed_epochs_at_snapshot": 15,
   "first_epoch_risk_events": 109,
   "first_epoch_nonzero_corrections": 106,
   "first_epoch_trajectory_checks": 154,
@@ -277,8 +275,8 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-05T09:16:29.979968+00:00",
-  "execution_goal_version": "2026-10-05-user-review-v3",
+  "runtime_snapshot_observed_at": "2026-10-06T13:40:02.634085+00:00",
+  "execution_goal_version": "2026-10-06-user-review-v4",
   "ordered_next_steps": [
     {
       "id": "P0",
@@ -287,19 +285,19 @@
     },
     {
       "id": "P1",
-      "status": "ACTUAL_SANITY_PASS_FORMAL_DISTANCE0_RUNNING_NOT_YET_EVALUATED",
-      "work": "Run one-change distance-weight-zero paired experiment; retain bounded correction and all other algorithm settings. Compare harmful accepted updates, uncorrected risks, localization/trajectory learning and complete benchmark metrics."
+      "status": "DISTANCE0_TRAIN_COMPLETE_LASHER_NEGATIVE_FINISH_OTHER2_AND_PIPELINE",
+      "work": "Preserve v1 and distance0 negative results. Complete VisEvent/DepthTrack, full comparison and conditional uncertainty from the existing pipeline; do not rerun the cached reference or drop the active consumer checkpoint."
     },
     {
       "id": "P2",
-      "status": "C_D_ISOLATED_SOURCE_AND_CPU_MATH_PASS_REAL_DDP_CONTROLS_AND_OTHER_COMPARISONS_PENDING",
-      "work": "Build fair A-G comparison chain from the same public initialization. Implement real ablation switches for calls, optimizer states and accounting; metadata-only modules_enabled is insufficient.",
+      "status": "IMMEDIATE_NEXT_FULL_TRAINING_C_THEN_D_SOURCE_CPU_PASS_REAL_PENDING",
+      "work": "After all five distance0 stages and actual controller exit0, use existing reviewed C sanity/audit and formal repaired fixed-mixed AdamW entry. Complete C full scores before task-statistics-only D. Use C/D to select the optimization base; retain B, canonical AdaTask, PCGrad/CAGrad and true module ablations in the full comparison scope.",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json"
     },
     {
       "id": "P3",
-      "status": "MEASURE_BEFORE_EXPANDING",
-      "work": "After the isolated distance0 experiment, measure per-sample step damage and fixed-reference preservation damage on training-only matched inputs. Use GT-based reference reliability and random plus bounded fragile-state memory; do not add a denominator-floor fix without observed evidence. Compare existing bounded Gram correction against slack inequality correction separately and retain beneficial learning among feasible candidates."
+      "status": "TWO_LIGHTWEIGHT_DIAGNOSTICS_REGISTERED_NOT_RUN",
+      "work": "Before another complex method, measure correction effect on generation versus different confirmation training clips, and raw versus Hann deployment peak/actual box/GT margins. Capture actual paired states; log response and box objectives directly. Then test per-sample/ref-reliable preservation and bounded memory with controlled changes; no test data or fabricated historical replay."
     },
     {
       "id": "P4",
@@ -332,7 +330,8 @@
       "protocol": "configs/xtrack_fixed_mixed_adamw_s2026.json",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json",
       "checkpoint_preparation": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
-      "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json"
+      "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
+      "priority": "NEXT_FULL_TRAINING_IN_THIS_ORDER_AFTER_DISTANCE0"
     },
     {
       "id": "D",
@@ -343,11 +342,12 @@
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json",
       "canonical_AdaTask_completed": false,
       "checkpoint_preparation": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
-      "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json"
+      "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
+      "priority": "NEXT_FULL_TRAINING_IN_THIS_ORDER_AFTER_DISTANCE0"
     },
     {
       "id": "E",
-      "setting": "D plus localization risk and selective actual-displacement correction",
+      "setting": "Evidence-supported C/D optimizer base plus decision-consistent target risk, actual-displacement correction and independent confirmation; task statistics retained only if D justifies them.",
       "status": "NOT_IMPLEMENTED_NOT_RUN"
     },
     {
@@ -451,25 +451,24 @@
   "twelfth_epoch_retention_evidence": "reports/full_method_v1_twelfth_epoch_retention_snapshot.json",
   "thirteenth_epoch_retention_evidence": "reports/full_method_v1_thirteenth_epoch_retention_snapshot.json",
   "monitoring_policy": {
-    "updated_at": "2026-10-05T18:51:24.934531+08:00",
+    "updated_at": "2026-10-06T23:53:21.394352+08:00",
     "user_instruction": "这里你轮询太多了，没到时间不用轮询",
     "mode": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-06T09:37:01.070691+00:00",
-    "estimated_training_completion": "2026-10-06T09:32:01.070691+00:00",
-    "estimate_evidence": "reports/full_method_v2_distance0_completed_epoch1_diagnosis_20261005.json",
-    "estimated_stage": "Distance0 remaining updates using the last1000 completed first-epoch step times plus five minutes for save/controller recognition. Excludes inference/scoring and is not completion proof.",
-    "scheduled_observer_native_session": 72018,
-    "scheduled_observer_pid": 1536,
-    "scheduled_observer_started_at": "2026-10-05T09:23:22.504242+00:00",
-    "scheduled_observer_status": "ACTUAL_PASSIVE_ENDPOINT_TIMER_LAUNCHED_OBSERVATION_PENDING",
-    "next_action": "Do not query training, controller, GPU, logs or native72018 before2026-10-06 17:37:01.070691CST. Consume the same endpoint observer after due; no duplicate observer or relaunch on observation timeout."
+    "next_observation_not_before": "2026-10-06T17:40:00+00:00",
+    "estimate_evidence": "reports/full_method_v2_distance0_visevent_endpoint_observer_launch_20261006.json",
+    "estimated_stage": "VisEvent full-scoring endpoint forecast from saved v1 full-set throughput and frozen per-shard frame counts; not completion proof.",
+    "scheduled_observer_native_session": 76382,
+    "scheduled_observer_pid": 48220,
+    "scheduled_observer_started_at": "2026-10-06T13:47:32.078098+00:00",
+    "scheduled_observer_status": "EXISTING_PASSIVE_VISEVENT_ENDPOINT_TIMER_PENDING",
+    "next_action": "One existing observation at2026-10-07 01:40CST; no earlier controller, progress, logs, GPU or native-session poll; do not relaunch on a transport timeout."
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
-  "actual_training_exit_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
+  "actual_training_exit_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
   "latest_evaluation_receipts": {
     "xtrack_author_release_s2026": {
       "receipt_exists": true,
@@ -490,10 +489,17 @@
       ],
       "status": "ALL_THREE_SCORED_REQUIRES_RESULT_AUDIT",
       "snapshot_evidence": "reports/full_method_v1_complete_result_intake_20261005.json"
+    },
+    "xtrack_full_method_v2_distance0_s2026": {
+      "completed_datasets": [
+        "LasHeR"
+      ],
+      "status": "LASHER_FULL_SCORED_OTHER2_PENDING",
+      "snapshot_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json"
     }
   },
   "endpoint_audit_status": "PASS",
-  "complete_comparison_available": true,
+  "complete_comparison_available": false,
   "fifteenth_epoch_retention_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
   "completed_training_diagnosis": {
     "report": "reports/full_method_v1_full_run_cost_decomposition.json",
@@ -606,7 +612,7 @@
     "attributes": 17
   },
   "actual_evaluation_controller_pid": 3560911,
-  "actual_method_evaluation_controller_pid": 3722438,
+  "actual_method_evaluation_controller_pid": 2038303,
   "reference_required_headlines": {
     "LasHeR_SR": 0.5554599303245381,
     "LasHeR_PR": 0.6905088871059202,
@@ -714,7 +720,7 @@
     "collected_at": "2026-10-05T02:32:10.143444+08:00",
     "scope": "Completed author-reference native scores only. Full 50-sequence coverage, original official PR aggregation, separate group definitions, 50 CSV rows, 11 raw artifact hashes verified. No neural inference or scorer replay. Method scores not inferred."
   },
-  "latest_evaluation_milestone": "reports/full_method_v1_complete_result_intake_20261005.json",
+  "latest_evaluation_milestone": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json",
   "method_lasher_complete_metrics": {
     "report": "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/metrics.json",
     "intake": "reports/full_method_v1_lasher_complete_intake_20261005.json",
@@ -870,10 +876,10 @@
   },
   "next_stage_module_design": {
     "status": "USER_ACCEPTED_NEXT_STAGE_DESIGN_NOT_IMPLEMENTED_OR_VALIDATED",
-    "updated_at": "2026-10-05T12:07:07.848611+08:00",
-    "mainline": "Preserve reliable target-localization abilities, retain beneficial learning, and prevent small changes from amplifying through predicted-box search-state feedback.",
+    "updated_at": "2026-10-06T23:53:21.394352+08:00",
+    "mainline": "决策一致的目标级风险 → 独立确认的能力保持更新 → 可独立干预的搜索状态传播控制",
     "module_1": {
-      "name": "Target-level capability preservation and bounded risk memory",
+      "name": "Decision-consistent target-level localization risk",
       "risks": [
         "Per-sample step damage relative to the immediately preceding model",
         "Reliability-weighted preservation damage relative to the fixed public reference"
@@ -882,7 +888,8 @@
       "localization_signals": [
         "existing target response objective",
         "box localization",
-        "target-versus-strong-distractor response margin"
+        "target-versus-strong-distractor response margin",
+        "deployment-consistent target-versus-distractor margin and decoded GT error"
       ],
       "reference_outputs": "Reference and candidate outputs must correspond to exactly the same crop, geometric augmentation and input preprocessing.",
       "memory": "Random coverage plus bounded training-only records of fragile sequence/frame/crop/augmentation states; never add test videos to update checks.",
@@ -891,11 +898,12 @@
         "total-loss risk",
         "ordinary distillation",
         "single-step task-mean risk"
-      ]
+      ],
+      "deployment_alignment": "Measure raw response maximum versus Hann-weighted choice, original-image decoded/clipped box and GT target/distractor deployment margin; infer no benchmark cause from static differences alone."
     },
     "module_2": {
-      "name": "Risk-constrained task-adaptive actual updates that preserve beneficial learning",
-      "immediate_experiment": "Distance0 only: remove the0.05 candidate distance penalty and retain the bounded correction, initialization, seed, data, budget and all other algorithm settings.",
+      "name": "Independently confirmed capability-preserving actual updates",
+      "immediate_experiment": "C repaired fixed-mixed AdamW followed by D task-statistics-only; distance0 already increased correction adoption without improving LasHeR.",
       "later_experiment": "Compare bounded Gram correction with a slack inequality-constrained correction in the eligible actual-displacement subspace; use real forward acceptance, no global no-regression or Pareto guarantee.",
       "feasible_candidate_selection": "Among risk-feasible candidates, measure retained objective improvement; correction frequency and zero-update frequency are not success measures.",
       "routing": "Allow useful Top-k changes; diagnose content-only, router-only and combined updates on fixed training clips before attributing harm to routing.",
@@ -906,10 +914,12 @@
         "PCGrad",
         "CAGrad",
         "current bounded linear correction"
-      ]
+      ],
+      "optimizer_dependency": "Retain task-adaptive statistics only if the C/D comparison supports them; D is a component implementation, not a canonical AdaTask reproduction.",
+      "independent_confirmation": "Use distinct training clips to generate and confirm the same correction, fixing transforms, candidate model/optimizer states and routing randomness across candidate comparisons. Report generation/confirmation benefit and harm transfer, preserved learning and cost; confirmation remains training signal."
     },
     "module_3": {
-      "name": "Search-state-sensitive closed-loop acceptance with independent decisions",
+      "name": "Independently intervening search-state propagation control",
       "triggers": [
         "single-frame localization damage",
         "independent closed-loop trajectory damage"
@@ -926,20 +936,35 @@
         "predicted-box closed loop",
         "3-frame versus longer clips"
       ],
-      "clip_expansion": "Keep random coverage; add measured training-pool distractor/edge cases, then occlusion/reappearance only with correct visibility handling."
+      "clip_expansion": "Keep random coverage; add measured training-pool distractor/edge cases, then occlusion/reappearance only with correct visibility handling.",
+      "existing_probe": "Already Hann-weighted decoding, original-image mapping and margin10 clipping. Existing trajectory-only checks still offer only the full adaptive update; independent intervention is not implemented."
     },
     "new_diagnostics": {
       "capability_preservation": "Predeclare training/validation reliability and material-damage thresholds; report both losses of reference-reliable cases and repairs of reference failures alongside complete official scores.",
       "closed_loop_amplification": "Separate fixed-input parameter effects, induced crop effects and their interaction, integer boundary changes, GT localization errors and actual target-out-of-search events.",
-      "inference_and_evaluation": "No inference-network or crop change in the immediate distance0 experiment; baseline protocols and complete raw results remain fixed."
+      "inference_and_evaluation": "No inference-network or crop change in the immediate distance0 experiment; baseline protocols and complete raw results remain fixed.",
+      "generation_and_confirmation": {
+        "id": "generation_vs_independent_confirmation",
+        "status": "REGISTERED_NOT_IMPLEMENTED_NOT_RUN",
+        "plan": "Capture real candidate states; generate correction on one training-pool batch and evaluate the same candidate on different training clips with matched transforms and routing randomness. Record benefit/harm transfer, learning gain and forward cost. Both batches are training signals, never test data."
+      },
+      "deployment_decision_alignment": {
+        "id": "raw_vs_deployment_decisions",
+        "status": "REGISTERED_NOT_IMPLEMENTED_NOT_RUN",
+        "plan": "For matched inputs and actual candidate states, record raw peak, Hann peak, decoded/mapped/clipped boxes, target-distractor deployment margin and GT errors. Measure peak changes and false-negative risks rather than assuming they explain benchmark degradation."
+      },
+      "objective_accounting": "Directly record response and box, and exact task-weighted router objective; arithmetic residual of unlike logged weighting is not a measured localization trend."
     },
     "evidence_boundaries": [
       "Test sequence changes do not prove task-mean cancellation in training; record per-sample training damage first.",
       "The observed near-zero denominator floor activation count is0; do not add defensive branches for an unobserved floor failure.",
       "Route-set changes are associated with risk, not established causes, and stable route sets do not guarantee safety.",
-      "Existing seven trajectory-only events demonstrate a decision gap; distance0 alone does not repair it.",
-      "Saved fixed-pair whole-sequence bootstrap is conditional sampling uncertainty, not training-seed variance or module attribution."
-    ]
+      "Saved fixed-pair whole-sequence bootstrap is conditional sampling uncertainty, not training-seed variance or module attribution.",
+      "Distance0 has12 trajectory-only events without alternatives; removing distance penalty did not close this gap.",
+      "Same-batch improvement does not establish transfer to independent clips; raw/deployment decode differences do not establish benchmark causation.",
+      "Printed total and router classification use different task/sample weighting; their subtraction is only an arithmetic residual."
+    ],
+    "source_evidence": "reports/user_review_priority_and_source_facts_20261006.json"
   },
   "method_required_headlines": {
     "LasHeR_SR": 0.5548465787350384,
@@ -1128,7 +1153,7 @@
     "training_runtime_state": "ACTUAL_TRAIN_EXIT0_FIXED_15_EPOCHS_COMPLETE"
   },
   "completed_epoch_statistics_run_id": "xtrack_full_method_v1_s2026",
-  "active_run_evidence": "reports/full_method_v2_distance0_completed_epoch1_diagnosis_20261005.json",
+  "active_run_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
   "active_distance0_milestones": {
     "first_diagnostic_not_before": "2026-10-05T07:28:21.783057+00:00",
     "preliminary_first_epoch_completion_estimate": "2026-10-05T09:00:21.116321+00:00",
@@ -1138,17 +1163,18 @@
     "temperature_or_power_controls": false,
     "first_diagnostic_actual": "2026-10-05T07:31:13.528580+00:00",
     "first_epoch_completion_estimate": "2026-10-05T09:05:17.775236+00:00",
-    "next_observation_not_before": "2026-10-06T09:37:01.070691+00:00",
-    "actual_scheduled_observer_native_session": 72018,
-    "actual_scheduled_observer_pid": 1536,
-    "actual_timer_started_at": "2026-10-05T09:23:22.504242+00:00",
-    "actual_scheduled_observer_evidence": "reports/full_method_v2_distance0_training_endpoint_observer_launch_20261005.json",
+    "next_observation_not_before": "2026-10-06T17:40:00+00:00",
+    "actual_scheduled_observer_native_session": 76382,
+    "actual_scheduled_observer_pid": 48220,
+    "actual_timer_started_at": "2026-10-06T13:47:32.078098+00:00",
+    "actual_scheduled_observer_evidence": "reports/full_method_v2_distance0_visevent_endpoint_observer_launch_20261006.json",
     "scheduled_observation_completed": true,
     "actual_first_epoch_observation": "2026-10-05T09:10:20.059417+00:00",
     "epoch1_cpu_audit_status": "PASS_FIRST_EPOCH_CHECKPOINT_NOT_FINAL_OR_BENCHMARK",
     "epoch1_retention_actual_observation": "2026-10-05T09:20:12.841852+00:00",
     "estimated_training_completion": "2026-10-06T09:32:01.070691+00:00",
-    "next_scheduled_observation_completed": false
+    "next_scheduled_observation_completed": false,
+    "training_endpoint_completed": true
   },
   "distance0_sanity_weight_cleanup": {
     "report": "reports/full_method_v2_distance0_sanity_weight_cleanup_20261005.json",
@@ -1369,45 +1395,238 @@
     {
       "epoch": 1,
       "updates": 2500,
-      "primary_training_examples": 60000,
-      "checks": {
-        "finite_localization_and_risk": true,
-        "exact_task_counts": true,
-        "one_optimizer_statistics_and_decay_application": true,
-        "finite_step_time_and_gradient_norm": true
-      },
       "risk_events": 109,
       "nonzero_corrections": 106,
-      "adopted_lowered_recorded_aggregate_risk": 106,
-      "adopted_eliminated_recorded_aggregate_risk": 49,
+      "corrections_lowering_recorded_aggregate_risk": 106,
+      "corrections_eliminating_recorded_aggregate_risk": 49,
       "accepted_remaining_risk_events": 60,
       "trajectory_checks": 154,
+      "no_local_risk_periodic_checks": 45,
       "trajectory_only_positive_cost_events": 0,
-      "trajectory_only_steps": [],
-      "trajectory_only_alternative_candidates_available": false,
-      "mean_step_seconds": 2.51561701665516,
-      "last1000_mean_step_seconds": 2.5167461303513847,
       "pair_check_forward_examples": 47943,
       "trajectory_model_forward_examples": 3156,
-      "rank0_peak_allocated_bytes": 5770099200,
-      "mean_candidate_positive_localization_risk": 5.9189240944882236e-05,
-      "mean_accepted_positive_localization_risk": 1.8101757857948542e-06,
-      "selected_strength_counts": {
-        "0.0": 2394,
-        "0.5": 13,
-        "1.0": 93
-      }
+      "update_seconds": 6289.0425416379
+    },
+    {
+      "epoch": 2,
+      "updates": 2500,
+      "risk_events": 93,
+      "nonzero_corrections": 92,
+      "corrections_lowering_recorded_aggregate_risk": 92,
+      "corrections_eliminating_recorded_aggregate_risk": 41,
+      "accepted_remaining_risk_events": 52,
+      "trajectory_checks": 142,
+      "no_local_risk_periodic_checks": 49,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47511,
+      "trajectory_model_forward_examples": 2820,
+      "update_seconds": 6114.060295428848
+    },
+    {
+      "epoch": 3,
+      "updates": 2500,
+      "risk_events": 95,
+      "nonzero_corrections": 94,
+      "corrections_lowering_recorded_aggregate_risk": 94,
+      "corrections_eliminating_recorded_aggregate_risk": 51,
+      "accepted_remaining_risk_events": 44,
+      "trajectory_checks": 145,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47565,
+      "trajectory_model_forward_examples": 2880,
+      "update_seconds": 6115.958610675065
+    },
+    {
+      "epoch": 4,
+      "updates": 2500,
+      "risk_events": 96,
+      "nonzero_corrections": 96,
+      "corrections_lowering_recorded_aggregate_risk": 96,
+      "corrections_eliminating_recorded_aggregate_risk": 44,
+      "accepted_remaining_risk_events": 52,
+      "trajectory_checks": 145,
+      "no_local_risk_periodic_checks": 49,
+      "trajectory_only_positive_cost_events": 2,
+      "pair_check_forward_examples": 47592,
+      "trajectory_model_forward_examples": 2892,
+      "update_seconds": 6071.01873684302
+    },
+    {
+      "epoch": 5,
+      "updates": 2500,
+      "risk_events": 91,
+      "nonzero_corrections": 85,
+      "corrections_lowering_recorded_aggregate_risk": 85,
+      "corrections_eliminating_recorded_aggregate_risk": 45,
+      "accepted_remaining_risk_events": 46,
+      "trajectory_checks": 139,
+      "no_local_risk_periodic_checks": 48,
+      "trajectory_only_positive_cost_events": 3,
+      "pair_check_forward_examples": 47457,
+      "trajectory_model_forward_examples": 2760,
+      "update_seconds": 6071.306553387665
+    },
+    {
+      "epoch": 6,
+      "updates": 2500,
+      "risk_events": 80,
+      "nonzero_corrections": 80,
+      "corrections_lowering_recorded_aggregate_risk": 80,
+      "corrections_eliminating_recorded_aggregate_risk": 37,
+      "accepted_remaining_risk_events": 43,
+      "trajectory_checks": 128,
+      "no_local_risk_periodic_checks": 48,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47160,
+      "trajectory_model_forward_examples": 2496,
+      "update_seconds": 6042.429155233898
+    },
+    {
+      "epoch": 7,
+      "updates": 2500,
+      "risk_events": 83,
+      "nonzero_corrections": 83,
+      "corrections_lowering_recorded_aggregate_risk": 83,
+      "corrections_eliminating_recorded_aggregate_risk": 45,
+      "accepted_remaining_risk_events": 38,
+      "trajectory_checks": 132,
+      "no_local_risk_periodic_checks": 49,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47241,
+      "trajectory_model_forward_examples": 2580,
+      "update_seconds": 6081.432661524508
+    },
+    {
+      "epoch": 8,
+      "updates": 2500,
+      "risk_events": 80,
+      "nonzero_corrections": 80,
+      "corrections_lowering_recorded_aggregate_risk": 80,
+      "corrections_eliminating_recorded_aggregate_risk": 35,
+      "accepted_remaining_risk_events": 45,
+      "trajectory_checks": 127,
+      "no_local_risk_periodic_checks": 47,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47160,
+      "trajectory_model_forward_examples": 2484,
+      "update_seconds": 6040.27366853389
+    },
+    {
+      "epoch": 9,
+      "updates": 2500,
+      "risk_events": 92,
+      "nonzero_corrections": 89,
+      "corrections_lowering_recorded_aggregate_risk": 89,
+      "corrections_eliminating_recorded_aggregate_risk": 47,
+      "accepted_remaining_risk_events": 45,
+      "trajectory_checks": 142,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47484,
+      "trajectory_model_forward_examples": 2808,
+      "update_seconds": 6064.389362404239
+    },
+    {
+      "epoch": 10,
+      "updates": 2500,
+      "risk_events": 111,
+      "nonzero_corrections": 107,
+      "corrections_lowering_recorded_aggregate_risk": 107,
+      "corrections_eliminating_recorded_aggregate_risk": 51,
+      "accepted_remaining_risk_events": 60,
+      "trajectory_checks": 159,
+      "no_local_risk_periodic_checks": 48,
+      "trajectory_only_positive_cost_events": 1,
+      "pair_check_forward_examples": 47997,
+      "trajectory_model_forward_examples": 3240,
+      "update_seconds": 6067.539825962507
+    },
+    {
+      "epoch": 11,
+      "updates": 2500,
+      "risk_events": 8,
+      "nonzero_corrections": 8,
+      "corrections_lowering_recorded_aggregate_risk": 8,
+      "corrections_eliminating_recorded_aggregate_risk": 2,
+      "accepted_remaining_risk_events": 6,
+      "trajectory_checks": 58,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45216,
+      "trajectory_model_forward_examples": 792,
+      "update_seconds": 5999.756466247025
+    },
+    {
+      "epoch": 12,
+      "updates": 2500,
+      "risk_events": 6,
+      "nonzero_corrections": 6,
+      "corrections_lowering_recorded_aggregate_risk": 6,
+      "corrections_eliminating_recorded_aggregate_risk": 2,
+      "accepted_remaining_risk_events": 4,
+      "trajectory_checks": 56,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45162,
+      "trajectory_model_forward_examples": 744,
+      "update_seconds": 6017.998159268522
+    },
+    {
+      "epoch": 13,
+      "updates": 2500,
+      "risk_events": 5,
+      "nonzero_corrections": 5,
+      "corrections_lowering_recorded_aggregate_risk": 5,
+      "corrections_eliminating_recorded_aggregate_risk": 1,
+      "accepted_remaining_risk_events": 4,
+      "trajectory_checks": 55,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45135,
+      "trajectory_model_forward_examples": 720,
+      "update_seconds": 6006.234546488966
+    },
+    {
+      "epoch": 14,
+      "updates": 2500,
+      "risk_events": 13,
+      "nonzero_corrections": 13,
+      "corrections_lowering_recorded_aggregate_risk": 13,
+      "corrections_eliminating_recorded_aggregate_risk": 8,
+      "accepted_remaining_risk_events": 5,
+      "trajectory_checks": 63,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45351,
+      "trajectory_model_forward_examples": 912,
+      "update_seconds": 5981.518201617408
+    },
+    {
+      "epoch": 15,
+      "updates": 2500,
+      "risk_events": 4,
+      "nonzero_corrections": 4,
+      "corrections_lowering_recorded_aggregate_risk": 4,
+      "corrections_eliminating_recorded_aggregate_risk": 2,
+      "accepted_remaining_risk_events": 2,
+      "trajectory_checks": 54,
+      "no_local_risk_periodic_checks": 50,
+      "trajectory_only_positive_cost_events": 0,
+      "pair_check_forward_examples": 45108,
+      "trajectory_model_forward_examples": 696,
+      "update_seconds": 6009.9055295636645
     }
   ],
   "distance0_epoch1_summary_field_error": "reports/full_method_v2_distance0_epoch1_collection_failure_20261005.json",
   "distance0_epoch1_cpu_audit_execution": "reports/full_method_v2_distance0_epoch1_audit_execution_20261005.json",
   "distance0_epoch1_retention_evidence": "reports/full_method_v2_distance0_first_epoch_retention_observation_20261005.json",
-  "distance0_retention_worker_pid": 573595,
+  "distance0_retention_worker_pid": null,
   "distance0_retained_recovery_checkpoint": {
-    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0001.pth.tar",
-    "bytes": 477077203,
-    "sha256": "716f71305c9ceb6bdb2752f6f34860ea54f5964bcff70aa7eb3b026fb0ed283e",
-    "best_by_benchmark": "NOT_DETERMINED"
+    "path": "/home/gaob/rgbx-full-method/xtrack_full_method_v2_distance0_s2026/XTrack_ep0015.pth.tar",
+    "bytes": 477078419,
+    "sha256": "3ec18dac8e701b668b47162dd2440ffcf19fa62de754be6c26144a71299c8d75",
+    "best_by_benchmark": "ALL_THREE_COMPARISON_PENDING_PROTECTED_WHILE_EVALUATION_CONSUMER_ACTIVE"
   },
   "joint_optimizer_controls_preparation": {
     "status": "SOURCE_AND_CPU_SEMANTICS_PASS_REAL_MODEL_DDP_AND_BENCHMARK_PENDING",
@@ -1430,7 +1649,8 @@
     "execution_CPU_contract_evidence": "reports/joint_optimizer_controls_execution_cpu_contracts_20261005.json",
     "execution_status": "HELD_SOURCE_REVIEW_AND_SYNTHETIC_CONTRACT_PASS_NOT_ACTIVATED_OR_RUN",
     "execution_controllers_started": 0,
-    "shared_evaluation_admission_activated": false
+    "shared_evaluation_admission_activated": false,
+    "priority": "C_THEN_D_AFTER_EXISTING_DISTANCE0_ALL_FIVE_STAGES_AND_EXIT0"
   },
   "completed_v1_monitoring_history": {
     "updated_at": "2026-10-05T14:45:18.828725+08:00",
@@ -1450,5 +1670,40 @@
     "scheduled_observer_started_at": "2026-10-05T13:39:20.048055+08:00",
     "scheduled_observer_status": "V1_OBSERVER_CLOSED_COMPLETE_RESULTS_COLLECTED",
     "next_action": "Execute the documented new candidate preflight once after static publication and actual free-GPU check."
+  },
+  "active_run_completed_totals": {
+    "updates": 37500,
+    "risk_events": 966,
+    "nonzero_corrections": 948,
+    "corrections_lowering_recorded_aggregate_risk": 948,
+    "corrections_eliminating_recorded_aggregate_risk": 460,
+    "accepted_remaining_risk_events": 506,
+    "trajectory_checks": 1699,
+    "no_local_risk_periodic_checks": 733,
+    "trajectory_only_positive_cost_events": 12,
+    "pair_check_forward_examples": 701082,
+    "trajectory_model_forward_examples": 31980,
+    "update_seconds": 90972.86431481712
+  },
+  "latest_user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json",
+  "actual_rank_pid_scope": "Original training ranks434003/434004/434005 ended; evaluation workers2254629/2254630/2254631 were observed alive only at the saved21:40 snapshot, not rechecked during this update.",
+  "distance0_retention_terminal": {
+    "ended_at": "2026-10-06T08:45:30.745634+00:00",
+    "removed_files": 29,
+    "removed_logical_bytes": 13835256359,
+    "own_cumulative_removed_files": 65,
+    "own_cumulative_removed_logical_bytes": 30973588685,
+    "evidence": "reports/full_method_v2_distance0_training_endpoint_observation_20261006.json"
+  },
+  "registered_comparable_research": {
+    "status": "USER_SUPPLIED_LEADS_PENDING_PRIMARY_SOURCE_VERIFICATION_AND_RUN",
+    "SLT": "Core sequence-training comparator: official byminji/SLTtrack and ECCV2022 paper; predicted-state sampling and window-aware objectives are prior ideas, not claimed original.",
+    "WiSE_FT": "Low-cost weight interpolation attribution control. Predeclare coefficient selection on training-only held-out data; same architecture/decoder, no test coefficient sweep or best-only report, not a new module."
+  },
+  "causal_decision_rules": {
+    "C_below_reference": "Check continued training, repairs, mixed sampling and initialization compatibility before blaming risk modules.",
+    "D_below_C": "Check the task-statistics implementation and effective displacement scale; reconsider using it.",
+    "D_above_C_but_full_below_D": "Prioritize risk/confirmation/correction effects on useful learning.",
+    "only_generation_improves": "Diagnose check-distribution transfer and reference preservation before increasing interventions."
   }
 }
