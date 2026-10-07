@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T23:12:54.839979+08:00",
+  "updated_at": "2026-10-08T00:03:36.028459+08:00",
   "objective": "在2028使用三卡与一份RGB-T/RGB-D/RGB-Event联合权重，完整评测并持续依据真实证据改进，争取全部主要指标超过同协议参考。在distance0全部五阶段真实结束后，优先完成C固定混采修正AdamW与D仅任务统计公平微调对照，再决定下一版方法。三个模块沿决策一致的目标级风险、独立确认的能力保持更新、可独立干预的搜索状态传播控制形成完整链路；分别验证模块作用、成熟优化器比较、训练成本与不确定性，再推进SUTrack及完整基准。原始65轮复现保持取消；修正次数、总损失下降和局部检查通过均不代替完整跟踪增益。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "D_REAL_FIRST310_UPDATES_FINITE_EPOCH1_SAVE_PENDING_C_ALL7_BELOW_REFERENCE_GOAL_UNMET",
+  "status": "D_EPOCH1_CPU_AUDIT_PASS_OWN_RETENTION_ACTIVE_ACTUAL2800_UPDATES_C_ALL7_BELOW_REFERENCE_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -106,7 +106,7 @@
     3767035,
     3767036
   ],
-  "actual_completed_updates_at_snapshot": 310,
+  "actual_completed_updates_at_snapshot": 2800,
   "tracking_scores": "V1_DISTANCE0_AND_C_FULL_SCORED_ALL7_BELOW_REFERENCE",
   "objective_met": false,
   "next_iteration_candidate": {
@@ -141,9 +141,9 @@
     "completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
     "lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json"
   },
-  "actual_training_examples_at_snapshot": 7440,
+  "actual_training_examples_at_snapshot": 67200,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 0,
+  "actual_completed_epochs_at_snapshot": 1,
   "first_epoch_risk_events": 109,
   "first_epoch_nonzero_corrections": 106,
   "first_epoch_trajectory_checks": 154,
@@ -275,7 +275,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-07T14:42:00.174317+00:00",
+  "runtime_snapshot_observed_at": "2026-10-07T15:58:47.483101+00:00",
   "execution_goal_version": "2026-10-06-user-review-v4",
   "ordered_next_steps": [
     {
@@ -400,10 +400,10 @@
     "historical_policy": "configs/gpu_limits.json"
   },
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
-  "training_runtime_state": "D_FORMAL_FIRST310_ATTESTED_FINITE_NO_EXTRA_MODULE_CALLS",
+  "training_runtime_state": "D_ACTUAL_EPOCH1_AUDITED_ONE_RECOVERY_POINT_SECOND_EPOCH_RUNNING",
   "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
-  "actual_epoch_at_snapshot": 1,
-  "actual_epoch_step_at_snapshot": 310,
+  "actual_epoch_at_snapshot": 2,
+  "actual_epoch_step_at_snapshot": 300,
   "completed_epoch_totals": {
     "updates": 37500,
     "risk_events": 968,
@@ -460,14 +460,14 @@
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-07T23:52:00+08:00",
-    "estimate_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_observer_launch_20261007.json",
-    "estimated_stage": "D first epoch updates estimated23:49:21 from310 actual steps mean1.84544142s;23:52 allows save and run receipt. Only then exact CPUepoch1audit and one owned retainer.",
-    "scheduled_observer_native_session": 20874,
-    "scheduled_observer_pid": 32396,
-    "scheduled_observer_started_at": "2026-10-07T14:45:20.457501+00:00",
-    "scheduled_observer_status": "ONE_PASSIVE_D_EPOCH1_SAVE_TIMER_PENDING",
-    "next_action": "At23:52 consume original20874 once, no earlyprogress/log/native/GPU query. If actual epoch1 file saved then existing exactCPUaudit once and oneownedretainer; adjust ETA from new actual timings."
+    "next_observation_not_before": "2026-10-08T09:44:50.881093+00:00",
+    "estimate_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_audit_retention_intake_20261008.json",
+    "estimated_stage": "One D observation3 minutes before measured training-update completion; checkpoint saves/controller waits/full scoring not included.",
+    "scheduled_observer_native_session": 91510,
+    "scheduled_observer_pid": 47876,
+    "scheduled_observer_started_at": "2026-10-07T16:01:14.560902+00:00",
+    "scheduled_observer_status": "ONE_PASSIVE_D_TRAINING_ENDPOINT_TIMER_PENDING",
+    "next_action": "At2026-10-08 17:44:50.881093CST consume original91510 once. No earlierprogress/log/native/GPU query, no repeat epoch1audit/retainer/training. Existing controller owns finalaudit/full3 author+C comparisons and uncertainty."
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_evidence_20261007/training_exit.json",
@@ -1157,7 +1157,7 @@
     "training_runtime_state": "ACTUAL_TRAIN_EXIT0_FIXED_15_EPOCHS_COMPLETE"
   },
   "completed_epoch_statistics_run_id": "xtrack_full_method_v1_s2026",
-  "active_run_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_complete_observation_20261007.json",
+  "active_run_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_audit_retention_intake_20261008.json",
   "active_distance0_milestones": {
     "first_diagnostic_not_before": "2026-10-05T07:28:21.783057+00:00",
     "preliminary_first_epoch_completion_estimate": "2026-10-05T09:00:21.116321+00:00",
@@ -1402,150 +1402,10 @@
       "epoch": 1,
       "steps": 2500,
       "means": {
-        "total": 0.9761611976146698,
-        "balance": 0.06780885073244572,
-        "classification": 14.974528956985473,
-        "iou": 0.823821065545082
-      }
-    },
-    {
-      "epoch": 2,
-      "steps": 2500,
-      "means": {
-        "total": 0.9778105878829956,
-        "balance": 0.06696662905216218,
-        "classification": 14.491560875320435,
-        "iou": 0.8223944767713547
-      }
-    },
-    {
-      "epoch": 3,
-      "steps": 2500,
-      "means": {
-        "total": 0.9600599435091018,
-        "balance": 0.06564620563536883,
-        "classification": 14.168446728134155,
-        "iou": 0.8243245034217834
-      }
-    },
-    {
-      "epoch": 4,
-      "steps": 2500,
-      "means": {
-        "total": 0.9526392316102982,
-        "balance": 0.06405541999787093,
-        "classification": 13.897893776702881,
-        "iou": 0.8258067638635636
-      }
-    },
-    {
-      "epoch": 5,
-      "steps": 2500,
-      "means": {
-        "total": 0.9564353970527649,
-        "balance": 0.062201785464584824,
-        "classification": 13.626663655853271,
-        "iou": 0.8233213671922683
-      }
-    },
-    {
-      "epoch": 6,
-      "steps": 2500,
-      "means": {
-        "total": 0.9531352742910385,
-        "balance": 0.06033993049412966,
-        "classification": 13.34770397644043,
-        "iou": 0.8233542303085327
-      }
-    },
-    {
-      "epoch": 7,
-      "steps": 2500,
-      "means": {
-        "total": 0.9476456481456756,
-        "balance": 0.058291042195260524,
-        "classification": 13.091019343948364,
-        "iou": 0.8235207694292068
-      }
-    },
-    {
-      "epoch": 8,
-      "steps": 2500,
-      "means": {
-        "total": 0.9373038933753968,
-        "balance": 0.05703498836308718,
-        "classification": 12.899244915390014,
-        "iou": 0.8251779515504837
-      }
-    },
-    {
-      "epoch": 9,
-      "steps": 2500,
-      "means": {
-        "total": 0.9446041470527649,
-        "balance": 0.05585099762231111,
-        "classification": 12.737775578308105,
-        "iou": 0.8237633111476899
-      }
-    },
-    {
-      "epoch": 10,
-      "steps": 2500,
-      "means": {
-        "total": 0.9368764053821563,
-        "balance": 0.05501078545600176,
-        "classification": 12.603713565826416,
-        "iou": 0.8241978282213211
-      }
-    },
-    {
-      "epoch": 11,
-      "steps": 2500,
-      "means": {
-        "total": 0.9326705547809601,
-        "balance": 0.054706740196049215,
-        "classification": 12.556228801727295,
-        "iou": 0.8246498548269272
-      }
-    },
-    {
-      "epoch": 12,
-      "steps": 2500,
-      "means": {
-        "total": 0.9396204980611801,
-        "balance": 0.05453457902818918,
-        "classification": 12.540667483520508,
-        "iou": 0.8241818145751953
-      }
-    },
-    {
-      "epoch": 13,
-      "steps": 2500,
-      "means": {
-        "total": 0.925397787475586,
-        "balance": 0.054264172305166725,
-        "classification": 12.530652465438843,
-        "iou": 0.8256331650972366
-      }
-    },
-    {
-      "epoch": 14,
-      "steps": 2500,
-      "means": {
-        "total": 0.9337829894781112,
-        "balance": 0.0543030435025692,
-        "classification": 12.51831633605957,
-        "iou": 0.8251222645759583
-      }
-    },
-    {
-      "epoch": 15,
-      "steps": 2500,
-      "means": {
-        "total": 0.9388640434503556,
-        "balance": 0.05430900047570467,
-        "classification": 12.510392988586426,
-        "iou": 0.8238640768766403
+        "total": 0.9770811668872833,
+        "balance": 0.06800034568607807,
+        "classification": 15.100749225234985,
+        "iou": 0.8238699052095413
       }
     }
   ],
@@ -1573,13 +1433,13 @@
     "checkpoint_integration_evidence": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
     "checkpoint_source_review_evidence": "reports/joint_optimizer_controls_checkpoint_source_review_revised_20261005.json",
     "checkpoint_state_cpu_evidence": "reports/joint_optimizer_controls_checkpoint_cpu_math_20261005.json",
-    "checkpoint_integration_status": "REAL_C_SANITY_EPOCH1_AND_ENDPOINT_CPU_STATE_AUDITS_PASS_RETENTION_FINISHED_CUDA_RESTORE_NOT_EXECUTED",
-    "retention_workers_started": 1,
-    "control_generated_checkpoint_files": "Sanity1 retired;14 old formal epochs retired; one terminal C15 weight retained for active evaluation.",
+    "checkpoint_integration_status": "C_AND_D_REAL_SANITY_EPOCH1_CPU_STATE_AUDITS_PASS_OWN_RETENTION_EXECUTED_CUDA_RESTORE_NOT_EXECUTED",
+    "retention_workers_started": 2,
+    "control_generated_checkpoint_files": "C completed dominated endpoint retired; D sanity input retired; D formal one audited recovery point retained by activeworker.",
     "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
     "execution_source_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
     "execution_CPU_contract_evidence": "reports/joint_optimizer_controls_execution_cpu_contracts_20261005.json",
-    "execution_status": "C_COMPLETE_D_FORMAL_FIRST310_ATTESTED_EPOCH1_SAVE_PENDING",
+    "execution_status": "D_REAL_EPOCH1_CPU_AUDIT_PASS_OWN_RETENTION_ACTIVE_FORMAL2800_RUNNING",
     "execution_controllers_started": 4,
     "shared_evaluation_admission_activated": true,
     "priority": "C_THEN_D_AFTER_EXISTING_DISTANCE0_ALL_FIVE_STAGES_AND_EXIT0",
@@ -1594,7 +1454,8 @@
     "C_lasher_results": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_complete_intake_20261007.json",
     "C_complete_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_complete_result_intake_20261007.json",
     "D_sanity": "reports/xtrack_task_stats_only_s2026_documented_sanity_20261007.json",
-    "D_formal_launch": "reports/xtrack_task_stats_only_s2026_formal_launch_20261007.json"
+    "D_formal_launch": "reports/xtrack_task_stats_only_s2026_formal_launch_20261007.json",
+    "D_epoch1_audit_retention_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_audit_retention_intake_20261008.json"
   },
   "completed_v1_monitoring_history": {
     "updated_at": "2026-10-05T14:45:18.828725+08:00",
@@ -1616,13 +1477,15 @@
     "next_action": "Execute the documented new candidate preflight once after static publication and actual free-GPU check."
   },
   "active_run_completed_totals": {
-    "completed_epochs": 15,
-    "updates": 37500,
-    "main_training_examples": 900000,
+    "completed_epochs": 1,
+    "completed_epoch_updates": 2500,
+    "completed_epoch_main_examples": 60000,
+    "prefix_updates": 2800,
+    "prefix_main_examples": 67200,
     "extra_module_calls": 0
   },
   "latest_user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json",
-  "actual_rank_pid_scope": "Original controller/torchrun/three ranks all present in actual22:42 ps; no later early query.",
+  "actual_rank_pid_scope": "Actual ps in saved23:58:47CST first-retention observation; not later queried during static archival/publication.",
   "distance0_retention_terminal": {
     "ended_at": "2026-10-06T08:45:30.745634+00:00",
     "removed_files": 29,
@@ -1961,9 +1824,9 @@
   ],
   "weight_retirement_evidence": "reports/completed_dominated_method_weight_retirement_20261007.json",
   "active_control_sanity_weight_retirement": "reports/xtrack_fixed_mixed_adamw_s2026_sanity_weight_retirement_20261007.json",
-  "active_control_epoch1_audit": null,
-  "active_control_retention_worker_pid": null,
-  "active_control_retention_evidence": null,
+  "active_control_epoch1_audit": "reports/xtrack_task_stats_only_s2026_epoch1_evidence_20261007/checkpoint_audit.json",
+  "active_control_retention_worker_pid": 3844290,
+  "active_control_retention_evidence": "reports/xtrack_task_stats_only_s2026_first_retention_snapshot_20261007.json",
   "active_control_completed_training": null,
   "active_control_endpoint_audit": null,
   "actual_method_scored_datasets": 0,

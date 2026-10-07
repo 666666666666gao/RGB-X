@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-07T12:42:24.807265+08:00",
+  "updated_at": "2026-10-08T00:03:36.028459+08:00",
   "authorization": "User explicitly requests timely cleanup of our unused generated weights and retention only of the best measured weight.",
   "precheck_cleanup": "reports/precheck_weight_cleanup_20261003.json",
   "active_training": "One most recently completed recovery checkpoint, including model, optimizer and rank RNG; retire older completed epochs and byte-identical latest alias.",
   "activation_gate": "After the actual C epoch1 named checkpoint, execute the reviewed CPU epoch1 audit once then start its one dedicated retention worker.",
-  "retention_worker_status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
+  "retention_worker_status": "ACTIVE_KEEP_ONE_COMPLETED_RECOVERY_CHECKPOINT",
   "metric_selection": "Complete same-protocol LasHeR SR/PR, DepthTrack F/Recall/Precision and VisEvent SR/PR; never label a training-loss minimum as the best tracking checkpoint.",
   "best_method_status": "NO_COMPLETED_METHOD_EXCEEDS_REFERENCE_V1_DISTANCE0_GENERATED_WEIGHTS_RETIRED",
   "after_complete_evaluation": "Retain the weight best for the seven predeclared required headlines plus one necessary recovery point of an active next iteration; the public reference dominates both completed methods on all seven and remains preserved. Supplementary metrics and all negative evidence remain reported.",
@@ -14,12 +14,16 @@
   ],
   "raw_evidence_retained": "All metrics, logs, configs, model and source audits, checkpoint hashes and cleanup receipts.",
   "live_training_protocol_changed": false,
-  "retention_worker_pid": null,
-  "retention_session": "Original C detached worker finished after retaining15 and retiring1..14.",
-  "activation_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_epoch1_evidence_20261007/activation.json",
-  "latest_recovery_path": null,
-  "latest_observation_evidence": "reports/xtrack_task_stats_only_s2026_sanity_weight_retirement_20261007.json",
-  "latest_observed_checkpoint": null,
+  "retention_worker_pid": 3844290,
+  "retention_session": "Dedicated existing reviewed D worker, detached Linuxsession,240s interval.",
+  "activation_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_evidence_20261007/activation.json",
+  "latest_recovery_path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0001.pth.tar",
+  "latest_observation_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_audit_retention_intake_20261008.json",
+  "latest_observed_checkpoint": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0001.pth.tar",
+    "bytes": 477079955,
+    "sha256": "10c0f0e8ccd2c1cf70d0072c686d5b083063e2849d41afcbeba56aab93075371"
+  },
   "generated_weight_files_removed_at_latest_observation": 84,
   "generated_weight_file_bytes_removed_at_latest_observation": 39455788086,
   "completed_v1_retention_history": {
@@ -38,9 +42,9 @@
     "generated_weight_files_removed_at_activation": 6,
     "generated_weight_file_bytes_removed_at_activation": 2826002092
   },
-  "latest_observation_at": "2026-10-07T14:42:00.174317+00:00",
+  "latest_observation_at": "2026-10-07T15:58:47.483101+00:00",
   "protected_completed_candidate": "None: C endpoint actually retired after full3/five stages; public joint reference remains required and best on all7.",
-  "unstarted_controls": "D actualformal310 committed updates; no D formal benchmark or epoch1 audit/retention activation yet.",
+  "unstarted_controls": "D actual2800 updates/epoch1CPUaudit and retentionactive. Cfull3 negative preserved; independent mechanism diagnostics not run.",
   "distance0_weight_files_removed_at_first_retention_observation": 1,
   "distance0_weight_file_bytes_removed_at_first_retention_observation": 477077203,
   "unstarted_control_audit_retention_evidence": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
@@ -48,8 +52,10 @@
   "C_worker_deleted_files_so_far": 14,
   "C_worker_removed_file_bytes_so_far": 6169593210,
   "C_endpoint_retirement": "reports/completed_dominated_c_weight_retirement_20261007.json",
-  "protected_active_point": "D first complete formal checkpoint not yet observed. After actual epoch1save/audit keep one current own recovery via existing retainer; public reference/input retained.",
+  "protected_active_point": "One actual audited D complete recovery point; no tracking score yet, not a measured best model.",
   "active_control_run_id": "xtrack_task_stats_only_s2026",
-  "active_control_retention_worker_pid": null,
-  "active_control_sanity_input": null
+  "active_control_retention_worker_pid": 3844290,
+  "active_control_sanity_input": null,
+  "D_worker_deleted_files_so_far": 0,
+  "D_worker_removed_file_bytes_so_far": 0
 }

@@ -1,0 +1,11 @@
+{
+  "status": "PASSIVE_WAIT_FOR_ONE_ACTUAL_D_RETENTION_OBSERVATION",
+  "local_pid": 14264,
+  "started_at": "2026-10-07T15:58:44.280441+00:00",
+  "observe_not_before": "2026-10-07T15:58:27.553885+00:00",
+  "retention_worker_pid": 3844290,
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_d_first_retention_observation_20261007.json",
+  "purpose": "Verify the already-launched reviewed worker has retained exactly one complete checkpoint after actual CPU audit. No early progress query."
+}
