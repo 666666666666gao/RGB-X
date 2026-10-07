@@ -1,0 +1,12 @@
+{
+  "status": "PASSIVE_TIMER_FOR_ONE_D_EPOCH1_OBSERVATION",
+  "local_pid": 32396,
+  "started_at": "2026-10-07T14:45:20.457501+00:00",
+  "observe_not_before": "2026-10-07T23:52:00+08:00",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_d_epoch1_observation_20261007.json",
+  "estimate_evidence": "reports/xtrack_task_stats_only_s2026_first_diagnostic_observation_20261007.json",
+  "estimated_epoch1_update_completion": "2026-10-07T23:49:21.691028+08:00",
+  "purpose": "Observe actual saved epoch1 before invoking the reviewed CPU audit and one retention worker. No early server query."
+}

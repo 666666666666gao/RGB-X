@@ -35,3 +35,4 @@ reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/train.log -text wh
 reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/training_exit.json -text whitespace=cr-at-eol
 reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/updates.jsonl -text whitespace=cr-at-eol
 reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/wrapper_exit.json -text whitespace=cr-at-eol
+reports/xtrack_task_stats_only_s2026_first_diagnostic_observation_20261007.json -text whitespace=cr-at-eol

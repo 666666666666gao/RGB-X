@@ -1,0 +1,16 @@
+{
+  "status": "ACTUAL_FORMAL_CONTROLLER_SAVED_SANITY_WEIGHT_RETIREMENT_RECEIPT_OBSERVED",
+  "observed_at": "2026-10-07T14:42:00.174317+00:00",
+  "retirement": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity/XTrack_ep0001.pth.tar",
+    "bytes": 477078739,
+    "sha256": "21a26fdcb09c5db07d63fe1d6781d004294037031f7a8d9b9f84743cbd172d20",
+    "audit_sha256": "72e6ab62da039b471cd3052d99f88114ec5244a5791d3d85e68c12eee1072f94",
+    "removed_at": "2026-10-07T14:31:58.124671+00:00"
+  },
+  "source_observation_sha256": "2c2dbdc35ac8e44cf50e6393ae6f45614bfe6575fe1ad7e97042e5f897e51ad3",
+  "cumulative_own_removed_files": 84,
+  "cumulative_own_removed_logical_bytes": 39455788086,
+  "scope": "Existing formal controller already retired exact sanity input after own launch. This intake performs no deletion or extra remote observation.",
+  "goal_achieved": false
+}

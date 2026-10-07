@@ -18,10 +18,10 @@
   "retention_session": "Original C detached worker finished after retaining15 and retiring1..14.",
   "activation_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_epoch1_evidence_20261007/activation.json",
   "latest_recovery_path": null,
-  "latest_observation_evidence": "reports/completed_dominated_c_weight_retirement_20261007.json",
+  "latest_observation_evidence": "reports/xtrack_task_stats_only_s2026_sanity_weight_retirement_20261007.json",
   "latest_observed_checkpoint": null,
-  "generated_weight_files_removed_at_latest_observation": 83,
-  "generated_weight_file_bytes_removed_at_latest_observation": 38978709347,
+  "generated_weight_files_removed_at_latest_observation": 84,
+  "generated_weight_file_bytes_removed_at_latest_observation": 39455788086,
   "completed_v1_retention_history": {
     "retention_worker_status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
     "retention_worker_pid": 1629089,
@@ -38,9 +38,9 @@
     "generated_weight_files_removed_at_activation": 6,
     "generated_weight_file_bytes_removed_at_activation": 2826002092
   },
-  "latest_observation_at": "2026-10-07T14:21:22.537340+00:00",
+  "latest_observation_at": "2026-10-07T14:42:00.174317+00:00",
   "protected_completed_candidate": "None: C endpoint actually retired after full3/five stages; public joint reference remains required and best on all7.",
-  "unstarted_controls": "D exact formal wrapper started after actual sanity. Existing controller retires sanity input after formal process launch; retirement not yet independently observed.",
+  "unstarted_controls": "D actualformal310 committed updates; no D formal benchmark or epoch1 audit/retention activation yet.",
   "distance0_weight_files_removed_at_first_retention_observation": 1,
   "distance0_weight_file_bytes_removed_at_first_retention_observation": 477077203,
   "unstarted_control_audit_retention_evidence": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
@@ -48,13 +48,8 @@
   "C_worker_deleted_files_so_far": 14,
   "C_worker_removed_file_bytes_so_far": 6169593210,
   "C_endpoint_retirement": "reports/completed_dominated_c_weight_retirement_20261007.json",
-  "protected_active_point": "Only required D sanity input until existing formal-controller retirement receipt; after epoch1 save/audit keep one own active complete recovery point.",
+  "protected_active_point": "D first complete formal checkpoint not yet observed. After actual epoch1save/audit keep one current own recovery via existing retainer; public reference/input retained.",
   "active_control_run_id": "xtrack_task_stats_only_s2026",
   "active_control_retention_worker_pid": null,
-  "active_control_sanity_input": {
-    "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity/XTrack_ep0001.pth.tar",
-    "bytes": 477078739,
-    "sha256": "21a26fdcb09c5db07d63fe1d6781d004294037031f7a8d9b9f84743cbd172d20",
-    "status": "VERIFIED_SANITY_INPUT_FORMAL_CONTROLLER_RETIREMENT_NOT_YET_OBSERVED"
-  }
+  "active_control_sanity_input": null
 }
