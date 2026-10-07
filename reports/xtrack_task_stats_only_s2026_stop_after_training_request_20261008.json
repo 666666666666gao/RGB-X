@@ -1,0 +1,35 @@
+{
+  "status": "USER_FINISH_CURRENT_D_TRAINING_THEN_STOP_CONTROLLER_HELD_TRAINING_CONTINUES",
+  "user_instruction": "做完现在的训练就停止",
+  "requested_action": "Finish the already-running D15-epoch training and save the terminal recovery checkpoint, then stop project work.",
+  "enforced_at": "2026-10-07T22:46:58.763637+00:00",
+  "run_id": "xtrack_task_stats_only_s2026",
+  "controller_pid": 3766982,
+  "controller_signal": "SIGSTOP",
+  "controller_actual_state": "T",
+  "training_worker_pid": 3767016,
+  "training_rank_pids": [
+    3767034,
+    3767035,
+    3767036
+  ],
+  "training_processes_verified_running": true,
+  "training_processes_signaled": false,
+  "automatic_post_training_stages_held": [
+    "endpoint-audit",
+    "evaluation",
+    "author-comparison",
+    "author-uncertainty",
+    "component-comparison",
+    "component-uncertainty"
+  ],
+  "post_training_action": "At the already scheduled endpoint observation, verify actual training exit and final saved checkpoint on CPU, end the held controller, preserve the one unscored D terminal checkpoint and measured public reference, sync the single handoff, then pause the goal at the explicit user request.",
+  "next_runtime_observation_not_before": "2026-10-08T09:44:50.881093+00:00",
+  "training_parameters_modified": false,
+  "training_or_evaluation_relaunched": false,
+  "training_progress_or_logs_queried": false,
+  "hardware_queried": false,
+  "benchmark_scores": "NOT_RUN",
+  "goal_achieved": false,
+  "processes": "    PID    PPID STAT     ELAPSED COMMAND\n3766982       1 Ts      08:15:01 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_joint_optimizer_control_job.py --optimizer task_adaptive_only\n3767016 3766982 Sl      08:15:00 /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29532 /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767034 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767035 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767036 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n"
+}

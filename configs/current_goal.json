@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T00:03:36.028459+08:00",
+  "updated_at": "2026-10-08T06:48:08.233725+08:00",
   "objective": "在2028使用三卡与一份RGB-T/RGB-D/RGB-Event联合权重，完整评测并持续依据真实证据改进，争取全部主要指标超过同协议参考。在distance0全部五阶段真实结束后，优先完成C固定混采修正AdamW与D仅任务统计公平微调对照，再决定下一版方法。三个模块沿决策一致的目标级风险、独立确认的能力保持更新、可独立干预的搜索状态传播控制形成完整链路；分别验证模块作用、成熟优化器比较、训练成本与不确定性，再推进SUTrack及完整基准。原始65轮复现保持取消；修正次数、总损失下降和局部检查通过均不代替完整跟踪增益。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "D_EPOCH1_CPU_AUDIT_PASS_OWN_RETENTION_ACTIVE_ACTUAL2800_UPDATES_C_ALL7_BELOW_REFERENCE_GOAL_UNMET",
+  "status": "USER_STOP_AFTER_CURRENT_D_TRAINING_PENDING_COMPLETION_CONTROLLER_HELD",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -98,7 +98,7 @@
   "routing_implementation_repairs": "Record separately from method contribution; independent correction and optimizer ablations deferred until full-method result",
   "checkpoint_and_result_root": "/home/gaob/rgbx-full-method",
   "handoff": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "goal_tool_note": "当前系统goal仍为active的“监控训练顺利进行”。工具仅支持创建目标或修改状态，不支持改写未完成目标的objective；没有把旧目标虚报完成。用户最新完整执行目标及验收要求以本文件为准。",
+  "goal_tool_note": "用户明确要求“做完现在的训练就停止”。当前训练完成、最终权重保存核对及交接同步前仍为active；随后按用户请求paused，不把未达成的完整研究目标标为complete。原研究范围和待做实验保留为暂停事项。",
   "actual_run_id": "xtrack_task_stats_only_s2026",
   "actual_controller_pid": 3766982,
   "actual_rank_pids": [
@@ -276,7 +276,7 @@
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
   "runtime_snapshot_observed_at": "2026-10-07T15:58:47.483101+00:00",
-  "execution_goal_version": "2026-10-06-user-review-v4",
+  "execution_goal_version": "2026-10-08-user-stop-after-current-training-v5",
   "ordered_next_steps": [
     {
       "id": "P0",
@@ -290,25 +290,28 @@
     },
     {
       "id": "P2",
-      "status": "C15_COMPLETE_LASHER_ALL4_NEGATIVE_REMAINING_VIS_DEPTH_COMPARISON_PENDING_BEFORE_D",
+      "status": "C_FULL_COMPLETE_D_RUNNING_FINISH_CURRENT_TRAINING_THEN_USER_STOP_NO_D_SCORING",
       "work": "After all five distance0 stages and actual controller exit0, use existing reviewed C sanity/audit and formal repaired fixed-mixed AdamW entry. Complete C full scores before task-statistics-only D. Use C/D to select the optimization base; retain B, canonical AdaTask, PCGrad/CAGrad and true module ablations in the full comparison scope.",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json"
     },
     {
       "id": "P3",
-      "status": "TWO_LIGHTWEIGHT_DIAGNOSTICS_REGISTERED_NOT_RUN",
-      "work": "Before another complex method, measure correction effect on generation versus different confirmation training clips, and raw versus Hann deployment peak/actual box/GT margins. Capture actual paired states; log response and box objectives directly. Then test per-sample/ref-reliable preservation and bounded memory with controlled changes; no test data or fabricated historical replay."
+      "status": "SUSPENDED_BY_EXPLICIT_USER_STOP_AFTER_CURRENT_TRAINING",
+      "work": "Before another complex method, measure correction effect on generation versus different confirmation training clips, and raw versus Hann deployment peak/actual box/GT margins. Capture actual paired states; log response and box objectives directly. Then test per-sample/ref-reliable preservation and bounded memory with controlled changes; no test data or fabricated historical replay.",
+      "status_before_user_stop": "TWO_LIGHTWEIGHT_DIAGNOSTICS_REGISTERED_NOT_RUN"
     },
     {
       "id": "P4",
-      "status": "TRAJECTORY_ONLY_PATTERN_OBSERVED_INDEPENDENT_CONTROL_NOT_IMPLEMENTED_NOT_RUN",
+      "status": "SUSPENDED_BY_EXPLICIT_USER_STOP_AFTER_CURRENT_TRAINING",
       "work": "Capture real paired parameter/search states for the four before/after parameter/crop combinations. Diagnose integer crop-boundary amplification using GT errors and target coverage. Independently triggered trajectory-only risk must change candidate generation or selection; compare equal-sample GT-centered multi-frame and predicted-box checks,3 versus longer clips. Neighboring-state checks remain training-only; continuous sampling is a separate attribution control.",
-      "observed_evidence": "reports/full_method_v1_sixth_epoch_record_check.json"
+      "observed_evidence": "reports/full_method_v1_sixth_epoch_record_check.json",
+      "status_before_user_stop": "TRAJECTORY_ONLY_PATTERN_OBSERVED_INDEPENDENT_CONTROL_NOT_IMPLEMENTED_NOT_RUN"
     },
     {
       "id": "P5",
-      "status": "AFTER_METHOD_EVIDENCE",
-      "work": "Validate on SUTrack-B224, then stronger B384 if warranted. Complete five core benchmarks later; RGBT234/VOT-RGBD2022/FE108/COESOT remain deferred for the current three-dataset development phase."
+      "status": "SUSPENDED_BY_EXPLICIT_USER_STOP_AFTER_CURRENT_TRAINING",
+      "work": "Validate on SUTrack-B224, then stronger B384 if warranted. Complete five core benchmarks later; RGBT234/VOT-RGBD2022/FE108/COESOT remain deferred for the current three-dataset development phase.",
+      "status_before_user_stop": "AFTER_METHOD_EVIDENCE"
     }
   ],
   "fair_comparison_chain": [
@@ -400,7 +403,7 @@
     "historical_policy": "configs/gpu_limits.json"
   },
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
-  "training_runtime_state": "D_ACTUAL_EPOCH1_AUDITED_ONE_RECOVERY_POINT_SECOND_EPOCH_RUNNING",
+  "training_runtime_state": "CURRENT_D_TRAINING_CONTINUES_ONLY_AUTOMATIC_CONTROLLER_SIGSTOP",
   "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
   "actual_epoch_at_snapshot": 2,
   "actual_epoch_step_at_snapshot": 300,
@@ -459,7 +462,7 @@
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
-    "training_pause_requested": false,
+    "training_pause_requested": true,
     "next_observation_not_before": "2026-10-08T09:44:50.881093+00:00",
     "estimate_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_audit_retention_intake_20261008.json",
     "estimated_stage": "One D observation3 minutes before measured training-update completion; checkpoint saves/controller waits/full scoring not included.",
@@ -467,7 +470,9 @@
     "scheduled_observer_pid": 47876,
     "scheduled_observer_started_at": "2026-10-07T16:01:14.560902+00:00",
     "scheduled_observer_status": "ONE_PASSIVE_D_TRAINING_ENDPOINT_TIMER_PENDING",
-    "next_action": "At2026-10-08 17:44:50.881093CST consume original91510 once. No earlierprogress/log/native/GPU query, no repeat epoch1audit/retainer/training. Existing controller owns finalaudit/full3 author+C comparisons and uncertainty."
+    "next_action": "At the original2026-10-08 17:44:50.881093CST milestone consume91510 once. Automatic controller is held, not resumed. After actual D training completes, verify exit/final checkpoint on CPU, end held controller, sync one handoff and pause. No subsequent evaluation or new experiment.",
+    "stop_timing": "AFTER_ALREADY_RUNNING_D_TRAINING_FINISHES_AND_SAVED_RESULT_VERIFIED",
+    "stop_request_evidence": "reports/xtrack_task_stats_only_s2026_stop_after_training_request_20261008.json"
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_evidence_20261007/training_exit.json",
@@ -2067,5 +2072,41 @@
   "D_actual_formal_started_at": "2026-10-07T14:31:57.146319+00:00",
   "D_formal_tracking_scores": "NOT_RUN",
   "D_first_diagnostic_intake": "reports/xtrack_task_stats_only_s2026_first_diagnostic_intake_20261007.json",
-  "D_sanity_weight_retirement": "reports/xtrack_task_stats_only_s2026_sanity_weight_retirement_20261007.json"
+  "D_sanity_weight_retirement": "reports/xtrack_task_stats_only_s2026_sanity_weight_retirement_20261007.json",
+  "execution_stop_request": {
+    "status": "USER_FINISH_CURRENT_D_TRAINING_THEN_STOP_CONTROLLER_HELD_TRAINING_CONTINUES",
+    "user_instruction": "做完现在的训练就停止",
+    "requested_action": "Finish the already-running D15-epoch training and save the terminal recovery checkpoint, then stop project work.",
+    "enforced_at": "2026-10-07T22:46:58.763637+00:00",
+    "run_id": "xtrack_task_stats_only_s2026",
+    "controller_pid": 3766982,
+    "controller_signal": "SIGSTOP",
+    "controller_actual_state": "T",
+    "training_worker_pid": 3767016,
+    "training_rank_pids": [
+      3767034,
+      3767035,
+      3767036
+    ],
+    "training_processes_verified_running": true,
+    "training_processes_signaled": false,
+    "automatic_post_training_stages_held": [
+      "endpoint-audit",
+      "evaluation",
+      "author-comparison",
+      "author-uncertainty",
+      "component-comparison",
+      "component-uncertainty"
+    ],
+    "post_training_action": "At the already scheduled endpoint observation, verify actual training exit and final saved checkpoint on CPU, end the held controller, preserve the one unscored D terminal checkpoint and measured public reference, sync the single handoff, then pause the goal at the explicit user request.",
+    "next_runtime_observation_not_before": "2026-10-08T09:44:50.881093+00:00",
+    "training_parameters_modified": false,
+    "training_or_evaluation_relaunched": false,
+    "training_progress_or_logs_queried": false,
+    "hardware_queried": false,
+    "benchmark_scores": "NOT_RUN",
+    "goal_achieved": false,
+    "processes": "    PID    PPID STAT     ELAPSED COMMAND\n3766982       1 Ts      08:15:01 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_joint_optimizer_control_job.py --optimizer task_adaptive_only\n3767016 3766982 Sl      08:15:00 /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29532 /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767034 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767035 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767036 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n"
+  },
+  "execution_stop_request_evidence": "reports/xtrack_task_stats_only_s2026_stop_after_training_request_20261008.json"
 }
