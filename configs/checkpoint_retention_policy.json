@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-07T03:41:16.697990+08:00",
+  "updated_at": "2026-10-07T12:42:24.807265+08:00",
   "authorization": "User explicitly requests timely cleanup of our unused generated weights and retention only of the best measured weight.",
   "precheck_cleanup": "reports/precheck_weight_cleanup_20261003.json",
   "active_training": "One most recently completed recovery checkpoint, including model, optimizer and rank RNG; retire older completed epochs and byte-identical latest alias.",
   "activation_gate": "After the actual C epoch1 named checkpoint, execute the reviewed CPU epoch1 audit once then start its one dedicated retention worker.",
-  "retention_worker_status": "ACTIVE_KEEP_ONE_COMPLETED_RECOVERY_CHECKPOINT",
+  "retention_worker_status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
   "metric_selection": "Complete same-protocol LasHeR SR/PR, DepthTrack F/Recall/Precision and VisEvent SR/PR; never label a training-loss minimum as the best tracking checkpoint.",
   "best_method_status": "NO_COMPLETED_METHOD_EXCEEDS_REFERENCE_V1_DISTANCE0_GENERATED_WEIGHTS_RETIRED",
   "after_complete_evaluation": "Retain the weight best for the seven predeclared required headlines plus one necessary recovery point of an active next iteration; the public reference dominates both completed methods on all seven and remains preserved. Supplementary metrics and all negative evidence remain reported.",
@@ -14,18 +14,18 @@
   ],
   "raw_evidence_retained": "All metrics, logs, configs, model and source audits, checkpoint hashes and cleanup receipts.",
   "live_training_protocol_changed": false,
-  "retention_worker_pid": 2657209,
-  "retention_session": "Dedicated existing reviewed C worker, detached Linux session,240s interval.",
+  "retention_worker_pid": null,
+  "retention_session": "Original C detached worker finished after retaining15 and retiring1..14.",
   "activation_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_epoch1_evidence_20261007/activation.json",
-  "latest_recovery_path": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0001.pth.tar",
-  "latest_observation_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_epoch1_audit_retention_intake_20261007.json",
+  "latest_recovery_path": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+  "latest_observation_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_intake_20261007.json",
   "latest_observed_checkpoint": {
-    "path": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0001.pth.tar",
-    "bytes": 440684603,
-    "sha256": "c63cb9e8d6c1d54c4ba153adb82cdcf644684b6bab1f8ed2bff2e22e1a34d7b5"
+    "path": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+    "bytes": 440685947,
+    "sha256": "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb"
   },
-  "generated_weight_files_removed_at_latest_observation": 68,
-  "generated_weight_file_bytes_removed_at_latest_observation": 32368430190,
+  "generated_weight_files_removed_at_latest_observation": 82,
+  "generated_weight_file_bytes_removed_at_latest_observation": 38538023400,
   "completed_v1_retention_history": {
     "retention_worker_status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
     "retention_worker_pid": 1629089,
@@ -42,13 +42,13 @@
     "generated_weight_files_removed_at_activation": 6,
     "generated_weight_file_bytes_removed_at_activation": 2826002092
   },
-  "latest_observation_at": "2026-10-06T19:36:45.362562+00:00",
-  "protected_completed_candidate": null,
-  "unstarted_controls": "Formal C actual3030 updates/epoch1CPUaudit and own retention active. D not started. Current recovery point is not measured best tracking weight.",
+  "latest_observation_at": "2026-10-07T04:25:03.458244+00:00",
+  "protected_completed_candidate": "C15 checkpoint is an actual active evaluation input; retain until full615-sequence scores and comparison finish.",
+  "unstarted_controls": "C formal15 complete and fullthree evaluation started; D not started. C15 not ranked best before complete same-protocol scores.",
   "distance0_weight_files_removed_at_first_retention_observation": 1,
   "distance0_weight_file_bytes_removed_at_first_retention_observation": 477077203,
   "unstarted_control_audit_retention_evidence": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
   "unstarted_control_execution_evidence": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
-  "C_worker_deleted_files_so_far": 0,
-  "C_worker_removed_file_bytes_so_far": 0
+  "C_worker_deleted_files_so_far": 14,
+  "C_worker_removed_file_bytes_so_far": 6169593210
 }

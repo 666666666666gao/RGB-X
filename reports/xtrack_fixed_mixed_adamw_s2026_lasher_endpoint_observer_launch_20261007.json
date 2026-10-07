@@ -1,0 +1,46 @@
+{
+  "status": "PASSIVE_TIMER_FOR_ONE_C_LASHER_ENDPOINT_OBSERVATION",
+  "local_pid": 50244,
+  "started_at": "2026-10-07T04:39:21.412892+00:00",
+  "observe_not_before": "2026-10-07T17:35:00+08:00",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_c_lasher_endpoint_observation_20261007.json",
+  "evaluation_controller_pid": 3192746,
+  "lasher_shard_forecasts": [
+    {
+      "shard": 0,
+      "assigned_sequences": 82,
+      "assigned_frame_pairs": 73377,
+      "observed_complete_sequences": 2,
+      "observed_complete_frames": 1155,
+      "observed_complete_elapsed_seconds": 268.3324226962868,
+      "early_observed_fps": 4.304362433708921,
+      "estimated_shard_completion": "2026-10-07T09:10:07.895357+00:00"
+    },
+    {
+      "shard": 1,
+      "assigned_sequences": 82,
+      "assigned_frame_pairs": 69596,
+      "observed_complete_sequences": 2,
+      "observed_complete_frames": 326,
+      "observed_complete_elapsed_seconds": 71.92604008456692,
+      "early_observed_fps": 4.532433588957574,
+      "estimated_shard_completion": "2026-10-07T08:41:55.877789+00:00"
+    },
+    {
+      "shard": 2,
+      "assigned_sequences": 81,
+      "assigned_frame_pairs": 77730,
+      "observed_complete_sequences": 1,
+      "observed_complete_frames": 295,
+      "observed_complete_elapsed_seconds": 68.47670573357027,
+      "early_observed_fps": 4.3080343430624195,
+      "estimated_shard_completion": "2026-10-07T09:26:43.803041+00:00"
+    }
+  ],
+  "assignment_evidence": "reports/full_method_v2_distance0_lasher_endpoint_observer_launch_20261006.json",
+  "assignment_manifest_sha256": "6a9558eb2d08d11a15c271e61356fc804af2b339ab3a982b88c6da5170063b7a",
+  "forecast_scope": "Only5 completed C sequences1776frames. Same exact manifest as the historical3-shard assignment; early timing may change. Completion estimate excludes remaining initialization/240s stage wait/coverage/scoring. Not a completed score or throughput claim.",
+  "purpose": "Read original complete evaluation pipeline once at17:35, after the early slowest-shard17:26 estimate plus coverage/scoring allowance. No early progress queries or evaluation restart."
+}

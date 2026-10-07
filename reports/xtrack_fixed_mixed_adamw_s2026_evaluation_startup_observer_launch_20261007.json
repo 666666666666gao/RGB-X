@@ -1,0 +1,10 @@
+{
+  "status": "PASSIVE_WAIT_FOR_ONE_C_EVALUATION_STARTUP_OBSERVATION",
+  "local_pid": 22916,
+  "started_at": "2026-10-07T04:26:54.973868+00:00",
+  "observe_not_before": "2026-10-07T12:31:00+08:00",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_c_evaluation_startup_observation_20261007.json",
+  "purpose": "Completed train exit0 and endpointPASS already observed; allow original240s controller cycle plus initialization, then verify actual evaluation launch. No train/audit/evaluation relaunch."
+}

@@ -1,0 +1,84 @@
+{
+  "status": "ACTUAL_C15_ENDPOINT_PASS_THREE_SHARD_LASHER_EVALUATION_STARTED_SCORES_PENDING",
+  "observed_at": "2026-10-07T04:31:11.891809+00:00",
+  "run_id": "xtrack_fixed_mixed_adamw_s2026",
+  "controller_pid": 2605254,
+  "evaluation_controller_pid": 3192746,
+  "evaluation_started_at": "2026-10-07T04:26:00.771391+00:00",
+  "evaluation_workers": [
+    {
+      "dataset": "LasHeR",
+      "shard": 0,
+      "pid": 3192895
+    },
+    {
+      "dataset": "LasHeR",
+      "shard": 1,
+      "pid": 3192896
+    },
+    {
+      "dataset": "LasHeR",
+      "shard": 2,
+      "pid": 3192897
+    }
+  ],
+  "completed_datasets": [],
+  "completed_LasHeR_sequences": 5,
+  "completed_LasHeR_frames": 1776,
+  "formal_scored_datasets": 0,
+  "identity": {
+    "checkpoint": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+    "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+    "checkpoint_sha256": "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+    "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "terminal_audit_sha256": "a1650ec995075c2d74a6a9656f94c783199fd7eab57798e2241426f942877abc"
+  },
+  "endpoint_audit_status": "PASS",
+  "actual_training_exit_code": 0,
+  "completed_training_intake": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_intake_20261007.json",
+  "raw_startup": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_observation_20261007.json",
+  "raw_startup_sha256": "5bd5406947e0ae63c6a01133d5022cf57984f377d2bf0a28a1437d2d3bcda3ae",
+  "three_actual_CUDA_witness_logs": "CUDA_WITNESS {\"index\": 0, \"gpu\": \"NVIDIA GeForce RTX 3090\", \"shape\": [16, 16], \"sum\": 248.32826232910156, \"torch\": \"1.13.1+cu117\", \"cuda\": \"11.7\"}\nCUDA_WITNESS {\"index\": 1, \"gpu\": \"NVIDIA GeForce RTX 3090\", \"shape\": [16, 16], \"sum\": 248.32826232910156, \"torch\": \"1.13.1+cu117\", \"cuda\": \"11.7\"}\nCUDA_WITNESS {\"index\": 2, \"gpu\": \"NVIDIA GeForce RTX 3090\", \"shape\": [16, 16], \"sum\": 248.32826232910156, \"torch\": \"1.13.1+cu117\", \"cuda\": \"11.7\"}\n",
+  "next_observer_native_session": 25505,
+  "next_observer_local_pid": 50244,
+  "next_observation_not_before": "2026-10-07T17:35:00+08:00",
+  "LasHeR_shard_forecasts": [
+    {
+      "shard": 0,
+      "assigned_sequences": 82,
+      "assigned_frame_pairs": 73377,
+      "observed_complete_sequences": 2,
+      "observed_complete_frames": 1155,
+      "observed_complete_elapsed_seconds": 268.3324226962868,
+      "early_observed_fps": 4.304362433708921,
+      "estimated_shard_completion": "2026-10-07T09:10:07.895357+00:00"
+    },
+    {
+      "shard": 1,
+      "assigned_sequences": 82,
+      "assigned_frame_pairs": 69596,
+      "observed_complete_sequences": 2,
+      "observed_complete_frames": 326,
+      "observed_complete_elapsed_seconds": 71.92604008456692,
+      "early_observed_fps": 4.532433588957574,
+      "estimated_shard_completion": "2026-10-07T08:41:55.877789+00:00"
+    },
+    {
+      "shard": 2,
+      "assigned_sequences": 81,
+      "assigned_frame_pairs": 77730,
+      "observed_complete_sequences": 1,
+      "observed_complete_frames": 295,
+      "observed_complete_elapsed_seconds": 68.47670573357027,
+      "early_observed_fps": 4.3080343430624195,
+      "estimated_shard_completion": "2026-10-07T09:26:43.803041+00:00"
+    }
+  ],
+  "forecast_scope": "Only5 completed C sequences1776frames. Same exact manifest as the historical3-shard assignment; early timing may change. Completion estimate excludes remaining initialization/240s stage wait/coverage/scoring. Not a completed score or throughput claim.",
+  "cumulative_own_retired_weight_files": 82,
+  "cumulative_own_retired_weight_logical_bytes": 38538023400,
+  "D_started": false,
+  "mechanism_diagnostics": "REGISTERED_NOT_EXECUTED",
+  "goal_achieved": false,
+  "scope": "Actual evaluation start and5 complete sequence receipts only. No partial benchmark estimate, new scoring, reference rerun, model/source/data change or early runtime query. C15 weight retained for the active full evaluator."
+}

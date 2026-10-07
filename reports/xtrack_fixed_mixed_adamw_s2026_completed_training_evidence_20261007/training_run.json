@@ -1,0 +1,241 @@
+{
+  "status": "TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT",
+  "run_id": "xtrack_fixed_mixed_adamw_s2026",
+  "protocol": {
+    "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+    "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+    "seed": 2026,
+    "epochs": 15,
+    "samples_per_epoch": 60000,
+    "batch_per_rank": 8,
+    "world_size": 3,
+    "lr": 1e-05,
+    "lr_drop_epoch": 10,
+    "lr_drop_factor": 0.1,
+    "weight_decay": 0.0001,
+    "grad_clip_norm": 0.1,
+    "num_workers": 3,
+    "amp": false,
+    "checkpoint_every_epoch": true,
+    "run_id": "xtrack_fixed_mixed_adamw_s2026",
+    "output": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026",
+    "optimizer": "adamw",
+    "modules_enabled": [],
+    "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch.",
+    "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+    "localization_risk_checks": false,
+    "selective_correction": false,
+    "closed_loop_checks": false,
+    "check_data_usage": "Only training loader is iterated; no paired check samples or short clips are fetched.",
+    "loss_normalization": "Per-task local means weighted by local task count/global task count, sum over ranks, equal mean over3 tasks. Keep balance on each complete mixed rank batch.",
+    "comparison_role": "Repaired fixed-mixed AdamW paired control C",
+    "reference_recipe_equivalence": "Same configured main-data sampling, seed, loss and initialization; bitwise-identical augmentations across variants/epochs are not claimed."
+  },
+  "protocol_sha256": "404371a7f81a01ce721cf6fc2cbf2b11b30f3b2012f372306a14a3f941b6656f",
+  "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+  "optimizer_kind": "adamw",
+  "world_size": 3,
+  "output": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026",
+  "modules_enabled": [],
+  "localization_check_calls": 0,
+  "correction_calls": 0,
+  "trajectory_calls": 0,
+  "check_examples": 0,
+  "unused_check_loader_constructed_not_iterated": true,
+  "formal_tracking_scores": "NOT_RUN",
+  "started_at": "2026-10-06T18:49:57.536161+00:00",
+  "rank_pids": [
+    2605305,
+    2605306,
+    2605307
+  ],
+  "attempt_id": "20261006T184957762884Z",
+  "observed_at": "2026-10-07T04:20:58.304972+00:00",
+  "epoch": 15,
+  "step": 2500,
+  "global_step": 37500,
+  "training_examples": 900000,
+  "latest": {
+    "attempt_id": "20261006T184957762884Z",
+    "epoch": 15,
+    "step": 2500,
+    "global_step": 37500,
+    "optimizer_kind": "adamw",
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "learning_rate": 1.0000000000000002e-06,
+    "step_seconds": 0.885265072924085,
+    "peak_allocated_bytes": 5523550208,
+    "main_training_examples": 24,
+    "localization_check_calls": 0,
+    "correction_calls": 0,
+    "trajectory_calls": 0,
+    "pair_check_forward_examples": 0,
+    "trajectory_model_forward_examples": 0,
+    "optimizer_statistics_updates": 1,
+    "weight_decay_applications": 1,
+    "joint_grad_norm_before_clip": 1.672079086303711,
+    "gradient_clip_coefficient": 0.05980574783415987
+  },
+  "wallclock_seconds": 34260.536564331036,
+  "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+  "completed_epochs": 15,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "steps": 2500,
+      "means": {
+        "total": 0.9761611976146698,
+        "balance": 0.06780885073244572,
+        "classification": 14.974528956985473,
+        "iou": 0.823821065545082
+      }
+    },
+    {
+      "epoch": 2,
+      "steps": 2500,
+      "means": {
+        "total": 0.9778105878829956,
+        "balance": 0.06696662905216218,
+        "classification": 14.491560875320435,
+        "iou": 0.8223944767713547
+      }
+    },
+    {
+      "epoch": 3,
+      "steps": 2500,
+      "means": {
+        "total": 0.9600599435091018,
+        "balance": 0.06564620563536883,
+        "classification": 14.168446728134155,
+        "iou": 0.8243245034217834
+      }
+    },
+    {
+      "epoch": 4,
+      "steps": 2500,
+      "means": {
+        "total": 0.9526392316102982,
+        "balance": 0.06405541999787093,
+        "classification": 13.897893776702881,
+        "iou": 0.8258067638635636
+      }
+    },
+    {
+      "epoch": 5,
+      "steps": 2500,
+      "means": {
+        "total": 0.9564353970527649,
+        "balance": 0.062201785464584824,
+        "classification": 13.626663655853271,
+        "iou": 0.8233213671922683
+      }
+    },
+    {
+      "epoch": 6,
+      "steps": 2500,
+      "means": {
+        "total": 0.9531352742910385,
+        "balance": 0.06033993049412966,
+        "classification": 13.34770397644043,
+        "iou": 0.8233542303085327
+      }
+    },
+    {
+      "epoch": 7,
+      "steps": 2500,
+      "means": {
+        "total": 0.9476456481456756,
+        "balance": 0.058291042195260524,
+        "classification": 13.091019343948364,
+        "iou": 0.8235207694292068
+      }
+    },
+    {
+      "epoch": 8,
+      "steps": 2500,
+      "means": {
+        "total": 0.9373038933753968,
+        "balance": 0.05703498836308718,
+        "classification": 12.899244915390014,
+        "iou": 0.8251779515504837
+      }
+    },
+    {
+      "epoch": 9,
+      "steps": 2500,
+      "means": {
+        "total": 0.9446041470527649,
+        "balance": 0.05585099762231111,
+        "classification": 12.737775578308105,
+        "iou": 0.8237633111476899
+      }
+    },
+    {
+      "epoch": 10,
+      "steps": 2500,
+      "means": {
+        "total": 0.9368764053821563,
+        "balance": 0.05501078545600176,
+        "classification": 12.603713565826416,
+        "iou": 0.8241978282213211
+      }
+    },
+    {
+      "epoch": 11,
+      "steps": 2500,
+      "means": {
+        "total": 0.9326705547809601,
+        "balance": 0.054706740196049215,
+        "classification": 12.556228801727295,
+        "iou": 0.8246498548269272
+      }
+    },
+    {
+      "epoch": 12,
+      "steps": 2500,
+      "means": {
+        "total": 0.9396204980611801,
+        "balance": 0.05453457902818918,
+        "classification": 12.540667483520508,
+        "iou": 0.8241818145751953
+      }
+    },
+    {
+      "epoch": 13,
+      "steps": 2500,
+      "means": {
+        "total": 0.925397787475586,
+        "balance": 0.054264172305166725,
+        "classification": 12.530652465438843,
+        "iou": 0.8256331650972366
+      }
+    },
+    {
+      "epoch": 14,
+      "steps": 2500,
+      "means": {
+        "total": 0.9337829894781112,
+        "balance": 0.0543030435025692,
+        "classification": 12.51831633605957,
+        "iou": 0.8251222645759583
+      }
+    },
+    {
+      "epoch": 15,
+      "steps": 2500,
+      "means": {
+        "total": 0.9388640434503556,
+        "balance": 0.05430900047570467,
+        "classification": 12.510392988586426,
+        "iou": 0.8238640768766403
+      }
+    }
+  ],
+  "replica_parameter_sha256": "1162b7c8a6c7d8e1bbd7d235f63103b3dee28678b07ead00d746ad6b1a6075b9",
+  "checkpoint_retention": "External first-epoch audit and owned retention activation required; no latest alias is generated.",
+  "ended_at": "2026-10-07T04:20:59.447454+00:00"
+}

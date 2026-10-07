@@ -1,0 +1,14 @@
+{
+  "status": "PASSIVE_WAIT_FOR_ONE_C_TERMINAL_CONFIRMATION",
+  "local_pid": 42452,
+  "started_at": "2026-10-07T04:20:50.532696+00:00",
+  "observe_not_before": "2026-10-07T12:25:00+08:00",
+  "measured_remaining_steps": 100,
+  "last500_mean_step_seconds": 0.9073384475740605,
+  "estimated_update_completion": "2026-10-07T04:21:01.387517+00:00",
+  "estimate_scope": "After predicted12:21 update completion, allow final save and existing240s controller/retention cycle; completion remains unproven until receipt.",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_c_terminal_confirmation_observation_20261007.json",
+  "purpose": "Observe original C process/checkpoint/audit/evaluation state once; no training, audit, retention or evaluation relaunch."
+}
