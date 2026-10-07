@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T20:40:52.297561+08:00",
+  "updated_at": "2026-10-07T22:35:04.753792+08:00",
   "objective": "在2028使用三卡与一份RGB-T/RGB-D/RGB-Event联合权重，完整评测并持续依据真实证据改进，争取全部主要指标超过同协议参考。在distance0全部五阶段真实结束后，优先完成C固定混采修正AdamW与D仅任务统计公平微调对照，再决定下一版方法。三个模块沿决策一致的目标级风险、独立确认的能力保持更新、可独立干预的搜索状态传播控制形成完整链路；分别验证模块作用、成熟优化器比较、训练成本与不确定性，再推进SUTrack及完整基准。原始65轮复现保持取消；修正次数、总损失下降和局部检查通过均不代替完整跟踪增益。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "C_LASHER_AND_VISEVENT_FULL_SCORED_BOTH_BELOW_REFERENCE_DEPTHTRACK_RUNNING_D_PENDING_GOAL_UNMET",
+  "status": "C_ALL3_ALL7_BELOW_REFERENCE_D_ACTUAL_DOCUMENTED_SANITY_PASS_FORMAL_WRAPPER_LAUNCHED_INITIAL_UPDATES_UNOBSERVED_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -99,11 +99,11 @@
   "checkpoint_and_result_root": "/home/gaob/rgbx-full-method",
   "handoff": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "goal_tool_note": "当前系统goal仍为active的“监控训练顺利进行”。工具仅支持创建目标或修改状态，不支持改写未完成目标的objective；没有把旧目标虚报完成。用户最新完整执行目标及验收要求以本文件为准。",
-  "actual_run_id": "xtrack_fixed_mixed_adamw_s2026",
-  "actual_controller_pid": 2605254,
+  "actual_run_id": "xtrack_task_stats_only_s2026",
+  "actual_controller_pid": 3766982,
   "actual_rank_pids": [],
-  "actual_completed_updates_at_snapshot": 37500,
-  "tracking_scores": "V1_AND_DISTANCE0_ALL_THREE_FULL_SCORED_BOTH_ALL7_BELOW_REFERENCE",
+  "actual_completed_updates_at_snapshot": null,
+  "tracking_scores": "V1_DISTANCE0_AND_C_FULL_SCORED_ALL7_BELOW_REFERENCE",
   "objective_met": false,
   "next_iteration_candidate": {
     "status": "ACTUAL_ALL_FIVE_STAGES_COMPLETED_EXIT0",
@@ -137,9 +137,9 @@
     "completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
     "lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json"
   },
-  "actual_training_examples_at_snapshot": 900000,
+  "actual_training_examples_at_snapshot": null,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 15,
+  "actual_completed_epochs_at_snapshot": null,
   "first_epoch_risk_events": 109,
   "first_epoch_nonzero_corrections": 106,
   "first_epoch_trajectory_checks": 154,
@@ -271,7 +271,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-07T12:05:03.557967+00:00",
+  "runtime_snapshot_observed_at": "2026-10-07T14:15:03.517843+00:00",
   "execution_goal_version": "2026-10-06-user-review-v4",
   "ordered_next_steps": [
     {
@@ -396,10 +396,10 @@
     "historical_policy": "configs/gpu_limits.json"
   },
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
-  "training_runtime_state": "C_TRAIN_EXIT0_ENDPOINT_PASS_EVALUATION_RUNNING",
+  "training_runtime_state": "D_EXACT_FORMAL_JOB_LAUNCHED_ONCE_NOT_YET_STARTUP_ATTESTED",
   "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
-  "actual_epoch_at_snapshot": 15,
-  "actual_epoch_step_at_snapshot": 2500,
+  "actual_epoch_at_snapshot": null,
+  "actual_epoch_step_at_snapshot": null,
   "completed_epoch_totals": {
     "updates": 37500,
     "risk_events": 968,
@@ -456,14 +456,14 @@
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-07T22:15:00+08:00",
-    "estimate_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_depthtrack_endpoint_observer_launch_20261007.json",
-    "estimated_stage": "Full DepthTrack50/76373 and final comparison/uncertainty. Actual20:05 worker elapsed10:19 implies19:54:44 start; saved distance0 shard wallclock forecasts slowest22:00:20, allowance until22:15.",
-    "scheduled_observer_native_session": 49931,
-    "scheduled_observer_pid": 30652,
-    "scheduled_observer_started_at": "2026-10-07T12:38:02.204016+00:00",
-    "scheduled_observer_status": "ONE_PASSIVE_C_DEPTHTRACK_ENDPOINT_TIMER_PENDING",
-    "next_action": "At22:15 consume original49931 once; no early progress/log/native/GPU queries. Collect full DepthTrack/comparison/uncertainty and actual controller terminal before D documented sanity/formal launch."
+    "next_observation_not_before": "2026-10-07T14:41:57.146319+00:00",
+    "estimate_evidence": "reports/xtrack_task_stats_only_s2026_first_diagnostic_observer_launch_20261007.json",
+    "estimated_stage": "One D startup diagnostic at launch+10min; use real formal step timings to predict epoch1 audit/retention and full run.",
+    "scheduled_observer_native_session": 17226,
+    "scheduled_observer_pid": 38460,
+    "scheduled_observer_started_at": "2026-10-07T14:32:29.796642+00:00",
+    "scheduled_observer_status": "ONE_PASSIVE_D_STARTUP_DIAGNOSTIC_PENDING",
+    "next_action": "Consume original17226 once at22:41:57.146319CST; no earlier progress/log/native/GPU queries. Actual epoch1 save then exact CPUaudit and one owned retainer; full3 author and C comparisons after15."
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_evidence_20261007/training_exit.json",
@@ -611,8 +611,8 @@
     "frame_pairs": 157421,
     "attributes": 17
   },
-  "actual_evaluation_controller_pid": 3192746,
-  "actual_method_evaluation_controller_pid": 3192746,
+  "actual_evaluation_controller_pid": null,
+  "actual_method_evaluation_controller_pid": null,
   "reference_required_headlines": {
     "LasHeR_SR": 0.5554599303245381,
     "LasHeR_PR": 0.6905088871059202,
@@ -720,7 +720,7 @@
     "collected_at": "2026-10-05T02:32:10.143444+08:00",
     "scope": "Completed author-reference native scores only. Full 50-sequence coverage, original official PR aggregation, separate group definitions, 50 CSV rows, 11 raw artifact hashes verified. No neural inference or scorer replay. Method scores not inferred."
   },
-  "latest_evaluation_milestone": "reports/xtrack_fixed_mixed_adamw_s2026_visevent_complete_intake_20261007.json",
+  "latest_evaluation_milestone": "reports/xtrack_fixed_mixed_adamw_s2026_complete_result_intake_20261007.json",
   "method_lasher_complete_metrics": {
     "report": "reports/method_xtrack_full_method_v1_s2026/LasHeR/scores/metrics.json",
     "intake": "reports/full_method_v1_lasher_complete_intake_20261005.json",
@@ -1561,9 +1561,9 @@
     "evidence": "reports/joint_optimizer_controls_preparation_20261005.json",
     "cpu_math_evidence": "reports/joint_optimizer_controls_cpu_math_20261005.json",
     "source_review_evidence": "reports/joint_optimizer_controls_source_review_revised_20261005.json",
-    "actual_gpu_jobs_started": 2,
+    "actual_gpu_jobs_started": 4,
     "existing_distance0_sources_changed": 0,
-    "real_model_forward_calls": "C sanity/formal37500 actual, full LasHeR245 and VisEvent320 inference scored; DepthTrack actual ongoing. No risk/correction/trajectory-check extras in C.",
+    "real_model_forward_calls": "C full37500 updates and615/454497 tracking scored. D actual sanity2updates/48examples attested; D formal wrapper launched, first formal update not yet observed. No risk/correction/trajectory extras requested.",
     "canonical_AdaTask_completed": false,
     "subsequent_launch_condition": "Complete actual distance0 controller training/endpoint/all-three-evaluation/comparison/uncertainty and actual process exit first. Activate exact reviewed C/D admission after release; real C sanity+CPU saved-state audit precedes formal C, then complete C scoring before D. Schedule actual first-epoch audit/retention separately as in distance0; no worker launch is claimed.",
     "checkpoint_integration_evidence": "reports/joint_optimizer_controls_checkpoint_preparation_20261005.json",
@@ -1575,8 +1575,8 @@
     "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
     "execution_source_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
     "execution_CPU_contract_evidence": "reports/joint_optimizer_controls_execution_cpu_contracts_20261005.json",
-    "execution_status": "C_FULL_LASHER_AND_VISEVENT_COLLECTED_DEPTHTRACK_PENDING_D_NOT_STARTED",
-    "execution_controllers_started": 2,
+    "execution_status": "C_COMPLETE_D_REAL_TWO_STEP_AND_CPU_AUDIT_PASS_FORMAL_WRAPPER_STARTED",
+    "execution_controllers_started": 4,
     "shared_evaluation_admission_activated": true,
     "priority": "C_THEN_D_AFTER_EXISTING_DISTANCE0_ALL_FIVE_STAGES_AND_EXIT0",
     "admission_activation_evidence": "reports/joint_optimizer_controls_admission_activation_20261007.json",
@@ -1587,7 +1587,10 @@
     "C_epoch1_audit_retention_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_epoch1_audit_retention_intake_20261007.json",
     "C_completed_training_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_intake_20261007.json",
     "C_evaluation_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_intake_20261007.json",
-    "C_lasher_results": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_complete_intake_20261007.json"
+    "C_lasher_results": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_complete_intake_20261007.json",
+    "C_complete_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_complete_result_intake_20261007.json",
+    "D_sanity": "reports/xtrack_task_stats_only_s2026_documented_sanity_20261007.json",
+    "D_formal_launch": "reports/xtrack_task_stats_only_s2026_formal_launch_20261007.json"
   },
   "completed_v1_monitoring_history": {
     "updated_at": "2026-10-05T14:45:18.828725+08:00",
@@ -1615,7 +1618,7 @@
     "extra_module_calls": 0
   },
   "latest_user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json",
-  "actual_rank_pid_scope": "Training ranks ended; original controller plus three actual LasHeR inference workers appear in the12:31 ps.",
+  "actual_rank_pid_scope": "D rank PIDs not yet observed; no early progress query.",
   "distance0_retention_terminal": {
     "ended_at": "2026-10-06T08:45:30.745634+00:00",
     "removed_files": 29,
@@ -1635,12 +1638,8 @@
     "D_above_C_but_full_below_D": "Prioritize risk/confirmation/correction effects on useful learning.",
     "only_generation_improves": "Diagnose check-distribution transfer and reference preservation before increasing interventions."
   },
-  "active_evaluation_worker_pids": [
-    3555785,
-    3555786,
-    3555787
-  ],
-  "active_evaluation_worker_pid_scope": "Original three DepthTrack workers all present in actual20:05 ps; no subsequent early progress query.",
+  "active_evaluation_worker_pids": [],
+  "active_evaluation_worker_pid_scope": "All original C PIDs absent in actual22:15 ps; controller actualexit0, no active C evaluation.",
   "distance0_visevent_metrics": {
     "SR_AUC": 0.5978613014783833,
     "PR_at_20": 0.7594856032802182,
@@ -1693,7 +1692,7 @@
       }
     }
   },
-  "actual_controller_status": "RUNNING",
+  "actual_controller_status": "D_FORMAL_WRAPPER_LAUNCHED_FIRST_UPDATE_NOT_YET_OBSERVED",
   "distance0_complete_comparison": "reports/full_method_v2_distance0_complete_comparison.json",
   "distance0_paired_sequence_uncertainty": "reports/full_method_v2_distance0_paired_sequence_uncertainty.json",
   "distance0_complete_result": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
@@ -1948,20 +1947,22 @@
     "trajectory_model_forward_examples": 31980,
     "update_seconds": 90972.86431481712
   },
-  "active_control_sanity": "reports/xtrack_fixed_mixed_adamw_s2026_documented_sanity_20261007.json",
-  "active_control_protocol": "configs/xtrack_fixed_mixed_adamw_s2026.json",
+  "active_control_sanity": "reports/xtrack_task_stats_only_s2026_documented_sanity_20261007.json",
+  "active_control_protocol": "configs/xtrack_task_stats_only_s2026.json",
   "active_control_expected_steps": 37500,
   "active_control_expected_examples": 900000,
-  "active_control_optimizer": "adamw",
-  "active_control_extra_modules_enabled": [],
+  "active_control_optimizer": "task_adaptive_only",
+  "active_control_extra_modules_enabled": [
+    "task_adaptive_statistics"
+  ],
   "weight_retirement_evidence": "reports/completed_dominated_method_weight_retirement_20261007.json",
   "active_control_sanity_weight_retirement": "reports/xtrack_fixed_mixed_adamw_s2026_sanity_weight_retirement_20261007.json",
-  "active_control_epoch1_audit": "reports/xtrack_fixed_mixed_adamw_s2026_epoch1_evidence_20261007/checkpoint_audit.json",
+  "active_control_epoch1_audit": null,
   "active_control_retention_worker_pid": null,
-  "active_control_retention_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_first_retention_snapshot_20261007.json",
-  "active_control_completed_training": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_intake_20261007.json",
-  "active_control_endpoint_audit": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_evidence_20261007/endpoint_audit.json",
-  "actual_method_scored_datasets": 2,
+  "active_control_retention_evidence": null,
+  "active_control_completed_training": null,
+  "active_control_endpoint_audit": null,
+  "actual_method_scored_datasets": 0,
   "C_evaluation_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_intake_20261007.json",
   "C_lasher_metrics": {
     "SR_AUC": 0.5525816588826673,
@@ -2139,5 +2140,63 @@
     }
   },
   "C_visevent_complete_intake": "reports/xtrack_fixed_mixed_adamw_s2026_visevent_complete_intake_20261007.json",
-  "C_visevent_paired_diagnosis": "reports/xtrack_fixed_mixed_adamw_s2026_visevent_paired_diagnosis_20261007.json"
+  "C_visevent_paired_diagnosis": "reports/xtrack_fixed_mixed_adamw_s2026_visevent_paired_diagnosis_20261007.json",
+  "C_complete_result": "reports/xtrack_fixed_mixed_adamw_s2026_complete_result_intake_20261007.json",
+  "C_author_comparison": "reports/xtrack_fixed_mixed_adamw_s2026_author_comparison.json",
+  "C_author_paired_sequence_uncertainty": "reports/xtrack_fixed_mixed_adamw_s2026_author_paired_sequence_uncertainty.json",
+  "C_depthtrack_metrics": {
+    "Precision": 0.5956814207385692,
+    "Recall": 0.6054516754817261,
+    "F_score": 0.6005268115155743
+  },
+  "C_required_headlines": {
+    "LasHeR_SR": {
+      "reference": 0.5554599303245381,
+      "method": 0.5525816588826673,
+      "delta": -0.0028782714418708055,
+      "improved": false
+    },
+    "LasHeR_PR": {
+      "reference": 0.6905088871059202,
+      "method": 0.6873520536643901,
+      "delta": -0.0031568334415300603,
+      "improved": false
+    },
+    "VisEvent_SR": {
+      "reference": 0.6045030614193362,
+      "method": 0.5988575061905789,
+      "delta": -0.005645555228757315,
+      "improved": false
+    },
+    "VisEvent_PR": {
+      "reference": 0.7692957488705718,
+      "method": 0.7607544045561051,
+      "delta": -0.008541344314466737,
+      "improved": false
+    },
+    "DepthTrack_F": {
+      "reference": 0.613343119157631,
+      "method": 0.6005268115155743,
+      "delta": -0.012816307642056657,
+      "improved": false
+    },
+    "DepthTrack_Recall": {
+      "reference": 0.6156268604286835,
+      "method": 0.6054516754817261,
+      "delta": -0.01017518494695746,
+      "improved": false
+    },
+    "DepthTrack_Precision": {
+      "reference": 0.6110762588858001,
+      "method": 0.5956814207385692,
+      "delta": -0.01539483814723086,
+      "improved": false
+    }
+  },
+  "C_weight_retirement": "reports/completed_dominated_c_weight_retirement_20261007.json",
+  "C_formal_scored_datasets": 3,
+  "D_documented_sanity": "reports/xtrack_task_stats_only_s2026_documented_sanity_20261007.json",
+  "D_formal_launch": "reports/xtrack_task_stats_only_s2026_formal_launch_20261007.json",
+  "D_actual_formal_started_at": "2026-10-07T14:31:57.146319+00:00",
+  "D_formal_tracking_scores": "NOT_RUN"
 }

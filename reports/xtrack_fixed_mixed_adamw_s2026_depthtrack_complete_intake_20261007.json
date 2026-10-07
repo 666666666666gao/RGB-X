@@ -1,0 +1,98 @@
+{
+  "status": "ACTUAL_C_FIXED_ADAMW_DEPTHTRACK_ALL50_OFFICIAL_METRICS_COLLECTED_REQUIRES_FULL_COMPARISON",
+  "sequence_count": 50,
+  "frame_pairs": 76373,
+  "trajectories": 50,
+  "missing_sequences": 0,
+  "missing_trajectories": 0,
+  "headline_metrics": {
+    "Precision": 0.5956814207385692,
+    "Recall": 0.6054516754817261,
+    "F_score": 0.6005268115155743
+  },
+  "cpu_overall_reaggregation_absolute_errors": {
+    "Precision": 0.0,
+    "Recall": 1.1102230246251565e-16,
+    "F_score": 1.1102230246251565e-16
+  },
+  "confidence_thresholds": 100,
+  "attributes": 15,
+  "attribute_scope": "15 whole-sequence groups and 15 tagged-frame groups; supplemental diagnostics, not official overall metrics.",
+  "tagged_frame_scope": "Verified saved PR/F internal consistency and tag counts; original native overlap/tag recomputation is the completed server scorer, not replayed by this intake.",
+  "rpc_tracking_seconds": 17709.211544513702,
+  "fps": 4.312614359370521,
+  "gpu_memory": {
+    "peak_allocated_bytes": 541109760.0,
+    "peak_reserved_bytes": 627048448.0,
+    "scope": "maximum_of_PyTorch_peaks_saved_in_native_trajectory_properties"
+  },
+  "timing_scope": "Native tracker RPC tracking seconds; not OPE image-read/preprocess/track and not three-GPU wall-clock throughput.",
+  "identity": {
+    "checkpoint": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+    "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+    "checkpoint_sha256": "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+    "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "terminal_audit_sha256": "a1650ec995075c2d74a6a9656f94c783199fd7eab57798e2241426f942877abc",
+    "dataset": "DepthTrack",
+    "dataset_audit": "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+    "dataset_audit_sha256": "463b778647930b3027728c09e97483cedc99a8ff5ab72894e2753539aa111e03",
+    "terminal_audit": "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+    "source_stack_sha256": "c56d409833b033a9e35058d836c525d002fe000124d6fee9efaef27ec66525c2",
+    "workspace_stack_sha256": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+    "trackers_ini_sha256": "cf6e2fdc13f17d7208b3ed63dd0ab99316689c3e807063687db6b6d1a4ecc746",
+    "tracker_id": "xtrack_joint_s2026_d7a9069e9ac0",
+    "experiment_id": "rgbd-unsupervised",
+    "seed": 2026,
+    "expected_sequences": 50,
+    "expected_frame_pairs": 76373
+  },
+  "files": {
+    "identity.json": {
+      "sha256": "356d621b9a9214f5d96c6f0b093f52f218b8bdc00004f187b5d2af44ba75f1fb",
+      "bytes": 1209
+    },
+    "stack.yaml": {
+      "sha256": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+      "bytes": 284
+    },
+    "trackers.ini": {
+      "sha256": "cf6e2fdc13f17d7208b3ed63dd0ab99316689c3e807063687db6b6d1a4ecc746",
+      "bytes": 659
+    },
+    "coverage.json": {
+      "sha256": "67484c184329eb8cf8d201e776840377c75f70cb0d6d0c0aa4640e76d2ad2171",
+      "bytes": 44414
+    },
+    "official_metrics.json": {
+      "sha256": "f0dab45e2914b1b6c7580f528906d14f70222935fdee94c26e45b6d5ecdb10ec",
+      "bytes": 657276
+    },
+    "attribute_diagnostics.json": {
+      "sha256": "4bc3326817e3574e6d2d5b76fcb78190f93dbe75d3f63cb1679fbd49a52f5196",
+      "bytes": 713946
+    },
+    "per_sequence_metrics.csv": {
+      "sha256": "b893a23eccde4eb313ba93986c19f7469bfd7354d82f4ba6dc5bc279e08f9e5a",
+      "bytes": 3846
+    },
+    "full_PR_F_curves.png": {
+      "sha256": "cd6aa5bf02c98e49cd77b7a95b65e3706996da7529f4a85440f12c251e2b7e64",
+      "bytes": 55324
+    },
+    "shard_0.json": {
+      "sha256": "13bea4eb621d0aa7f01e9edae433c8a380b3b33dc9aa4c4f342d9b2902a0351f",
+      "bytes": 642
+    },
+    "shard_1.json": {
+      "sha256": "4952ff63f1eef07c9160caca37dd3458adc853893d0ee133fcf607d643b526e0",
+      "bytes": 624
+    },
+    "shard_2.json": {
+      "sha256": "646444f1a7ffc9068e63607b114f84f966a7dc0cadaadceb432210048b8a08f1",
+      "bytes": 603
+    }
+  },
+  "dataset_audit_sha256": "463b778647930b3027728c09e97483cedc99a8ff5ab72894e2753539aa111e03",
+  "collected_at": "2026-10-07T22:15:57.444278+08:00",
+  "scope": "Completed C repaired fixed-mixed ordinary AdamW native scores only. Full 50-sequence coverage, original official PR aggregation, separate group definitions, 50 CSV rows, 11 raw artifact hashes verified. No neural inference or scorer replay. Full seven-headline comparison and conditional paired uncertainty are separate required steps; a single dataset is not a full improvement claim."
+}

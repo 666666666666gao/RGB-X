@@ -1,0 +1,176 @@
+{
+  "status": "PASS_ORIGINAL_RECEIPTS_AND_LOCAL_REMOTE_MIRRORS_BYTES_SHA256",
+  "observed_at": "2026-10-07T14:30:13.333184+00:00",
+  "files": [
+    {
+      "name": "checkpoint_audit.json",
+      "bytes": 2339,
+      "sha256": "72e6ab62da039b471cd3052d99f88114ec5244a5791d3d85e68c12eee1072f94",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/checkpoint_audit.json",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "collection_ssh.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/collection_ssh.stderr.log",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "controller_run.json",
+      "bytes": 1223,
+      "sha256": "478cc8315557aa70783211095ee6f326b62774a0110cf57bc0787569a5407cc5",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/controller_run.json",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "launch_ssh.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/launch_ssh.stderr.log",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "launch_ssh.stdout.log",
+      "bytes": 1958,
+      "sha256": "d2e9c605198bf417bad0ed830d8b612c1f6add7f23808f54888744f19fc6aa1b",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/launch_ssh.stdout.log",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "launcher.log",
+      "bytes": 1109,
+      "sha256": "0e568c5939c20b95607faf5fa4523424ee12923cde338d6bff9ba18458df4374",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/launcher.log",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "local_collection_helper.py",
+      "bytes": 11981,
+      "sha256": "75190f2a448229cd6cff396331628782df82b71c39904545796277f49708f044",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/local_collection_helper.py",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "local_launch_helper.py",
+      "bytes": 5154,
+      "sha256": "ee02bfb6a0b5ba6bd9779227a814c42e5ba28684318547de5ce40531447ce101",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/local_launch_helper.py",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "native_closed.json",
+      "bytes": 328,
+      "sha256": "e1f4e29adc9d106e42e6d00e7810cdacdee15a038e5ec21e19a747ea56bb7fd8",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/native_closed.json",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "parameter_manifest.json",
+      "bytes": 107499,
+      "sha256": "cc1013362ef32fc53de0d1b601bdf3c0d5711c60cc1484e3d609fc01a3f489b7",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/parameter_manifest.json",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "sanity_run.json",
+      "bytes": 4138,
+      "sha256": "934bcf9bc16fcad671768792994a8ffef1e62b033e956d42e35a19ea95cd55d2",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/sanity_run.json",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "saved_state_audit.log",
+      "bytes": 2213,
+      "sha256": "35a0ca85e5e9560da8ba476533d56629290903150a856d05d5a3533ead045986",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/saved_state_audit.log",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "train.log",
+      "bytes": 5884,
+      "sha256": "40f0381abbe94230a6d1905c19f6a3e822a7ce2d7edcd3e172537a8e9b60e61a",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/train.log",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "training_exit.json",
+      "bytes": 758,
+      "sha256": "fd323a7cd1f5dfa91c5fbf8919f0324f78bf2f682389ee8df894b41c8b877783",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/training_exit.json",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "updates.jsonl",
+      "bytes": 1199,
+      "sha256": "bdb49818c87b5ae67ff48b37236553ff0a0d6e423c735d23862c05c10466ba22",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/updates.jsonl",
+      "local_remote_bytes_sha256_match": true
+    },
+    {
+      "name": "wrapper_exit.json",
+      "bytes": 1066,
+      "sha256": "7454b2c5b57f9cd560adf51d1eb3d430bf41fb28dc6fd91872fbdbe448c1b8d8",
+      "remote_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_evidence_20261007/wrapper_exit.json",
+      "local_remote_bytes_sha256_match": true
+    }
+  ],
+  "original_byte_comparisons": [
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity_controller/training_exit.json",
+      "name": "training_exit.json",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity_controller/run.json",
+      "name": "controller_run.json",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity_controller/train.log",
+      "name": "train.log",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity_controller/saved_state_audit.log",
+      "name": "saved_state_audit.log",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity/run.json",
+      "name": "sanity_run.json",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity/updates.jsonl",
+      "name": "updates.jsonl",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity/parameter_manifest.json",
+      "name": "parameter_manifest.json",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_sanity_checkpoint_audit.json",
+      "name": "checkpoint_audit.json",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity_controller_launcher.log",
+      "name": "launcher.log",
+      "original_and_mirror_bytes_equal": true
+    },
+    {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity_controller_launcher_exit.json",
+      "name": "wrapper_exit.json",
+      "original_and_mirror_bytes_equal": true
+    }
+  ],
+  "report_path": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_documented_sanity_20261007.json",
+  "report_bytes": 38621,
+  "report_sha256": "eac9102a52641cefdc23226ac8d96ad45f58049c08c199c21d592734e441aa4c",
+  "report_local_remote_bytes_sha256_match": true,
+  "model_forward_calls": 0,
+  "torch_imported": false
+}

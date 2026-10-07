@@ -1,0 +1,24 @@
+{
+  "status": "ACTUAL_SANITY_WRAPPER_EXITED",
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "/data/gb/rgbx-risk/scripts/run_joint_optimizer_control_sanity.py",
+    "--optimizer",
+    "task_adaptive_only"
+  ],
+  "cwd": "/data/gb/rgbx-risk",
+  "controller_pid": 3756736,
+  "linux_session_id": 3756736,
+  "parent_waiter_pid": 3756735,
+  "started_at": "2026-10-07T14:21:47.583923+00:00",
+  "first_observation_not_before": "2026-10-07T14:26:47.583923+00:00",
+  "launcher_log": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity_controller_launcher.log",
+  "wrapper_exit_receipt": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity_controller_launcher_exit.json",
+  "documented_handoff_sha256": "9bfd68b0b32993e621d90a996d585d779ad8015ff237e2370a462fef724e7a06",
+  "env_spec_canonical_sha256": "433a922a61d09bbf39d671e9ee1636c4ab0cac3ec6865b32baac9e7ce7e12fa4",
+  "environment_rebuilt": false,
+  "sanity_invocations": 1,
+  "formal_training_started": false,
+  "exit_code": 0,
+  "ended_at": "2026-10-07T14:25:59.317783+00:00"
+}

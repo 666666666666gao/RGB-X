@@ -1,0 +1,19 @@
+{
+  "checkpoint": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+  "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+  "checkpoint_sha256": "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+  "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+  "terminal_audit_sha256": "a1650ec995075c2d74a6a9656f94c783199fd7eab57798e2241426f942877abc",
+  "dataset": "DepthTrack",
+  "dataset_audit": "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+  "dataset_audit_sha256": "463b778647930b3027728c09e97483cedc99a8ff5ab72894e2753539aa111e03",
+  "terminal_audit": "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+  "source_stack_sha256": "c56d409833b033a9e35058d836c525d002fe000124d6fee9efaef27ec66525c2",
+  "workspace_stack_sha256": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+  "trackers_ini_sha256": "cf6e2fdc13f17d7208b3ed63dd0ab99316689c3e807063687db6b6d1a4ecc746",
+  "tracker_id": "xtrack_joint_s2026_d7a9069e9ac0",
+  "experiment_id": "rgbd-unsupervised",
+  "seed": 2026,
+  "expected_sequences": 50,
+  "expected_frame_pairs": 76373
+}
