@@ -1,0 +1,140 @@
+{
+  "status": "ACTUAL_C_VISEVENT_ALL320_FULL_METRICS_AND_THREE_REFERENCES_VALIDATED_NOT_ALL3",
+  "collected_at": "2026-10-07T12:30:43.594858+00:00",
+  "runtime_observed_at": "2026-10-07T12:05:03.557967+00:00",
+  "dataset": "VisEvent",
+  "sequence_count": 320,
+  "frame_pairs": 157421,
+  "missing_sequences": 0,
+  "attributes": 17,
+  "headline_metrics": {
+    "SR_AUC": 0.5988575061905789,
+    "PR_at_20": 0.7607544045561051,
+    "NPR_AUC": 0.6615975370055681,
+    "NP_at_020": 0.7218373083241794
+  },
+  "all_sequence_metrics": {
+    "SR_AUC": 0.5988575061905789,
+    "PR_at_20": 0.7607544045561051,
+    "NPR_AUC": 0.6615975370055681,
+    "NP_at_020": 0.7218373083241796
+  },
+  "zero_curve_sequences": {
+    "success": 0,
+    "precision": 0,
+    "normalized_precision": 0
+  },
+  "source_identity": {
+    "checkpoint": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+    "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+    "checkpoint_sha256": "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+    "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+    "terminal_audit_sha256": "a1650ec995075c2d74a6a9656f94c783199fd7eab57798e2241426f942877abc"
+  },
+  "files": {
+    "coverage.json": {
+      "bytes": 126835,
+      "sha256": "8394fa6454274264a9eda22ff710f23f2b90ff4ed6b584a7dd25b00bc616fdb3"
+    },
+    "scores/metrics.json": {
+      "bytes": 1115317,
+      "sha256": "a7af10d936dbf3c25fb8493138ff77ee332bacc55ee27cae4e53f0c3e2aeb6c3"
+    },
+    "scores/per_sequence.csv": {
+      "bytes": 31472,
+      "sha256": "74ffc466fbf80e021fc3b99b5f61cbfe237ff9e1dae8a196468e65577003dc8e"
+    },
+    "scores/full_curves.png": {
+      "bytes": 76372,
+      "sha256": "c9f2a1a99b9ea2bfe0e4102704bc13700f846e628f030456781a6289b6a71841"
+    }
+  },
+  "fps": 6.28147185556616,
+  "timing": "synchronized_image_read_preprocessing_and_tracking",
+  "comparisons": {
+    "author_reference": {
+      "SR_AUC": {
+        "reference": 0.6045030614193362,
+        "C_control": 0.5988575061905789,
+        "delta": -0.005645555228757315,
+        "delta_percentage_points": -0.5645555228757315
+      },
+      "PR_at_20": {
+        "reference": 0.7692957488705718,
+        "C_control": 0.7607544045561051,
+        "delta": -0.008541344314466737,
+        "delta_percentage_points": -0.8541344314466737
+      },
+      "NPR_AUC": {
+        "reference": 0.6671401395683385,
+        "C_control": 0.6615975370055681,
+        "delta": -0.005542602562770393,
+        "delta_percentage_points": -0.5542602562770393
+      },
+      "NP_at_020": {
+        "reference": 0.7284162241798723,
+        "C_control": 0.7218373083241794,
+        "delta": -0.006578915855692924,
+        "delta_percentage_points": -0.6578915855692924
+      }
+    },
+    "full_method_v1": {
+      "SR_AUC": {
+        "reference": 0.5971315019183786,
+        "C_control": 0.5988575061905789,
+        "delta": 0.0017260042722002655,
+        "delta_percentage_points": 0.17260042722002655
+      },
+      "PR_at_20": {
+        "reference": 0.7558738077542955,
+        "C_control": 0.7607544045561051,
+        "delta": 0.0048805968018096335,
+        "delta_percentage_points": 0.48805968018096335
+      },
+      "NPR_AUC": {
+        "reference": 0.6590712676816596,
+        "C_control": 0.6615975370055681,
+        "delta": 0.0025262693239085365,
+        "delta_percentage_points": 0.25262693239085365
+      },
+      "NP_at_020": {
+        "reference": 0.7189768485299204,
+        "C_control": 0.7218373083241794,
+        "delta": 0.002860459794258974,
+        "delta_percentage_points": 0.2860459794258974
+      }
+    },
+    "full_method_distance0": {
+      "SR_AUC": {
+        "reference": 0.5978613014783833,
+        "C_control": 0.5988575061905789,
+        "delta": 0.0009962047121955253,
+        "delta_percentage_points": 0.09962047121955253
+      },
+      "PR_at_20": {
+        "reference": 0.7594856032802182,
+        "C_control": 0.7607544045561051,
+        "delta": 0.0012688012758869105,
+        "delta_percentage_points": 0.12688012758869105
+      },
+      "NPR_AUC": {
+        "reference": 0.660403883304764,
+        "C_control": 0.6615975370055681,
+        "delta": 0.0011936537008041537,
+        "delta_percentage_points": 0.11936537008041537
+      },
+      "NP_at_020": {
+        "reference": 0.7206402941530661,
+        "C_control": 0.7218373083241794,
+        "delta": 0.0011970141711132865,
+        "delta_percentage_points": 0.11970141711132865
+      }
+    }
+  },
+  "validation_source": "C:\\Users\\gb\\.codex_tmp\\rgbx_collect_method_ope_complete_20261005.py",
+  "validation_source_sha256": "66286466ef34c5b5add93871686ea8fad17522d5980652eba613dff499359cf2",
+  "all_seven_strict_reference_improvements_possible_for_fixed_C": false,
+  "formal_scored_datasets": 2,
+  "scope": "Four completed artifacts copied with exact original bytes; all320 real-GT sequences, native curves/CSV and17attributes checked. No model/scorer replay, current VisEvent query, causal module attribution or training-seed significance.",
+  "goal_achieved": false
+}

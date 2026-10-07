@@ -1,0 +1,35 @@
+{
+  "status": "PASSIVE_TIMER_NO_REMOTE_QUERY_BEFORE_MEASURED_DEPTHTRACK_ENDPOINT",
+  "local_pid": 30652,
+  "started_at": "2026-10-07T12:38:02.204016+00:00",
+  "observe_not_before": "2026-10-07T14:15:00+00:00",
+  "controller_pid": 2605254,
+  "evaluation_controller_pid": 3192746,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_c_depthtrack_endpoint_observation_20261007.json",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "previous_observation_sha256": "602ca9133fbaa5c061ed7fcb1f533f0c1a620bad24cf35634c6f47b83514943e",
+  "inferred_depthtrack_worker_start": "2026-10-07T11:54:44.557967+00:00",
+  "elapsed_ps_seconds_resolution": 1,
+  "depthtrack_shard_forecasts": [
+    {
+      "shard": 0,
+      "historical_shard_wallclock_seconds": 7536.200696849963,
+      "historical_receipt_sha256": "363ea92194f5bfb4eae527879c0ca906f3584a6426944fbcf245f982712e58bd",
+      "forecast_endpoint": "2026-10-07T14:00:20.758664+00:00"
+    },
+    {
+      "shard": 1,
+      "historical_shard_wallclock_seconds": 5494.160658551962,
+      "historical_receipt_sha256": "54b80c08d7171d3bc64e6b98fefa9d581130350cb875f1a7d238e4cd5d01c95a",
+      "forecast_endpoint": "2026-10-07T13:26:18.718626+00:00"
+    },
+    {
+      "shard": 2,
+      "historical_shard_wallclock_seconds": 5106.227501215064,
+      "historical_receipt_sha256": "c358fd33a2ecba29c3c6ee8a2d05f98b77de9c1ed7ef6feba6910d6d8351a56b",
+      "forecast_endpoint": "2026-10-07T13:19:50.785468+00:00"
+    }
+  ],
+  "forecast_scope": "C actual20:05 ps shows all three DepthTrack workers elapsed10:19. Use completed distance0 shard wallclock, not RPC FPS. Slowest forecast about22:00;22:15 permits controller waits, scoring, comparison and uncertainty. Forecast does not establish completion."
+}

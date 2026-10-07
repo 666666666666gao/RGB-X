@@ -1,0 +1,106 @@
+{
+  "status": "ACTUAL_SCHEDULED_C_VISEVENT_ALL320_COMPLETE_DEPTHTRACK_RUNNING",
+  "observed_at": "2026-10-07T12:05:03.557967+00:00",
+  "source_private_packet_sha256": "602ca9133fbaa5c061ed7fcb1f533f0c1a620bad24cf35634c6f47b83514943e",
+  "native_observer_session": 80837,
+  "native_observer_exit_code": 0,
+  "actual_remote_observations": 1,
+  "controller": {
+    "status": "RUNNING",
+    "controller_pid": 2605254,
+    "current_stage": "evaluation",
+    "completed_stages": [
+      "train",
+      "endpoint-audit"
+    ],
+    "exit_code": null
+  },
+  "evaluation": {
+    "status": "RUNNING_NOT_SCORED",
+    "controller_pid": 3192746,
+    "completed_datasets": [
+      "LasHeR",
+      "VisEvent"
+    ],
+    "worker_processes": [
+      {
+        "dataset": "LasHeR",
+        "shard": 0,
+        "pid": 3192895
+      },
+      {
+        "dataset": "LasHeR",
+        "shard": 1,
+        "pid": 3192896
+      },
+      {
+        "dataset": "LasHeR",
+        "shard": 2,
+        "pid": 3192897
+      },
+      {
+        "dataset": "VisEvent",
+        "shard": 0,
+        "pid": 3430367
+      },
+      {
+        "dataset": "VisEvent",
+        "shard": 1,
+        "pid": 3430368
+      },
+      {
+        "dataset": "VisEvent",
+        "shard": 2,
+        "pid": 3430369
+      },
+      {
+        "dataset": "DepthTrack",
+        "shard": 0,
+        "pid": 3555785
+      },
+      {
+        "dataset": "DepthTrack",
+        "shard": 1,
+        "pid": 3555786
+      },
+      {
+        "dataset": "DepthTrack",
+        "shard": 2,
+        "pid": 3555787
+      }
+    ],
+    "worker_exit_codes": [
+      null,
+      null,
+      null
+    ]
+  },
+  "processes": "    PID    PPID STAT     ELAPSED COMMAND\n2605254       1 Ss      17:15:18 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_joint_optimizer_control_job.py --optimizer adamw\n3192746 2605254 S       07:39:03 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/evaluate_existing_three.py --terminal-audit /data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json --output-root /home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026\n3555785 3192746 Sl         10:19 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/run_vot_sequences.py --workspace /home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/DepthTrack --shard 0 --gpu 0\n3555786 3192746 Sl         10:19 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/run_vot_sequences.py --workspace /home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/DepthTrack --shard 1 --gpu 1\n3555787 3192746 Sl         10:19 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/run_vot_sequences.py --workspace /home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/DepthTrack --shard 2 --gpu 2\n",
+  "completed_LasHeR_sequence_receipts": 245,
+  "completed_VisEvent_sequence_receipts": 320,
+  "completed_VisEvent_frames": 157421,
+  "completed_dataset_metrics": {
+    "VisEvent": {
+      "SR_AUC": 0.5988575061905789,
+      "PR_at_20": 0.7607544045561051,
+      "NPR_AUC": 0.6615975370055681,
+      "NP_at_020": 0.7218373083241794
+    }
+  },
+  "exact_completed_artifact_intake": "reports/xtrack_fixed_mixed_adamw_s2026_visevent_complete_intake_20261007.json",
+  "curve_visual_inspection": {
+    "panels": [
+      "Success",
+      "Precision",
+      "Normalized precision"
+    ],
+    "labels_and_axes_correct": true,
+    "actual_viewed_at_minute_CST": "2026-10-07 20:35"
+  },
+  "inherited_summary_status_label_correction": "Derived status ALL245 changed to ALL320; validation already checked actual320 sequences and157421 frames. Native metrics/coverage/CSV/PNG unchanged; no collector/scorer/model replay.",
+  "all_seven_strict_reference_improvements_possible_for_fixed_C": false,
+  "D_started": false,
+  "mechanism_diagnostics": "REGISTERED_NOT_RUN",
+  "goal_achieved": false,
+  "scope": "Single20:05 original80837 observation consumed exit0. Four immutable completed VisEvent artifacts byte-verified and all320/17attributes paired against author/v1/distance0. DepthTrack ongoing in saved ps; no new live query during static intake/publication."
+}
