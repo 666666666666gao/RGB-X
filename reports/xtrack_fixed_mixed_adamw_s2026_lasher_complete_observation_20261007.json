@@ -1,0 +1,369 @@
+{
+  "status": "ACTUAL_SCHEDULED_C_LASHER_COMPLETE_OBSERVATION",
+  "observed_at": "2026-10-07T09:35:03.285271+00:00",
+  "source_private_packet_sha256": "0b16ac6b6207cce6f485de3c35ece1e66c8d0dbcec195a6943004a224169b91a",
+  "native_observer_session": 25505,
+  "native_observer_exit_code": 0,
+  "actual_remote_observations": 1,
+  "controller": {
+    "status": "RUNNING",
+    "run_id": "xtrack_fixed_mixed_adamw_s2026",
+    "controller_pid": 2605254,
+    "exit_code": null,
+    "started_at": "2026-10-06T18:49:45.873834+00:00",
+    "gpu_preflight": "0, 9\n1, 9\n2, 29\n",
+    "poll_seconds": 240,
+    "protocol": {
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "run_id": "xtrack_fixed_mixed_adamw_s2026",
+      "output": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026",
+      "optimizer": "adamw",
+      "modules_enabled": [],
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch.",
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "localization_risk_checks": false,
+      "selective_correction": false,
+      "closed_loop_checks": false,
+      "check_data_usage": "Only training loader is iterated; no paired check samples or short clips are fetched.",
+      "loss_normalization": "Per-task local means weighted by local task count/global task count, sum over ranks, equal mean over3 tasks. Keep balance on each complete mixed rank batch.",
+      "comparison_role": "Repaired fixed-mixed AdamW paired control C",
+      "reference_recipe_equivalence": "Same configured main-data sampling, seed, loss and initialization; bitwise-identical augmentations across variants/epochs are not claimed."
+    },
+    "protocol_sha256": "404371a7f81a01ce721cf6fc2cbf2b11b30f3b2012f372306a14a3f941b6656f",
+    "completed_stages": [
+      "train",
+      "endpoint-audit"
+    ],
+    "first_epoch_action": "External scheduled observer: after actual epoch1 save execute exact CPU epoch1 audit once, then launch retain_joint_optimizer_control_checkpoints once. Do not reuse another run receipt.",
+    "first_epoch_audit_and_retention_activation": "PENDING_ACTUAL_SAVED_EPOCH1",
+    "benchmark_goal": "NOT_YET_JUDGED",
+    "observed_at": "2026-10-07T09:34:06.530069+00:00",
+    "wallclock_seconds": 53060.655679656076,
+    "current_stage": "evaluation",
+    "argv": [
+      "/data/gb/conda/envs/rgbx-risk/bin/python",
+      "/data/gb/rgbx-risk/scripts/evaluate_existing_three.py",
+      "--terminal-audit",
+      "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+      "--output-root",
+      "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026"
+    ],
+    "worker_pid": 3192746,
+    "sanity_weight_retirement": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026_sanity/XTrack_ep0001.pth.tar",
+      "bytes": 440684667,
+      "sha256": "c0ee89de4bd4d4297eb2b6290ee7af763f4863b24a15d92eb0c79c8e6e99b970",
+      "audit_sha256": "f324638b7bdfea02fda6a75a332f34a8c215aff05a06cdca48e80902c9c37d8b",
+      "removed_at": "2026-10-06T18:49:45.879657+00:00"
+    },
+    "last_stage_exit_code": 0
+  },
+  "evaluation": {
+    "status": "RUNNING_NOT_SCORED",
+    "identity": {
+      "checkpoint": "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+      "config": "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+      "checkpoint_sha256": "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+      "config_sha256": "dd859cc1db453ea5cac25feccb794a372068586782be3dfbd48c8839c3a7d7f3",
+      "terminal_audit_sha256": "a1650ec995075c2d74a6a9656f94c783199fd7eab57798e2241426f942877abc"
+    },
+    "output_root": "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026",
+    "controller_pid": 3192746,
+    "started_at": "2026-10-07T04:26:00.771391+00:00",
+    "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+    "terminal_audit_sha256": "a1650ec995075c2d74a6a9656f94c783199fd7eab57798e2241426f942877abc",
+    "poll_seconds": 240,
+    "completed_datasets": [
+      "LasHeR"
+    ],
+    "worker_processes": [
+      {
+        "dataset": "LasHeR",
+        "shard": 0,
+        "pid": 3192895
+      },
+      {
+        "dataset": "LasHeR",
+        "shard": 1,
+        "pid": 3192896
+      },
+      {
+        "dataset": "LasHeR",
+        "shard": 2,
+        "pid": 3192897
+      },
+      {
+        "dataset": "VisEvent",
+        "shard": 0,
+        "pid": 3430367
+      },
+      {
+        "dataset": "VisEvent",
+        "shard": 1,
+        "pid": 3430368
+      },
+      {
+        "dataset": "VisEvent",
+        "shard": 2,
+        "pid": 3430369
+      }
+    ],
+    "commands": [
+      {
+        "label": "cuda-witness",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/gpu_witness.py"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0,1,2"
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/LasHeR/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "0",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/LasHeR/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "1",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/LasHeR/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "2",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "2"
+      },
+      {
+        "label": "LasHeR-coverage",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/audit_ope_coverage.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/LasHeR/predictions",
+          "--report",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/LasHeR/coverage.json"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "LasHeR-scoring",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/score_lasher.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--attributes",
+          "/data/gb/rgbx-risk/reports/lasher_test_attributes.json",
+          "--predictions",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/LasHeR/predictions",
+          "--coverage",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/LasHeR/coverage.json",
+          "--toolkit",
+          "/home/gaob/.cache/rgbx_lasher_toolkit_src",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/LasHeR/scores"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "VisEvent",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/VisEvent/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "0",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      {
+        "label": "VisEvent",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/VisEvent/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "1",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      {
+        "label": "VisEvent",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml",
+          "--checkpoint",
+          "/home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar",
+          "--expected-sha256",
+          "d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/VisEvent/predictions",
+          "--seed",
+          "2026",
+          "--shard",
+          "2",
+          "--shards",
+          "3"
+        ],
+        "CUDA_VISIBLE_DEVICES": "2"
+      }
+    ],
+    "observed_at": "2026-10-07T09:34:28.022743+00:00",
+    "wallclock_seconds": 18507.2512536851,
+    "worker_exit_codes": [
+      null,
+      null,
+      null
+    ]
+  },
+  "processes": "    PID    PPID STAT     ELAPSED COMMAND\n2605254       1 Ss      14:45:18 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_joint_optimizer_control_job.py --optimizer adamw\n3192746 2605254 S       05:09:03 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/evaluate_existing_three.py --terminal-audit /data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json --output-root /home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026\n3430367 3192746 Dl         16:35 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar --expected-sha256 d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb --terminal-audit /data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json --manifest /data/gb/rgbx-risk/reports/visevent_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/VisEvent/predictions --seed 2026 --shard 0 --shards 3\n3430368 3192746 Dl         16:35 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar --expected-sha256 d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb --terminal-audit /data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json --manifest /data/gb/rgbx-risk/reports/visevent_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/VisEvent/predictions --seed 2026 --shard 1 --shards 3\n3430369 3192746 Rl         16:35 /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/xtrack_b_adamw_3gpu.yaml --checkpoint /home/gaob/rgbx-full-method/xtrack_fixed_mixed_adamw_s2026/XTrack_ep0015.pth.tar --expected-sha256 d7a9069e9ac0d24b1cbaebfb43d1a25316b643f14e91bd6d33a41986da940dcb --terminal-audit /data/gb/rgbx-risk/reports/xtrack_fixed_mixed_adamw_s2026_endpoint_checkpoint_audit.json --manifest /data/gb/rgbx-risk/reports/visevent_eval_manifest.json --output /home/gaob/rgbx-eval-results/xtrack_fixed_mixed_adamw_s2026/VisEvent/predictions --seed 2026 --shard 2 --shards 3\n",
+  "completed_LasHeR_sequence_receipts": 245,
+  "completed_VisEvent_sequence_receipts": 45,
+  "completed_VisEvent_frames": 19001,
+  "completed_dataset_metrics": "FULL_LASHER_ONLY",
+  "exact_completed_artifact_intake": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_complete_intake_20261007.json",
+  "all_seven_strict_reference_improvements_possible_for_fixed_C": false,
+  "curve_visual_inspection": {
+    "actual_viewed_at": "2026-10-07T10:28:10+00:00",
+    "panels": [
+      "Success",
+      "Precision",
+      "Normalized precision"
+    ],
+    "labels_and_axes_correct": true
+  },
+  "D_started": false,
+  "mechanism_diagnostics": "REGISTERED_NOT_RUN",
+  "goal_achieved": false,
+  "scope": "Summary of the single17:35 runtime packet and separately byte-verified completed LasHeR artifacts; full private original retained by SHA. No current-progress query or model/scoring replay."
+}

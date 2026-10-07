@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T12:42:24.807265+08:00",
+  "updated_at": "2026-10-07T18:32:16.273583+08:00",
   "objective": "在2028使用三卡与一份RGB-T/RGB-D/RGB-Event联合权重，完整评测并持续依据真实证据改进，争取全部主要指标超过同协议参考。在distance0全部五阶段真实结束后，优先完成C固定混采修正AdamW与D仅任务统计公平微调对照，再决定下一版方法。三个模块沿决策一致的目标级风险、独立确认的能力保持更新、可独立干预的搜索状态传播控制形成完整链路；分别验证模块作用、成熟优化器比较、训练成本与不确定性，再推进SUTrack及完整基准。原始65轮复现保持取消；修正次数、总损失下降和局部检查通过均不代替完整跟踪增益。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "C15_TRAIN_EXIT0_ENDPOINT_PASS_ALL37500_ROWS_CHECKED_LASHER_EVALUATION_RUNNING_D_NOT_STARTED_GOAL_UNMET",
+  "status": "C_LASHER_FULL245_SCORED_ALL4_BELOW_REFERENCE_VISEVENT_RUNNING_D_PENDING_GOAL_UNMET",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -271,7 +271,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-07T04:31:11.891809+00:00",
+  "runtime_snapshot_observed_at": "2026-10-07T09:35:03.285271+00:00",
   "execution_goal_version": "2026-10-06-user-review-v4",
   "ordered_next_steps": [
     {
@@ -286,7 +286,7 @@
     },
     {
       "id": "P2",
-      "status": "C15_TRAIN_COMPLETE_ALLTHREE_EVALUATION_RUNNING_D_REQUIRES_COMPLETE_C_SCORES",
+      "status": "C15_COMPLETE_LASHER_ALL4_NEGATIVE_REMAINING_VIS_DEPTH_COMPARISON_PENDING_BEFORE_D",
       "work": "After all five distance0 stages and actual controller exit0, use existing reviewed C sanity/audit and formal repaired fixed-mixed AdamW entry. Complete C full scores before task-statistics-only D. Use C/D to select the optimization base; retain B, canonical AdaTask, PCGrad/CAGrad and true module ablations in the full comparison scope.",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json"
     },
@@ -449,21 +449,21 @@
   "twelfth_epoch_retention_evidence": "reports/full_method_v1_twelfth_epoch_retention_snapshot.json",
   "thirteenth_epoch_retention_evidence": "reports/full_method_v1_thirteenth_epoch_retention_snapshot.json",
   "monitoring_policy": {
-    "updated_at": "2026-10-07T12:42:24.807265+08:00",
+    "updated_at": "2026-10-07T18:32:16.273583+08:00",
     "user_instruction": "这里你轮询太多了，没到时间不用轮询",
     "mode": "ESTIMATED_MILESTONE_ONLY_NO_EARLY_POLLING",
     "check_rule": "Estimate completion or a necessary diagnostic milestone first. Do not poll logs, native sessions or remote progress before the scheduled time.",
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": false,
-    "next_observation_not_before": "2026-10-07T17:35:00+08:00",
-    "estimate_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_endpoint_observer_launch_20261007.json",
-    "estimated_stage": "Complete LasHeR245 sequence evaluation/coverage/scoring near early slowest-shard17:26 estimate, allow stage/scoring overhead until17:35.",
-    "scheduled_observer_native_session": 25505,
-    "scheduled_observer_pid": 50244,
-    "scheduled_observer_started_at": "2026-10-07T04:39:21.412892+00:00",
-    "scheduled_observer_status": "ONE_PASSIVE_C_LASHER_ENDPOINT_TIMER_PENDING",
-    "next_action": "One original25505 query at17:35CST; no earlier progress/log/native polling or C/evaluation replay. Complete C allthree/comparison/uncertainty before D."
+    "next_observation_not_before": "2026-10-07T20:05:00+08:00",
+    "estimate_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_visevent_endpoint_observer_launch_20261007.json",
+    "estimated_stage": "Full VisEvent320/157421 evaluation coverage and scoring near saved45-sequence slowest forecast19:47 plus allowance until20:05.",
+    "scheduled_observer_native_session": 80837,
+    "scheduled_observer_pid": 38064,
+    "scheduled_observer_started_at": "2026-10-07T10:29:22.669674+00:00",
+    "scheduled_observer_status": "ONE_PASSIVE_C_VISEVENT_ENDPOINT_TIMER_PENDING",
+    "next_action": "At20:05 consume original80837 once; no earlier progress/log/native queries. Continue DepthTrack/full comparison/uncertainty, then D."
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
   "actual_training_exit_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_evidence_20261007/training_exit.json",
@@ -1153,7 +1153,7 @@
     "training_runtime_state": "ACTUAL_TRAIN_EXIT0_FIXED_15_EPOCHS_COMPLETE"
   },
   "completed_epoch_statistics_run_id": "xtrack_full_method_v1_s2026",
-  "active_run_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_intake_20261007.json",
+  "active_run_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_complete_observation_20261007.json",
   "active_distance0_milestones": {
     "first_diagnostic_not_before": "2026-10-05T07:28:21.783057+00:00",
     "preliminary_first_epoch_completion_estimate": "2026-10-05T09:00:21.116321+00:00",
@@ -1575,7 +1575,7 @@
     "execution_preparation": "reports/joint_optimizer_controls_execution_preparation_20261005.json",
     "execution_source_review": "reports/joint_optimizer_controls_execution_source_review_revised_20261005.json",
     "execution_CPU_contract_evidence": "reports/joint_optimizer_controls_execution_cpu_contracts_20261005.json",
-    "execution_status": "C15_TRAIN_EXIT0_ENDPOINT_PASS_THREE_DATASET_EVALUATION_RUNNING_D_NOT_STARTED",
+    "execution_status": "C_LASHER_FULL_RESULTS_COLLECTED_REMAINING_TWO_DATASETS_PENDING_D_NOT_STARTED",
     "execution_controllers_started": 2,
     "shared_evaluation_admission_activated": true,
     "priority": "C_THEN_D_AFTER_EXISTING_DISTANCE0_ALL_FIVE_STAGES_AND_EXIT0",
@@ -1586,7 +1586,8 @@
     "C_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_first_diagnostic_intake_20261007.json",
     "C_epoch1_audit_retention_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_epoch1_audit_retention_intake_20261007.json",
     "C_completed_training_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_intake_20261007.json",
-    "C_evaluation_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_intake_20261007.json"
+    "C_evaluation_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_intake_20261007.json",
+    "C_lasher_results": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_complete_intake_20261007.json"
   },
   "completed_v1_monitoring_history": {
     "updated_at": "2026-10-05T14:45:18.828725+08:00",
@@ -1635,11 +1636,11 @@
     "only_generation_improves": "Diagnose check-distribution transfer and reference preservation before increasing interventions."
   },
   "active_evaluation_worker_pids": [
-    3192895,
-    3192896,
-    3192897
+    3430367,
+    3430368,
+    3430369
   ],
-  "active_evaluation_worker_pid_scope": "All3 LasHeR workers actually present only in the saved12:31:11 observation.",
+  "active_evaluation_worker_pid_scope": "Original three VisEvent workers appear in the saved17:35 actual ps; no later live query during immutable intake/publication.",
   "distance0_visevent_metrics": {
     "SR_AUC": 0.5978613014783833,
     "PR_at_20": 0.7594856032802182,
@@ -1960,6 +1961,95 @@
   "active_control_retention_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_first_retention_snapshot_20261007.json",
   "active_control_completed_training": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_intake_20261007.json",
   "active_control_endpoint_audit": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_evidence_20261007/endpoint_audit.json",
-  "actual_method_scored_datasets": 0,
-  "C_evaluation_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_intake_20261007.json"
+  "actual_method_scored_datasets": 1,
+  "C_evaluation_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_intake_20261007.json",
+  "C_lasher_metrics": {
+    "SR_AUC": 0.5525816588826673,
+    "PR_at_20": 0.6873520536643901,
+    "NPR_AUC": 0.589002457883112,
+    "NP_at_020": 0.6512201102791018
+  },
+  "C_lasher_comparisons": {
+    "author_reference": {
+      "SR_AUC": {
+        "reference": 0.5554599303245381,
+        "C_control": 0.5525816588826673,
+        "delta": -0.0028782714418708055,
+        "delta_percentage_points": -0.28782714418708055
+      },
+      "PR_at_20": {
+        "reference": 0.6905088871059202,
+        "C_control": 0.6873520536643901,
+        "delta": -0.0031568334415300603,
+        "delta_percentage_points": -0.31568334415300603
+      },
+      "NPR_AUC": {
+        "reference": 0.5921262401038353,
+        "C_control": 0.589002457883112,
+        "delta": -0.0031237822207232924,
+        "delta_percentage_points": -0.31237822207232924
+      },
+      "NP_at_020": {
+        "reference": 0.6548772213736572,
+        "C_control": 0.6512201102791018,
+        "delta": -0.0036571110945554652,
+        "delta_percentage_points": -0.3657111094555465
+      }
+    },
+    "full_method_v1": {
+      "SR_AUC": {
+        "reference": 0.5548465787350384,
+        "C_control": 0.5525816588826673,
+        "delta": -0.0022649198523710945,
+        "delta_percentage_points": -0.22649198523710945
+      },
+      "PR_at_20": {
+        "reference": 0.6903214880777397,
+        "C_control": 0.6873520536643901,
+        "delta": -0.0029694344133496253,
+        "delta_percentage_points": -0.29694344133496253
+      },
+      "NPR_AUC": {
+        "reference": 0.5920586963531068,
+        "C_control": 0.589002457883112,
+        "delta": -0.0030562384699948097,
+        "delta_percentage_points": -0.305623846999481
+      },
+      "NP_at_020": {
+        "reference": 0.6553677075460028,
+        "C_control": 0.6512201102791018,
+        "delta": -0.00414759726690106,
+        "delta_percentage_points": -0.41475972669010597
+      }
+    },
+    "full_method_distance0": {
+      "SR_AUC": {
+        "reference": 0.5539893818361226,
+        "C_control": 0.5525816588826673,
+        "delta": -0.0014077229534552593,
+        "delta_percentage_points": -0.14077229534552593
+      },
+      "PR_at_20": {
+        "reference": 0.6879301990501853,
+        "C_control": 0.6873520536643901,
+        "delta": -0.000578145385795148,
+        "delta_percentage_points": -0.057814538579514796
+      },
+      "NPR_AUC": {
+        "reference": 0.5912385737160156,
+        "C_control": 0.589002457883112,
+        "delta": -0.002236115832903618,
+        "delta_percentage_points": -0.2236115832903618
+      },
+      "NP_at_020": {
+        "reference": 0.6541598709539099,
+        "C_control": 0.6512201102791018,
+        "delta": -0.0029397606748081673,
+        "delta_percentage_points": -0.2939760674808167
+      }
+    }
+  },
+  "C_lasher_complete_intake": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_complete_intake_20261007.json",
+  "C_lasher_paired_diagnosis": "reports/xtrack_fixed_mixed_adamw_s2026_lasher_paired_diagnosis_20261007.json",
+  "C_all_seven_strict_reference_improvements_possible": false
 }

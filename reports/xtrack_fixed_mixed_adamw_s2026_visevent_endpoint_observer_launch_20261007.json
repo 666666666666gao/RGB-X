@@ -1,0 +1,44 @@
+{
+  "status": "PASSIVE_TIMER_FOR_ONE_C_VISEVENT_ENDPOINT_OBSERVATION",
+  "local_pid": 38064,
+  "started_at": "2026-10-07T10:29:22.669674+00:00",
+  "observe_not_before": "2026-10-07T20:05:00+08:00",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_c_visevent_endpoint_observation_20261007.json",
+  "visevent_shard_forecasts": [
+    {
+      "shard": 0,
+      "assigned_sequences": 107,
+      "assigned_frame_pairs": 49044,
+      "completed_sequences": 16,
+      "completed_frame_pairs": 6667,
+      "completed_elapsed_seconds": 984.8674303098815,
+      "observed_completed_sequence_fps": 6.769439007544677,
+      "estimated_shard_endpoint": "2026-10-07T11:19:23.331333+00:00"
+    },
+    {
+      "shard": 1,
+      "assigned_sequences": 107,
+      "assigned_frame_pairs": 55201,
+      "completed_sequences": 13,
+      "completed_frame_pairs": 6014,
+      "completed_elapsed_seconds": 973.9344193504658,
+      "observed_completed_sequence_fps": 6.17495375511099,
+      "estimated_shard_endpoint": "2026-10-07T11:47:48.850998+00:00"
+    },
+    {
+      "shard": 2,
+      "assigned_sequences": 106,
+      "assigned_frame_pairs": 53176,
+      "completed_sequences": 16,
+      "completed_frame_pairs": 6320,
+      "completed_elapsed_seconds": 925.8948998763226,
+      "observed_completed_sequence_fps": 6.825828720780513,
+      "estimated_shard_endpoint": "2026-10-07T11:29:27.799738+00:00"
+    }
+  ],
+  "assignment_manifest_sha256": "718323bd77c3cc10cf86e4af0fb44a379602bdf47ba40553015dc85d86f3eed8",
+  "estimate_scope": "45 actual complete sequences19001frames at17:35, same frozen assigned49044/55201/53176 frames. Slowest estimate19:47 plus240s stage waits/coverage/scoring allowance until20:05. Timing variation remains; no score inferred.",
+  "purpose": "Observe the original allthree evaluation once at20:05; no early progress query or evaluation replay."
+}

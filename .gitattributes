@@ -15,3 +15,4 @@ reports/method_xtrack_full_method_v2_distance0_s2026/VisEvent/scores/per_sequenc
 reports/method_xtrack_full_method_v2_distance0_s2026/DepthTrack/per_sequence_metrics.csv -text whitespace=cr-at-eol
 reports/xtrack_fixed_mixed_adamw_s2026_first_diagnostic_observation_20261007.json -text whitespace=cr-at-eol
 reports/xtrack_fixed_mixed_adamw_s2026_epoch1_observation_20261007.json -text whitespace=cr-at-eol
+reports/method_xtrack_fixed_mixed_adamw_s2026/LasHeR/scores/per_sequence.csv -text whitespace=cr-at-eol
