@@ -1,0 +1,14 @@
+{
+  "status": "LOSSLESS_GZIP_LOG_VERIFIED_RAW_SHA_IDENTICAL",
+  "created_at": "2026-10-08T11:08:18.140066+00:00",
+  "compressed_path": "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/final_train.log.gz",
+  "compressed_bytes": 1382816,
+  "compressed_sha256": "e79d15dbeffa878907efda686fe7fbfb3da6e0d2ec80e816eb1af59390ffd47d",
+  "uncompressed_path": "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/final_train.log",
+  "uncompressed_bytes": 185555091,
+  "uncompressed_sha256": "927e7e8f8b0c947d6abd2e0ec364a8f460565e65d363a8dab308c8f976b731af",
+  "original_server_log": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_controller/train.log",
+  "original_local_and_server_archive_retained": true,
+  "github_publication": "Compressed full log plus this manifest; original raw file excluded only from Git index. No log content discarded.",
+  "scope": "Static archival change only after user-requested training stop; no model forward, optimizer step, evaluation, restart or source/recipe change."
+}

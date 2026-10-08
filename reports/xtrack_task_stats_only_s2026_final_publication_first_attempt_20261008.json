@@ -1,0 +1,15 @@
+{
+  "status": "GITHUB_PRE_RECEIVE_REJECTED_OVERSIZED_RAW_LOG_BEFORE_SERVER_SYNC_NOT_TRAINING_FAILURE",
+  "recorded_at": "2026-10-08T11:08:18.140066+00:00",
+  "native_session": 50785,
+  "actual_native_exit_code": 1,
+  "unpushed_source_commit": "d5d22f09d7f02793b8148a359ff248c29b773145",
+  "parent_and_actual_remote_main": "418e99bdbdab06e814d24908594431c3d79efa1a",
+  "rejected_file": "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/final_train.log",
+  "rejected_file_bytes": 185555091,
+  "github_error": "GH001: file176.96MB exceeds100.00MB single-file limit; pre-receive hook declined.",
+  "trace": "f2019ab445f7939e9edc4bf4c4cd38a225e0d5e698157a40cf898c0eec7a1120",
+  "resolution": "Replace only raw-log Git entry with verified lossless gzip; amend the sole own unpushed source commit, then ordinary push without force. Preserve raw file locally/server and its original SHA.",
+  "all_training_processes_already_stopped": true,
+  "new_training_or_evaluation": false
+}

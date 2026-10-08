@@ -1,0 +1,5330 @@
+[
+  {
+    "name": "backbone.blocks.0.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.0.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.1.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.2.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.3.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.4.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.5.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.6.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.7.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.8.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.9.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.10.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.norm1_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.norm1_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.norm2_MeME.weight",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.norm2_MeME.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.w_gate",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.w_noise",
+    "shape": [
+      320,
+      6
+    ],
+    "numel": 1920,
+    "category": "router",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.0.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.0.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.1.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.1.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.2.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.2.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.3.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.3.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.4.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.4.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.5.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.experts.5.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "routed_expert",
+    "task_states": 1,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert1.norm.weight",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert1.norm.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert1.conv.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert1.proj_x.weight",
+    "shape": [
+      128,
+      64
+    ],
+    "numel": 8192,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert1.proj_x.bias",
+    "shape": [
+      128
+    ],
+    "numel": 128,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert1.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.shared_expert1.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.dte.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.dte.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.dteall.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.dteall.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.rgb.weight",
+    "shape": [
+      64,
+      768
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.rgb.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.fuse.conv.weight",
+    "shape": [
+      64,
+      1,
+      3,
+      3
+    ],
+    "numel": 576,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.fuse.proj_xx.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.fuse.proj_xx.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.fuse.proj_x.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.fuse.proj_x.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.fuse.proj_mod.weight",
+    "shape": [
+      64,
+      64
+    ],
+    "numel": 4096,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn0_1.fuse.proj_mod.bias",
+    "shape": [
+      64
+    ],
+    "numel": 64,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn1_1.weight",
+    "shape": [
+      768,
+      64
+    ],
+    "numel": 49152,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  },
+  {
+    "name": "backbone.blocks.11.MeME_attn.ffn1_1.bias",
+    "shape": [
+      768
+    ],
+    "numel": 768,
+    "category": "shared_content",
+    "task_states": 3,
+    "risk_corrected": false
+  }
+]

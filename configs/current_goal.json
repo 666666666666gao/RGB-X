@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T06:48:08.233725+08:00",
+  "updated_at": "2026-10-08T19:00:46.594248+08:00",
   "objective": "在2028使用三卡与一份RGB-T/RGB-D/RGB-Event联合权重，完整评测并持续依据真实证据改进，争取全部主要指标超过同协议参考。在distance0全部五阶段真实结束后，优先完成C固定混采修正AdamW与D仅任务统计公平微调对照，再决定下一版方法。三个模块沿决策一致的目标级风险、独立确认的能力保持更新、可独立干预的搜索状态传播控制形成完整链路；分别验证模块作用、成熟优化器比较、训练成本与不确定性，再推进SUTrack及完整基准。原始65轮复现保持取消；修正次数、总损失下降和局部检查通过均不代替完整跟踪增益。",
   "server": "2028",
   "gpu_indices": [
@@ -8,7 +8,7 @@
     2
   ],
   "weight_setting": "One joint RGB-T/RGB-D/RGB-Event checkpoint",
-  "status": "USER_STOP_AFTER_CURRENT_D_TRAINING_PENDING_COMPLETION_CONTROLLER_HELD",
+  "status": "CURRENT_D15_TRAINING_SAVED_AND_STOPPED_BY_USER_RESEARCH_GOAL_UNMET_PAUSE_AFTER_SYNC",
   "baseline_reproduction": "USER_CANCELLED_INCOMPLETE",
   "reference": "Published XTrack-B weights, evaluated using the same frozen three datasets and scoring protocols",
   "modules": [
@@ -98,15 +98,11 @@
   "routing_implementation_repairs": "Record separately from method contribution; independent correction and optimizer ablations deferred until full-method result",
   "checkpoint_and_result_root": "/home/gaob/rgbx-full-method",
   "handoff": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "goal_tool_note": "用户明确要求“做完现在的训练就停止”。当前训练完成、最终权重保存核对及交接同步前仍为active；随后按用户请求paused，不把未达成的完整研究目标标为complete。原研究范围和待做实验保留为暂停事项。",
+  "goal_tool_note": "用户明确要求“做完现在的训练就停止”。D已完成15轮并保存终轮；真实torchrun退出0、CPU保存内容核验和全部自有任务进程结束已证实。本次交接同步完成后按用户请求调用系统goal paused；原完整研究目标未达成，不标记complete，不启动D评测、机制诊断或新实验。",
   "actual_run_id": "xtrack_task_stats_only_s2026",
-  "actual_controller_pid": 3766982,
-  "actual_rank_pids": [
-    3767034,
-    3767035,
-    3767036
-  ],
-  "actual_completed_updates_at_snapshot": 2800,
+  "actual_controller_pid": null,
+  "actual_rank_pids": [],
+  "actual_completed_updates_at_snapshot": 37500,
   "tracking_scores": "V1_DISTANCE0_AND_C_FULL_SCORED_ALL7_BELOW_REFERENCE",
   "objective_met": false,
   "next_iteration_candidate": {
@@ -141,9 +137,9 @@
     "completed_training_evidence": "reports/full_method_v2_distance0_completed_training_diagnosis_20261006.json",
     "lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json"
   },
-  "actual_training_examples_at_snapshot": 67200,
+  "actual_training_examples_at_snapshot": 900000,
   "actual_correction_evidence": "reports/full_method_v1_first_accepted_corrections.json",
-  "actual_completed_epochs_at_snapshot": 1,
+  "actual_completed_epochs_at_snapshot": 15,
   "first_epoch_risk_events": 109,
   "first_epoch_nonzero_corrections": 106,
   "first_epoch_trajectory_checks": 154,
@@ -275,7 +271,7 @@
   "completed_epoch_statistics_source": "reports/full_method_v1_fifteenth_epoch_record_check.json",
   "second_epoch_retention_evidence": "reports/full_method_v1_second_epoch_retention_snapshot.json",
   "third_epoch_retention_evidence": "reports/full_method_v1_third_epoch_retention_snapshot.json",
-  "runtime_snapshot_observed_at": "2026-10-07T15:58:47.483101+00:00",
+  "runtime_snapshot_observed_at": "2026-10-08T10:53:38.746853+00:00",
   "execution_goal_version": "2026-10-08-user-stop-after-current-training-v5",
   "ordered_next_steps": [
     {
@@ -290,7 +286,7 @@
     },
     {
       "id": "P2",
-      "status": "C_FULL_COMPLETE_D_RUNNING_FINISH_CURRENT_TRAINING_THEN_USER_STOP_NO_D_SCORING",
+      "status": "C_FULL_COMPLETE_D15_SAVED_D_FULL_SCORES_SUSPENDED_BY_USER",
       "work": "After all five distance0 stages and actual controller exit0, use existing reviewed C sanity/audit and formal repaired fixed-mixed AdamW entry. Complete C full scores before task-statistics-only D. Use C/D to select the optimization base; retain B, canonical AdaTask, PCGrad/CAGrad and true module ablations in the full comparison scope.",
       "preparation_evidence": "reports/joint_optimizer_controls_preparation_20261005.json"
     },
@@ -403,10 +399,10 @@
     "historical_policy": "configs/gpu_limits.json"
   },
   "fifth_epoch_retention_evidence": "reports/full_method_v1_fifth_epoch_retention_snapshot.json",
-  "training_runtime_state": "CURRENT_D_TRAINING_CONTINUES_ONLY_AUTOMATIC_CONTROLLER_SIGSTOP",
+  "training_runtime_state": "NO_OWN_TRAINING_CONTROLLER_OR_RETENTION_PROCESS_ACTIVE",
   "operational_guard_evidence": "reports/full_method_v1_gpu_guard_user_cancellation_20261003.json",
-  "actual_epoch_at_snapshot": 2,
-  "actual_epoch_step_at_snapshot": 300,
+  "actual_epoch_at_snapshot": 15,
+  "actual_epoch_step_at_snapshot": 2500,
   "completed_epoch_totals": {
     "updates": 37500,
     "risk_events": 968,
@@ -463,19 +459,20 @@
     "necessary_near_completion_recheck_interval_seconds": 240,
     "repeated_minute_log_polling_cancelled": true,
     "training_pause_requested": true,
-    "next_observation_not_before": "2026-10-08T09:44:50.881093+00:00",
+    "next_observation_not_before": null,
     "estimate_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_audit_retention_intake_20261008.json",
     "estimated_stage": "One D observation3 minutes before measured training-update completion; checkpoint saves/controller waits/full scoring not included.",
-    "scheduled_observer_native_session": 91510,
-    "scheduled_observer_pid": 47876,
+    "scheduled_observer_native_session": null,
+    "scheduled_observer_pid": null,
     "scheduled_observer_started_at": "2026-10-07T16:01:14.560902+00:00",
-    "scheduled_observer_status": "ONE_PASSIVE_D_TRAINING_ENDPOINT_TIMER_PENDING",
-    "next_action": "At the original2026-10-08 17:44:50.881093CST milestone consume91510 once. Automatic controller is held, not resumed. After actual D training completes, verify exit/final checkpoint on CPU, end held controller, sync one handoff and pause. No subsequent evaluation or new experiment.",
+    "scheduled_observer_status": "ALL_OWN_OBSERVERS_FINISHED_NO_MORE_POLLING_BY_USER_REQUEST",
+    "next_action": "After static final handoff synchronization call goal paused and stop. Resume experiments or evaluation only after a new user instruction.",
     "stop_timing": "AFTER_ALREADY_RUNNING_D_TRAINING_FINISHES_AND_SAVED_RESULT_VERIFIED",
-    "stop_request_evidence": "reports/xtrack_task_stats_only_s2026_stop_after_training_request_20261008.json"
+    "stop_request_evidence": "reports/xtrack_task_stats_only_s2026_stop_after_training_request_20261008.json",
+    "stop_enforced_at": "2026-10-08T10:48:28.377492+00:00"
   },
   "fourteenth_epoch_retention_evidence": "reports/full_method_v1_fourteenth_epoch_retention_snapshot.json",
-  "actual_training_exit_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_completed_training_evidence_20261007/training_exit.json",
+  "actual_training_exit_evidence": "reports/xtrack_task_stats_only_s2026_user_stop_intake_20261008.json",
   "latest_evaluation_receipts": {
     "xtrack_author_release_s2026": {
       "receipt_exists": true,
@@ -507,7 +504,7 @@
       "snapshot_evidence": "reports/full_method_v2_distance0_complete_result_intake_20261007.json"
     }
   },
-  "endpoint_audit_status": "PASS",
+  "endpoint_audit_status": "SEPARATE_USER_STOP_CPU_SAVED_STATE_CHECK_PASS_NO_TRACKING_BENCHMARK",
   "complete_comparison_available": true,
   "fifteenth_epoch_retention_evidence": "reports/full_method_v1_fifteenth_epoch_retention_snapshot.json",
   "completed_training_diagnosis": {
@@ -772,7 +769,7 @@
     "fps": 4.559747899811485,
     "timing": "synchronized_image_read_preprocessing_and_tracking"
   },
-  "strict_all_seven_improvement_status": "UNMET_TWO_COMPLETE_LASHER_HEADLINES_NEGATIVE_OTHER_FIVE_PENDING",
+  "strict_all_seven_improvement_status": "RESEARCH_TARGET_UNMET_D_UNSCORED_AT_USER_STOP",
   "method_lasher_paired_diagnosis": {
     "report": "reports/full_method_v1_lasher_paired_diagnosis_20261005.json",
     "source": "scripts/analyze_complete_lasher_pair.py",
@@ -1564,7 +1561,7 @@
       }
     }
   },
-  "actual_controller_status": "RUNNING_D_TRAIN_AT_ACTUAL_STARTUP_DIAGNOSTIC",
+  "actual_controller_status": "HELD_BY_USER_THEN_TERMINATED_AFTER_VERIFIED_TRAIN_EXIT0_NOT_CONTROLLER_EXIT0",
   "distance0_complete_comparison": "reports/full_method_v2_distance0_complete_comparison.json",
   "distance0_paired_sequence_uncertainty": "reports/full_method_v2_distance0_paired_sequence_uncertainty.json",
   "distance0_complete_result": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
@@ -1830,10 +1827,10 @@
   "weight_retirement_evidence": "reports/completed_dominated_method_weight_retirement_20261007.json",
   "active_control_sanity_weight_retirement": "reports/xtrack_fixed_mixed_adamw_s2026_sanity_weight_retirement_20261007.json",
   "active_control_epoch1_audit": "reports/xtrack_task_stats_only_s2026_epoch1_evidence_20261007/checkpoint_audit.json",
-  "active_control_retention_worker_pid": 3844290,
-  "active_control_retention_evidence": "reports/xtrack_task_stats_only_s2026_first_retention_snapshot_20261007.json",
-  "active_control_completed_training": null,
-  "active_control_endpoint_audit": null,
+  "active_control_retention_worker_pid": null,
+  "active_control_retention_evidence": "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/final_retention.json",
+  "active_control_completed_training": "reports/xtrack_task_stats_only_s2026_user_stop_intake_20261008.json",
+  "active_control_endpoint_audit": "STANDARD_AUTOMATIC_ENDPOINT_AUDIT_NOT_RUN_SEPARATE_CPU_SAVED_STATE_CHECK_PASS",
   "actual_method_scored_datasets": 0,
   "C_evaluation_startup_evidence": "reports/xtrack_fixed_mixed_adamw_s2026_evaluation_startup_intake_20261007.json",
   "C_lasher_metrics": {
@@ -2070,7 +2067,7 @@
   "D_documented_sanity": "reports/xtrack_task_stats_only_s2026_documented_sanity_20261007.json",
   "D_formal_launch": "reports/xtrack_task_stats_only_s2026_formal_launch_20261007.json",
   "D_actual_formal_started_at": "2026-10-07T14:31:57.146319+00:00",
-  "D_formal_tracking_scores": "NOT_RUN",
+  "D_formal_tracking_scores": "NOT_RUN_BY_EXPLICIT_USER_STOP",
   "D_first_diagnostic_intake": "reports/xtrack_task_stats_only_s2026_first_diagnostic_intake_20261007.json",
   "D_sanity_weight_retirement": "reports/xtrack_task_stats_only_s2026_sanity_weight_retirement_20261007.json",
   "execution_stop_request": {
@@ -2108,5 +2105,14 @@
     "goal_achieved": false,
     "processes": "    PID    PPID STAT     ELAPSED COMMAND\n3766982       1 Ts      08:15:01 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_joint_optimizer_control_job.py --optimizer task_adaptive_only\n3767016 3766982 Sl      08:15:00 /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29532 /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767034 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767035 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767036 3767016 Sl      08:14:59 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n"
   },
-  "execution_stop_request_evidence": "reports/xtrack_task_stats_only_s2026_stop_after_training_request_20261008.json"
+  "execution_stop_request_evidence": "reports/xtrack_task_stats_only_s2026_stop_after_training_request_20261008.json",
+  "D_completed_training": true,
+  "D_terminal_saved_state_check": "reports/xtrack_task_stats_only_s2026_user_stop_saved_state_audit_20261008.json",
+  "D_terminal_checkpoint": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar",
+    "bytes": 477081235,
+    "sha256": "fd019946d6b7459754b46dffc08409bb98bfe49136595fc191986dbb128c7c85"
+  },
+  "D_user_stop_intake": "reports/xtrack_task_stats_only_s2026_user_stop_intake_20261008.json",
+  "D_final_retention_snapshot": "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/final_retention.json"
 }

@@ -1,0 +1,439 @@
+{
+  "status": "ACTUAL_D_TRAINING_ENDPOINT_MILESTONE_OBSERVATION",
+  "observed_at": "2026-10-08T10:42:06.525833+00:00",
+  "controller": {
+    "status": "RUNNING",
+    "run_id": "xtrack_task_stats_only_s2026",
+    "controller_pid": 3766982,
+    "exit_code": null,
+    "started_at": "2026-10-07T14:31:58.118645+00:00",
+    "gpu_preflight": "0, 9\n1, 9\n2, 33\n",
+    "poll_seconds": 240,
+    "protocol": {
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "run_id": "xtrack_task_stats_only_s2026",
+      "output": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026",
+      "optimizer": "task_adaptive_only",
+      "modules_enabled": [
+        "task_adaptive_statistics"
+      ],
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch.",
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "localization_risk_checks": false,
+      "selective_correction": false,
+      "closed_loop_checks": false,
+      "check_data_usage": "Only training loader is iterated; no paired check samples or short clips are fetched.",
+      "loss_normalization": "Per-task local means weighted by local task count/global task count, sum over ranks, equal mean over3 tasks. Keep balance on each complete mixed rank batch.",
+      "comparison_role": "Existing method task-statistics-only component control D; not the canonical AdaTask algorithm baseline.",
+      "reference_recipe_equivalence": "Same configured main-data sampling, seed, loss and initialization; bitwise-identical augmentations across variants/epochs are not claimed."
+    },
+    "protocol_sha256": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381",
+    "completed_stages": [],
+    "first_epoch_action": "External scheduled observer: after actual epoch1 save execute exact CPU epoch1 audit once, then launch retain_joint_optimizer_control_checkpoints once. Do not reuse another run receipt.",
+    "first_epoch_audit_and_retention_activation": "PENDING_ACTUAL_SAVED_EPOCH1",
+    "benchmark_goal": "NOT_YET_JUDGED",
+    "observed_at": "2026-10-07T22:44:08.619315+00:00",
+    "wallclock_seconds": 29530.50009915803,
+    "current_stage": "train",
+    "argv": [
+      "/data/gb/conda/envs/rgbx-risk/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nproc_per_node=3",
+      "--master_port=29532",
+      "/data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py",
+      "--protocol",
+      "/data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json"
+    ],
+    "worker_pid": 3767016,
+    "sanity_weight_retirement": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_sanity/XTrack_ep0001.pth.tar",
+      "bytes": 477078739,
+      "sha256": "21a26fdcb09c5db07d63fe1d6781d004294037031f7a8d9b9f84743cbd172d20",
+      "audit_sha256": "72e6ab62da039b471cd3052d99f88114ec5244a5791d3d85e68c12eee1072f94",
+      "removed_at": "2026-10-07T14:31:58.124671+00:00"
+    }
+  },
+  "training_run": {
+    "status": "RUNNING_NOT_EVALUATED",
+    "run_id": "xtrack_task_stats_only_s2026",
+    "protocol": {
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "run_id": "xtrack_task_stats_only_s2026",
+      "output": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026",
+      "optimizer": "task_adaptive_only",
+      "modules_enabled": [
+        "task_adaptive_statistics"
+      ],
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch.",
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "localization_risk_checks": false,
+      "selective_correction": false,
+      "closed_loop_checks": false,
+      "check_data_usage": "Only training loader is iterated; no paired check samples or short clips are fetched.",
+      "loss_normalization": "Per-task local means weighted by local task count/global task count, sum over ranks, equal mean over3 tasks. Keep balance on each complete mixed rank batch.",
+      "comparison_role": "Existing method task-statistics-only component control D; not the canonical AdaTask algorithm baseline.",
+      "reference_recipe_equivalence": "Same configured main-data sampling, seed, loss and initialization; bitwise-identical augmentations across variants/epochs are not claimed."
+    },
+    "protocol_sha256": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381",
+    "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+    "optimizer_kind": "task_adaptive_only",
+    "world_size": 3,
+    "output": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026",
+    "modules_enabled": [
+      "task_adaptive_statistics"
+    ],
+    "localization_check_calls": 0,
+    "correction_calls": 0,
+    "trajectory_calls": 0,
+    "check_examples": 0,
+    "unused_check_loader_constructed_not_iterated": true,
+    "formal_tracking_scores": "NOT_RUN",
+    "started_at": "2026-10-07T14:32:09.766067+00:00",
+    "rank_pids": [
+      3767034,
+      3767035,
+      3767036
+    ],
+    "attempt_id": "20261007T143209806702Z",
+    "observed_at": "2026-10-08T10:42:01.490873+00:00",
+    "epoch": 15,
+    "step": 2390,
+    "global_step": 37390,
+    "training_examples": 897360,
+    "latest": {
+      "attempt_id": "20261007T143209806702Z",
+      "epoch": 15,
+      "step": 2390,
+      "global_step": 37390,
+      "optimizer_kind": "task_adaptive_only",
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "learning_rate": 1.0000000000000002e-06,
+      "step_seconds": 1.9540205530356616,
+      "peak_allocated_bytes": 5637932544,
+      "main_training_examples": 24,
+      "localization_check_calls": 0,
+      "correction_calls": 0,
+      "trajectory_calls": 0,
+      "pair_check_forward_examples": 0,
+      "trajectory_model_forward_examples": 0,
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "joint_grad_norm_before_clip": 2.0242252349853516,
+      "gradient_clip_coefficient": 0.0494015927032601
+    },
+    "wallclock_seconds": 72591.67993473902,
+    "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0014.pth.tar",
+    "completed_epochs": 14,
+    "epoch_history": [
+      {
+        "epoch": 1,
+        "steps": 2500,
+        "means": {
+          "total": 0.9770811668872833,
+          "balance": 0.06800034568607807,
+          "classification": 15.100749225234985,
+          "iou": 0.8238699052095413
+        }
+      },
+      {
+        "epoch": 2,
+        "steps": 2500,
+        "means": {
+          "total": 0.980494215464592,
+          "balance": 0.06746276220977307,
+          "classification": 14.75939762802124,
+          "iou": 0.822503075003624
+        }
+      },
+      {
+        "epoch": 3,
+        "steps": 2500,
+        "means": {
+          "total": 0.9643483128786087,
+          "balance": 0.0666723956272006,
+          "classification": 14.490513482284546,
+          "iou": 0.8243022760152817
+        }
+      },
+      {
+        "epoch": 4,
+        "steps": 2500,
+        "means": {
+          "total": 0.958135761475563,
+          "balance": 0.06584174466282129,
+          "classification": 14.282306713104248,
+          "iou": 0.8258108535766602
+        }
+      },
+      {
+        "epoch": 5,
+        "steps": 2500,
+        "means": {
+          "total": 0.9632959993839264,
+          "balance": 0.06489747498184442,
+          "classification": 14.103249946212769,
+          "iou": 0.823469431757927
+        }
+      },
+      {
+        "epoch": 6,
+        "steps": 2500,
+        "means": {
+          "total": 0.9615272967576981,
+          "balance": 0.06404598356634378,
+          "classification": 13.926838735198974,
+          "iou": 0.8236078852891922
+        }
+      },
+      {
+        "epoch": 7,
+        "steps": 2500,
+        "means": {
+          "total": 0.957186105132103,
+          "balance": 0.0627291057780385,
+          "classification": 13.74217871170044,
+          "iou": 0.8238383634328842
+        }
+      },
+      {
+        "epoch": 8,
+        "steps": 2500,
+        "means": {
+          "total": 0.9480953595399857,
+          "balance": 0.06160520295202732,
+          "classification": 13.570854544448853,
+          "iou": 0.8252525898694992
+        }
+      },
+      {
+        "epoch": 9,
+        "steps": 2500,
+        "means": {
+          "total": 0.9561699079036713,
+          "balance": 0.06014903397411108,
+          "classification": 13.386820064163208,
+          "iou": 0.8236250528097153
+        }
+      },
+      {
+        "epoch": 10,
+        "steps": 2500,
+        "means": {
+          "total": 0.9476253736495972,
+          "balance": 0.05888904552161694,
+          "classification": 13.205545874404907,
+          "iou": 0.8240958593606948
+        }
+      },
+      {
+        "epoch": 11,
+        "steps": 2500,
+        "means": {
+          "total": 0.9427165759563446,
+          "balance": 0.05824077396839857,
+          "classification": 13.124848858261108,
+          "iou": 0.824473516702652
+        }
+      },
+      {
+        "epoch": 12,
+        "steps": 2500,
+        "means": {
+          "total": 0.9507425806760788,
+          "balance": 0.05812361827641725,
+          "classification": 13.105755686950683,
+          "iou": 0.8237914117097854
+        }
+      },
+      {
+        "epoch": 13,
+        "steps": 2500,
+        "means": {
+          "total": 0.937420701622963,
+          "balance": 0.05776569808125496,
+          "classification": 13.09210798072815,
+          "iou": 0.8250537755966186
+        }
+      },
+      {
+        "epoch": 14,
+        "steps": 2500,
+        "means": {
+          "total": 0.9449992185592652,
+          "balance": 0.05776420436948538,
+          "classification": 13.075556800460815,
+          "iou": 0.8247109115123749
+        }
+      }
+    ],
+    "replica_parameter_sha256": "b29b97a366e99acfda66c24344309cc182a6fd5efe2fd5bf389acc7f158174dd",
+    "checkpoint_retention": "External first-epoch audit and owned retention activation required; no latest alias is generated."
+  },
+  "retention": {
+    "status": "ACTIVE_KEEP_ONE_COMPLETED_RECOVERY_CHECKPOINT",
+    "run_id": "xtrack_task_stats_only_s2026",
+    "retention_worker_pid": 3844290,
+    "poll_seconds": 240,
+    "handled_completed_epoch": 14,
+    "started_at": "2026-10-07T15:54:28.421227+00:00",
+    "epoch1_audit_sha256": "a75652eca3dc2719da40641c8d679f17114936911a8a8de71d56b7679049e71f",
+    "deleted": [
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0001.pth.tar",
+        "bytes": 477079955,
+        "sha256": "10c0f0e8ccd2c1cf70d0072c686d5b083063e2849d41afcbeba56aab93075371"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0002.pth.tar",
+        "bytes": 477080019,
+        "sha256": "61ce2d7d658ba8b80bb02abdcc464621ed39516b9a76e396f6a6f435bffc6674"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0003.pth.tar",
+        "bytes": 477080147,
+        "sha256": "29a8d579edcea8fdc03e378ca175dfb45d1afd989685b65b7e51b778d33e62dc"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0004.pth.tar",
+        "bytes": 477080211,
+        "sha256": "eb7755a1b32423b5e15bc9b79a6c7391e3263e4818d6341f3925e36360c6c122"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0005.pth.tar",
+        "bytes": 477080275,
+        "sha256": "cf8501d41ca87e24f63eb9f01ca433651847cd96fac2045afae1319ce38b8cd0"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0006.pth.tar",
+        "bytes": 477080403,
+        "sha256": "324b794df11f8ee91a34c50fec2bc25336131e00c69e368b5e18486b4e09f4f7"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0007.pth.tar",
+        "bytes": 477080467,
+        "sha256": "1dced16656f45927eb9b6a3b6d4ac89b7504eb884092755990c065d8daefe187"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0008.pth.tar",
+        "bytes": 477080595,
+        "sha256": "49ffa9fa45be7c168dc363d105c6844171c222eb414005051de0e9cad50b0795"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0009.pth.tar",
+        "bytes": 477080659,
+        "sha256": "5532eb32c071e61a5ce19db8046a088f9e37aa9b40dd4cba8c65e07f8fd4a894"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0010.pth.tar",
+        "bytes": 477080787,
+        "sha256": "4d85c637bd3c3a8778b412478921e52f2a981d5cbe7af3ecfbe91f2d838377fe"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0011.pth.tar",
+        "bytes": 477080851,
+        "sha256": "5db4313623263bc83622e98c1da5a08c0fa726ed9c2dc076c458c1b21ca78832"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0012.pth.tar",
+        "bytes": 477080915,
+        "sha256": "76a380aa4e73e8eba0c6bbf237491d6483ccfebd870d06d5b13fe6dd8aaef526"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0013.pth.tar",
+        "bytes": 477081043,
+        "sha256": "dc63b4fa4cffe57dc01e926f63fb8a702ca5bfaac88059a7b43ebe94ed2a88c0"
+      }
+    ],
+    "removed_file_bytes": 6202046327,
+    "script_sha256": "bc3882ff781c32f5a3a4e787742cdf9201e68ef59471612201ae9dc50604f57f",
+    "best_by_benchmark": "NOT_DETERMINED_NO_FORMAL_SCORES",
+    "policy": "Delete only older named completed checkpoints in this exact owned formal run. Preserve the latest complete model/optimizer/three-rank RNG recovery point; no alias is generated by C/D.",
+    "after_training": "Keep terminal checkpoint until all three datasets are scored and compared; best measured method selection happens outside this worker.",
+    "public_weights_and_other_runs": "Outside cleanup scope and retained.",
+    "training_parameters_modified": false,
+    "retained_checkpoint": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0014.pth.tar",
+      "bytes": 477081107,
+      "sha256": "d9e532e0ec553ba6cbf13378e65a57218718c3dbbe24a1da1261b8cc9f8e0cba"
+    },
+    "observed_at": "2026-10-08T09:27:12.685598+00:00"
+  },
+  "prefix": {
+    "updates": 37390,
+    "main_training_examples": 897360,
+    "last500_mean_step_seconds": 1.9388495884514414,
+    "whole_prefix_mean_step_seconds": 1.9281123925862071,
+    "last": {
+      "attempt_id": "20261007T143209806702Z",
+      "epoch": 15,
+      "step": 2390,
+      "global_step": 37390,
+      "optimizer_kind": "task_adaptive_only",
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "learning_rate": 1.0000000000000002e-06,
+      "step_seconds": 1.9540205530356616,
+      "peak_allocated_bytes": 5637932544,
+      "main_training_examples": 24,
+      "localization_check_calls": 0,
+      "correction_calls": 0,
+      "trajectory_calls": 0,
+      "pair_check_forward_examples": 0,
+      "trajectory_model_forward_examples": 0,
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "joint_grad_norm_before_clip": 2.0242252349853516,
+      "gradient_clip_coefficient": 0.0494015927032601
+    },
+    "fixed_global_mixed24_all_finite_and_single_update": true,
+    "extra_module_calls": 0
+  },
+  "existing_terminal_reports": {},
+  "processes": "    PID    PPID STAT     ELAPSED COMMAND\n3766982       1 Ts      20:10:08 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_joint_optimizer_control_job.py --optimizer task_adaptive_only\n3767016 3766982 Sl      20:10:07 /data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=3 --master_port=29532 /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767034 3767016 Sl      20:10:06 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767035 3767016 Sl      20:10:06 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3767036 3767016 Sl      20:10:06 /data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_joint_optimizer_control.py --protocol /data/gb/rgbx-risk/configs/xtrack_task_stats_only_s2026.json\n3844290       1 Ss      18:47:38 /data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/retain_joint_optimizer_control_checkpoints.py --optimizer task_adaptive_only\n",
+  "checkpoints": [
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0014.pth.tar",
+      "bytes": 477081107
+    }
+  ],
+  "actual_remote_observations": 1,
+  "hardware_queried": false,
+  "goal_achieved": false,
+  "native_observer_ssh_exit_code": 0
+}

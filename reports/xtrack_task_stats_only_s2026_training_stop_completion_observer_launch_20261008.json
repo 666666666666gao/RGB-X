@@ -1,0 +1,14 @@
+{
+  "status": "PASSIVE_WAIT_FOR_ONE_D_TRAINING_ENDPOINT_OBSERVATION",
+  "local_pid": 51724,
+  "started_at": "2026-10-08T09:47:09.375105+00:00",
+  "observe_not_before": "2026-10-08T10:42:02.473537+00:00",
+  "training_update_completion_estimate": "2026-10-08T10:45:02.473537+00:00",
+  "estimate_evidence": "reports/xtrack_task_stats_only_s2026_training_stop_milestone_20261008.json",
+  "estimate_scope": "Last500 measured update times; checkpoint saves/controller-stage waiting and scoring excluded. Observe once3 minutes before estimate, then choose next actual stage milestone.",
+  "actual_remote_observations": 0,
+  "timer_sleep_max_seconds": 300,
+  "packet": "C:\\Users\\gb\\.codex_tmp\\rgbx_d_training_stop_completion_observation_20261008.json",
+  "retention_worker_pid": 3844290,
+  "purpose": "No early progress/log/native queries. Controller3766982 is SIGSTOP-held by user stop request; at actual training completion verify exit/final saved checkpoint and stop, without evaluation or new experiments."
+}

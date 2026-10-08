@@ -1,0 +1,172 @@
+{
+  "status": "USER_REQUESTED_STOP_ENFORCED_D15_TRAINING_AND_SAVED_STATE_VERIFIED_NO_EVALUATION_NO_NEXT_JOB",
+  "observed_at": "2026-10-08T10:53:38.746853+00:00",
+  "run_id": "xtrack_task_stats_only_s2026",
+  "user_instruction": "做完现在的训练就停止",
+  "training_completed_at": "2026-10-08T10:45:37.652657+00:00",
+  "training_worker_exit_code": 0,
+  "completed_epochs": 15,
+  "updates": 37500,
+  "main_training_examples": 900000,
+  "entire_prefix_fixed8T8D8E_finite_single_statistics_and_decay": true,
+  "saved_state_verification": "reports/xtrack_task_stats_only_s2026_user_stop_saved_state_audit_20261008.json",
+  "saved_state_verification_sha256": "a1cf6e2de45403cf33aee9bb852dcab32e21d55c4e6d08a84e5b52215549dce3",
+  "checkpoint": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar",
+    "bytes": 477081235,
+    "sha256": "fd019946d6b7459754b46dffc08409bb98bfe49136595fc191986dbb128c7c85"
+  },
+  "final_retention": {
+    "status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
+    "run_id": "xtrack_task_stats_only_s2026",
+    "retention_worker_pid": 3844290,
+    "poll_seconds": 240,
+    "handled_completed_epoch": 15,
+    "started_at": "2026-10-07T15:54:28.421227+00:00",
+    "epoch1_audit_sha256": "a75652eca3dc2719da40641c8d679f17114936911a8a8de71d56b7679049e71f",
+    "deleted": [
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0001.pth.tar",
+        "bytes": 477079955,
+        "sha256": "10c0f0e8ccd2c1cf70d0072c686d5b083063e2849d41afcbeba56aab93075371"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0002.pth.tar",
+        "bytes": 477080019,
+        "sha256": "61ce2d7d658ba8b80bb02abdcc464621ed39516b9a76e396f6a6f435bffc6674"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0003.pth.tar",
+        "bytes": 477080147,
+        "sha256": "29a8d579edcea8fdc03e378ca175dfb45d1afd989685b65b7e51b778d33e62dc"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0004.pth.tar",
+        "bytes": 477080211,
+        "sha256": "eb7755a1b32423b5e15bc9b79a6c7391e3263e4818d6341f3925e36360c6c122"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0005.pth.tar",
+        "bytes": 477080275,
+        "sha256": "cf8501d41ca87e24f63eb9f01ca433651847cd96fac2045afae1319ce38b8cd0"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0006.pth.tar",
+        "bytes": 477080403,
+        "sha256": "324b794df11f8ee91a34c50fec2bc25336131e00c69e368b5e18486b4e09f4f7"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0007.pth.tar",
+        "bytes": 477080467,
+        "sha256": "1dced16656f45927eb9b6a3b6d4ac89b7504eb884092755990c065d8daefe187"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0008.pth.tar",
+        "bytes": 477080595,
+        "sha256": "49ffa9fa45be7c168dc363d105c6844171c222eb414005051de0e9cad50b0795"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0009.pth.tar",
+        "bytes": 477080659,
+        "sha256": "5532eb32c071e61a5ce19db8046a088f9e37aa9b40dd4cba8c65e07f8fd4a894"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0010.pth.tar",
+        "bytes": 477080787,
+        "sha256": "4d85c637bd3c3a8778b412478921e52f2a981d5cbe7af3ecfbe91f2d838377fe"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0011.pth.tar",
+        "bytes": 477080851,
+        "sha256": "5db4313623263bc83622e98c1da5a08c0fa726ed9c2dc076c458c1b21ca78832"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0012.pth.tar",
+        "bytes": 477080915,
+        "sha256": "76a380aa4e73e8eba0c6bbf237491d6483ccfebd870d06d5b13fe6dd8aaef526"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0013.pth.tar",
+        "bytes": 477081043,
+        "sha256": "dc63b4fa4cffe57dc01e926f63fb8a702ca5bfaac88059a7b43ebe94ed2a88c0"
+      },
+      {
+        "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0014.pth.tar",
+        "bytes": 477081107,
+        "sha256": "d9e532e0ec553ba6cbf13378e65a57218718c3dbbe24a1da1261b8cc9f8e0cba"
+      }
+    ],
+    "removed_file_bytes": 6679127434,
+    "script_sha256": "bc3882ff781c32f5a3a4e787742cdf9201e68ef59471612201ae9dc50604f57f",
+    "best_by_benchmark": "NOT_DETERMINED_NO_FORMAL_SCORES",
+    "policy": "Delete only older named completed checkpoints in this exact owned formal run. Preserve the latest complete model/optimizer/three-rank RNG recovery point; no alias is generated by C/D.",
+    "after_training": "Keep terminal checkpoint until all three datasets are scored and compared; best measured method selection happens outside this worker.",
+    "public_weights_and_other_runs": "Outside cleanup scope and retained.",
+    "training_parameters_modified": false,
+    "retained_checkpoint": {
+      "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar",
+      "bytes": 477081235,
+      "sha256": "fd019946d6b7459754b46dffc08409bb98bfe49136595fc191986dbb128c7c85"
+    },
+    "observed_at": "2026-10-08T10:47:15.779081+00:00",
+    "ended_at": "2026-10-08T10:47:15.780329+00:00"
+  },
+  "own_training_controller_and_retention_processes_absent": true,
+  "own_matching_job_processes": [],
+  "automatic_controller_exit0_claim": false,
+  "automatic_controller_stop": "SIGTERM+SIGCONT after independently observed torchrun Linux wait status0 and CPU saved-state verification.",
+  "standard_endpoint_audit_and_automatic_post_training_stages": "NOT_RUN_BY_EXPLICIT_USER_STOP",
+  "formal_tracking_scores": "NOT_RUN_BY_EXPLICIT_USER_STOP",
+  "benchmark_goal_achieved": false,
+  "unscored_terminal_weight_is_not_best": true,
+  "public_reference_retained": true,
+  "cumulative_generated_weight_files_retired": 98,
+  "cumulative_generated_weight_logical_bytes_retired": 46134915520,
+  "prepared16_sources_unchanged": true,
+  "original14_sources_unchanged": true,
+  "reviewed_admission_unchanged": true,
+  "hardware_queried": false,
+  "new_model_forward_calls": 0,
+  "new_optimizer_steps": 0,
+  "files": {
+    "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/training_run.json": {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/run.json",
+      "sha256": "982dc6d89bec3f8f97ce5f157713d3d59c7b575d2e2bc1528752581d5161ba3f",
+      "bytes": 7450
+    },
+    "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/parameter_manifest.json": {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/parameter_manifest.json",
+      "sha256": "cc1013362ef32fc53de0d1b601bdf3c0d5711c60cc1484e3d609fc01a3f489b7",
+      "bytes": 107499
+    },
+    "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/automatic_controller_held_run.json": {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_controller/run.json",
+      "sha256": "2d0a3cbc0c858bd250288c821c38011e9cf1066cb244a9f0e8916a50d955df86",
+      "bytes": 3272
+    },
+    "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/saved_state_audit.json": {
+      "source": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_user_stop_saved_state_audit_20261008.json",
+      "sha256": "a1cf6e2de45403cf33aee9bb852dcab32e21d55c4e6d08a84e5b52215549dce3",
+      "bytes": 11792
+    },
+    "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/final_retention.json": {
+      "source": "/data/gb/rgbx-risk/reports/xtrack_task_stats_only_s2026_checkpoint_retention.json",
+      "sha256": "56cfcf83fc2231913e1465815af032523ce597b75584599feada01cbbaacefac",
+      "bytes": 4408
+    },
+    "reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/final_train.log": {
+      "source": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_controller/train.log",
+      "sha256": "927e7e8f8b0c947d6abd2e0ec364a8f460565e65d363a8dab308c8f976b731af",
+      "bytes": 185555091
+    }
+  },
+  "updates_jsonl": {
+    "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/updates.jsonl",
+    "sha256": "90e834afcc7833ac2b6efe7817056b5924cbbde1d9558959927c7f739ef708d5",
+    "rows": 37500,
+    "archived_full_on_server": true
+  },
+  "completion_observer33779_actual_native_exit_code": 0,
+  "previous_observer91510_native_handle": "Unavailable after long wait; original single saved SSH observation exit0 and local timer termination verified. Not a training failure.",
+  "goal_tool_action": "Pause only after final static publication, at explicit user request."
+}

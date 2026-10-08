@@ -1,0 +1,315 @@
+{
+  "status": "PASS_SAVED_D15_STATE_ACTUAL_TRAIN_EXIT0_USER_STOP_NO_BENCHMARK",
+  "run_id": "xtrack_task_stats_only_s2026",
+  "audited_at": "2026-10-08T10:48:26.597340+00:00",
+  "training_run": {
+    "status": "TRAINING_COMPLETE_REQUIRES_ENDPOINT_AND_RESULT_AUDIT",
+    "run_id": "xtrack_task_stats_only_s2026",
+    "protocol": {
+      "base_config": "configs/xtrack_b_adamw_3gpu.yaml",
+      "initial_checkpoint": "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
+      "seed": 2026,
+      "epochs": 15,
+      "samples_per_epoch": 60000,
+      "batch_per_rank": 8,
+      "world_size": 3,
+      "lr": 1e-05,
+      "lr_drop_epoch": 10,
+      "lr_drop_factor": 0.1,
+      "weight_decay": 0.0001,
+      "grad_clip_norm": 0.1,
+      "num_workers": 3,
+      "amp": false,
+      "checkpoint_every_epoch": true,
+      "run_id": "xtrack_task_stats_only_s2026",
+      "output": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026",
+      "optimizer": "task_adaptive_only",
+      "modules_enabled": [
+        "task_adaptive_statistics"
+      ],
+      "sampling": "Each rank uses a mixed task batch; global 24 examples contain eight T, eight D, eight E. Balance remains computed over each complete mixed rank batch.",
+      "initialization_setting": "Fine-tune the published jointly trained XTrack-B reference; this is not an equal-total-training-budget comparison against its original training.",
+      "localization_risk_checks": false,
+      "selective_correction": false,
+      "closed_loop_checks": false,
+      "check_data_usage": "Only training loader is iterated; no paired check samples or short clips are fetched.",
+      "loss_normalization": "Per-task local means weighted by local task count/global task count, sum over ranks, equal mean over3 tasks. Keep balance on each complete mixed rank batch.",
+      "comparison_role": "Existing method task-statistics-only component control D; not the canonical AdaTask algorithm baseline.",
+      "reference_recipe_equivalence": "Same configured main-data sampling, seed, loss and initialization; bitwise-identical augmentations across variants/epochs are not claimed."
+    },
+    "protocol_sha256": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381",
+    "initial_checkpoint_sha256": "3aeead46ab80de95a226e9ce406a2f8b84bdeab91c4b07be188f8cb0a9902e36",
+    "optimizer_kind": "task_adaptive_only",
+    "world_size": 3,
+    "output": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026",
+    "modules_enabled": [
+      "task_adaptive_statistics"
+    ],
+    "localization_check_calls": 0,
+    "correction_calls": 0,
+    "trajectory_calls": 0,
+    "check_examples": 0,
+    "unused_check_loader_constructed_not_iterated": true,
+    "formal_tracking_scores": "NOT_RUN",
+    "started_at": "2026-10-07T14:32:09.766067+00:00",
+    "rank_pids": [
+      3767034,
+      3767035,
+      3767036
+    ],
+    "attempt_id": "20261007T143209806702Z",
+    "observed_at": "2026-10-08T10:45:36.669276+00:00",
+    "epoch": 15,
+    "step": 2500,
+    "global_step": 37500,
+    "training_examples": 900000,
+    "latest": {
+      "attempt_id": "20261007T143209806702Z",
+      "epoch": 15,
+      "step": 2500,
+      "global_step": 37500,
+      "optimizer_kind": "task_adaptive_only",
+      "global_task_counts": [
+        8,
+        8,
+        8
+      ],
+      "learning_rate": 1.0000000000000002e-06,
+      "step_seconds": 1.8744006450287998,
+      "peak_allocated_bytes": 5637932544,
+      "main_training_examples": 24,
+      "localization_check_calls": 0,
+      "correction_calls": 0,
+      "trajectory_calls": 0,
+      "pair_check_forward_examples": 0,
+      "trajectory_model_forward_examples": 0,
+      "optimizer_statistics_updates": 1,
+      "weight_decay_applications": 1,
+      "joint_grad_norm_before_clip": 1.616698980331421,
+      "gradient_clip_coefficient": 0.06185439550726052
+    },
+    "wallclock_seconds": 72806.858339936,
+    "last_checkpoint": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar",
+    "completed_epochs": 15,
+    "epoch_history": [
+      {
+        "epoch": 1,
+        "steps": 2500,
+        "means": {
+          "total": 0.9770811668872833,
+          "balance": 0.06800034568607807,
+          "classification": 15.100749225234985,
+          "iou": 0.8238699052095413
+        }
+      },
+      {
+        "epoch": 2,
+        "steps": 2500,
+        "means": {
+          "total": 0.980494215464592,
+          "balance": 0.06746276220977307,
+          "classification": 14.75939762802124,
+          "iou": 0.822503075003624
+        }
+      },
+      {
+        "epoch": 3,
+        "steps": 2500,
+        "means": {
+          "total": 0.9643483128786087,
+          "balance": 0.0666723956272006,
+          "classification": 14.490513482284546,
+          "iou": 0.8243022760152817
+        }
+      },
+      {
+        "epoch": 4,
+        "steps": 2500,
+        "means": {
+          "total": 0.958135761475563,
+          "balance": 0.06584174466282129,
+          "classification": 14.282306713104248,
+          "iou": 0.8258108535766602
+        }
+      },
+      {
+        "epoch": 5,
+        "steps": 2500,
+        "means": {
+          "total": 0.9632959993839264,
+          "balance": 0.06489747498184442,
+          "classification": 14.103249946212769,
+          "iou": 0.823469431757927
+        }
+      },
+      {
+        "epoch": 6,
+        "steps": 2500,
+        "means": {
+          "total": 0.9615272967576981,
+          "balance": 0.06404598356634378,
+          "classification": 13.926838735198974,
+          "iou": 0.8236078852891922
+        }
+      },
+      {
+        "epoch": 7,
+        "steps": 2500,
+        "means": {
+          "total": 0.957186105132103,
+          "balance": 0.0627291057780385,
+          "classification": 13.74217871170044,
+          "iou": 0.8238383634328842
+        }
+      },
+      {
+        "epoch": 8,
+        "steps": 2500,
+        "means": {
+          "total": 0.9480953595399857,
+          "balance": 0.06160520295202732,
+          "classification": 13.570854544448853,
+          "iou": 0.8252525898694992
+        }
+      },
+      {
+        "epoch": 9,
+        "steps": 2500,
+        "means": {
+          "total": 0.9561699079036713,
+          "balance": 0.06014903397411108,
+          "classification": 13.386820064163208,
+          "iou": 0.8236250528097153
+        }
+      },
+      {
+        "epoch": 10,
+        "steps": 2500,
+        "means": {
+          "total": 0.9476253736495972,
+          "balance": 0.05888904552161694,
+          "classification": 13.205545874404907,
+          "iou": 0.8240958593606948
+        }
+      },
+      {
+        "epoch": 11,
+        "steps": 2500,
+        "means": {
+          "total": 0.9427165759563446,
+          "balance": 0.05824077396839857,
+          "classification": 13.124848858261108,
+          "iou": 0.824473516702652
+        }
+      },
+      {
+        "epoch": 12,
+        "steps": 2500,
+        "means": {
+          "total": 0.9507425806760788,
+          "balance": 0.05812361827641725,
+          "classification": 13.105755686950683,
+          "iou": 0.8237914117097854
+        }
+      },
+      {
+        "epoch": 13,
+        "steps": 2500,
+        "means": {
+          "total": 0.937420701622963,
+          "balance": 0.05776569808125496,
+          "classification": 13.09210798072815,
+          "iou": 0.8250537755966186
+        }
+      },
+      {
+        "epoch": 14,
+        "steps": 2500,
+        "means": {
+          "total": 0.9449992185592652,
+          "balance": 0.05776420436948538,
+          "classification": 13.075556800460815,
+          "iou": 0.8247109115123749
+        }
+      },
+      {
+        "epoch": 15,
+        "steps": 2500,
+        "means": {
+          "total": 0.9502997946262359,
+          "balance": 0.05770110294520855,
+          "classification": 13.06233225364685,
+          "iou": 0.8233831076383591
+        }
+      }
+    ],
+    "replica_parameter_sha256": "cabfd2aeed10a1f670c7e93b6ebe6fcca4cc4d6a0036bdc72146042221c71cf3",
+    "checkpoint_retention": "External first-epoch audit and owned retention activation required; no latest alias is generated.",
+    "ended_at": "2026-10-08T10:45:37.652657+00:00"
+  },
+  "checkpoint": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar",
+  "checkpoint_sha256": "fd019946d6b7459754b46dffc08409bb98bfe49136595fc191986dbb128c7c85",
+  "checkpoint_bytes": 477081235,
+  "exact_protocol_sha256": "7156203dd350c70484e6e60c3f187d2d78401cfd23abfb3086c633772b757381",
+  "training_updates": 37500,
+  "main_training_examples": 900000,
+  "entire_update_prefix_checked": true,
+  "fixed_global_8T8D8E": true,
+  "extra_module_calls": 0,
+  "update_loop_seconds": 72305.73812829773,
+  "mean_step_seconds": 1.9281530167546062,
+  "strict_model_load": true,
+  "all_model_tensors_finite": true,
+  "frozen_tensors_unchanged": true,
+  "frozen_tensor_count": 244,
+  "replicas_identical": true,
+  "loaded_trainable_replica_sha256": "cabfd2aeed10a1f670c7e93b6ebe6fcca4cc4d6a0036bdc72146042221c71cf3",
+  "optimizer_check": {
+    "optimizer_kind": "task_adaptive_only",
+    "saved_optimizer_state_count": 504,
+    "trainable_parameter_tensors": 504,
+    "always_used_witness_tensors": 24,
+    "learning_rate": 1.0000000000000002e-06,
+    "names_shapes_moments_steps_valid": true,
+    "optimizer_reload_executed": true,
+    "parameter_update_calls": 0
+  },
+  "rng_check": {
+    "saved_rank_count": 3,
+    "python_numpy_cpu_rng_restore_valid": true,
+    "cuda_rng_bytes_present": true,
+    "cuda_rng_restore_executed": false
+  },
+  "actual_training_worker_pid": 3767016,
+  "actual_training_worker_exit_code": 0,
+  "exit_evidence": "Linux proc pid stat field52 wait status0 for unreaped torchrun child while parent controller is SIGSTOP-held.",
+  "raw_training_worker_terminal_proc_stat": "3767016 (python) Z 3766982 3766982 3766982 0 -1 4227084 75734 517986813 10604 146870 488 134 27040230 6845773 20 0 1 0 71814632 0 0 18446744073709551615 0 0 0 0 0 0 0 16781312 0 1 0 0 17 83 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+  "training_rank_processes_absent": true,
+  "automatic_controller_was_held": true,
+  "automatic_controller_original_receipt_status": "RUNNING",
+  "automatic_controller_completed_stages": [],
+  "actual_controller_exit_code": null,
+  "automatic_controller_stop_reason": "Explicit user request: finish current training then stop. Not a training failure and not a controller exit0 claim.",
+  "model_forward_calls": 0,
+  "cuda_initialized": false,
+  "actual_cuda_restoration": "NOT_EXECUTED",
+  "formal_tracking_scores": "NOT_RUN_BY_EXPLICIT_USER_STOP",
+  "standard_automatic_endpoint_auditor": "NOT_EXECUTED_CONTROLLER_HELD_THIS_IS_SEPARATE_CPU_SAVED_STATE_VERIFICATION",
+  "goal_achieved": false,
+  "controller_termination_signals": [
+    "SIGTERM",
+    "SIGCONT"
+  ],
+  "automatic_controller_actual_process_absent": true,
+  "training_worker_actual_process_absent_after_parent_termination": true,
+  "stop_enforced_at": "2026-10-08T10:48:28.377492+00:00",
+  "final_checkpoint_preserved": true,
+  "unscored_final_checkpoint_is_not_called_best": true,
+  "raw_file_sha256": {
+    "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/run.json": "982dc6d89bec3f8f97ce5f157713d3d59c7b575d2e2bc1528752581d5161ba3f",
+    "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/updates.jsonl": "90e834afcc7833ac2b6efe7817056b5924cbbde1d9558959927c7f739ef708d5",
+    "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/parameter_manifest.json": "cc1013362ef32fc53de0d1b601bdf3c0d5711c60cc1484e3d609fc01a3f489b7",
+    "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_controller/run.json": "2d0a3cbc0c858bd250288c821c38011e9cf1066cb244a9f0e8916a50d955df86",
+    "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026_controller/train.log": "927e7e8f8b0c947d6abd2e0ec364a8f460565e65d363a8dab308c8f976b731af"
+  }
+}

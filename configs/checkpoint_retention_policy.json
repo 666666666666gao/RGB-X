@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-08T00:03:36.028459+08:00",
+  "updated_at": "2026-10-08T19:00:46.594248+08:00",
   "authorization": "User explicitly requests timely cleanup of our unused generated weights and retention only of the best measured weight.",
   "precheck_cleanup": "reports/precheck_weight_cleanup_20261003.json",
-  "active_training": "One most recently completed recovery checkpoint, including model, optimizer and rank RNG; retire older completed epochs and byte-identical latest alias.",
+  "active_training": "None. Current D15 training completed; project stopped at explicit user request.",
   "activation_gate": "After the actual C epoch1 named checkpoint, execute the reviewed CPU epoch1 audit once then start its one dedicated retention worker.",
-  "retention_worker_status": "ACTIVE_KEEP_ONE_COMPLETED_RECOVERY_CHECKPOINT",
+  "retention_worker_status": "FINISHED_ONE_UNSCORED_TERMINAL_CHECKPOINT_RETAINED_USER_STOP",
   "metric_selection": "Complete same-protocol LasHeR SR/PR, DepthTrack F/Recall/Precision and VisEvent SR/PR; never label a training-loss minimum as the best tracking checkpoint.",
-  "best_method_status": "NO_COMPLETED_METHOD_EXCEEDS_REFERENCE_V1_DISTANCE0_GENERATED_WEIGHTS_RETIRED",
+  "best_method_status": "PUBLIC_REFERENCE_BEST_MEASURED_V1_DISTANCE0_C_ALL7_BELOW_REFERENCE_D_UNSCORED",
   "after_complete_evaluation": "Retain the weight best for the seven predeclared required headlines plus one necessary recovery point of an active next iteration; the public reference dominates both completed methods on all seven and remains preserved. Supplementary metrics and all negative evidence remain reported.",
   "required_inputs_retained": [
     "/home/gaob/rgbx-weights/XTrack_Base.pth.tar",
@@ -14,18 +14,18 @@
   ],
   "raw_evidence_retained": "All metrics, logs, configs, model and source audits, checkpoint hashes and cleanup receipts.",
   "live_training_protocol_changed": false,
-  "retention_worker_pid": 3844290,
-  "retention_session": "Dedicated existing reviewed D worker, detached Linuxsession,240s interval.",
+  "retention_worker_pid": null,
+  "retention_session": null,
   "activation_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_evidence_20261007/activation.json",
-  "latest_recovery_path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0001.pth.tar",
-  "latest_observation_evidence": "reports/xtrack_task_stats_only_s2026_epoch1_audit_retention_intake_20261008.json",
+  "latest_recovery_path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar",
+  "latest_observation_evidence": "reports/xtrack_task_stats_only_s2026_user_stop_intake_20261008.json",
   "latest_observed_checkpoint": {
-    "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0001.pth.tar",
-    "bytes": 477079955,
-    "sha256": "10c0f0e8ccd2c1cf70d0072c686d5b083063e2849d41afcbeba56aab93075371"
+    "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar",
+    "bytes": 477081235,
+    "sha256": "fd019946d6b7459754b46dffc08409bb98bfe49136595fc191986dbb128c7c85"
   },
-  "generated_weight_files_removed_at_latest_observation": 84,
-  "generated_weight_file_bytes_removed_at_latest_observation": 39455788086,
+  "generated_weight_files_removed_at_latest_observation": 98,
+  "generated_weight_file_bytes_removed_at_latest_observation": 46134915520,
   "completed_v1_retention_history": {
     "retention_worker_status": "FINAL_CHECKPOINT_RETAINED_AWAITING_COMPLETE_METRICS",
     "retention_worker_pid": 1629089,
@@ -42,7 +42,7 @@
     "generated_weight_files_removed_at_activation": 6,
     "generated_weight_file_bytes_removed_at_activation": 2826002092
   },
-  "latest_observation_at": "2026-10-07T15:58:47.483101+00:00",
+  "latest_observation_at": "2026-10-08T10:53:38.746853+00:00",
   "protected_completed_candidate": "None: C endpoint actually retired after full3/five stages; public joint reference remains required and best on all7.",
   "unstarted_controls": "D actual2800 updates/epoch1CPUaudit and retentionactive. Cfull3 negative preserved; independent mechanism diagnostics not run.",
   "distance0_weight_files_removed_at_first_retention_observation": 1,
@@ -52,10 +52,20 @@
   "C_worker_deleted_files_so_far": 14,
   "C_worker_removed_file_bytes_so_far": 6169593210,
   "C_endpoint_retirement": "reports/completed_dominated_c_weight_retirement_20261007.json",
-  "protected_active_point": "One actual audited D complete recovery point; no tracking score yet, not a measured best model.",
+  "protected_active_point": "No active job. Preserve the sole completed unscored D terminal saved result at user stop; not called a measured best model.",
   "active_control_run_id": "xtrack_task_stats_only_s2026",
-  "active_control_retention_worker_pid": 3844290,
+  "active_control_retention_worker_pid": null,
   "active_control_sanity_input": null,
-  "D_worker_deleted_files_so_far": 0,
-  "D_worker_removed_file_bytes_so_far": 0
+  "D_worker_deleted_files_so_far": 14,
+  "D_worker_removed_file_bytes_so_far": 6679127434,
+  "user_stop_final_evidence": "reports/xtrack_task_stats_only_s2026_user_stop_intake_20261008.json",
+  "final_retained_objects": [
+    "Protected public joint initialization and best measured reference",
+    {
+      "path": "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar",
+      "bytes": 477081235,
+      "sha256": "fd019946d6b7459754b46dffc08409bb98bfe49136595fc191986dbb128c7c85"
+    }
+  ],
+  "after_user_stop": "No new evaluation to select a D best score. One completed D terminal result is kept for the stopped experiment; older generated D weights removed by the existing owned retainer. No extra checkpoints or aliases retained."
 }
