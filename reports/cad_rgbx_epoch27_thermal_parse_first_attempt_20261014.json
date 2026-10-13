@@ -1,0 +1,18 @@
+{
+  "status": "ACTUAL_LOG_PARSE_FAILURE_THEN_DICTIONARY_EXTRACTION_SUCCEEDED",
+  "recorded_at": "2026-10-13T21:50:15.107595+00:00",
+  "original_tool_chunk_id": "8660e6",
+  "actual_first_exit_code": 1,
+  "failing_operation": "ast.literal_eval on an entire GPU0_COOLING_PAUSE log-line suffix",
+  "actual_input_prefix": "{'temperature_c': 72}/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning:",
+  "error": "SyntaxError: invalid syntax caused by interleaved worker warning after the temperature dictionary",
+  "actual_corrected_exit_code": 0,
+  "corrected_result": "reports/cad_rgbx_epoch27_thermal_and_retention_20261014.json",
+  "corrected_scope": "Parse the existing temperature dictionary through its closing brace; preserve raw log and count trailing output records.",
+  "trailing_output_records": 1,
+  "training_restarted": false,
+  "training_code_modified": false,
+  "live_sensor_queries": 0,
+  "neural_model_forward_calls": 0,
+  "weights_deleted": 0
+}

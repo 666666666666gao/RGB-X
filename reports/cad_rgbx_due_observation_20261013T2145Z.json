@@ -1,0 +1,682 @@
+{
+  "status": "FORMAL_RUNNING_LIVE_PIDS_AND_FINITE_PROGRESS_VERIFIED",
+  "observed_at": "2026-10-13T21:45:00.944629+00:00",
+  "run_status": "RUNNING_NOT_EVALUATED",
+  "execution_status": "RUNNING",
+  "actual_controller_exit_code": null,
+  "processes": [
+    {
+      "role": "controller",
+      "pid": 528490,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage formal "
+    },
+    {
+      "role": "torchrun",
+      "pid": 528530,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=2 --master_port=29541 /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    },
+    {
+      "role": "rank0",
+      "pid": 528656,
+      "exists": true,
+      "state": "R",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    },
+    {
+      "role": "rank1",
+      "pid": 528657,
+      "exists": true,
+      "state": "R",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    }
+  ],
+  "completed_epochs": 27,
+  "epoch": 28,
+  "global_step": 68450,
+  "main_training_examples": 1642800,
+  "latest": {
+    "epoch": 28,
+    "step": 950,
+    "global_step": 68450,
+    "learning_rate": 8.705108639726034e-05,
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "task_response_box_iou": [
+      [
+        0.3330214023590088,
+        1.4984095096588135,
+        0.5388547778129578
+      ],
+      [
+        0.5763590335845947,
+        0.6027301549911499,
+        0.7625045776367188
+      ],
+      [
+        0.5274258852005005,
+        0.7195874452590942,
+        0.6872947216033936
+      ]
+    ],
+    "gradient_norm_before_clip": 2.561316728591919,
+    "step_seconds": 0.8097044659953099,
+    "peak_allocated_bytes": 7988091904,
+    "cooling_pause_seconds": 18689.136331037138,
+    "main_training_examples": 1642800
+  },
+  "progress_increased": true,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          5.026616096496582,
+          3.569101095199585,
+          0.09059811383485794
+        ],
+        [
+          4.860861301422119,
+          3.2742466926574707,
+          0.13164196908473969
+        ],
+        [
+          4.7001566886901855,
+          3.241260051727295,
+          0.13445255160331726
+        ]
+      ]
+    },
+    {
+      "epoch": 2,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.762380599975586,
+          2.8549153804779053,
+          0.206276074051857
+        ],
+        [
+          1.5522063970565796,
+          2.5015556812286377,
+          0.2864934504032135
+        ],
+        [
+          1.5525286197662354,
+          2.4131147861480713,
+          0.30150896310806274
+        ]
+      ]
+    },
+    {
+      "epoch": 3,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.5126993656158447,
+          2.6451244354248047,
+          0.25494810938835144
+        ],
+        [
+          1.282660961151123,
+          2.2111101150512695,
+          0.36208871006965637
+        ],
+        [
+          1.31875479221344,
+          2.1929006576538086,
+          0.356855183839798
+        ]
+      ]
+    },
+    {
+      "epoch": 4,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.3724759817123413,
+          2.414846897125244,
+          0.3055906295776367
+        ],
+        [
+          1.0807663202285767,
+          1.8277267217636108,
+          0.44653382897377014
+        ],
+        [
+          1.1660361289978027,
+          1.9772300720214844,
+          0.4062255620956421
+        ]
+      ]
+    },
+    {
+      "epoch": 5,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.245051383972168,
+          2.2024238109588623,
+          0.35619351267814636
+        ],
+        [
+          0.9587917923927307,
+          1.589796781539917,
+          0.5066319108009338
+        ],
+        [
+          1.038065791130066,
+          1.7489815950393677,
+          0.46318069100379944
+        ]
+      ]
+    },
+    {
+      "epoch": 6,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.1918582916259766,
+          2.1191322803497314,
+          0.37809592485427856
+        ],
+        [
+          0.9050310254096985,
+          1.4765256643295288,
+          0.5359214544296265
+        ],
+        [
+          0.9843312501907349,
+          1.66100013256073,
+          0.4866447150707245
+        ]
+      ]
+    },
+    {
+      "epoch": 7,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.1501458883285522,
+          2.042982339859009,
+          0.3952920436859131
+        ],
+        [
+          0.8576481342315674,
+          1.420589566230774,
+          0.5532012581825256
+        ],
+        [
+          0.9197151064872742,
+          1.5641202926635742,
+          0.5126204490661621
+        ]
+      ]
+    },
+    {
+      "epoch": 8,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.1138620376586914,
+          1.9777891635894775,
+          0.40866976976394653
+        ],
+        [
+          0.8031311631202698,
+          1.318005084991455,
+          0.578330397605896
+        ],
+        [
+          0.8747618198394775,
+          1.4815869331359863,
+          0.5338887572288513
+        ]
+      ]
+    },
+    {
+      "epoch": 9,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.0753118991851807,
+          1.8883835077285767,
+          0.4306737184524536
+        ],
+        [
+          0.7697199583053589,
+          1.2539178133010864,
+          0.5951588749885559
+        ],
+        [
+          0.8406161665916443,
+          1.4299678802490234,
+          0.5477901697158813
+        ]
+      ]
+    },
+    {
+      "epoch": 10,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.0610679388046265,
+          1.8725440502166748,
+          0.43762728571891785
+        ],
+        [
+          0.7348415851593018,
+          1.1952306032180786,
+          0.6113166213035583
+        ],
+        [
+          0.7987914681434631,
+          1.3810551166534424,
+          0.5621998310089111
+        ]
+      ]
+    },
+    {
+      "epoch": 11,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.0179551839828491,
+          1.8138587474822998,
+          0.4497515559196472
+        ],
+        [
+          0.711500883102417,
+          1.1587729454040527,
+          0.6224449276924133
+        ],
+        [
+          0.7847428321838379,
+          1.344620704650879,
+          0.5721426606178284
+        ]
+      ]
+    },
+    {
+      "epoch": 12,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.9955752491950989,
+          1.7810567617416382,
+          0.4601268470287323
+        ],
+        [
+          0.6944975852966309,
+          1.129981517791748,
+          0.6302841305732727
+        ],
+        [
+          0.7658373117446899,
+          1.3071461915969849,
+          0.5813980102539062
+        ]
+      ]
+    },
+    {
+      "epoch": 13,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.9736787676811218,
+          1.7392113208770752,
+          0.4714732766151428
+        ],
+        [
+          0.6665967106819153,
+          1.0807139873504639,
+          0.6435093283653259
+        ],
+        [
+          0.7391223311424255,
+          1.260745882987976,
+          0.5928340554237366
+        ]
+      ]
+    },
+    {
+      "epoch": 14,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.9633309245109558,
+          1.7282497882843018,
+          0.47324973344802856
+        ],
+        [
+          0.6520783305168152,
+          1.0559383630752563,
+          0.649488091468811
+        ],
+        [
+          0.722506582736969,
+          1.2162741422653198,
+          0.6028864979743958
+        ]
+      ]
+    },
+    {
+      "epoch": 15,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.9483683109283447,
+          1.6928300857543945,
+          0.48198437690734863
+        ],
+        [
+          0.6333547830581665,
+          1.029699683189392,
+          0.658639132976532
+        ],
+        [
+          0.7057812809944153,
+          1.1834716796875,
+          0.6112698316574097
+        ]
+      ]
+    },
+    {
+      "epoch": 16,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.9409902095794678,
+          1.6584337949752808,
+          0.48955222964286804
+        ],
+        [
+          0.6310567259788513,
+          1.016295075416565,
+          0.6601295471191406
+        ],
+        [
+          0.6948164105415344,
+          1.187131643295288,
+          0.6119825839996338
+        ]
+      ]
+    },
+    {
+      "epoch": 17,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.9202062487602234,
+          1.6381639242172241,
+          0.4940762221813202
+        ],
+        [
+          0.6125409603118896,
+          0.9953553676605225,
+          0.6676561236381531
+        ],
+        [
+          0.6794949173927307,
+          1.1697717905044556,
+          0.6163889765739441
+        ]
+      ]
+    },
+    {
+      "epoch": 18,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.906859815120697,
+          1.6248538494110107,
+          0.49948808550834656
+        ],
+        [
+          0.5955225229263306,
+          0.9648460745811462,
+          0.6755414605140686
+        ],
+        [
+          0.66352379322052,
+          1.1462554931640625,
+          0.6243267059326172
+        ]
+      ]
+    },
+    {
+      "epoch": 19,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.8978652358055115,
+          1.6158097982406616,
+          0.5016496777534485
+        ],
+        [
+          0.586569607257843,
+          0.9317741990089417,
+          0.6829279661178589
+        ],
+        [
+          0.6585690975189209,
+          1.1237915754318237,
+          0.6295072436332703
+        ]
+      ]
+    },
+    {
+      "epoch": 20,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.8819210529327393,
+          1.5951554775238037,
+          0.5070382952690125
+        ],
+        [
+          0.5756509900093079,
+          0.9368332028388977,
+          0.6843256950378418
+        ],
+        [
+          0.6472447514533997,
+          1.100725531578064,
+          0.6340509057044983
+        ]
+      ]
+    },
+    {
+      "epoch": 21,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.8696639537811279,
+          1.5785419940948486,
+          0.5122338533401489
+        ],
+        [
+          0.569956362247467,
+          0.9192566275596619,
+          0.6880826950073242
+        ],
+        [
+          0.6431450247764587,
+          1.0880825519561768,
+          0.6376675367355347
+        ]
+      ]
+    },
+    {
+      "epoch": 22,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.8683807253837585,
+          1.5747226476669312,
+          0.5119543075561523
+        ],
+        [
+          0.5579310655593872,
+          0.9031633734703064,
+          0.6930963397026062
+        ],
+        [
+          0.6278265714645386,
+          1.0652180910110474,
+          0.6453099250793457
+        ]
+      ]
+    },
+    {
+      "epoch": 23,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.8563684225082397,
+          1.554839849472046,
+          0.516046941280365
+        ],
+        [
+          0.5580168962478638,
+          0.8897160887718201,
+          0.6964280009269714
+        ],
+        [
+          0.6257049441337585,
+          1.0525964498519897,
+          0.648076593875885
+        ]
+      ]
+    },
+    {
+      "epoch": 24,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.848755419254303,
+          1.5415551662445068,
+          0.5207291841506958
+        ],
+        [
+          0.5434907674789429,
+          0.8687024116516113,
+          0.7027335166931152
+        ],
+        [
+          0.6173625588417053,
+          1.04023277759552,
+          0.6533090472221375
+        ]
+      ]
+    },
+    {
+      "epoch": 25,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.8500519394874573,
+          1.5322318077087402,
+          0.5230613350868225
+        ],
+        [
+          0.5293686389923096,
+          0.856922447681427,
+          0.7051870822906494
+        ],
+        [
+          0.5998921990394592,
+          1.0298569202423096,
+          0.6557704210281372
+        ]
+      ]
+    },
+    {
+      "epoch": 26,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.8369997143745422,
+          1.5085766315460205,
+          0.5261802673339844
+        ],
+        [
+          0.5241151452064514,
+          0.8394643068313599,
+          0.7093223929405212
+        ],
+        [
+          0.5882250070571899,
+          1.007909893989563,
+          0.6617872714996338
+        ]
+      ]
+    },
+    {
+      "epoch": 27,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          0.8259901404380798,
+          1.505053162574768,
+          0.5311387181282043
+        ],
+        [
+          0.5246903896331787,
+          0.8358150124549866,
+          0.7102407813072205
+        ],
+        [
+          0.5910946726799011,
+          1.0246965885162354,
+          0.6586593389511108
+        ]
+      ]
+    }
+  ],
+  "last_checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+  "gpu0": {
+    "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "power_limit_w": 250.0,
+    "temperature_c": 74,
+    "target_temperature_c": 75
+  },
+  "last_log_lines": [
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 12, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 12, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 12, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/conda/envs/rgbx-risk/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.",
+    "  warnings.warn("
+  ],
+  "formal_tracking_scores": "NOT_RUN",
+  "model_forward_calls": 0,
+  "new_training_started": false,
+  "weights_modified": false,
+  "mean_step_seconds_observed": 0.8551227152068662,
+  "current_epoch_end_estimate": "2026-10-13T22:07:06.384838+00:00",
+  "next_diagnostic_epoch": 50,
+  "next_diagnostic_epoch_end_estimate": "2026-10-14T11:10:58.134174+00:00",
+  "next_progress_observation_not_before": "2026-10-14T11:07:58.134174+00:00"
+}
