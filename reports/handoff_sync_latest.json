@@ -1,22 +1,22 @@
 {
-  "status": "CAD_SCRATCH_B0_TWO_GPU_EPOCH1_SAVED_CPU_VERIFIED_NO_BENCHMARK",
-  "verified_at": "2026-10-13T06:42:02.474663+00:00",
-  "source_commit": "7c5f70abd0faed4bb42eba0e86f250e6f738b774",
+  "status": "CAD_SCRATCH_B0_EPOCH2_RUNNING_THERMAL_MARGIN_ADJUSTMENT_PENDING_ADMIN",
+  "verified_at": "2026-10-13T08:36:26.944402+00:00",
+  "source_commit": "77b1e54123266291b7adeae445f189c2fa6035f5",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "68bb1ed35f32d85507289c2b40108ad87ee762eeb7648267d29be7458e5918ad",
-  "document_bytes": 326285,
+  "document_sha256": "8c6bdea1f5aedad8c81ef6793b9931b7b6bbfdbf7bf353071ca308b1b84ea5ae",
+  "document_bytes": 329038,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/7c5f70abd0faed4bb42eba0e86f250e6f738b774/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/77b1e54123266291b7adeae445f189c2fa6035f5/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
     ".gitattributes": "3a63ab4db5fc32fa02e5302d669d8820cef77f832e21b3afdbe310147b49cec5",
     "scripts/xtrack_eval_parameters.py": "e541ce37939dadf90c0e1e60130ddcd41989677f12f23b609d32dbb82140802d",
-    "configs/current_goal.json": "8f821022a518e32113078fb42c1f7a7bf9a31033b78ea1d3ae54af71691b6b11",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "68bb1ed35f32d85507289c2b40108ad87ee762eeb7648267d29be7458e5918ad",
+    "configs/current_goal.json": "318d217269366a5ef8934a74a78e59c878ee69cf2fb009dec1a574d6a6ed1c65",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8c6bdea1f5aedad8c81ef6793b9931b7b6bbfdbf7bf353071ca308b1b84ea5ae",
     "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
     "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
     "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -350,7 +350,10 @@
     "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/epoch1_doc_metadata_server_copy.stdout": "e2452345243f01499dfc09bf4338341518d24addd0e8ebc1ffacf8a2a7a89415",
     "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/epoch1_doc_metadata_server_copy_execution.json": "a0116ea8f30d15ee0317de58e0490d1a787e3d72f18d9974e92194eda3ff36f0",
     "reports/cad_rgbx_publication_final_evidence_reconciliation_20261013.json": "6540fa9ca7a47d052eb34ab8155cb9de136f242f73c0cc017cff961c676e5be1",
-    "reports/cad_rgbx_publication_resume_20261013.json": "c9dde29202bdcdadb7c00b8601472e1a116be74334bd945324694fa9df16a64a"
+    "reports/cad_rgbx_publication_resume_20261013.json": "c9dde29202bdcdadb7c00b8601472e1a116be74334bd945324694fa9df16a64a",
+    "reports/cad_rgbx_due_observation_20261013T0701Z.json": "3aeebb7f8b5b686b04d6e4dd465306bc9bccb397e569c0d44983252485741db3",
+    "reports/cad_rgbx_thermal_log_diagnostic_20261013.json": "599da02dce40966850a61e6578170645b2380d6b72f3b11b59fcb732a276578d",
+    "reports/cad_rgbx_gpu0_target70_command_20261013.json": "bce76cad0202b05df1039f5133e62d68fcf7e1614079613e93247c79cd9d4679"
   },
   "published_files": 338,
   "latest_publication_sync": {
@@ -708,7 +711,7 @@
   ],
   "distance0_lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json",
   "execution_goal_version": "2026-10-06-user-review-v4",
-  "current_goal_sha256": "8f821022a518e32113078fb42c1f7a7bf9a31033b78ea1d3ae54af71691b6b11",
+  "current_goal_sha256": "318d217269366a5ef8934a74a78e59c878ee69cf2fb009dec1a574d6a6ed1c65",
   "user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json",
   "distance0_visevent_evidence": "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json",
   "distance0_complete_result": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
@@ -780,11 +783,17 @@
     1
   ],
   "old_xtrack_user_stop_preserved": true,
-  "current_cad_status": "CAD_SCRATCH_B0_RUNNING_EPOCH1_SAVED_CPU_VERIFIED_NO_BENCHMARK",
-  "current_cad_completed_epochs": 1,
-  "current_cad_training_updates": 2900,
-  "current_cad_main_examples": 69600,
+  "current_cad_status": "CAD_SCRATCH_B0_EPOCH2_RUNNING_THERMAL_MARGIN_ADJUSTMENT_PENDING_ADMIN",
+  "current_cad_completed_epochs": 2,
+  "current_cad_training_updates": 5400,
+  "current_cad_main_examples": 129600,
   "current_cad_formal_tracking_scores": "NOT_RUN",
   "latest_cad_retention": "reports/cad_rgbx_sanity_weight_retention_20261013.json",
-  "publication_resume_completed": true
+  "publication_resume_completed": true,
+  "current_cad_progress_evidence": "reports/cad_rgbx_due_observation_20261013T0701Z.json",
+  "current_cad_thermal_log_evidence": "reports/cad_rgbx_thermal_log_diagnostic_20261013.json",
+  "current_cad_thermal_command_evidence": "reports/cad_rgbx_gpu0_target70_command_20261013.json",
+  "current_cad_gpu0_target70_applied": false,
+  "current_cad_next_progress_not_before": "2026-10-13T07:33:59.041206+00:00",
+  "verification_scope": "Five changed static files verified now; prior immutable hashes retain their preceding verification timestamps."
 }

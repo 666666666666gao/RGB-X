@@ -1,0 +1,18 @@
+{
+  "status": "ACTUAL_INCREMENTAL_SOURCE_PUSH_AND_FOUR_DOCUMENT_COPIES_VERIFIED",
+  "verified_at": "2026-10-13T08:36:26.944402+00:00",
+  "source_commit": "77b1e54123266291b7adeae445f189c2fa6035f5",
+  "file_sha256": {
+    "configs/current_goal.json": "318d217269366a5ef8934a74a78e59c878ee69cf2fb009dec1a574d6a6ed1c65",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8c6bdea1f5aedad8c81ef6793b9931b7b6bbfdbf7bf353071ca308b1b84ea5ae",
+    "reports/cad_rgbx_due_observation_20261013T0701Z.json": "3aeebb7f8b5b686b04d6e4dd465306bc9bccb397e569c0d44983252485741db3",
+    "reports/cad_rgbx_thermal_log_diagnostic_20261013.json": "599da02dce40966850a61e6578170645b2380d6b72f3b11b59fcb732a276578d",
+    "reports/cad_rgbx_gpu0_target70_command_20261013.json": "bce76cad0202b05df1039f5133e62d68fcf7e1614079613e93247c79cd9d4679"
+  },
+  "document_four_copies_identical": true,
+  "neural_model_forward_calls": 0,
+  "training_progress_queries": 0,
+  "gpu_sensor_queries": 0,
+  "training_or_dataset_changed": false,
+  "publication_scope": "Epoch2 observation and actual thermal incident; target70 command denied, admin action pending."
+}
