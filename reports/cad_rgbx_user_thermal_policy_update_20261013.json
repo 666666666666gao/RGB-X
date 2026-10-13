@@ -1,0 +1,32 @@
+{
+  "status": "USER_ACCEPTS_OCCASIONAL76C_KEEP250W_TARGET75_NO_SETTING_CHANGE",
+  "recorded_at": "2026-10-13T08:40:05.843279+00:00",
+  "user_instruction": "偶尔到76也无所谓，不用设置了",
+  "gpu0_power_limit_w": 250,
+  "gpu0_target_temperature_c": 75,
+  "occasional_76c_accepted": true,
+  "target70_cancelled": true,
+  "admin_action_pending": false,
+  "gpu_settings_changed": false,
+  "training_or_optimizer_changed": false,
+  "local_timer_pid_cancelled": 29248,
+  "remote_training_signals": 0,
+  "observation_execution_native_session": 73232,
+  "observation_result_pending": false,
+  "actual_observation_exit_code": 0,
+  "actual_progress_evidence": "reports/cad_rgbx_due_observation_20261013T0840Z.json",
+  "actual_observation_at": "2026-10-13T08:39:08.813413+00:00",
+  "cancelled_local_timer_actual_exit_code": 1,
+  "next_local_timer_pid": 38684,
+  "next_local_timer_native_session": 84786,
+  "next_progress_not_before": "2026-10-13T08:48:14.253578+00:00",
+  "timer_strategy": "Check only local UTC time at most every240s; execute one SSH observation when due. No early training polls.",
+  "diagnostic_epoch_milestones": [
+    5,
+    10,
+    25,
+    50,
+    75,
+    100
+  ]
+}
