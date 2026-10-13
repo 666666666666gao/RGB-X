@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "role": "DOC_ONLY_CONSISTENCY_FOLLOWUP",
+  "observed_at": "2026-10-13T06:17:33.496131+00:00",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "max",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "document_path": "docs/RGB-X_\u7814\u7a76\u4e0e\u5b9e\u9a8c\u5b8c\u6574\u4ea4\u63a5_2026-10-02.md",
+  "document_sha256": "61d9e4cd5691e5d9e081d5d33282e40e462c721af78243ec6b512faa2563134c",
+  "document_bytes": 324177,
+  "reviewed_scope": "New CAD section including actual launch subsection; three supplied receipts; immutable source hashes.",
+  "documented_sanity_and_cpu_audit_commands_match_actual_invocations": true,
+  "original_sanity_report_sha256": "685d8c51a10e3166ae5c56d5780af9e0a04a867b00ab833823977b6915ee76ea",
+  "original_command_evidence_preserved": true,
+  "local_source_hashes_unchanged": true,
+  "local_pruned_core_hashes_unchanged": true,
+  "remote_source_and_core_hashes_checked_in_report_copy": true,
+  "exact_source_hashes": {
+    "configs/cad_rgbx_b0_s2026.json": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+    "cad_rgbx/__init__.py": "53cec4719f0b9cc8c915908e17ccce25ac417d2c491f7f7c8055642f565806a1",
+    "cad_rgbx/bootstrap.py": "2a4cf71aefaf4c3d657f2aeac5086857e07fbe286b5cf71a5a1bc95a4b067857",
+    "cad_rgbx/data.py": "a9dd9adc3abb4cd389265262181d12cf8e00cfc3939a3033d4af88642f6b0794",
+    "cad_rgbx/hardware.py": "e4b179690a6396dedb2ea37428fb0aa1d07965b543bad3aeae77070b1c61e722",
+    "cad_rgbx/losses.py": "d158ea26eef629c8d0c1b73d03d72ac758dd05fe0aed366b5a1bb91a9b514996",
+    "cad_rgbx/model.py": "1c35ed8b00d500b9b0216b7bcf2424e9ea80c35007f3878587bb3d1ce142754f",
+    "scripts/train_cad_rgbx.py": "f989a951e51ef4e625e02778f047dcab963aded9974fa75f564f96364e89f2a9",
+    "scripts/run_cad_rgbx_job.py": "eea6234bcb40282b38981b84e306029e6471004f705d71e4713cf0253668bfe4",
+    "scripts/audit_cad_rgbx_checkpoint.py": "e77f301ed20a197a770929c8333d9a16760d9cd00d29014d3c55b4e92645eec4"
+  },
+  "pruned_core_file_count": 29,
+  "receipt_files": {
+    "cad_rgbx_formal_launch_20261013.json": {
+      "sha256": "ca5f2a04257f97e223da7a4634f244f34a6d445a664ded41c779b3b05d58e782",
+      "bytes": 1928
+    },
+    "cad_rgbx_live_process_verification_20261013.json": {
+      "sha256": "8387992b5235355b451264e7802380d78a7236ba3f190c35275b06ca6e39f91c",
+      "bytes": 4838
+    },
+    "cad_rgbx_sanity_weight_retention_20261013.json": {
+      "sha256": "c906420cf65134752370b00eda6cd8231f6516939efa44a5aa2a20f30828fec2",
+      "bytes": 530
+    }
+  },
+  "formal_prefix": {
+    "evidence_observed_at": "2026-10-13T06:11:36.120224+00:00",
+    "updates": 2050,
+    "samples": 49200,
+    "epoch": 1,
+    "completed_epochs": 0,
+    "initial_state_sha256": "ed4579edbff35ebe5df3866bbd66feefb38895179c5350fe51fcf7fc3b2a7723",
+    "matches_scratch_sanity_initialization": true,
+    "pretrained_loaded": false,
+    "auto_resume": false,
+    "gpu0": {
+      "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+      "power_limit_w": 250.0,
+      "temperature_c": 72,
+      "target_temperature_c": 75
+    },
+    "cumulative_cooling_pause_seconds": 49.97814254799778,
+    "tracking_scores": "NOT_RUN"
+  },
+  "process_receipt": {
+    "observed_at": "2026-10-13T06:12:39.645800+00:00",
+    "processes": [
+      {
+        "pid": 528490,
+        "state": "S",
+        "cmdline": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage formal "
+      },
+      {
+        "pid": 528530,
+        "state": "S",
+        "cmdline": "/data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=2 --master_port=29541 /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+      },
+      {
+        "pid": 528656,
+        "state": "R",
+        "cmdline": "/data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+      },
+      {
+        "pid": 528657,
+        "state": "R",
+        "cmdline": "/data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+      }
+    ],
+    "new_live_process_query": false
+  },
+  "cooling_evidence": {
+    "sanity_pause_branch_executed": false,
+    "formal_pause_resume_branch_executed": true,
+    "formal_receipt_observed_at": "2026-10-13T06:12:39.645800+00:00",
+    "pause_records": 36,
+    "resume_records": 35,
+    "last_record": "GPU0_COOLING_PAUSE {'temperature_c': 74}",
+    "last_74c_pause_resume_observed": false,
+    "scope": "Receipt review only. The final 74C pause has no matching resume in this supplied snapshot."
+  },
+  "rank1_peak_vram": "NOT_RECORDED",
+  "sanity_checkpoint_retention": {
+    "status": "OWN_TWO_STEP_SANITY_CHECKPOINT_RETIRED_AFTER_STRICT_AUDIT",
+    "observed_at": "2026-10-13T05:28:58.641486+00:00",
+    "removed_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/CADTrack_latest.pth.tar",
+    "logical_bytes_retired": 1236771384,
+    "removed_sha256": "48d0cc972f6e8e2774fd756bbca969ca00f650e23bb281ae759dc795896fde6c",
+    "user_checkpoint": "/home/gaob/CADTrack_ep0014.pth.tar",
+    "user_checkpoint_modified": false,
+    "formal_recovery_modified": false,
+    "metadata_and_logs_preserved": true
+  },
+  "scheduling": {
+    "first_epoch_end_estimate": "2026-10-13T06:20:48.643580+00:00",
+    "first_epoch_end_beijing_rounded": "2026-10-13 14:20:49",
+    "next_progress_observation_not_before": "2026-10-13T06:17:48.643580+00:00",
+    "next_progress_observation_beijing_rounded": "2026-10-13 14:17:49",
+    "provisional": true
+  },
+  "warnings": [],
+  "resolved_warnings": [
+    {
+      "id": "stale_thermal_protection_sentence",
+      "status": "RESOLVED",
+      "verified_correction": "The document now explicitly separates preparation, untriggered sanity and triggered formal cooling."
+    },
+    {
+      "id": "observation_timestamps",
+      "status": "RESOLVED",
+      "verified_correction": "Progress/gpu0 receipt 14:11:36 and /proc confirmation 14:12:39 are now stated separately."
+    },
+    {
+      "id": "unpaired_last_74c_pause",
+      "status": "RESOLVED",
+      "verified_correction": "The document now separates completed 72/73C cycles from the final 74C pause with no matching resume in the snapshot."
+    },
+    {
+      "id": "original_handoff_missing_actual_result_and_cpu_command",
+      "status": "RESOLVED",
+      "verified_correction": "The original preparation hardware/command state is retained as history, actual sanity and formal records are supplied, and the exact executed CPU audit command is documented."
+    }
+  ],
+  "original_sanity_scope_warnings_retained": [
+    "sanity cooling pause/resume unexercised",
+    "rank1 peak VRAM unrecorded",
+    "two-step sanity not a sustained throughput estimate",
+    "CUDA RNG inspected on CPU only",
+    "tracking benchmarks not run"
+  ],
+  "gpu_commands_executed": 0,
+  "progress_queries_executed": 0,
+  "process_status_queries_executed": 0,
+  "neural_network_or_cuda_commands_executed": 0,
+  "source_modifications": 0,
+  "benchmark": "NOT_RUN",
+  "scope_limit": "This followup reviews documents/receipts only and does not certify completion or benchmark performance."
+}

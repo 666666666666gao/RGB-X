@@ -1,6 +1,6 @@
 {
   "status": "CAD_SCRATCH_B0_TWO_GPU_EPOCH1_SAVED_CPU_VERIFIED_NO_BENCHMARK",
-  "verified_at": "2026-10-13T06:38:59.001770+00:00",
+  "verified_at": "2026-10-13T06:42:02.474663+00:00",
   "source_commit": "7c5f70abd0faed4bb42eba0e86f250e6f738b774",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "document_sha256": "68bb1ed35f32d85507289c2b40108ad87ee762eeb7648267d29be7458e5918ad",
@@ -340,14 +340,23 @@
     "reports/cad_rgbx_epoch1_progress_20261013.json": "b08ce147148b2c5457c1ca49df62ddea59059475d09bf5eb36ee19c76f17b2fb",
     "reports/cad_rgbx_first_formal_checkpoint_audit_20261013.json": "9dc1dd19f8e2e03b6a7a53ef5bbf908b95ab4abef99c2971e00cd7de96e19e0b",
     "reports/cad_rgbx_epoch2_progress_20261013.json": "abf3b5de3ca4fe1eb4b896795c658f8528ca2ea3556656693d629204fbbc741a",
-    "reports/cad_rgbx_publication_first_attempt_20261013.json": "22c2d2342db4669e18587e4952d957c1494f0149c9a89f7c13118ccaf9a3bb07"
+    "reports/cad_rgbx_publication_first_attempt_20261013.json": "22c2d2342db4669e18587e4952d957c1494f0149c9a89f7c13118ccaf9a3bb07",
+    "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/doc_followup_server_copy.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/doc_followup_server_copy.stdout": "695cab74d0221252edcd014f81e0acd0905421a18d2c643a0dd04b75d33ad866",
+    "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/doc_followup_server_copy_execution.json": "aec7b00deccae4472a5694b45bbab4908fddaa9b6573516bd6c2acf2f63c4bb4",
+    "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/doc_only_followup_20261013.json": "54a5a32519ceae39a9d0151aad09dc78e7218f82389b9cfd29f666f222c1b901",
+    "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/epoch1_doc_metadata_followup_20261013.json": "9f932068a09c075df05f5c3c1555df190694f6049e137c2cd9319e7c3fc12b63",
+    "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/epoch1_doc_metadata_server_copy.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/epoch1_doc_metadata_server_copy.stdout": "e2452345243f01499dfc09bf4338341518d24addd0e8ebc1ffacf8a2a7a89415",
+    "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z/epoch1_doc_metadata_server_copy_execution.json": "a0116ea8f30d15ee0317de58e0490d1a787e3d72f18d9974e92194eda3ff36f0",
+    "reports/cad_rgbx_publication_final_evidence_reconciliation_20261013.json": "6540fa9ca7a47d052eb34ab8155cb9de136f242f73c0cc017cff961c676e5be1",
+    "reports/cad_rgbx_publication_resume_20261013.json": "c9dde29202bdcdadb7c00b8601472e1a116be74334bd945324694fa9df16a64a"
   },
-  "published_files": 328,
+  "published_files": 338,
   "latest_publication_sync": {
-    "verified_at": "2026-10-13T06:38:59.001770+00:00",
+    "verified_at": "2026-10-13T06:42:02.474663+00:00",
     "all_files_match": true,
-    "published_files": 328,
-    "old_controls_sources_unchanged": true
+    "published_files": 338
   },
   "last_verified_runtime": "2026-10-08T10:53:38.746853+00:00",
   "reference_complete_datasets": [
@@ -776,5 +785,6 @@
   "current_cad_training_updates": 2900,
   "current_cad_main_examples": 69600,
   "current_cad_formal_tracking_scores": "NOT_RUN",
-  "latest_cad_retention": "reports/cad_rgbx_sanity_weight_retention_20261013.json"
+  "latest_cad_retention": "reports/cad_rgbx_sanity_weight_retention_20261013.json",
+  "publication_resume_completed": true
 }

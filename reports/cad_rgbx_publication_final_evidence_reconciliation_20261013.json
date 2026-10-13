@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED_SOURCE_AND_FOUR_COPIES_ALREADY_PUBLISHED_FINAL_EIGHT_FOLLOWUP_ARTIFACTS_RECONCILED",
+  "previous_native_session": 48739,
+  "previous_actual_exit_code": 1,
+  "previous_proof_commit": "a34f081afd9e8bd5ede82841d0c5fd1ddc013220",
+  "previous_failure": "Final clean-worktree assertion found eight owned doc-followup evidence files generated after the publication plan was frozen; source push/static sync and first proof push had succeeded.",
+  "repair": "Add only the eight known evidence files, synchronize exact bytes and include their hashes in the final static proof.",
+  "model_training_or_dataset_modified": false,
+  "nn_or_gpu_progress_query": false
+}
