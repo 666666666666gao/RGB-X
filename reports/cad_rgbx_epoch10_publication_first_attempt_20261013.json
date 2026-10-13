@@ -1,0 +1,14 @@
+{
+  "status": "ACTUAL_SOURCE_PUSH_SUCCEEDED_FIRST_READBACK_FAILED_RECOVERY_FROM_VERIFY_STAGE",
+  "original_native_session": 79318,
+  "original_native_exit_code": 1,
+  "failed_command": "git -c http.sslBackend=openssl ls-remote origin refs/heads/main",
+  "failed_command_exit_code": 128,
+  "first_command_stderr": "Not exposed by the first helper traceback; underlying cause not established.",
+  "source_commit": "3a99538fe231f9509e8c0e610f4efca336982192",
+  "subsequent_actual_readback_exit_code": 0,
+  "subsequent_actual_remote_main": "3a99538fe231f9509e8c0e610f4efca336982192",
+  "training_restarted": false,
+  "source_commit_replayed": false,
+  "model_forward_calls": 0
+}

@@ -1,0 +1,18 @@
+{
+  "status": "ACTUAL_INCREMENTAL_SOURCE_PUSH_AND_FOUR_DOCUMENT_COPIES_VERIFIED",
+  "verified_at": "2026-10-13T13:13:52.626082+00:00",
+  "source_commit": "3a99538fe231f9509e8c0e610f4efca336982192",
+  "file_sha256": {
+    "configs/current_goal.json": "649b8216a93d9b4b67c5d7948767886907d5b53336ff905114ec254d28726f94",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "255dc9abb62090a5feeb862c3f4390d105c8483d4c87991fb3a0d79539db9cfc",
+    "reports/cad_rgbx_due_observation_20261013T1209Z.json": "5aaaa77ed55a992db3a262fef6de550873afc906ff1c8e6e1751bd02cbfc6dd6",
+    "reports/cad_rgbx_user_thermal_policy_update_20261013.json": "fe58343cc2b3d79723944c1aa38c5c35b5b42edee62e35f3740683d0f3027a2a",
+    "reports/cad_rgbx_epoch10_thermal_and_retention_20261013.json": "847fe28f6543066e174c773e833d905eb2e11c80b8c49cab89a632778b5825d0"
+  },
+  "document_four_copies_identical": true,
+  "neural_model_forward_calls": 0,
+  "training_progress_queries": 0,
+  "gpu_sensor_queries": 0,
+  "training_or_dataset_changed": false,
+  "publication_scope": "Ten epochs complete, finite live update25550; next25th-epoch diagnosis notbefore2026-10-14 05:44:43CST. Existing guard logs max76C with11/3551 pause samples76C, one rolling recovery slot, no setting or weight deletion."
+}
