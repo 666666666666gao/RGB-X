@@ -1,0 +1,17 @@
+{
+  "status": "ACTUAL_INCREMENTAL_SOURCE_PUSH_AND_FOUR_DOCUMENT_COPIES_VERIFIED",
+  "verified_at": "2026-10-13T08:54:42.156749+00:00",
+  "source_commit": "796c3245984ba20da89288dedd789e4de3e057da",
+  "file_sha256": {
+    "configs/current_goal.json": "17c3d91ef64197e26f87a054e952d5b76ecdfb17b8ad4d60ccd85e78d8c81725",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8df7d30fd29a056f060d45513ec6cd7f0ce55bd204e7c39aeaf6a96238cc1d38",
+    "reports/cad_rgbx_due_observation_20261013T0840Z.json": "5f590e5d6d2ca504c2ba6d9a48910e8a5f2c6efcfd0f0033ac1ce1d12ed7e025",
+    "reports/cad_rgbx_user_thermal_policy_update_20261013.json": "05a687f296b471fde97d02d7ce19f421c9fddf1e69f26ad55268607b3a06e408"
+  },
+  "document_four_copies_identical": true,
+  "neural_model_forward_calls": 0,
+  "training_progress_queries": 0,
+  "gpu_sensor_queries": 0,
+  "training_or_dataset_changed": false,
+  "publication_scope": "Epoch4 live finite observation; user accepts occasional76C, target70 cancelled, target75/power250 maintained."
+}
