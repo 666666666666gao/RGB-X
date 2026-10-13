@@ -1,0 +1,12 @@
+{
+  "status": "SOURCE_COMMIT_ALREADY_PUSHED_THEN_STATIC_SYNC_VERIFIED_WITH_EXPLICIT_UTF8",
+  "source_commit": "7c5f70abd0faed4bb42eba0e86f250e6f738b774",
+  "previous_native_session": 56660,
+  "previous_actual_exit_code": 1,
+  "previous_error": "UnicodeDecodeError: old receipt UTF-8 read using Windows default GBK; source commit/push and archive transfer had succeeded, extraction not executed.",
+  "repair": "Read canonical UTF-8 receipt explicitly; resume at extraction/verification, without repeating commit, training, GPU queries or NN.",
+  "verified_at": "2026-10-13T06:38:59.001770+00:00",
+  "four_document_copies_identical": true,
+  "document_sha256": "68bb1ed35f32d85507289c2b40108ad87ee762eeb7648267d29be7458e5918ad",
+  "training_modified": false
+}
