@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-13T08:39:08.813413+00:00",
+  "updated_at": "2026-10-13T08:56:33.197220+00:00",
   "objective": "在2028用删减版CADTrack从全参数随机初始化联合训练RGB-T/RGB-D/RGB-Event；一份权重、仅GPU0/1，GPU0功率上限250W、目标温度75℃（允许偶发76℃）。先完成同随机初始化的普通联合AdamW B0，再比较主动共同方向及逐项前瞻/稳定性模块；完整报告现有三集七项主指标和所有退化，争取全面超过公平baseline。",
-  "status": "CAD_SCRATCH_B0_RUNNING_GPU0_TARGET75_OCCASIONAL76_ACCEPTED",
+  "status": "CAD_SCRATCH_B0_WARMUP5_COMPLETE_RUNNING_EPOCH6_OCCASIONAL76_ACCEPTED",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -36,7 +36,7 @@
     "current_thermal_policy": "Keep power limit250W and target75C; user accepts occasional76C. Existing pause72/resume68 remains active.",
     "initial_requested_maximum_temperature_c": 75,
     "normal_temperature_goal_c": 75,
-    "actual_last_temperature_c": 68
+    "actual_last_temperature_c": 69
   },
   "active_train_datasets": [
     "LasHeR_train",
@@ -89,14 +89,14 @@
   "hardware_admission": "Actual readback250W/75C on GPU0 before sanity and formal start",
   "formal_launch_evidence": "reports/cad_rgbx_formal_launch_20261013.json",
   "documented_sanity": "reports/cad_rgbx_documented_sanity_review.json",
-  "current_training_updates": 11750,
-  "next_progress_observation_not_before": "2026-10-13T08:48:14.253578+00:00",
-  "current_completed_epochs": 4,
-  "current_training_examples": 282000,
-  "current_progress_evidence": "reports/cad_rgbx_due_observation_20261013T0840Z.json",
+  "current_training_updates": 12850,
+  "next_progress_observation_not_before": "2026-10-13T12:09:14.683174+00:00",
+  "current_completed_epochs": 5,
+  "current_training_examples": 308400,
+  "current_progress_evidence": "reports/cad_rgbx_due_observation_20261013T0856Z.json",
   "first_formal_checkpoint_cpu_audit": "reports/cad_rgbx_first_formal_checkpoint_audit_20261013.json",
-  "current_epoch": 5,
-  "next_epoch_end_estimate": "2026-10-13T08:51:14.253578+00:00",
+  "current_epoch": 6,
+  "next_epoch_end_estimate": "2026-10-13T09:31:10.908726+00:00",
   "diagnostic_epoch_milestones": [
     5,
     10,
@@ -104,5 +104,8 @@
     50,
     75,
     100
-  ]
+  ],
+  "warmup_completed": true,
+  "next_diagnostic_epoch": 10,
+  "next_diagnostic_epoch_end_estimate": "2026-10-13T12:12:14.683174+00:00"
 }

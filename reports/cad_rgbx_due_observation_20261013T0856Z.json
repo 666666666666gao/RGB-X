@@ -1,0 +1,220 @@
+{
+  "status": "FORMAL_RUNNING_LIVE_PIDS_AND_FINITE_PROGRESS_VERIFIED",
+  "observed_at": "2026-10-13T08:56:33.197220+00:00",
+  "run_status": "RUNNING_NOT_EVALUATED",
+  "execution_status": "RUNNING",
+  "actual_controller_exit_code": null,
+  "processes": [
+    {
+      "role": "controller",
+      "pid": 528490,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage formal "
+    },
+    {
+      "role": "torchrun",
+      "pid": 528530,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=2 --master_port=29541 /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    },
+    {
+      "role": "rank0",
+      "pid": 528656,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    },
+    {
+      "role": "rank1",
+      "pid": 528657,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    }
+  ],
+  "completed_epochs": 5,
+  "epoch": 6,
+  "global_step": 12850,
+  "main_training_examples": 308400,
+  "latest": {
+    "epoch": 6,
+    "step": 350,
+    "global_step": 12850,
+    "learning_rate": 9.999946950287611e-05,
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "task_response_box_iou": [
+      [
+        0.7951256036758423,
+        1.486020565032959,
+        0.4568445384502411
+      ],
+      [
+        0.7539995312690735,
+        1.070937156677246,
+        0.6207926273345947
+      ],
+      [
+        0.7457855939865112,
+        1.3312888145446777,
+        0.509675145149231
+      ]
+    ],
+    "gradient_norm_before_clip": 3.226961612701416,
+    "step_seconds": 0.4836907280005107,
+    "peak_allocated_bytes": 7988091904,
+    "cooling_pause_seconds": 3755.9870681809443,
+    "main_training_examples": 308400
+  },
+  "progress_increased": true,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          5.026616096496582,
+          3.569101095199585,
+          0.09059811383485794
+        ],
+        [
+          4.860861301422119,
+          3.2742466926574707,
+          0.13164196908473969
+        ],
+        [
+          4.7001566886901855,
+          3.241260051727295,
+          0.13445255160331726
+        ]
+      ]
+    },
+    {
+      "epoch": 2,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.762380599975586,
+          2.8549153804779053,
+          0.206276074051857
+        ],
+        [
+          1.5522063970565796,
+          2.5015556812286377,
+          0.2864934504032135
+        ],
+        [
+          1.5525286197662354,
+          2.4131147861480713,
+          0.30150896310806274
+        ]
+      ]
+    },
+    {
+      "epoch": 3,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.5126993656158447,
+          2.6451244354248047,
+          0.25494810938835144
+        ],
+        [
+          1.282660961151123,
+          2.2111101150512695,
+          0.36208871006965637
+        ],
+        [
+          1.31875479221344,
+          2.1929006576538086,
+          0.356855183839798
+        ]
+      ]
+    },
+    {
+      "epoch": 4,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.3724759817123413,
+          2.414846897125244,
+          0.3055906295776367
+        ],
+        [
+          1.0807663202285767,
+          1.8277267217636108,
+          0.44653382897377014
+        ],
+        [
+          1.1660361289978027,
+          1.9772300720214844,
+          0.4062255620956421
+        ]
+      ]
+    },
+    {
+      "epoch": 5,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.245051383972168,
+          2.2024238109588623,
+          0.35619351267814636
+        ],
+        [
+          0.9587917923927307,
+          1.589796781539917,
+          0.5066319108009338
+        ],
+        [
+          1.038065791130066,
+          1.7489815950393677,
+          0.46318069100379944
+        ]
+      ]
+    }
+  ],
+  "last_checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+  "gpu0": {
+    "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "power_limit_w": 250.0,
+    "temperature_c": 69,
+    "target_temperature_c": 75
+  },
+  "last_log_lines": [
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 12, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "GPU0_COOLING_PAUSE {'temperature_c': 72}",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 12, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 12, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)"
+  ],
+  "formal_tracking_scores": "NOT_RUN",
+  "model_forward_calls": 0,
+  "new_training_started": false,
+  "weights_modified": false,
+  "mean_step_seconds_observed": 0.9663774447463035,
+  "current_epoch_end_estimate": "2026-10-13T09:31:10.908726+00:00",
+  "next_diagnostic_epoch": 10,
+  "next_diagnostic_epoch_end_estimate": "2026-10-13T12:12:14.683174+00:00",
+  "next_progress_observation_not_before": "2026-10-13T12:09:14.683174+00:00"
+}

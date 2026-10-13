@@ -14,12 +14,12 @@
   "observation_execution_native_session": 73232,
   "observation_result_pending": false,
   "actual_observation_exit_code": 0,
-  "actual_progress_evidence": "reports/cad_rgbx_due_observation_20261013T0840Z.json",
-  "actual_observation_at": "2026-10-13T08:39:08.813413+00:00",
+  "actual_progress_evidence": "reports/cad_rgbx_due_observation_20261013T0856Z.json",
+  "actual_observation_at": "2026-10-13T08:56:33.197220+00:00",
   "cancelled_local_timer_actual_exit_code": 1,
-  "next_local_timer_pid": 38684,
-  "next_local_timer_native_session": 84786,
-  "next_progress_not_before": "2026-10-13T08:48:14.253578+00:00",
+  "next_local_timer_pid": 8788,
+  "next_local_timer_native_session": 29555,
+  "next_progress_not_before": "2026-10-13T12:09:14.683174+00:00",
   "timer_strategy": "Check only local UTC time at most every240s; execute one SSH observation when due. No early training polls.",
   "diagnostic_epoch_milestones": [
     5,
@@ -28,5 +28,7 @@
     50,
     75,
     100
-  ]
+  ],
+  "next_diagnostic_epoch": 10,
+  "warmup_completed": true
 }
