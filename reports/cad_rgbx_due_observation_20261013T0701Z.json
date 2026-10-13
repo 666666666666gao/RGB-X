@@ -1,0 +1,155 @@
+{
+  "status": "FORMAL_RUNNING_LIVE_PIDS_AND_FINITE_PROGRESS_VERIFIED",
+  "observed_at": "2026-10-13T07:01:21.706337+00:00",
+  "run_status": "RUNNING_NOT_EVALUATED",
+  "execution_status": "RUNNING",
+  "actual_controller_exit_code": null,
+  "processes": [
+    {
+      "role": "controller",
+      "pid": 528490,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage formal "
+    },
+    {
+      "role": "torchrun",
+      "pid": 528530,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -m torch.distributed.run --nproc_per_node=2 --master_port=29541 /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    },
+    {
+      "role": "rank0",
+      "pid": 528656,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    },
+    {
+      "role": "rank1",
+      "pid": 528657,
+      "exists": true,
+      "state": "S",
+      "command": "/data/gb/conda/envs/rgbx-risk/bin/python -u /data/gb/rgbx-risk/scripts/train_cad_rgbx.py --protocol /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json "
+    }
+  ],
+  "completed_epochs": 2,
+  "epoch": 3,
+  "global_step": 5400,
+  "main_training_examples": 129600,
+  "latest": {
+    "epoch": 3,
+    "step": 400,
+    "global_step": 5400,
+    "learning_rate": 4.8880000000000006e-05,
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "task_response_box_iou": [
+      [
+        1.418872594833374,
+        2.415499210357666,
+        0.27186813950538635
+      ],
+      [
+        1.136925220489502,
+        2.212692975997925,
+        0.4113755226135254
+      ],
+      [
+        1.9235565662384033,
+        3.3051748275756836,
+        0.1591261476278305
+      ]
+    ],
+    "gradient_norm_before_clip": 5.802562236785889,
+    "step_seconds": 0.48685531900082424,
+    "peak_allocated_bytes": 7988091904,
+    "cooling_pause_seconds": 997.0474509169708,
+    "main_training_examples": 129600
+  },
+  "progress_increased": true,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          5.026616096496582,
+          3.569101095199585,
+          0.09059811383485794
+        ],
+        [
+          4.860861301422119,
+          3.2742466926574707,
+          0.13164196908473969
+        ],
+        [
+          4.7001566886901855,
+          3.241260051727295,
+          0.13445255160331726
+        ]
+      ]
+    },
+    {
+      "epoch": 2,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          1.762380599975586,
+          2.8549153804779053,
+          0.206276074051857
+        ],
+        [
+          1.5522063970565796,
+          2.5015556812286377,
+          0.2864934504032135
+        ],
+        [
+          1.5525286197662354,
+          2.4131147861480713,
+          0.30150896310806274
+        ]
+      ]
+    }
+  ],
+  "last_checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+  "gpu0": {
+    "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "power_limit_w": 250.0,
+    "temperature_c": 75,
+    "target_temperature_c": 75
+  },
+  "last_log_lines": [
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 12, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [1179648], which does not match the required output shape [1, 12, 6, 128, 128]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [48], which does not match the required output shape [1, 12, 4]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "/data/gb/rgbx-risk/third_party/XTrack/lib/train/data/loader.py:87: UserWarning: An output with one or more elements was resized since it had shape [4718592], which does not match the required output shape [1, 12, 6, 256, 256]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at ../aten/src/ATen/native/Resize.cpp:17.)",
+    "  return torch.stack(batch, 1, out=out)",
+    "GPU0_COOLING_RESUMED seconds=2.449574902999302",
+    "/data/gb/conda/envs/rgbx-risk/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.",
+    "  warnings.warn("
+  ],
+  "formal_tracking_scores": "NOT_RUN",
+  "model_forward_calls": 0,
+  "new_training_started": false,
+  "weights_modified": false,
+  "mean_step_seconds_observed": 1.0177785090131484,
+  "current_epoch_end_estimate": "2026-10-13T07:36:59.041206+00:00",
+  "next_progress_observation_not_before": "2026-10-13T07:33:59.041206+00:00"
+}

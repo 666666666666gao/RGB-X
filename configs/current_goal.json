@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-13T06:24:30.766832+00:00",
+  "updated_at": "2026-10-13T07:01:21.706337+00:00",
   "objective": "在2028用删减版CADTrack从全参数随机初始化联合训练RGB-T/RGB-D/RGB-Event；一份权重、仅GPU0/1，GPU0限制250W和75℃。先完成同随机初始化的普通联合AdamW B0，再比较主动共同方向及逐项前瞻/稳定性模块；完整报告现有三集七项主指标和所有退化，争取全面超过公平baseline。",
-  "status": "CAD_SCRATCH_B0_RUNNING_EPOCH1_SAVED_CPU_VERIFIED_NO_BENCHMARK",
+  "status": "CAD_SCRATCH_B0_RUNNING_EPOCH2_FINITE_THERMAL_MARGIN_ADJUSTMENT_PENDING_ADMIN",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -24,7 +24,15 @@
     "target_temperature_c": 75,
     "actual_last_power_limit_w": 250,
     "actual_last_target_temperature_c": 75,
-    "settings_applied": true
+    "settings_applied": true,
+    "requested_maximum_temperature_c": 75,
+    "observed_pause_temperature_max_c": 76,
+    "observed_pause_samples_above_75c": 1,
+    "requested_margin_target_temperature_c": 70,
+    "target70_applied": false,
+    "target70_status": "sudo_requires_interactive_authentication",
+    "thermal_log_evidence": "reports/cad_rgbx_thermal_log_diagnostic_20261013.json",
+    "target70_command_evidence": "reports/cad_rgbx_gpu0_target70_command_20261013.json"
   },
   "active_train_datasets": [
     "LasHeR_train",
@@ -77,12 +85,12 @@
   "hardware_admission": "Actual readback250W/75C on GPU0 before sanity and formal start",
   "formal_launch_evidence": "reports/cad_rgbx_formal_launch_20261013.json",
   "documented_sanity": "reports/cad_rgbx_documented_sanity_review.json",
-  "current_training_updates": 2900,
-  "next_progress_observation_not_before": "2026-10-13T07:01:09.885954+00:00",
-  "current_completed_epochs": 1,
-  "current_training_examples": 69600,
-  "current_progress_evidence": "reports/cad_rgbx_epoch2_progress_20261013.json",
+  "current_training_updates": 5400,
+  "next_progress_observation_not_before": "2026-10-13T07:33:59.041206+00:00",
+  "current_completed_epochs": 2,
+  "current_training_examples": 129600,
+  "current_progress_evidence": "reports/cad_rgbx_due_observation_20261013T0701Z.json",
   "first_formal_checkpoint_cpu_audit": "reports/cad_rgbx_first_formal_checkpoint_audit_20261013.json",
-  "current_epoch": 2,
-  "next_epoch_end_estimate": "2026-10-13T07:04:09.885954+00:00"
+  "current_epoch": 3,
+  "next_epoch_end_estimate": "2026-10-13T07:36:59.041206+00:00"
 }
