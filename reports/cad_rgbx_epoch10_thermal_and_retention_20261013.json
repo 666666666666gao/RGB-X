@@ -1,0 +1,53 @@
+{
+  "status": "ACTUAL_EXISTING_GUARD_LOG_AND_SINGLE_RECOVERY_SLOT_NO_GPU_OR_PROGRESS_QUERY",
+  "observed_at": "2026-10-13T12:20:21.615240+00:00",
+  "pause_events": 3551,
+  "resume_events": 3551,
+  "max_recorded_pause_temperature_c": 76,
+  "pause_temperature_histogram": {
+    "72": 2594,
+    "73": 869,
+    "74": 61,
+    "75": 16,
+    "76": 11
+  },
+  "pauses_above75_c": 11,
+  "pauses_above76_c": 0,
+  "latest20_pause_temperatures_c": [
+    73,
+    72,
+    73,
+    72,
+    73,
+    73,
+    73,
+    72,
+    73,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    73,
+    73,
+    72
+  ],
+  "weights": [
+    {
+      "name": "CADTrack_latest.pth.tar",
+      "bytes": 1236772600
+    }
+  ],
+  "active_atomic_write_files": [],
+  "available_checkpoint_partition_bytes": 735049306112,
+  "training_progress_queries": 0,
+  "live_sensor_queries": 0,
+  "model_forward_calls": 0,
+  "weights_deleted": 0,
+  "settings_changed": false,
+  "paired_progress_snapshot": "reports/cad_rgbx_due_observation_20261013T1209Z.json",
+  "scope": "Existing guard samples, not a continuous maximum. File names and sizes checked; current checkpoint tensors or epoch header not opened. No user inputs enumerated or modified."
+}
