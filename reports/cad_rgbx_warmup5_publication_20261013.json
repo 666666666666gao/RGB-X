@@ -1,0 +1,18 @@
+{
+  "status": "ACTUAL_INCREMENTAL_SOURCE_PUSH_AND_FOUR_DOCUMENT_COPIES_VERIFIED",
+  "verified_at": "2026-10-13T09:48:52.220626+00:00",
+  "source_commit": "103302b13020defc332697b43384cbffedba8744",
+  "file_sha256": {
+    "configs/current_goal.json": "ef42a755f909232726162534cf758476ac3ca55054d7452abf812ad2993cdf32",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "af33b4bf429d929069a2892b7a05b85869a3a1c6a46ca3d3e8cfa9e6df51dfcf",
+    "reports/cad_rgbx_due_observation_20261013T0856Z.json": "862ba2de3d98de6ab3a7684e03c38523fa70ed0c39239435da8e5829b97124c1",
+    "reports/cad_rgbx_user_thermal_policy_update_20261013.json": "968541a01ad72f77054a0f53f28aeed36d8351e2a8cd732a7a12105f3368d6e5",
+    "reports/cad_rgbx_due_observation_20261013T0849Z.json": "925ff3958d159a0343c54bf41033d9d42c9268c521b3902bfdf383823d14fc00"
+  },
+  "document_four_copies_identical": true,
+  "neural_model_forward_calls": 0,
+  "training_progress_queries": 0,
+  "gpu_sensor_queries": 0,
+  "training_or_dataset_changed": false,
+  "publication_scope": "Five epochs and warmup complete, finite live update12850; next tenth-epoch diagnosis no earlier than20:09CST. User accepts occasional76C; target75/power250 maintained."
+}
