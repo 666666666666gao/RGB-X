@@ -1,0 +1,146 @@
+{
+  "status": "SANITY_COMPLETE_NOT_FORMAL_RESULT",
+  "protocol": {
+    "run_id": "cad_pruned_rgbx_b0_s2026",
+    "model": "CADTrackPruned",
+    "initialization": "random_all_parameters",
+    "pretrained_file": "",
+    "auto_resume": false,
+    "seed": 2026,
+    "physical_gpus": [
+      0,
+      1
+    ],
+    "world_size": 2,
+    "batch_per_rank": 12,
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "train_datasets": [
+      "LasHeR_train",
+      "DepthTrack_train",
+      "VisEvent"
+    ],
+    "expected_train_sequences": [
+      882,
+      146,
+      500
+    ],
+    "template_size": 128,
+    "search_size": 256,
+    "template_factor": 2.0,
+    "search_factor": 4.0,
+    "epochs": 100,
+    "samples_per_epoch": 60000,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "minimum_learning_rate": 1e-06,
+    "warmup_epochs": 5,
+    "warmup_initial_factor": 0.1,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 0.1,
+    "amp": false,
+    "num_workers": 4,
+    "sync_batch_norm": true,
+    "modules_enabled": [],
+    "output": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026",
+    "gpu0_uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "gpu0_power_limit_w": 250,
+    "gpu0_target_temperature_c": 75,
+    "gpu0_pause_temperature_c": 72,
+    "gpu0_resume_temperature_c": 68,
+    "thermal_cooldown_check_seconds": 2,
+    "progress_poll_seconds": 240,
+    "log_every_steps": 50,
+    "checkpoint_policy": "One rolling recovery checkpoint. No training-loss best-model selection; benchmark best requires complete same-protocol scores.",
+    "initial_state_sha256": "ed4579edbff35ebe5df3866bbd66feefb38895179c5350fe51fcf7fc3b2a7723"
+  },
+  "rank_pids": [
+    509412,
+    509413
+  ],
+  "started_at": "2026-10-13T05:22:31.146768+00:00",
+  "initial_state_sha256": "ed4579edbff35ebe5df3866bbd66feefb38895179c5350fe51fcf7fc3b2a7723",
+  "pretrained_loaded": false,
+  "auto_resume": false,
+  "trainable_parameter_tensors": 211,
+  "trainable_parameter_elements": 103138437,
+  "physical_gpus": [
+    0,
+    1
+  ],
+  "gpu0_admission": {
+    "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "power_limit_w": 250.0,
+    "temperature_c": 32,
+    "target_temperature_c": 75
+  },
+  "formal_tracking_scores": "NOT_RUN",
+  "completed_epochs": 1,
+  "checkpoint_policy": "One rolling recovery checkpoint. No training-loss best-model selection; benchmark best requires complete same-protocol scores.",
+  "sanity_steps": 2,
+  "observed_at": "2026-10-13T05:23:24.403508+00:00",
+  "latest": {
+    "epoch": 1,
+    "step": 2,
+    "global_step": 2,
+    "learning_rate": 1.0014400000000002e-05,
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "task_response_box_iou": [
+      [
+        39.145992279052734,
+        5.642169952392578,
+        0.016774918884038925
+      ],
+      [
+        65.25061798095703,
+        4.063529014587402,
+        0.06188317388296127
+      ],
+      [
+        47.621246337890625,
+        4.945178031921387,
+        0.039927154779434204
+      ]
+    ],
+    "gradient_norm_before_clip": 1439.1558837890625,
+    "step_seconds": 0.6356938190001529,
+    "peak_allocated_bytes": 7987563520,
+    "cooling_pause_seconds": 0.0,
+    "main_training_examples": 48
+  },
+  "wallclock_seconds": 55.352652986000976,
+  "last_checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/CADTrack_latest.pth.tar",
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "steps": 2,
+      "task_response_box_iou": [
+        [
+          52.336822509765625,
+          5.190314292907715,
+          0.008874940685927868
+        ],
+        [
+          53.286861419677734,
+          4.230409622192383,
+          0.0790003165602684
+        ],
+        [
+          54.40452575683594,
+          4.584637641906738,
+          0.042672935873270035
+        ]
+      ]
+    }
+  ],
+  "ended_at": "2026-10-13T05:23:26.501667+00:00",
+  "global_step": 2,
+  "cooling_pause_seconds": 0.0
+}

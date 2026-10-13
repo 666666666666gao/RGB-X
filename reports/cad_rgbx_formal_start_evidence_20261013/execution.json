@@ -1,0 +1,38 @@
+{
+  "status": "RUNNING",
+  "stage": "formal",
+  "controller_pid": 528490,
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--nproc_per_node=2",
+    "--master_port=29541",
+    "/data/gb/rgbx-risk/scripts/train_cad_rgbx.py",
+    "--protocol",
+    "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json"
+  ],
+  "physical_gpus": [
+    0,
+    1
+  ],
+  "gpu0_admission": {
+    "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "power_limit_w": 250.0,
+    "temperature_c": 38,
+    "target_temperature_c": 75
+  },
+  "gpu_preflight": [
+    {
+      "index": 0,
+      "memory_used_mib": 45
+    },
+    {
+      "index": 1,
+      "memory_used_mib": 1
+    }
+  ],
+  "started_at": "2026-10-13T05:28:56.331282+00:00",
+  "exit_code": null,
+  "torchrun_pid": 528530
+}

@@ -1,0 +1,327 @@
+{
+  "status": "PASS",
+  "acceptance_status": "provisional",
+  "review_independence": "same-family",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "max",
+  "fresh_context": true,
+  "role": "AGENT_FOLLOWS_DOC_CAD_TWO_GPU_SANITY_NOT_BENCHMARK",
+  "observed_at": "2026-10-13T05:28:16.612992+00:00",
+  "documented_command_executed_verbatim": true,
+  "documented_command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage sanity",
+  "documented_command_invocation_count": 1,
+  "documented_cpu_audit_command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/audit_cad_rgbx_checkpoint.py --stage sanity",
+  "cpu_audit_invocation_count": 1,
+  "cpu_audit_command_source": "Assigned task; missing from the pre-run handoff command block.",
+  "document_sha256_at_review": "db7b9d90fa35d6c193a563f72dd8cf6fe0ac6dd67291a06492333a60976d8566",
+  "protocol_sha256": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+  "exact_source_hashes_reviewed": {
+    "configs/cad_rgbx_b0_s2026.json": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+    "cad_rgbx/__init__.py": "53cec4719f0b9cc8c915908e17ccce25ac417d2c491f7f7c8055642f565806a1",
+    "cad_rgbx/bootstrap.py": "2a4cf71aefaf4c3d657f2aeac5086857e07fbe286b5cf71a5a1bc95a4b067857",
+    "cad_rgbx/data.py": "a9dd9adc3abb4cd389265262181d12cf8e00cfc3939a3033d4af88642f6b0794",
+    "cad_rgbx/hardware.py": "e4b179690a6396dedb2ea37428fb0aa1d07965b543bad3aeae77070b1c61e722",
+    "cad_rgbx/losses.py": "d158ea26eef629c8d0c1b73d03d72ac758dd05fe0aed366b5a1bb91a9b514996",
+    "cad_rgbx/model.py": "1c35ed8b00d500b9b0216b7bcf2424e9ea80c35007f3878587bb3d1ce142754f",
+    "scripts/train_cad_rgbx.py": "f989a951e51ef4e625e02778f047dcab963aded9974fa75f564f96364e89f2a9",
+    "scripts/run_cad_rgbx_job.py": "eea6234bcb40282b38981b84e306029e6471004f705d71e4713cf0253668bfe4",
+    "scripts/audit_cad_rgbx_checkpoint.py": "e77f301ed20a197a770929c8333d9a16760d9cd00d29014d3c55b4e92645eec4"
+  },
+  "local_codex_policy_sha256": "b0249bfccd48ff79a5976afa7a54c64a3cfb65a5496a2105c5bb21069d197783",
+  "environment": {
+    "provider": "2028 direct SSH",
+    "python": "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "spec_canonical_sha256": "433a922a61d09bbf39d671e9ee1636c4ab0cac3ec6865b32baac9e7ce7e12fa4",
+    "reuse": "warm",
+    "installation_or_rebuild": false
+  },
+  "actual_exit_codes": {
+    "documented_command": 0,
+    "torchrun": 0,
+    "cpu_saved_state_audit": 0
+  },
+  "command_execution": {
+    "stage": "sanity",
+    "command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage sanity",
+    "ssh_argv": [
+      "ssh",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ClearAllForwardings=yes",
+      "-o",
+      "ConnectTimeout=20",
+      "2028",
+      "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage sanity"
+    ],
+    "started_at": "2026-10-13T05:21:52.831149+00:00",
+    "status": "EXITED",
+    "native_ssh_exit_code": 0,
+    "local_ssh_pid": 23496,
+    "ended_at": "2026-10-13T05:23:19.476037+00:00",
+    "wallclock_seconds": 86.64381739999953
+  },
+  "cpu_audit_execution": {
+    "stage": "audit",
+    "command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/audit_cad_rgbx_checkpoint.py --stage sanity",
+    "ssh_argv": [
+      "ssh",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ClearAllForwardings=yes",
+      "-o",
+      "ConnectTimeout=20",
+      "2028",
+      "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/audit_cad_rgbx_checkpoint.py --stage sanity"
+    ],
+    "started_at": "2026-10-13T05:25:35.084799+00:00",
+    "status": "EXITED",
+    "native_ssh_exit_code": 0,
+    "local_ssh_pid": 39164,
+    "ended_at": "2026-10-13T05:25:42.888746+00:00",
+    "wallclock_seconds": 7.803305099998397
+  },
+  "CUDA_VISIBLE_DEVICES": "0,1",
+  "physical_gpus": [
+    0,
+    1
+  ],
+  "world_size": 2,
+  "rank_pids": [
+    509412,
+    509413
+  ],
+  "controller_pid": 508866,
+  "torchrun_pid": 508953,
+  "completed_updates": 2,
+  "main_training_examples": 48,
+  "global_task_counts": [
+    8,
+    8,
+    8
+  ],
+  "optimizer": "ordinary torch.optim.AdamW",
+  "optimizer_parameter_groups": 1,
+  "all_parameters_in_optimizer": true,
+  "proposed_modules_enabled": [],
+  "initial_state_sha256": "ed4579edbff35ebe5df3866bbd66feefb38895179c5350fe51fcf7fc3b2a7723",
+  "pretrained_loaded": false,
+  "resume_loaded": false,
+  "source_builder_torch_load_blocked": true,
+  "trainable_parameter_tensors": 211,
+  "trainable_parameter_elements": 103138437,
+  "gradients": {
+    "active_tensors": 209,
+    "inactive_tensors": [
+      "backbone.pos_embed",
+      "backbone.cls_pos_embed"
+    ],
+    "backbone_blocks_active": 144,
+    "head_active": 54,
+    "fusion_active": 4,
+    "finite_clipped_norm_assertions_passed_on_both_ranks": true,
+    "latest_norm_before_clip": 1439.1558837890625
+  },
+  "replica_state_sha256": [
+    "bbe0652ff894549f4a3e967e789a4b7d0f7ddf84734fd9a2f15a6b87d3f8b8b2",
+    "bbe0652ff894549f4a3e967e789a4b7d0f7ddf84734fd9a2f15a6b87d3f8b8b2"
+  ],
+  "replica_hash_check": "PASS",
+  "saved_state_audit": {
+    "status": "PASS",
+    "role": "CAD_CPU_SAVED_STATE_CHECK_NOT_BENCHMARK",
+    "stage": "sanity",
+    "observed_at": "2026-10-13T05:25:52.617787+00:00",
+    "checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/CADTrack_latest.pth.tar",
+    "checkpoint_sha256": "48d0cc972f6e8e2774fd756bbca969ca00f650e23bb281ae759dc795896fde6c",
+    "checkpoint_bytes": 1236771384,
+    "strict_model_load": true,
+    "all_model_tensors_finite": true,
+    "replica_state_hash_matches": true,
+    "active_optimizer_states": 209,
+    "trainable_parameters": 211,
+    "global_step": 2,
+    "pretrained_loaded": false,
+    "model_forward_calls": 0,
+    "cuda_initialized": false,
+    "cuda_rng_restoration": "NOT_EXECUTED_CPU_INSPECTION_ONLY",
+    "formal_tracking_scores": "NOT_RUN"
+  },
+  "saved_rng_by_rank": [
+    {
+      "rank": 0,
+      "keys": [
+        "numpy",
+        "python",
+        "torch_cpu",
+        "torch_cuda"
+      ],
+      "cpu_rng_device": "cpu",
+      "cuda_rng_device_on_inspection": "cpu",
+      "cuda_rng_dtype": "torch.uint8",
+      "cuda_rng_numel": 816
+    },
+    {
+      "rank": 1,
+      "keys": [
+        "numpy",
+        "python",
+        "torch_cpu",
+        "torch_cuda"
+      ],
+      "cpu_rng_device": "cpu",
+      "cuda_rng_device_on_inspection": "cpu",
+      "cuda_rng_dtype": "torch.uint8",
+      "cuda_rng_numel": 816
+    }
+  ],
+  "cuda_rng_restoration": "NOT_EXECUTED_CPU_INSPECTION_ONLY",
+  "gpu0_cap_readback": {
+    "controller": {
+      "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+      "power_limit_w": 250.0,
+      "temperature_c": 31,
+      "target_temperature_c": 75
+    },
+    "rank0": {
+      "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+      "power_limit_w": 250.0,
+      "temperature_c": 32,
+      "target_temperature_c": 75
+    }
+  },
+  "gpu_preflight": [
+    {
+      "index": 0,
+      "memory_used_mib": 45
+    },
+    {
+      "index": 1,
+      "memory_used_mib": 1
+    }
+  ],
+  "gpu_setting_modification_commands": 0,
+  "gpu2_gpu3_queries_or_training": 0,
+  "pre_cuda_admission": {
+    "source_checked": true,
+    "successful_limit_readback_executed": true,
+    "lost_limits_failure_branch": "NOT_TRIGGERED; source asserts limits before CUDA allocation"
+  },
+  "hardware_cooling_branch": {
+    "temperature_guard_called_in_training": true,
+    "pause_resume_actually_executed": false,
+    "cooling_pause_seconds": 0.0,
+    "pause_threshold_c": 72,
+    "resume_threshold_c": 68,
+    "validation_limit": "Pause/resume path not dynamically exercised; no thermal overshoot guarantee is claimed."
+  },
+  "peak_vram": {
+    "rank0_allocated_bytes": 7987563520,
+    "rank0_allocated_gib": 7.438998222351074,
+    "rank1": "NOT_RECORDED_BY_EXISTING_LOGGER",
+    "scope": "torch allocator peak, not nvidia-smi total VRAM"
+  },
+  "timing": {
+    "training_loop_wallclock_seconds": 55.352652986000976,
+    "controller_wallclock_seconds": 84.265157,
+    "ssh_invocation_wallclock_seconds": 86.64381739999953,
+    "cpu_audit_invocation_wallclock_seconds": 7.803305099998397,
+    "last_step_seconds": 0.6356938190001529,
+    "last_step_excludes_loader_wait": true,
+    "full_training_eta": "NOT_ESTIMATED_FROM_TWO_STEP_SANITY"
+  },
+  "progress_observation": {
+    "first_result_collection_after_minimum_wait": true,
+    "minimum_wait_seconds": 180,
+    "pre_window_progress_queries": 0,
+    "training_state_queries_during_wait": 0
+  },
+  "protected_inputs": {
+    "old_python_source_file_count": 119,
+    "old_python_sources_byte_identical": true,
+    "pruned_core_byte_identical": true,
+    "checkpoint_bytes_hashes_and_mtimes_unchanged": true,
+    "protected_checkpoints": {
+      "/home/gaob/CADTrack_ep0014.pth.tar": {
+        "bytes": 1236957664,
+        "mtime_ns": 1791865493538481825,
+        "sha256": "cbcc96ba3a0cf1bfb997ee164174c2264cabf17ad013f8249b7f31a43815d731"
+      },
+      "/home/gaob/rgbx-full-method/xtrack_task_stats_only_s2026/XTrack_ep0015.pth.tar": {
+        "bytes": 477081235,
+        "mtime_ns": 1791456337649699726,
+        "sha256": "fd019946d6b7459754b46dffc08409bb98bfe49136595fc191986dbb128c7c85"
+      }
+    },
+    "dataset_write_operations_by_reviewer": 0,
+    "full_dataset_rehash_performed": false,
+    "checkpoints_copied_to_local": false,
+    "source_or_protocol_modified_by_reviewer": false
+  },
+  "evidence_directory": "reports/cad_rgbx_sanity_evidence_20261013/20261013T052131Z",
+  "exact_copied_artifacts": {
+    "run.json": {
+      "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/run.json",
+      "bytes": 3903,
+      "sha256": "ba2943e1a5b112f3964a95ba757c70b1bcb0a7d719619e65db5a00bbd3277a1a"
+    },
+    "execution.json": {
+      "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity_controller/execution.json",
+      "bytes": 882,
+      "sha256": "cef6f20c4f53ce2b50b7cbb554d512e18ae29f0608e4e86423c6b4a3eaec3934"
+    },
+    "saved_state_audit.json": {
+      "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/saved_state_audit.json",
+      "bytes": 751,
+      "sha256": "d90d827a953c6ca798f41d45440ccacd6c7403a50f4813f3916155d9ec168f19"
+    },
+    "train.log": {
+      "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity_controller/train.log",
+      "bytes": 2851,
+      "sha256": "cb55eb0c3916d10877e91da62f793dffb51d7a316f3403f2e625a90c2fd06e0a"
+    },
+    "first_update_gradient_manifest.json": {
+      "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/first_update_gradient_manifest.json",
+      "bytes": 7959,
+      "sha256": "246d44f5afa7611812b603b21d06980193666d5043b1aafba97d313a9850b212"
+    },
+    "updates.jsonl": {
+      "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/updates.jsonl",
+      "bytes": 511,
+      "sha256": "99a97362f876fbb186766350718b5d553f14230db54dd487cb6cefc876c6fef9"
+    }
+  },
+  "findings": [
+    {
+      "severity": "PASS",
+      "finding": "The exact documented command completed two real GPU0/GPU1 optimizer updates; strict CPU saved-state audit passed."
+    },
+    {
+      "severity": "WARN",
+      "finding": "GPU0 cooling pause/resume branch was not triggered in this short run; dynamic thermal-branch validation remains unperformed."
+    },
+    {
+      "severity": "WARN",
+      "finding": "Only rank0 peak allocated VRAM is logged. Rank1 peak VRAM is not available from these artifacts."
+    },
+    {
+      "severity": "WARN",
+      "finding": "Two steps do not establish sustained throughput or a reliable 100-epoch ETA; use stable formal-run milestones."
+    },
+    {
+      "severity": "WARN",
+      "finding": "The reviewed handoff text still says the latest hardware readback was 350W/83C and sanity was not executed. Update it to the actual 250W/75C readback and this result, and include the CPU audit command."
+    },
+    {
+      "severity": "INFO",
+      "finding": "Saved CUDA RNG bytes were inspected on CPU only; CUDA restoration and all tracking benchmarks remain unexecuted."
+    }
+  ],
+  "benchmark": "NOT_RUN",
+  "formal_tracking_scores": "NOT_RUN",
+  "formal_training_launched": false,
+  "automatic_retry_count": 0,
+  "automatic_gpu_or_batch_switch": false,
+  "scope": "PASS applies to the documented two-update two-GPU sanity plus CPU saved-state integrity only."
+}

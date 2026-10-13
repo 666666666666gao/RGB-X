@@ -1,0 +1,11 @@
+{
+  "status": "OWN_TWO_STEP_SANITY_CHECKPOINT_RETIRED_AFTER_STRICT_AUDIT",
+  "observed_at": "2026-10-13T05:28:58.641486+00:00",
+  "removed_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/CADTrack_latest.pth.tar",
+  "logical_bytes_retired": 1236771384,
+  "removed_sha256": "48d0cc972f6e8e2774fd756bbca969ca00f650e23bb281ae759dc795896fde6c",
+  "user_checkpoint": "/home/gaob/CADTrack_ep0014.pth.tar",
+  "user_checkpoint_modified": false,
+  "formal_recovery_modified": false,
+  "metadata_and_logs_preserved": true
+}

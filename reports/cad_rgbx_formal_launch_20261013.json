@@ -1,0 +1,67 @@
+{
+  "status": "FORMAL_PROCESS_STARTED_INITIAL_STATE_RECORDED_NOT_BENCHMARK",
+  "observed_at": "2026-10-13T06:11:36.120224+00:00",
+  "actual_training_updates_observed": 2050,
+  "actual_training_examples_observed": 49200,
+  "epoch": 1,
+  "controller_pid": 528490,
+  "torchrun_pid": 528530,
+  "rank_pids": [
+    528656,
+    528657
+  ],
+  "physical_gpus": [
+    0,
+    1
+  ],
+  "gpu0": {
+    "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "power_limit_w": 250.0,
+    "temperature_c": 72,
+    "target_temperature_c": 75
+  },
+  "initial_state_sha256": "ed4579edbff35ebe5df3866bbd66feefb38895179c5350fe51fcf7fc3b2a7723",
+  "pretrained_loaded": false,
+  "auto_resume": false,
+  "backbone_and_head_have_gradients": true,
+  "latest": {
+    "epoch": 1,
+    "step": 2050,
+    "global_step": 2050,
+    "learning_rate": 2.4760000000000003e-05,
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "task_response_box_iou": [
+      [
+        2.7270569801330566,
+        3.749943733215332,
+        0.08696335554122925
+      ],
+      [
+        2.0365071296691895,
+        2.6324312686920166,
+        0.21553777158260345
+      ],
+      [
+        2.029393196105957,
+        3.5415327548980713,
+        0.06266947090625763
+      ]
+    ],
+    "gradient_norm_before_clip": 13.941049575805664,
+    "step_seconds": 0.6470928550006647,
+    "peak_allocated_bytes": 7988091904,
+    "cooling_pause_seconds": 49.97814254799778,
+    "main_training_examples": 49200
+  },
+  "completed_epochs": 0,
+  "first_epoch_end_estimate": "2026-10-13T06:20:48.643580+00:00",
+  "mean_step_seconds_observed": 1.227829679398049,
+  "total_remaining_seconds_estimate": 304440.3690067463,
+  "estimate_basis": "Observed loop walltime / completed updates, includes initial loader warmup and cooling; provisional, not guaranteed completion.",
+  "next_progress_observation_not_before": "2026-10-13T06:17:48.643580+00:00",
+  "formal_tracking_scores": "NOT_RUN"
+}

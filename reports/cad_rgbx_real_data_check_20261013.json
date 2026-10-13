@@ -1,0 +1,32 @@
+{
+  "status": "PASS_REAL_THREE_TASK_TRAINING_DATA_BATCH_CPU_ONLY",
+  "observed_at": "2026-10-13T05:14:28.485147+00:00",
+  "train_sequences": [
+    882,
+    146,
+    500
+  ],
+  "local_task_counts": {
+    "lasher": 4,
+    "depthtrack": 4,
+    "visevent": 4
+  },
+  "template_shape": [
+    1,
+    12,
+    6,
+    128,
+    128
+  ],
+  "search_shape": [
+    1,
+    12,
+    6,
+    256,
+    256
+  ],
+  "cuda_initialized": false,
+  "model_forward_calls": 0,
+  "training_updates": 0,
+  "formal_tracking_scores": "NOT_RUN"
+}

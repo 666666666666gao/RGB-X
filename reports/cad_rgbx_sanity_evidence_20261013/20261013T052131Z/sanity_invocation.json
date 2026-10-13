@@ -1,0 +1,21 @@
+{
+  "stage": "sanity",
+  "command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage sanity",
+  "ssh_argv": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ClearAllForwardings=yes",
+    "-o",
+    "ConnectTimeout=20",
+    "2028",
+    "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py --stage sanity"
+  ],
+  "started_at": "2026-10-13T05:21:52.831149+00:00",
+  "status": "EXITED",
+  "native_ssh_exit_code": 0,
+  "local_ssh_pid": 23496,
+  "ended_at": "2026-10-13T05:23:19.476037+00:00",
+  "wallclock_seconds": 86.64381739999953
+}

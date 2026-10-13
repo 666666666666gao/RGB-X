@@ -1,0 +1,25 @@
+{
+  "status": "ACTUAL_CPU_ONLY_DATA_COMMAND",
+  "exit_code": 0,
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "/data/gb/rgbx-risk/scripts/check_cad_rgbx_data.py",
+    "--output",
+    "/data/gb/rgbx-risk/reports/cad_rgbx_real_data_check_20261013.json"
+  ],
+  "stdout": "{\"status\": \"PASS_REAL_THREE_TASK_TRAINING_DATA_BATCH_CPU_ONLY\", \"observed_at\": \"2026-10-13T05:14:28.485147+00:00\", \"train_sequences\": [882, 146, 500], \"local_task_counts\": {\"lasher\": 4, \"depthtrack\": 4, \"visevent\": 4}, \"template_shape\": [1, 12, 6, 128, 128], \"search_shape\": [1, 12, 6, 256, 256], \"cuda_initialized\": false, \"model_forward_calls\": 0, \"training_updates\": 0, \"formal_tracking_scores\": \"NOT_RUN\"}\n",
+  "stderr": "/data/gb/rgbx-risk/third_party/XTrack/lib/train/dataset/depthtrack.py:49: FutureWarning: The squeeze argument has been deprecated and will be removed in a future version. Append .squeeze(\"columns\") to the call to squeeze.\n\n\n  sequence_list = pandas.read_csv(file_path, header=None, squeeze=True).values.tolist()\n/data/gb/rgbx-risk/third_party/XTrack/lib/train/dataset/visevent.py:48: FutureWarning: The squeeze argument has been deprecated and will be removed in a future version. Append .squeeze(\"columns\") to the call to squeeze.\n\n\n  sequence_list = pandas.read_csv(file_path, header=None, squeeze=True).values.tolist()\n",
+  "source_sha256": {
+    "configs/cad_rgbx_b0_s2026.json": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+    "scripts/train_cad_rgbx.py": "f989a951e51ef4e625e02778f047dcab963aded9974fa75f564f96364e89f2a9",
+    "scripts/run_cad_rgbx_job.py": "1699b768f248dfc2866e5d1e079a65e57ee2327c020fb9e68e5cbd97fa62666a",
+    "scripts/check_cad_rgbx_data.py": "e7a01fb20731488bb68b68cf3dbeb17e423965f5cec4fb966cfaec932df65fe9",
+    "cad_rgbx/__init__.py": "53cec4719f0b9cc8c915908e17ccce25ac417d2c491f7f7c8055642f565806a1",
+    "cad_rgbx/bootstrap.py": "2a4cf71aefaf4c3d657f2aeac5086857e07fbe286b5cf71a5a1bc95a4b067857",
+    "cad_rgbx/data.py": "a9dd9adc3abb4cd389265262181d12cf8e00cfc3939a3033d4af88642f6b0794",
+    "cad_rgbx/hardware.py": "e4b179690a6396dedb2ea37428fb0aa1d07965b543bad3aeae77070b1c61e722",
+    "cad_rgbx/losses.py": "d158ea26eef629c8d0c1b73d03d72ac758dd05fe0aed366b5a1bb91a9b514996",
+    "cad_rgbx/model.py": "1c35ed8b00d500b9b0216b7bcf2424e9ea80c35007f3878587bb3d1ce142754f"
+  },
+  "training_started": false
+}

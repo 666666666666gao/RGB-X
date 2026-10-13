@@ -1,0 +1,34 @@
+{
+  "status": "PASS_ADMIN_GPU0_CAPS_READ_BACK_BEFORE_TRAINING",
+  "observed_at": "2026-10-13T05:18:02.152071+00:00",
+  "gpu0": {
+    "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "power_limit_w": 250.0,
+    "temperature_c": 30,
+    "target_temperature_c": 75
+  },
+  "requested_gpu_indices": [
+    0,
+    1
+  ],
+  "gpu1_limits_modified": false,
+  "gpu2_or_gpu3_used": false,
+  "new_training_started": false,
+  "source_sha256": {
+    "configs/cad_rgbx_b0_s2026.json": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+    "scripts/train_cad_rgbx.py": "f989a951e51ef4e625e02778f047dcab963aded9974fa75f564f96364e89f2a9",
+    "scripts/run_cad_rgbx_job.py": "eea6234bcb40282b38981b84e306029e6471004f705d71e4713cf0253668bfe4",
+    "scripts/audit_cad_rgbx_checkpoint.py": "e77f301ed20a197a770929c8333d9a16760d9cd00d29014d3c55b4e92645eec4",
+    "scripts/check_cad_rgbx_data.py": "e7a01fb20731488bb68b68cf3dbeb17e423965f5cec4fb966cfaec932df65fe9",
+    "docs/RGB-X_\u7814\u7a76\u4e0e\u5b9e\u9a8c\u5b8c\u6574\u4ea4\u63a5_2026-10-02.md": "db7b9d90fa35d6c193a563f72dd8cf6fe0ac6dd67291a06492333a60976d8566",
+    "configs/current_goal.json": "33036090e237d44f5a44df9801b935ca8732f738f1d049d5a67a90cff265864d",
+    "reports/cad_rgbx_pruned_core_provenance_20261013.json": "dd2b2a5f73314413b5906e7cfecdef599c8fdd03389519a5bce33cf5e9cabde1",
+    "reports/cad_rgbx_gpu0_limit_commands_20261013.json": "6b0c5c5098b04a61aaf899e129d2933f47eaa94ff96efdb06e67740be186530f",
+    "cad_rgbx/__init__.py": "53cec4719f0b9cc8c915908e17ccce25ac417d2c491f7f7c8055642f565806a1",
+    "cad_rgbx/bootstrap.py": "2a4cf71aefaf4c3d657f2aeac5086857e07fbe286b5cf71a5a1bc95a4b067857",
+    "cad_rgbx/data.py": "a9dd9adc3abb4cd389265262181d12cf8e00cfc3939a3033d4af88642f6b0794",
+    "cad_rgbx/hardware.py": "e4b179690a6396dedb2ea37428fb0aa1d07965b543bad3aeae77070b1c61e722",
+    "cad_rgbx/losses.py": "d158ea26eef629c8d0c1b73d03d72ac758dd05fe0aed366b5a1bb91a9b514996",
+    "cad_rgbx/model.py": "1c35ed8b00d500b9b0216b7bcf2424e9ea80c35007f3878587bb3d1ce142754f"
+  }
+}

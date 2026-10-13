@@ -1,0 +1,21 @@
+{
+  "status": "FORMAL_BACKGROUND_LAUNCH_REQUESTED_FIRST_PROGRESS_PENDING",
+  "observed_at": "2026-10-13T05:28:54.884658+00:00",
+  "controller_pid": 528490,
+  "argv": [
+    "/data/gb/conda/envs/rgbx-risk/bin/python",
+    "/data/gb/rgbx-risk/scripts/run_cad_rgbx_job.py",
+    "--stage",
+    "formal"
+  ],
+  "launch_log": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_launch.log",
+  "output": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026",
+  "physical_gpus": [
+    0,
+    1
+  ],
+  "pretrained_loaded": false,
+  "next_progress_observation_not_before": "2026-10-13T05:32:54.884658+00:00",
+  "actual_training_updates_observed": 0,
+  "formal_tracking_scores": "NOT_RUN"
+}

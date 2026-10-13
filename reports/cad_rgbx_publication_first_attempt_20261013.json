@@ -1,0 +1,20 @@
+{
+  "status": "FIRST_PUBLICATION_EXIT1_BEFORE_COMMIT_OR_TRANSFER_TRAINING_UNCHANGED",
+  "recorded_at": "2026-10-13T06:28:47.327574+00:00",
+  "failed_command": [
+    "git",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "failed_command_exit_code": 2,
+  "publisher_exit_code": 1,
+  "git_commit_created": false,
+  "git_push_attempted": false,
+  "server_copy_attempted": false,
+  "actual_cause": "Pristine vendored CAD source has original trailing whitespace; existing text eol=lf attribute also normalized new CRLF source/evidence in the Git index.",
+  "repair": "Preserve exact bytes for CAD vendored core and new raw CAD evidence using scoped .gitattributes. Do not clean vendor source. Restage only owned files and verify every staged blob SHA256 against local before publishing.",
+  "model_or_training_source_changed": false,
+  "new_nn_or_training_started": false,
+  "scope": "Publication correctness only; no weight/dataset/training-source modification."
+}

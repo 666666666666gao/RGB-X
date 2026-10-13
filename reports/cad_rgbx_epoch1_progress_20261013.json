@@ -1,0 +1,70 @@
+{
+  "status": "FORMAL_RUNNING_PROGRESS_INCREASED_LIVE_PIDS_VERIFIED",
+  "observed_at": "2026-10-13T06:18:28.099740+00:00",
+  "completed_epochs": 1,
+  "epoch": 1,
+  "global_step": 2500,
+  "main_training_examples": 60000,
+  "latest": {
+    "epoch": 1,
+    "step": 2500,
+    "global_step": 2500,
+    "learning_rate": 2.8000000000000003e-05,
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "task_response_box_iou": [
+      [
+        1.8375306129455566,
+        2.757840871810913,
+        0.18873044848442078
+      ],
+      [
+        1.8396522998809814,
+        3.540220260620117,
+        0.11964506655931473
+      ],
+      [
+        1.7038853168487549,
+        2.1900386810302734,
+        0.33587878942489624
+      ]
+    ],
+    "gradient_norm_before_clip": 8.422416687011719,
+    "step_seconds": 0.4889259770006902,
+    "peak_allocated_bytes": 7988091904,
+    "cooling_pause_seconds": 107.96979504199953,
+    "main_training_examples": 60000
+  },
+  "mean_step_seconds_observed": 1.1689406702508,
+  "current_epoch_end_estimate": "2026-10-13T06:18:28.099740+00:00",
+  "next_progress_observation_not_before": "2026-10-13T06:22:28.099740+00:00",
+  "last_checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "steps": 2500,
+      "task_response_box_iou": [
+        [
+          5.026616096496582,
+          3.569101095199585,
+          0.09059811383485794
+        ],
+        [
+          4.860861301422119,
+          3.2742466926574707,
+          0.13164196908473969
+        ],
+        [
+          4.7001566886901855,
+          3.241260051727295,
+          0.13445255160331726
+        ]
+      ]
+    }
+  ],
+  "formal_tracking_scores": "NOT_RUN",
+  "new_training_or_inference_started": false
+}

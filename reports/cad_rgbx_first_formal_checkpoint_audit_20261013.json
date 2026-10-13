@@ -1,0 +1,21 @@
+{
+  "status": "PASS_FIRST_FORMAL_EPOCH_CPU_SAVED_STATE_ONLY_NOT_BENCHMARK",
+  "observed_at": "2026-10-13T06:19:54.486720+00:00",
+  "epoch": 1,
+  "global_step": 2500,
+  "checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+  "checkpoint_sha256": "697d20332cccf7e364e4e75e449a8fc5f0a3ef8837fd4c6628635acf69efc3a1",
+  "strict_model_load": true,
+  "all_model_tensors_finite": true,
+  "replicas_identical": true,
+  "optimizer_states_finite_and_steps2500": true,
+  "optimizer_active_states": 209,
+  "trainable_tensors": 211,
+  "both_rank_rng_saved": true,
+  "cuda_rng_restoration": "NOT_EXECUTED",
+  "cuda_initialized": false,
+  "model_forward_calls": 0,
+  "formal_tracking_scores": "NOT_RUN",
+  "weights_modified": false,
+  "scope": "Opened atomic rolling checkpoint once; verified the saved epoch1 snapshot while current training continues."
+}

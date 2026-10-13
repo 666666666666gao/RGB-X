@@ -1,0 +1,52 @@
+{
+  "status": "FORMAL_EPOCH2_RUNNING_INCREASED_UPDATES_LIVE_PIDS_VERIFIED",
+  "observed_at": "2026-10-13T06:24:30.766832+00:00",
+  "completed_epochs": 1,
+  "epoch": 2,
+  "global_step": 2900,
+  "main_training_examples": 69600,
+  "latest": {
+    "epoch": 2,
+    "step": 400,
+    "global_step": 2900,
+    "learning_rate": 3.088e-05,
+    "global_task_counts": [
+      8,
+      8,
+      8
+    ],
+    "task_response_box_iou": [
+      [
+        1.9419564008712769,
+        3.2886006832122803,
+        0.12839603424072266
+      ],
+      [
+        1.8602197170257568,
+        3.247555732727051,
+        0.11923521757125854
+      ],
+      [
+        1.6986472606658936,
+        2.7027735710144043,
+        0.2058781087398529
+      ]
+    ],
+    "gradient_norm_before_clip": 9.892955780029297,
+    "step_seconds": 0.48265035300028103,
+    "peak_allocated_bytes": 7988091904,
+    "cooling_pause_seconds": 203.05682760800119,
+    "main_training_examples": 69600
+  },
+  "mean_step_seconds_observed": 1.1329138675775865,
+  "current_epoch_end_estimate": "2026-10-13T07:04:09.885954+00:00",
+  "next_progress_observation_not_before": "2026-10-13T07:01:09.885954+00:00",
+  "gpu0": {
+    "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+    "power_limit_w": 250.0,
+    "temperature_c": 68,
+    "target_temperature_c": 75
+  },
+  "formal_tracking_scores": "NOT_RUN",
+  "new_training_or_inference_started": false
+}

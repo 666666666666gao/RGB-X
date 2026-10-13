@@ -39,3 +39,7 @@ reports/xtrack_task_stats_only_s2026_first_diagnostic_observation_20261007.json 
 reports/xtrack_task_stats_only_s2026_epoch1_observation_20261007.json -text whitespace=cr-at-eol
 reports/xtrack_task_stats_only_s2026_first_retention_observation_20261007.json -text whitespace=cr-at-eol
 reports/xtrack_task_stats_only_s2026_user_stop_evidence_20261008/* -text whitespace=cr-at-eol
+third_party/CADTrackPruned/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+reports/cad_rgbx* -text whitespace=cr-at-eol
+reports/cad_rgbx_sanity_evidence_20261013/** -text whitespace=cr-at-eol
+reports/cad_rgbx_formal_start_evidence_20261013/** -text whitespace=cr-at-eol

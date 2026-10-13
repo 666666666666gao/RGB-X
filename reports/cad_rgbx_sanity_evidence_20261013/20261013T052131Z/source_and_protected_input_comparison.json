@@ -1,0 +1,7 @@
+{
+  "reviewed_source_sha256": true,
+  "env_spec_canonical_sha256": true,
+  "pruned_core_sha256": true,
+  "protected_source_sha256": true,
+  "protected_checkpoints": true
+}

@@ -1,0 +1,32 @@
+{
+  "run.json": {
+    "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/run.json",
+    "bytes": 3903,
+    "sha256": "ba2943e1a5b112f3964a95ba757c70b1bcb0a7d719619e65db5a00bbd3277a1a"
+  },
+  "execution.json": {
+    "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity_controller/execution.json",
+    "bytes": 882,
+    "sha256": "cef6f20c4f53ce2b50b7cbb554d512e18ae29f0608e4e86423c6b4a3eaec3934"
+  },
+  "saved_state_audit.json": {
+    "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/saved_state_audit.json",
+    "bytes": 751,
+    "sha256": "d90d827a953c6ca798f41d45440ccacd6c7403a50f4813f3916155d9ec168f19"
+  },
+  "train.log": {
+    "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity_controller/train.log",
+    "bytes": 2851,
+    "sha256": "cb55eb0c3916d10877e91da62f793dffb51d7a316f3403f2e625a90c2fd06e0a"
+  },
+  "first_update_gradient_manifest.json": {
+    "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/first_update_gradient_manifest.json",
+    "bytes": 7959,
+    "sha256": "246d44f5afa7611812b603b21d06980193666d5043b1aafba97d313a9850b212"
+  },
+  "updates.jsonl": {
+    "remote_path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026_sanity/updates.jsonl",
+    "bytes": 511,
+    "sha256": "99a97362f876fbb186766350718b5d553f14230db54dd487cb6cefc876c6fef9"
+  }
+}

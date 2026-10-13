@@ -1,0 +1,864 @@
+{
+  "status": "PASS_PRUNED_CAD250_STRUCTURE_AND_RANDOM_INITIALIZATION_CPU_ONLY_NOT_TRAINING",
+  "observed_at": "2026-10-13T05:01:18.855830+00:00",
+  "model_type": "CADTrack",
+  "model_source": "/data/gb/rgbx-risk/third_party/CADTrackPruned",
+  "reference_checkpoint": "/home/gaob/CADTrack_ep0014.pth.tar",
+  "reference_epoch": 14,
+  "reference_role": "Architecture metadata only; no checkpoint values assigned to this model.",
+  "model_state_tensors": 250,
+  "model_state_elements": 103142866,
+  "named_parameter_tensors": 211,
+  "named_parameter_elements": 103138437,
+  "exact_state_names_and_shapes_match": true,
+  "pretrained_load_calls_during_build": 0,
+  "pretrained_file": "",
+  "auto_resume": false,
+  "all_parameters_require_grad": true,
+  "fresh_initial_state_sha256": "ed4579edbff35ebe5df3866bbd66feefb38895179c5350fe51fcf7fc3b2a7723",
+  "seed": 2026,
+  "differing_random_weight_witnesses": [
+    "backbone.patch_embed.proj.weight",
+    "backbone.blocks.0.attn.qkv.weight",
+    "box_head.conv1_ctr.0.weight"
+  ],
+  "model_shapes": {
+    "backbone.cls_token": [
+      1,
+      1,
+      768
+    ],
+    "backbone.pos_embed": [
+      1,
+      197,
+      768
+    ],
+    "backbone.pos_embed_z": [
+      1,
+      64,
+      768
+    ],
+    "backbone.pos_embed_x": [
+      1,
+      256,
+      768
+    ],
+    "backbone.cls_pos_embed": [
+      1,
+      1,
+      768
+    ],
+    "backbone.patch_embed.proj.weight": [
+      768,
+      3,
+      16,
+      16
+    ],
+    "backbone.patch_embed.proj.bias": [
+      768
+    ],
+    "backbone.blocks.0.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.0.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.0.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.0.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.0.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.0.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.0.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.0.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.0.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.0.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.0.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.0.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.1.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.1.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.1.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.1.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.1.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.1.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.1.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.1.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.1.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.1.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.1.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.1.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.2.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.2.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.2.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.2.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.2.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.2.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.2.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.2.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.2.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.2.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.2.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.2.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.3.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.3.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.3.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.3.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.3.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.3.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.3.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.3.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.3.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.3.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.3.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.3.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.4.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.4.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.4.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.4.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.4.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.4.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.4.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.4.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.4.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.4.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.4.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.4.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.5.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.5.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.5.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.5.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.5.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.5.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.5.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.5.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.5.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.5.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.5.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.5.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.6.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.6.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.6.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.6.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.6.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.6.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.6.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.6.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.6.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.6.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.6.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.6.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.7.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.7.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.7.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.7.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.7.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.7.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.7.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.7.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.7.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.7.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.7.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.7.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.8.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.8.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.8.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.8.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.8.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.8.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.8.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.8.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.8.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.8.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.8.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.8.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.9.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.9.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.9.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.9.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.9.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.9.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.9.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.9.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.9.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.9.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.9.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.9.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.10.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.10.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.10.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.10.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.10.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.10.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.10.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.10.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.10.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.10.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.10.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.10.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.blocks.11.norm1.weight": [
+      768
+    ],
+    "backbone.blocks.11.norm1.bias": [
+      768
+    ],
+    "backbone.blocks.11.attn.qkv.weight": [
+      2304,
+      768
+    ],
+    "backbone.blocks.11.attn.qkv.bias": [
+      2304
+    ],
+    "backbone.blocks.11.attn.proj.weight": [
+      768,
+      768
+    ],
+    "backbone.blocks.11.attn.proj.bias": [
+      768
+    ],
+    "backbone.blocks.11.norm2.weight": [
+      768
+    ],
+    "backbone.blocks.11.norm2.bias": [
+      768
+    ],
+    "backbone.blocks.11.mlp.fc1.weight": [
+      3072,
+      768
+    ],
+    "backbone.blocks.11.mlp.fc1.bias": [
+      3072
+    ],
+    "backbone.blocks.11.mlp.fc2.weight": [
+      768,
+      3072
+    ],
+    "backbone.blocks.11.mlp.fc2.bias": [
+      768
+    ],
+    "backbone.norm.weight": [
+      768
+    ],
+    "backbone.norm.bias": [
+      768
+    ],
+    "box_head.conv1_ctr.0.weight": [
+      256,
+      768,
+      3,
+      3
+    ],
+    "box_head.conv1_ctr.0.bias": [
+      256
+    ],
+    "box_head.conv1_ctr.1.weight": [
+      256
+    ],
+    "box_head.conv1_ctr.1.bias": [
+      256
+    ],
+    "box_head.conv1_ctr.1.running_mean": [
+      256
+    ],
+    "box_head.conv1_ctr.1.running_var": [
+      256
+    ],
+    "box_head.conv1_ctr.1.num_batches_tracked": [],
+    "box_head.conv2_ctr.0.weight": [
+      128,
+      256,
+      3,
+      3
+    ],
+    "box_head.conv2_ctr.0.bias": [
+      128
+    ],
+    "box_head.conv2_ctr.1.weight": [
+      128
+    ],
+    "box_head.conv2_ctr.1.bias": [
+      128
+    ],
+    "box_head.conv2_ctr.1.running_mean": [
+      128
+    ],
+    "box_head.conv2_ctr.1.running_var": [
+      128
+    ],
+    "box_head.conv2_ctr.1.num_batches_tracked": [],
+    "box_head.conv3_ctr.0.weight": [
+      64,
+      128,
+      3,
+      3
+    ],
+    "box_head.conv3_ctr.0.bias": [
+      64
+    ],
+    "box_head.conv3_ctr.1.weight": [
+      64
+    ],
+    "box_head.conv3_ctr.1.bias": [
+      64
+    ],
+    "box_head.conv3_ctr.1.running_mean": [
+      64
+    ],
+    "box_head.conv3_ctr.1.running_var": [
+      64
+    ],
+    "box_head.conv3_ctr.1.num_batches_tracked": [],
+    "box_head.conv4_ctr.0.weight": [
+      32,
+      64,
+      3,
+      3
+    ],
+    "box_head.conv4_ctr.0.bias": [
+      32
+    ],
+    "box_head.conv4_ctr.1.weight": [
+      32
+    ],
+    "box_head.conv4_ctr.1.bias": [
+      32
+    ],
+    "box_head.conv4_ctr.1.running_mean": [
+      32
+    ],
+    "box_head.conv4_ctr.1.running_var": [
+      32
+    ],
+    "box_head.conv4_ctr.1.num_batches_tracked": [],
+    "box_head.conv5_ctr.weight": [
+      1,
+      32,
+      1,
+      1
+    ],
+    "box_head.conv5_ctr.bias": [
+      1
+    ],
+    "box_head.conv1_offset.0.weight": [
+      256,
+      768,
+      3,
+      3
+    ],
+    "box_head.conv1_offset.0.bias": [
+      256
+    ],
+    "box_head.conv1_offset.1.weight": [
+      256
+    ],
+    "box_head.conv1_offset.1.bias": [
+      256
+    ],
+    "box_head.conv1_offset.1.running_mean": [
+      256
+    ],
+    "box_head.conv1_offset.1.running_var": [
+      256
+    ],
+    "box_head.conv1_offset.1.num_batches_tracked": [],
+    "box_head.conv2_offset.0.weight": [
+      128,
+      256,
+      3,
+      3
+    ],
+    "box_head.conv2_offset.0.bias": [
+      128
+    ],
+    "box_head.conv2_offset.1.weight": [
+      128
+    ],
+    "box_head.conv2_offset.1.bias": [
+      128
+    ],
+    "box_head.conv2_offset.1.running_mean": [
+      128
+    ],
+    "box_head.conv2_offset.1.running_var": [
+      128
+    ],
+    "box_head.conv2_offset.1.num_batches_tracked": [],
+    "box_head.conv3_offset.0.weight": [
+      64,
+      128,
+      3,
+      3
+    ],
+    "box_head.conv3_offset.0.bias": [
+      64
+    ],
+    "box_head.conv3_offset.1.weight": [
+      64
+    ],
+    "box_head.conv3_offset.1.bias": [
+      64
+    ],
+    "box_head.conv3_offset.1.running_mean": [
+      64
+    ],
+    "box_head.conv3_offset.1.running_var": [
+      64
+    ],
+    "box_head.conv3_offset.1.num_batches_tracked": [],
+    "box_head.conv4_offset.0.weight": [
+      32,
+      64,
+      3,
+      3
+    ],
+    "box_head.conv4_offset.0.bias": [
+      32
+    ],
+    "box_head.conv4_offset.1.weight": [
+      32
+    ],
+    "box_head.conv4_offset.1.bias": [
+      32
+    ],
+    "box_head.conv4_offset.1.running_mean": [
+      32
+    ],
+    "box_head.conv4_offset.1.running_var": [
+      32
+    ],
+    "box_head.conv4_offset.1.num_batches_tracked": [],
+    "box_head.conv5_offset.weight": [
+      2,
+      32,
+      1,
+      1
+    ],
+    "box_head.conv5_offset.bias": [
+      2
+    ],
+    "box_head.conv1_size.0.weight": [
+      256,
+      768,
+      3,
+      3
+    ],
+    "box_head.conv1_size.0.bias": [
+      256
+    ],
+    "box_head.conv1_size.1.weight": [
+      256
+    ],
+    "box_head.conv1_size.1.bias": [
+      256
+    ],
+    "box_head.conv1_size.1.running_mean": [
+      256
+    ],
+    "box_head.conv1_size.1.running_var": [
+      256
+    ],
+    "box_head.conv1_size.1.num_batches_tracked": [],
+    "box_head.conv2_size.0.weight": [
+      128,
+      256,
+      3,
+      3
+    ],
+    "box_head.conv2_size.0.bias": [
+      128
+    ],
+    "box_head.conv2_size.1.weight": [
+      128
+    ],
+    "box_head.conv2_size.1.bias": [
+      128
+    ],
+    "box_head.conv2_size.1.running_mean": [
+      128
+    ],
+    "box_head.conv2_size.1.running_var": [
+      128
+    ],
+    "box_head.conv2_size.1.num_batches_tracked": [],
+    "box_head.conv3_size.0.weight": [
+      64,
+      128,
+      3,
+      3
+    ],
+    "box_head.conv3_size.0.bias": [
+      64
+    ],
+    "box_head.conv3_size.1.weight": [
+      64
+    ],
+    "box_head.conv3_size.1.bias": [
+      64
+    ],
+    "box_head.conv3_size.1.running_mean": [
+      64
+    ],
+    "box_head.conv3_size.1.running_var": [
+      64
+    ],
+    "box_head.conv3_size.1.num_batches_tracked": [],
+    "box_head.conv4_size.0.weight": [
+      32,
+      64,
+      3,
+      3
+    ],
+    "box_head.conv4_size.0.bias": [
+      32
+    ],
+    "box_head.conv4_size.1.weight": [
+      32
+    ],
+    "box_head.conv4_size.1.bias": [
+      32
+    ],
+    "box_head.conv4_size.1.running_mean": [
+      32
+    ],
+    "box_head.conv4_size.1.running_var": [
+      32
+    ],
+    "box_head.conv4_size.1.num_batches_tracked": [],
+    "box_head.conv5_size.weight": [
+      2,
+      32,
+      1,
+      1
+    ],
+    "box_head.conv5_size.bias": [
+      2
+    ],
+    "decode_fuse_search.0.weight": [
+      768,
+      1536,
+      3,
+      3
+    ],
+    "decode_fuse_search.0.bias": [
+      768
+    ],
+    "decode_fuse_search.1.weight": [
+      768
+    ],
+    "decode_fuse_search.1.bias": [
+      768
+    ],
+    "decode_fuse_search.1.running_mean": [
+      768
+    ],
+    "decode_fuse_search.1.running_var": [
+      768
+    ],
+    "decode_fuse_search.1.num_batches_tracked": []
+  },
+  "cuda_initialized": false,
+  "model_forward_calls": 0,
+  "training_updates": 0,
+  "scope": "CPU structure and initialization check only; no GPU preflight/training success or tracking benchmark claim."
+}

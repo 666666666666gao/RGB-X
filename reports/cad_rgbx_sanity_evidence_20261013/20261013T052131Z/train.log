@@ -1,0 +1,25 @@
+/data/gb/rgbx-risk/third_party/XTrack/lib/train/dataset/depthtrack.py:49: FutureWarning: The squeeze argument has been deprecated and will be removed in a future version. Append .squeeze("columns") to the call to squeeze.
+
+
+  sequence_list = pandas.read_csv(file_path, header=None, squeeze=True).values.tolist()
+/data/gb/rgbx-risk/third_party/XTrack/lib/train/dataset/depthtrack.py:49: FutureWarning: The squeeze argument has been deprecated and will be removed in a future version. Append .squeeze("columns") to the call to squeeze.
+
+
+  sequence_list = pandas.read_csv(file_path, header=None, squeeze=True).values.tolist()
+/data/gb/rgbx-risk/third_party/XTrack/lib/train/dataset/visevent.py:48: FutureWarning: The squeeze argument has been deprecated and will be removed in a future version. Append .squeeze("columns") to the call to squeeze.
+
+
+  sequence_list = pandas.read_csv(file_path, header=None, squeeze=True).values.tolist()
+/data/gb/rgbx-risk/third_party/XTrack/lib/train/dataset/visevent.py:48: FutureWarning: The squeeze argument has been deprecated and will be removed in a future version. Append .squeeze("columns") to the call to squeeze.
+
+
+  sequence_list = pandas.read_csv(file_path, header=None, squeeze=True).values.tolist()
+/data/gb/conda/envs/rgbx-risk/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  warnings.warn(
+/data/gb/conda/envs/rgbx-risk/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  warnings.warn(
+/data/gb/conda/envs/rgbx-risk/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  warnings.warn(
+/data/gb/conda/envs/rgbx-risk/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  warnings.warn(
+{"epoch": 1, "step": 2, "global_step": 2, "learning_rate": 1.0014400000000002e-05, "global_task_counts": [8, 8, 8], "task_response_box_iou": [[39.145992279052734, 5.642169952392578, 0.016774918884038925], [65.25061798095703, 4.063529014587402, 0.06188317388296127], [47.621246337890625, 4.945178031921387, 0.039927154779434204]], "gradient_norm_before_clip": 1439.1558837890625, "step_seconds": 0.6356938190001529, "peak_allocated_bytes": 7987563520, "cooling_pause_seconds": 0.0, "main_training_examples": 48}
