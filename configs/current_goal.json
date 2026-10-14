@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-13T21:45:00.944629+00:00",
+  "updated_at": "2026-10-14T11:07:59.761043+00:00",
   "objective": "在2028用删减版CADTrack从全参数随机初始化联合训练RGB-T/RGB-D/RGB-Event；一份权重、仅GPU0/1，GPU0功率上限250W、目标温度75℃（允许偶发76℃）。先完成同随机初始化的普通联合AdamW B0，再比较主动共同方向及逐项前瞻/稳定性模块；完整报告现有三集七项主指标和所有退化，争取全面超过公平baseline。",
-  "status": "CAD_SCRATCH_B0_EPOCH27_COMPLETE_RUNNING_EPOCH28_NO_BENCHMARK",
+  "status": "CAD_SCRATCH_B0_EPOCH52_COMPLETE_RUNNING_EPOCH53_NO_BENCHMARK",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -26,17 +26,17 @@
     "actual_last_target_temperature_c": 75,
     "settings_applied": true,
     "observed_pause_temperature_max_c": 76,
-    "observed_pause_samples_above_75c": 14,
+    "observed_pause_samples_above_75c": 17,
     "target70_applied": false,
     "target70_status": "CANCELLED_BY_USER_NO_HARDWARE_CHANGE",
-    "thermal_log_evidence": "reports/cad_rgbx_epoch27_thermal_and_retention_20261014.json",
+    "thermal_log_evidence": "reports/cad_rgbx_epoch52_thermal_and_retention_20261014.json",
     "target70_command_evidence": "reports/cad_rgbx_gpu0_target70_command_20261013.json",
     "occasional_76c_accepted_by_user": true,
     "target70_requested": false,
     "current_thermal_policy": "Keep power limit250W and target75C; user accepts occasional76C. Existing pause72/resume68 remains active.",
     "initial_requested_maximum_temperature_c": 75,
     "normal_temperature_goal_c": 75,
-    "actual_last_temperature_c": 74
+    "actual_last_temperature_c": 69
   },
   "active_train_datasets": [
     "LasHeR_train",
@@ -89,14 +89,14 @@
   "hardware_admission": "Actual readback250W/75C on GPU0 before sanity and formal start",
   "formal_launch_evidence": "reports/cad_rgbx_formal_launch_20261013.json",
   "documented_sanity": "reports/cad_rgbx_documented_sanity_review.json",
-  "current_training_updates": 68450,
-  "next_progress_observation_not_before": "2026-10-14T11:07:58.134174+00:00",
-  "current_completed_epochs": 27,
-  "current_training_examples": 1642800,
-  "current_progress_evidence": "reports/cad_rgbx_due_observation_20261013T2145Z.json",
+  "current_training_updates": 130400,
+  "next_progress_observation_not_before": "2026-10-15T00:03:40.492904+00:00",
+  "current_completed_epochs": 52,
+  "current_training_examples": 3129600,
+  "current_progress_evidence": "reports/cad_rgbx_due_observation_20261014T1108Z.json",
   "first_formal_checkpoint_cpu_audit": "reports/cad_rgbx_first_formal_checkpoint_audit_20261013.json",
-  "current_epoch": 28,
-  "next_epoch_end_estimate": "2026-10-13T22:07:06.384838+00:00",
+  "current_epoch": 53,
+  "next_epoch_end_estimate": "2026-10-14T11:36:38.036646+00:00",
   "diagnostic_epoch_milestones": [
     5,
     10,
@@ -106,12 +106,14 @@
     100
   ],
   "warmup_completed": true,
-  "next_diagnostic_epoch": 50,
-  "next_diagnostic_epoch_end_estimate": "2026-10-14T11:10:58.134174+00:00",
-  "current_thermal_and_retention_evidence": "reports/cad_rgbx_epoch27_thermal_and_retention_20261014.json",
+  "next_diagnostic_epoch": 75,
+  "next_diagnostic_epoch_end_estimate": "2026-10-15T00:06:40.492904+00:00",
+  "current_thermal_and_retention_evidence": "reports/cad_rgbx_epoch52_thermal_and_retention_20261014.json",
   "current_recovery_weight_files": 1,
-  "current_recovery_slot_bytes": 1236775032,
+  "current_recovery_slot_bytes": 1236778552,
   "current_recovery_slot_audit_scope": "Names and sizes only; terminal tensor audit remains pending.",
-  "formal_training_end_estimate": "2026-10-15T16:52:28.473575+00:00",
-  "formal_training_end_estimate_scope": "Extrapolation from observed rate, not a verified completion time; cooling and throughput can change."
+  "formal_training_end_estimate": "2026-10-15T14:18:59.647744+00:00",
+  "formal_training_end_estimate_scope": "Extrapolation from observed rate, not a verified completion time; cooling and throughput can change.",
+  "polling_policy_evidence": "reports/cad_rgbx_polling_policy_20261014.json",
+  "progress_observation_schedule": "Forecast diagnostic milestones only, no early server queries or repeated output-collection loops. The240s interval applies only to local timer clock checks."
 }

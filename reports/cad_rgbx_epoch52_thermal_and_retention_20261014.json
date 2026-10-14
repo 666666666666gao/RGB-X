@@ -1,0 +1,55 @@
+{
+  "status": "ACTUAL_EXISTING_GUARD_LOG_AND_SINGLE_RECOVERY_SLOT_NO_GPU_OR_PROGRESS_QUERY",
+  "observed_at": "2026-10-14T11:10:11.177835+00:00",
+  "pause_events": 13328,
+  "resume_events": 13328,
+  "max_recorded_pause_temperature_c": 76,
+  "pause_temperature_histogram": {
+    "72": 10731,
+    "73": 2351,
+    "74": 196,
+    "75": 33,
+    "76": 17
+  },
+  "pauses_above75_c": 17,
+  "pauses_above76_c": 0,
+  "latest20_pause_temperatures_c": [
+    73,
+    73,
+    74,
+    72,
+    72,
+    73,
+    72,
+    73,
+    72,
+    73,
+    73,
+    72,
+    74,
+    72,
+    72,
+    73,
+    72,
+    73,
+    72,
+    73
+  ],
+  "weights": [
+    {
+      "name": "CADTrack_latest.pth.tar",
+      "bytes": 1236778552
+    }
+  ],
+  "active_atomic_write_files": [],
+  "available_checkpoint_partition_bytes": 733331251200,
+  "training_progress_queries": 0,
+  "live_sensor_queries": 0,
+  "model_forward_calls": 0,
+  "weights_deleted": 0,
+  "settings_changed": false,
+  "paired_progress_snapshot": "reports/cad_rgbx_due_observation_20261014T1108Z.json",
+  "pause_records_with_trailing_output": 4,
+  "parser_scope": "Temperature dictionary from each line beginning with GPU0_COOLING_PAUSE; trailing interleaved worker warnings excluded, raw log unchanged.",
+  "scope": "Existing guard samples, not a continuous maximum. File names and sizes checked; current checkpoint tensors or epoch header not opened. No user inputs enumerated or modified."
+}

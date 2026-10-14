@@ -1,0 +1,15 @@
+{
+  "status": "USER_NO_FREQUENT_POLLING_ENFORCED_AT_SCHEDULED_DIAGNOSTIC",
+  "recorded_at": "2026-10-14T11:11:54.651868+00:00",
+  "user_instruction": "不要频繁轮询",
+  "local_output_collector90_actually_terminated": true,
+  "actual_wait_strategy": "One interruptible sleep to the scheduled deadline, then one original-session collection. No repeated foreground sleeps, status messages, wait/write_stdin loops or early server training queries.",
+  "completed_observer_native_session": 79733,
+  "actual_observer_exit_code": 0,
+  "progress_evidence": "reports/cad_rgbx_due_observation_20261014T1108Z.json",
+  "next_local_timer_pid": 47180,
+  "next_native_session": 90668,
+  "next_progress_not_before": "2026-10-15T00:03:40.492904+00:00",
+  "background_timer_scope": "Local clock checks only, at most every240s. Exactly one server observation at the deadline.",
+  "training_or_settings_modified": false
+}
