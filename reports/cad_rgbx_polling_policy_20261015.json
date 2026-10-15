@@ -1,0 +1,32 @@
+{
+  "status": "SCHEDULED_DIAGNOSTICS_ONLY_NO_CONTINUOUS_FOREGROUND_POLLING",
+  "recorded_at": "2026-10-15T01:34:36.104874+00:00",
+  "user_instruction": "不要频繁轮询",
+  "actual_wait_strategy": "One interruptible wait to the forecast deadline. For a wait longer than the tool12h maximum, only two sleeps, no intervening server/native polls.",
+  "actual_completed_observers": [
+    {
+      "native_session": 90668,
+      "exit_code": 0,
+      "evidence": "reports/cad_rgbx_due_observation_20261015T0004Z.json"
+    },
+    {
+      "native_session": 87951,
+      "exit_code": 0,
+      "evidence": "reports/cad_rgbx_due_observation_20261015T0120Z.json"
+    },
+    {
+      "native_session": 76918,
+      "exit_code": 0,
+      "evidence": "reports/cad_rgbx_due_observation_20261015T0125Z.json"
+    }
+  ],
+  "diagnostic_reason": "First due observation completed72, recalibrated next75 timing; second completed74 at step2450/2500, then one >=240s confirmation completed75. No ETA was called completion.",
+  "no_thermal_or_weight_audit_at72_or74": true,
+  "thermal_at75": "reports/cad_rgbx_epoch75_thermal_and_retention_20261015.json",
+  "next_local_timer_pid": 34200,
+  "next_native_session": 48993,
+  "next_progress_not_before": "2026-10-15T15:55:02.078911+00:00",
+  "background_timer_scope": "Local clock checks only, at most every240s. One server observation at the deadline.",
+  "output_collector_loop": false,
+  "training_or_settings_modified": false
+}
