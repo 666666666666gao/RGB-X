@@ -1,0 +1,18 @@
+{
+  "status": "ACTUAL_INCREMENTAL_SOURCE_PUSH_AND_FOUR_DOCUMENT_COPIES_VERIFIED",
+  "verified_at": "2026-10-15T16:02:44.349655+00:00",
+  "source_commit": "ef45d4365b4b371103788b0aa993a5734f6c3c38",
+  "file_sha256": {
+    "configs/current_goal.json": "11fea62a27e8915faa3c4ea518f71f4184e016186f99a68ccef9fc807aa6f551",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "50baaf98a4738795896dbe2fec2c17a2050e96aea7c3691486286a86cbce2281",
+    "reports/cad_rgbx_due_observation_20261015T1555Z.json": "31d0c6c9590599bd1f905d2dabbac72c9669ac8d81ccbd7c4dffa2dbc3684824",
+    "reports/cad_rgbx_missing_local_observer_20261015.json": "4c2ca67d579c74efa0629785adf60da87f84f5ba043bb63ea76765bd4c72bf79",
+    "reports/cad_rgbx_polling_policy_20261015.json": "9aed8d0be28f6a1ab0f0c4ef5dbfaa1b04a8808c0ac5134dd6383eeb151eb67f"
+  },
+  "document_four_copies_identical": true,
+  "neural_model_forward_calls": 0,
+  "training_progress_queries": 0,
+  "gpu_sensor_queries": 0,
+  "training_or_dataset_changed": false,
+  "publication_scope": "Completed96 epochs, live finite update241400; next100th-epoch diagnosis notbeforeUTC17:57:27/BJT16Oct01:57:27. Missing local observer cause/exit unknown; original deadline honored by one foreground observation, no training restart or new background timer. No repeated thermal/directory audit, output loop or training/settings/weight changes."
+}

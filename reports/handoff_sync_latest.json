@@ -1,22 +1,22 @@
 {
-  "status": "CAD_SCRATCH_B0_EPOCH75_COMPLETE_RUNNING_EPOCH76_NO_BENCHMARK",
-  "verified_at": "2026-10-15T01:37:03.144474+00:00",
-  "source_commit": "45658de995b707cdcbb99dc290a10d724ae189cd",
+  "status": "CAD_SCRATCH_B0_EPOCH96_COMPLETE_RUNNING_EPOCH97_NO_BENCHMARK",
+  "verified_at": "2026-10-15T16:02:44.349655+00:00",
+  "source_commit": "ef45d4365b4b371103788b0aa993a5734f6c3c38",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "30f19483339cc1d2a7c118c5de4f38f0219524baef07785565386558c161bdf2",
-  "document_bytes": 350146,
+  "document_sha256": "50baaf98a4738795896dbe2fec2c17a2050e96aea7c3691486286a86cbce2281",
+  "document_bytes": 353442,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/45658de995b707cdcbb99dc290a10d724ae189cd/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/ef45d4365b4b371103788b0aa993a5734f6c3c38/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
     ".gitattributes": "3a63ab4db5fc32fa02e5302d669d8820cef77f832e21b3afdbe310147b49cec5",
     "scripts/xtrack_eval_parameters.py": "e541ce37939dadf90c0e1e60130ddcd41989677f12f23b609d32dbb82140802d",
-    "configs/current_goal.json": "6c37242215b10a182552cec1c2feb16381af1f055c36f43f605d3cc5c4793257",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "30f19483339cc1d2a7c118c5de4f38f0219524baef07785565386558c161bdf2",
+    "configs/current_goal.json": "11fea62a27e8915faa3c4ea518f71f4184e016186f99a68ccef9fc807aa6f551",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "50baaf98a4738795896dbe2fec2c17a2050e96aea7c3691486286a86cbce2281",
     "reports/full_method_v2_distance0_entry_preparation.json": "6d34452e6301162f3c213184ca1fca54de5ac421f7ba6c769c5abc83523f9c97",
     "reports/full_method_v2_distance0_documented_preflight_plan_20261005.json": "deaf30308cba2eaf8b35d8e770c9c2aa742b33ee562064701cb5be016a8ef97d",
     "reports/full_method_v2_distance0_identity_admission_activation_20261005.json": "111c0b1c23fa7326a07625ded48179e544133add33ab1990035527c42b81ae91",
@@ -368,9 +368,11 @@
     "reports/cad_rgbx_polling_policy_20261014.json": "56358f8049002cc73d26e771f95293448fc87dddc76ae34db4057acd9fee3a02",
     "reports/cad_rgbx_due_observation_20261015T0125Z.json": "c33d43ab02b75e9bebd619f30085d5ce603fd698055d981c817e2f75f888ae56",
     "reports/cad_rgbx_epoch75_thermal_and_retention_20261015.json": "973333cba81a436840d89d7fb56fb7fa06cd17b3c1d74bccb7974a061033c0f5",
-    "reports/cad_rgbx_polling_policy_20261015.json": "20cbd22d558b9ed62f2ddefd0d4f3b85d133e84e231aa31a6a7d8e99fa05e123",
+    "reports/cad_rgbx_polling_policy_20261015.json": "9aed8d0be28f6a1ab0f0c4ef5dbfaa1b04a8808c0ac5134dd6383eeb151eb67f",
     "reports/cad_rgbx_due_observation_20261015T0004Z.json": "1f5956c7816b8145e4fe73bbec4e491246a58fec083e32f123ccbe113b9254a4",
-    "reports/cad_rgbx_due_observation_20261015T0120Z.json": "073230ddde2ccf69ea62335bf210c029ce49c54a703461d00cc1013e949cd00a"
+    "reports/cad_rgbx_due_observation_20261015T0120Z.json": "073230ddde2ccf69ea62335bf210c029ce49c54a703461d00cc1013e949cd00a",
+    "reports/cad_rgbx_due_observation_20261015T1555Z.json": "31d0c6c9590599bd1f905d2dabbac72c9669ac8d81ccbd7c4dffa2dbc3684824",
+    "reports/cad_rgbx_missing_local_observer_20261015.json": "4c2ca67d579c74efa0629785adf60da87f84f5ba043bb63ea76765bd4c72bf79"
   },
   "published_files": 338,
   "latest_publication_sync": {
@@ -728,7 +730,7 @@
   ],
   "distance0_lasher_evidence": "reports/full_method_v2_distance0_lasher_complete_intake_20261006.json",
   "execution_goal_version": "2026-10-06-user-review-v4",
-  "current_goal_sha256": "6c37242215b10a182552cec1c2feb16381af1f055c36f43f605d3cc5c4793257",
+  "current_goal_sha256": "11fea62a27e8915faa3c4ea518f71f4184e016186f99a68ccef9fc807aa6f551",
   "user_review_evidence": "reports/user_review_priority_and_source_facts_20261006.json",
   "distance0_visevent_evidence": "reports/full_method_v2_distance0_visevent_complete_intake_20261007.json",
   "distance0_complete_result": "reports/full_method_v2_distance0_complete_result_intake_20261007.json",
@@ -800,19 +802,19 @@
     1
   ],
   "old_xtrack_user_stop_preserved": true,
-  "current_cad_status": "CAD_SCRATCH_B0_EPOCH75_COMPLETE_RUNNING_EPOCH76_NO_BENCHMARK",
-  "current_cad_completed_epochs": 75,
-  "current_cad_training_updates": 187750,
-  "current_cad_main_examples": 4506000,
+  "current_cad_status": "CAD_SCRATCH_B0_EPOCH96_COMPLETE_RUNNING_EPOCH97_NO_BENCHMARK",
+  "current_cad_completed_epochs": 96,
+  "current_cad_training_updates": 241400,
+  "current_cad_main_examples": 5793600,
   "current_cad_formal_tracking_scores": "NOT_RUN",
   "latest_cad_retention": "reports/cad_rgbx_sanity_weight_retention_20261013.json",
   "publication_resume_completed": true,
-  "current_cad_progress_evidence": "reports/cad_rgbx_due_observation_20261015T0125Z.json",
+  "current_cad_progress_evidence": "reports/cad_rgbx_due_observation_20261015T1555Z.json",
   "current_cad_thermal_log_evidence": "reports/cad_rgbx_epoch75_thermal_and_retention_20261015.json",
   "current_cad_thermal_command_evidence": "reports/cad_rgbx_gpu0_target70_command_20261013.json",
   "current_cad_gpu0_target70_applied": false,
-  "current_cad_next_progress_not_before": "2026-10-15T15:55:02.078911+00:00",
-  "verification_scope": "Seven selected static files verified now, including original72/74/75 diagnostics; prior immutable hashes retain their preceding verification timestamps.",
+  "current_cad_next_progress_not_before": "2026-10-15T17:57:27.828502+00:00",
+  "verification_scope": "Five changed static files verified now; prior75-round thermal/directory evidence retains its original observation timestamp and was not repeated.",
   "current_cad_thermal_policy_evidence": "reports/cad_rgbx_user_thermal_policy_update_20261013.json",
   "current_cad_gpu0_target70_cancelled": true,
   "current_cad_occasional76c_accepted": true,
@@ -822,5 +824,6 @@
   "epoch10_first_publication_attempt": "reports/cad_rgbx_epoch10_publication_first_attempt_20261013.json",
   "epoch10_readback_recovery_completed": true,
   "current_cad_log_parse_failure_evidence": "reports/cad_rgbx_epoch27_thermal_parse_first_attempt_20261014.json",
-  "current_cad_polling_policy_evidence": "reports/cad_rgbx_polling_policy_20261015.json"
+  "current_cad_polling_policy_evidence": "reports/cad_rgbx_polling_policy_20261015.json",
+  "current_cad_missing_local_observer_evidence": "reports/cad_rgbx_missing_local_observer_20261015.json"
 }
