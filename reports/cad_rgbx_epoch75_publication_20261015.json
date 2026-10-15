@@ -1,0 +1,20 @@
+{
+  "status": "ACTUAL_INCREMENTAL_SOURCE_PUSH_AND_FOUR_DOCUMENT_COPIES_VERIFIED",
+  "verified_at": "2026-10-15T01:37:03.144474+00:00",
+  "source_commit": "45658de995b707cdcbb99dc290a10d724ae189cd",
+  "file_sha256": {
+    "configs/current_goal.json": "6c37242215b10a182552cec1c2feb16381af1f055c36f43f605d3cc5c4793257",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "30f19483339cc1d2a7c118c5de4f38f0219524baef07785565386558c161bdf2",
+    "reports/cad_rgbx_due_observation_20261015T0125Z.json": "c33d43ab02b75e9bebd619f30085d5ce603fd698055d981c817e2f75f888ae56",
+    "reports/cad_rgbx_epoch75_thermal_and_retention_20261015.json": "973333cba81a436840d89d7fb56fb7fa06cd17b3c1d74bccb7974a061033c0f5",
+    "reports/cad_rgbx_polling_policy_20261015.json": "20cbd22d558b9ed62f2ddefd0d4f3b85d133e84e231aa31a6a7d8e99fa05e123",
+    "reports/cad_rgbx_due_observation_20261015T0004Z.json": "1f5956c7816b8145e4fe73bbec4e491246a58fec083e32f123ccbe113b9254a4",
+    "reports/cad_rgbx_due_observation_20261015T0120Z.json": "073230ddde2ccf69ea62335bf210c029ce49c54a703461d00cc1013e949cd00a"
+  },
+  "document_four_copies_identical": true,
+  "neural_model_forward_calls": 0,
+  "training_progress_queries": 0,
+  "gpu_sensor_queries": 0,
+  "training_or_dataset_changed": false,
+  "publication_scope": "Completed75 epochs, live finite update187750; next100th-epoch diagnosis notbeforeOct15 23:55:02 CST. Original72/74/75 due diagnostics retained together. Existing guard-log max76C/25pause samples76C, running21618pause/21617resume prefix counts, one recovery slot. No output-polling loop or training/settings/weight changes."
+}
