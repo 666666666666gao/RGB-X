@@ -1,0 +1,22 @@
+{
+  "status": "LOCAL_OBSERVER_PROCESS_AND_NATIVE_HANDLE_MISSING_TRAINING_STATE_NOT_INFERRED",
+  "recorded_at": "2026-10-15T14:08:44.211460+00:00",
+  "last_saved_training_evidence": "reports/cad_rgbx_due_observation_20261015T0125Z.json",
+  "scheduled_deadline_unchanged": "2026-10-15T15:55:02.078911+00:00",
+  "former_local_timer_pid": 34200,
+  "former_native_session": 48993,
+  "actual_native_read_error": "write_stdin failed: Unknown process id 48993",
+  "actual_local_inventory": "No Python process matching rgbx_cad_wait_until_due.py or rgbx_cad_observe_due.py",
+  "missing_report": "reports/cad_rgbx_due_observation_20261015T1555Z.json",
+  "actual_native_exit_code": null,
+  "disappearance_cause": "NOT_ESTABLISHED",
+  "actual_tool_evidence": [
+    "d9aea7",
+    "9f575a"
+  ],
+  "next_action": "One interruptible wait to the original deadline, then invoke the existing observer CLI once in the foreground.",
+  "new_background_timer_started": false,
+  "training_restarted": false,
+  "server_training_progress_queries": 0,
+  "hardware_settings_changed": false
+}
