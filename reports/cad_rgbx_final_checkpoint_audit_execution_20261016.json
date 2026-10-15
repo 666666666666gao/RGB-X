@@ -1,0 +1,13 @@
+{
+  "status": "ACTUAL_DOCUMENTED_FORMAL_CPU_AUDIT_COMMAND_RETURNED",
+  "started_at": "2026-10-15T18:29:47.516460+00:00",
+  "ended_at": "2026-10-15T18:30:38.697532+00:00",
+  "command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/audit_cad_rgbx_checkpoint.py --stage formal",
+  "actual_exit_code": 0,
+  "stdout": "{\"status\": \"PASS\", \"role\": \"CAD_CPU_SAVED_STATE_CHECK_NOT_BENCHMARK\", \"stage\": \"formal\", \"observed_at\": \"2026-10-15T18:30:38.693192+00:00\", \"checkpoint\": \"/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar\", \"checkpoint_sha256\": \"4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20\", \"checkpoint_bytes\": 1236785336, \"strict_model_load\": true, \"all_model_tensors_finite\": true, \"replica_state_hash_matches\": true, \"active_optimizer_states\": 209, \"trainable_parameters\": 211, \"global_step\": 250000, \"pretrained_loaded\": false, \"model_forward_calls\": 0, \"cuda_initialized\": false, \"cuda_rng_restoration\": \"NOT_EXECUTED_CPU_INSPECTION_ONLY\", \"formal_tracking_scores\": \"NOT_RUN\"}\n",
+  "stderr": "",
+  "stdout_sha256": "0d43edccfa3f43f399bf53a70c779a7839082a40a6f3c00aef6671525acc22c6",
+  "terminal_admission": "reports/cad_rgbx_due_observation_20261015T1825Z.json",
+  "training_started": false,
+  "benchmark_started": false
+}

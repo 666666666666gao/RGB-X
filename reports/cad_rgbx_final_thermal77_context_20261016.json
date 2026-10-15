@@ -1,0 +1,50 @@
+{
+  "status": "ACTUAL_THREE_77C_GUARD_SAMPLES_LOCATED_IN_FROZEN_CLOSED_LOG",
+  "source_archive": "reports/cad_rgbx_final_evidence_20261016.zip",
+  "archive_sha256": "37f6f5c14e743f2b99cc119fd41d4321697768a266ea8f4dc021457178fb303e",
+  "events": [
+    {
+      "log_line_1based": 2643553,
+      "temperature_c": 77,
+      "previous_logged_epoch": 82,
+      "previous_logged_global_step": 204950,
+      "next_logged_epoch": 82,
+      "next_logged_global_step": 205000,
+      "following_cooling_resume_seconds": 2.3552495850017294,
+      "raw_pause_line": "GPU0_COOLING_PAUSE {'temperature_c': 77}"
+    },
+    {
+      "log_line_1based": 2648236,
+      "temperature_c": 77,
+      "previous_logged_epoch": 83,
+      "previous_logged_global_step": 205300,
+      "next_logged_epoch": 83,
+      "next_logged_global_step": 205350,
+      "following_cooling_resume_seconds": 2.358981646975735,
+      "raw_pause_line": "GPU0_COOLING_PAUSE {'temperature_c': 77}"
+    },
+    {
+      "log_line_1based": 2861502,
+      "temperature_c": 77,
+      "previous_logged_epoch": 89,
+      "previous_logged_global_step": 221550,
+      "next_logged_epoch": 89,
+      "next_logged_global_step": 221600,
+      "following_cooling_resume_seconds": 2.3481616099888925,
+      "raw_pause_line": "GPU0_COOLING_PAUSE {'temperature_c': 77}"
+    }
+  ],
+  "requested_target_temperature_c": 75,
+  "user_accepted_occasional_temperature_c": 76,
+  "recorded_maximum_c": 77,
+  "events_above_accepted_occasional_temperature": 3,
+  "original_guard_pause_c": 72,
+  "original_guard_resume_c": 68,
+  "original_guard_check_seconds": 2,
+  "scope": "Event location is bounded by neighboring50-step logs, not an exact update number or causal attribution. Guard sampling is not a continuous-temperature maximum.",
+  "training_actual_exit_code": 0,
+  "training_restarted": false,
+  "model_forward_calls": 0,
+  "gpu_sensor_queries": 0,
+  "hardware_or_training_code_changed": false
+}

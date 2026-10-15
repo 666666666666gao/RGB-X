@@ -1,0 +1,6 @@
+{
+  "actual_exit_code": 1,
+  "stdout": "",
+  "stderr": "  File \"<stdin>\", line 34\n    pauses=[ast.literal_eval(value.group(1))['temperature_c'] for value in re.finditer(r\"GPU0_COOLING_PAUSE (\\{[^\n                                                                                                                ^\nSyntaxError: EOL while scanning string literal\n",
+  "operation": "Read closed training artifacts, verify final budget/processes/retention and archive logs; no model forward or checkpoint load."
+}

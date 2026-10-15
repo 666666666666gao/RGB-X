@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "role": "CAD_CPU_SAVED_STATE_CHECK_NOT_BENCHMARK",
+  "stage": "formal",
+  "observed_at": "2026-10-15T18:30:38.693192+00:00",
+  "checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+  "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+  "checkpoint_bytes": 1236785336,
+  "strict_model_load": true,
+  "all_model_tensors_finite": true,
+  "replica_state_hash_matches": true,
+  "active_optimizer_states": 209,
+  "trainable_parameters": 211,
+  "global_step": 250000,
+  "pretrained_loaded": false,
+  "model_forward_calls": 0,
+  "cuda_initialized": false,
+  "cuda_rng_restoration": "NOT_EXECUTED_CPU_INSPECTION_ONLY",
+  "formal_tracking_scores": "NOT_RUN"
+}

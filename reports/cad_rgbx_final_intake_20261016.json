@@ -1,0 +1,110 @@
+{
+  "status": "PASS_TERMINAL_100_EPOCH_BUDGET_SAVED_STATE_AND_SINGLE_WEIGHT_VERIFIED",
+  "observed_at": "2026-10-15T18:39:08.464517+00:00",
+  "run_status": "TRAINING_COMPLETE_NOT_EVALUATED",
+  "controller_actual_exit_code": 0,
+  "started_at": "2026-10-13T05:28:56.331282+00:00",
+  "ended_at": "2026-10-15T18:21:21.976152+00:00",
+  "controller_wallclock_seconds": 219145.64487,
+  "completed_epochs": 100,
+  "training_updates": 250000,
+  "main_training_examples": 6000000,
+  "complete_epoch_history_finite": true,
+  "complete_epoch_history_steps": 250000,
+  "final_epoch_task_response_box_iou": [
+    [
+      0.5625336170196533,
+      1.0059577226638794,
+      0.6602917909622192
+    ],
+    [
+      0.33706870675086975,
+      0.5112489461898804,
+      0.8032621741294861
+    ],
+    [
+      0.3743302524089813,
+      0.6145427823066711,
+      0.7705053091049194
+    ]
+  ],
+  "final_learning_rate": 1e-06,
+  "reported_loop_wallclock_seconds": 219117.642718355,
+  "reported_cooling_pause_seconds": 77200.18816126738,
+  "closed_log_resume_seconds_sum": 77200.18816126738,
+  "guard_pause_events": 32479,
+  "guard_resume_events": 32479,
+  "guard_prefix_pause_events": 32479,
+  "guard_prefix_resume_events": 32479,
+  "inline_pause_markers": 0,
+  "inline_resume_markers": 0,
+  "guard_pause_temperature_histogram": {
+    "72": 21968,
+    "73": 9203,
+    "74": 1176,
+    "75": 94,
+    "76": 35,
+    "77": 3
+  },
+  "max_recorded_pause_temperature_c": 77,
+  "pauses_above75_c": 38,
+  "pauses_above76_c": 3,
+  "thermal_scope": "All complete pause markers in the closed log, including inline markers; samples are not a continuous-temperature maximum guarantee.",
+  "physical_gpus": [
+    0,
+    1
+  ],
+  "pretrained_loaded": false,
+  "auto_resume": false,
+  "modules_enabled": [],
+  "processes": [
+    {
+      "pid": 528490,
+      "exists": false
+    },
+    {
+      "pid": 528530,
+      "exists": false
+    },
+    {
+      "pid": 528656,
+      "exists": false
+    },
+    {
+      "pid": 528657,
+      "exists": false
+    }
+  ],
+  "weights": [
+    {
+      "name": "CADTrack_latest.pth.tar",
+      "bytes": 1236785336
+    }
+  ],
+  "active_atomic_write_files": [],
+  "audited_checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+  "cpu_audit_status": "PASS",
+  "archived_saved_state_audit_sha256": "eb0286d24791c8ae8a0c4c4adbcc3932a53e3f5e608c2e318af1998d47259fa6",
+  "archive": "reports/cad_rgbx_final_evidence_20261016.zip",
+  "archive_bytes": 8428520,
+  "archive_sha256": "37f6f5c14e743f2b99cc119fd41d4321697768a266ea8f4dc021457178fb303e",
+  "archived_member_sha256": {
+    "run.json": "1fb265be3d3354a961875385c5923b621bad2a953932f1f7725f30d8b236f5d5",
+    "execution.json": "e61d69c5242d34d98fb5784a5fb260206682ddfd578f9854cc168fdea5577f75",
+    "saved_state_audit.json": "eb0286d24791c8ae8a0c4c4adbcc3932a53e3f5e608c2e318af1998d47259fa6",
+    "first_update_gradient_manifest.json": "246d44f5afa7611812b603b21d06980193666d5043b1aafba97d313a9850b212",
+    "protocol.json": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+    "train.log": "6da1e9f61aacff12a721fea447174438d01ee6fddcbb2dccf790e5c4ab94fe3d"
+  },
+  "archived_train_log_bytes": 853400514,
+  "archived_train_log_sha256": "6da1e9f61aacff12a721fea447174438d01ee6fddcbb2dccf790e5c4ab94fe3d",
+  "active_optimizer_states": 209,
+  "trainable_parameter_tensors": 211,
+  "cuda_rng_restoration": "NOT_EXECUTED_CPU_INSPECTION_ONLY",
+  "model_forward_calls": 0,
+  "training_updates_added_by_audit": 0,
+  "weights_deleted": 0,
+  "hardware_settings_changed": false,
+  "formal_tracking_scores": "NOT_RUN",
+  "overall_research_acceptance_achieved": false
+}
