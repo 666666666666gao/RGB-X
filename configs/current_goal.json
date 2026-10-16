@@ -1,47 +1,23 @@
 {
-  "updated_at": "2026-10-16T08:20:14.283303+00:00",
-  "objective": "在2028用删减版CADTrack从全参数随机初始化联合训练RGB-T/RGB-D/RGB-Event；一份权重、仅GPU0/1，GPU0功率上限250W、目标温度75℃（允许偶发76℃）。先完成同随机初始化的普通联合AdamW B0，再比较主动共同方向及逐项前瞻/稳定性模块；完整报告现有三集七项主指标和所有退化，争取全面超过公平baseline。",
-  "status": "BASELINE_RECOVERY_FIRST_CAGRAD_NOT_STARTED_INITIALIZATION_CHOICE_PENDING",
+  "updated_at": "2026-10-16T09:16:59.799213+00:00",
+  "objective": "先提高删减版 CADTrack 普通联合 baseline：允许视觉骨干 SOT 预训练，禁止 XTrack RGB-X 联合权重；一份权重联合训练 T/D/E。只用2028 GPU0/1，训练损失平台期及时早停，完成现有三集完整评测后再决定 CAGrad。",
+  "status": "SOT_BACKBONE_BASELINE_WAITING_GPU01_NATIVE_PREFLIGHT_NOT_RUN",
   "server": "2028",
   "gpu_indices": [
     0,
     1
   ],
   "model": "CADTrackPruned",
-  "initialization": "random_all_parameters",
-  "pretrained_loaded": false,
+  "initialization": "sot_backbone_only",
   "auto_resume": false,
   "user_checkpoint_role": "Protected architecture metadata only: /home/gaob/CADTrack_ep0014.pth.tar",
-  "protocol": "configs/cad_rgbx_b0_s2026.json",
+  "protocol": "configs/cad_rgbx_sot_b0_s2026.json",
   "proposed_modules": [
     "Cross-task lookahead positive transfer",
     "Negotiated shared descent direction",
     "Jointly stable tracking localization neighborhood"
   ],
-  "first_experiment": "B0 ordinary equal-task joint AdamW, no proposed modules",
-  "gpu0": {
-    "power_limit_w": 250,
-    "target_temperature_c": 75,
-    "actual_last_power_limit_w": 250.0,
-    "actual_last_target_temperature_c": 75,
-    "settings_applied": true,
-    "observed_pause_temperature_max_c": 77,
-    "observed_pause_samples_above_75c": 38,
-    "target70_applied": false,
-    "target70_status": "CANCELLED_BY_USER_NO_HARDWARE_CHANGE",
-    "thermal_log_evidence": "reports/cad_rgbx_final_intake_20261016.json",
-    "target70_command_evidence": "reports/cad_rgbx_gpu0_target70_command_20261013.json",
-    "occasional_76c_accepted_by_user": true,
-    "target70_requested": false,
-    "current_thermal_policy": "Keep power limit250W and target75C; user accepts occasional76C. Existing pause72/resume68 remains active.",
-    "initial_requested_maximum_temperature_c": 75,
-    "normal_temperature_goal_c": 75,
-    "actual_last_temperature_c": 41,
-    "observed_pause_samples_above_76c": 3,
-    "thermal_preference_deviation_evidence": "reports/cad_rgbx_final_thermal77_context_20261016.json",
-    "thermal_preference_fully_met": false,
-    "thermal_preference_note": "Full closed log contains3 pause samples77C, above user-accepted occasional76C. Do not claim an all-time<=76C maximum; no post-training settings changed."
-  },
+  "first_experiment": "SOT backbone initialized ordinary joint AdamW baseline; no proposed modules/CAGrad",
   "active_train_datasets": [
     "LasHeR_train",
     "DepthTrack_train",
@@ -70,8 +46,8 @@
       "VisEvent_PR"
     ],
     "report_all_regressions": true,
-    "matched_initialization": "Identical seed2026 random full-model state; no pretrained checkpoint",
-    "matched_training_budget": true,
+    "matched_initialization": "Future optimizer comparisons must use the identical audited SOT-backbone/random-fusion-head initial state.",
+    "matched_training_budget": "Record actual epochs and exposure; early-stopped runs are not automatically equal-budget.",
     "comparison_methods": [
       "joint AdamW",
       "CAGrad",
@@ -81,114 +57,83 @@
     "all_required_headlines_must_improve_over_fair_baseline": true,
     "test_sequences_never_enter_training": true
   },
-  "training_started": true,
-  "formal_tracking_scores": "NOT_RUN",
-  "progress_poll_seconds": 240,
-  "checkpoint_policy": "One necessary rolling recovery checkpoint; only complete benchmark scores identify best. Never delete user-supplied weights.",
-  "superseded_goal_record": {
-    "source_commit": "6ae66e6b58d662be3bc982cde81f5252773fb6b4",
-    "path": "configs/current_goal.json",
-    "status": "Old XTrack D15 saved and stopped by the user; current CAD instructions supersede its execution queue."
-  },
-  "hardware_admission": "Actual readback250W/75C on GPU0 before sanity and formal start",
-  "formal_launch_evidence": "reports/cad_rgbx_formal_launch_20261013.json",
-  "documented_sanity": "reports/cad_rgbx_documented_sanity_review.json",
-  "current_training_updates": 250000,
-  "next_progress_observation_not_before": null,
-  "current_completed_epochs": 100,
-  "current_training_examples": 6000000,
-  "current_progress_evidence": "reports/cad_rgbx_due_observation_20261015T1825Z.json",
-  "first_formal_checkpoint_cpu_audit": "reports/cad_rgbx_first_formal_checkpoint_audit_20261013.json",
-  "current_epoch": 100,
-  "next_epoch_end_estimate": null,
-  "diagnostic_epoch_milestones": [
-    5,
-    10,
-    25,
-    50,
-    75,
-    100
-  ],
-  "warmup_completed": true,
-  "next_diagnostic_epoch": null,
-  "next_diagnostic_epoch_end_estimate": null,
-  "current_thermal_and_retention_evidence": "reports/cad_rgbx_final_intake_20261016.json",
-  "current_recovery_weight_files": 1,
-  "current_recovery_slot_bytes": 1236785336,
-  "current_recovery_slot_audit_scope": "Final100-round file strictly loaded on CPU, optimizer/RNG/replica states inspected, hash and one-file retention verified. CUDA restoration and benchmarks not executed.",
-  "formal_training_end_estimate": null,
-  "formal_training_end_estimate_scope": "Extrapolation from observed rate, not a verified completion time; cooling and throughput can change.",
-  "polling_policy_evidence": "reports/cad_rgbx_polling_policy_20261015.json",
-  "progress_observation_schedule": "Forecast diagnostic milestones only, no early server queries or repeated output-collection loops. The240s interval applies only to local timer clock checks.",
-  "current_recovery_slot_verified_at": "2026-10-15T18:39:08.464517+00:00",
-  "endpoint_observation_schedule_reason": "Recent1000-update rate is slower than whole-run mean; read once3min after the recent-rate finish estimate to avoid repeated checks of the final350 updates.",
+  "training_started": false,
   "training_running": false,
-  "training_completed": true,
-  "training_actual_exit_code": 0,
-  "formal_training_started_at": "2026-10-13T05:28:56.331282+00:00",
-  "formal_training_ended_at": "2026-10-15T18:21:21.976152+00:00",
-  "final_checkpoint_cpu_audit": "reports/cad_rgbx_final_checkpoint_audit_20261016.json",
-  "final_intake_evidence": "reports/cad_rgbx_final_intake_20261016.json",
-  "final_log_archive": "reports/cad_rgbx_final_evidence_20261016.zip",
-  "final_checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
-  "final_checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
-  "final_checkpoint_is_benchmark_best": false,
+  "training_completed": false,
+  "new_training_started": false,
+  "formal_tracking_scores": "NEW_SOT_BASELINE_NOT_TRAINED_OR_EVALUATED",
   "overall_research_acceptance_achieved": false,
-  "monitoring_end_state": "Training ended with exit0 and final state verified; three77C guard samples disclosed as thermal-preference deviations.",
+  "current_training_updates": 0,
+  "current_completed_epochs": 0,
+  "current_training_examples": 0,
+  "current_epoch": 0,
   "evaluation": {
-    "run_id": "cad_pruned_rgbx_b0_s2026_eval_20261016",
-    "controller_pid": 1938801,
-    "supervisor_pid": 1938799,
-    "started_at": "2026-10-16T01:20:41.158597+00:00",
+    "status": "NOT_STARTED",
     "physical_gpus": [
       0,
       1
     ],
-    "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
-    "output_root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016",
-    "completed_datasets": [
-      "LasHeR",
-      "VisEvent",
-      "DepthTrack"
-    ],
-    "benchmark_scores": "ALL_THREE_FULLY_SCORED",
-    "overall_acceptance_achieved": false,
-    "next_observation_not_before_utc": null,
-    "status": "COMPLETE",
-    "actual_exit_code": 0,
-    "ended_at": "2026-10-16T06:33:41.212048+00:00",
-    "full_sequences": 615,
-    "full_frames": 454497,
-    "headline_metrics": {
-      "LasHeR": {
-        "SR_AUC": 0.39708008583455734,
-        "PR_at_20": 0.4900342340167744,
-        "NPR_AUC": 0.42264464642714206,
-        "NP_at_020": 0.4632211148431963
-      },
-      "VisEvent": {
-        "SR_AUC": 0.4737139058817806,
-        "PR_at_20": 0.6463864337727094,
-        "NPR_AUC": 0.5263594313575245,
-        "NP_at_020": 0.5781918149803478
-      },
-      "DepthTrack": {
-        "Precision": 0.45820056928990494,
-        "Recall": 0.4319061599038915,
-        "F_score": 0.44466498647195946
-      }
-    },
-    "main_metrics_above_XTrack_reference": 0,
-    "fair_same_architecture_method_gain": "NOT_TESTED"
+    "baseline": "cad_pruned_rgbx_sot_b0_s2026"
   },
-  "evaluation_complete": true,
+  "evaluation_complete": false,
   "evaluation_running": false,
   "next_observation_not_before_utc": null,
-  "next_training_priority": "Improve the ordinary joint CADTrack baseline before B1 CAGrad",
-  "new_training_started": false,
+  "next_training_priority": "Run documented two-GPU native preflight when GPU0/1 are free, then ordinary SOT baseline.",
+  "completed_scratch_B0": {
+    "protocol": "configs/cad_rgbx_b0_s2026.json",
+    "initialization": "random_all_parameters",
+    "evaluation": {
+      "run_id": "cad_pruned_rgbx_b0_s2026_eval_20261016",
+      "controller_pid": 1938801,
+      "supervisor_pid": 1938799,
+      "started_at": "2026-10-16T01:20:41.158597+00:00",
+      "physical_gpus": [
+        0,
+        1
+      ],
+      "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+      "output_root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016",
+      "completed_datasets": [
+        "LasHeR",
+        "VisEvent",
+        "DepthTrack"
+      ],
+      "benchmark_scores": "ALL_THREE_FULLY_SCORED",
+      "overall_acceptance_achieved": false,
+      "next_observation_not_before_utc": null,
+      "status": "COMPLETE",
+      "actual_exit_code": 0,
+      "ended_at": "2026-10-16T06:33:41.212048+00:00",
+      "full_sequences": 615,
+      "full_frames": 454497,
+      "headline_metrics": {
+        "LasHeR": {
+          "SR_AUC": 0.39708008583455734,
+          "PR_at_20": 0.4900342340167744,
+          "NPR_AUC": 0.42264464642714206,
+          "NP_at_020": 0.4632211148431963
+        },
+        "VisEvent": {
+          "SR_AUC": 0.4737139058817806,
+          "PR_at_20": 0.6463864337727094,
+          "NPR_AUC": 0.5263594313575245,
+          "NP_at_020": 0.5781918149803478
+        },
+        "DepthTrack": {
+          "Precision": 0.45820056928990494,
+          "Recall": 0.4319061599038915,
+          "F_score": 0.44466498647195946
+        }
+      },
+      "main_metrics_above_XTrack_reference": 0,
+      "fair_same_architecture_method_gain": "NOT_TESTED"
+    },
+    "final_checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+    "final_checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20"
+  },
   "baseline_recovery": {
-    "status": "DIAGNOSIS_ONLY_NO_NEW_TRAINING",
-    "initialization_choice": "AWAIT_USER: retain scratch or allow backbone/SOT pretrained while excluding XTrack joint checkpoint",
+    "status": "PREPARATION_COMPLETE_WAITING_GPU01_NATIVE_PREFLIGHT_NOT_RUN",
+    "initialization_choice": "USER_APPROVED_VISUAL_BACKBONE_SOT_PRETRAINING_NO_XTRACK_JOINT",
     "current_B0_scores_preserved": true,
     "CAGrad_started": false,
     "physical_gpus": [
@@ -213,15 +158,30 @@
     "relative_last10_loss_improvement_percent": 1.5001159587851087,
     "early_stopping_required": true,
     "early_stopping_candidate": {
-      "monitor": "training mean response+2GIoU+5L1 overT/D/E",
       "rolling_epochs": 3,
       "relative_min_improvement": 0.005,
       "patience_epochs": 5,
       "minimum_epochs": 10,
-      "status": "PROPOSED_NOT_IMPLEMENTED"
+      "status": "IMPLEMENTED_CPU_RULE_CHECK_PASS_NOT_NATIVE_TRAINING"
     },
     "test_metrics_not_used_for_early_stopping": true,
-    "resource_admission": "GPU0/1 currently busy; no use of other GPUs, no interference with other tasks",
+    "resource_admission": {
+      "observed_at": "2026-10-16T09:15:22.989065+00:00",
+      "cards": [
+        {
+          "index": 0,
+          "memory_used_mib": 18038,
+          "memory_total_mib": 24576
+        },
+        {
+          "index": 1,
+          "memory_used_mib": 17994,
+          "memory_total_mib": 24576
+        }
+      ],
+      "evidence": "reports/cad_rgbx_sot_preflight_admission_20261016.json",
+      "action": "NO_ALLOCATION_NO_OTHER_GPU_NO_INTERFERENCE"
+    },
     "reference_targets_fraction": {
       "LasHeR": {
         "SR_AUC": 0.5554599303245381,
@@ -239,6 +199,37 @@
     },
     "existing_OSTrack_symlink_usable": false,
     "OSTrack_metadata_read_actual_exit_code": 1,
-    "init_policy_not_changed": true
-  }
+    "init_policy_not_changed": false,
+    "initializer": "/home/gaob/rgbx-initializers/OSTrack_ep0300.pth.tar",
+    "initializer_sha256": "8e01d6251569ac84dbb53fdd062cd938551be2d889582f789aa3070196f42f41",
+    "source_loaded_scope": "152 backbone tensors; fusion and head random",
+    "recipe_protocol": "configs/cad_rgbx_sot_b0_s2026.json",
+    "new_training_started": false
+  },
+  "checkpoint_policy": "One necessary rolling recovery checkpoint; only complete benchmark scores identify best. Never delete user-supplied weights.",
+  "pretrained_authorized": true,
+  "pretrained_loaded_in_training": false,
+  "initialization_cpu_verified": true,
+  "CAGrad_started": false,
+  "historical_goal_snapshot": "reports/cad_rgbx_completed_scratch_goal_snapshot_20261016.json",
+  "gpu0": {
+    "power_limit_w": 250,
+    "target_temperature_c": 75,
+    "occasional_76c_accepted_by_user": true,
+    "target70_applied": false,
+    "pause_temperature_c": 72,
+    "resume_temperature_c": 68
+  },
+  "polling_policy": "No scheduled status loop. Inspect at estimated useful milestones; no frequent resource polling.",
+  "native_gpu_preflight": "NOT_RUN_GPU01_BUSY",
+  "early_stopping": {
+    "rolling_epochs": 3,
+    "relative_min_improvement": 0.005,
+    "patience_epochs": 5,
+    "minimum_epochs": 10,
+    "monitor": "training_TDE_mean_response_plus_weighted_box",
+    "test_metrics_used": false,
+    "cpu_rule_check_pass": true
+  },
+  "background_training_or_polling_queue_active": false
 }

@@ -1,0 +1,6 @@
+{
+  "role": "CPU_EARLY_STOP_RULE_CHECK_NOT_GPU_READY",
+  "actual_exit_code": 0,
+  "stdout": "EARLY_STOP_CHECK_PASS constant_stop10 improving_continue plateau_stop13 no_test_metrics\n",
+  "stderr": ""
+}

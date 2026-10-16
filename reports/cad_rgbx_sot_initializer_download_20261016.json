@@ -1,0 +1,11 @@
+{
+  "status": "LOCAL_DOWNLOAD_SCP_REMOTE_BYTES_AND_AUTHOR_LFS_HASH_VERIFIED",
+  "observed_at": "2026-10-16T09:10:12.648756+00:00",
+  "path": "/home/gaob/rgbx-initializers/OSTrack_ep0300.pth.tar",
+  "bytes": 370179249,
+  "sha256": "8e01d6251569ac84dbb53fdd062cd938551be2d889582f789aa3070196f42f41",
+  "source_url": "https://huggingface.co/taryya/XTrack/resolve/6adfeff/OSTrack_ep0300.pth.tar?download=true",
+  "source_role": "OSTrack RGB SOT initializer; no XTrack joint model",
+  "new_training_started": false,
+  "elapsed_seconds": 382.4957793000067
+}

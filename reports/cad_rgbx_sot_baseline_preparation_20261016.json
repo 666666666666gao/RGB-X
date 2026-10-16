@@ -1,0 +1,13 @@
+{
+  "status": "SOT_BACKBONE_PREPARATION_NOT_NATIVE_READY",
+  "updated_at": "2026-10-16T09:13:58.862165+00:00",
+  "environment_spec_sha256": "8a9f101a8d50053432847b53828a4e0164ac027093b8d451bde63adce0916dc7",
+  "protocol_sha256": "ad1f1fb131d47300abbffaf1caf2ff6c0f4ba24028ec5dbb3b8b4f0a8e283ec5",
+  "cpu_initialization_audit": "reports/cad_rgbx_sot_initializer_cpu_audit_20261016.json",
+  "early_stopping_check": "reports/cad_rgbx_sot_early_stop_check_20261016.json",
+  "native_gpu_sanity_executed": false,
+  "formal_training_started": false,
+  "source_scope": "backbone_only",
+  "XTrack_joint_checkpoint_loaded": false,
+  "CAGrad_started": false
+}

@@ -1,0 +1,5 @@
+{
+  "actual_exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"scripts/inspect_cad_sot_initializer.py\", line 38, in <module>\n    main()\n  File \"scripts/inspect_cad_sot_initializer.py\", line 23, in main\n    source, manifest = inspect_initializer(model, protocol['pretrained_file'])\n  File \"/data/gb/rgbx-risk/cad_rgbx/sot_baseline.py\", line 31, in inspect_initializer\n    source_epoch=checkpoint['epoch'], loaded_keys=matched,\nKeyError: 'epoch'\n"
+}
