@@ -1,0 +1,28 @@
+## 2026-10-16：启动删减版 CADTrack B0 的完整三集评测（当前仅准备入口）
+
+用户已明确授权“进行评测”。训练已100轮完成并退出0；本次只评测，不恢复训练、不加载作者预训练。对象是随机初始化联合训练得到的一份 CADTrackPruned B0 权重，SHA256 `4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20`。三个拟议新模块尚未训练，不能把本次 B0 写成完整新方法。
+
+完整范围：LasHeR245段/220703帧、VisEvent320段/157421帧、DepthTrack50段/76373帧，共615段/454497帧。前两集报告SR/AUC、PR@20、NPR-AUC、NP@0.20、曲线/逐序列/属性；DepthTrack使用固定VOT0.7.1官方PR/F-score阈值协议及完整曲线和属性。七项主指标在真实完整评分前均为NOT_RUN。保留VisEvent作者档案版本差异说明；测试视频不进入训练。
+
+入口适配明确使用本次训练的template128/search256、factor2/4、单模板、原Hann窗/CENTER解码/预测框反馈裁剪与margin10；不使用CAD默认search320。来源为用户提供的删减版CAD推理源码。该源码单模板原先返回confidence=None；适配仅导出实际Hann响应峰值供DepthTrack官方阈值评分，未更改选框。RGB-D保留已冻结XTrack数据入口的rgbcolormap/clip=True，RGB-T/Event保留六通道配对读取。共享已有官方评分与覆盖审计，不将XTrack模型加载器冒充CAD。
+
+仅2028物理GPU0/1，各卡一个worker。GPU0读回250W、目标75℃，保持原pause72/resume68采样冷却；用户接受偶尔76℃，温度采样不构成连续上界保证。其他GPU不分配、不改设置。沿用`/home/gaob/conda/envs/rgbx-eval`，无安装/重建；环境规范记录在`configs/cad_eval_environment_spec.json`，实际版本在预检中逐项核对。计算环境账本沿用本交接文档，避免新增人工维护文档。
+
+run-experiment要求的fresh agent-follows-doc预检命令（必须原样执行；失败报告实际阻点，不能自行修补或重跑）：
+
+```bash
+cd /data/gb/rgbx-risk
+CUDA_VISIBLE_DEVICES='' PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/scripts OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/gaob/conda/envs/rgbx-eval/bin/python scripts/evaluate_cad_existing_three.py --stage sanity --output-root /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r3_20261016
+```
+
+预检仅在每张授权GPU上分别读取T/E各3帧以及真实官方DepthTrack TraX3帧，严格加载最终checkpoint，验证有限框、真实confidence、原图回映射和闭环调用；不训练、不生成benchmark成绩。输出`run.json`应为`SANITY_PASS_NOT_BENCHMARK`，六次原生子调用均实际退出0。只有预检真实成功、fresh same-family/provisional审阅通过且源码哈希未变化后，才启动formal。
+
+formal计划命令：同一入口`--stage formal --output-root /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016 --sanity-report /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r3_20261016/run.json --review-report /data/gb/rgbx-risk/reports/cad_rgbx_evaluation_documented_review_r3_20261016.json`。当前尚未启动，不能写成RUNNING/PASS。
+
+时间仅作估算：旧XTrack流程每卡约4–4.5帧/秒，双卡454497帧约14–16小时，准备/评分合计暂按16–24小时；CAD实测速度尚缺，启动后只做一次必要诊断重新估时，再在预计结束前检查。正式控制器阻塞等待原worker退出，无重复SSH进度轮询。仅保留现有唯一最终权重；未评分前不能称为最佳。XTrack公开权重成绩只作不同架构参考，不能当成CAD同结构公平方法增益。
+
+
+预检首次失败记录：2026-10-16T01:08:11Z，真实退出1，0.632秒；尚未创建sanity run.json或发起子NN调用。原因是`importlib.metadata`报告torch=1.13.1、torchvision=0.14.1，规范误写为带+cu117的runtime版本；其余四项相符。已将分发元数据规范改为真实版本，未安装或重建环境。原FAIL与输出单独归档；第二次预检使用上方新的sanity_r2目录与fresh审阅，不能将第一次标为PASS。真实GPU前向仍是CUDA可用性的必要证据，修正文档版本号不等于已通过。
+
+
+第二次预检真实退出1，36.751秒：GPU0 LasHeR/VisEvent各3帧真实跟踪通过，DepthTrack真实TraX已完成初始化和首个update；检查脚本对原生TraX返回的confidence字符串直接调用math.isfinite而报TypeError，GPU1未执行。修复仅将TraX序列化数值字段confidence/显存转float后检查，并保留原字符串供复核；不加fallback、不改模型/输入/选框/评分协议。原R2失败目录和17个原始子产物保留。第三次预检使用新的sanity_r3目录和fresh审阅；不可将前两次失败或局部通过写成六路完整PASS。

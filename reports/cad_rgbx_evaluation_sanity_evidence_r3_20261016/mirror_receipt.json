@@ -1,0 +1,169 @@
+{
+  "status": "EXACT_LOCAL_SERVER_REPORT_AND_EVIDENCE_MIRROR",
+  "report": "/data/gb/rgbx-risk/reports/cad_rgbx_evaluation_documented_review_r3_20261016.json",
+  "report_sha256": "9da757bd48f059c1ae66d05b903d753bfaa10ff8349eeeebcd06e632134ad7ae",
+  "files": {
+    "reports/cad_rgbx_evaluation_documented_review_r3_20261016.json": {
+      "sha256": "9da757bd48f059c1ae66d05b903d753bfaa10ff8349eeeebcd06e632134ad7ae",
+      "bytes": 35521
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/collection.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/documented_invocation.txt": {
+      "sha256": "d95d69d2a9818ee3efb2ad297d5eafd955e4e84ffb5577a1491d4d91ac117dbc",
+      "bytes": 353
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/execution.json": {
+      "sha256": "b6a1694fb3c1ca7bd649f90a06a28f46d43bb103d23c99e872df40312dde048f",
+      "bytes": 1948
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/handoff_current_section.txt": {
+      "sha256": "26355fd5cadd89511f06f1e1162ff6cfcb4ce0b90c4ab415ac5a7de5aac75fc0",
+      "bytes": 4895
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/invocation.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/invocation.stdout.log": {
+      "sha256": "ed5ce3a612c0acac76ba88f6c7832728960e2cf94f3be051d4659b806b7a9491",
+      "bytes": 6746
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/postflight.json": {
+      "sha256": "95b8b4e2719b891fc75badb0de11cda9c42b736aa21d34af87aaf2d0b5168dfb",
+      "bytes": 6490
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/DepthTrack/config.yaml": {
+      "sha256": "667c2f374e444f4cac77554573c51bca10e2b23f7bf4b8cec26ffd9645e548b6",
+      "bytes": 95
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/DepthTrack/identity.json": {
+      "sha256": "1be2e7b3d8178b5e85fe97c2ff607bc47f9630fa9e576bdda1cb961d1e8dc782",
+      "bytes": 1234
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/DepthTrack/native_gpu0.json": {
+      "sha256": "9fa392c0decf00816aeb89594d19f9dc622986efbdcccebbda001711a09a1613",
+      "bytes": 825
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/DepthTrack/native_gpu1.json": {
+      "sha256": "f64bd2f6d392fdb2ec2712c4ca6ff0697f9bbeb269d093edf6e8360b28ef3cf9",
+      "bytes": 820
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/DepthTrack/stack.yaml": {
+      "sha256": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+      "bytes": 284
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/DepthTrack/trackers.ini": {
+      "sha256": "d1f661bdb09626a3ce1b5f19ba29c474457919fa6078d4ce9e75bf8c7af9fe2f",
+      "bytes": 638
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/LasHeR/gpu0/10runone.json": {
+      "sha256": "5137b128b74fed91db56f1d35229cb384ede99cefe0f6d520e1440eaa68abed3",
+      "bytes": 1182
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/LasHeR/gpu0/10runone.txt": {
+      "sha256": "7a736ea2cc1bdad5ae3c6c5a8be4dbc0703c1408343ab587c7a661e8d33bd4a3",
+      "bytes": 222
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/LasHeR/gpu0/10runone_confidence.txt": {
+      "sha256": "54603a150406ebe598c13b84041f110b155779013c6f722cd3e15566b97691fc",
+      "bytes": 51
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/LasHeR/gpu0/10runone_time.txt": {
+      "sha256": "258a1011aa94dd69a1cfbf6c46bb0194218849595dad6d02fb21556c88b16169",
+      "bytes": 51
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/LasHeR/gpu1/11leftboy.json": {
+      "sha256": "1f864472bfcef2d5d33bfdcbfdd86ea9d32e204efdc8954b0cd0313761aa929e",
+      "bytes": 1182
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/LasHeR/gpu1/11leftboy.txt": {
+      "sha256": "e7ea141bf55e8437cf300df109e169a2704a985469c4af80fc3bdb5a4ec217f5",
+      "bytes": 225
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/LasHeR/gpu1/11leftboy_confidence.txt": {
+      "sha256": "aabd8a598c5fb74d18b95d4d01b54a12f11cb28a4115b7f367bbd4828a6243a5",
+      "bytes": 51
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/LasHeR/gpu1/11leftboy_time.txt": {
+      "sha256": "6f5a0302c72f5126c459f0414f812db9274a90147ca8fb3792993e9d247561dc",
+      "bytes": 51
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/logs/DepthTrack-native-gpu0.log": {
+      "sha256": "4a396e6396f33b5d983adb692c4d469dbf13a7d26a02d37db5a94bec64fa0282",
+      "bytes": 633
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/logs/DepthTrack-native-gpu1.log": {
+      "sha256": "074a12cdbb595e0a1f15a38ee9632903633e7be790191d347aee9e49cf3074c2",
+      "bytes": 628
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/logs/DepthTrack-workspace.log": {
+      "sha256": "88dde85dd9bc63632f92d2d0240014f6f1680fad8bbdbc22b4632641d7254716",
+      "bytes": 1194
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/logs/LasHeR-native-gpu0.log": {
+      "sha256": "0da427ef4780e9e5c32ccf1b61bbcf4b85e2168dfb2f1b1a3feec9605bebdd61",
+      "bytes": 1132
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/logs/LasHeR-native-gpu1.log": {
+      "sha256": "9a2f12e1dd43ac65dfbfc22c3682cd2d02adc62d45653b3344ff1325e3680757",
+      "bytes": 1132
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/logs/VisEvent-native-gpu0.log": {
+      "sha256": "e579dfd381038408a07b5403c6594b2f966dda792d843d1cbd3fc4d6a4165035",
+      "bytes": 1156
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/logs/VisEvent-native-gpu1.log": {
+      "sha256": "637e8f2655b8e71900e582a187a69daf8957ace16bf14ced05e88dcbd0d67394",
+      "bytes": 1164
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/run.json": {
+      "sha256": "de8ca6a15beb3804031236bd91bc77e725149b9490bae12e9a79c84cb6015300",
+      "bytes": 6695
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1.json": {
+      "sha256": "a995618ec518af483eee013c9d48a5167ac02c86a4bbdc1b985363de43fb8b27",
+      "bytes": 1206
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1.txt": {
+      "sha256": "0a33176212299e9c039f38d77a9d3d447c10540b5bfb07ff6a963a532a48e037",
+      "bytes": 214
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1_confidence.txt": {
+      "sha256": "efc8122c19abb4459914588ca7f53f1f6ba32a2df57181a6d5619645e62846dc",
+      "bytes": 51
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1_time.txt": {
+      "sha256": "c7d1c14e70e6f6e2ab1c5c96a3316f349bc1e6cfe7a2f312498c12803bf50feb",
+      "bytes": 51
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/VisEvent/gpu1/dvSave-2021_02_15_10_24_03_basketball.json": {
+      "sha256": "2408d3a8efa0ddaf49e2662e17804280699729568174551e5cb7a99f688cfc5f",
+      "bytes": 1214
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/VisEvent/gpu1/dvSave-2021_02_15_10_24_03_basketball.txt": {
+      "sha256": "46a51a2f3ce942cefd0e0b86fd54440b92697f2194fdc21ce4daa62f85f41407",
+      "bytes": 219
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/VisEvent/gpu1/dvSave-2021_02_15_10_24_03_basketball_confidence.txt": {
+      "sha256": "0090d6ea245f06d3c35baba396bb24b1fe187e5653d1e2e7b8ce30bc066212d4",
+      "bytes": 51
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/remote/VisEvent/gpu1/dvSave-2021_02_15_10_24_03_basketball_time.txt": {
+      "sha256": "3783b902e52348699049d4a75e15e43d3842407d0c59234074b737f44d02257c",
+      "bytes": 51
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/source_sha256.json": {
+      "sha256": "0b3673b218b0b18523fa856fa82ea5962e0957f7fefc08367e04a2406485d57c",
+      "bytes": 1268
+    },
+    "reports/cad_rgbx_evaluation_sanity_evidence_r3_20261016/ssh_stdin.py": {
+      "sha256": "b3011653e0d6955e9c2e40434b32275d785762069f900616d31d9d1d4eb4ca0f",
+      "bytes": 2168
+    }
+  },
+  "source_12_unchanged": true,
+  "actual_sanity_report_unchanged": true
+}

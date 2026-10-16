@@ -55,6 +55,8 @@ for row in rows:
     assert hashlib.sha256(gt.read_bytes()).hexdigest()==row['groundtruth_sha256']
     (gt_dir/(row['name']+'.txt')).symlink_to(gt)
 tracker_name = 'xtrack_joint_ep65_s2026'
+if identity.get('model') == 'CADTrackPruned':
+    tracker_name = 'cad_pruned_rgbx_b0_s2026'
 (root/(tracker_name+'_tracking_result')).symlink_to(predictions,target_is_directory=True)
 (root/'sequences.txt').write_text('\n'.join(names)+'\n')
 toolkit = Path(args.toolkit).resolve(strict=True)

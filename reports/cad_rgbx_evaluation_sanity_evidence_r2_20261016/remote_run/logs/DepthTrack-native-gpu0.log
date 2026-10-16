@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/data/gb/rgbx-risk/scripts/check_cad_vot_runtime.py", line 31, in <module>
+    assert region.width > 0 and region.height > 0 and math.isfinite(state.properties['confidence'])
+TypeError: must be real number, not str

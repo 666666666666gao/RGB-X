@@ -1,0 +1,308 @@
+{
+  "status": "FAIL",
+  "observed_at": "2026-10-16T01:16:02.882698+00:00",
+  "role": "fresh_run_experiment_agent_follows_doc_validation",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "max",
+  "actual_model": "UNATTESTED",
+  "actual_reasoning_effort": "UNATTESTED",
+  "attribution_note": "Runtime does not expose independently verifiable actual model/effort identity; no cross-family acceptance is claimed.",
+  "actual_exit_code": 1,
+  "execution": {
+    "command": "cd /data/gb/rgbx-risk\nCUDA_VISIBLE_DEVICES='' PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/scripts OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/gaob/conda/envs/rgbx-eval/bin/python scripts/evaluate_cad_existing_three.py --stage sanity --output-root /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016\n",
+    "started_at_utc": "2026-10-16T01:11:28.052543+00:00",
+    "finished_at_utc": "2026-10-16T01:12:04.803883+00:00",
+    "elapsed_seconds": 36.751341299997875,
+    "actual_exit_code": 1,
+    "documented_invocation_execution_count": 1
+  },
+  "documented_invocation_execution_count": 1,
+  "sole_handoff": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+  "handoff_scope": "Only the current top section before the first newline-horizontal-rule separator was read.",
+  "environment_ledger": "docs/RGB-X_研究与实验完整交接_2026-10-02.md current top section",
+  "environment_spec": "configs/cad_eval_environment_spec.json",
+  "environment_versions": {
+    "torch": "1.13.1",
+    "torchvision": "0.14.1",
+    "timm": "0.5.4",
+    "numpy": "1.23.5",
+    "vot-toolkit": "0.7.1",
+    "vot-trax": "4.0.2"
+  },
+  "environment_version_check": "PASS",
+  "sanity_report": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/run.json",
+  "sanity_report_sha256": "bea41bec3e5c5dce09ba949f470126890ce43d961698a2d5bf7d373db17ac16b",
+  "sanity_status": "FAILED",
+  "source_sha256": {
+    "scripts/cad_eval_parameters.py": "6e746c0638a23965fcd398e23f8e972f0d3d6f350d55d08255d652d89f051c66",
+    "cad_rgbx/tracker.py": "993ffdffe9f158066973ce976a427d4d23553f3d420b3b5a4a83ac5fdedc97ef",
+    "scripts/xtrack_eval_parameters.py": "9fc8c8ce3aad647c66802a51cfed5a92e7836eb2775df3e0153aba2e94a6e477",
+    "scripts/evaluate_xtrack_ope.py": "b0da4041915ec5c1755952cbe00f6ac3597bfdf72c913dcfc26bf57ca27df6fd",
+    "scripts/evaluate_xtrack_vot.py": "47f01f7b9b77221b2117014e12d8083e7885b5d242368af67a210e131a357a89",
+    "scripts/prepare_vot_workspace.py": "e728818a54c1209655955ff10c70d05eda140ba6af34251ecac41d35ddec0e41",
+    "scripts/run_vot_sequences.py": "fb581d00b4286868c1365af79fc541abe4923bb04527787a01084939eaab3f61",
+    "scripts/audit_and_score_vot.py": "77899e91df0fc17907f89e7b0733d5bc31acf2c68c4b17597ae296647c3770d3",
+    "scripts/score_lasher.py": "da59dce9557dc5eeafefa8501b88e9cf425389d46a443b96c1fc25fb0f4134b2",
+    "scripts/check_cad_vot_runtime.py": "35a42359863d2a8cf8000bdc178cda20ad840caace3e7188eb89140ff9353d9e",
+    "scripts/evaluate_cad_existing_three.py": "27b5a877c42d848813d4c5e5c7bdeefd0b6e12eeb8a35e103529d349eb40c6dc",
+    "configs/cad_eval_environment_spec.json": "29a45f98695991315bdba128bbb334d68e7609cd603b5830a8f4463703f94d38"
+  },
+  "source_sha256_verification": {
+    "local_before_execution": "PASS_EXACT_12_OF_12",
+    "remote_before_execution": "PASS_EXACT_12_OF_12",
+    "remote_after_execution": "PASS_EXACT_12_OF_12",
+    "local_at_report_write": "NOT_RECHECKED_AFTER_PARENT_REPORTED_R3_EDIT"
+  },
+  "source_capture_boundary": "The remote post-run collection matched all 12 R2 sealed files. After that capture, the parent reported changing check_cad_vot_runtime.py and the handoff for a distinct R3 attempt. This review evaluates only the original captured R2 invocation and evidence; it does not accept or execute R3.",
+  "checkpoint_identity": {
+    "checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+    "config": "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+    "model": "CADTrackPruned",
+    "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+    "config_sha256": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+    "terminal_audit_sha256": "eb0286d24791c8ae8a0c4c4adbcc3932a53e3f5e608c2e318af1998d47259fa6"
+  },
+  "physical_gpus_authorized": [
+    0,
+    1
+  ],
+  "physical_gpus_with_actual_native_calls": [
+    0
+  ],
+  "preflight_gpu_memory": "0, 45 MiB, 24576 MiB\n1, 1 MiB, 24576 MiB\n",
+  "expected_native_calls": 6,
+  "actual_native_calls_attempted": 3,
+  "actual_native_calls_completed_successfully": 2,
+  "real_calls": [
+    {
+      "label": "DepthTrack-workspace",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/prepare_vot_workspace.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+        "--checkpoint",
+        "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+        "--expected-sha256",
+        "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+        "--dataset-audit",
+        "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/DepthTrack",
+        "--shards",
+        "2"
+      ],
+      "CUDA_VISIBLE_DEVICES": "",
+      "actual_exit_code": 0,
+      "exit_code_evidence": "The sealed synchronous fail-fast subprocess.run wrapper proceeded to the next call, proving returncode 0.",
+      "log": "reports/cad_rgbx_evaluation_sanity_evidence_r2_20261016/remote_run/logs/DepthTrack-workspace.log"
+    },
+    {
+      "label": "LasHeR-native-gpu0",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+        "--checkpoint",
+        "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+        "--expected-sha256",
+        "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/LasHeR/gpu0",
+        "--shard",
+        "0",
+        "--shards",
+        "2",
+        "--sanity-frames",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0",
+      "actual_exit_code": 0,
+      "exit_code_evidence": "The sealed synchronous fail-fast subprocess.run wrapper proceeded to the next call, proving returncode 0.",
+      "log": "reports/cad_rgbx_evaluation_sanity_evidence_r2_20261016/remote_run/logs/LasHeR-native-gpu0.log"
+    },
+    {
+      "label": "VisEvent-native-gpu0",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+        "--checkpoint",
+        "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+        "--expected-sha256",
+        "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/VisEvent/gpu0",
+        "--shard",
+        "0",
+        "--shards",
+        "2",
+        "--sanity-frames",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0",
+      "actual_exit_code": 0,
+      "exit_code_evidence": "The sealed synchronous fail-fast subprocess.run wrapper proceeded to the next call, proving returncode 0.",
+      "log": "reports/cad_rgbx_evaluation_sanity_evidence_r2_20261016/remote_run/logs/VisEvent-native-gpu0.log"
+    },
+    {
+      "label": "DepthTrack-native-gpu0",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/check_cad_vot_runtime.py",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/DepthTrack",
+        "--gpu",
+        "0"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0",
+      "actual_exit_code": 1,
+      "exit_code_evidence": "run.json actual_exit_code and failed_command",
+      "log": "reports/cad_rgbx_evaluation_sanity_evidence_r2_20261016/remote_run/logs/DepthTrack-native-gpu0.log"
+    }
+  ],
+  "native_calls_not_run": [
+    "LasHeR-native-gpu1",
+    "VisEvent-native-gpu1",
+    "DepthTrack-native-gpu1"
+  ],
+  "ope_runtime_checks": [
+    {
+      "dataset": "LasHeR",
+      "sequence": "10runone",
+      "physical_gpu": 0,
+      "frame_count": 3,
+      "finite_positive_geometry": true,
+      "finite_confidences": true,
+      "initialization_confidence_protocol_marker": 1.0,
+      "actual_prediction_confidences": [
+        0.52460008859634,
+        0.68439775705338
+      ],
+      "predicted_boxes_xywh": [
+        [
+          703.5490684509277,
+          378.2030334472656,
+          51.37134552001953,
+          91.762939453125
+        ],
+        [
+          710.5544719696045,
+          383.1441764831543,
+          45.58777236938477,
+          91.67255401611328
+        ]
+      ],
+      "closed_loop_search": true,
+      "strict_checkpoint_load_completed": true,
+      "strict_load_evidence": "The executed sealed CADTrack constructor loads checkpoint net with strict=True before any predictions; both receipts bind the same verified endpoint.",
+      "peak_allocated_bytes": 560086016,
+      "peak_reserved_bytes": 660602880,
+      "receipt": "reports/cad_rgbx_evaluation_sanity_evidence_r2_20261016/remote_run/LasHeR/gpu0/10runone.json"
+    },
+    {
+      "dataset": "VisEvent",
+      "sequence": "dvSave-2021_02_14_16_45_13_car1",
+      "physical_gpu": 0,
+      "frame_count": 3,
+      "finite_positive_geometry": true,
+      "finite_confidences": true,
+      "initialization_confidence_protocol_marker": 1.0,
+      "actual_prediction_confidences": [
+        0.90963077545166,
+        0.89152479171753
+      ],
+      "predicted_boxes_xywh": [
+        [
+          1.78023103637696,
+          93.73506489257812,
+          96.60250091552734,
+          70.9639892578125
+        ],
+        [
+          0.91999010009766,
+          93.93321934204101,
+          102.40327453613281,
+          71.58269500732422
+        ]
+      ],
+      "closed_loop_search": true,
+      "strict_checkpoint_load_completed": true,
+      "strict_load_evidence": "The executed sealed CADTrack constructor loads checkpoint net with strict=True before any predictions; both receipts bind the same verified endpoint.",
+      "peak_allocated_bytes": 560086016,
+      "peak_reserved_bytes": 660602880,
+      "receipt": "reports/cad_rgbx_evaluation_sanity_evidence_r2_20261016/remote_run/VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1.json"
+    }
+  ],
+  "depthtrack_runtime": {
+    "physical_gpu": 0,
+    "status": "FAIL_VERIFIER_PROPERTY_TYPE_AFTER_FIRST_NATIVE_UPDATE",
+    "native_initialization_returned": true,
+    "first_native_update_returned": true,
+    "three_frame_native_report_written": false,
+    "observed_blocker": "scripts/check_cad_vot_runtime.py:31 calls math.isfinite(state.properties['confidence']); the native TraX property is str, causing TypeError: must be real number, not str.",
+    "confidence_numeric_value": null,
+    "note": "The failed checker did not serialize the returned prediction. Its later gpu_peak_allocated_bytes comparison was not reached and is not validated by this attempt."
+  },
+  "geometry_source_checks": {
+    "template_size": 128,
+    "search_size": 256,
+    "template_factor": 2.0,
+    "search_factor": 4.0,
+    "single_template": true,
+    "hann_window_and_center_decode": true,
+    "previous_predicted_box_drives_next_crop": true,
+    "mapping_to_original_image": "search_size / resize_factor then previous center and half-side offset, followed by clip_box(..., margin=10)",
+    "confidence": "The returned box-head score comes from the Hann-weighted score map; initialization marker 1.0 is excluded from actual prediction confidence checks.",
+    "evidence": [
+      "scripts/cad_eval_parameters.py",
+      "cad_rgbx/tracker.py",
+      "scripts/evaluate_xtrack_ope.py",
+      "scripts/evaluate_xtrack_vot.py"
+    ],
+    "scope": "Static checks bind the sealed evaluation source and hash-matched runtime config; actual three-frame runtime evidence is limited to GPU0 OPE."
+  },
+  "divergences": [
+    {
+      "severity": "blocking",
+      "layer": "exec_verifier",
+      "document_claim": "The invocation yields SANITY_PASS_NOT_BENCHMARK with six successful native child calls.",
+      "reality": "The invocation exited 1 at DepthTrack-native-gpu0 after two successful OPE calls; GPU1 calls were never reached.",
+      "file": "scripts/check_cad_vot_runtime.py",
+      "line": 31,
+      "exception": "TypeError: must be real number, not str",
+      "cause": "The checker passes the string-valued TraX confidence property directly to math.isfinite."
+    }
+  ],
+  "formal_admissible": false,
+  "formal_launched": false,
+  "training_launched": false,
+  "optimizer_steps": 0,
+  "benchmark_datasets_completed": 0,
+  "weight_files_created": 0,
+  "environment_install_or_rebuild": false,
+  "source_or_gpu_settings_changed_by_reviewer": false,
+  "retry_or_alternate_nn_command_executed": false,
+  "earlier_attempt_evidence_modified": false,
+  "evidence_directory": "reports/cad_rgbx_evaluation_sanity_evidence_r2_20261016/",
+  "collected_remote_artifact_count": 17,
+  "actual_stdout_bytes": 0,
+  "actual_stderr_bytes": 0,
+  "output_note": "Controller stdout/stderr are empty because child stdout/stderr were redirected to the preserved per-call logs.",
+  "server_report_path": "/data/gb/rgbx-risk/reports/cad_rgbx_evaluation_documented_review_r2_20261016.json",
+  "server_evidence_path": "/data/gb/rgbx-risk/reports/cad_rgbx_evaluation_sanity_evidence_r2_20261016"
+}

@@ -10,8 +10,6 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from lib.test.tracker.xtrack import XTrack
-from lib.train.dataset.depth_utils import get_x_frame
 from xtrack_eval_parameters import parameters
 
 parser = argparse.ArgumentParser()
@@ -24,6 +22,7 @@ parser.add_argument('--output', required=True)
 parser.add_argument('--shard', type=int, required=True)
 parser.add_argument('--shards', type=int, default=3)
 parser.add_argument('--seed', type=int, default=2026)
+parser.add_argument('--sanity-frames', type=int, default=0)
 args = parser.parse_args()
 manifest_path = Path(args.manifest).resolve(strict=True)
 manifest = json.loads(manifest_path.read_text())
@@ -37,10 +36,18 @@ torch.cuda.manual_seed_all(args.seed)
 torch.set_num_threads(1)
 assert args.seed == 2026
 params = parameters(args.config, args.checkpoint, args.expected_sha256, args.terminal_audit)
-tracker = XTrack(params)
+if params.evaluation_identity.get('model') == 'CADTrackPruned':
+    from cad_rgbx.tracker import CADTrack as Tracker
+else:
+    from lib.test.tracker.xtrack import XTrack as Tracker
+from lib.train.dataset.depth_utils import get_x_frame
+tracker = Tracker(params)
 output = Path(args.output)
 output.mkdir(parents=True, exist_ok=True)
 assigned = manifest['sequences'][args.shard::args.shards]
+if args.sanity_frames:
+    assert args.sanity_frames >= 3
+    assigned = assigned[:1]
 assert not any((output / (row['name'] + suffix)).exists()
                for row in assigned for suffix in ('.txt', '.json', '_confidence.txt', '_time.txt'))
 for row in assigned:
@@ -51,6 +58,8 @@ for row in assigned:
     frames = row['frames']
     assert len(frames) == len(gt) == row['frame_count']
     assert gt.shape[1] == 4 and np.isfinite(gt).all()
+    if args.sanity_frames:
+        frames = frames[:args.sanity_frames]
     boxes, scores, times = [], [], []
     for index, (rgb_path, auxiliary_path) in enumerate(frames):
         torch.cuda.synchronize()
@@ -86,6 +95,8 @@ for row in assigned:
                             physical_gpu=os.environ['CUDA_VISIBLE_DEVICES'], gpu=torch.cuda.get_device_name(0),
                             peak_allocated_bytes=torch.cuda.max_memory_allocated(),
                             peak_reserved_bytes=torch.cuda.max_memory_reserved(),
-                            status='COMPLETE')
+                            model=params.evaluation_identity.get('model', 'XTrack-B'),
+                            sanity_frames=args.sanity_frames,
+                            status='SANITY_ONLY_NOT_BENCHMARK' if args.sanity_frames else 'COMPLETE')
     (output / (row['name'] + '.json')).write_text(json.dumps(sequence_receipt, indent=2) + '\n')
     print(json.dumps(sequence_receipt), flush=True)

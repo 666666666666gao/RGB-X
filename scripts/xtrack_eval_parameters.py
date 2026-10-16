@@ -7,6 +7,9 @@ from pathlib import Path
 def verified_endpoint(config_path, checkpoint_path, expected_sha256, terminal_audit_path):
     audit_path = Path(terminal_audit_path).resolve(strict=True)
     audit = json.loads(audit_path.read_text())
+    if audit['role'] == 'CAD_CPU_SAVED_STATE_CHECK_NOT_BENCHMARK':
+        from cad_eval_parameters import verified_endpoint as verified_cad_endpoint
+        return verified_cad_endpoint(config_path, checkpoint_path, expected_sha256, terminal_audit_path)
     assert audit['status'] == 'PASS'
     if audit['role'] == 'formal_terminal_checkpoint_audit_not_tracking_benchmark':
         assert audit['run_id'] == 'xtrack_b_adamw_3gpu_s2026_20261002'
@@ -49,6 +52,10 @@ def verified_endpoint(config_path, checkpoint_path, expected_sha256, terminal_au
 
 
 def parameters(config_path, checkpoint_path, expected_sha256, terminal_audit_path):
+    audit = json.loads(Path(terminal_audit_path).read_text())
+    if audit['role'] == 'CAD_CPU_SAVED_STATE_CHECK_NOT_BENCHMARK':
+        from cad_eval_parameters import parameters as cad_parameters
+        return cad_parameters(config_path, checkpoint_path, expected_sha256, terminal_audit_path)
     from lib.config.xtrack.config import cfg, update_config_from_file
     from lib.test.utils import TrackerParams
 

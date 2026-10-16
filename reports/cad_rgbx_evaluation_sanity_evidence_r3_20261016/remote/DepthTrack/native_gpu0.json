@@ -1,0 +1,36 @@
+{
+  "status": "PASS_NATIVE_THREE_FRAME_RUNTIME_NOT_BENCHMARK",
+  "physical_gpu": 0,
+  "sequence": "adapter01_indoor",
+  "frames": 3,
+  "predictions": [
+    {
+      "frame": 1,
+      "box": [
+        160,
+        218,
+        214,
+        289
+      ],
+      "confidence": 0.6443294286727905,
+      "raw_trax_confidence": "0.6443294286727905",
+      "peak_allocated_bytes": 560086016.0,
+      "seconds": 1.2732887268066406
+    },
+    {
+      "frame": 2,
+      "box": [
+        158,
+        215,
+        212,
+        284
+      ],
+      "confidence": 0.6673137545585632,
+      "raw_trax_confidence": "0.6673137545585632",
+      "peak_allocated_bytes": 560086016.0,
+      "seconds": 0.06240081787109375
+    }
+  ],
+  "optimizer_steps": 0,
+  "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20"
+}

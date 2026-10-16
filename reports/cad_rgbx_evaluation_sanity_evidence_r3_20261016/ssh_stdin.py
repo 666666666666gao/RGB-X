@@ -1,0 +1,10 @@
+import hashlib, json, pathlib, pwd, os, subprocess, sys
+root = pathlib.Path('/data/gb/rgbx-risk')
+seal = json.loads('{"scripts/cad_eval_parameters.py": "6e746c0638a23965fcd398e23f8e972f0d3d6f350d55d08255d652d89f051c66", "cad_rgbx/tracker.py": "993ffdffe9f158066973ce976a427d4d23553f3d420b3b5a4a83ac5fdedc97ef", "scripts/xtrack_eval_parameters.py": "9fc8c8ce3aad647c66802a51cfed5a92e7836eb2775df3e0153aba2e94a6e477", "scripts/evaluate_xtrack_ope.py": "b0da4041915ec5c1755952cbe00f6ac3597bfdf72c913dcfc26bf57ca27df6fd", "scripts/evaluate_xtrack_vot.py": "47f01f7b9b77221b2117014e12d8083e7885b5d242368af67a210e131a357a89", "scripts/prepare_vot_workspace.py": "e728818a54c1209655955ff10c70d05eda140ba6af34251ecac41d35ddec0e41", "scripts/run_vot_sequences.py": "fb581d00b4286868c1365af79fc541abe4923bb04527787a01084939eaab3f61", "scripts/audit_and_score_vot.py": "77899e91df0fc17907f89e7b0733d5bc31acf2c68c4b17597ae296647c3770d3", "scripts/score_lasher.py": "da59dce9557dc5eeafefa8501b88e9cf425389d46a443b96c1fc25fb0f4134b2", "scripts/check_cad_vot_runtime.py": "481d803f0e2125eb7d2e6d365f43073a90700259345bd474a46a0cb1dcdf4298", "scripts/evaluate_cad_existing_three.py": "27b5a877c42d848813d4c5e5c7bdeefd0b6e12eeb8a35e103529d349eb40c6dc", "configs/cad_eval_environment_spec.json": "29a45f98695991315bdba128bbb334d68e7609cd603b5830a8f4463703f94d38"}')
+actual = {name: hashlib.sha256((root/name).read_bytes()).hexdigest() for name in seal}
+assert actual == seal, actual
+assert pwd.getpwuid(os.getuid()).pw_name == 'gaob'
+assert not pathlib.Path('/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r3_20261016').exists()
+print(json.dumps({'preflight_source_sha256': actual, 'username': 'gaob'}), flush=True)
+result = subprocess.run(['bash', '-s'], input="cd /data/gb/rgbx-risk\nCUDA_VISIBLE_DEVICES='' PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/scripts OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/gaob/conda/envs/rgbx-eval/bin/python scripts/evaluate_cad_existing_three.py --stage sanity --output-root /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r3_20261016\n", text=True)
+sys.exit(result.returncode)

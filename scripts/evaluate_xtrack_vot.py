@@ -9,8 +9,6 @@ import torch
 from trax import Server, TraxStatus
 from trax.region import Rectangle
 
-from lib.test.tracker.xtrack import XTrack
-from lib.train.dataset.depth_utils import get_rgbd_frame
 from xtrack_eval_parameters import parameters
 
 parser = argparse.ArgumentParser()
@@ -27,7 +25,12 @@ torch.cuda.manual_seed_all(args.seed)
 torch.set_num_threads(1)
 assert args.seed == 2026
 params = parameters(args.config, args.checkpoint, args.expected_sha256, args.terminal_audit)
-tracker = XTrack(params)
+if params.evaluation_identity.get('model') == 'CADTrackPruned':
+    from cad_rgbx.tracker import CADTrack as Tracker
+else:
+    from lib.test.tracker.xtrack import XTrack as Tracker
+from lib.train.dataset.depth_utils import get_rgbd_frame
+tracker = Tracker(params)
 print(json.dumps(dict(**params.evaluation_identity, seed=args.seed, strict_load=True)),
       file=sys.stderr, flush=True)
 with Server(['rectangle'], ['path'], image_channels=['color', 'depth']) as handle:

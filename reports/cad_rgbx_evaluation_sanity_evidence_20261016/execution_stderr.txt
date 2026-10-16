@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "scripts/evaluate_cad_existing_three.py", line 140, in <module>
+    main()
+  File "scripts/evaluate_cad_existing_three.py", line 36, in main
+    assert actual_versions == expected_versions, actual_versions
+AssertionError: {'torch': '1.13.1', 'torchvision': '0.14.1', 'timm': '0.5.4', 'numpy': '1.23.5', 'vot-toolkit': '0.7.1', 'vot-trax': '4.0.2'}

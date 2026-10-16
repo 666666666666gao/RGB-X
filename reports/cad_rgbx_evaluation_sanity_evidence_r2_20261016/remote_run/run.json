@@ -1,0 +1,124 @@
+{
+  "status": "FAILED",
+  "stage": "sanity",
+  "identity": {
+    "checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+    "config": "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+    "model": "CADTrackPruned",
+    "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+    "config_sha256": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+    "terminal_audit_sha256": "eb0286d24791c8ae8a0c4c4adbcc3932a53e3f5e608c2e318af1998d47259fa6"
+  },
+  "started_at": "2026-10-16T01:11:31.013201+00:00",
+  "controller_pid": 1937156,
+  "physical_gpus": [
+    0,
+    1
+  ],
+  "gpu_preflight": "0, 45\n1, 1\n",
+  "commands": [
+    {
+      "label": "DepthTrack-workspace",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/prepare_vot_workspace.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+        "--checkpoint",
+        "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+        "--expected-sha256",
+        "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+        "--dataset-audit",
+        "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/DepthTrack",
+        "--shards",
+        "2"
+      ],
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    {
+      "label": "LasHeR-native-gpu0",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+        "--checkpoint",
+        "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+        "--expected-sha256",
+        "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/LasHeR/gpu0",
+        "--shard",
+        "0",
+        "--shards",
+        "2",
+        "--sanity-frames",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0"
+    },
+    {
+      "label": "VisEvent-native-gpu0",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+        "--config",
+        "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+        "--checkpoint",
+        "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+        "--expected-sha256",
+        "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+        "--terminal-audit",
+        "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+        "--manifest",
+        "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+        "--output",
+        "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/VisEvent/gpu0",
+        "--shard",
+        "0",
+        "--shards",
+        "2",
+        "--sanity-frames",
+        "3"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0"
+    },
+    {
+      "label": "DepthTrack-native-gpu0",
+      "argv": [
+        "/home/gaob/conda/envs/rgbx-eval/bin/python",
+        "/data/gb/rgbx-risk/scripts/check_cad_vot_runtime.py",
+        "--workspace",
+        "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016/DepthTrack",
+        "--gpu",
+        "0"
+      ],
+      "CUDA_VISIBLE_DEVICES": "0"
+    }
+  ],
+  "workers": [],
+  "completed_datasets": [],
+  "output_root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016",
+  "sanity_report": null,
+  "review_report": null,
+  "environment_versions": {
+    "torch": "1.13.1",
+    "torchvision": "0.14.1",
+    "timm": "0.5.4",
+    "numpy": "1.23.5",
+    "vot-toolkit": "0.7.1",
+    "vot-trax": "4.0.2"
+  },
+  "observed_at": "2026-10-16T01:12:05.381821+00:00",
+  "wallclock_seconds": 34.36859979201108,
+  "failed_command": "DepthTrack-native-gpu0",
+  "actual_exit_code": 1
+}

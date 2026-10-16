@@ -43,3 +43,5 @@ third_party/CADTrackPruned/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at
 reports/cad_rgbx* -text whitespace=cr-at-eol
 reports/cad_rgbx_sanity_evidence_20261013/** -text whitespace=cr-at-eol
 reports/cad_rgbx_formal_start_evidence_20261013/** -text whitespace=cr-at-eol
+reports/cad_rgbx_evaluation_sanity_evidence*/** -text whitespace=cr-at-eol
+configs/cad_eval_environment_spec.json -text whitespace=cr-at-eol

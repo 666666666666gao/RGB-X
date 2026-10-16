@@ -1,0 +1,18 @@
+{
+  "status": "FAILED_STATIC_GIT_ADD_ONLY_NO_NN_EFFECT",
+  "actual_exit_code": 1,
+  "reason": "Explicit evidence logs were ignored by Git; original command stopped before commit/push. Preserve evidence with exact path -f; pin sealed env spec raw bytes; current_goal normalized LF.",
+  "preparation_and_formal_evaluation_not_repeated": true,
+  "recovery_boundaries": [
+    {
+      "actual_exit_code": 1,
+      "phase": "SSH metadata transfer",
+      "reason": "Connection timed out during banner exchange; next actual retry after180sec"
+    },
+    {
+      "actual_exit_code": 1,
+      "phase": "Git raw-byte check",
+      "reason": "Already staged env spec normalized before -text pin; renormalize only explicit own artifact paths before comparing again"
+    }
+  ]
+}

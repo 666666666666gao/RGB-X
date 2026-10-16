@@ -29,13 +29,14 @@ for filename, key in [('stack.yaml','workspace_stack_sha256'), ('trackers.ini','
 data_path = Path(identity['dataset_audit'])
 assert hashlib.sha256(data_path.read_bytes()).hexdigest() == identity['dataset_audit_sha256']
 data = json.loads(data_path.read_text())
-assert {p.name for p in root.glob('shard_*.json')} == {'shard_0.json','shard_1.json','shard_2.json'}
-for shard in range(3):
+shards = identity.get('shards', 3)
+assert {p.name for p in root.glob('shard_*.json')} == {'shard_{}.json'.format(i) for i in range(shards)}
+for shard in range(shards):
     receipt = json.loads((root/('shard_{}.json'.format(shard))).read_text())
     assert receipt['status'] == 'TRAJECTORIES_WRITTEN_NOT_SCORED'
     assert receipt['seed'] == 2026 and receipt['shard'] == shard
     assert receipt['identity_sha256'] == hashlib.sha256(identity_path.read_bytes()).hexdigest()
-    assert receipt['completed_sequences'] == [row['name'] for row in data['sequences'][shard::3]]
+    assert receipt['completed_sequences'] == [row['name'] for row in data['sequences'][shard::shards]]
 workspace = Workspace.load(str(root))
 tracker, = workspace.registry.resolve(identity['tracker_id'], storage=workspace.storage.substorage('results'), skip_unknown=False)
 experiment = workspace.stack[identity['experiment_id']]

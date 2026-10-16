@@ -1,0 +1,90 @@
+{
+  "root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016",
+  "root_exists": true,
+  "source_sha256": {
+    "scripts/cad_eval_parameters.py": "6e746c0638a23965fcd398e23f8e972f0d3d6f350d55d08255d652d89f051c66",
+    "cad_rgbx/tracker.py": "993ffdffe9f158066973ce976a427d4d23553f3d420b3b5a4a83ac5fdedc97ef",
+    "scripts/xtrack_eval_parameters.py": "9fc8c8ce3aad647c66802a51cfed5a92e7836eb2775df3e0153aba2e94a6e477",
+    "scripts/evaluate_xtrack_ope.py": "b0da4041915ec5c1755952cbe00f6ac3597bfdf72c913dcfc26bf57ca27df6fd",
+    "scripts/evaluate_xtrack_vot.py": "47f01f7b9b77221b2117014e12d8083e7885b5d242368af67a210e131a357a89",
+    "scripts/prepare_vot_workspace.py": "e728818a54c1209655955ff10c70d05eda140ba6af34251ecac41d35ddec0e41",
+    "scripts/run_vot_sequences.py": "fb581d00b4286868c1365af79fc541abe4923bb04527787a01084939eaab3f61",
+    "scripts/audit_and_score_vot.py": "77899e91df0fc17907f89e7b0733d5bc31acf2c68c4b17597ae296647c3770d3",
+    "scripts/score_lasher.py": "da59dce9557dc5eeafefa8501b88e9cf425389d46a443b96c1fc25fb0f4134b2",
+    "scripts/check_cad_vot_runtime.py": "35a42359863d2a8cf8000bdc178cda20ad840caace3e7188eb89140ff9353d9e",
+    "scripts/evaluate_cad_existing_three.py": "27b5a877c42d848813d4c5e5c7bdeefd0b6e12eeb8a35e103529d349eb40c6dc",
+    "configs/cad_eval_environment_spec.json": "29a45f98695991315bdba128bbb334d68e7609cd603b5830a8f4463703f94d38"
+  },
+  "source_seal_exact": true,
+  "files": {
+    "run.json": {
+      "sha256": "bea41bec3e5c5dce09ba949f470126890ce43d961698a2d5bf7d373db17ac16b",
+      "bytes": 4414
+    },
+    "DepthTrack/trackers.ini": {
+      "sha256": "d1f661bdb09626a3ce1b5f19ba29c474457919fa6078d4ce9e75bf8c7af9fe2f",
+      "bytes": 638
+    },
+    "DepthTrack/config.yaml": {
+      "sha256": "667c2f374e444f4cac77554573c51bca10e2b23f7bf4b8cec26ffd9645e548b6",
+      "bytes": 95
+    },
+    "DepthTrack/identity.json": {
+      "sha256": "1be2e7b3d8178b5e85fe97c2ff607bc47f9630fa9e576bdda1cb961d1e8dc782",
+      "bytes": 1234
+    },
+    "DepthTrack/stack.yaml": {
+      "sha256": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+      "bytes": 284
+    },
+    "VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1.json": {
+      "sha256": "323dc84e8c2bb02b59d412033aae65267ba70a7e9569309ae72dbcfacf846a06",
+      "bytes": 1206
+    },
+    "VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1.txt": {
+      "sha256": "0a33176212299e9c039f38d77a9d3d447c10540b5bfb07ff6a963a532a48e037",
+      "bytes": 214
+    },
+    "VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1_time.txt": {
+      "sha256": "1c4d33c88e5d558b55cbe23dbecfeff6e41121f90d1723f9fbee88b1e2ae3749",
+      "bytes": 51
+    },
+    "VisEvent/gpu0/dvSave-2021_02_14_16_45_13_car1_confidence.txt": {
+      "sha256": "efc8122c19abb4459914588ca7f53f1f6ba32a2df57181a6d5619645e62846dc",
+      "bytes": 51
+    },
+    "logs/VisEvent-native-gpu0.log": {
+      "sha256": "442f49d54ac32e9e106f7d49df5fd6d9b96477e85628e43973d7c4759f3bf372",
+      "bytes": 1156
+    },
+    "logs/DepthTrack-workspace.log": {
+      "sha256": "88dde85dd9bc63632f92d2d0240014f6f1680fad8bbdbc22b4632641d7254716",
+      "bytes": 1194
+    },
+    "logs/DepthTrack-native-gpu0.log": {
+      "sha256": "f557ba5898efc474350a14eb1d221aa3cc9ff756ac899fc8eab61c3be0a8011e",
+      "bytes": 258
+    },
+    "logs/LasHeR-native-gpu0.log": {
+      "sha256": "5557f6d5ef035ea908f37c2313cfb2a67bac2604c99c7cd05289676b69179c6e",
+      "bytes": 1132
+    },
+    "LasHeR/gpu0/10runone.txt": {
+      "sha256": "7a736ea2cc1bdad5ae3c6c5a8be4dbc0703c1408343ab587c7a661e8d33bd4a3",
+      "bytes": 222
+    },
+    "LasHeR/gpu0/10runone.json": {
+      "sha256": "664d36301bb50dc0aa2505f4a6e5c399457fdcbd432fdde41904cb059b725a30",
+      "bytes": 1182
+    },
+    "LasHeR/gpu0/10runone_time.txt": {
+      "sha256": "cf8da04e18d26aeed50872e53c6d48f80108303edfabffc216df1d4b77707d41",
+      "bytes": 51
+    },
+    "LasHeR/gpu0/10runone_confidence.txt": {
+      "sha256": "54603a150406ebe598c13b84041f110b155779013c6f722cd3e15566b97691fc",
+      "bytes": 51
+    }
+  },
+  "symlinks_not_followed": {}
+}

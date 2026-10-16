@@ -1,0 +1,2 @@
+cd /data/gb/rgbx-risk
+CUDA_VISIBLE_DEVICES='' PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/scripts OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/gaob/conda/envs/rgbx-eval/bin/python scripts/evaluate_cad_existing_three.py --stage sanity --output-root /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r3_20261016

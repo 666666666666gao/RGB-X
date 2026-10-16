@@ -18,6 +18,7 @@ parser.add_argument('--expected-sha256', required=True)
 parser.add_argument('--terminal-audit', required=True)
 parser.add_argument('--dataset-audit', required=True)
 parser.add_argument('--workspace', required=True)
+parser.add_argument('--shards', type=int, default=3)
 args = parser.parse_args()
 assert version('vot-toolkit') == '0.7.1' and version('vot-trax') == '4.0.2'
 assert vot.config.results_binary is True
@@ -39,6 +40,10 @@ else:
     analyses.extend([dict(type='multistart_ar', name='per_sequence_ar'),
                      dict(type='multistart_eao_curves', name='per_sequence_eao', high=755)])
 tracker_id = 'xtrack_joint_s2026_' + args.expected_sha256[:12]
+is_cad = identity.get('model') == 'CADTrackPruned'
+if is_cad:
+    assert args.shards == 2
+    tracker_id = 'cad_pruned_rgbx_b0_s2026_' + args.expected_sha256[:12]
 Workspace.initialize(str(root), dict(stack='stack.yaml', sequences=data['root'],
                                     registry=['trackers.ini']), download=False)
 (root/'stack.yaml').write_text(yaml.safe_dump(stack, sort_keys=False))
@@ -49,7 +54,10 @@ command = ['/home/gaob/conda/envs/rgbx-eval/bin/python', str(project/'scripts/ev
            '--seed', '2026']
 (root/'trackers.ini').write_text('[{}]\nlabel = XTrack-B joint checkpoint, inference seed2026\nprotocol = trax\ncommand = {}\n'
                               'timeout = 120\nenv_PYTHONPATH = {}:{}\n'.format(
-                                  tracker_id, shlex.join(command), project/'third_party/XTrack', project/'scripts'))
+                                  tracker_id, shlex.join(command), project if is_cad else project/'third_party/XTrack', project/'scripts'))
+if is_cad:
+    registry = root/'trackers.ini'
+    registry.write_text(registry.read_text().replace('XTrack-B joint checkpoint', 'Scratch CADTrackPruned B0 joint checkpoint'))
 identity.update(dataset=data['dataset'], dataset_audit=str(data_path),
                 dataset_audit_sha256=hashlib.sha256(data_path.read_bytes()).hexdigest(),
                 terminal_audit=str(Path(args.terminal_audit).resolve()),
@@ -57,6 +65,7 @@ identity.update(dataset=data['dataset'], dataset_audit=str(data_path),
                 workspace_stack_sha256=hashlib.sha256((root/'stack.yaml').read_bytes()).hexdigest(),
                 trackers_ini_sha256=hashlib.sha256((root/'trackers.ini').read_bytes()).hexdigest(),
                 tracker_id=tracker_id, experiment_id=experiment_id, seed=2026,
+                shards=args.shards,
                 expected_sequences=data['expected_sequences'],
                 expected_frame_pairs=data['expected_frame_pairs'])
 (root/'identity.json').write_text(json.dumps(identity, indent=2)+'\n')

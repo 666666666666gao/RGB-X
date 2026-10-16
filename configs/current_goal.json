@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-15T18:39:08.464517+00:00",
+  "updated_at": "2026-10-16T01:41:26.009624+00:00",
   "objective": "在2028用删减版CADTrack从全参数随机初始化联合训练RGB-T/RGB-D/RGB-Event；一份权重、仅GPU0/1，GPU0功率上限250W、目标温度75℃（允许偶发76℃）。先完成同随机初始化的普通联合AdamW B0，再比较主动共同方向及逐项前瞻/稳定性模块；完整报告现有三集七项主指标和所有退化，争取全面超过公平baseline。",
-  "status": "CAD_SCRATCH_B0_TRAINING_COMPLETE_FINAL_CPU_AUDIT_PASS_TESTS_NOT_RUN",
+  "status": "CAD_SCRATCH_B0_FULL_THREE_TEST_EVALUATION_RUNNING",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -134,5 +134,21 @@
   "final_checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
   "final_checkpoint_is_benchmark_best": false,
   "overall_research_acceptance_achieved": false,
-  "monitoring_end_state": "Training ended with exit0 and final state verified; three77C guard samples disclosed as thermal-preference deviations."
+  "monitoring_end_state": "Training ended with exit0 and final state verified; three77C guard samples disclosed as thermal-preference deviations.",
+  "evaluation": {
+    "run_id": "cad_pruned_rgbx_b0_s2026_eval_20261016",
+    "controller_pid": 1938801,
+    "supervisor_pid": 1938799,
+    "started_at": "2026-10-16T01:20:41.158597+00:00",
+    "physical_gpus": [
+      0,
+      1
+    ],
+    "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+    "output_root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016",
+    "completed_datasets": [],
+    "benchmark_scores": "NOT_YET_COMPLETE",
+    "overall_acceptance_achieved": false,
+    "next_observation_not_before_utc": "2026-10-16T06:57:17.117240+00:00"
+  }
 }

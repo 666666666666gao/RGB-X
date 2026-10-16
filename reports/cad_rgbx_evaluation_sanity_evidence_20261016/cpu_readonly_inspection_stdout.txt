@@ -1,0 +1,3 @@
+{"torch.__version__": "1.13.1+cu117", "torch.version.cuda": "11.7", "torchvision.__version__": "0.14.1+cu117", "metadata.torch": "1.13.1", "metadata.torchvision": "0.14.1", "cuda_initialized": false}
+Experiment._get_initialization (self, sequence: 'Sequence', index: int, id: str = None)
+Rectangle.bounds (self)

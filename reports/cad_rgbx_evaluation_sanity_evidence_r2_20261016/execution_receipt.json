@@ -1,0 +1,8 @@
+{
+  "command": "cd /data/gb/rgbx-risk\nCUDA_VISIBLE_DEVICES='' PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/scripts OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/gaob/conda/envs/rgbx-eval/bin/python scripts/evaluate_cad_existing_three.py --stage sanity --output-root /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r2_20261016\n",
+  "started_at_utc": "2026-10-16T01:11:28.052543+00:00",
+  "finished_at_utc": "2026-10-16T01:12:04.803883+00:00",
+  "elapsed_seconds": 36.751341299997875,
+  "actual_exit_code": 1,
+  "documented_invocation_execution_count": 1
+}

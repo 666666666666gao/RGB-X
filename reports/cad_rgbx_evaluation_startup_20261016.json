@@ -1,0 +1,186 @@
+{
+  "status": "ACTUAL_STARTUP_OBSERVATION_NOT_FINAL_METRICS",
+  "observed_at": "2026-10-16T01:41:26.009624+00:00",
+  "run": {
+    "status": "RUNNING_NOT_SCORED",
+    "stage": "formal",
+    "identity": {
+      "checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+      "config": "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+      "model": "CADTrackPruned",
+      "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+      "config_sha256": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+      "terminal_audit_sha256": "eb0286d24791c8ae8a0c4c4adbcc3932a53e3f5e608c2e318af1998d47259fa6"
+    },
+    "started_at": "2026-10-16T01:20:43.080951+00:00",
+    "controller_pid": 1938801,
+    "physical_gpus": [
+      0,
+      1
+    ],
+    "gpu_preflight": "0, 45\n1, 1\n",
+    "commands": [
+      {
+        "label": "DepthTrack-workspace",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/prepare_vot_workspace.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--dataset-audit",
+          "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+          "--workspace",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/DepthTrack",
+          "--shards",
+          "2"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/predictions",
+          "--shard",
+          "0",
+          "--shards",
+          "2"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/predictions",
+          "--shard",
+          "1",
+          "--shards",
+          "2"
+        ],
+        "CUDA_VISIBLE_DEVICES": "1"
+      }
+    ],
+    "workers": [
+      {
+        "dataset": "LasHeR",
+        "physical_gpu": 0,
+        "pid": 1938806
+      },
+      {
+        "dataset": "LasHeR",
+        "physical_gpu": 1,
+        "pid": 1938807
+      }
+    ],
+    "completed_datasets": [],
+    "output_root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016",
+    "sanity_report": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r3_20261016/run.json",
+    "review_report": "/data/gb/rgbx-risk/reports/cad_rgbx_evaluation_documented_review_r3_20261016.json",
+    "environment_versions": {
+      "torch": "1.13.1",
+      "torchvision": "0.14.1",
+      "timm": "0.5.4",
+      "numpy": "1.23.5",
+      "vot-toolkit": "0.7.1",
+      "vot-trax": "4.0.2"
+    },
+    "observed_at": "2026-10-16T01:20:45.947307+00:00",
+    "wallclock_seconds": 2.8663485860161018
+  },
+  "controller_ps_exit_code": 0,
+  "controller_ps": "1938801 \u4e94 10\u6708 16 09:20:40 2026 S  /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_cad_existing_three.py --stage formal --output-root /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016 --sanity-report /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r3_20261016/run.json --review-report /data/gb/rgbx-risk/reports/cad_rgbx_evaluation_documented_review_r3_20261016.json\n",
+  "workers": [
+    {
+      "dataset": "LasHeR",
+      "physical_gpu": 0,
+      "pid": 1938806,
+      "ps_exit_code": 0,
+      "ps": "1938806 \u4e94 10\u6708 16 09:20:45 2026 Rl /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json --checkpoint /home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar --expected-sha256 4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20 --terminal-audit /data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json --manifest /data/gb/rgbx-risk/reports/lasher_eval_manifest.json --output /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/predictions --shard 0 --shards 2\n"
+    },
+    {
+      "dataset": "LasHeR",
+      "physical_gpu": 1,
+      "pid": 1938807,
+      "ps_exit_code": 0,
+      "ps": "1938807 \u4e94 10\u6708 16 09:20:45 2026 Dl /home/gaob/conda/envs/rgbx-eval/bin/python /data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py --config /data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json --checkpoint /home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar --expected-sha256 4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20 --terminal-audit /data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json --manifest /data/gb/rgbx-risk/reports/lasher_eval_manifest.json --output /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/predictions --shard 1 --shards 2\n"
+    }
+  ],
+  "completed_trajectory_timing": [
+    {
+      "dataset": "LasHeR",
+      "gpu": 0,
+      "completed_sequences": 29,
+      "completed_frames": 13372,
+      "expected_sequences": 123,
+      "expected_frames": 107898,
+      "synchronized_seconds": 996.1091523400974,
+      "fps": 13.42423164026351
+    },
+    {
+      "dataset": "LasHeR",
+      "gpu": 1,
+      "completed_sequences": 20,
+      "completed_frames": 20269,
+      "expected_sequences": 122,
+      "expected_frames": 112805,
+      "synchronized_seconds": 1228.8689796035178,
+      "fps": 16.494028522503342
+    },
+    {
+      "dataset": "VisEvent",
+      "gpu": 0,
+      "completed_sequences": 0,
+      "completed_frames": 0,
+      "expected_sequences": 160,
+      "expected_frames": 77581,
+      "synchronized_seconds": 0,
+      "fps": null
+    },
+    {
+      "dataset": "VisEvent",
+      "gpu": 1,
+      "completed_sequences": 0,
+      "completed_frames": 0,
+      "expected_sequences": 160,
+      "expected_frames": 79840,
+      "synchronized_seconds": 0,
+      "fps": null
+    }
+  ],
+  "benchmark_scores": "ONLY_FULL_COMPLETED_SCORER_REPORTS_ARE_VALID",
+  "remaining_seconds_estimate": 19251.107615962097,
+  "estimated_end_utc": "2026-10-16T07:02:17.117240+00:00",
+  "estimate_scope": "Early completed LasHeR sequences only; includes15%+20min margin, depth/Vis timing and cooling remain uncertain",
+  "next_observation_not_before_utc": "2026-10-16T06:57:17.117240+00:00"
+}

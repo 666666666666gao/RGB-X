@@ -1,0 +1,246 @@
+{
+  "status": "FAIL",
+  "observed_at": "2026-10-16T01:10:24.804186+00:00",
+  "review_type": "fresh_agent_follows_doc_single_documented_invocation",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "requested_model": "gpt-6-astra",
+  "requested_effort": "max",
+  "actual_model": "UNATTESTED",
+  "actual_effort": "UNATTESTED",
+  "actual_attribution_reason": "Runtime model and effort were not independently attested by available tool output.",
+  "actual_exit_code": 1,
+  "invocation_count": 1,
+  "documented_command": "cd /data/gb/rgbx-risk\nCUDA_VISIBLE_DEVICES='' PYTHONPATH=/data/gb/rgbx-risk:/data/gb/rgbx-risk/scripts OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/gaob/conda/envs/rgbx-eval/bin/python scripts/evaluate_cad_existing_three.py --stage sanity --output-root /home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_20261016\n",
+  "execution_started_at": "2026-10-16T01:08:11.247239+00:00",
+  "execution_ended_at": "2026-10-16T01:08:11.878989+00:00",
+  "elapsed_seconds": 0.6317199999975855,
+  "ssh_alias": "2028",
+  "ssh_user": "gaob",
+  "remote_project": "/data/gb/rgbx-risk",
+  "sanity_output_root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_20261016",
+  "sanity_run_report_exists": false,
+  "sanity_report_sha256": null,
+  "sanity_report_sha256_reason": "The version assertion failed before the output root and run.json were created.",
+  "source_sha256": {
+    "cad_rgbx/tracker.py": "993ffdffe9f158066973ce976a427d4d23553f3d420b3b5a4a83ac5fdedc97ef",
+    "configs/cad_eval_environment_spec.json": "add11f930801e7b01b760e018d951ec21d01c9cb4fd61addba2c6f92f2c61f20",
+    "scripts/audit_and_score_vot.py": "77899e91df0fc17907f89e7b0733d5bc31acf2c68c4b17597ae296647c3770d3",
+    "scripts/cad_eval_parameters.py": "6e746c0638a23965fcd398e23f8e972f0d3d6f350d55d08255d652d89f051c66",
+    "scripts/check_cad_vot_runtime.py": "35a42359863d2a8cf8000bdc178cda20ad840caace3e7188eb89140ff9353d9e",
+    "scripts/evaluate_cad_existing_three.py": "27b5a877c42d848813d4c5e5c7bdeefd0b6e12eeb8a35e103529d349eb40c6dc",
+    "scripts/evaluate_xtrack_ope.py": "b0da4041915ec5c1755952cbe00f6ac3597bfdf72c913dcfc26bf57ca27df6fd",
+    "scripts/evaluate_xtrack_vot.py": "47f01f7b9b77221b2117014e12d8083e7885b5d242368af67a210e131a357a89",
+    "scripts/prepare_vot_workspace.py": "e728818a54c1209655955ff10c70d05eda140ba6af34251ecac41d35ddec0e41",
+    "scripts/run_vot_sequences.py": "fb581d00b4286868c1365af79fc541abe4923bb04527787a01084939eaab3f61",
+    "scripts/score_lasher.py": "da59dce9557dc5eeafefa8501b88e9cf425389d46a443b96c1fc25fb0f4134b2",
+    "scripts/xtrack_eval_parameters.py": "9fc8c8ce3aad647c66802a51cfed5a92e7836eb2775df3e0153aba2e94a6e477"
+  },
+  "source_seal_before_and_after_invocation_matches_original_preparation": true,
+  "source_preparation": "reports/cad_rgbx_evaluation_preparation_20261016.json",
+  "original_environment_spec_canonical_sha256": "360fdf98901f4b4886ac787576d8ced67a1b099b4550b4574468f22b9edebe00",
+  "sole_handoff_path": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
+  "handoff_sha256_at_document_read": "e76a2d3941b7c54d4a31c1ddf62cf07fc17a8be9efacc3e90226454ba3851ebf",
+  "expected_distribution_versions": {
+    "torch": "1.13.1+cu117",
+    "torchvision": "0.14.1+cu117",
+    "timm": "0.5.4",
+    "numpy": "1.23.5",
+    "vot-toolkit": "0.7.1",
+    "vot-trax": "4.0.2"
+  },
+  "actual_distribution_versions": {
+    "torch": "1.13.1",
+    "torchvision": "0.14.1",
+    "timm": "0.5.4",
+    "numpy": "1.23.5",
+    "vot-toolkit": "0.7.1",
+    "vot-trax": "4.0.2"
+  },
+  "failure": {
+    "type": "AssertionError",
+    "file": "scripts/evaluate_cad_existing_three.py",
+    "line": 36,
+    "expression": "actual_versions == expected_versions",
+    "reason": "The declarative spec uses CUDA-suffixed module version strings, while the implemented admission compares importlib.metadata distribution versions without those suffixes."
+  },
+  "divergences": [
+    {
+      "kind": "documented_invocation_failure",
+      "expected": "SANITY_PASS_NOT_BENCHMARK with all six native child exits 0",
+      "actual": "Controller exited 1 during package version admission; no output root, run.json or child log was created."
+    },
+    {
+      "kind": "environment_version_representation",
+      "packages": [
+        "torch",
+        "torchvision"
+      ],
+      "expected": [
+        "1.13.1+cu117",
+        "0.14.1+cu117"
+      ],
+      "actual_importlib_metadata": [
+        "1.13.1",
+        "0.14.1"
+      ],
+      "actual_imported_module_versions": [
+        "1.13.1+cu117",
+        "0.14.1+cu117"
+      ]
+    },
+    {
+      "kind": "review_read_scope_deviation",
+      "detail": "The reviewer accidentally printed handoff lines 1-165, including historical material below the requested new evaluation section at lines 1-24. Historical content was not used to judge this invocation. The parent was informed before launch and explicitly directed proceeding once; no replacement reviewer or duplicate invocation was arranged."
+    }
+  ],
+  "bounded_real_calls": [
+    {
+      "physical_gpu": 0,
+      "dataset": "LasHeR",
+      "task": "RGB-T",
+      "protocol": "OPE",
+      "planned_frames": 3,
+      "actual_frames": 0,
+      "actual_nn_forwards": 0,
+      "actual_exit_code": null,
+      "status": "NOT_RUN_VERSION_ADMISSION_FAILED",
+      "strict_checkpoint_load": "NOT_RUN",
+      "inference": "NOT_RUN",
+      "finite_boxes": "NOT_RUN",
+      "real_confidence": "NOT_RUN",
+      "original_image_geometry": "NOT_RUN",
+      "closed_loop_tracking": "NOT_RUN",
+      "native_trax": "NOT_APPLICABLE"
+    },
+    {
+      "physical_gpu": 0,
+      "dataset": "VisEvent",
+      "task": "RGB-Event",
+      "protocol": "OPE",
+      "planned_frames": 3,
+      "actual_frames": 0,
+      "actual_nn_forwards": 0,
+      "actual_exit_code": null,
+      "status": "NOT_RUN_VERSION_ADMISSION_FAILED",
+      "strict_checkpoint_load": "NOT_RUN",
+      "inference": "NOT_RUN",
+      "finite_boxes": "NOT_RUN",
+      "real_confidence": "NOT_RUN",
+      "original_image_geometry": "NOT_RUN",
+      "closed_loop_tracking": "NOT_RUN",
+      "native_trax": "NOT_APPLICABLE"
+    },
+    {
+      "physical_gpu": 0,
+      "dataset": "DepthTrack",
+      "task": "RGB-D",
+      "protocol": "native_TraX",
+      "planned_frames": 3,
+      "actual_frames": 0,
+      "actual_nn_forwards": 0,
+      "actual_exit_code": null,
+      "status": "NOT_RUN_VERSION_ADMISSION_FAILED",
+      "strict_checkpoint_load": "NOT_RUN",
+      "inference": "NOT_RUN",
+      "finite_boxes": "NOT_RUN",
+      "real_confidence": "NOT_RUN",
+      "original_image_geometry": "NOT_RUN",
+      "closed_loop_tracking": "NOT_RUN",
+      "native_trax": "NOT_RUN"
+    },
+    {
+      "physical_gpu": 1,
+      "dataset": "LasHeR",
+      "task": "RGB-T",
+      "protocol": "OPE",
+      "planned_frames": 3,
+      "actual_frames": 0,
+      "actual_nn_forwards": 0,
+      "actual_exit_code": null,
+      "status": "NOT_RUN_VERSION_ADMISSION_FAILED",
+      "strict_checkpoint_load": "NOT_RUN",
+      "inference": "NOT_RUN",
+      "finite_boxes": "NOT_RUN",
+      "real_confidence": "NOT_RUN",
+      "original_image_geometry": "NOT_RUN",
+      "closed_loop_tracking": "NOT_RUN",
+      "native_trax": "NOT_APPLICABLE"
+    },
+    {
+      "physical_gpu": 1,
+      "dataset": "VisEvent",
+      "task": "RGB-Event",
+      "protocol": "OPE",
+      "planned_frames": 3,
+      "actual_frames": 0,
+      "actual_nn_forwards": 0,
+      "actual_exit_code": null,
+      "status": "NOT_RUN_VERSION_ADMISSION_FAILED",
+      "strict_checkpoint_load": "NOT_RUN",
+      "inference": "NOT_RUN",
+      "finite_boxes": "NOT_RUN",
+      "real_confidence": "NOT_RUN",
+      "original_image_geometry": "NOT_RUN",
+      "closed_loop_tracking": "NOT_RUN",
+      "native_trax": "NOT_APPLICABLE"
+    },
+    {
+      "physical_gpu": 1,
+      "dataset": "DepthTrack",
+      "task": "RGB-D",
+      "protocol": "native_TraX",
+      "planned_frames": 3,
+      "actual_frames": 0,
+      "actual_nn_forwards": 0,
+      "actual_exit_code": null,
+      "status": "NOT_RUN_VERSION_ADMISSION_FAILED",
+      "strict_checkpoint_load": "NOT_RUN",
+      "inference": "NOT_RUN",
+      "finite_boxes": "NOT_RUN",
+      "real_confidence": "NOT_RUN",
+      "original_image_geometry": "NOT_RUN",
+      "closed_loop_tracking": "NOT_RUN",
+      "native_trax": "NOT_RUN"
+    }
+  ],
+  "actual_child_calls": 0,
+  "actual_nn_forwards": 0,
+  "actual_optimizer_updates": 0,
+  "new_weight_files": 0,
+  "checkpoint_identity_validation": "NOT_RUN: verified_endpoint is after the failed assertion at line 37.",
+  "formal_launched": false,
+  "hardware_settings_changed": false,
+  "gpu_2_3_queried_or_used": false,
+  "repaired_or_reran": false,
+  "preflight_gpu_memory_mib": {
+    "0": 45,
+    "1": 1
+  },
+  "preflight_gpu_total_memory_mib": {
+    "0": 24576,
+    "1": 24576
+  },
+  "post_failure_cpu_inspection": {
+    "actual_exit_code": 0,
+    "cuda_initialized": false,
+    "nn_invocations": 0,
+    "torch_module_version": "1.13.1+cu117",
+    "torch_cuda_build": "11.7",
+    "torchvision_module_version": "0.14.1+cu117",
+    "Experiment._get_initialization": "(self, sequence: 'Sequence', index: int, id: str = None)",
+    "Rectangle.bounds": "(self)"
+  },
+  "sanity_child_logs": [],
+  "evidence_directory": "reports/cad_rgbx_evaluation_sanity_evidence_20261016",
+  "evidence_sha256": {
+    "reports/cad_rgbx_evaluation_sanity_evidence_20261016/cpu_readonly_inspection.json": "d9eb01fc40067fe133ab24531b26cb7cd833cd7fdc1d2fdf7138b8adf4d56a19",
+    "reports/cad_rgbx_evaluation_sanity_evidence_20261016/cpu_readonly_inspection_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/cad_rgbx_evaluation_sanity_evidence_20261016/cpu_readonly_inspection_stdout.txt": "268926e9b02f7a84e50191b920ec9e49247100517beafff8d2ca20af5d4552b9",
+    "reports/cad_rgbx_evaluation_sanity_evidence_20261016/execution.json": "79019b3d7472d84039e4d092a12e7d188f2355b500be8164e9526040b49271b4",
+    "reports/cad_rgbx_evaluation_sanity_evidence_20261016/execution_stderr.txt": "9c29dab505a1ead96fdc78fafa42c563c555f24adaa417b23c7e2cd9efe9cae3",
+    "reports/cad_rgbx_evaluation_sanity_evidence_20261016/execution_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/cad_rgbx_evaluation_sanity_evidence_20261016/post_failure_readback.json": "844525e8a137a9d68574f4fa23a94245abbbd34f67d254d1ab2ad64f7d661e4b"
+  },
+  "interpretation": "Environment readiness and all six inference checks are unvalidated. No benchmark score is produced. Preserve this failed first attempt; no repair or rerun was performed by this reviewer."
+}

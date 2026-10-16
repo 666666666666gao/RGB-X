@@ -11,7 +11,7 @@ parser.add_argument('--workspace', required=True)
 parser.add_argument('--shard', type=int, required=True)
 parser.add_argument('--gpu', type=int, required=True)
 args = parser.parse_args()
-assert 0 <= args.shard < 3 and 0 <= args.gpu < 3
+assert 0 <= args.gpu < 3
 os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
 from vot.workspace import Workspace
 from vot import config
@@ -20,6 +20,10 @@ from xtrack_eval_parameters import verified_endpoint
 root = Path(args.workspace).resolve(strict=True)
 assert config.results_binary is True
 identity = json.loads((root/'identity.json').read_text())
+shards = identity.get('shards', 3)
+assert 0 <= args.shard < shards
+if identity.get('model') == 'CADTrackPruned':
+    assert args.gpu in [0, 1] and shards == 2
 endpoint = verified_endpoint(identity['config'], identity['checkpoint'], identity['checkpoint_sha256'], identity['terminal_audit'])
 assert endpoint['config_sha256'] == identity['config_sha256']
 assert endpoint['terminal_audit_sha256'] == identity['terminal_audit_sha256']
@@ -31,7 +35,7 @@ data = json.loads(data_path.read_text())
 workspace = Workspace.load(str(root))
 tracker, = workspace.registry.resolve(identity['tracker_id'], storage=workspace.storage.substorage('results'), skip_unknown=False)
 experiment = workspace.stack[identity['experiment_id']]
-assigned = data['sequences'][args.shard::3]
+assigned = data['sequences'][args.shard::shards]
 receipt_path = root/('shard_{}.json'.format(args.shard))
 assert not receipt_path.exists()
 completed = []

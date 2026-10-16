@@ -1,0 +1,21 @@
+{
+  "provider": "2028 direct SSH conda warm reuse",
+  "python": "/home/gaob/conda/envs/rgbx-eval/bin/python",
+  "versions": {
+    "torch": "1.13.1",
+    "torchvision": "0.14.1",
+    "timm": "0.5.4",
+    "numpy": "1.23.5",
+    "vot-toolkit": "0.7.1",
+    "vot-trax": "4.0.2"
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "hardware": "physical GPU0 and GPU1 only; GPU0 cap250W target75C, existing pause72/resume68",
+  "initialization": "Strictly load our completed scratch B0 endpoint for evaluation, no author pretrained input",
+  "seeded_witness": "The documented --stage sanity command runs actual three-frame OPE and native TraX on both authorized GPUs",
+  "install_changes": "NONE; reuse the previously validated evaluation environment with explicit version admission"
+}
