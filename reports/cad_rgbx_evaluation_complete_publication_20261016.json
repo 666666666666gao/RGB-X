@@ -1,0 +1,19 @@
+{
+  "status": "PASS_COMPLETE_SCORES_ARCHIVES_FOUR_HANDOFF_COPIES_AND_GITHUB",
+  "source_commit": "70278199b72bc567d6a0b5553a050343cd4461d1",
+  "document_sha256": "1ef657e95c57adf97cd38f4f2e4799a5956f57e7c567da427cba2bd4a4e52118",
+  "files": 43,
+  "full_sequences": 615,
+  "full_frames": 454497,
+  "main_metrics": 7,
+  "main_metrics_above_different_setup_XTrack_reference": 0,
+  "actual_controller_exit_code": 0,
+  "proposed_modules_trained": false,
+  "overall_research_acceptance_achieved": false,
+  "new_training_started": false,
+  "note": "Result completion, not method efficacy or same-structure improvement acceptance.",
+  "disk_full_index_failure_resolved": true,
+  "verified_duplicate_logs_retired_bytes": 166072256,
+  "all_raw_logs_preserved_in_verified_archive": true,
+  "weights_deleted": 0
+}
