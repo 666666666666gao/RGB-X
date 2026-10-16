@@ -1,0 +1,434 @@
+{
+  "observed_at": "2026-10-16T06:57:35.008171+00:00",
+  "run": {
+    "status": "ALL_THREE_SCORED_REQUIRES_RESULT_AUDIT",
+    "stage": "formal",
+    "identity": {
+      "checkpoint": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+      "config": "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+      "model": "CADTrackPruned",
+      "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+      "config_sha256": "13c9da70c547d65b5cbcb1306292596ee6252dbb1e9726f1a52d6ead77fca7a5",
+      "terminal_audit_sha256": "eb0286d24791c8ae8a0c4c4adbcc3932a53e3f5e608c2e318af1998d47259fa6"
+    },
+    "started_at": "2026-10-16T01:20:43.080951+00:00",
+    "controller_pid": 1938801,
+    "physical_gpus": [
+      0,
+      1
+    ],
+    "gpu_preflight": "0, 45\n1, 1\n",
+    "commands": [
+      {
+        "label": "DepthTrack-workspace",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/prepare_vot_workspace.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--dataset-audit",
+          "/data/gb/rgbx-risk/reports/depthtrack_vot_dataset_audit.json",
+          "--workspace",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/DepthTrack",
+          "--shards",
+          "2"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/predictions",
+          "--shard",
+          "0",
+          "--shards",
+          "2"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      {
+        "label": "LasHeR",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/predictions",
+          "--shard",
+          "1",
+          "--shards",
+          "2"
+        ],
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      {
+        "label": "LasHeR-coverage",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/audit_ope_coverage.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/predictions",
+          "--report",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/coverage.json"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "LasHeR-scoring",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/score_lasher.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/lasher_eval_manifest.json",
+          "--attributes",
+          "/data/gb/rgbx-risk/reports/lasher_test_attributes.json",
+          "--predictions",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/predictions",
+          "--coverage",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/coverage.json",
+          "--toolkit",
+          "/home/gaob/.cache/rgbx_lasher_toolkit_src",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/LasHeR/scores"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "VisEvent",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/VisEvent/predictions",
+          "--shard",
+          "0",
+          "--shards",
+          "2"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      {
+        "label": "VisEvent",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/evaluate_xtrack_ope.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/VisEvent/predictions",
+          "--shard",
+          "1",
+          "--shards",
+          "2"
+        ],
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      {
+        "label": "VisEvent-coverage",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/audit_ope_coverage.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/VisEvent/predictions",
+          "--report",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/VisEvent/coverage.json"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "VisEvent-scoring",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/score_visevent.py",
+          "--config",
+          "/data/gb/rgbx-risk/configs/cad_rgbx_b0_s2026.json",
+          "--checkpoint",
+          "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+          "--expected-sha256",
+          "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
+          "--terminal-audit",
+          "/data/gb/rgbx-risk/reports/cad_rgbx_final_checkpoint_audit_20261016.json",
+          "--manifest",
+          "/data/gb/rgbx-risk/reports/visevent_eval_manifest.json",
+          "--attributes",
+          "/data/gb/rgbx-risk/reports/visevent_test_attributes.json",
+          "--predictions",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/VisEvent/predictions",
+          "--coverage",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/VisEvent/coverage.json",
+          "--toolkit",
+          "/home/gaob/.cache/rgbx_official_visevent_source",
+          "--output",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/VisEvent/scores"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "DepthTrack",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/run_vot_sequences.py",
+          "--workspace",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/DepthTrack",
+          "--shard",
+          "0",
+          "--gpu",
+          "0"
+        ],
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      {
+        "label": "DepthTrack",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/run_vot_sequences.py",
+          "--workspace",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/DepthTrack",
+          "--shard",
+          "1",
+          "--gpu",
+          "1"
+        ],
+        "CUDA_VISIBLE_DEVICES": "1"
+      },
+      {
+        "label": "DepthTrack-official-scoring",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/audit_and_score_vot.py",
+          "--workspace",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/DepthTrack"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      {
+        "label": "DepthTrack-attributes",
+        "argv": [
+          "/home/gaob/conda/envs/rgbx-eval/bin/python",
+          "/data/gb/rgbx-risk/scripts/score_depthtrack_attributes.py",
+          "--workspace",
+          "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016/DepthTrack",
+          "--attributes",
+          "/data/gb/rgbx-risk/reports/depthtrack_test_attributes.json"
+        ],
+        "CUDA_VISIBLE_DEVICES": ""
+      }
+    ],
+    "workers": [
+      {
+        "dataset": "LasHeR",
+        "physical_gpu": 0,
+        "pid": 1938806
+      },
+      {
+        "dataset": "LasHeR",
+        "physical_gpu": 1,
+        "pid": 1938807
+      },
+      {
+        "dataset": "VisEvent",
+        "physical_gpu": 0,
+        "pid": 2031909
+      },
+      {
+        "dataset": "VisEvent",
+        "physical_gpu": 1,
+        "pid": 2031910
+      },
+      {
+        "dataset": "DepthTrack",
+        "physical_gpu": 0,
+        "pid": 2105779
+      },
+      {
+        "dataset": "DepthTrack",
+        "physical_gpu": 1,
+        "pid": 2105780
+      }
+    ],
+    "completed_datasets": [
+      "LasHeR",
+      "VisEvent",
+      "DepthTrack"
+    ],
+    "output_root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016",
+    "sanity_report": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_sanity_r3_20261016/run.json",
+    "review_report": "/data/gb/rgbx-risk/reports/cad_rgbx_evaluation_documented_review_r3_20261016.json",
+    "environment_versions": {
+      "torch": "1.13.1",
+      "torchvision": "0.14.1",
+      "timm": "0.5.4",
+      "numpy": "1.23.5",
+      "vot-toolkit": "0.7.1",
+      "vot-trax": "4.0.2"
+    },
+    "observed_at": "2026-10-16T06:33:41.173623+00:00",
+    "wallclock_seconds": 18778.092664306023,
+    "last_worker_exit_codes": [
+      0,
+      0
+    ],
+    "actual_exit_code": 0
+  },
+  "controller_ps_exit_code": 1,
+  "controller_ps": "",
+  "execution": {
+    "status": "EXITED",
+    "actual_exit_code": 0,
+    "ended_at": "2026-10-16T06:33:41.212048+00:00"
+  },
+  "status": "ALL_THREE_FULLY_SCORED_ENDPOINT_COLLECTED",
+  "headline_metrics": {
+    "LasHeR": {
+      "SR_AUC": 0.39708008583455734,
+      "PR_at_20": 0.4900342340167744,
+      "NPR_AUC": 0.42264464642714206,
+      "NP_at_020": 0.4632211148431963
+    },
+    "VisEvent": {
+      "SR_AUC": 0.4737139058817806,
+      "PR_at_20": 0.6463864337727094,
+      "NPR_AUC": 0.5263594313575245,
+      "NP_at_020": 0.5781918149803478
+    },
+    "DepthTrack": {
+      "Precision": 0.45820056928990494,
+      "Recall": 0.4319061599038915,
+      "F_score": 0.44466498647195946
+    }
+  },
+  "full_sequences": 615,
+  "full_frames": 454497,
+  "files": {
+    "DepthTrack/attribute_diagnostics.json": "a6c53e4f876776ee42ff330f4e4d71d9d06c88176375f1b192f29293313945cc",
+    "DepthTrack/config.yaml": "667c2f374e444f4cac77554573c51bca10e2b23f7bf4b8cec26ffd9645e548b6",
+    "DepthTrack/coverage.json": "4b16e79b97afb51b06cebdac93d48a22c654f350ec50ad3f4d8198941a926d3c",
+    "DepthTrack/full_PR_F_curves.png": "1e0e5e1e1f91da44d2053c2842136b4a5cc65a1c6d2aef33690778da1e36e4e8",
+    "DepthTrack/identity.json": "1be2e7b3d8178b5e85fe97c2ff607bc47f9630fa9e576bdda1cb961d1e8dc782",
+    "DepthTrack/official_metrics.json": "928e6683e8eb245e85a2f7fd3952d4bdeee8585392430fe006fd96d981a51152",
+    "DepthTrack/per_sequence_metrics.csv": "f5b3a2cb9127ddac21166bca52140a9375e42353b753f6efc9118fa366b3b0d8",
+    "DepthTrack/shard_0.json": "d9284954ff4275f5083012c40f5faacfd41381b9558b24b7a81891b37eab4452",
+    "DepthTrack/shard_1.json": "b3cfa3b3e3d5ada7a8cb6940eb7f4bd6c9de7e180e87aa40b2ad403ab000e928",
+    "DepthTrack/stack.yaml": "b9aa9fb5ce616aaa025d26c7a73aa17854e1a124b6637989a2b7e08b0f2fc7c5",
+    "DepthTrack/trackers.ini": "d1f661bdb09626a3ce1b5f19ba29c474457919fa6078d4ce9e75bf8c7af9fe2f",
+    "LasHeR/coverage.json": "4292ba45543c413776fa1cb40205d9db93235d8f489cef7729d4fabd5181a5ee",
+    "LasHeR/scores/full_curves.png": "01fe425bc8f6b0a50dbdc6242ab29739395b64893ce7e93c362d92f888982b30",
+    "LasHeR/scores/mat/normalized/aveSuccessRatePlot_1alg_error_OPE.mat": "d4bc475b2e280b245ae3dc92cecf4a2da3691bac406bc4691adb9d0060516ac1",
+    "LasHeR/scores/mat/normalized/aveSuccessRatePlot_1alg_overlap_OPE.mat": "0ac327ba58c8d990fff704823b1b26b23d206ff263cdaad7e92c6055d021169e",
+    "LasHeR/scores/mat/raw/aveSuccessRatePlot_1alg_error_OPE.mat": "4e531ab8cdbae13a86fb917d34390f0e85ba33379cf1f1dfa1a1df8a11cc661b",
+    "LasHeR/scores/mat/raw/aveSuccessRatePlot_1alg_overlap_OPE.mat": "976a149bdb26f9bdff9939841710acd8dd24779d72f58f436edb81a159190736",
+    "LasHeR/scores/metrics.json": "966842234e4e379393a19e81cecfa2ca9fe725789f4d4dcda41aad47e4ce7c9a",
+    "LasHeR/scores/per_sequence.csv": "40dd758644491e545d7d9c1f4d7f9b3cb1af4f0c25236c36d195534dd040fcd2",
+    "LasHeR/scores/scorer.log": "ba8ae817e50b2ceeb1ad9fd065d6d2dec9b28cff812a63d90036ed63264f905f",
+    "LasHeR/scores/sequences.txt": "33f22a5760a41037f63225ef74f08d1b721b4928f45dd80e506f61fac641d678",
+    "VisEvent/coverage.json": "06de1a4e2939919d145cdccba9bdaac9c943e8d65354a09764720cdd8b1da1e9",
+    "VisEvent/scores/full_curves.png": "c5688ba37338ce0e3134107149e0220bfc06933de5d7f141c5a09ca50e03f8f8",
+    "VisEvent/scores/mat/normalized/aveSuccessRatePlot_1alg_error_OPE.mat": "64a98e5026e42c57cc07f1264febb94f105af3e456fda48e75b96dac64b6652f",
+    "VisEvent/scores/mat/normalized/aveSuccessRatePlot_1alg_overlap_OPE.mat": "c08c9428ef13c1136b1b8fb5c667f4a57a4b3869f0f3a26e8ad1878d4e8de154",
+    "VisEvent/scores/mat/raw/aveSuccessRatePlot_1alg_error_OPE.mat": "48ecb1ef01ecbaa9b37d378cefe9368a8a3f88e13efa3f6e4ff2c236504ed21f",
+    "VisEvent/scores/mat/raw/aveSuccessRatePlot_1alg_overlap_OPE.mat": "9582130c207a36b6c1fac92377422026eb7723e89327c6990c5d8781627ef499",
+    "VisEvent/scores/metrics.json": "fac44b341ce1938748e4e807fa026f4d9b36bef619ea8f2d48a028629ef6698a",
+    "VisEvent/scores/per_sequence.csv": "d98f10f62fb0058dbc081d9f5b5b606c2c9253b3c1c75f1785f42d7eedd9bd4c",
+    "VisEvent/scores/scorer.log": "48de876f7f53e9e0d19e07a4d5f67642d1e5addabd605c9238727dae4417263f",
+    "VisEvent/scores/sequences.txt": "3aad2fe4d8827017e3bdada1df69a1067d5f2694b352082ffb79b6d28961bdb6",
+    "logs/DepthTrack-attributes.log": "bcecb73386fc2360367a8a0d6639f1669184c387c1faf8bd2378e11cc68746dd",
+    "logs/DepthTrack-gpu0.log": "003d9088b9f1d1ed3127ce606fbf743116007e3da0ebec205ccc4e8ddec8fff2",
+    "logs/DepthTrack-gpu1.log": "859bc989efbcab77e696393cb2443a743aab0d28796adab299c9b75e580559d5",
+    "logs/DepthTrack-official-scoring.log": "e286787cae078a88646f8d9d3b3e3065cc5c6a4e521d5bc06b913a09ef80fc10",
+    "logs/DepthTrack-workspace.log": "88dde85dd9bc63632f92d2d0240014f6f1680fad8bbdbc22b4632641d7254716",
+    "logs/LasHeR-coverage.log": "39eca45f0bc62d77dde50627e3be735e4a4302f04767383a558c6d6762a850d9",
+    "logs/LasHeR-gpu0.log": "54b11048ec4806cd00662fb0d17ae08eaad40b221e7a0a5867529526fe958369",
+    "logs/LasHeR-gpu1.log": "023c5a3d08b511139d99c82680d70647e2e16824e7870db35699a047ab7e95de",
+    "logs/LasHeR-scoring.log": "ac8d070f2549f318b2f4dcc95b5c70de240d14e523949faabb732c20e2abf864",
+    "logs/VisEvent-coverage.log": "4e327ef52a9c23e808bf72fafd06cf1d8aa1bd097d88903bd1daeb34c3acf269",
+    "logs/VisEvent-gpu0.log": "ad2ed9393ac178eea6e6a1700c226389b8e70c303ca9a7d2fb4c3f83b5a5fd25",
+    "logs/VisEvent-gpu1.log": "e4206d77ce1b1dbf5e8545cf1a6c1615b20530a02a391c16cbc731472848dce3",
+    "logs/VisEvent-scoring.log": "e386a88a63ca1f20ea390404b75fe8a05f2c095f890977ba5dca1e62acf635c3",
+    "run.json": "83ac206023be9862acdc11fc285837620ff95fb28d7118e3cb93d6cb3359c47d"
+  },
+  "archives": {
+    "cad_rgbx_evaluation_full_evidence_20261016.tar.gz": {
+      "bytes": 2029420,
+      "sha256": "210bd51af57cfbc659a8e9eae3dec64834d6e16a8970c074b94dc851465ea55f"
+    },
+    "cad_rgbx_evaluation_raw_trajectories_20261016.tar.gz": {
+      "bytes": 21399355,
+      "sha256": "ae41af582b8d71c6f844582eab5e1ef71de7e4810f04f36a250e9dc3af5307d3"
+    }
+  },
+  "interpretation": "Scratch CADTrack B0 baseline; proposed modules NOT trained. XTrack score reference is architecture/budget different, not a paired optimizer comparison."
+}

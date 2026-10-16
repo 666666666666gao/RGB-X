@@ -1,0 +1,38 @@
+{
+  "status": "SOURCE_SEALS_AND_SINGLE_WEIGHT_VERIFIED_AFTER_EVALUATION",
+  "observed_at": "2026-10-16T07:03:10.017395+00:00",
+  "physical_gpu01_only_readback": "0, 18038, 250.00, 77\n1, 17994, 350.00, 85\n",
+  "gpu0_target_readback": [
+    "GPU Target Temperature                         : 75 C"
+  ],
+  "own_weights": [
+    {
+      "path": "/home/gaob/rgbx-cadtrack/cad_pruned_rgbx_b0_s2026/CADTrack_latest.pth.tar",
+      "bytes": 1236785336
+    }
+  ],
+  "weight_deletions": 0,
+  "source_12_seals_match": true,
+  "pretrained_author_checkpoint_not_touched": true,
+  "new_training_started": false,
+  "thermal_log_scope": {
+    "LasHeR-gpu0.log": {
+      "pause_markers": 19,
+      "maximum_logged_pause_temperature_c": 73,
+      "log_scope": "Only visible pause markers; not a continuous maximum-temperature certificate"
+    },
+    "VisEvent-gpu0.log": {
+      "pause_markers": 0,
+      "maximum_logged_pause_temperature_c": null,
+      "log_scope": "Only visible pause markers; not a continuous maximum-temperature certificate"
+    },
+    "DepthTrack-gpu0.log": {
+      "pause_markers": 0,
+      "maximum_logged_pause_temperature_c": null,
+      "log_scope": "Only visible pause markers; not a continuous maximum-temperature certificate"
+    }
+  },
+  "post_exit_gpu_readback_scope": "Read after evaluation ended14:33BJT. Other tasks began15:01BJT on GPU0/1. These current memory/temperature samples are not this evaluation peak or a new job started by this agent.",
+  "other_processes_inspected_only_for_attribution": true,
+  "other_processes_modified_or_stopped": false
+}

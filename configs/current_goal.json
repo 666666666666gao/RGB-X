@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-16T01:41:26.009624+00:00",
+  "updated_at": "2026-10-16T07:03:10.076215+00:00",
   "objective": "在2028用删减版CADTrack从全参数随机初始化联合训练RGB-T/RGB-D/RGB-Event；一份权重、仅GPU0/1，GPU0功率上限250W、目标温度75℃（允许偶发76℃）。先完成同随机初始化的普通联合AdamW B0，再比较主动共同方向及逐项前瞻/稳定性模块；完整报告现有三集七项主指标和所有退化，争取全面超过公平baseline。",
-  "status": "CAD_SCRATCH_B0_FULL_THREE_TEST_EVALUATION_RUNNING",
+  "status": "CAD_SCRATCH_B0_FULL_THREE_EVALUATION_COMPLETE_7_OF_7_BELOW_XTRACK_REFERENCE",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -146,9 +146,42 @@
     ],
     "checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20",
     "output_root": "/home/gaob/rgbx-eval-results/cad_pruned_rgbx_b0_s2026_eval_20261016",
-    "completed_datasets": [],
-    "benchmark_scores": "NOT_YET_COMPLETE",
+    "completed_datasets": [
+      "LasHeR",
+      "VisEvent",
+      "DepthTrack"
+    ],
+    "benchmark_scores": "ALL_THREE_FULLY_SCORED",
     "overall_acceptance_achieved": false,
-    "next_observation_not_before_utc": "2026-10-16T06:57:17.117240+00:00"
-  }
+    "next_observation_not_before_utc": null,
+    "status": "COMPLETE",
+    "actual_exit_code": 0,
+    "ended_at": "2026-10-16T06:33:41.212048+00:00",
+    "full_sequences": 615,
+    "full_frames": 454497,
+    "headline_metrics": {
+      "LasHeR": {
+        "SR_AUC": 0.39708008583455734,
+        "PR_at_20": 0.4900342340167744,
+        "NPR_AUC": 0.42264464642714206,
+        "NP_at_020": 0.4632211148431963
+      },
+      "VisEvent": {
+        "SR_AUC": 0.4737139058817806,
+        "PR_at_20": 0.6463864337727094,
+        "NPR_AUC": 0.5263594313575245,
+        "NP_at_020": 0.5781918149803478
+      },
+      "DepthTrack": {
+        "Precision": 0.45820056928990494,
+        "Recall": 0.4319061599038915,
+        "F_score": 0.44466498647195946
+      }
+    },
+    "main_metrics_above_XTrack_reference": 0,
+    "fair_same_architecture_method_gain": "NOT_TESTED"
+  },
+  "evaluation_complete": true,
+  "evaluation_running": false,
+  "next_observation_not_before_utc": null
 }

@@ -1,0 +1,12 @@
+dataset,metric,required_primary,scratch_CAD_B0_percent,XTrack_author_reference_percent,difference_percentage_points,relative_change_percent,improved,comparison_type
+LasHeR,SR_AUC,True,39.70800858345573,55.54599303245381,-15.837984448998082,-28.513279868350605,False,Different architecture and initialization; descriptive reference only
+LasHeR,PR_at_20,True,49.00342340167744,69.05088871059202,-20.047465308914582,-29.032885286875988,False,Different architecture and initialization; descriptive reference only
+LasHeR,NPR_AUC,False,42.2644646427142,59.21262401038353,-16.948159367669323,-28.62254401138733,False,Different architecture and initialization; descriptive reference only
+LasHeR,NP_at_020,False,46.32211148431963,65.48772213736572,-19.165610653046095,-29.26596013348074,False,Different architecture and initialization; descriptive reference only
+VisEvent,SR_AUC,True,47.37139058817806,60.450306141933616,-13.07891555375556,-21.635813593808884,False,Different architecture and initialization; descriptive reference only
+VisEvent,PR_at_20,True,64.63864337727094,76.92957488705719,-12.29093150978624,-15.976861340818482,False,Different architecture and initialization; descriptive reference only
+VisEvent,NPR_AUC,False,52.63594313575245,66.71401395683385,-14.0780708210814,-21.10211930913102,False,Different architecture and initialization; descriptive reference only
+VisEvent,NP_at_020,False,57.81918149803478,72.84162241798722,-15.022440919952452,-20.62342987605239,False,Different architecture and initialization; descriptive reference only
+DepthTrack,Precision,True,45.8200569289905,61.10762588858001,-15.287568959589503,-25.01744870184278,False,Different architecture and initialization; descriptive reference only
+DepthTrack,Recall,True,43.19061599038916,61.56268604286835,-18.372070052479188,-29.842866244799726,False,Different architecture and initialization; descriptive reference only
+DepthTrack,F_score,True,44.466498647195955,61.334311915763095,-16.86781326856714,-27.50143067021522,False,Different architecture and initialization; descriptive reference only

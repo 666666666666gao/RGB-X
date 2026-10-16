@@ -1,0 +1,4 @@
+registry:
+- trackers.ini
+sequences: /data/wangwj/dataset/DepthTrack/Dep_test
+stack: stack.yaml
