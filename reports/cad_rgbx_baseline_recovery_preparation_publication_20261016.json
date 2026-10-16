@@ -1,0 +1,19 @@
+{
+  "status": "PASS_BASELINE_DIAGNOSIS_AND_FOUR_HANDOFF_MIRRORS_ONLY_NOT_TRAINING",
+  "source_commit": "21f302e6b73bf6d680e49affd9014f9348049f1c",
+  "document_sha256": "2571bd5e28ab4a7724d4e52282c4bf9d34362decee8e332ad11d8a14a893ecdc",
+  "files": {
+    "docs/RGB-X_\u7814\u7a76\u4e0e\u5b9e\u9a8c\u5b8c\u6574\u4ea4\u63a5_2026-10-02.md": "2571bd5e28ab4a7724d4e52282c4bf9d34362decee8e332ad11d8a14a893ecdc",
+    "configs/current_goal.json": "5dbee91df95622140b8af096453eff3d5ed77136e97e7da0d27430f14114bd58",
+    "reports/cad_rgbx_baseline_training_diagnosis_20261016.json": "bd0cd4dd11b4a9d78cc3f61fa0ccef4d4bce95af1ad2007caa8711d610ca5c12",
+    "reports/cad_rgbx_baseline_recovery_recipe_audit_20261016.json": "5371488e82b0ab5f739d2788293139e0f2fbf2f6209ae1e2b2ee361a7bcd6a01",
+    "reports/cad_rgbx_sot_metadata_source_missing_20261016.json": "95ad1b4cd1c3903aef40afe6a70388cf3c60242f2fa25a187b209af9e5cc6492"
+  },
+  "initialization_choice_pending": true,
+  "new_training_started": false,
+  "CAGrad_started": false,
+  "NN_forward_calls_this_preparation": 0,
+  "source_checkpoint_metadata_attempt_actual_exit_code": 1,
+  "existing_OSTrack_symlink_usable": false,
+  "B0_model_and_full_scores_preserved": true
+}

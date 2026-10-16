@@ -1,21 +1,21 @@
 {
-  "status": "CAD_SCRATCH_B0_FULL_THREE_EVALUATION_COMPLETE_7_OF_7_BELOW_XTRACK_REFERENCE",
-  "verified_at": "2026-10-16T07:09:10.919961+00:00",
-  "source_commit": "70278199b72bc567d6a0b5553a050343cd4461d1",
+  "status": "BASELINE_RECOVERY_FIRST_CAGRAD_NOT_STARTED_INITIALIZATION_CHOICE_PENDING",
+  "verified_at": "2026-10-16T08:24:17.042851+00:00",
+  "source_commit": "21f302e6b73bf6d680e49affd9014f9348049f1c",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "1ef657e95c57adf97cd38f4f2e4799a5956f57e7c567da427cba2bd4a4e52118",
-  "document_bytes": 380593,
+  "document_sha256": "2571bd5e28ab4a7724d4e52282c4bf9d34362decee8e332ad11d8a14a893ecdc",
+  "document_bytes": 383921,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/70278199b72bc567d6a0b5553a050343cd4461d1/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/21f302e6b73bf6d680e49affd9014f9348049f1c/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
     ".gitattributes": "085463f931ef5caf9577e17e9dcc9ced792c15da96cfb993afeb96d4eed6c7ec",
-    "configs/current_goal.json": "bc04511c03ba2c71137b67b8037661d8a8219416a9f9ef0ac0a971681e82d858",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "1ef657e95c57adf97cd38f4f2e4799a5956f57e7c567da427cba2bd4a4e52118",
+    "configs/current_goal.json": "5dbee91df95622140b8af096453eff3d5ed77136e97e7da0d27430f14114bd58",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "2571bd5e28ab4a7724d4e52282c4bf9d34362decee8e332ad11d8a14a893ecdc",
     "reports/cad_rgbx_b0_all_metrics_20261016.csv": "9e2c56b3b0ff45c141df6f3216f3eed7ab863f982a7f276279860d2e4e3bcf4d",
     "reports/cad_rgbx_b0_complete_analysis_20261016.json": "00bfb75a74c346e371f817ff4cdcda853cf8cc0ad337954889a2b141730b3132",
     "reports/cad_rgbx_b0_s2026_evaluation/DepthTrack/attribute_diagnostics.json": "a6c53e4f876776ee42ff330f4e4d71d9d06c88176375f1b192f29293313945cc",
@@ -55,6 +55,9 @@
     "reports/cad_rgbx_evaluation_full_evidence_20261016.tar.gz": "210bd51af57cfbc659a8e9eae3dec64834d6e16a8970c074b94dc851465ea55f",
     "reports/cad_rgbx_evaluation_post_exit_gpu01_attribution_20261016.json": "4ccd267b2cba878e459639e5b9eea9915ef219461517c51eebebd9f188fcc4d7",
     "reports/cad_rgbx_evaluation_raw_trajectories_20261016.tar.gz": "ae41af582b8d71c6f844582eab5e1ef71de7e4810f04f36a250e9dc3af5307d3",
-    "scripts/analyze_cad_b0_evaluation.py": "e9c2d7cd7802b148f7ff992ea9a209e377e8233a71d76343c7159c0d02b5409b"
+    "scripts/analyze_cad_b0_evaluation.py": "e9c2d7cd7802b148f7ff992ea9a209e377e8233a71d76343c7159c0d02b5409b",
+    "reports/cad_rgbx_baseline_training_diagnosis_20261016.json": "bd0cd4dd11b4a9d78cc3f61fa0ccef4d4bce95af1ad2007caa8711d610ca5c12",
+    "reports/cad_rgbx_baseline_recovery_recipe_audit_20261016.json": "5371488e82b0ab5f739d2788293139e0f2fbf2f6209ae1e2b2ee361a7bcd6a01",
+    "reports/cad_rgbx_sot_metadata_source_missing_20261016.json": "95ad1b4cd1c3903aef40afe6a70388cf3c60242f2fa25a187b209af9e5cc6492"
   }
 }
