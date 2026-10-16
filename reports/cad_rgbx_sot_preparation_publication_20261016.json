@@ -1,0 +1,33 @@
+{
+  "status": "PASS_PREPARATION_AND_MIRRORS_NOT_NATIVE_GPU_READY",
+  "source_commit": "354bc35c288015f1d4e3520ec924ee75cf7c6252",
+  "document_sha256": "5daf909c41bc91b6105f9e70a3a531ea057627f5e50b5f8974014797f0451709",
+  "file_sha256": {
+    "docs/RGB-X_\u7814\u7a76\u4e0e\u5b9e\u9a8c\u5b8c\u6574\u4ea4\u63a5_2026-10-02.md": "5daf909c41bc91b6105f9e70a3a531ea057627f5e50b5f8974014797f0451709",
+    "configs/current_goal.json": "1304324c30e95f870443ec773556e2f0f5a17a5db38e7438176f38d9073649d7",
+    "configs/cad_sot_environment_spec.json": "c0606efb06509015499521d8e3e97ad39073bd449da49f96d0eac04c840b2076",
+    "configs/cad_rgbx_sot_b0_s2026.json": "ad1f1fb131d47300abbffaf1caf2ff6c0f4ba24028ec5dbb3b8b4f0a8e283ec5",
+    "cad_rgbx/sot_baseline.py": "730138e23ca83b4db6604955099878974cc9621a69fded49e271232b44e5859a",
+    "scripts/inspect_cad_sot_initializer.py": "538ae76b229d78b4199dbef9b699571794a149ab9a88c553fdef90a429d64f07",
+    "scripts/train_cad_sot_baseline.py": "e16507cdff9b63f52aefc5e2b1143726c5a787bea2db82036f36df23b12d1e9e",
+    "scripts/run_cad_sot_baseline_job.py": "6f65aa0262dd060c56cf3ade81337d635902ece253daf50ab82357a2c027a25c",
+    "scripts/audit_cad_sot_checkpoint.py": "26f579f35c9d803fa30570038f31767d723a1dafcb5dd9851e27373ed73d05ac",
+    "scripts/check_cad_early_stopping.py": "1449a2feb268764cd221bfdfb675e8ed53865f0e4300160c22f2759b09ccdb14",
+    "reports/cad_rgbx_completed_scratch_goal_snapshot_20261016.json": "5dbee91df95622140b8af096453eff3d5ed77136e97e7da0d27430f14114bd58",
+    "reports/cad_rgbx_sot_baseline_preparation_20261016.json": "585c6c0d8157526b30235218685347e65e47020e100d42c68ecfadd2da8ab7ea",
+    "reports/cad_rgbx_sot_early_stop_check_20261016.json": "4ef13077d334e2fbf1c5cec209af87d5fc38f6d9406601e40e82a6c4f42bc8db",
+    "reports/cad_rgbx_sot_initializer_cpu_audit_20261016.json": "35d61fe25facfd1278fa49bbe252c1e36b036c702d15b58541551993145d04fe",
+    "reports/cad_rgbx_sot_initializer_cpu_execution_20261016.json": "6f0f41eab7562145c4894a149fe059e58d8f44b88227cc969eef65a377b40415",
+    "reports/cad_rgbx_sot_initializer_cpu_execution_r1_20261016.json": "d28675c5a0fdaab10ffe6386cc286f9dd58c53f9ed45cead251428ac839ca211",
+    "reports/cad_rgbx_sot_initializer_download_20261016.json": "7cbe711298aded844ae233846a409221d212732b358834fabb175991544dd074",
+    "reports/cad_rgbx_sot_initializer_download_execution_20261016.json": "2ac2458bedda9e1d6497ff30b8454f6e59bf6aaba46aa8d1257c3fc17c5a443d",
+    "reports/cad_rgbx_sot_preflight_admission_20261016.json": "d6bb376bdf6d5fd345b15d3a4f5f758f855adac1bdfa39a832328f644997bc43"
+  },
+  "initialization_user_authorized": true,
+  "native_gpu_sanity_executed": false,
+  "new_training_started": false,
+  "CAGrad_started": false,
+  "gpu_resource_evidence": "reports/cad_rgbx_sot_preflight_admission_20261016.json",
+  "protected_scratch_B0_scores_and_weight_preserved": true,
+  "four_handoff_copies_identical": true
+}
