@@ -3,6 +3,7 @@ import csv
 import hashlib
 import json
 import math
+import tarfile
 from pathlib import Path
 from statistics import mean
 
@@ -28,8 +29,19 @@ def main():
     assert intake['status'] == 'ALL_THREE_FULLY_SCORED_ENDPOINT_COLLECTED'
     assert intake['execution']['actual_exit_code'] == 0
     assert intake['full_sequences'] == 615 and intake['full_frames'] == 454497
-    for name, digest in intake['files'].items():
-        assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == digest, name
+    # The two very large toolkit stdout logs are retained in the sealed archive.
+    archive = PROJECT/'reports/cad_rgbx_evaluation_full_evidence_20261016.tar.gz'
+    assert hashlib.sha256(archive.read_bytes()).hexdigest() == intake['archives'][archive.name]['sha256']
+    with tarfile.open(archive, 'r:gz') as packed:
+        for name, digest in intake['files'].items():
+            if name in ['LasHeR/scores/scorer.log', 'VisEvent/scores/scorer.log']:
+                with packed.extractfile(name) as stream:
+                    actual = hashlib.sha256()
+                    for block in iter(lambda: stream.read(1024 * 1024), b''):
+                        actual.update(block)
+                assert actual.hexdigest() == digest, name
+            else:
+                assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == digest, name
     datasets, comparisons = {}, []
     for dataset, count, frames in [('LasHeR', 245, 220703), ('VisEvent', 320, 157421)]:
         metrics = read(ROOT/dataset/'scores/metrics.json')

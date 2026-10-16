@@ -1,0 +1,23 @@
+{
+  "status": "ONLY_TWO_OWN_DUPLICATE_SCORER_LOGS_RETIRED_AFTER_ARCHIVE_HASH_VERIFICATION",
+  "files": [
+    {
+      "path": "C:\\Users\\gb\\projects\\rgbx-risk\\reports\\cad_rgbx_b0_s2026_evaluation\\LasHeR\\scores\\scorer.log",
+      "bytes": 96589128,
+      "sha256": "ba8ae817e50b2ceeb1ad9fd065d6d2dec9b28cff812a63d90036ed63264f905f",
+      "recoverable_from_archive": "C:\\Users\\gb\\projects\\rgbx-risk\\reports\\cad_rgbx_evaluation_full_evidence_20261016.tar.gz",
+      "archive_member": "LasHeR/scores/scorer.log"
+    },
+    {
+      "path": "C:\\Users\\gb\\projects\\rgbx-risk\\reports\\cad_rgbx_b0_s2026_evaluation\\VisEvent\\scores\\scorer.log",
+      "bytes": 69483128,
+      "sha256": "48de876f7f53e9e0d19e07a4d5f67642d1e5addabd605c9238727dae4417263f",
+      "recoverable_from_archive": "C:\\Users\\gb\\projects\\rgbx-risk\\reports\\cad_rgbx_evaluation_full_evidence_20261016.tar.gz",
+      "archive_member": "VisEvent/scores/scorer.log"
+    }
+  ],
+  "freed_bytes": 166072256,
+  "weights_deleted": 0,
+  "dataset_images_deleted": 0,
+  "original_raw_evidence_retained": true
+}
