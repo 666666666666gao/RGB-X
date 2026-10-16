@@ -1,0 +1,14 @@
+{
+  "status": "FAILED_BEFORE_PRETRAINED_TENSOR_LOADING",
+  "actual_exit_code": 1,
+  "original_native_session": 23314,
+  "attempted_logical_source": "/data/gb/rgbx-risk/pretrained/OSTrack_ep0300.pth.tar",
+  "evidence": "ls -l showed a symlink; torch.load then raised FileNotFoundError at the logical source path. No source checkpoint tensors were loaded.",
+  "pretrained_parameter_values_assigned": 0,
+  "model_forward_calls": 0,
+  "optimizer_steps": 0,
+  "cuda_initialized": false,
+  "compatibility_coverage": "NOT_MEASURED_SOURCE_MISSING",
+  "new_training_started": false,
+  "next_action": "Keep the existing link unchanged; resolve an official SOT source only if user permits this initialization."
+}

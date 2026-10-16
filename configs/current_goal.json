@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-16T07:03:10.076215+00:00",
+  "updated_at": "2026-10-16T08:20:14.283303+00:00",
   "objective": "在2028用删减版CADTrack从全参数随机初始化联合训练RGB-T/RGB-D/RGB-Event；一份权重、仅GPU0/1，GPU0功率上限250W、目标温度75℃（允许偶发76℃）。先完成同随机初始化的普通联合AdamW B0，再比较主动共同方向及逐项前瞻/稳定性模块；完整报告现有三集七项主指标和所有退化，争取全面超过公平baseline。",
-  "status": "CAD_SCRATCH_B0_FULL_THREE_EVALUATION_COMPLETE_7_OF_7_BELOW_XTRACK_REFERENCE",
+  "status": "BASELINE_RECOVERY_FIRST_CAGRAD_NOT_STARTED_INITIALIZATION_CHOICE_PENDING",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -183,5 +183,62 @@
   },
   "evaluation_complete": true,
   "evaluation_running": false,
-  "next_observation_not_before_utc": null
+  "next_observation_not_before_utc": null,
+  "next_training_priority": "Improve the ordinary joint CADTrack baseline before B1 CAGrad",
+  "new_training_started": false,
+  "baseline_recovery": {
+    "status": "DIAGNOSIS_ONLY_NO_NEW_TRAINING",
+    "initialization_choice": "AWAIT_USER: retain scratch or allow backbone/SOT pretrained while excluding XTrack joint checkpoint",
+    "current_B0_scores_preserved": true,
+    "CAGrad_started": false,
+    "physical_gpus": [
+      0,
+      1
+    ],
+    "gpu0_power_limit_w": 250,
+    "gpu0_target_temperature_c": 75,
+    "documented_recipe_difference": {
+      "B0_center_scale_jitter": [
+        4.5,
+        0.5
+      ],
+      "provided_CAD_yaml_center_scale_jitter": [
+        3,
+        0.25
+      ]
+    },
+    "normalization_train_inference_consistent": true,
+    "last10_train_loss": 1.1353803942600886,
+    "previous10_train_loss": 1.1526718080043792,
+    "relative_last10_loss_improvement_percent": 1.5001159587851087,
+    "early_stopping_required": true,
+    "early_stopping_candidate": {
+      "monitor": "training mean response+2GIoU+5L1 overT/D/E",
+      "rolling_epochs": 3,
+      "relative_min_improvement": 0.005,
+      "patience_epochs": 5,
+      "minimum_epochs": 10,
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    "test_metrics_not_used_for_early_stopping": true,
+    "resource_admission": "GPU0/1 currently busy; no use of other GPUs, no interference with other tasks",
+    "reference_targets_fraction": {
+      "LasHeR": {
+        "SR_AUC": 0.5554599303245381,
+        "PR_at_20": 0.6905088871059202
+      },
+      "VisEvent": {
+        "SR_AUC": 0.6045030614193362,
+        "PR_at_20": 0.7692957488705718
+      },
+      "DepthTrack": {
+        "Precision": 0.6110762588858001,
+        "Recall": 0.6156268604286835,
+        "F_score": 0.613343119157631
+      }
+    },
+    "existing_OSTrack_symlink_usable": false,
+    "OSTrack_metadata_read_actual_exit_code": 1,
+    "init_policy_not_changed": true
+  }
 }

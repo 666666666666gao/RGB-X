@@ -1,0 +1,27 @@
+{
+  "status": "SOURCE_AND_SAVED_HISTORY_AUDIT_NOT_CAUSAL_PERFORMANCE_PROOF",
+  "B0_configuration_default": "third_party/CADTrackPruned/lib/config/cadtrack/config.py",
+  "supplied_CAD_recipe": "Desktop/document/cadtrack/source/experiments/cadtrack/cadtrack.yaml",
+  "scratch_B0_jitter": [
+    4.5,
+    0.5
+  ],
+  "supplied_CAD_jitter": [
+    3,
+    0.25
+  ],
+  "transform": "The training Normalize splits six channels into two3channel images and normalizes both withthe same3channel ImageNet mean/std, matching the evaluation preprocessor.",
+  "no_missing_normalization_reproduction_issue_found": true,
+  "initialization_choice_pending": true,
+  "CAGrad_started": false,
+  "new_training_started": false,
+  "gpu01_memory_used_mib": [
+    18038,
+    17994
+  ],
+  "gpu_capacity_mib": [
+    24576,
+    24576
+  ],
+  "gpu_availability_observation": "One actual check in this turn, no repeated poll."
+}
