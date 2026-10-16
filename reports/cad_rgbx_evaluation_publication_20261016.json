@@ -1,0 +1,7 @@
+{
+  "status": "PASS_FOUR_COPIES_EXACT_AND_GITHUB_PUSHED",
+  "source_commit": "7e89153d8526dbc6db43d7c1ead3511dcdb06c44",
+  "document_sha256": "d8e61e9b8531f043b5a295cbae851fef64dab4f15019b3ca858c5e7e60b9a24c",
+  "files": 106,
+  "formal_metrics": "NOT_YET_COMPLETE"
+}
