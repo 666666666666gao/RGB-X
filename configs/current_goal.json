@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-16T09:16:59.799213+00:00",
+  "updated_at": "2026-10-17T15:39:05.533544+00:00",
   "objective": "先提高删减版 CADTrack 普通联合 baseline：允许视觉骨干 SOT 预训练，禁止 XTrack RGB-X 联合权重；一份权重联合训练 T/D/E。只用2028 GPU0/1，训练损失平台期及时早停，完成现有三集完整评测后再决定 CAGrad。",
-  "status": "SOT_BACKBONE_BASELINE_WAITING_GPU01_NATIVE_PREFLIGHT_NOT_RUN",
+  "status": "SOT_BACKBONE_BASELINE_TRAINING_RUNNING",
   "server": "2028",
   "gpu_indices": [
     0,
@@ -57,11 +57,11 @@
     "all_required_headlines_must_improve_over_fair_baseline": true,
     "test_sequences_never_enter_training": true
   },
-  "training_started": false,
-  "training_running": false,
+  "training_started": true,
+  "training_running": true,
   "training_completed": false,
-  "new_training_started": false,
-  "formal_tracking_scores": "NEW_SOT_BASELINE_NOT_TRAINED_OR_EVALUATED",
+  "new_training_started": true,
+  "formal_tracking_scores": "TRAINING_RUNNING_NOT_EVALUATED",
   "overall_research_acceptance_achieved": false,
   "current_training_updates": 0,
   "current_completed_epochs": 0,
@@ -132,7 +132,7 @@
     "final_checkpoint_sha256": "4f113dfd0fd3f5ffb13add1fc2c7b9c52f9e063d29ef8d20470b976bfb13aa20"
   },
   "baseline_recovery": {
-    "status": "PREPARATION_COMPLETE_WAITING_GPU01_NATIVE_PREFLIGHT_NOT_RUN",
+    "status": "FORMAL_TRAINING_RUNNING",
     "initialization_choice": "USER_APPROVED_VISUAL_BACKBONE_SOT_PRETRAINING_NO_XTRACK_JOINT",
     "current_B0_scores_preserved": true,
     "CAGrad_started": false,
@@ -165,23 +165,16 @@
       "status": "IMPLEMENTED_CPU_RULE_CHECK_PASS_NOT_NATIVE_TRAINING"
     },
     "test_metrics_not_used_for_early_stopping": true,
-    "resource_admission": {
-      "observed_at": "2026-10-16T09:15:22.989065+00:00",
-      "cards": [
-        {
-          "index": 0,
-          "memory_used_mib": 18038,
-          "memory_total_mib": 24576
-        },
-        {
-          "index": 1,
-          "memory_used_mib": 17994,
-          "memory_total_mib": 24576
-        }
-      ],
-      "evidence": "reports/cad_rgbx_sot_preflight_admission_20261016.json",
-      "action": "NO_ALLOCATION_NO_OTHER_GPU_NO_INTERFERENCE"
-    },
+    "resource_admission": [
+      {
+        "index": 0,
+        "memory_used_mib": 45
+      },
+      {
+        "index": 1,
+        "memory_used_mib": 1
+      }
+    ],
     "reference_targets_fraction": {
       "LasHeR": {
         "SR_AUC": 0.5554599303245381,
@@ -204,7 +197,10 @@
     "initializer_sha256": "8e01d6251569ac84dbb53fdd062cd938551be2d889582f789aa3070196f42f41",
     "source_loaded_scope": "152 backbone tensors; fusion and head random",
     "recipe_protocol": "configs/cad_rgbx_sot_b0_s2026.json",
-    "new_training_started": false
+    "new_training_started": false,
+    "training_receipt": "reports/cad_rgbx_sot_formal_launch_20261017.json",
+    "screen_session": "cad_sot_b0_s2026",
+    "native_gpu_preflight": "PASS"
   },
   "checkpoint_policy": "One necessary rolling recovery checkpoint; only complete benchmark scores identify best. Never delete user-supplied weights.",
   "pretrained_authorized": true,

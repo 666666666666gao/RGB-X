@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "acceptance_status": "provisional",
+  "review_independence": "same-family",
+  "review_model": "gpt-6-astra",
+  "reasoning_effort": "max",
+  "documented_command_executed_verbatim": true,
+  "documented_command": "/data/gb/conda/envs/rgbx-risk/bin/python /data/gb/rgbx-risk/scripts/run_cad_sot_baseline_job.py --stage sanity",
+  "actual_exit_code": 0,
+  "stderr": "",
+  "stdout": "sanity EXITED; physical_gpus [0,1]; two steps",
+  "protocol_sha256": "ad1f1fb131d47300abbffaf1caf2ff6c0f4ba24028ec5dbb3b8b4f0a8e283ec5",
+  "observed_at": "2026-10-17T15:34:31.571040+00:00",
+  "gpu_preflight": [
+    {
+      "index": 0,
+      "memory_used_mib": 45
+    },
+    {
+      "index": 1,
+      "memory_used_mib": 1
+    }
+  ],
+  "gpu0_admission": {
+    "power_limit_w": 250.0,
+    "temperature_c": 39,
+    "target_temperature_c": 75
+  },
+  "cpu_saved_state_audit": "PASS",
+  "doc_vs_reality": "No command or GPU-binding divergence; remote .aris/compute ledger not visible, recorded as documentation gap only.",
+  "formal_training_started": false
+}

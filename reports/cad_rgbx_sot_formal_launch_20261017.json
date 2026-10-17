@@ -1,0 +1,51 @@
+{
+  "status": "FORMAL_TRAINING_RUNNING",
+  "observed_at": "2026-10-17T15:39:05.533544+00:00",
+  "run_id": "cad_pruned_rgbx_sot_b0_s2026",
+  "screen_session": "cad_sot_b0_s2026",
+  "execution": {
+    "status": "RUNNING",
+    "stage": "formal",
+    "controller_pid": 192019,
+    "argv": [
+      "/data/gb/conda/envs/rgbx-risk/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nproc_per_node=2",
+      "--master_port=29543",
+      "/data/gb/rgbx-risk/scripts/train_cad_sot_baseline.py",
+      "--protocol",
+      "/data/gb/rgbx-risk/configs/cad_rgbx_sot_b0_s2026.json"
+    ],
+    "physical_gpus": [
+      0,
+      1
+    ],
+    "gpu0_admission": {
+      "uuid": "GPU-3a80b2a4-4eec-b17f-5a41-88df48bd673b",
+      "power_limit_w": 250.0,
+      "temperature_c": 39,
+      "target_temperature_c": 75
+    },
+    "gpu_preflight": [
+      {
+        "index": 0,
+        "memory_used_mib": 45
+      },
+      {
+        "index": 1,
+        "memory_used_mib": 1
+      }
+    ],
+    "started_at": "2026-10-17T15:38:16.740801+00:00",
+    "exit_code": null,
+    "torchrun_pid": 192158
+  },
+  "training_scope": "ordinary joint AdamW, SOT backbone only, random fusion/head, no CAGrad or proposed modules",
+  "early_stopping": "3-epoch mean response+weighted-box; min10 epochs; 0.5% threshold; patience5",
+  "formal_tracking_scores": "NOT_RUN",
+  "only_physical_gpus": [
+    0,
+    1
+  ]
+}
