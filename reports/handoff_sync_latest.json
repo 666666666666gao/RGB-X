@@ -1,7 +1,7 @@
 {
   "status": "SOT_BACKBONE_BASELINE_TRAINING_RUNNING",
-  "verified_at": "2026-10-17T15:39:57.632729+00:00",
-  "source_commit": "19b4911d433a43ba87757e820a17bedf9f85c9eb",
+  "verified_at": "2026-10-17T15:40:12.626391+00:00",
+  "source_commit": "abfae07e4e4b19c38d041d40edb6bfe336aef5bd",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
   "document_sha256": "8e5f87f9fed54da98acf613c49fad19a62eb29f9deaa8707ed672988b77b51b6",
   "document_bytes": 389336,
@@ -10,7 +10,7 @@
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/19b4911d433a43ba87757e820a17bedf9f85c9eb/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/abfae07e4e4b19c38d041d40edb6bfe336aef5bd/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
     ".gitattributes": "085463f931ef5caf9577e17e9dcc9ced792c15da96cfb993afeb96d4eed6c7ec",
