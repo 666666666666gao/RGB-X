@@ -1,21 +1,21 @@
 {
-  "status": "SOT_BACKBONE_BASELINE_WAITING_GPU01_NATIVE_PREFLIGHT_NOT_RUN",
-  "verified_at": "2026-10-16T09:18:57.066783+00:00",
-  "source_commit": "354bc35c288015f1d4e3520ec924ee75cf7c6252",
+  "status": "SOT_BACKBONE_BASELINE_TRAINING_RUNNING",
+  "verified_at": "2026-10-17T15:39:57.632729+00:00",
+  "source_commit": "19b4911d433a43ba87757e820a17bedf9f85c9eb",
   "document": "docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-  "document_sha256": "5daf909c41bc91b6105f9e70a3a531ea057627f5e50b5f8974014797f0451709",
-  "document_bytes": 389143,
+  "document_sha256": "8e5f87f9fed54da98acf613c49fad19a62eb29f9deaa8707ed672988b77b51b6",
+  "document_bytes": 389336,
   "four_copies_identical": true,
   "copies": {
     "project": "C:\\Users\\gb\\projects\\rgbx-risk\\docs\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "desktop": "C:\\Users\\gb\\Desktop\\document\\RGB-X_研究与实验完整交接_2026-10-02.md",
     "server": "/data/gb/rgbx-risk/docs/RGB-X_研究与实验完整交接_2026-10-02.md",
-    "github": "https://github.com/666666666666gao/RGB-X/blob/354bc35c288015f1d4e3520ec924ee75cf7c6252/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
+    "github": "https://github.com/666666666666gao/RGB-X/blob/19b4911d433a43ba87757e820a17bedf9f85c9eb/docs/RGB-X_研究与实验完整交接_2026-10-02.md"
   },
   "file_sha256": {
     ".gitattributes": "085463f931ef5caf9577e17e9dcc9ced792c15da96cfb993afeb96d4eed6c7ec",
-    "configs/current_goal.json": "1304324c30e95f870443ec773556e2f0f5a17a5db38e7438176f38d9073649d7",
-    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "5daf909c41bc91b6105f9e70a3a531ea057627f5e50b5f8974014797f0451709",
+    "configs/current_goal.json": "90f1bc384d03f31774f7858f2f183e76b9f7f6280f949c371f23e530e6314863",
+    "docs/RGB-X_研究与实验完整交接_2026-10-02.md": "8e5f87f9fed54da98acf613c49fad19a62eb29f9deaa8707ed672988b77b51b6",
     "reports/cad_rgbx_b0_all_metrics_20261016.csv": "9e2c56b3b0ff45c141df6f3216f3eed7ab863f982a7f276279860d2e4e3bcf4d",
     "reports/cad_rgbx_b0_complete_analysis_20261016.json": "00bfb75a74c346e371f817ff4cdcda853cf8cc0ad337954889a2b141730b3132",
     "reports/cad_rgbx_b0_s2026_evaluation/DepthTrack/attribute_diagnostics.json": "a6c53e4f876776ee42ff330f4e4d71d9d06c88176375f1b192f29293313945cc",
@@ -75,6 +75,8 @@
     "reports/cad_rgbx_sot_initializer_cpu_execution_r1_20261016.json": "d28675c5a0fdaab10ffe6386cc286f9dd58c53f9ed45cead251428ac839ca211",
     "reports/cad_rgbx_sot_initializer_download_20261016.json": "7cbe711298aded844ae233846a409221d212732b358834fabb175991544dd074",
     "reports/cad_rgbx_sot_initializer_download_execution_20261016.json": "2ac2458bedda9e1d6497ff30b8454f6e59bf6aaba46aa8d1257c3fc17c5a443d",
-    "reports/cad_rgbx_sot_preflight_admission_20261016.json": "d6bb376bdf6d5fd345b15d3a4f5f758f855adac1bdfa39a832328f644997bc43"
+    "reports/cad_rgbx_sot_preflight_admission_20261016.json": "d6bb376bdf6d5fd345b15d3a4f5f758f855adac1bdfa39a832328f644997bc43",
+    "reports/cad_rgbx_sot_documented_sanity_review_20261016.json": "c27fb2ab09810382ec86e9acb27d60d57346e15f468504236b1f2808c2535dc3",
+    "reports/cad_rgbx_sot_formal_launch_20261017.json": "d5bb1e0294c2771932e07e5294bcd657d95d225175d55d6c2713a8f4ae69381e"
   }
 }
